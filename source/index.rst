@@ -11,7 +11,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-    cryo-em_training
+   cryo-em_training
 
 Some other information
 
