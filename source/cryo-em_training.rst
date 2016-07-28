@@ -51,7 +51,7 @@ Level II - Cryo TEM Operation (4 sessions)
 - Prepare side-entry cryo holder, explain dry pumping station - warm-up & zeolite cycle
 - Demo and explain FEI Virobot operation
 - Explain holey grid pre-treament - bake, wash & electron beam irradiation
-- Freeze full procedure for Cryo freezing EM grids
+- Demo full procedure for Cryo freezing EM grids
 - explain the Ethane tank operation
 
 **Session II - 2**
