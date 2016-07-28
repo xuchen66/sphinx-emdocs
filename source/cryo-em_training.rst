@@ -1,6 +1,4 @@
-:Author: Chen Xu
-:Date: $Date$
-:Revision: $Rev$
+.. cryo-em_training 
 
 Cryo-EM Training - Basic (level I & II)
 =======================================
