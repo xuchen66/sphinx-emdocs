@@ -1,4 +1,4 @@
-:Author: Chen Xu, 
+:Author: Chen Xu
 :Date: $Date$
 :Revision: $Rev$
 
