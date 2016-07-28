@@ -14,6 +14,8 @@ Cryo-EM Training - Basic (level I & II)
 
 This document lists the training contents that these two-level, 8 sessions will cover. 
 
+.. Important:: This is important!
+
 Level I - Basic TEM Operation (4 sessions)
 ------------------------------------------
 
