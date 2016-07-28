@@ -1,12 +1,11 @@
-:abstract: This is a test document, containing at least one
-        example of each reStructuredText construct.
-
+ 
 .. index:: Cryo-EM Training - Basic (level I & II)
 .. cryo-em_training:
 
 Cryo-EM Training - Basic (level I & II)
 =======================================
           (Each session is set 2 - 2.5 hours)
+:abstract:
 
 **Goal** is to help a new user coming to EM field to learn some basic knowledge and skills of Cryo-EM. Hopefully, at the end of this two levels of training sessions, you can screen your negative stained specimen and cryo grids on a TEM scope without too much difficult.
 
