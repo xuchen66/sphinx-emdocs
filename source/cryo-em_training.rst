@@ -1,6 +1,5 @@
 .. cryo-em_training 
 
-=======================================
 Cryo-EM Training - Basic (level I & II)
 =======================================
           (Each session is set 2 - 2.5 hours)
@@ -40,3 +39,34 @@ Level I - Basic TEM Operation (4 sessions)
 - Supervising practice of users for negative stain and scoper operation
 - Assist users' operation and answer questions
 - Demo and explain cryo-cycle procedure to condition the column
+
+Level II - Cryo TEM Operation (4 sessions)
+------------------------------------------
+
+**Session II - 1**
+
+- Prepare side-entry cryo holder, explain dry pumping station - warm-up & zeolite cycle
+- Demo and explain FEI Virobot operation
+- Explain holey grid pre-treament - bake, wash & electron beam irradiation
+- Freeze full procedure for Cryo freezing EM grids
+- explain the Ethane tank operation
+
+**Session II - 2**
+
+- Low Dose TEM operation, explain low dose concept and setup 
+- Indroduce and explain shutter control on TEM system
+- CCD imaging with Tecnai Low Dose software
+
+**Session II - 3**
+
+- Cryo grid loading to cryo holder on transfer station
+- Cryo holder insertion & retraction, explain airlock pumping mechanism
+- Demo and explain vacuum condition and how to quiet LN2 bubbling 
+- Go through whole process from sample loading to Low Dose imaging
+- Explain ice condition
+
+**Session II - 4**
+
+- Supervising Cryo Session for user practice
+- Debugging ice condition, cryo-cycle
+- Supervising warm-up and baking cryo holder 
