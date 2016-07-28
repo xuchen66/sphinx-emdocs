@@ -1,4 +1,5 @@
-.. cryo-em_training 
+.. index:: Cryo-EM Training - Basic (level I & II)
+.. cryo-em_training:
 
 Cryo-EM Training - Basic (level I & II)
 =======================================
