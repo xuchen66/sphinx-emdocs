@@ -21,6 +21,7 @@ Level I - Basic TEM Operation (4 sessions)
 **Session I - 2**
 
 - Specimen rod insertion and retraction
-- Tuning microscope 
-
-+ Eucentricity
+- Tuning microscope (Eucentricity, gun alignment, filament saturation, beam-tilt pivot points, rotation center)
+- C2 aperture centering, C2 lens stigmation; Obj. aperture centering, Obj lens stigmation
+- Correct side of beam spreading
+- Demo and instroduce CTF concept
