@@ -13,7 +13,6 @@ Level I - Basic TEM Operation (4 sessions)
 ------------------------------------------
 
 **Session I - 1**
-~~~~~~~~~~~~~~~~~
 
 - Prepare continous carbon film grid
 - Introduction to TEM; breif history; comapre to X-ray as beam source
