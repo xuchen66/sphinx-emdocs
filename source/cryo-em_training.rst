@@ -12,6 +12,8 @@ Cryo-EM Training - Basic (level I & II)
 
 **Requirement** You are not required to have experience with TEM operation. The only requirement to you, the fresh trainee,  is to have a spirit of commitment. You need to be determined to learn this new technique. If you think to have your data collected while in your training session and have your project done half way, you should not attend the training session I offer. You will be wasting your own time, let alone mine. Usually, if an user doesn't take good note during training session and doesn't come back to practise on microscope, that is a good hint that the user is *not* serious at it. Operating a transmission electron microscope is very much like  driving a car - you need to be serious and to practise to learn!
 
+This document lists the training contents that these two-level, 8 sessions will cover. 
+
 Level I - Basic TEM Operation (4 sessions)
 ------------------------------------------
 
