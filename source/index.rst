@@ -10,7 +10,7 @@ Welcome to Chen's Cryo-EM Corner!
    cryo-em_training
    cryo-em_faq
 
-Some other information
+.. Some other information
 
    Index
    =====
