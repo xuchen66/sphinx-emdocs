@@ -12,8 +12,8 @@ Welcome to Chen's Cryo-EM Corner!
 
 .. Some other information
 
-   Index
-   =====
+Index
+=====
 
    * :ref:`genindex`
 ..   * :ref:`modindex`
