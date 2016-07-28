@@ -4,7 +4,8 @@
 
 Cryo-EM Training - Basic (level I & II)
 =======================================
-          (Each session is set 2 - 2.5 hours)
+(Each session is set 2 - 2.5 hours)
+
 :Author: Chen Xu <chen.xu@umassmed.edu>
 :Date: 2016-07-27
 
