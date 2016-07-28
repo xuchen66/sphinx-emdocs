@@ -48,7 +48,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Cryo-EM related docs'
+# project = u'Cryo-EM related docs'
+project = u'Cryo-EM'
 copyright = u'2016, Chen Xu'
 author = u'Chen Xu'
 
