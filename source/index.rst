@@ -9,9 +9,10 @@ Welcome to Chen's Cryo-EM Corner documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    cryo-em_training
+   cryo-em_faq
 
 Some other information
 
