@@ -4,6 +4,7 @@ Welcome to Chen's Cryo-EM Corner!
 **For New Users:**
 
 .. toctree::
+   :numbered:
    :maxdepth: 4
 
    cryo-em_training
