@@ -1,3 +1,6 @@
+:abstract: This is a test document, containing at least one
+        example of each reStructuredText construct.
+
 .. index:: Cryo-EM Training - Basic (level I & II)
 .. cryo-em_training:
 
