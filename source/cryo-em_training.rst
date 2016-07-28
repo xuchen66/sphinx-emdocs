@@ -1,5 +1,6 @@
 .. cryo-em_training 
 
+=======================================
 Cryo-EM Training - Basic (level I & II)
 =======================================
           (Each session is set 2 - 2.5 hours)
@@ -25,3 +26,17 @@ Level I - Basic TEM Operation (4 sessions)
 - C2 aperture centering, C2 lens stigmation; Obj. aperture centering, Obj lens stigmation
 - Correct side of beam spreading
 - Demo and instroduce CTF concept
+
+**Session I - 3**
+
+- Negative Stain sample preparation
+- Refreshing microscope tuning procedure
+- Introduce digital cameras - hardware component, background preparation, pixelsize at levels of detector and specimen
+- Introduce DQE, and latest status of direct electron detectors
+- Negative stain specimen imaging using CCD
+
+**Session I - 4**
+
+- Supervising practice of users for negative stain and scoper operation
+- Assist users' operation and answer questions
+- Demo and explain cryo-cycle procedure to condition the column
