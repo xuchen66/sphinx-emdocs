@@ -50,7 +50,7 @@ Level I - Basic TEM Operation (4 sessions)
 
 **Session I - 4**
 
-- Supervising practice of users for negative stain and scoper operation
+- Supervising practice of users for negative stain and scope operation
 - Assist users' operation and answer questions
 - Demo and explain cryo-cycle procedure to condition the column
 
