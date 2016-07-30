@@ -16,6 +16,8 @@ Training Contents and Materials
 Instructions, Manuals and Protocols
 -----------------------------------
 .. toctree::
+   :hidden:
+   :caption: Instructions, Manuals and Protocols
    :maxdepth: 4
 
    cm120_instruction
