@@ -154,7 +154,7 @@ The table below list pixelsize at specimen level for different scope magnificati
 The magnifications display in TEM interface are nominal. For actual magnification or pixelsize at specimen for a CCD camera, careful calibration is needed. Below is the calibration table for both cameras.
 
 +---------------------------+---------------------------+---------------------------+
-| Mag_Screen UP / DOWN (X)	| Pixelsize_Orius(nm) bin=1	| Pixelsize_Tietz(nm) bin=1 |
+| Mag_Screen UP / DOWN (X)  | Pixelsize_Orius(nm) bin=1 | Pixelsize_Tietz(nm) bin=1 |
 +===========================+===========================+===========================+
 | 35 / 31	                  |  1134	                    |  464                      |
 +-----------------------------------------------------------------------------+
