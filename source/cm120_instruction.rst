@@ -173,7 +173,7 @@ Adjust the specimen height to the eucentric height
 Eucentricity is a fixed reference point in a scope. It is the intercross point of stage axis and column axis. We want to observe our specimen grid at this height level so that the actual magnification doesn't differ much from day to day. And scope is designed to perform better when specimen is at such height. It is good to have the habbit to always adjust specimen to eucentric height after rod insertion. On CM120, the procedure is as following:
 
 #. Have beam seen on large screen, at ~3000X, and find a feature on the grid.
-#. Rotate stage back and forth by pressing ``CompuStage`` - `` A-wobbler``.
+#. Rotate stage back and forth by pressing ``CompuStage`` - ``A-wobbler``.
 #. Adjust joystick Z to minimize the shifting of the feature.
 
 .. _beam-titl-pp:
