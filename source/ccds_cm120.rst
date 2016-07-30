@@ -38,13 +38,13 @@ Here are images for the two cameras on the CM120.
 +--------------------------+-------------------+----------------------+
 |  Property                | Gatan Orius 832   | Tietz TemCam 224-HD  |
 +==========================+===================+======================+
-|  Format                  |3768 x 2672        |   2048 x 2048        |
+|  Format                  |   3768 x 2672     |   2048 x 2048        |
 +--------------------------+-------------------+----------------------+
 | Physical PixelSize (μm)  |   9.0             |   24.0               |
 +--------------------------+-------------------+----------------------+
-| Digitization (bit)       |   14              |	  16                |
+| Digitization (bit)       |   14              |   16                 |
 +--------------------------+-------------------+----------------------+
-| Light Coupling Mechanism |	 Fiber Optic	   |    Fiber Optic       |
+| Light Coupling Mechanism |   Fiber Optic	   |   Fiber Optic        |
 +--------------------------+-------------------+----------------------+
-| Mounting Position	       |   sided-mount     |    bottom-mount      |
+| Mounting Position	       |   sided-mount     |   bottom-mount       |
 +--------------------------+-------------------+----------------------+
