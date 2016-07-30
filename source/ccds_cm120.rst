@@ -52,3 +52,4 @@ The table below lists some basic properties of these two cameras.
 +--------------------------+-------------------+----------------------+
 | Mounting Position        |   sided-mount     |   bottom-mount       |
 +--------------------------+-------------------+----------------------+
+
