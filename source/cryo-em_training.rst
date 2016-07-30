@@ -32,7 +32,7 @@ Level I - Basic TEM Operation (4 sessions)
 - Basic TEM Operation on Tecnai G2 system
 - User Interface & Vacuum system
 
-**Session I - 2**
+.. rubric:: Session I - 2
 
 - Specimen rod insertion and retraction
 - Tuning microscope (Eucentricity, gun alignment, filament saturation, beam-tilt pivot points, rotation center)
@@ -40,7 +40,7 @@ Level I - Basic TEM Operation (4 sessions)
 - Correct side of beam spreading
 - Demo and instroduce CTF concept
 
-**Session I - 3**
+.. rubric:: Session I - 3
 
 - Negative Stain sample preparation
 - Refreshing microscope tuning procedure
@@ -48,7 +48,7 @@ Level I - Basic TEM Operation (4 sessions)
 - Introduce DQE, and latest status of direct electron detectors
 - Negative stain specimen imaging using CCD
 
-**Session I - 4**
+.. rubric:: Session I - 4
 
 - Supervising practice of users for negative stain and scope operation
 - Assist users' operation and answer questions
@@ -57,7 +57,7 @@ Level I - Basic TEM Operation (4 sessions)
 Level II - Cryo TEM Operation (4 sessions)
 ------------------------------------------
 
-**Session II - 1**
+.. rubric:: Session II - 1
 
 - Prepare side-entry cryo holder, explain dry pumping station - warm-up & zeolite cycle
 - Demo and explain FEI Virobot operation
@@ -65,13 +65,13 @@ Level II - Cryo TEM Operation (4 sessions)
 - Demo full procedure for Cryo freezing EM grids
 - explain the Ethane tank operation
 
-**Session II - 2**
+.. rubric:: Session II - 2
 
 - Low Dose TEM operation, explain low dose concept and setup 
 - Indroduce and explain shutter control on TEM system
 - CCD imaging with Tecnai Low Dose software
 
-**Session II - 3**
+.. rubric:: Session II - 3
 
 - Cryo grid loading to cryo holder on transfer station
 - Cryo holder insertion & retraction, explain airlock pumping mechanism
@@ -79,7 +79,7 @@ Level II - Cryo TEM Operation (4 sessions)
 - Go through whole process from sample loading to Low Dose imaging
 - Explain ice condition
 
-**Session II - 4**
+.. rubric:: Session II - 4
 
 - Supervising Cryo Session for user practice
 - Debugging ice condition, cryo-cycle
