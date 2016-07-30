@@ -251,7 +251,7 @@ Here are steps to correct Obj lens stigmatism, manually:
 Typical Low-Dose setup parameters
 ---------------------------------
 
-Here are some typical setup for Low-Dose condition.
+- Here are some typical setup for Low-Dose condition.
 
 +--------+----------+
 | Mode   | Mag. (X) |
@@ -263,49 +263,33 @@ Here are some typical setup for Low-Dose condition.
 | Record |  60,000  |
 +--------+----------+
 
-Alternatively, at 2650-3400x, switch to Diff. mode by pressing "Diff" button. Adjust camera length to 680mm using "Mag" knob. Focus the diffraction spot using [ Focus ] knob, and then adjust "defocus" until the image inside central spot expands to proper size. Personally, I like to "defocus" to clockwise side. What you got is a shadowing image inside of defocused diffraction central beam. The advantage of this is high contrast compared to a normal image mode.
+One might use diffraction mode to ``Search``, which uasally gives better contrast but the "image" might be distorted. The final magnification depends on target pixelsize on image. If possible, use the same magnificagion for both ``Focus`` and ``Record`` to eliminate the dofocus offset between the two magnifications. The off-axis distanse is usually about 1.5 - 2.0 microns. 
 
-Focus: Mag=175kX, Spotsize=6. When work with tilting stage, make sure S1 or S2 sits on tilting axis of the geonimeter, the angles will posted on the panel.
-
-Record: Mag=53000X(60kX), spotsize=3-5
-
-16. Align an identified area under [ Exposure ] and [ Search ]
+- Align an identified area under ``Exposure`` and ``Search``
 
 This step is to insure that what you see under low mag. (Search mode) will be the same area you get under imaging mag. Here is how I do it:
 
-At Exposure mode, MECHANICALLY drive an identified spot to the centber of the screen.
+#. At Exposure mode, MECHANICALLY drive an identified spot to the centber of the screen.
+#. At Search mode(and usually in Diffraction mode also), using the ``Multi-function knobs`` to backtrack the identified spot at the center of the screen (electronically). This uses Image Shift or Diffaction Shift (when Search mode is set up in Diff mode) to "shift" image without actually moving the stage position.
 
-At Search mode(and usually in Diffraction mode also), using the [ Multi-function knobs ] to backtrack the identified spot at the center of the screen (electronically). This uses Image Shift or Diffaction Shift (when Search mode is set up in Diff mode) to "shift" image without actually moving the stage position.
+.. Note::
 
-Note:
+   You can use a corner of a mesh as the identified spot for a negative stain specimet or to use an ice burn mark in the cryo case.
 
-You can use a corner of a mesh as the identified spot for a negative stain specimet or to use an ice burn mark in the cryo case.
+.. _finish
 
-17. Check S1 and S2 parameters
-
-In Focus mode, S1 and S2 are linked to the positions of the beam which is deflected away from the center of the imaging area on the specimen. When highlighted, their parameters can be changed by the Multi-function keys.
-
-Normally, we use 175kX as the magnification. The radius of the spot is about 1.5 microns. Depending on the specimen, you can change those parameters to fit your needs.
-
-18. Finishing Up
+Finishing Up
+------------
 
 When you are done with your session, perform finishing up procedure.
 
-Specimen rod out.
-
-Reset Stage Position, X, Y, Z and A.
-
-Filament 0.
-
-H.T. OFF.
-
-Cryo-cycle, normally for 2-3 hours.
-
-Data display OFF.
-
-Display OFF.
-
-Log your session on logbook.
-&&&
+- Specimen rod out.
+- Reset Stage Position, X, Y, Z and A.
+- Filament 0.
+- H.T. OFF.
+- Cryo-cycle, normally for 2-3 hours.
+- Data display OFF.
+- Display OFF.
+- Log your session on logbook.
 
 
