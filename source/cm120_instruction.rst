@@ -45,9 +45,25 @@ report it to the manager. Usually, if the vacuum is not ready, it is due to one 
 
 Vacuum being Ready means:
 
-- Top line of vacuum page shows "ready".
+- Top line of vacuum page shows **read**.
 - P3 < 50, IGP < 26 (normally, they are shown 0, 5).
 - LEDs for UVAC and HiVAC are lit.
+
+.. _cool-down-scope
+
+Add Liquid Nitrogen to the BIG anti-contaminator dewar
+------------------------------------------------------
+
+LN2 in the cold trap dewar is necessary for fast vacuum recovery. It is very useful, 
+especially when you need to change grids and/or do a cryo session. However, if you are 
+working with a negative stain or plastic section - a dry grid, the scope can still run 
+without LN2 cold trap. Unless you are running automatic, long overnight session, you 
+should always use it.
+
+.. Tip::
+
+   Generally, when you first put LN2 dewar to its stand, you want to be SLOW, or the 
+   strong evaporation will make LN2 spilling.
 
 
 
