@@ -22,6 +22,8 @@ This document lists the training contents that these two-level, 8 sessions will 
 
 .. .. note:: This is important!
 
+.. _level-I:
+
 Level I - Basic TEM Operation (4 sessions)
 ------------------------------------------
 
@@ -53,6 +55,8 @@ Level I - Basic TEM Operation (4 sessions)
 - Supervising practice of users for negative stain and scope operation
 - Assist users' operation and answer questions
 - Demo and explain cryo-cycle procedure to condition the column
+
+.. _level-II:
 
 Level II - Cryo TEM Operation (4 sessions)
 ------------------------------------------
