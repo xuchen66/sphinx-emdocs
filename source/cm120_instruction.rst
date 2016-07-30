@@ -193,27 +193,31 @@ Check Beam Tilt Pivot Point X, Y
 #. Repeat the last two steps for Beam Tilt Pivot Y.
 #. Press ``Align`` button again to exit.
 
-12. Check voltage and current rotation centers
+.. _HT-Rot_center:
+
+Check voltage and current rotation centers
+------------------------------------------
 
 This step is to align the beam to make it parallel to the axis of the column. The purpose of this step is to make beam to hit specimen perpendicularly. A coma is not a good thing, as it generates some phase error to the data.
 
 The procedure is below.
 
-Press [ Align ] button and select [ Rotation Center ].
-
-Select [ Voltage ] or [ Current ] from the same page.
-
-Adjust the [ Multi-function Knobs ] to let the wobbling be symmetrical around the center of the beam. The feature at very center of the large screen has minimum shift.
+#. Press ``Align`` button and select ``Rotation Center``.
+#. Select ``Voltage`` or ``Current`` from the same page.
+#. Adjust the ``Multi-function Knobs`` to let the wobbling be symmetrical around the center of the beam. The feature at very center of the large screen has minimum shift.
 
 If you perform this with Obj aperture in, then re-check the certering of objective aperture.
 
-Note:
+.. Note::
 
-The step size button on [ Focus ] is used to control the amplitude of the beam wobbling.
+The step size button on ``Focus`` is used to control the amplitude of the beam wobbling.
 
 The steps used here only give "roughly" parallel beam to the axis. If you need very acurate "0" tilt beam, a different alignment procedure - Coma-Free is needed.
 
-13. Put in objective aperture and center it
+.. _obj-aperture:
+
+Put in objective aperture and center it
+---------------------------------------
 
 It is important to know what size of the obj. aperture you are using. You don't want to use too small size to actual cut off useful high resolution signal. Meantime, you don't want to use the aperture size too large, as the non-usable high resoltion beam becomes noise to your image. This reduces signal to noise ration unneccesarily.
 
@@ -221,37 +225,43 @@ The position of the aperture could affect the obj. lens stigmatism. Therefore, y
 
 Here are the steps to insert and center Objective lens aperture:
 
-Make sure the large screen is down, to prevent CCD from damage.
+#. Make sure the large screen is down, to prevent CCD from damage.
+#. Switch to diffraction mode by pressing the diffraction ``D`` button.
+#. Adjust camera length to ~1m using magnification knob.
+#. Adjust the ``Intensity`` and ``Defocus`` knobs to see the shape edge of the obj. aperture.
+#. Adjust the related mechanical screws on aperture holder to choose the proper size of the aperture and center it to the central beam on diffraction pattern.
+#. Switch back to image mode by pressing ``D`` button again.
 
-Switch to diffraction mode by pressing the diffraction "D" button.
+.. _obj-stigma:
 
-Adjust camera length to ~1m using magnification knob.
-
-Adjust the [ Intensity ] (C2) and [ Defocus ] knobs to see the shape edge of the obj. aperture.
-
-Adjust the related mechanical screws on aperture holder to choose the proper size of the aperture and center it to the central beam on diffraction pattern.
-
-Switch back to image mode by pressing [ D ] button again.
-
-14. Check Objective Lens stigmatism
+Check Objective Lens stigmatism
+-------------------------------
 
 The obj. stigmatism should be corrected as much as possible, and it should be checked for every netative stain low-dose image that you are taking, as staining material might change field in local area. This is a bit hard by hand. Even with lastest version of SerialEW, this can be done by software, it is still not easy and time efficient. However, slight stigmated image is not critically bad, as it can be corrected as part of CTF correction computationally.
 
 Here are steps to correct Obj lens stigmatism, manually:
 
-Go to a relatively high mag., such as 100,000X, and focus the image.
+#. Go to a relatively high mag., such as 100,000X, and focus the image.
+#. If possible, acquire continous CCD image with live FFT so Thon rings can be seen.
+#. Press the ``Stig`` button, highlight ``Obj``, and select proper stepsize.
+#. Adjust the stigmatism using ``Multi-function X,Y`` until it becomes minimum at all defocus levels. (It shows up more at close to focus.)
 
-If possible, acquire continous CCD image with live FFT so Thon rings can be seen.
+.. _low-dose
 
-Press the [ Stig ] button, highlight [ Obj ], and select proper stepsize.
-
-Adjust the stigmatism using [ Multi-function knobs ] until it becomes minimum at all defocus levels. (It shows up more at close to focus.)
-
-15. Typical Low-Dose setup parameters
+Typical Low-Dose setup parameters
+---------------------------------
 
 Here are some typical setup for Low-Dose condition.
 
-Search: Mag=2650X(3000X with screen up), Spotsize=3-5, image mode
++--------+----------+
+| Mode   | Mag. (X) |
++========+==========+
+| Search |   3000   |
++--------+----------+
+| Focus  |  60,000  |
++--------+----------+
+| Record |  60,000  |
++--------+----------+
 
 Alternatively, at 2650-3400x, switch to Diff. mode by pressing "Diff" button. Adjust camera length to 680mm using "Mag" knob. Focus the diffraction spot using [ Focus ] knob, and then adjust "defocus" until the image inside central spot expands to proper size. Personally, I like to "defocus" to clockwise side. What you got is a shadowing image inside of defocused diffraction central beam. The advantage of this is high contrast compared to a normal image mode.
 
