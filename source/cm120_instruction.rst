@@ -103,18 +103,14 @@ Check C2 aperture mechanical position and C2 stigmatism
 Steps to adjust the C2 aperture mechanical position are:
 
 - Make sure the C2 aperture is in.
-- At around 5kX, cross the beam first and center beam using track ball on the left panel, then spread 
-   the beam until its diameter is close to 5cm ring on the screen. Adjust mechanica ``screws X,Y`` on 
-   C2 aperture to center the beam. Repeat this process 2-3 times.
-- At high mag ~30kX or higher, change the ``Intensity`` of beam through the crossover and adjust the 
-   ``screws X,Y`` to make the beam symmetric when spreading out.
+- At around 5kX, cross the beam first and center beam using track ball on the left panel, then spread the beam until its diameter is close to 5cm ring on the screen. Adjust mechanica ``screws X,Y`` on C2 aperture to center the beam.
+- Repeat this process 2-3 times.
+- At high mag ~30kX or higher, change the ``Intensity`` of beam through the crossover and adjust the ``screws X,Y`` to make the beam symmetric when spreading out.
 
 There are two ways to check and adjust the C2 stigmatism:
 
-- When the filament is desaturated, press ``Stig`` button and select ``Cond``, then adjust ``Multi-function X,Y`` 
-   so that the details in the filament shadowing image can be clearest and sharpest.
-- When changing the beam intensity, use the ``Multi-function X,Y`` to adjust the beam into symmetric 
-   and *round* shape, i.e. not elliptical.
+- When the filament is desaturated, press ``Stig`` button and select ``Cond``, then adjust ``Multi-function X,Y`` so that the details in the filament shadowing image can be clearest and sharpest.
+- When changing the beam intensity, use the ``Multi-function X,Y`` to adjust the beam into symmetric and *round* shape, i.e. not elliptical.
 
 .. Note::
 
