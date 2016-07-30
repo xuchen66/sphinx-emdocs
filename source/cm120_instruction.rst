@@ -95,7 +95,7 @@ The procedure is as following:
 - Adjust the ``multi-function X,Y`` to get the best shape for the tip and maximum intensity as well.
 - Bring the filament current to saturation.
 
-.. _c2-aperture-stigma
+.. _c2-aperture-stigma:
 
 Check C2 aperture mechanical position and C2 stigmatism
 -------------------------------------------------------
