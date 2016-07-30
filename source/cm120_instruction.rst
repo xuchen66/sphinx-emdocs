@@ -72,7 +72,7 @@ should always use it.
 Apply High Tension
 ------------------
 
-Turn High Tension (H.T.) on if it is off by pressing the ``H.T.`` button on the panel. 
+Turn High Tension (H.T.) on if it is off by pressing the :file:`H.T.` button on the panel. 
 From ``Parameter`` page, set it to 120kV or the voltage you want.
 
 .. _turn-on-filament:
