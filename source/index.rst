@@ -1,16 +1,23 @@
 Welcome to Chen's Cryo-EM Corner!
 =================================
 
-**For New Users:**
-
+Training Contents and Materials
+-------------------------------
 .. toctree::
    :numbered:
-   :maxdepth: 4
+   :maxdepth: 2
 
    cryo-em_training
    cryo-em_faq
 
-.. Some other information
+Instrument Instructions, Manuals and Protocols
+----------------------------------------------
+.. toctree::
+   :numbered:
+   :maxdepth: 4
+
+   cm120
+   ccds_cm120
 
 Index
 =====
