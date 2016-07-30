@@ -46,5 +46,5 @@ Here are images for the two cameras on the CM120.
 +--------------------------+-------------------+----------------------+
 | Light Coupling Mechanism |   Fiber Optic	   |   Fiber Optic        |
 +--------------------------+-------------------+----------------------+
-| Mounting Position	       |   sided-mount     |   bottom-mount       |
+| Mounting Position        |   sided-mount     |   bottom-mount       |
 +--------------------------+-------------------+----------------------+
