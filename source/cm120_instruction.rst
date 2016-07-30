@@ -248,8 +248,8 @@ Here are steps to correct Obj lens stigmatism, manually:
 
 .. _low-dose:
 
-Typical Low-Dose setup parameters
----------------------------------
+Low-Dose Setup
+--------------
 
 Magnification setup for three modes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
