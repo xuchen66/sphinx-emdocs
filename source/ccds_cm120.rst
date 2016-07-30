@@ -44,7 +44,7 @@ Here are images for the two cameras on the CM120.
 +--------------------------+-------------------+----------------------+
 | Digitization (bit)       |   14              |   16                 |
 +--------------------------+-------------------+----------------------+
-| Light Coupling Mechanism |   Fiber Optic     |   Fiber Optic        |
+| Light Coupling Mechanism |  Fiber Optic      |   Fiber Optic        |
 +--------------------------+-------------------+----------------------+
 | Mounting Position        |   sided-mount     |   bottom-mount       |
 +--------------------------+-------------------+----------------------+
