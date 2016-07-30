@@ -4,7 +4,7 @@ Welcome to Chen's Cryo-EM Corner!
 Training Contents and Materials
 -------------------------------
 .. toctree::
-   :numbered:
+..   :numbered:
    :maxdepth: 2
 
    cryo-em_training
@@ -13,7 +13,7 @@ Training Contents and Materials
 Instrument Instructions, Manuals and Protocols
 ----------------------------------------------
 .. toctree::
-   :numbered:
+..   :numbered:
    :maxdepth: 4
 
    cm120
