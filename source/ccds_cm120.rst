@@ -35,6 +35,8 @@ Here are images for the two cameras on the CM120.
    :alt: Gatan Orius & Tietz 224HD Cameras
    :align: left
 
+**Table.1 Some basic properties**
+
 +--------------------------+-------------------+----------------------+
 |  Property                | Gatan Orius 832   | Tietz TemCam 224-HD  |
 +==========================+===================+======================+
