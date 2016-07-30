@@ -20,7 +20,7 @@ CM120 Operation Instruction
       feel free to let me know. Thank you!
 
 .. note::
-      all the turning knobs on the panel and push buttons are marked like :file:``button``.
+      all the turning knobs on the panel and push buttons are marked like ``button``.
 
 .. _check-logbook:
 
@@ -72,16 +72,16 @@ should always use it.
 Apply High Tension
 ------------------
 
-Turn High Tension (H.T.) on if it is off by pressing the :file: ``H.T.`` button on the panel. 
-From :file: ``Parameter`` page, set it to 120kV or the voltage you want.
+Turn High Tension (H.T.) on if it is off by pressing the ``H.T.`` button on the panel. 
+From ``Parameter`` page, set it to 120kV or the voltage you want.
 
 .. _turn-on-filament:
 
 Turn filament on
 ----------------
 
-It is recommended to turn the filament on while on the :file:``configuration`` page where 
-the actual filament current number is shown and the :file:``limit`` can be checked(highlighted).
+It is recommended to turn the filament on while on the ``configuration`` page where 
+the actual filament current number is shown and the ``limit`` can be checked(highlighted).
 
 .. _gun-tilt-saturatation:
 
@@ -91,9 +91,8 @@ Check saturation and gun tilt, and then saturate the filament
 The procedure is as following:
 
 - Desaturate the filament about 2-3 clicks.
-- Press :file:``Align`` button, highlight :file:``Gun Tilt``.
-- Adjust the :file:``multi-function X,Y`` to get the best shape 
-  for the tip and maximum intensity as well.
+- Press ``Align`` button, highlight ``Gun Tilt``.
+- Adjust the ``multi-function X,Y`` to get the best shape for the tip and maximum intensity as well.
 - Bring the filament current to saturation.
 
 .. _c2-aperture-stigma
@@ -104,84 +103,99 @@ Check C2 aperture mechanical position and C2 stigmatism
 Steps to adjust the C2 aperture mechanical position are:
 
 - Make sure the C2 aperture is in.
-- At around 5kX, cross the beam first and center beam using deflectors ([ Beam Shift X,Y ]), then spread the beam until its diameter is close to 5cm ring on the screen. Adjust screws X & Y on C2 aperture to center the beam. Repeat this process 2-3 times.
-- At high mag ~30kX or higher, change the [ intensity ] of beam(C2) through the crossover and adjust the screws X,Y to make the beam symmetric when spreading out.
+- At around 5kX, cross the beam first and center beam using track ball on the left panel, then spread 
+   the beam until its diameter is close to 5cm ring on the screen. Adjust mechanica ``screws X,Y`` on 
+   C2 aperture to center the beam. Repeat this process 2-3 times.
+- At high mag ~30kX or higher, change the ``Intensity`` of beam through the crossover and adjust the 
+   ``screws X,Y`` to make the beam symmetric when spreading out.
 
 There are two ways to check and adjust the C2 stigmatism:
 
-- When the filament is desaturated, press [ Stig ] button and select [ Cond ], then adjust [ Multi-function knobs ] so that the details in the filament shadowing image can be clearest and sharpest.
+- When the filament is desaturated, press ``Stig`` button and select ``Cond``, then adjust ``Multi-function X,Y`` 
+   so that the details in the filament shadowing image can be clearest and sharpest.
+- When changing the beam intensity, use the ``Multi-function X,Y`` to adjust the beam into symmetric 
+   and *round* shape, i.e. not elliptical.
 
-- When changing the beam intensity, use the [ Multi-function knobs ] to adjust the beam into symmetric and "round" shape, i.e. not elliptical.
+.. Note::
 
-Note:
+   For this purpose, don't pay attention to the beam shape when beam is exactly at cross point, as that more 
+   reflects the shape of the crystal tip, rather than stigmatism. You want to make beam *round* when spreat out.
 
-For this purpose, don't pay attention to the beam shape when beam is exactly at cross point, as that more reflects the shape of the crystal tip, rather than stigmatism. You want to make beam "round" when spreat out.
+.. _specimen-rod:
 
-8. Check specimen holder & load grid
+Check specimen holder & load grid
+---------------------------------
 
-Important:
+.. Important::
 
-This is important. If you see any problem with any of the holders, report it to the manager immediately. Otherwise, you could be the one held accountable for the damage. Several details about the holder must be checked carefully before use:
+   This is important. If you see any problem with any of the holders, report it to the manager immediately. 
+   Otherwise, you could be the one held accountable for the damage. 
+   
+Several details about the holder must be checked carefully before use:
 
-Overall shape is good, and there is not obvious damage.
+#. Overall shape is good, and there is not obvious damage.
+#. Make sure there is no crack or any other damage on the O-ring. If you do see a damage, like a cut etc., 
+   ask manager to replace it for you. Check if there any dirt or fibril on the O-ring. You might want to 
+   clean it gently with alcohol and slightly re-grease it. Do not over-grease. The main function of the 
+   grease is to lubricate.
+#. Gently secure the specimen grid on its position. Use the tool pin to open and close the clamping device.
 
-Make sure there is no crack or any other damage on the O-ring. If you do see a damage, like a cut etc., ask manager to replace it for you. Check if there any dirt or fibril on the O-ring. You might want to clean it gently with alcohol and slightly re-grease it. Do not over-grease. The main function of the grease is to lubricate.
+.. _insert-specimen-rod:
 
-Gently secure the specimen grid on its position. Use the tool pin to open and close the clamping device.
+Insert specimen holder into column
+----------------------------------
 
-9. Insert specimen holder into column
+.. Warning::
 
-Warning:
+   Be careful! Only at this stage, you might damage the scope or specimen holder mechanically. Be sure that 
+   you understand what you are doing. Should you feel any confusion about this procedure, please stop and ask 
+   for help.
 
-Be careful! Only at this stage, you might damage the scope or specimen holder mechanically. Be sure that you understand what you are doing. Should you feel any confusion about this procedure, please stop and ask for help.
+.. Note::
 
-Note:
+   For the sake of filament crystal, it is REQUIRED to turn down the filament to 10 before inserting the specimen rod. 
+   That way, in case IGP shoots high, there will be no subtancial damage to the LaB6 tip crystal. In general, filament 
+   should be kept at 10 or completely off until IGP recovers to below 26.
 
-For the sake of filament crystal, it is REQUIRED to turn down the filament to 10 before inserting the specimen rod. That way, in case IGP shoots high, there will be no subtancial damage to the LaB6 tip crystal. In general, filament should be kept at 10 or completely off until IGP recovers to below 26.
+The procedure to insert a room temperature specimen rod is below:
 
-The procedure to insert a room temperature specimen rod is below.
+#. define airlock pumping time as 60 seconds, from Vacuum - Cryo page.
+#. Reset stage tilt angle to 0 if it is not.
+#. Insert rod in, with the Pin at 3'oclock position.
+#. As soon as it reach the end, rotate rod CLOCKWISE with some pushing force so that the pin slides into the locking 
+   groove at 5'oclock position. You should feel the rod goes "in" about 8mm.
+#. Wait until the red LED on the stage disappears. Dismiss the "non-standard" flushing message on the screen by pressing
+   ``Reset`` button at lower left corner of the screen display.
+#. Turn rod Count-Clockwise until pin is at 12'oclock position, while watching IGP reading. You should adjust your 
+   rotating speed to keep IGP < 40.
 
-define airlock pumping time as 60 seconds, from Vacuum - Cryo page.
+.. _eucentricity
 
-Reset stage tilt angle to 0 if it is not.
-
-Insert rod in, with the Pin at 3'oclock position.
-
-As soon as it reach the end, rotate rod CLOCKWISE with some pushing force so that the pin slides into the locking groove at 5'oclock position. You should feel the rod goes "in" about 8mm.
-
-Wait until the red LED on the stage disappears. Dismiss the "non-standard" flushing message on the screen by pressing "Reset" button at lower left corner of the screen display.
-
-Turn rod Count-Clockwise until pin is at 12'oclock position, while watching IGP reading. You should adjust your rotating speed to keep IGP < 40.
-
-10. Adjust the specimen height to the eucentric height
+Adjust the specimen height to the eucentric height
+--------------------------------------------------
 
 Eucentricity is a fixed reference point in a scope. It is the intercross point of stage axis and column axis. We want to observe our specimen grid at this height level so that the actual magnification doesn't differ much from day to day. And scope is designed to perform better when specimen is at such height. It is good to have the habbit to always adjust specimen to eucentric height after rod insertion. On CM120, the procedure is as following:
 
-Have beam seen on large screen, at ~3000X, and find a feature on the grid.
+#. Have beam seen on large screen, at ~3000X, and find a feature on the grid.
+#. Rotate stage back and forth by pressing ``CompuStage`` - `` A-wobbler``.
+#. Adjust joystick Z to minimize the shifting of the feature.
 
-rotate stage back and forth by pressing [ CompuStage ] - [ A-wobbler ].
+.. _beam-titl-pp:
 
-Adjust joystick Z to minimize the shifting of the feature.
+Check Beam Tilt Pivot Point X, Y
+--------------------------------
 
-11. Check Beam Tilt Pivot Point X, Y
+.. Note::
 
-Note:
+   The prerequisites for Pivot-Point is specimen being at eucentric height and objective being preceisly at focus level. **The order is important here**.
 
-The prerequisites for Pivot-Point is specimen being at eucentric height and objective being preceisly at focus level.
-
-Make sure the specimen is at eucentric height.
-
-Take out Obj. aperture.
-
-Press button [ Align ] - [ Direct Alignment ] - [ Beam Tilt Pivot X ].
-
-Merge image feature by adjusting [ Focus ] knob. This is to precisely focus the image.
-
-Merge beam using [ Multi-fcuntion knobs ].
-
-Repeat the last two steps for [ Beam Tilt Pivot Y ].
-
-Press [ Align ] button again to exit.
+#. Make sure the specimen is at eucentric height.
+#. Take out Obj. aperture.
+#. Press button ``Align`` - ``Direct Alignment`` - ``Beam Tilt Pivot X``.
+#. Merge image feature by adjusting ``Focus`` knob. This is to precisely focus the image.
+#. Merge beam using ``Multi-fcuntion knobs``.
+#. Repeat the last two steps for Beam Tilt Pivot Y.
+#. Press ``Align`` button again to exit.
 
 12. Check voltage and current rotation centers
 
