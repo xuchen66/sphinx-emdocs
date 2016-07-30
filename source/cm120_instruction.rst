@@ -23,7 +23,7 @@ CM120 Operation Instruction
 .. _check-logbook:
 
 Check log book to see if there have been any problems
---------------------------------------------------------
+-----------------------------------------------------
 
 It is always a good idea to check the LOG book. You can find useful information listed there, such as:
 
@@ -31,10 +31,10 @@ It is always a good idea to check the LOG book. You can find useful information 
 - The conditions that were used last, especially the filament saturation.
 - Any special note that last user wants you to know.
 
--- _check-vacuum-status:
+ .. _check-vacuum-status:
 
 Check vacuum status
-----------------------
+-------------------
 
 The status must be Ready before you can operate the scope. If not, you should ask for help and 
 report it to the manager. Usually, if the vacuum is not ready, it is due to one of the following reasons:
