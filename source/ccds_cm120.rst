@@ -9,7 +9,7 @@ CCD Cameras on CM120
 
 .. _glossary:
 
-  Abostract
+  Abstract
     We no longer use film for TEM exposure anymore! Instead, we use digital camera. There are basically two types of digital 
     cameras available on the market for TEM applications - Charge-Coupled Device (CCD) and Direct Electron Detector. On CM120, 
     there are two cameras installed - Gatan Orius model 832 and Tietz TemCam 224-HD. They both are CCD type of cameras. In this 
