@@ -13,8 +13,8 @@ Training Contents and Materials
    cryo-em_training
    cryo-em_faq
 
-Instrument Instructions, Manuals and Protocols
-----------------------------------------------
+Instructions, Manuals and Protocols
+-----------------------------------
 .. toctree::
    :maxdepth: 4
 
@@ -22,7 +22,7 @@ Instrument Instructions, Manuals and Protocols
    ccds_cm120
 
 Index
-=====
+*****
 
    * :ref:`genindex`
 ..   * :ref:`modindex`
