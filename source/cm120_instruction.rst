@@ -20,7 +20,9 @@ CM120 Operation Instruction
       If you have suggestion how to improve this document to make it more useful, please 
       feel free to let me know. Thank you!
 
-1. Check log book to see if there have been any problems
+.. _check-logbook:
+
+Check log book to see if there have been any problems
 --------------------------------------------------------
 
 It is always a good idea to check the LOG book. You can find useful information listed there, such as:
@@ -29,5 +31,24 @@ It is always a good idea to check the LOG book. You can find useful information 
 - The conditions that were used last, especially the filament saturation.
 - Any special note that last user wants you to know.
 
-#. Check vacuum status
+-- _check-vacuum-status:
+
+Check vacuum status
 ----------------------
+
+The status must be Ready before you can operate the scope. If not, you should ask for help and 
+report it to the manager. Usually, if the vacuum is not ready, it is due to one of the following reasons:
+
+- The scope is malfunctioning.
+- The air pressure is not within a good range(the building compressed air may be down?).
+- The cooling water is off.
+
+Vacuum being Ready means:
+
+- Top line of vacuum page shows "ready".
+- P3 < 50, IGP < 26 (normally, they are shown 0, 5).
+- LEDs for UVAC and HiVAC are lit.
+
+
+
+
