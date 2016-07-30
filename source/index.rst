@@ -18,7 +18,7 @@ Instructions, Manuals and Protocols
 .. toctree::
    :maxdepth: 4
 
-   cm120
+   cm120_instruction
    ccds_cm120
 
 Index
