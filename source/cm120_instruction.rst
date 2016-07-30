@@ -47,7 +47,7 @@ report it to the manager. Usually, if the vacuum is not ready, it is due to one 
 
 Vacuum being Ready means:
 
-- Top line of vacuum page shows **read**.
+- Top line of vacuum page shows **ready**.
 - P3 < 50, IGP < 26 (normally, they are shown 0, 5).
 - LEDs for UVAC and HiVAC are lit.
 
