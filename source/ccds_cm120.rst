@@ -53,3 +53,4 @@ The table below lists some basic properties of these two cameras.
 | Mounting Position        |   sided-mount     |   bottom-mount       |
 +--------------------------+-------------------+----------------------+
 
+.. _a Gatan Orius 832: http://www.gatan.com
