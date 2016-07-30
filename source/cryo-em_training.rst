@@ -25,7 +25,7 @@ This document lists the training contents that these two-level, 8 sessions will 
 Level I - Basic TEM Operation (4 sessions)
 ------------------------------------------
 
-**Session I - 1**
+.. rubric:: Session I - 1
 
 - Prepare continous carbon film grid
 - Introduction to TEM; brief history; compare to X-ray as beam source
