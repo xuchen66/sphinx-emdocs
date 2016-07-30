@@ -246,12 +246,15 @@ Here are steps to correct Obj lens stigmatism, manually:
 #. Press the ``Stig`` button, highlight ``Obj``, and select proper stepsize.
 #. Adjust the stigmatism using ``Multi-function X,Y`` until it becomes minimum at all defocus levels. (It shows up more at close to focus.)
 
-.. _low-dose
+.. _low-dose:
 
 Typical Low-Dose setup parameters
 ---------------------------------
 
-- Here are some typical magnificaton setup for Low-Dose condition.
+Magnification setup for three modes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Here are some typical magnificaton setup for Low-Dose condition.
 
 +--------+----------+
 | Mode   | Mag. (X) |
@@ -265,7 +268,8 @@ Typical Low-Dose setup parameters
 
 One might use diffraction mode to ``Search``, which uasally gives better contrast but the "image" might be distorted. The final magnification depends on target pixelsize on image. If possible, use the same magnificagion for both ``Focus`` and ``Record`` to eliminate the dofocus offset between the two magnifications. The off-axis distanse is usually about 1.5 - 2.0 microns. 
 
-- Align an identified area under ``Exposure`` and ``Search``
+Align an identified area under ``Exposure`` and ``Search``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This step is to insure that what you see under low mag. (Search mode) will be the same area you get under imaging mag. Here is how I do it:
 
@@ -276,7 +280,7 @@ This step is to insure that what you see under low mag. (Search mode) will be th
 
    You can use a corner of a mesh as the identified spot for a negative stain specimet or to use an ice burn mark in the cryo case.
 
-.. _finish
+.. _finish:
 
 Finishing Up
 ------------
