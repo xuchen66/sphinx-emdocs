@@ -19,3 +19,15 @@ CM120 Operation Instruction
 
       If you have suggestion how to improve this document to make it more useful, please 
       feel free to let me know. Thank you!
+
+1. Check log book to see if there have been any problems
+--------------------------------------------------------
+
+It is always a good idea to check the LOG book. You can find useful information listed there, such as:
+
+- If there have been any recent problems with the scope.
+- The conditions that were used last, especially the filament saturation.
+- Any special note that last user wants you to know.
+
+#. Check vacuum status
+----------------------
