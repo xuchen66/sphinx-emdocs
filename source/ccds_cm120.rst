@@ -27,6 +27,7 @@ Some Basic Properties of the Two Cameras
 Here are images for the two cameras on the CM120.
 
 **Fig.1 Camera Heads of Gatan Orius & Tietz 224HD**
+
 .. image:: ../images/orius-224hd.png
    :height: 361 px
    :width: 833 px
