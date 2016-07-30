@@ -40,7 +40,7 @@ The table below lists some basic properties of these two cameras.
 **Table.1 Some basic properties**
 
 +--------------------------+-------------------+----------------------+
-|  Property                | `Gatan Orius 832`_| Tietz TemCam 224-HD  |
+|  Property                | Gatan Orius 832_  | Tietz TemCam 224-HD  |
 +==========================+===================+======================+
 |  Format                  |   3768 x 2672     |   2048 x 2048        |
 +--------------------------+-------------------+----------------------+
