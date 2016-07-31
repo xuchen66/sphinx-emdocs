@@ -1,5 +1,5 @@
-Welcome to Chen's Cryo-EM Corner!
-*********************************
+.. _index:
+
 .. toctree::
    :maxdepth: 2
    
