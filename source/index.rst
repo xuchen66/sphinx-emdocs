@@ -10,9 +10,9 @@ Training Contents and Materials
 .. toctree::
    :maxdepth: 2
 
-   cryo-em_training
    cryo-em_faq
-
+   cryo-em_training
+  
 Instructions, Manuals and Protocols
 -----------------------------------
 .. toctree::
