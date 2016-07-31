@@ -149,7 +149,7 @@ SerialEM is setup so that it reports the dose on specimen on the top of the imag
 Pixlesize Calibration for Both Cameras
 --------------------------------------
 
-The table below list pixelsize at specimen level for different scope magnifications. Please note that with large screen position as Up and Down, the CM120 TEM interface display different mag values. There is no difference in term of lens current in this case - this is due to the recording media being at different "collecting" level along the projection. ScreenDown mag means at screen level and ScreenUp means at film level. We run Orius with screen Down and Tietz with Screen Up.
+The table below list pixelsize at specimen level for different scope magnifications. Please note that with large screen position as Up and Down, the CM120 TEM interface displays different mag values. There is no difference in term of lens current in this case - this is due to the recording media being at different "collecting" level along the projection. ScreenDown mag means at screen level and ScreenUp means at film level. We run Orius with screen Down and Tietz with Screen Up.
 
 The magnifications display in TEM interface are nominal. For actual magnification or pixelsize at specimen for a CCD camera, careful calibration is needed. Below is the calibration table for both cameras.
 
