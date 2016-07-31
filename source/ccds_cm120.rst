@@ -77,7 +77,7 @@ The Orius controller for 35mm port sided-mount camera has no shutter cable from 
 
 The picture below is the front and back to Orius camera controller, and Tietz camera shutterbox as well(small one on the top). You can see there is no cable hooked on Orius controller for shutter control.
 
-Figure 2. Front and Back of controller of Orius and shutterbox of TemCam 224-HD
+**Figure 2. Front and Back of controller of Orius and shutterbox of TemCam 224-HD**
 
 .. image:: ../images/front-back-orius-controller.png
 
@@ -85,7 +85,7 @@ For TemCam 224HD camera, there are shutter control cables from the controller bo
 
 The two cables with red connectors are labeled "BB" and "SH", for Beam Blanker and Shutter respectively. BB cable is connected to Gun Upper Coil as explained in previous section. It can be confirmed from scope "CURRENT READOUT " page. Below is two screen snapshots for large screen being at Down and Up. You can see the Gun Upper Coil current values in these two situations. One can easily see the Gun U-X is changed from -77 to -195 when screen is lifted.
 
-Figure 3. Gun Coil Current Changes When Large Screen Up (left) and Down (right)
+**Figure 3. Gun Coil Current Changes When Large Screen Up (left) and Down (right)**
 
 .. image:: ../images/current-scr-up-down.png
 
@@ -108,7 +108,7 @@ These both CCD cameras are water cooled. More strictly speaking, the dissipated 
 
 The temperature can be checked for each camera using their softwares. For Orius, from DigitalMicorgraph, one can check menu Camera - Temperature. On Tietz camera, one has to start up TCL interface and also EMMENU from TCL. After that, one has to open result log window and command window. From command window, type "ccdpshow" and then hit [ Execute ]. The temperature will show in result window.
 
-Figure 4. command "ccdpshow" to get temperature for 224HD
+**Figure 4. command "ccdpshow" to get temperature for 224HD**
 
 .. image:: ../images/ccdpshow.png
 
@@ -127,7 +127,7 @@ SerialEM controls Gatan camera by a plugin dll file put in Gatan's plugin folder
 
 Since SerialEM doesn't talk to CM120 computer, we have to use fake mag and screen position to match the real situation on scope. This way, the image file saved on SerialEM will have valid and correctly pixelsize information in MRC header.
 
-Figure 5. Camera Setup Window where one can change mag and screen position to match scope
+**Figure 5. Camera Setup Window where one can change mag and screen position to match scope**
 
 .. image:: ../images/fake-mag-screen-setup.png
 
