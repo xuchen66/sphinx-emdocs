@@ -276,7 +276,7 @@ This step is to insure that what you see under low mag. (Search mode) will be th
 #. At Exposure mode, MECHANICALLY drive an identified spot to the centber of the screen.
 #. At Search mode(and usually in Diffraction mode also), using the ``Multi-function knobs`` to backtrack the identified spot at the center of the screen (electronically). This uses Image Shift or Diffaction Shift (when Search mode is set up in Diff mode) to "shift" image without actually moving the stage position.
 
-.. Note::
+.. Tip::
 
    You can use a corner of a mesh as the identified spot for a negative stain specimet or to use an ice burn mark in the cryo case.
 
