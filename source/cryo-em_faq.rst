@@ -27,8 +27,8 @@ How do I ...
    for file in *.emi ;
 
       do
-		   root=`basename ${file} .emi`
-		   raw2mrc -x 4096 -y 4096 $file $root.mrc  
+            root=`basename ${file} .emi`
+            raw2mrc -x 4096 -y 4096 $file $root.mrc  
       done
   													
    exit
