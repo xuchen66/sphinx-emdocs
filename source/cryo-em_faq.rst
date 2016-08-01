@@ -17,7 +17,7 @@ How do I ...
    
    If you need to batch convert a number of files, you can try this shell script. 
   
-.. code-block:: sh
+   .. code-block:: sh
    
       #!/bin/sh
 
