@@ -20,12 +20,9 @@ How do I ...
    .. code-block:: sh
    
       #!/bin/sh
-
       for file in *.emi ;
-
          do
                root=`basename ${file} .emi`
                raw2mrc -x 4096 -y 4096 -t short $file $root.mrc  
          done
-  													
       exit
