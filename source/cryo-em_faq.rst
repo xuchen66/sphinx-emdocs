@@ -19,4 +19,16 @@ How do I ...
    
       $ raw2mrc -x 4096 -y 4096 input.emi output.mrc
    
+  If you need to batch convert a number of files, you can try this shell script. 
   
+   ::
+   #!/bin/sh
+
+   for file in *.emi ;
+
+      do
+		   root=`basename ${file} .emi`
+		   raw2mrc -x 4096 -y 4096 $file $root.mrc  
+      done
+  													
+   exit
