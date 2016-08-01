@@ -23,13 +23,13 @@ How do I ...
   
    ::
    
-   #!/bin/sh
+      #!/bin/sh
 
-   for file in *.emi ;
+      for file in *.emi ;
 
-      do
-            root=`basename ${file} .emi`
-            raw2mrc -x 4096 -y 4096 $file $root.mrc  
-      done
+         do
+               root=`basename ${file} .emi`
+               raw2mrc -x 4096 -y 4096 $file $root.mrc  
+         done
   													
-   exit
+      exit
