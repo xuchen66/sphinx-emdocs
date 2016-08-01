@@ -19,7 +19,7 @@ How do I ...
    
       $ raw2mrc -x 4096 -y 4096 input.emi output.mrc
    
-  If you need to batch convert a number of files, you can try this shell script. 
+   If you need to batch convert a number of files, you can try this shell script. 
   
    ::
    
