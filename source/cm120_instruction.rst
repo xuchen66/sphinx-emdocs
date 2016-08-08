@@ -5,7 +5,7 @@ CM120 Operation Instruction
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2016-3-17
+:Date: 2016-8-8
 
 .. glossary::
 
