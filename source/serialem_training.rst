@@ -16,7 +16,7 @@ SerialEM Training - Basic, Tomography & Single Particle
     This is to provide hands-on training on SerialEM. I will teach basic functions of the program. And I will teach how to use the powerful program for electron tomography data collection, and for single particle application as well. 
 
  Requirement 
-    You are required to have basic knowledge for TEM operation, preferred for Tecnai/Titan/Talos system. You should be able to operate scope independently to get a properly foused image. You are now required, however, to have pre-knowledge of SerialEM itself. 
+    You are required to have basic knowledge for TEM operation, preferred for Tecnai/Titan/Talos system. You should be able to operate scope independently to get a properly foused image. You are *not* required, however, to have pre-knowledge of SerialEM itself. 
 
 This document lists the training contents that the three catagories - basics, tomography and single particle. 
 
