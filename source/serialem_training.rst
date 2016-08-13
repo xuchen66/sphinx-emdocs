@@ -65,7 +65,7 @@ SerialEM - Tomography (5 sessions)
 
 .. rubric:: Session 2
 
-- Ask user to acquire MMM maps and collect a tilting series to comment on the condition
+- Supervise user to acquire MMM maps and collect a tilting series,  answer questions and comment on the condition used.
 - Setup montage tilting series
 - Setup batch mode for multiple locations
 
