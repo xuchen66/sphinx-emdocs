@@ -84,3 +84,65 @@ SerialEM - Tomography (5 sessions)
 - LMM, MMM in low dose mode
 - bi-directional tilting series collection
 - batch mode for cryo data collection. 
+
+.. _single-particle:
+
+SerialEM - Single Particle (5 sessions)
+---------------------------------------
+
+.. rubric:: Session 1
+
+- positioning X,Y, Image Shift and Stage Shift, backlash
+- dragging to a new position, with Script/Macro
+- positioning for preselected multiple location using ``RealignToItem`` and ``ZeroIS``.
+- positioning Z, using stage and using tilted beam image pair
+- demo and explain scripts ``Z_byG`` and ``Z_byV``
+- demo center beam using keyboard and script
+
+.. rubric:: Session 2
+
+- demo simple script ``LD``, and explain actions
+- refine hole centering using template
+- draw grid point - normal and grouping
+- introduce script ``LD-group`` and explain the ideas 
+
+.. rubric:: Session 3
+
+- K2 specific - image format(MRC, TIFF), Compression, 4-bit special for Super-res frames
+- Asynchronize mode for K2 imaging, separate gain reference from raw image frame stack
+- Consideration for dose - total dose, dose per frame, frame time 
+- In-fly frame aligning option
+
+.. rubric:: Session 4
+
+- go through whole single particle procedure
+- LMM, LD setup, MMM with "Z_byV", draw grid point, prepare hole template
+- run ``LD-group``
+
+.. rubric:: Session 5
+
+- supervising user practise session to go through all the steps
+- answer question 
+- explain script command to limit defocus changing range
+
+.. _advanced:
+
+SerialEM - Advanced Topics (3 sessions)
+---------------------------------------
+
+.. rubric:: Session 1
+
+- SerialEM installation and Calibration
+
+.. rubric:: Session 2
+
+- Setup multiple accounts
+- Setup multiple system files
+- Setup executables for production and tests
+- Setup Dummy instance to pick target holes while main instance is busy collecting
+
+.. rubric:: Session 3
+
+- explain script to take multiple shots around a centered hole
+- script to control LN2 refilling and obtain K2 hardware dark background
+- Set email alert system
