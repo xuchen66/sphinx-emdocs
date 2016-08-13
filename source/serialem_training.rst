@@ -2,8 +2,8 @@
 .. index:: SerialEM Trainin
 .. serialem_training:
 
-SerialEM Training - Basic, Tomography & Single Particle
-=======================================================
+SerialEM Training - Basic, Tomography, Single Particle, Advanced
+================================================================
 (Each session is set 2 - 2.5 hours)
 
 :Author: Chen Xu 
