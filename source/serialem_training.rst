@@ -24,7 +24,7 @@ This document lists the training contents that these two-level, 8 sessions will 
 
 .. _basic:
 
-SerialEM - Basics (4 sessions)
+SerialEM - Basics (3 sessions)
 ------------------------------
 
 .. rubric:: Session 1
@@ -69,17 +69,17 @@ SerialEM - Tomography (4 sessions)
 - Setup montage tilting series
 - Setup batch mode for multiple locations
 
-.. rubic:: Session 3
+.. rubric:: Session 3
 
 - demo and explain dual axis tomography data collection
 - demo how to rotate grid 90 degree and find the same location (registration tramsformation)
 
-.. rubric:: Session 3
+.. rubric:: Session 4
 
 - Low dose mode setup for Cryo Tomography applications
 - refresh cryo sample and holder handeling
 
-.. rubric:: Session 4
+.. rubric:: Session 5
  
 - LMM, MMM in low dose mode
 - bi-directional tilting series collection
