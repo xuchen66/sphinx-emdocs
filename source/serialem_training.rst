@@ -145,4 +145,5 @@ SerialEM - Advanced Topics (3 sessions)
 
 - explain script to take multiple shots around a centered hole
 - script to control LN2 refilling and obtain K2 hardware dark background
-- Set email alert system
+- Setup email alert system
+- in-fly align frames using standalone GPU server computer
