@@ -18,7 +18,7 @@ SerialEM Training - Basic, Tomography & Single Particle
  Requirement 
     You are required to have basic knowledge for TEM operation, preferred for Tecnai/Titan/Talos system. You should be able to operate scope independently to get a properly foused image. You are now required, however, to have pre-knowledge of SerialEM itself. 
 
-This document lists the training contents that these two-level, 8 sessions will cover. 
+This document lists the training contents that the three catagories - basics, tomography and single particle. 
 
 .. .. note:: This is important!
 
@@ -54,7 +54,7 @@ SerialEM - Basics (3 sessions)
 
 .. _Tomography:
 
-SerialEM - Tomography (4 sessions)
+SerialEM - Tomography (5 sessions)
 ----------------------------------
 
 .. rubric:: Session 1
