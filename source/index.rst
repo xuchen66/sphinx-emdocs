@@ -12,6 +12,7 @@ Training Contents and Materials
 
    cryo-em_faq
    cryo-em_training
+   SerialEM_training
   
 Instructions, Manuals and Protocols
 -----------------------------------
