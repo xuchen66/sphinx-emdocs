@@ -15,8 +15,9 @@ Single Particle Data Collection Using SerialEM
       I often receive requests to provide script/macro for single particle data collection using SerialEM as control program. 
       It is not very easy to explain that script/macro itself is only the small portion of whole operation steps. 
       I realized that a brief but detailed protocol for whole process is perhaps more useful, specially for novice cryoEM users. 
-      It should be useful for more experience users as a quick checklist in case some step is forgotten. 
-      I wrote something similiar at Brandeis EM webpage, but here I rewrite this here to reflect newer hardware of microscope and camera. 
+      It should be useful for more experience users as well as a quick checklist in case some step is forgotten. 
+      I wrote something similiar at Brandeis EM webpage, but here I rewrite this to reflect newer hardware of microscope and camera, 
+      and with updated SerialEM scripts/macros.
       
       A Krios with K2 Summit camera and FEI Ceta camera is the base hardware setup for this protocol. 
 
@@ -53,7 +54,17 @@ Make Low Mag Montage (LMM) Map or Grid Atlas
 It saves time with large area detector. Therefore, Ceta camera is probably better for this step. 
 
 - Insert/load your cryo grids
-- 
+- Set mag at ~87X, retract Obj Aperture
+- Spread beam to cover whole Ceta camera area
+- Start SerialEM if not yet
+- Select Ceta from SerialEM camera control setup *and* FEI Camera ocx. 
+- Setup camera condition from SerialEM: Record (e.g. bin=4, exposure=0.4); a Record image gives proper counts (~2000)
+- Navigator Menu -> Open
+- Navigator menu -> Montaging & Grids -> Setup Full Montage; define montage file to open
+- Montage Control Panel -> Start
+- Click "Yes" to make final overview of montage into a map
+- Close the montage file
+
 .. Tip::
 
    Generally, when you first put LN2 dewar to its stand, you want to be SLOW, or the 
