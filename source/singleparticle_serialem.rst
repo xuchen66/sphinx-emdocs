@@ -41,7 +41,7 @@ Before you commit large dataset time, it is always a good idea to check scope co
 Prepare Cameras 
 ---------------
 
-For K2 camera, perform full procedure to prepare backgrounds from DM interface. This include software and hardware backgrounds. The hardware background file is for processor to use, while the software gain reference files sit in K2 computer for final software image correction. I was told the software gain reference is more stable than hardware background, but not sure this is still the case. Any way, just perform the full procedure follwing DM steps. 
+For K2 camera, perform full procedure to prepare backgrounds from DM interface. This include software and hardware backgrounds. The hardware background file is for processor to use, while the software gain reference files sit in K2 computer for final software image correction. I was told the software gain reference was more stable than hardware background, but not sure this is still the case. Any way, just perform the full procedure follwing DM steps. 
 
 - After preparing camera, take a single shot with proper dose rate (~5-10 e/pix/s) for 1 second with no specimen and do an FFT. The FFT should show clean background without strong center cross or lines. 
 - For Ceta camera, do the same from FEI user interface. 
@@ -59,7 +59,7 @@ It saves time with large area detector. Therefore, Ceta camera is probably bette
 - Start SerialEM if not yet
 - Select Ceta from SerialEM camera control setup *and* FEI Camera ocx. 
 - Setup camera condition from SerialEM: Record (e.g. bin=4, exposure=0.4); a Record image gives proper counts (~2000)
-- Navigator Menu -> Open
+- Navigator menu -> Open
 - Navigator menu -> Montaging & Grids -> Setup Full Montage; define montage file to open
 - Montage Control Panel -> Start
 - Click "Yes" to make final overview of montage into a map
@@ -67,13 +67,13 @@ It saves time with large area detector. Therefore, Ceta camera is probably bette
 
 .. Tip::
 
-   Generally, when you first put LN2 dewar to its stand, you want to be SLOW, or the 
-   strong evaporation will make LN2 spilling.
+   If you are not happy with the aligning of the pieces, you may check and uncheck boxes like
+   "Treat sloopy..." and reload the map.
 
-.. _apply-HT:
+.. _setup_LD:
 
-Apply High Tension
-------------------
+Setup Low Dose Condition
+------------------------
 
 Turn High Tension (H.T.) on if it is off by pressing the ``H.T.`` button on the panel. 
 From ``Parameter`` page, set it to 120kV or the voltage you want.
