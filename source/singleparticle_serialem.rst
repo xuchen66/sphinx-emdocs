@@ -18,54 +18,42 @@ Single Particle Data Collection Using SerialEM
       It should be useful for more experience users as a quick checklist in case some step is forgotten. 
       I wrote something similiar at Brandeis EM webpage, but here I rewrite this here to reflect newer hardware of microscope and camera. 
       
-      A Krios with K2 Summit camera is the base hardware setup for this protocol. 
-      
-      If you have suggestion how to improve this document to make it more useful, please 
-      feel free to let me know. Thank you!
+      A Krios with K2 Summit camera and FEI Ceta camera is the base hardware setup for this protocol. 
 
 .. note::
-      all the turning knobs on the panel and push buttons are marked like ``button``.
+      This doc is a working progress. If you have comment and suggestion, please let me know. Thank you!
 
-.. _check-logbook:
+.. _scope_tuning:
 
-Check log book to see if there have been any problems
------------------------------------------------------
+Check Scope Condition and Perform Tuning 
+----------------------------------------
 
-It is always a good idea to check the LOG book. You can find useful information listed there, such as:
+Before you commit large dataset time, it is always a good idea to check scope condition to make sure everything is good. Calm down and be patient! Here are a few things I usually check. 
 
-- If there have been any recent problems with the scope.
-- The conditions that were used last, especially the filament saturation.
-- Any special note that last user wants you to know.
+- Check Gun Lens, Extracting Voltage, High Tension are set at correct values.
+- Stare for a few seconds at the focused beam at the highest SA mag, to see if the beam has good shape and there is no shaking or jumping.  
+- From Direct Alignment, do gun tilt, beam tilt PP, Coma-Free alignment if needed. 
+- Check Thon Ring at roughly the same condition (mag, dose) as your image condition. Make sure there is no obvious frequency cutoff, and Thon Ring reaches the resolution as in good condition. 
 
- .. _check-vacuum-status:
+ .. _prepare_camera:
 
-Check vacuum status
--------------------
+Prepare Cameras 
+---------------
 
-The status must be Ready before you can operate the scope. If not, you should ask for help and 
-report it to the manager. Usually, if the vacuum is not ready, it is due to one of the following reasons:
+For K2 camera, perform full procedure to prepare backgrounds from DM interface. This include software and hardware backgrounds. The hardware background file is for processor to use, while the software gain reference files sit in K2 computer for final software image correction. I was told the software gain reference is more stable than hardware background, but not sure this is still the case. Any way, just perform the full procedure follwing DM steps. 
 
-- The scope is malfunctioning.
-- The air pressure is not within a good range(the building compressed air may be down?).
-- The cooling water is off.
+- After preparing camera, take a single shot with proper dose rate (~5-10 e/pix/s) for 1 second with no specimen and do an FFT. The FFT should show clean background without strong center cross or lines. 
+- For Ceta camera, do the same from FEI user interface. 
 
-Vacuum being Ready means:
+.. _LMM:
 
-- Top line of vacuum page shows **ready**.
-- P3 < 50, IGP < 26 (normally, they are shown 0, 5).
-- LEDs for UVAC and HiVAC are lit.
+Make Low Mag Montage (LMM) Map or Grid Atlas
+--------------------------------------------
 
-.. _cool-down-scope:
+It saves time with large area detector. Therefore, Ceta camera is probably better for this step. 
 
-Add Liquid Nitrogen to the BIG anti-contaminator dewar
-------------------------------------------------------
-
-LN2 in the cold trap dewar is necessary for fast vacuum recovery. It is very useful, 
-especially when you need to change grids and/or do a cryo session. However, if you are 
-working with a negative stain or plastic section - a dry grid, the scope can still run 
-without LN2 cold trap. Unless you are running automatic, long overnight session, you 
-should always use it.
-
+- Insert/load your cryo grids
+- 
 .. Tip::
 
    Generally, when you first put LN2 dewar to its stand, you want to be SLOW, or the 
