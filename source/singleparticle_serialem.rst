@@ -75,13 +75,32 @@ It saves time with large area detector. Therefore, Ceta camera is probably bette
 Setup Low Dose Condition
 ------------------------
 
-Turn High Tension (H.T.) on if it is off by pressing the ``H.T.`` button on the panel. 
-From ``Parameter`` page, set it to 120kV or the voltage you want.
+You should have known how to setup Low Dose condition already. 
 
-.. _turn-on-filament:
+- Setup R beam first so that dose on detector and on specimen are all good.
+- Defocus offset 100um for View is usually a good start. 
+- Always cycle "area" (low dose mode) in one directional looped fashion, i.e., V-F-T-R-V...
+- Using the same spotszise for all the areas (low dose modes) is a good idea. 
 
-Turn filament on
-----------------
+.. _MMM:
+
+Make Medium Mag Montage Maps 
+----------------------------
+
+- add a polygon (a mesh) in LMM map
+- add points for good meshes at center
+- add one landmarker such as a dirt point in LMM map 
+- take the landmarker into View image (you may use FlowCam to move that feature into middle first.) 
+- while landmarker point being current (highlighted), left click on the landmarker in View image, a green cross will appear
+- Navigator menu -> Shift to Marker -> Yes (this will change all the coordinates for all the navigator items)
+- highlighting polygon item on navigator window, so it is currently selected 
+- Navigator menu -> Montaging & Grids -> Setup Polygon Montage -> Check "using View ..." in the dialog window -> define montage filename. 
+- Add flag "A" to all the interested mesh point items
+- Navigator menu -> Acquire At Points ... -> Check "Eucentric Rough" in Pre-action and "Acquire Montage Map" in main action
+
+
+
+
 
 It is recommended to turn the filament on while on the ``configuration`` page where 
 the actual filament current number is shown and the ``limit`` can be checked(highlighted).
