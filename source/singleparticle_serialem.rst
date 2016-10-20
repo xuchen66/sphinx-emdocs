@@ -75,8 +75,9 @@ It saves time with large area detector. Therefore, Ceta camera is probably bette
 Setup Low Dose Condition
 ------------------------
 
-You should have known how to setup Low Dose condition already. 
+You should have known how to setup Low Dose condition already. Here are some tips.
 
+- Turn on Low Dose Mode from SerialEM Low Dose control panel
 - Setup R beam first so that dose on detector and on specimen are all good.
 - Defocus offset 100um for View is usually a good start. 
 - Always cycle "area" (low dose mode) in one directional looped fashion, i.e., V-F-T-R-V...
@@ -97,20 +98,12 @@ Make Medium Mag Montage Maps
 - Navigator menu -> Montaging & Grids -> Setup Polygon Montage -> Check "using View ..." in the dialog window -> define montage filename. 
 - Add flag "A" to all the interested mesh point items
 - Navigator menu -> Acquire At Points ... -> Check "Eucentric Rough" in Pre-action and "Acquire Montage Map" in main action
+- When finished, the MMM maps should be added to Navigator windows. You perhaps can close the montage file now. 
 
+.. _draw_grid:
 
-
-
-
-It is recommended to turn the filament on while on the ``configuration`` page where 
-the actual filament current number is shown and the ``limit`` can be checked(highlighted).
-
-.. _gun-tilt-saturatation:
-
-Check saturation and gun tilt, and then saturate the filament
--------------------------------------------------------------
-
-The procedure is as following:
+Draw Grids Points for Each Mesh
+-------------------------------
 
 - Desaturate the filament about 2-3 clicks.
 - Press ``Align`` button, highlight ``Gun Tilt``.
