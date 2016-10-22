@@ -151,5 +151,26 @@ Lets load the script "LD-Group" to script editor and try to run it.
 
    echo .
 
-This script call two functions - "AlignToBuffer" and "CycleTargetDefocus". A script to hold all the functions ``MyFuncs`` must be also loaded in one of the script buffers. 
+This script call two functions - "AlignToBuffer" and "CycleTargetDefocus". The script that contains all the functions ``MyFuncs`` must be also loaded in one of the script buffers/editors. 
 
+This is a good time to test run this script on one of the points in navigator windows, to make sure it runs fine. 
+
+.. _final_check:
+   
+Final Checking
+--------------
+
+Now we should check to make sure all the conditions are good for batch data collections for hours and days. 
+
+- Low Dose beams lined up for all the modes (area is the term SerialEM uses)
+- Record beam has proper intensity
+- Objective aperture is inserted and centered
+- Objective Stigmation is good
+- Thon ring with R beam on carbon area shows good scope condition
+- Total exposure time, frame time, total frame number, binning, output file options, frame saving folder etc. are all good.
+
+.. _aquire_at_points:
+
+Navigator -> Acquire at Points... -> Run Script "LD-Group" in Main action -> OK.
+
+Done! 
