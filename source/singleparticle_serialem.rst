@@ -171,6 +171,8 @@ Now we should check to make sure all the conditions are good for batch data coll
 
 .. _aquire_at_points:
 
+Run it! 
+-------
+
 Navigator -> Acquire at Points... -> Run Script "LD-Group" in Main action -> OK.
 
-Done! 
