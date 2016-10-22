@@ -105,5 +105,20 @@ Make Medium Mag Montage Maps
 Draw Grids Points for Each Mesh
 -------------------------------
 
+For each of the MMM map, do the following steps to add group points.
+
+- add a polygon item to exclude bad area
+- add 5 point items to define grid geometry 
+- make any of the 5 items in the group is currently selected
+- Navigator menu -> Montaging & Grids -> Set Group Size (10um is a good start)
+- Navigator menu -> Montaging & Grids -> Check "Devide point into Groups"
+- Navigator menu -> Montaging & Grids -> Add Grid Points -> give polygon item number -> Flag "A" for all
+
+.. _Script:
+
+Test Main Script to Run
+-----------------------
+
+
 
 
