@@ -123,7 +123,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
 
 .. code-block:: ruby
 
-   MacroName LD-Group
+   ScriptName LD-Group
 
    # macro to skip points except the very first in the group.
    # assume LD is setup.
@@ -138,7 +138,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
    If $repVal1 == 1 OR $repVal1 == 0      # for group head or non-group item
       #Call Z_byV
       #UpdateGroup Z
-      AutoCenterBeam
+      AutoCenterBeam                      # autocenter policy must be setup 
       CallFunction MyFuncs::CycleTargetDefocus -1.2 -2.0 0.2
       G
    Else 
@@ -148,4 +148,8 @@ Lets load the script "LD-Group" to script editor and try to run it.
    # For K2, uncomment next line
    EarlyReturnNextShot 0                  # this is for frame saving directly, no return to SerialEM 
    R
+
+   echo .
+
+This script call two functions - "AlignToBuffer" and "CycleTargetDefocus". A script to hold all the functions ``MyFuncs`` must be also loaded in one of the script buffers. 
 
