@@ -119,6 +119,32 @@ For each of the MMM map, do the following steps to add group points.
 Test Main Script to Run
 -----------------------
 
+Lets load the script "LD-Group" to script editor and try to run it. 
 
+.. code-block:: ruby
 
+   MacroName LD-Group
 
+   # macro to skip points except the very first in the group.
+   # assume LD is setup.
+
+   #### X,Y position 
+   RealignToNavItem 1
+   Copy A P
+   CallFunction MyFuncs::AlignToBuffer 2 P
+
+   # preparation for first item in group
+   ReportGroupStatus 
+   If $repVal1 == 1 OR $repVal1 == 0      # for group head or non-group item
+      #Call Z_byV
+      #UpdateGroup Z
+      AutoCenterBeam
+      CallFunction MyFuncs::CycleTargetDefocus -1.2 -2.0 0.2
+      G
+   Else 
+      echo Directly shot!
+   Endif
+
+   # For K2, uncomment next line
+   EarlyReturnNextShot 0                  # this is for frame saving directly, no return to SerialEM 
+   R
