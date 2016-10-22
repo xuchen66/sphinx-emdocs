@@ -148,3 +148,4 @@ Lets load the script "LD-Group" to script editor and try to run it.
    # For K2, uncomment next line
    EarlyReturnNextShot 0                  # this is for frame saving directly, no return to SerialEM 
    R
+
