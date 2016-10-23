@@ -124,34 +124,34 @@ Lets load the script "LD-Group" to script editor and try to run it.
 .. code-block:: ruby
 
    ScriptName LD-Group
-
    # macro to skip points except the very first in the group.
    # assume LD is setup.
 
-   #### X,Y position 
+   # X,Y position 
    RealignToNavItem 1
    Copy A P
-   CallFunction MyFuncs::AlignToBuffer 2 P
+   CallFunction AlignToBuffer 2 P
 
    # preparation for first item in group
    ReportGroupStatus 
-   If $repVal1 == 1 OR $repVal1 == 0      # for group head or non-group item
+   If $repVal1 == 1 OR $repVal1 == 0   # 1 for group head and 0 for non-group item
       #Call Z_byV
       #UpdateGroup Z
-      AutoCenterBeam                      # autocenter policy must be setup 
-      CallFunction MyFuncs::CycleTargetDefocus -1.2 -2.0 0.2
+      AutoCenterBeam                   # autocenter policy must be setup 
+      CallFunction CycleTargetDefocus -1.2 -2.0 0.2
       G
    Else 
       echo Directly shot!
    Endif
 
    # For K2, uncomment next line
-   EarlyReturnNextShot 0                  # this is for frame saving directly, no return to SerialEM 
+   EarlyReturnNextShot 0               # K2 frame, return to SEM
    R
 
    echo .
 
-This script call two functions - "AlignToBuffer" and "CycleTargetDefocus". The script that contains all the functions ``MyFuncs`` must be also loaded in one of the script buffers/editors. 
+
+This script calls two functions - ``AlignToBuffer`` and ``CycleTargetDefocus``. The script that contains all the functions "MyFuncs" must be also loaded in one of the script buffers/editors. You can download the latest `"MyFuncs" <https://github.com/xuchen66/SerialEM-scripts/blob/master/MyFuncs.txt/>`_.
 
 This is a good time to test run this script on one of the points in navigator windows, to make sure it runs fine. 
 
