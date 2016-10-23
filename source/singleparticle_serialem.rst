@@ -151,9 +151,9 @@ Lets load the script "LD-Group" to script editor and try to run it.
    echo .
 
 
-This script calls two functions - ``AlignToBuffer`` and ``CycleTargetDefocus``. The script that contains all the functions "MyFuncs" must be also loaded in one of the script buffers/editors. You can download the latest `"MyFuncs" <https://github.com/xuchen66/SerialEM-scripts/blob/master/MyFuncs.txt/>`_.
+This script calls two functions - ``AlignToBuffer`` and ``CycleTargetDefocus``. The script that contains all the functions "MyFuncs" must be also loaded in one of the script buffers/editors. You can download the latest "MyFuncs.txt" `here on github.com <https://github.com/xuchen66/SerialEM-scripts/blob/master/MyFuncs.txt/>`_.
 
-This is a good time to test run this script on one of the points in navigator windows, to make sure it runs fine. 
+This is a good time to test run this script on one of the point items in navigator windows, to make sure it runs fine. 
 
 .. _final_check:
    
