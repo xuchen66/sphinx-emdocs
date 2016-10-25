@@ -130,7 +130,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
    # X,Y position 
    RealignToNavItem 1
    Copy A P                            # copy last image from Realign to buffer P
-   CallFunction AlignToBuffer 2 P      # this clears out any ImageShift
+   CallFunction MyFuncs::AlignToBuffer 2 P      # this clears out any ImageShift
 
    # preparation for first item in group
    ReportGroupStatus 
@@ -138,7 +138,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
       #Call Z_byV
       #UpdateGroup Z
       AutoCenterBeam                   # autocenter policy must be setup 
-      CallFunction CycleTargetDefocus -1.2 -2.0 0.2
+      CallFunction MyFuncs::CycleTargetDefocus -1.2 -2.0 0.2
       G
    Else 
       echo Directly shot!
