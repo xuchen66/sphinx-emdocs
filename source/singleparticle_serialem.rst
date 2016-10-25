@@ -129,8 +129,8 @@ Lets load the script "LD-Group" to script editor and try to run it.
 
    # X,Y position 
    RealignToNavItem 1
-   Copy A P
-   CallFunction AlignToBuffer 2 P
+   Copy A P                            # copy last image from Realign to buffer P
+   CallFunction AlignToBuffer 2 P      # this clears out any ImageShift
 
    # preparation for first item in group
    ReportGroupStatus 
