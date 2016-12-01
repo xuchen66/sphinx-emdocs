@@ -53,6 +53,7 @@ Make Low Mag Montage (LMM) Map or Grid Atlas
 
 It saves time with large area detector. Therefore, Ceta camera is probably better for this step. 
 
+- Select Ceta from Camera Control Setup
 - Insert/load your cryo grids
 - Set mag at ~87X, retract Obj Aperture
 - Spread beam to cover whole Ceta camera area
@@ -88,6 +89,7 @@ You should have known how to setup Low Dose condition already. Here are some tip
 Make Medium Mag Montage Maps 
 ----------------------------
 
+- select K2 camera from Camera Control Setup (from now on)
 - add a polygon (a mesh) in LMM map
 - add points for good meshes at center
 - add one landmarker such as a dirt point in LMM map 
