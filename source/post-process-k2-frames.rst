@@ -38,6 +38,7 @@ If you saved frame as un-normalized TIFF, and you need to recover the image stac
 
 .. code-block:: ruby
 
+   $ header YURI_B1_G1-SuperRes_784_Feb06_12.39.01.tif
    RO image file on unit   1 : YURI_B1_G1-SuperRes_784_Feb06_12.39.01.tif     Size=     621334 K
 
                        This is a TIFF file.
@@ -70,5 +71,5 @@ The last parameter in title line shows the orientation of imaging. Here is 0 - n
 
 .. code-block:: ruby
 
-   clip -m 2 mult -n 16 -D defects.txt fileWithFrames.tif GatanGainRef.mrc normalizedFrames.mrc
+   $ clip -m 2 mult -n 16 -D defects.txt fileWithFrames.tif GatanGainRef.mrc normalizedFrames.mrc
 
