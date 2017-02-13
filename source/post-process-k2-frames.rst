@@ -62,13 +62,13 @@ The last parameter in title line shows the orientation of imaging. Here is 0 - n
 
 2. Convert Gatan gain reference .dm4 into MRC format. 
 
-.. code-block:: ruby
+.. code-block:: 
 
    $ dm2mrc GatanGainRef.dm4 GatanGainRef.mrc
    
 3. Use "clip" to apply gain reference and deal with defects all in a single command line (later IMOD can take tiff file format as input directly). 
 
-.. code-block:: ruby
+.. code-block::
 
-   clip -m 2 mult -n 16  fileWithFrames.tif  GatanGainRef.mrc  normalizedFrames.mrc
+   clip -m 2 mult -n 16 -D defects.txt fileWithFrames.tif GatanGainRef.mrc normalizedFrames.mrc
 
