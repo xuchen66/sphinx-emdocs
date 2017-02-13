@@ -58,9 +58,17 @@ If you saved frame as un-normalized TIFF, and you need to recover the image stac
         1 Titles :
    SerialEMCCD: Dose frac. image, scaled by 16.00  r/f 0
 
-The last parameter in title line shows the orientation of imaging. Here is 0 - no rotation and no flip. 
+The last parameter in title line shows the orientation of imaging. Here is 0 - no rotation and no flip. In this case, Gatan gain reference file doesn't need to do any rotation and flip. We simply convert it into MRC format. 
 
-- Check Gun Lens, Extracting Voltage, High Tension are set at correct values.
-- Stare for a few seconds at the focused beam at the highest SA mag, to see if the beam has good shape and there is no shaking or jumping.  
-- From Direct Alignment, do gun tilt, beam tilt PP, Coma-Free alignment if needed. 
-- Check Thon Ring at roughly the same condition (mag, dose) as your image condition. Make sure there is no obvious frequency cutoff, and Thon Ring reaches the resolution as in good condition. 
+2. Convert Gatan gain reference .dm4 into MRC format. 
+
+.. code-block:: ruby
+
+   $ dm2mrc GatanGainRef.dm4 GatanGainRef.mrc
+   
+3. Use "clip" to apply gain reference and deal with defects all in a single command line (later IMOD can take tiff file format as input directly). 
+
+.. code-block:: ruby
+
+   clip -m 2 mult -n 16  fileWithFrames.tif  GatanGainRef.mrc  normalizedFrames.mrc
+
