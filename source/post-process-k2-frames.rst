@@ -10,14 +10,14 @@ Post Processing K2 Frames from SerialEM Data Collection
 .. glossary::
 
    Abstract
-      We use SerialEM to collect data for both single particle and tomography applications. And we do that on both Talos 
-      Arctica and Titan Krios with K2 cameras. 
+      At UMASS Cryo-EM Facility, we use SerialEM to collect data for both single particle and tomography applications. 
+      And we do that on both Talos Arctica and Titan Krios with K2 cameras. 
       
       For single particle, 
       usually we save frames in compressed TIFF format without gain normalized (select Dark Substracted in camera 
       setup window). One of the advantages of doing this is to reduce data size. For Super-resolution frames, the 
       raw frame data is in unsigned 4-bit. Pixel values are in the range of 0 - 15. For weak beam, there are a lot of 
-      zeros there too. With lossless compression methods, such data can be comprssed into smalller filesize with losing 
+      zeros there too. With lossless compression methods, such data can be comprssed into much smalller filesize without losing 
       image information. Therefore, instead of applying gain normalized reference to all the frames, we leave the raw 
       data compressed and saved to the disk and we later do post-processing to recover the full information of the image data. 
       
