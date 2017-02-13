@@ -35,9 +35,8 @@ However, when saving frames from single particle data collection, this orientati
 If you saved frame as un-normalized TIFF, and you need to recover the image stack to a MRC format and apply gain reference file and mast out defects, here are steps.
 
 # check out the orietation from header of the file. 
-.. code-block:: ruby
 
-   $ header YURI_B1_G1-SuperRes_784_Feb06_12.39.01.tif
+.. code-block:: ruby
 
    RO image file on unit   1 : YURI_B1_G1-SuperRes_784_Feb06_12.39.01.tif     Size=     621334 K
 
