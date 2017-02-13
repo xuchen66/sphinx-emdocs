@@ -38,26 +38,28 @@ If you saved frame as un-normalized TIFF, and you need to recover the image stac
 
 .. code-block:: ruby
 
-   $ header YURI_B1_G1-SuperRes_784_Feb06_12.39.01.tif
-   RO image file on unit   1 : YURI_B1_G1-SuperRes_784_Feb06_12.39.01.tif     Size=     621334 K
+   $ header YURI_B1_G1-SuperRes_636_Feb05_10.42.09.tif
+
+   RO image file on unit   1 : YURI_B1_G1-SuperRes_636_Feb05_10.42.09.tif     Size=     805815 K
 
                        This is a TIFF file.
 
-   Number of columns, rows, sections .....    7676    7420      40
+   Number of columns, rows, sections .....    7676    7420      80
    Map mode ..............................    0   (byte)
-   Start cols, rows, sects, grid x,y,z ...    0     0     0    7676   7420     40
+   Start cols, rows, sects, grid x,y,z ...    0     0     0    7676   7420     80
    Pixel spacing (Angstroms)..............  0.8714     0.8714     0.8714
    Cell angles ...........................   90.000   90.000   90.000
    Fast, medium, slow axes ...............    X    Y    Z
    Origin on x,y,z .......................    0.000       0.000       0.000
    Minimum density .......................   0.0000
-   Maximum density .......................   255.00
-   Mean density ..........................   127.50
+   Maximum density .......................   15.000
+   Mean density ..........................   7.5000
    tilt angles (original,current) ........   0.0   0.0   0.0   0.0   0.0   0.0
    Space group,# extra bytes,idtype,lens .        0        0        0        0
 
-        1 Titles :
-   SerialEMCCD: Dose frac. image, scaled by 16.00  r/f 0
+      1 Titles :
+   SerialEMCCD: Dose frac. image, scaled by 1.00  r/f 0
+
 
 The last parameter in title line shows the orientation of imaging. Here is 0 - no rotation and no flip. In this case, Gatan gain reference file doesn't need to do any rotation and flip. We simply convert it into MRC format. 
 
