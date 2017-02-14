@@ -71,7 +71,3 @@ The last parameter in title line shows the orientation of imaging. Here is 0 - n
    
 3. Use "clip" to apply gain reference and deal with defects all in a single command line (later IMOD can take tiff file format as input directly). 
 
-.. code-block:: ruby
-
-   $ clip mult -n 16 -m 2 -D defects.txt fileWithFrames.tif GatanGainRef.mrc normalizedFrames.mrc
-   
