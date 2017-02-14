@@ -38,7 +38,7 @@ If you saved frame as un-normalized TIFF, and you need to recover the image stac
 
 .. code-block:: none
 
-   $ header YURI_B1_G1-SuperRes_636_Feb05_10.42.09.tif
+   $header YURI_B1_G1-SuperRes_636_Feb05_10.42.09.tif
 
    RO image file on unit   1 : YURI_B1_G1-SuperRes_636_Feb05_10.42.09.tif     Size=     805815 K
 
@@ -67,12 +67,12 @@ The last parameter in title line shows the orientation of imaging. Here is 0 - n
 
 .. code-block:: none
 
-   $ dm2mrc GatanGainRef.dm4 GatanGainRef.mrc
+   $dm2mrc GatanGainRef.dm4 GatanGainRef.mrc
    
 3. Use "clip" to apply gain reference and deal with defects all in a single command line (later IMOD can take tiff file format as input directly). 
 
 .. code-block:: none
 
-   $ clip mult -n 16 -m 2 -D defects.txt fileWithFrames.tif GatanGainRef.mrc normalizedFrames.mrc
+   $clip mult -n 16 -m 2 -D defects.txt fileWithFrames.tif GatanGainRef.mrc normalizedFrames.mrc
    
    
