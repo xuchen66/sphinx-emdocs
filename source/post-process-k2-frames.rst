@@ -75,3 +75,4 @@ The last parameter in title line shows the orientation of imaging. Here is 0 - n
 
    $ clip mult -n 16 -m 2 -D defects.txt fileWithFrames.tif GatanGainRef.mrc normalizedFrames.mrc
    
+   
