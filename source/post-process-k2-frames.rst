@@ -36,7 +36,7 @@ If you saved frame as un-normalized TIFF, and you need to recover the image stac
 
 1. check out the orietation from header of the file. 
 
-.. code-block:: python
+.. code-block:: none
 
    $ header YURI_B1_G1-SuperRes_636_Feb05_10.42.09.tif
 
@@ -65,13 +65,13 @@ The last parameter in title line shows the orientation of imaging. Here is 0 - n
 
 2. Convert Gatan gain reference .dm4 into MRC format. 
 
-.. code-block:: python
+.. code-block:: none
 
    $ dm2mrc GatanGainRef.dm4 GatanGainRef.mrc
    
 3. Use "clip" to apply gain reference and deal with defects all in a single command line (later IMOD can take tiff file format as input directly). 
 
-.. code-block:: python
+.. code-block:: none
 
    $ clip mult -n 16 -m 2 -D defects.txt fileWithFrames.tif GatanGainRef.mrc normalizedFrames.mrc
    
