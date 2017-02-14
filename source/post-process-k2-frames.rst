@@ -73,5 +73,5 @@ The last parameter in title line shows the orientation of imaging. Here is 0 - n
 
 .. code-block:: ruby
 
-   $ clip  mult -n 16 -m 2 -D defects.txt fileWithFrames.tif GatanGainRef.mrc normalizedFrames.mrc
+   $ clip mult -n 16 -m 2 -D defects.txt fileWithFrames.tif GatanGainRef.mrc normalizedFrames.mrc
 
