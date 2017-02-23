@@ -20,7 +20,7 @@ Pixelsize and Distortion Info on K2 Cameras
 On Talos Arctica
 ----------------
 
-Below is pixelsizes on K2 for a few magnifications.
+Below are pixelsizes on K2 for a few magnifications.
 
 **Table.1 Pixelsize (A) of K2 camera**
 
@@ -41,7 +41,7 @@ Below is pixelsizes on K2 for a few magnifications.
 +--------------------------+-------------------+----------------------+
 
 Also the distortion information at these few mags. This mag distortion is believed due to strech on projection lens
-system. The measurement and correction programs are from http://grigoriefflab.janelia.org/magdistortion . 
+system. The measurement and correction programs are used and available from http://grigoriefflab.janelia.org/magdistortion . 
 
 **Table.2 Mag Distortion Parameters for K2 camera**
 
