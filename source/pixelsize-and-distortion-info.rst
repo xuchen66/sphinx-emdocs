@@ -40,7 +40,8 @@ Below is pixelsizes on K2 for a few magnifications.
 |  45,000                  |   0.85            |   0.42               |
 +--------------------------+-------------------+----------------------+
 
-Also the distortion information at these few mags.
+Also the distortion information at these few mags. This mag distortion is believed due to strech on projection lens
+system. The measurement and correction programs are from http://grigoriefflab.janelia.org/magdistortion . 
 
 **Table.2 Mag Distortion Parameters for K2 camera**
 
