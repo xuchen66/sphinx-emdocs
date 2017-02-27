@@ -27,7 +27,7 @@ All the three kinds of data can be easily viewed using IMOD. For Windows, a pack
    
 .. _mount_ntfs:
 
-... mount and data hard drive I received from you?
+... mount the data hard drive I received from you?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The hard drive for data should be in its original filesystem which is normally Windows NTFS. The interface on the hard drive should be USB3. It is in my mind that the drive should be most compatable possible. 
