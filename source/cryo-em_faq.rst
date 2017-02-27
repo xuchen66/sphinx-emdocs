@@ -8,10 +8,10 @@ This is list of Frequently Asked Questions about Umass Cryo-EM. Some questions a
 How do I ...
 ------------
 
-.._display:
+.. _display:
 
-... display the screened data on my own computer locally?
----------------------------------------------------------
+*... display the screened data on my own computer locally?*
+
 
 The data for screening is usually at three kinds. 
 
