@@ -40,4 +40,45 @@ After plugging the hard drive to USB port (USB3 preferred) on Linux computer, yo
 
 .. _code_block::
 
+[334449.716558] usb 4-1: new SuperSpeed USB device number 2 using xhci_hcd
+[334449.728460] usb 4-1: New USB device found, idVendor=0bc2, idProduct=ab34
+[334449.728482] usb 4-1: New USB device strings: Mfr=2, Product=3, SerialNumber=1
+[334449.728485] usb 4-1: Product: Backup+  Desk
+[334449.728487] usb 4-1: Manufacturer: Seagate
+[334449.728489] usb 4-1: SerialNumber: NA7H29DX
+[334449.749996] usbcore: registered new interface driver usb-storage
+[334449.752139] scsi host6: uas
+[334449.752539] scsi 6:0:0:0: Direct-Access     Seagate  Backup+  Desk    040B PQ: 0 ANSI: 6
+[334449.752586] usbcore: registered new interface driver uas
+[334449.768013] sd 6:0:0:0: [sdc] Spinning up disk...
+[334449.768023] sd 6:0:0:0: Attached scsi generic sg3 type 0
+
+From this, you can see the logic volumne is assigned to *sdc*. 
+
+On RedHat/RHEL7, CentOS 7 and Scientific Linux 7 and possibly later versions of Linux flavors, the NTFS filesystem is directly supported. Therefore, you can mount the volume easily with a mounting command as below.
+
+.. _code_block::
+
+$ sudo mount -t ntfs /dev/sdc2 /mnt
+
+This command should not give you errors. After the command, you should be able to see the volume is mounted using `df` output
+
+.. _code_block::
+
+/dev/sdc2                   4883638268  1418392 4882219876   1% /mnt
+
+and you should see a few more lines in `dmesg` output like this:
+
+.. _code_block::
+
+[334450.768547] ................ready
+[334465.784580] sd 6:0:0:0: [sdc] 9767541167 512-byte logical blocks: (5.00 TB/4.54 TiB)
+[334465.784585] sd 6:0:0:0: [sdc] 2048-byte physical blocks
+[334465.817288] sd 6:0:0:0: [sdc] Write Protect is off
+[334465.817294] sd 6:0:0:0: [sdc] Mode Sense: 4f 00 00 00
+[334465.817451] sd 6:0:0:0: [sdc] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[334466.214227]  sdc: sdc1 sdc2
+[334466.215286] sd 6:0:0:0: [sdc] Attached SCSI disk
+[334626.393838]  sdc: sdc1 sdc2
+
 
