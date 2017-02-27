@@ -55,7 +55,7 @@ After plugging the hard drive to USB port (USB3 preferred) on Linux computer, yo
 
 From this, you can see the logic volumne is assigned to *sdc*. 
 
-On RedHat/RHEL7, CentOS 7 and Scientific Linux 7 and possibly later versions of Linux flavors, the NTFS filesystem is directly supported. Therefore, you can mount the volume easily with a mounting command as below.
+On RedHat/RHEL7, CentOS 7 and Scientific Linux 7 and possibly later versions of Linux flavors, the NTFS filesystem is directly supported. For older version of Linux, you might have to install *ntfs-3g* package first. Therefore, you can mount the volume easily with a mounting command as below.
 
 .. code-block:: none
 
