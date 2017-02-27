@@ -38,7 +38,7 @@ If you want to mount the hard drive directly onto a Linux computer, you have mou
 
 After plugging the hard drive to USB port (USB3 preferred) on Linux computer, you should be able to see lines similar to these from `dmesg` command output on linux computer. 
 
-.. _code_block:: none
+.. code_block:: none
 
    [334449.716558] usb 4-1: new SuperSpeed USB device number 2 using xhci_hcd
    [334449.728460] usb 4-1: New USB device found, idVendor=0bc2, idProduct=ab34
@@ -57,19 +57,19 @@ From this, you can see the logic volumne is assigned to *sdc*.
 
 On RedHat/RHEL7, CentOS 7 and Scientific Linux 7 and possibly later versions of Linux flavors, the NTFS filesystem is directly supported. Therefore, you can mount the volume easily with a mounting command as below.
 
-.. _code_block:: none
+.. code_block:: none
 
    $ sudo mount -t ntfs /dev/sdc2 /mnt
 
 This command should not give you errors. After the command, you should be able to see the volume is mounted using `df` output
 
-.. _code_block:: none
+.. code_block:: none
 
    /dev/sdc2                   4883638268  1418392 4882219876   1% /mnt
 
 and you should see a few more lines in `dmesg` output like this:
 
-.. _code_block:: none
+.. code_block:: none
 
    [334450.768547] ................ready
    [334465.784580] sd 6:0:0:0: [sdc] 9767541167 512-byte logical blocks: (5.00 TB/4.54 TiB)
