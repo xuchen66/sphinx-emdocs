@@ -11,7 +11,7 @@ How do I ...
 .. _display:
 
 ... display the screened data on my own computer locally?
-=========================================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The data for screening is usually at three kinds. 
 
