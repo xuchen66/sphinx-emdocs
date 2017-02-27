@@ -25,3 +25,19 @@ The data for screening is usually at three kinds.
 All the three kinds of data can be easily viewed using IMOD. For Windows, a package called "Windows3dmod" can be insatalled - from http://bio3d.colorado.edu/ftp/Windows3dmod/. For all the other platforms including Windows, a complete IMOD software package be be installed. IMOD User Guide can be found in http://bio3d.colorado.edu/imod/doc/guide.html. 
    
    
+.. _mount_ntfs:
+
+... mount and data hard drive I received from you?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The hard drive for data should be in its original filesystem which is normally Windows NTFS. The interface on the hard drive should be USB3. It is in my mind that the drive should be most compatable possible. 
+
+If you plug the hard drive onto a Windows or Mac computer, the volume should automatially shows up. And you can copy data out from the volume directly. 
+
+If you want to mount the hard drive directly onto a Linux computer, you have mount it first. 
+
+After plugging the hard drive to USB port (USB3 preferred) on Linux computer, you should be able to see lines similar to these from `dmesg` command output on linux computer. 
+
+.. _code_block::
+
+
