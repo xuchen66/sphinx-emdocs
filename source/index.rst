@@ -5,8 +5,8 @@
    
    About
 
-Training Contents and Materials
--------------------------------
+FAQ
+---
 .. toctree::
    :maxdepth: 2
 
