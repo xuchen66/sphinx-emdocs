@@ -4,13 +4,19 @@
    :maxdepth: 2
    
    About
-   
+
 Training Contents and Materials
 -------------------------------
 .. toctree::
    :maxdepth: 2
 
    cryo-em_faq
+
+Training Contents and Materials
+-------------------------------
+.. toctree::
+   :maxdepth: 2
+
    cryo-em_training
    serialem_training
   
