@@ -32,7 +32,7 @@ All the three kinds of data can be easily viewed using IMOD. For Windows, a pack
 
 The hard drive for data should be in its original filesystem which is normally Windows NTFS. The interface on the hard drive should be USB3. It is in my mind that the drive should be most compatable possible. 
 
-If you plug the hard drive onto a Windows or Mac computer, the volume should automatially shows up. And you can copy data out from the volume directly. 
+If you plug the hard drive onto a Windows or Mac computer, the volume should automatially show up. And you can copy data out from the volume directly. 
 
 If you want to mount the hard drive directly onto a Linux computer, you have to connect and mount it manually. 
 
