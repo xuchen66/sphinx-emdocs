@@ -34,7 +34,7 @@ The hard drive for data should be in its original filesystem which is normally W
 
 If you plug the hard drive onto a Windows or Mac computer, the volume should automatially shows up. And you can copy data out from the volume directly. 
 
-If you want to mount the hard drive directly onto a Linux computer, you have mount it first. 
+If you want to mount the hard drive directly onto a Linux computer, you have to connect and mount it manually. 
 
 After plugging the hard drive to USB port (USB3 preferred) on Linux computer, you should be able to see lines similar to these from `dmesg` command output on linux computer. 
 
@@ -53,7 +53,7 @@ After plugging the hard drive to USB port (USB3 preferred) on Linux computer, yo
    [334449.768013] sd 6:0:0:0: [sdc] Spinning up disk...
    [334449.768023] sd 6:0:0:0: Attached scsi generic sg3 type 0
 
-From this, you can see the logic volumne is assigned to *sdc*. 
+From this, you can see the logic volume is assigned to *sdc*. 
 
 On RedHat/RHEL7, CentOS 7 and Scientific Linux 7 and possibly later versions of Linux flavors, the NTFS filesystem is directly supported. For older version of Linux, you might have to install *ntfs-3g* package first. Therefore, you can mount the volume easily with a mounting command as below.
 
