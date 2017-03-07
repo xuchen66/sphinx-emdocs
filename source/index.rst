@@ -29,6 +29,7 @@ Instructions, Manuals and Protocols
    ccds_cm120
    singleparticle_serialem
    post-process-k2-frames
+   align-movie-frames-imod
    pixelsize-and-distortion-info
    
 Index
