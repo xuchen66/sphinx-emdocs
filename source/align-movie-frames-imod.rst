@@ -43,7 +43,7 @@ As usual, the long command line can be run with a command file. Here is an examp
 
 .. code-block:: none
 
-   $time alignframes -StandardInput
+   $alignframes -StandardInput
    UseGPU 1
    StartingEndingFrames 3 42
    MemoryLimitGB 20.0
