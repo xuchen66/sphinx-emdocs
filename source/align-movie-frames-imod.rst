@@ -128,3 +128,36 @@ command file. In this case, you tell the program to use this master.pcm file:
 The program will go through all the individual files and generate their individual pcm file based on master.pcm and 
 align each one. 
 
+.. _using_GPU:
+
+Using GPU 
+---------
+
+To my understanding, the code for *alignframes* is optimized to utlize GPU and paralellization as well. Reading in and decompressing TIFF stack file is also very efficient. On my linux box with Xeon(R) CPU E5-2650 v3, with 256GB memory and 
+Nvidia M4000 GPU, it aligns a 50 Super-resolution frame file in about 22 seconds with GPU option. 
+
+.. _on_k2:
+
+On K2 Computer
+--------------
+
+Since K2 computer comes with pretty high-end hardware, it could be used to align the frames in background. All I had to do 
+is to install a decent GPU card. I replaced the ATI video card that comes with the K2 box and install a M4000 GPU card in with 8GB 
+memory on the card. One advantage for this card is that it is single slot high, not like most Nvidia cards which occupies 
+two PCI slot space. This makes the replacement simple and easy. 
+
+Now, after installing IMOD with Cygwin, and I align all the movie frames right off the K2 computer box. 
+
+.. _with_SerialEM:
+
+Align using SerialEM directly
+-----------------------------
+
+Beside aligning frames at the background separately, we can also using SerialEM plugin to align the frames directly. From
+camera setup page of SerialEM interface, you can define to let SerialEM Plugin to align the frames. Slightly different from 
+using IMOD which aligns as separate process, SerialEM Plugin aligns all the frames from an exposure and returns the aligned
+average to SerialEM main instance. This is very handy to us to obtain sample information quickly and conveniently. 
+
+
+
+
