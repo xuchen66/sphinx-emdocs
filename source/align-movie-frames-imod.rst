@@ -70,5 +70,6 @@ As usual, the long command line can be run with a command file. Here is an examp
 One can run this command file like this:
 
 .. code-block:: none 
+
    $subm YURI_B1_G1-SuperRes_2967_Feb04_01.14.57.pcm
    
