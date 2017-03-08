@@ -90,7 +90,7 @@ If frame stack files are with their command file *.pcm, then one can just run it
 This will start to align all the frame files in the same direcotry, until you do Ctrl_C. 
 
 If there is no *.pcm existed for each file, and you just want to align them using the same parameters, then you can do that
-use a master pcm file to take care all the files you wanted to align. Here is an example of master.pcm:
+using a master pcm file to take care all the files you wanted to align. Here is an example of master.pcm:
 
 .. code-block:: none
 
