@@ -10,11 +10,12 @@ Align Movie Frames with SerialEM and IMOD Programs
 .. glossary::
 
    Abstract
-      IMOD can align movie frames nicely and very quickly. In late version of IMOD, the program *AlignFrames* also utilizes 
+      IMOD can align movie frames nicely and very quickly. In late versions of IMOD, the program *AlignFrames* also utilizes 
       GPU and can efficiently read in compressed TIFF frame images and decompress them, apply gain reference to normalize 
-      image frames, deal with defects and align all the frames all at once. 
+      image frames, deal with defects and align all the frames - all at once. 
       
-      To align small movie stack in-fly during tilting series data collection might be among motivations that David M developed 
+      To align small movie stack in-fly during tilting series data collection might be among motivations that David M
+      developed 
       this. One can easily see how useful and nice it is that every tilt is aligned for small movie stacks and return to 
       SerialEM automatically in the background. It could save user huge mount of processing time unless you want to redo 
       the movie alignment again yourself. For this purpose, the same function and code of IMOD program are also included 
@@ -26,60 +27,48 @@ Align Movie Frames with SerialEM and IMOD Programs
       low dose record exposure time, counting to Linear mode etc..
       
       *Framewatcher*, an IMOD python script program, makes it very easy to align all the movie frames in a changing directory.
-      No need to bother with cron job and file lock etc.. It watches for any unprocessed image stack and align them for you. 
+      No need to bother with cron job and file lock etc.. It watches for any unprocessed image stack in the directory 
+      and align them for you. 
 
       In this document, I try to tell you how I use them. 
 
-.. _k2-on-Talos:
+.. _alignframes:
 
-For K2 camera on Talos Arctica 
-------------------------------
+Alignframes 
+-----------
 
-The DM camera configuration for camera orientaion setup for K2 camera on Talos Arctica is 270 degree rotation and Flip along Y. The idea is that with a proper orientation setup, the image from camera is at the same orientation as on FluCam. This is initial condition for SerialEM setup. 
+This program takes many options as command line arguments. For details, please read the man page with example usages http://bio3d.colorado.edu/imod/betaDoc/man/alignframes.html. 
 
-However, when saving frames from single particle data collection, this orientation might not always be needed. As long as all the data is saved the same way for the entire session, it is fine with and without this orientation applied to all the frames before saving. This option is from a check box "Save frames without rotation/flip to standard orientation" in K2 Frame File Option dialog window.  
-
-If you saved frame as un-normalized TIFF, and you need to recover the image stack to a MRC format and apply gain reference file and mast out defects, here are steps.
-
-1. check out the orietation from header of the file. 
+As usual, the long command line can be run with a command file. Here is an example of python command file YURI_B1_G1-SuperRes_2967_Feb04_01.14.57.pcm. 
 
 .. code-block:: none
 
-   $header YURI_B1_G1-SuperRes_636_Feb05_10.42.09.tif
+   $time alignframes -StandardInput
+   UseGPU 1
+   StartingEndingFrames 3 42
+   MemoryLimitGB 20.0
+   PairwiseFrames 20
+   GroupSize 1
+   AlignAndSumBinning 6 1
+   AntialiasFilter 4
+   RefineAlignment 2
+   StopIterationsAtShift 0.100000
+   ShiftLimit 20
+   MinForSplineSmoothing 0
+   FilterRadius2 0.060000
+   FilterSigma2 0.008574
+   VaryFilter 0.060000
+   ModeToOutput 2
+   InputFile YURI_B1_G1-SuperRes_2967_Feb04_01.14.57.tif
+   OutputImageFile YURI_B1_G1-SuperRes_2967_Feb04_01.14.57_ali.mrc
+   ScalingOfSum 37.549999
+   CameraDefectFile defects_YURI_B1_G1-SuperRes_358_Feb01_07.52.46.txt
+   GainReferenceFile SuperRef_YURI_B1_G1-SuperRes_001_Jan31_15.48.35.dm4
+   RotationAndFlip -1
+   DebugOutput 10
 
-   RO image file on unit   1 : YURI_B1_G1-SuperRes_636_Feb05_10.42.09.tif     Size=     805815 K
+One can run this command file like this:
 
-                       This is a TIFF file.
-
-   Number of columns, rows, sections .....    7676    7420      80
-   Map mode ..............................    0   (byte)
-   Start cols, rows, sects, grid x,y,z ...    0     0     0    7676   7420     80
-   Pixel spacing (Angstroms)..............  0.8714     0.8714     0.8714
-   Cell angles ...........................   90.000   90.000   90.000
-   Fast, medium, slow axes ...............    X    Y    Z
-   Origin on x,y,z .......................    0.000       0.000       0.000
-   Minimum density .......................   0.0000
-   Maximum density .......................   15.000
-   Mean density ..........................   7.5000
-   tilt angles (original,current) ........   0.0   0.0   0.0   0.0   0.0   0.0
-   Space group,# extra bytes,idtype,lens .        0        0        0        0
-
-      1 Titles :
-   SerialEMCCD: Dose frac. image, scaled by 1.00  r/f 0
-
-
-The last parameter in title line shows the orientation of imaging. Here is 0 - no rotation and no flip. In this case, Gatan gain reference file doesn't need to do any rotation and flip. We simply convert it into MRC format. 
-
-2. Convert Gatan gain reference .dm4 into MRC format. 
-
-.. code-block:: none
-
-   $dm2mrc GatanGainRef.dm4 GatanGainRef.mrc
-   
-3. Use "clip" to apply gain reference and deal with defects all in a single command line (later IMOD can take tiff file format as input directly). 
-
-.. code-block:: none
-
-   $clip mult -n 16 -m 2 -D defects.txt fileWithFrames.tif GatanGainRef.mrc normalizedFrames.mrc
-   
+.. code-block:: none 
+   $subm YURI_B1_G1-SuperRes_2967_Feb04_01.14.57.pcm
    
