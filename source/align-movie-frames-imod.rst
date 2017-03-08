@@ -156,7 +156,7 @@ Align using SerialEM directly
 Beside aligning frames at the background separately, we can also using SerialEM plugin to align the frames directly. From
 camera setup page of SerialEM interface, you can define to let SerialEM Plugin to align the frames. Slightly different from 
 using IMOD which aligns as separate process, SerialEM Plugin aligns all the frames from an exposure and returns the aligned
-average to SerialEM main instance. This is very handy to us to obtain sample information quickly and conveniently. 
+average to SerialEM main instance. This is very handy for us to obtain sample information quickly and conveniently. 
 
 
 
