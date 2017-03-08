@@ -73,3 +73,58 @@ One can run this command file like this:
 
    $subm YURI_B1_G1-SuperRes_2967_Feb04_01.14.57.pcm
    
+.. _framewatcher:
+
+Framewatcher 
+------------
+
+*framewatcher* is a python script to run *alignframes* at batch process. One feature I like a lot is that it can watch 
+a growing directory and process new coming frame files. For details usage, please refer man page http://bio3d.colorado.edu/imod/betaDoc/man/framewatcher.html.
+
+If frame stack files are with their command file *.pcm, then one can just run it by issuing command in the directory:
+
+.. code-block:: none 
+
+   $framewatcher
+   
+This will start to align all the frame files in the same direcotry, until you do Ctrl_C. 
+
+If there is no *.pcm existed for each file, and you just want to align them using the same parameters, then you can do that
+use a master pcm file to take care all the files you wanted to align. Here is an example of master.pcm:
+
+.. code-block:: none
+
+   $alignframes -StandardInput
+   UseGPU 1
+   StartingEndingFrames 3 42
+   MemoryLimitGB 20.0
+   PairwiseFrames 20
+   GroupSize 1
+   AlignAndSumBinning 6 1
+   AntialiasFilter 4
+   RefineAlignment 2
+   StopIterationsAtShift 0.100000
+   ShiftLimit 20
+   MinForSplineSmoothing 0
+   FilterRadius2 0.060000
+   FilterSigma2 0.008574
+   VaryFilter 0.060000
+   ModeToOutput 2
+   InputFile 
+   OutputImageFile 
+   ScalingOfSum 37.549999
+   CameraDefectFile defects_YURI_B1_G1-SuperRes_358_Feb01_07.52.46.txt
+   GainReferenceFile SuperRef_YURI_B1_G1-SuperRes_001_Jan31_15.48.35.dm4
+   RotationAndFlip -1
+   DebugOutput 10
+
+As you can see, this is the same as individual pcm file, except without InputFile and OutputImageFile defined in the 
+command file. In this case, you tell the program to use this master.pcm file:
+
+.. code-block:: none 
+
+   $framewatcher -m master.pcm
+   
+The program will go through all the individual files and generate their individual pcm file based on master.pcm and 
+align each one. 
+
