@@ -49,7 +49,7 @@ system. The measurement and correction programs are used and available from http
 **Table.2 Mag Distortion Parameters for K2 camera**
 
 +--------------------------+-------------------+----------------------+-------------------+-----------------------+
-| Magnifications (X)       | Distortion Angle  | Major Scale          | Minor Scale       |  Totat Distortion (%) |
+| Magnifications (X)       | Dist.Angle(degree)| Major Scale          | Minor Scale       |  Totat Distortion (%) |
 +==========================+===================+======================+===================+=======================+
 |  11,000                  |                   |                      |                   |                       | 
 +--------------------------+-------------------+----------------------+-------------------+-----------------------+
