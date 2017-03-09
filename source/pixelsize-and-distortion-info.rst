@@ -20,6 +20,9 @@ Pixelsize and Distortion Info on K2 Cameras
 On Talos Arctica
 ----------------
 
+According to FEI document http://www.fei.co.jp/_documents/DS0189-10-2014_Talos_Arctica_WEB.pdf, the Cs value for Talos 
+Arctica is 2.7mm.
+
 Below are pixelsizes on K2 for a few magnifications.
 
 **Table.1 Pixelsize (A) of K2 camera**
