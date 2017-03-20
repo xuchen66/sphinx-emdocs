@@ -42,6 +42,8 @@ Below are pixelsizes on K2 for a few magnifications.
 +--------------------------+-------------------+----------------------+
 |  45,000                  |   0.85            |   0.42               |
 +--------------------------+-------------------+----------------------+
+|  57,000                  |   0.67            |   0.34               |
++--------------------------+-------------------+----------------------+
 
 Also the distortion information at these few mags. This mag distortion is believed due to stretch on projection lens
 system. The measurement and correction programs are used and available from http://grigoriefflab.janelia.org/magdistortion . 
@@ -63,5 +65,6 @@ system. The measurement and correction programs are used and available from http
 +--------------------------+-------------------+----------------------+-------------------+-----------------------+
 |  45,000                  |   21.3            |   1.016              |  1.000            | 1.56                  |
 +--------------------------+-------------------+----------------------+-------------------+-----------------------+
-
+|  57,000                  |   22.6            |   1.017              |  1.000            | 1.66                  |
++--------------------------+-------------------+----------------------+-------------------+-----------------------+
 
