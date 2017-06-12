@@ -47,7 +47,7 @@ Also the distortion information at these few mags. This mag distortion is believ
 system. The measurement and correction programs are used and available from http://grigoriefflab.janelia.org/magdistortion . 
 
 **Table.2 Mag Distortion Parameters for K2 camera**
-
+(Note: this is for images saved by SerialEM directly. So this is after rotation and flip applied. Please do not use this with raw frame saved by plugin without rotation and flip, as it will have different but related values.)
 +--------------------------+-------------------+----------------------+-------------------+-----------------------+
 | Magnifications (X)       | Dist.Angle(degree)| Major Scale          | Minor Scale       |  Totat Distortion (%) |
 +==========================+===================+======================+===================+=======================+
