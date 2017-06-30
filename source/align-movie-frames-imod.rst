@@ -134,6 +134,14 @@ Since *framewatcher* can flexiblly define outout location, we can utlize it to s
 
    $framewatcher -w X:\MyData -o Z:\Storage\MyData -pr Z:\Storage\MyData
 
+You can even simply move all the raw files without aligning them. 
+
+.. code-block:: none 
+
+   $framewatcher -w X:\MyData -noc -pr Z:\Storage\MyData
+   
+Interestingly, *framewatcher* will also copy (not move) Gatan gain reference file and Defect file to Z drive too. 
+
 
 .. _using_GPU:
 
