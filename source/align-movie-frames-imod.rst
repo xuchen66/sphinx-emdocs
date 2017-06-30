@@ -128,6 +128,13 @@ command file. In this case, you tell the program to use this master.pcm file:
 The program will go through all the individual files and generate their individual pcm file based on master.pcm and 
 align each one. 
 
+Since *framewatcher* can flexiblly define outout location, we can utlize it to save all the raw files and as well as aligned result files into a network drive. This works as a neat way to empty X or Y drive on K2 computer, they will never fill. For example, following command will move all the new files saved by SerialEM and aligned files on X drive to the network drive Z. 
+
+.. code-block:: none 
+
+   $framewatcher -w X:\MyData -o Z:\Storage\MyData -pr Z:\Storage\MyData
+
+
 .. _using_GPU:
 
 Using GPU 
