@@ -4,7 +4,7 @@ Align Movie Frames with SerialEM and IMOD Programs
 ==================================================
 
 :Author: Chen Xu, Kangkang Song
-:Contact: <chen.xu@umassmed.edu> or <kangkang.song@umassmed.edu>
+:Contact: <chen.xu@umassmed.edu>, <kangkang.song@umassmed.edu>
 :Date: 2017-07-29 last update
 
 .. glossary::
