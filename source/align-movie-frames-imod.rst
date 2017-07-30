@@ -134,7 +134,7 @@ Since *framewatcher* can flexibly define output location, we can utlize it to sa
 
    $framewatcher -w X:\MyData -o Z:\Storage\MyData -pr Z:\Storage\MyData
    
-*framewatcher* can also output aligned sum together with power spectrum into a single image in JPEG format. This is ideal to send to remote user who wants to check image quality during data collection session. The file is small and can be open with any image viewer. 
+*framewatcher* can also output aligned sum together with power spectrum into a single image in JPEG format. This is ideal to send to remote user who wants to check image quality during data collection session. The file is small and can be opened with any image viewer. 
 
 .. code-block:: none 
 
