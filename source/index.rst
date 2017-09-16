@@ -31,6 +31,7 @@ Instructions, Manuals and Protocols
    post-process-k2-frames
    align-movie-frames-imod
    pixelsize-and-distortion-info
+   serialEM-note-more-about-z-height
    
 Index
 *****
