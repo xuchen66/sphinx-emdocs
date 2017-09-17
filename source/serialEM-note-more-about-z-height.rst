@@ -77,7 +77,7 @@ The function code is below.
    RestoreFocus
    EndFunction
 
-The real difference between between this and previous version Z_byV is an additional line added after SetEucentricFocus:
+The real difference between this and previous version *Z_byV* is an additional line inserted after SetEucentricFocus:
 
 .. code-block:: ruby
 
@@ -139,4 +139,11 @@ If we find the good "offset" value, it will be good for some time, at least this
       Endif 
    EndLoop 
 
-It uses function Z_byV2 to see which offset value to recover the Z height determined early by other method. 
+It uses function Z_byV2 to see which offset value to recover the Z height determined early by other method. If this script runs and gives offset value as -290.5, then you should use the function with this value:
+
+.. code-block:: ruby
+
+   CallFunction MyFuncs::Z_byV2 -290.5
+   
+
+
