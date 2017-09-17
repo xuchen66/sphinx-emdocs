@@ -12,27 +12,19 @@ SerialEM Note: More About Z Height
 
    Abstract
       This is the first of a series of SerialEM notes I have wanted to write for a while. An application of using SerialEM, 
-      even a very simple, might be very useful and "handy" for a SerialEM user. I try to give more explanantion for the what 
+      even a very simple, might be very useful and "handy" for a SerialEM user. I try to give more explanantion for what 
       I did, rather than to just present plain lines of codes (yes, SerialEM scripting code) so that it can be helpful for a 
       SerialEM user, especially a new comer to understand better how SerialEM works. 
       
-      new document is to list step-by-step operations to perform single partile data collection using SerialEM. 
-      I often receive requests to provide script/macro for single particle data collection using SerialEM as control program. 
-      It is not very easy to explain that script/macro itself is only the small portion of whole operation steps. 
-      I realized that a brief but detailed protocol for whole process is perhaps more useful, specially for novice cryoEM users. 
-      It should be useful for more experience users as well as a quick checklist in case some step is forgotten. 
-      I wrote something similiar at Brandeis EM webpage, but here I rewrite this to reflect newer hardware of microscope and camera, 
-      and with updated SerialEM scripts/macros.
+      Quickly and accurately moving specimen to eucentric height is a frequently needed task. Everything is going to be easier 
+      if speciment is at eucentric hieght and objective lens at eucentric focus. I wrote a litte document before how to use tilted-beam
+      method to do this using SerialEM `"SerialEM HowTo: Positioning Z" <http://www.bio.brandeis.edu/KeckWeb/emdoc/en_US.ISO8859-1/articles/SerialEM-howto:positioningZ/>`_. In this note, I give you an improved version and hopefully it is easier to use and 
+      more robust too. 
       
-      A Krios with K2 Summit camera and FEI Ceta camera is the base hardware setup for this protocol. 
+.. _background_info:
 
-.. note::
-      This doc is a working progress. If you have comment and suggestion, please let me know. Thank you!
-
-.. _scope_tuning:
-
-Check Scope Condition and Perform Tuning 
-----------------------------------------
+Background Information 
+----------------------
 
 Before you commit large dataset time, it is always a good idea to check scope condition to make sure everything is good. Calm down and be patient! Here are a few things I usually check. 
 
