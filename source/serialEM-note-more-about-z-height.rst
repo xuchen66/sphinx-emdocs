@@ -88,6 +88,12 @@ This is to use large defocus offset for good contrast. This function should be c
 .. code-block:: ruby
 
    CallFunction Z_byV2 -288.32
+   
+Or if it is in a script "MyFuncs":
+
+.. code-block:: ruby
+
+   CallFunction MyFuncs::Z_byV2 -288.32
 
 Obviously, the -288.32 is to pass to variable $offset in the function. 
 
