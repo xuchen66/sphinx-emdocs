@@ -97,7 +97,7 @@ Or if it is in a script "MyFuncs":
 
 Obviously, the -288.32 is to pass to variable $offset in the function. 
 
-Now question is how to determine this offset value for accurate Z height under current scope condition. 
+Now question is how to determine this offset value for accurate Z height for and under current scope condition. 
 
 .. _find_offset:
 
