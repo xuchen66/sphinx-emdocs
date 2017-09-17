@@ -12,7 +12,7 @@ SerialEM Note: More About Z Height
 
    Abstract
       This is the first of a series of SerialEM notes I have wanted to write for a while. An application of using SerialEM, 
-      even a very simple, might be very useful and "handy" for a SerialEM user. I try to give more explanantion for what 
+      even a simple one, could be very useful and "handy" for a SerialEM user. I try to give more explanantion for what 
       I did, rather than to just present plain lines of codes (yes, SerialEM scripting code) so that it can be helpful for a 
       SerialEM user, especially a new comer to understand better how SerialEM works. 
       
@@ -26,7 +26,77 @@ SerialEM Note: More About Z Height
 Background Information 
 ----------------------
 
-Before you commit large dataset time, it is always a good idea to check scope condition to make sure everything is good. Calm down and be patient! Here are a few things I usually check. 
+SerialEM has built-in task function to do eucentricity using stage-tilt method. It is rubust, but slower than beam-tilt method. Beam-tilt method is opposite to autofoccus funtion:
+
+- it sets scope objective lens to eucentric focus value 
+- and measures the defocus value for current specimen height using tilted-beam image pair,
+- it then changes stage position to that reported value but in oppsite direction, 
+- and it iterates until the reported defocus value is close enough to zero.  
+
+The beam-tilt method works very nicely most of time and it is pretty quick. However, there are couples of things making it less perfect. First, the signal becomes very weak when stage is already close eucentricity. We all know the contrast is the lowest when focus matches z height. We can use focus offset to increase the contrast, but non-linearty property casues some inaccuracy. The calibrated standard focus value could also change a litte with time and scope condition. All these together makes it less robust. 
+
+When we use SerialEM Low-Dose mode, we often give large focus offset such as -200 microns to View area (I call it View beam) to make the View image good contrast. If we can use this large defocused View beam to obtain tilt-beam pairs for measuring defocus value accurately, that would be ideal. 
+
+.. _Z_byV2_funtion:
+
+Z_byV2 Function
+---------------
+
+The function code is below. 
+
+.. code-block:: ruby
+
+   Function Z_byV2 1 0 offset
+   Echo ===> Running Z_byV2 ...
+   #====================================
+   # for defocus offset of V in Low Dose, save it
+   # ===================================
+   GoToLowDoseArea V
+   SaveFocus
+
+   #==================
+   # set object lens 
+   #==================
+   SetEucentricFocus
+   ChangeFocus $offset                         # for -300um offset 
+
+   #===========
+   # Adjust Z
+   #===========
+   Loop 2
+   Autofocus -1 2
+   ReportAutofocus 
+   Z = -1 * $reportedValue1
+   MoveStage 0 0 $Z
+   echo Z has moved --> $Z micron 
+   EndLoop
+
+   #=========================================
+   # restore the defocus set in V originally
+   # ========================================
+   RestoreFocus
+   EndFunction
+
+The real difference between between this and previous version Z_byV is an additional line added after SetEucentricFocus:
+
+.. code-block:: ruby
+
+   ChangeFocus $offset
+   
+This is to use large defocus offset for good contrast. This function should be called in script like this way:
+
+.. code-block:: ruby
+
+   CallFunction Z_byV2 -288.32
+
+Obviously, the -288.32 is to pass to variable $offset in the function. 
+
+Now question is how to determine this offset value for accurate Z height under current scope condition. 
+
+.. _how_to_find_the_offset:
+
+How to Find the Offset Value
+----------------------------
 
 - Check Gun Lens, Extracting Voltage, High Tension are set at correct values.
 - Stare for a few seconds at the focused beam at the highest SA mag, to see if the beam has good shape and there is no shaking or jumping.  
