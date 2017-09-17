@@ -101,13 +101,13 @@ Now question is how to determine this offset value for accurate Z height under c
 
 .. _find_offset:
 
-Find the Offset Value using Script FindOffet
---------------------------------------------
+Find the Offset Value using Script FindOffset
+----------------------------------------------
 
-If we find the good "offset" value, it will be good for some time, at least this session. So this like a short term calibration. Here is how to find it:
+If we found the good "offset" value, it will be good for some time, at least this session. So this like a short term calibration. Here is how to find it:
 
 - Adjust specimen to Eucentriciy, using FEI interface tool or SerialEM task function
-- run a search script as below:
+- run script as below:
 
 .. code-block:: ruby
 
@@ -145,5 +145,5 @@ It uses function Z_byV2 to see which offset value to recover the Z height determ
 
    CallFunction MyFuncs::Z_byV2 -290.5
    
-
+It will move stage position to Eucentric Z height, almost magically! 
 
