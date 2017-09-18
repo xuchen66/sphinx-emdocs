@@ -26,7 +26,7 @@ SerialEM Note: More About Z Height
 Background Information 
 ----------------------
 
-SerialEM has built-in task function to do eucentricity using stage-tilt method. It is rubust, but slower than beam-tilt method. Beam-tilt method is opposite to autofoccus funtion:
+SerialEM has built-in task function to do eucentricity using stage-tilt method. It is robust, but slower than beam-tilt method. Beam-tilt method is opposite to autofoccus funtion:
 
 - it sets scope objective lens to eucentric focus value 
 - and measures the defocus value for current specimen height using tilted-beam image pair,
@@ -102,7 +102,7 @@ Now question is how to determine this offset value for accurate Z height for and
 .. _find_offset:
 
 Find the Offset Value using Script FindOffset
-----------------------------------------------
+---------------------------------------------
 
 If we found the good "offset" value, it will be good for some time, at least this session. So this like a short term calibration. Here is how to find it:
 
@@ -121,10 +121,12 @@ If we found the good "offset" value, it will be good for some time, at least thi
    Z0 = $repVal3
 
    ## now find the offset
-   offset = -300             # any starting value is OK 
+   # for initial offset, get a close value from current setting
+   ReportUserSetting LowDoseViewDefocus
+   offset = $repVal1 + ( $repVal1 / 10 )
+   # 
    Loop 10
    CallFunction MyFuncs::Z_byV2 $offset
-
    ReportStageXYZ 
    Z = $repVal3
    diffZ = $Z - $Z0
