@@ -123,7 +123,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
    ## now find the offset
    # for initial offset, get a close value from current setting
    ReportUserSetting LowDoseViewDefocus
-   offset = $repVal1 + ( $repVal1 / 10 )
+   offset = $repVal1 - ( $repVal1 / 10 )
    # 
    Loop 10
    CallFunction MyFuncs::Z_byV2 $offset
