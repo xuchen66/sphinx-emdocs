@@ -135,7 +135,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
       If ABS $diffZ < 0.5 
          offset = ROUND $offset 2 
          echo >>> Found "offset" is $offset
-         echo >>> run "Z_byZ2 $offset" 
+         echo >>> run script with line "CallFunction Z_byZ2 $offset" 
          exit
       Else 
          offset = $offset + $diffZ
