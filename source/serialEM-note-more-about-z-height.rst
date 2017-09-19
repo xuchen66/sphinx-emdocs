@@ -68,6 +68,7 @@ The function code is below.
    ReportAutofocus 
    Z = -1 * $reportedValue1
    MoveStage 0 0 $Z
+   Z = ROUND $Z 2
    echo Z has moved --> $Z micron 
    EndLoop
 
@@ -132,7 +133,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
    diffZ = $Z - $Z0
    echo $diffZ
       If ABS $diffZ < 0.5 
-         offset = ROUND $offset 1 
+         offset = ROUND $offset 2 
          echo >>> Found "offset" is $offset
          echo >>> run "Z_byZ2 $offset" 
          exit
