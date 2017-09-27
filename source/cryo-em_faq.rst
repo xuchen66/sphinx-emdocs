@@ -23,7 +23,12 @@ The data for screening is usually at three kinds.
 3. High mag shots, usually taken at 22,000X or 28,000X. It is MRC stack file, each section is from an exposure. If K2 camera frame mode is used, the secion is usually a single image from aligned movie stacks in-fly. 
 
 All the three kinds of data can be easily viewed using IMOD. For Windows, a package called "Windows3dmod" can be insatalled - from http://bio3d.colorado.edu/ftp/Windows3dmod/. For all the other platforms including Windows, a complete IMOD software package be be installed. IMOD User Guide can be found in http://bio3d.colorado.edu/imod/doc/guide.html. 
+
+.. Note::
    
+   Since September 2017, most of screening images are also saved into JPG format at the same time when MRC files is saved. This 
+   gives you a quick feedback for your sample conditions. The small file size makes it easy for up to upload to DropBox to share with 
+   users. 
    
 .. _mount_ntfs:
 
