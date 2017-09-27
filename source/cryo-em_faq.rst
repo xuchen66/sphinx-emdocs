@@ -26,7 +26,7 @@ All the three kinds of data can be easily viewed using IMOD. For Windows, a pack
 
 .. Note::
    
-   Since September 2017, most of screening images are also saved into JPG format at the same time when MRC files is saved. This 
+   Since September 2017, most of screening images are also saved into JPG format at the same time when MRC files are saved. This 
    gives you a quick feedback for your sample conditions. The small file size makes it easy for up to upload to DropBox to share with 
    users. 
    
