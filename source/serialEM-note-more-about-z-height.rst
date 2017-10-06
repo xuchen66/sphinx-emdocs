@@ -144,6 +144,11 @@ If we found the good "offset" value, it will be good for some time, at least thi
 
 It uses function Z_byV2 to see which offset value to recover the Z height determined early by other method. If this script runs and gives offset value as -290.5, then you should use the function with this value:
 
+.. note::
+
+   This offset value changes when V beam size changes. Therefore, it makes sense to do this "calibration" of finding 
+   offset value after all the Low Dose area conditions are set and fixed. 
+
 .. code-block:: ruby
 
    CallFunction MyFuncs::Z_byV2 -290.5
