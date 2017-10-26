@@ -25,7 +25,7 @@ SerialEM Note: Speed, Speed and Speed
       
 .. _minimize_mag_switch:
 
-# Minimize Mag Switch 
+1) Minimize Mag Switch 
 ----------------------
 
 Switching between mags takes time. You can definitely feel the slowness of mag switching, say bewteen 1250X and 130kX. You might think of
@@ -56,8 +56,7 @@ The problem is caused by the argument 1 in command line:
    RealignToNavItem 1
    
 The argument "1" here means scope will resume to the state before realigning routine. And that state is high, record mag from exposure of 
-last navigator point. Therefore, with above script, scope switch to View mag to perform realign function and then it siwthes back to record mag
-mag. It then switches to View mag again when at line of 
+last navigator point. Therefore, with above script, scope switch to View mag to perform realign function and then it siwthes back to record mag. It then switches to View mag again when at line of 
 
 .. code-block:: ruby
 
@@ -71,9 +70,21 @@ If I put "0" as argument for "RealignToNavItem" like here:
   
 then scope stays in View mag. It at least saves 5 seconds! 
 
+.. _order_of_actions:
 
+2) Order of Actions
+-------------------
 
+When we use "Acquire at points ..." to collect single particle data, the default action of control mechanism is to move stage to the new item's stage position. And then it starts to run the actual collecting script like "LD". If the first action in the "LD" script is RealignToNavItem, the scope changes to the map mag, usually is View mag. Therefore, there are two physical actions here involved - stage move and mag switch. 
 
+For whatever reason, before stage movement finishes, scope can not do anything. Since "RealignToNavItem" will also introduce stage movement, if we ask RealignToNavItem to take care of mag switching and stage movement, it can move stage while mag switching is happening. This can initiate two actions at the same time; therefore, saves time. 
+
+This is new feature added not long ago. In late versions, there is a check box "Skip initial stage move" in "Navigator Acquire Dialog" window for this very purpose. 
+
+.. _using_beam_tilt_for_Z:
+
+3) Using Beam Tilt for Z Height Change
+--------------------------------------
 
 
 SerialEM has built-in task function to do eucentricity using stage-tilt method. It is robust, but slower than beam-tilt method. Beam-tilt method is opposite to autofoccus funtion:
