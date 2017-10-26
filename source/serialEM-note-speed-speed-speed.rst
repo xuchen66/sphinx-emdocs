@@ -117,7 +117,7 @@ The feature is used this way:
  
 This will move 50nm, rather than 25nm as default. 
 
-Moving stage with backlash imposed takes extra time itself. Therefore, we don't want to move stage this way, but the final movement to the target. Here is a portion of a function called "AlignToBuffer" I wrote. 
+Moving stage with backlash imposed takes extra time itself. Therefore, we don't want to move stage always using this way, but the final movement to the target. Here is a portion of a function called "AlignToBuffer" I wrote. 
 
 .. code-block:: ruby
 
