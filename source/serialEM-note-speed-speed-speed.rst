@@ -86,10 +86,61 @@ This is new feature added not long ago. In late versions, there is a check box "
 3) Using Beam Tilt for Z Height Change
 --------------------------------------
 
+We all know how important to have Z height close enough to eucentricity. If there is 10 micron off, then everything won't work quite right. 
+SerialEM's built-in function "Eucentricity" is a robust function, straightward to use. However, it takes some time to run due to stage tiltig and settling time required. I wrote two script (functions) "Z_byG" and "Z_byV" to use beam tilting pair for the same job. They do not use stage tilt and takes less images, thus it runs faster. One do have to get calibration done for Standard Focus value though. 
+
+In single particle data collection, sometimes, we have to make MMM maps from many meshes. The very first thing we do after getting to the center of a mesh is to fix the eucentricity height before map is collected. Using beam tilting method, it can save bit of time in this process. 
+
+From my own experience, doing the eucentricity using beam tilting method even works fairly well in low range of magnifications. It seems to be accurate enough for parallel beam capable scope like Krios. 
+
 .. _relax_stage:
 
 4) Relaxing Stage After Moving to Target
 ----------------------------------------
+
+For high quality movie stacks, even we use short frame time, the stage drift rate is still needed to be monitored. Some people use longer frame time due to worry the signal within frame being too weak for frame aligning later. In this case, drift control needs to be in place seriously, as stage naturally drifts and it can have different speeds at different time. 
+
+SerialEM can ask stage to move with backlash retained or imposed. After such movement, relaxing stage stress by moving backwards a small 
+distance can help stage settle down much faster, at least to a normal behaviour stage. This feature has implemented into SeriaEM now. I have found it saves us huge mount of time for our routine data collection. I strongly recommend to upgrade to later version for this reason. 
+
+The feature is used this way:
+
+.. code-block:: ruby
+
+   ResetImageShift 2 
+   
+2 means moving stage with backlash imposed or retained, and moving backward 25nm distance in the end. This small distance doesn't actually move the stage location, but helps relax the stage mechanical stress. You can also ask to move backwards a different distance by adding 2nd argument to the command, like below. 
+
+.. code-block:: ruby
+
+   ResetImageShift 2 50
+ 
+This will move 50nm, rather than 25nm as default. 
+
+Moving stage with backlash imposed takes extra time itself. Therefore, we don't want to move stage this way, but the final movement to the target. Here is a portion of a function called "AlignToBuffer" I wrote. 
+
+.. code-block:: ruby
+
+   ## align
+   Loop $iter ind
+       $shot
+       # still need crop, for Camera which doesn't do flexible sub-size like FEI cameras
+       ImageProperties A
+       XA = $reportedValue1
+       YA = $reportedValue2
+       If $XA > $XP OR $YA > $YP
+           echo CallFunction  MyFuncc::CropImageAToBuffer $buffer
+           CallFunction  MyFuncs::CropImageAToBuffer $buffer
+       Endif
+       AlignTo $buffer
+       If $ind == $iter  	# last round of loop, relax stage
+         ResetImageShift 2
+       Else 
+         ResetImageShift
+       Endif
+   EndLoop 
+  
+Here, I asked stage to relax only at final round of iteration. If you use this function, you need to update it to include this nice feature. 
 
 .. _using_compression:
 
