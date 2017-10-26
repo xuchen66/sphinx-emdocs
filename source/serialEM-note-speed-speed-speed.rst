@@ -25,7 +25,7 @@ SerialEM Note: Speed, Speed and Speed
       
 .. _minimize_mag_switch:
 
-#) Minimize Mag Switch 
+# Minimize Mag Switch 
 ----------------------
 
 Switching between mags takes time. You can definitely feel the slowness of mag switching, say bewteen 1250X and 130kX. You might think of
@@ -69,7 +69,7 @@ If I put "0" as argument for "RealignToNavItem" like here:
 
   RealignToNavItem 0
   
-then scope stays in View mag. I at least save 5 seconds from here! 
+then scope stays in View mag. It at least saves 5 seconds! 
 
 
 
