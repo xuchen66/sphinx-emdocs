@@ -11,9 +11,9 @@ SerialEM Note: Speed, Speed and Speed
 .. glossary::
 
    Abstract
-      Speed of data collection is important, specially for a facility runnig 24/7 and for whole year long. If we can save a few seconds for 
-      an exposure, it might not sound much. But it becomes a lot in a year time. We could collect more data, help more users if we are more 
-      efficient.  
+      Speed of data collection is important, specially for a facility runnig 24/7 and for whole year long. If we can save a few seconds 
+      for an exposure, which might not sound much,  but it becomes a lot accumulated in a year time. We could collect more data, help 
+      more users if we are more efficient.  
       
       Thanks to the author and developer, David Mastronade, SerialEM is always under active development and improvement. I believe efficiency
       has been one of the goals for development. For example, positioning routine - Realign earlier always run two rounds: first round to 
@@ -140,12 +140,18 @@ Moving stage with backlash imposed takes extra time itself. Therefore, we don't 
        Endif
    EndLoop 
   
-Here, I asked stage to relax only at final round of iteration. If you use this function, you need to update it to include this nice feature. 
+Here, I asked stage to relax only at final round of iteration. If you use this function, you should update it to include this nice feature. 
 
 .. _using_compression:
 
 5) Using Compression on K2 Data
 -------------------------------
+
+Most people collect single particle data with K2 camera use Super-resolusion mode. One of the "hidden" advantages is that the Super-res raw frame data is in 4-bit unsigned integer type, and there are lot of zero's there. Such data can be compressed very effciently using mature compression algorithms. Unfortunitely, MRC is not a file format that can directly use those algorithm libraries for compression. TIFF is. 
+
+SerialEM implements this compression feature in. It gives options to not apply gain reference before saving and to use compressed TIFF as saved data format. This might not sound a big deal, but the minimal lossless raw dataset size makes huge different for a facility to run constantly. The small dataset file size is not only beneficial for long term storage, but also makes it a lot faster to transfer and copy off. Network behaves a lot differently for a lot of 400MB datasets from a lot of 10GB datasets. 
+
+Personally, I recommend to use compressed TIFF and without gain normalization applied for data saving format. 
 
 .. _using_local_drive:
 
