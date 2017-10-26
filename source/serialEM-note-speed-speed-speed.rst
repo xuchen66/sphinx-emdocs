@@ -86,6 +86,21 @@ This is new feature added not long ago. In late versions, there is a check box "
 3) Using Beam Tilt for Z Height Change
 --------------------------------------
 
+.. _relax_stage:
+
+4) Relaxing Stage After Moving to Target
+----------------------------------------
+
+.. _using_compression:
+
+5) Using Compression on K2 Data
+-------------------------------
+
+.. _using_local_drive:
+
+6) Using Local HDD or SSD
+-------------------------
+
 
 SerialEM has built-in task function to do eucentricity using stage-tilt method. It is robust, but slower than beam-tilt method. Beam-tilt method is opposite to autofoccus funtion:
 
