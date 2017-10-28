@@ -86,8 +86,8 @@ This is new feature added not long ago. In late versions, there is a check box "
 3) Using Beam Tilt for Z Height Change
 --------------------------------------
 
-We all know how important to have Z height close enough to eucentricity. If there is 10 micron off, then everything won't work quite right. 
-SerialEM's built-in function "Eucentricity" is a robust function, straightward to use. However, it takes some time to run due to stage tiltig and settling time required. I wrote two script (functions) "Z_byG" and "Z_byV" to use beam tilting pair for the same job. They do not use stage tilt and takes less images, thus it runs faster. One do have to get calibration done for Standard Focus value though. 
+We all know how important is to have Z height close enough to eucentricity. If there is 10 micron off, then everything won't work quite right. 
+SerialEM's built-in function "Eucentricity" is a robust function, straightward to use. However, it takes some time to run due to stage tiltig and settling time required. I wrote two script (functions) "Z_byG" and "Z_byV" to use beam tilting pair for the same job. They do not use stage tilt and takes less images, thus it runs faster. You do have to get calibration done for Standard Focus value though. 
 
 In single particle data collection, sometimes, we have to make MMM maps from many meshes. The very first thing we do after getting to the center of a mesh is to fix the eucentricity height before map is collected. Using beam tilting method, it can save bit of time in this process. 
 
