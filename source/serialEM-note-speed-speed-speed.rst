@@ -101,7 +101,7 @@ From my own experience, doing the eucentricity using beam tilting method even wo
 For high quality movie stacks, even we use short frame time, the stage drift rate is still needed to be monitored. Some people use longer frame time due to worry the signal within frame being too weak for frame aligning later. In this case, drift control needs to be in place seriously, as stage naturally drifts and it can have different speeds at different time. 
 
 SerialEM can ask stage to move with backlash retained or imposed. After such movement, relaxing stage stress by moving backwards a small 
-distance can help stage settle down much faster, at least to a normal behaviour stage. This feature has implemented into SeriaEM now. I have found it saves us huge mount of time for our routine data collection. I strongly recommend to upgrade to later version for this reason. 
+distance can help stage settle down much faster, at least to a normal behaviour stage. This feature has been implemented into SeriaEM now. I have found it saves us huge mount of time for our routine data collection. I strongly recommend to upgrade to later version for this reason. 
 
 The feature is used this way:
 
