@@ -22,8 +22,8 @@ SerialEM Note: Installation and Calibration
 
 Here are steps to follow. 
 
-# first 
-# second
+1. first 
+#. second
 
 However, I found that I could save time from this positioning actions:
 
