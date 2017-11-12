@@ -24,9 +24,9 @@ Here are steps to follow.
 
 1. Ask David for the initial system file. 
 
-   this is 
+   Normally, you would fill out a "questionnaire" available at the ftp server - http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to David. David will then create a framework file on the same ftp server for you to download. This framework file is a zip file, you can download it to load and unzip it by double clicking on the file. Beside a sub-folder "Admin" generted under C:\ProgramData\SerialEM, the most important file in the framework is one initial system file called "SerailEMproperties.txt". You must have this file to get started. 
    
-#. second
+#. Make sure your camera computer and microscope computer are on the same network. 
 
 However, I found that I could save time from this positioning actions:
 
