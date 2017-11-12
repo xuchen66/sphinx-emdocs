@@ -22,17 +22,21 @@ Installation
 
 Here are steps to follow. 
 
-1. Ask David for the initial system file. 
+1. Ask David for the initial system file. Normally, you would fill out a "questionnaire" available at the ftp server - http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to David. David will then create a framework file on the same ftp server for you to download. This framework file is a zip file, you can download it to local like Desktop and unzip it by double clicking on the file. Beside a sub-folder "Admin" generted under C:\\ProgramData\\SerialEM, the most important file in the framework is one initial system file called "SerailEMproperties.txt". You must have this file to get started. 
 
-   Normally, you would fill out a "questionnaire" available at the ftp server - http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to David. David will then create a framework file on the same ftp server for you to download. This framework file is a zip file, you can download it to local like Desktop and unzip it by double clicking on the file. Beside a sub-folder "Admin" generted under C:\\ProgramData\\SerialEM, the most important file in the framework is one initial system file called "SerailEMproperties.txt". You must have this file to get started. 
+#. Make sure your camera computer and microscope computer are on the same network. For example, K2 computer needs to have a network interface with IP address 192.168.1.2, and FEI scope with 192.168.1.1. And they should be able to ping each other. You might be confused by Gatan's DM aleady being able to communicate with scope, as it can detect magnification change of scope. This DM connection is usually via serial port by a direct serial cable. SerialEM uses standard TCP/IP to communicate and therefore reqires a standard network setup in place. 
 
-#. Make sure your camera computer and microscope computer are on the same network. 
+#. Decide which computer to install SerialEM. In theory, you can install SerialEM on either computer - camera or microscope. For K2 camera, it is normally installed on the K2 computer. 
 
-   For example, K2 computer needs to have a network interface with IP address 192.168.1.2, and FEI scope with 192.168.1.1. And they should be able to ping each other. You might be confused by Gatan's DM aleady being able to communicate with scope, as it can detect magnification change of scope. This connection is usually via serial port by a a direct serial cable. SerialEM uses standard TCP/IP to communicate and therefore reqires a standard network setup in place. 
- 
+#. Decide which type of executable to use. SerialEM builds for both 32 and 64-bit platforms. Unless you have to run it on a Windows XP, you shoule choose 64-bit. 
 
-#. Download SerialEM software.    
+#. Download SerialEM software. You should start with the latest release version from ftp server at http://bio3d.colorado.edu/ftp/SerialEM/  and save it somewhere local like Desktop.  
+
+#. Unzip the installation package file downloaded. You can double click on this file, it will unzip the program into C:\\Program Files\\SerialEM. The folder "SerialEM" will be created automatically if this isn't one. The new package will be unzipped into a new sub-folder, e.g. SerialEM_3-6-13_64. 
    
+#. Quit Gatan DM if it is running. 
+
+#. 
    
 
 However, I found that I could save time from this positioning actions:
