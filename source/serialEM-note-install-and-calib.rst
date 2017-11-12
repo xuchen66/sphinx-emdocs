@@ -17,12 +17,15 @@ SerialEM Note: Installation and Calibration
       
 .. _installation:
 
-1) Installation 
----------------
+Installation 
+------------
 
 Here are steps to follow. 
 
-1. first 
+1. Ask David for the initial system file. 
+
+   this is 
+   
 #. second
 
 However, I found that I could save time from this positioning actions:
