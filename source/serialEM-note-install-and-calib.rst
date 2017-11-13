@@ -65,19 +65,15 @@ Although most of calibration results will be written into another system file *S
 #. Load standard waffle grating grid (TedPella Prod.# 607, http://www.tedpella.com/calibration_html/TEM_STEM_Test_Specimens.htm#_607).
 #. Start with lowest magnification above LM range. On Talos, it is 1250X. At close to Eucentricity, and clost to eucentric focus. 
 #. Take a T shot with 2x binning on a K2 camera, make sure the counts are neither too low nor too high. 
-#. Take a T shot, then Calibration - Pixel Size - Find Pixel Size
-
-However, I found that I could save time from this positioning actions:
+#. Take a T shot, then Calibration - Pixel Size - Find Pixel Size. The log window shows both mag index and pixel size. Edit *SerialEMproperties.txt* to add a line like below in K2 camera property section. 
 
 .. code-block:: ruby
 
-   RealignToNavItem 1
-   Copy A P
-   ResetImageShift
+   # MagIndex  DeltaRotation (999 not measured)  SolvedRotation (999 not measured)   Pixel size (nm, 0 not measured)
+   RotationAndPixel 17 999 999 3.396
    
-   View
-   AlignTo P
-   ResetImageShift
+Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
+6. 
    
 This little script uses the last image of Realign routine which has some image shift in it, as reference to do another round of aligning 
 and ResetImageShift to get rid of image shift. It seems to be flawless and it is actually working. But I noticed the scope switched from View 
