@@ -88,7 +88,12 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
    The pixel size and tilting axis can just be done for a couple switching mags such as lowest M and highest LM. 
 
 11. Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
-   
+#. Repeat above step to cover all the magnification till the highest to be used such as 100kX. 
+#. Now bring scope to highest LM mag (2300X on Talos), remove Obj aperture; do pixel size, image shift calibration, stage shift calibration; edit property file to take in pixel size and tilting axis angle and save the calibratios. 
+#. Decrease Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
+#. Repeat above step to cover all magnication till the lowest to use like 46X. 
+
+
 This little script uses the last image of Realign routine which has some image shift in it, as reference to do another round of aligning 
 and ResetImageShift to get rid of image shift. It seems to be flawless and it is actually working. But I noticed the scope switched from View 
 mag to Record mag for short period of time and then switch to View mag again during the actions. There is an extra switch there! At first, 
