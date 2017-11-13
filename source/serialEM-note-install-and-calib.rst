@@ -60,11 +60,12 @@ Calibration
 
 Although most of calibration results will be written into another system file *SerialEMcalibraion.txt*, there are a few places you need to manully edit the *SerialEMproperties.txt" to take in the calibration results. 
 
-0. Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam. If it doesn't, try to adjust the camera orientation of Gatan K2 camera from Camera - Configuration. You can use beamstop to help.  
-1. Load standard waffle grating grid (TedPella Prod.# 607, http://www.tedpella.com/calibration_html/TEM_STEM_Test_Specimens.htm#_607).
+0. Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam. If it doesn't, try to adjust the camera orientation of Gatan K2 camera from Camera - Configuration. You can use beamstop to help. 
+#. SerialEM - Calibration - List Mag. Scope will go through all the mags and list them on log window, from lowest to highest. Check it with what are in *SerialEMproperties.txt*, update that if needed.  
+#. Load standard waffle grating grid (TedPella Prod.# 607, http://www.tedpella.com/calibration_html/TEM_STEM_Test_Specimens.htm#_607).
 #. Start with lowest magnification above LM range. On Talos, it is 1250X. At close to Eucentricity, and clost to eucentric focus. 
 #. Take a T shot with 2x binning on a K2 camera, make sure the counts are neither too low nor too high. 
-#. Take a T shot, Calibration - 
+#. Take a T shot, then Calibration - Pixel Size - Find Pixel Size
 
 However, I found that I could save time from this positioning actions:
 
