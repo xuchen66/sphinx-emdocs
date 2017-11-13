@@ -40,7 +40,7 @@ Here are steps to follow.
 
 #. Manually copy a file called *FEI-SEMServer.exe* from C:\\Program Files\\SerialEM on K3 computer to C:\\Program Files\\SerialEM on scope computer. This is a bridge program to control scope by passing the scope function calls from SerialEM main program on remote computer to scope scripting interface. Run the program by double clicking on it(it needs to run or SerialEM cannot control scope). 
 
-#. On K2 computer, Edit *SerialEMproperties.txt* file in folder C:\\ProgramData\\SerialEM to have proper lines defining network properties. 
+#. On K2 computer, Edit *SerialEMproperties.txt* file in folder C:\\ProgramData\\SerialEM to have proper lines in general property area to define network properties. 
 
 .. code-block:: ruby
 
@@ -51,13 +51,20 @@ Here are steps to follow.
 
 11. On K2 computer which SerialEM is to be installed, define a system environment variable SERIALEMCCD_PORT with the value 48890 or other selected port number, as described in the section in helpfile. 
 
-If everything goes smooth, you should be able to start SerialEM and it should connect to "see" both scope and DM. 
+If everything goes north, you should be able to start SerialEM and it should connect to "see" both scope and DM. 
 
 .. _Calibration:
 
 Calibration 
 -----------
 
+Although most of calibration results will be written into another system file *SerialEMcalibraion.txt*, there are a few places you need to manully edit the *SerialEMproperties.txt" to take in the calibration results. 
+
+0. Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam. If it doesn't, try to adjust the camera orientation of Gatan K2 camera from Camera - Configuration. You can use beamstop to help.  
+1. Load standard waffle grating grid (TedPella Prod.# 607, http://www.tedpella.com/calibration_html/TEM_STEM_Test_Specimens.htm#_607).
+#. Start with lowest magnification above LM range. On Talos, it is 1250X. At close to Eucentricity, and clost to eucentric focus. 
+#. Take a T shot with 2x binning on a K2 camera, make sure the counts are neither too low nor too high. 
+#. Take a T shot, Calibration - 
 
 However, I found that I could save time from this positioning actions:
 
