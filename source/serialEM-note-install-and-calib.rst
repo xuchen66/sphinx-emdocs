@@ -28,7 +28,7 @@ Here are steps to follow.
 
 #. Decide which computer to install SerialEM. In theory, you can install SerialEM on either computer - camera or microscope. For K2 camera, it is normally installed on the K2 computer. 
 
-#. Decide which type of executable to use. SerialEM builds for both 32 and 64-bit platforms. Unless you have to run it on a Windows XP, you shoule choose 64-bit. 
+#. Decide which type of executable to use. SerialEM builds for both 32 and 64-bit platforms. Unless you have to run it on a Windows XP, you should choose 64-bit. 
 
 #. Download SerialEM software. You should start with the latest release version from ftp server at http://bio3d.colorado.edu/ftp/SerialEM/  and save it somewhere local like Desktop.  
 
@@ -36,8 +36,24 @@ Here are steps to follow.
    
 #. Quit Gatan DM if it is running. 
 
-#. 
+#. Double click on a file called *install.bat* in the package folder C:\\Program Files\\SerialEM\\SerialEM_3-6-13_64. This will copy some files into upper folder which is C:\\Program Files\\SerialEM, register DM plugin file and copy it to the Gatan plugin folder at C:\\ProgramData\\Gatan\\Plugin. 
+
+#. Manually copy a file called *SEM-FEIServer.exe* from C:\\Program Files\\SerialEM on K3 computer to C:\\Program Files\\SerialEM on scope computer. This is a bridge program to control scope by passing the scope function calls from SerialEM main program on remote computer to scope scripting interface. Run the program by double clicking on it(it needs to run or SerialEM cannot control scope). 
+
+#. On K2 computer, Edit *SerialEMproperties.txt* file in folder C:\\ProgramData\\SerialEM to have proper lines defining network properties. 
+
+.. code-block:: ruby
+
+   GatanServerIP 192.168.1.2
+   GatanServerPort 48890 
+   SocketServerIP 1 192.168.1.1
+   SocketServerPort 1 48892
    
+#. On K2 computer which SerialEM is to be installed, define a system environment variable SERIALEMCCD_PORT with the value 48890 or other selected port number, as described in the section in helpfile. 
+
+If everything goes smooth, you should be able to start SerialEM and it should connect to "see" both scope and DM. 
+
+.. _installation:
 
 However, I found that I could save time from this positioning actions:
 
