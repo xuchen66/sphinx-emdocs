@@ -94,7 +94,7 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
    RotationAndPixel 17 999 86.1 3.396
 
 .. Note:: 
-   The pixel size and tilting axis can just be done for a couple switching mags such as lowest M and highest LM. 
+   The pixel size and tilting axis can just be done for a couple of switching mags such as the lowest M and the highest LM. 
 
 11. Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
 
