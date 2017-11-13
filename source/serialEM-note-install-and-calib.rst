@@ -73,7 +73,21 @@ Although most of calibration results will be written into another system file *S
    RotationAndPixel 17 999 999 3.396
    
 Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
-6. 
+
+6. Calibration - Image & Stage Shift - IS from Scratch.
+#. Calibration - Image & Stage Shift - Stage Shift.
+#. Calibration - Administrator, turn it on.
+#. Calibration - Save Calibration. 
+#. Take the tilting axis value (e.g. 86.1) from step 7 - stage shift calibration, edit it into the 2nd "999" in *SerialEMproperties.txt* like below.
+
+.. code-block:: ruby
+
+   RotationAndPixel 17 999 86.1 3.396
+
+.. Note:: 
+   The pixel size and tilting axis can just be done for a couple switching mags such as lowest M and highest LM. 
+
+11. Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
    
 This little script uses the last image of Realign routine which has some image shift in it, as reference to do another round of aligning 
 and ResetImageShift to get rid of image shift. It seems to be flawless and it is actually working. But I noticed the scope switched from View 
