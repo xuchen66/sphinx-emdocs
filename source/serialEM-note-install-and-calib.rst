@@ -92,11 +92,11 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 #. Now bring scope to highest LM mag (2300X on Talos), remove Obj aperture; do pixel size, image shift calibration, stage shift calibration; edit property file to take in pixel size and tilting axis angle and save the calibrations. 
 #. Decrease Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
 #. Repeat above step to cover all magnication till the lowest to use like 46X. 
-#. At about 20kX, do Autofocus calibration (only need to do at one mag).
+#. At about 20kX, do Autofocus calibration (only need to do at single mag).
 #. Beam Crossover claibration
 #. Start with most used spotsize like 7, do Beam Intensity calibration 
 #. repeat Beam Intensity Calibration for all other spot sizes likely to be used - 3,4,5,6,8,9.
-#. At one mag like 5000X, using spot size 9, do Beam Shift Calibration.
+#. At one mag like 5000X, using spot size 9, do Beam Shift Calibration (only need to do at single mag).
 #. Edit property file to define the camera configuration information about orientation determined by step 0. SerialEM will always set the camera orientation when starting up so there is no worry someone might change it. 
 
 .. code-block:: ruby
