@@ -60,7 +60,7 @@ Calibration
 
 Although most of calibration results will be written into another system file *SerialEMcalibraion.txt*, there are a few places you need to manully edit the *SerialEMproperties.txt" to take in the calibration results. 
 
-0. Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam. If it doesn't, try to adjust the camera orientation of Gatan K2 camera from Camera - Configuration. You can use beamstop to help. 
+0. Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam. If it doesn't, try to adjust the camera orientation of Gatan K2 camera from Camera - Configuration. You can use beamstop to help. This is initial starting point for all the calibrations. 
 #. SerialEM - Calibration - List Mag. Scope will go through all the mags and list them on log window, from lowest to highest. Check it with what are in *SerialEMproperties.txt*, update that if needed.  
 #. Load standard waffle grating grid (TedPella Prod.# 607, http://www.tedpella.com/calibration_html/TEM_STEM_Test_Specimens.htm#_607).
 #. Start with lowest magnification above LM range. On Talos, it is 1250X. At close to Eucentricity, and clost to eucentric focus. 
@@ -89,10 +89,19 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 
 11. Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
 #. Repeat above step to cover all the magnification till the highest to be used such as 100kX. 
-#. Now bring scope to highest LM mag (2300X on Talos), remove Obj aperture; do pixel size, image shift calibration, stage shift calibration; edit property file to take in pixel size and tilting axis angle and save the calibratios. 
+#. Now bring scope to highest LM mag (2300X on Talos), remove Obj aperture; do pixel size, image shift calibration, stage shift calibration; edit property file to take in pixel size and tilting axis angle and save the calibrations. 
 #. Decrease Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
 #. Repeat above step to cover all magnication till the lowest to use like 46X. 
-#. to be continued...
+#. At about 20kX, do Autofocus calibration (only need to do at one mag).
+#. Beam Crossover claibration
+#. Start with most used spotsize like 7, do Beam Intensity calibration 
+#. repeat Beam Intensity Calibration for all other spot sizes likely to be used - 3,4,5,6,8,9.
+#. At one mag like 5000X, using spot size 9, do Beam Shift Calibration.
+#. Edit property file to define the camera configuration information about orientation determined by step 0. SerialEM will always set the camera orientation when starting up so there is no worry someone might change it. 
 
+.. code-block:: ruby
+   RotationAndFlip 7
 
+.. Note::
+   Waffle grating grid is good and handy for pixel size calibration, but it is not ideal for Image Shift and Stage Shift calibrations, as the waffle pattern might screw up the correlation in the calibration procedures. I found the normal Quantifoil grid with some 10nm Au particles absorbed onto can be very good for normal calibration purpose. I glow discharge a Quantifoil grid and add 1*ul* deca-gold solution on the grid and let it dry. 
 
