@@ -99,8 +99,8 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 #. At one mag like 5000X, using spot size 9, do Beam Shift Calibration.
 #. Edit property file to define the camera configuration information about orientation determined by step 0. SerialEM will always set the camera orientation when starting up so there is no worry someone might change it. 
 
-
 .. code-block:: ruby
+
    RotationAndFlip 7
 
 .. Note::
