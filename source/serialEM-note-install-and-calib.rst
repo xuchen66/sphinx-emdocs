@@ -44,7 +44,8 @@ Here are steps to follow.
 
 .. code-block:: ruby
 
-   GatanServerIP 192.168.1.2
+   #GatanServerIP 192.168.1.2
+   GatanServerIP 127.0.0.1
    GatanServerPort 48890 
    SocketServerIP 1 192.168.1.1
    SocketServerPort 1 48892
