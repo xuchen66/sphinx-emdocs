@@ -5,7 +5,7 @@ Align Movie Frames with SerialEM and IMOD Programs
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2017-07-29 last update
+:Date: 2017-11-28 last update
 
 .. glossary::
 
@@ -147,6 +147,14 @@ You can even simply move all the raw files without aligning them.
    $framewatcher -w X:\MyData -noc -pr Z:\Storage\MyData
    
 Interestingly, *framewatcher* will also copy (not move) Gatan gain reference file and Defect file to Z drive too. 
+
+From November 23, *alignframes* and *framewatcher* also have options to do dose weighting. This is still in alpha version, but perhaps will be IMOD main production soon. Here I demo a couple of options to use with *framewatcher*:
+
+.. code-block:: none 
+
+   $framewatcher -w X:\MyData -po 1024 -dtotal 39.8 -Vt 200 -o Z:\Storage\MyData -pr Z:\Storage\MyData
+
+where the total dose on sample is 39.8 electrons, accelerating voltage is 200kV. 
 
 
 .. _using_GPU:
