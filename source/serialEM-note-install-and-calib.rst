@@ -61,7 +61,17 @@ Calibration
 
 Although most of calibration results will be written into another system file *SerialEMcalibraion.txt*, there are a few places you need to manully edit the *SerialEMproperties.txt" to take in the calibration results. 
 
-0. Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam. If it doesn't, try to adjust the camera orientation of Gatan K2 camera from Camera - Configuration. You can use beamstop to help. This is initial starting point for all the calibrations. 
+0. Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam. If it doesn't, try to adjust the camera orientation of Gatan K2 camera from Camera - Configuration. You can use beamstop to help.  You should add a property entry toreflect the DM configuration so SerialEM takes care of it even someone might have changed it. 
+
+.. code-block:: ruby
+
+   DMRotationAndFlip 7
+
+#. Edit property file to define the camera configuration information about orientation determined by step 0. SerialEM will resturn to main display with proper orientation. This is initial starting point for all the calibrations.
+
+.. code-block:: ruby
+
+   RotationAndFlip 7
 
 #. SerialEM - Calibration - List Mag. Scope will go through all the mags and list them on log window, from lowest to highest. Check it with what are in *SerialEMproperties.txt*, update that if needed.  
 
@@ -80,7 +90,7 @@ Although most of calibration results will be written into another system file *S
    
 Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 
-6. Calibration - Image & Stage Shift - IS from Scratch.
+7. Calibration - Image & Stage Shift - IS from Scratch.
 
 #. Calibration - Image & Stage Shift - Stage Shift.
 
@@ -97,7 +107,7 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 .. Note:: 
    The pixel size and tilting axis can just be done for a couple of switching mags such as the lowest M and the highest LM. 
 
-11. Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
+12. Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
 
 #. Repeat above step to cover all the magnification till the highest to be used such as 100kX. 
 
@@ -117,11 +127,6 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 
 #. At one mag like 5000X, using spot size 9, do Beam Shift Calibration (only need to do at single mag).
 
-#. Edit property file to define the camera configuration information about orientation determined by step 0. SerialEM will always set the camera orientation when starting up so there is no worry someone might change it. 
-
-.. code-block:: ruby
-
-   RotationAndFlip 7
 
 .. Note::
    Waffle grating grid is good and handy for pixel size calibration, but it is not ideal for Image Shift and Stage Shift calibrations, as the waffle pattern might screw up the correlation in the calibration procedures. I found the normal Quantifoil grid with some 10nm Au particles absorbed onto can be very good for normal calibration purpose. I glow discharge a Quantifoil grid and add 1 *ul* deca-gold solution on the grid and let it dry. 
