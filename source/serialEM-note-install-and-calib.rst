@@ -73,7 +73,7 @@ Although most of calibration results will be written into another system file *S
 
    RotationAndFlip 7
 
-#. SerialEM - Calibration - List Mag. Scope will go through all the mags and list them on log window, from lowest to highest. Check it with what are in *SerialEMproperties.txt*, update that if needed.  
+2. SerialEM - Calibration - List Mag. Scope will go through all the mags and list them on log window, from lowest to highest. Check it with what are in *SerialEMproperties.txt*, update that if needed.  
 
 #. Load standard waffle grating grid (TedPella Prod.# 607, http://www.tedpella.com/calibration_html/TEM_STEM_Test_Specimens.htm#_607).
 
@@ -90,7 +90,7 @@ Although most of calibration results will be written into another system file *S
    
 Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 
-7. Calibration - Image & Stage Shift - IS from Scratch.
+8. Calibration - Image & Stage Shift - IS from Scratch.
 
 #. Calibration - Image & Stage Shift - Stage Shift.
 
@@ -107,7 +107,7 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 .. Note:: 
    The pixel size and tilting axis can just be done for a couple of switching mags such as the lowest M and the highest LM. 
 
-12. Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
+13. Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
 
 #. Repeat above step to cover all the magnification till the highest to be used such as 100kX. 
 
