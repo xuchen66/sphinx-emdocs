@@ -90,7 +90,7 @@ Although most of calibration results will be written into another system file *S
    
 Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 
-8. Calibration - Image & Stage Shift - IS from Scratch.
+7. Calibration - Image & Stage Shift - IS from Scratch.
 
 #. Calibration - Image & Stage Shift - Stage Shift.
 
@@ -107,7 +107,7 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 .. Note:: 
    The pixel size and tilting axis can just be done for a couple of switching mags such as the lowest M and the highest LM. 
 
-13. Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
+12. Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
 
 #. Repeat above step to cover all the magnification till the highest to be used such as 100kX. 
 
