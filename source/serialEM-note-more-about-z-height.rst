@@ -6,7 +6,7 @@ SerialEM Note: More About Z Height
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2017-09-16
+:Date: 2017-12-09 Last Updated
 
 .. glossary::
 
@@ -147,7 +147,9 @@ It uses function Z_byV2 to see which offset value to recover the Z height determ
 .. note::
 
    This offset value changes when V beam size changes. Therefore, it makes sense to do this "calibration" of finding 
-   offset value after all the Low Dose area conditions are set and fixed. 
+   offset value after all the Low Dose area conditions are set and fixed. With the "good" offset value that gives good results,
+   the program works very reliably, if the V beam doesn't change. For example, on our Krios, the V beam (called Low Dose area V)
+   illumination area stays the same, the script works very well. 
 
 .. code-block:: ruby
 
