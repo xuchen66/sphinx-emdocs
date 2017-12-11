@@ -91,13 +91,13 @@ and you should see a few more lines in `dmesg` output like this:
 ... know the image conditions of the data collected on your system?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. From Frames.mdoc file. This is a metadata file to record all the conditions for each frame stack file collected. It contains the most 
-   complete information inclduing total dose, stage positions, frame dose, frame numbers and navigator label for this exposure. 
+1. From *Frames.mdoc* file. This is a metadata file to record all the conditions for each frame stack file collected. It contains 
+   the most complete information inclduing total dose, stage positions, frame dose, frame numbers and navigator label for this exposure. 
    
-2. From Setup.png - an image file. This is snapshot for Camera Setup Dialog window and with frame data setup window. This image shows 
+2. From *Setup.png* - an image file. This is snapshot for Camera Setup Dialog window and with frame data setup window. This image shows 
    total dose, dose rate on camera, frame numbers, frame time etc.. 
    
-3. From header. You can get header information for MRC and TIFF image stack by an IMOD program *header*:
+3. From image header. You can get header information for MRC and TIFF image stack by an IMOD program *header*:
 
 .. code-block:: none
 
