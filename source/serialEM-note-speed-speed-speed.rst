@@ -12,7 +12,7 @@ SerialEM Note: Speed, Speed and Speed
 
    Abstract
       Speed of data collection is important, specially for a facility runnig 24/7 and for whole year long. If we can save a few seconds 
-      for an exposure, which might not sound much,  but it becomes a lot accumulated in a year time. We could collect more data, help 
+      for an exposure, which might not sound much, it becomes a lot accumulated in a year time. We could collect more data, help 
       more users if we are more efficient.  
       
       Thanks to the author and developer, David Mastronade, SerialEM is always under active development and improvement. I believe efficiency
