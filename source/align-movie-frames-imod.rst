@@ -154,7 +154,7 @@ From November 23, *alignframes* and *framewatcher* also have options to do dose 
 
    $framewatcher -w X:\MyData -po 1024 -dtotal 39.8 -Vt 200 -o Z:\Storage\MyData -pr Z:\Storage\MyData
 
-where the total dose on sample is 39.8 electrons, accelerating voltage is 200kV. 
+where the total dose on sample is 39.8 electrons/A^2, accelerating voltage is 200kV. 
 
 .. note::
 
