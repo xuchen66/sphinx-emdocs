@@ -59,7 +59,7 @@ If everything goes north, you should be able to start SerialEM and it should con
 Calibration 
 -----------
 
-Although most of calibration results will be written into another system file *SerialEMcalibraion.txt*, there are a few places you need to manully edit the *SerialEMproperties.txt" to take in the calibration results. 
+Although most of calibration results will be written into another system file *SerialEMcalibraion.txt*, there are a few places you need to manully edit the *SerialEMproperties.txt* to take in the calibration results. 
 
 0. Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam. If it doesn't, try to adjust the camera orientation of Gatan K2 camera from Camera - Configuration. You can use beamstop to help.  You should add a property entry toreflect the DM configuration so SerialEM takes care of it even someone might have changed it. 
 
