@@ -6,7 +6,7 @@ SerialEM Note: Speed, Speed and Speed
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2017-10-24
+:Date: 2017-12-26
 
 .. glossary::
 
