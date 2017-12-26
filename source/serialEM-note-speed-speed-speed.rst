@@ -83,8 +83,8 @@ This is new feature added not long ago. In late versions, there is a check box "
 
 .. _using_beam_tilt_for_Z:
 
-3) Using Beam Tilt for Z Height Change
---------------------------------------
+Using Beam Tilt for Z Height Change
+-----------------------------------
 
 We all know how important is to have Z height close enough to eucentricity. If there is 10 micron off, then everything won't work quite right. 
 SerialEM's built-in function "Eucentricity" is a robust function, straightward to use. However, it takes some time to run due to stage tiltig and settling time required. I wrote two scripts (functions) "Z_byG" and "Z_byV" to use beam tilting pair for the same job. They do not use stage tilt and takes less images, therefore, it runs faster. You do have to get calibration done for Standard Focus value though. 
