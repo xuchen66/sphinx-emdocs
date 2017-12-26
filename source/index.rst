@@ -32,6 +32,7 @@ Instructions, Manuals and Protocols
    align-movie-frames-imod
    pixelsize-and-distortion-info
    serialEM-note-install-and-calib
+   serialEM-note-setup-dummy
    serialEM-note-more-about-z-height
    serialEM-note-speed-speed-speed
    
