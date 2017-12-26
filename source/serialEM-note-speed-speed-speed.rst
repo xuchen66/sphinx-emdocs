@@ -25,8 +25,8 @@ SerialEM Note: Speed, Speed and Speed
       
 .. _minimize_mag_switch:
 
-1) Minimize Mag Switch 
-----------------------
+Minimize Mag Switch 
+-------------------
 
 Switching between mags takes time. You can definitely feel the slowness of mag switching, say bewteen 1250X and 130kX. You might think of
 turning off some lens normalization via FEI interface, but I always worry the stability of the system might suffer. I am not trying to save
@@ -72,8 +72,8 @@ then scope stays in View mag. It at least saves 5 seconds!
 
 .. _order_of_actions:
 
-2) Order of Actions
--------------------
+Order of Actions
+----------------
 
 When we use "Acquire at points ..." to collect single particle data, the default action of control mechanism is to move stage to the new item's stage position. And then it starts to run the actual collecting script like "LD". If the first action in the "LD" script is RealignToNavItem, the scope changes to the map mag, usually is View mag. Therefore, there are two physical actions here involved - stage move and mag switch. 
 
@@ -95,8 +95,8 @@ From my own experience, doing the eucentricity using beam tilting method even wo
 
 .. _relax_stage:
 
-4) Relaxing Stage After Moving to Target
-----------------------------------------
+Relaxing Stage After Moving to Target
+-------------------------------------
 
 For high quality movie stacks, even we use short frame time, the stage drift rate is still needed to be monitored. Some people use longer frame time due to worry the signal within frame being too weak for frame aligning later. In this case, drift control needs to be in place seriously, as stage naturally drifts and it can have different speeds at different time. 
 
@@ -144,8 +144,8 @@ Here, I asked stage to relax only at final round of iteration. If you use this f
 
 .. _using_compression:
 
-5) Using Compression on K2 Data
--------------------------------
+Using Compression on K2 Data
+----------------------------
 
 Most people collect single particle data with K2 camera using Super-resolusion mode. One of the "hidden" advantages is that the Super-res raw frame data is in 4-bit unsigned integer type, and there are lot of zero's there. Such data can be compressed very effciently and losslessly using mature compression algorithms. Unfortunitely, MRC is not a file format that can directly use those algorithm libraries for compression. TIFF is. 
 
@@ -155,8 +155,8 @@ Personally, I recommend to use compressed TIFF and without gain normalization ap
 
 .. _using_local_drive:
 
-6) Using Local HDD or SSD
--------------------------
+Using Local HDD or SSD
+----------------------
 
 It is usually fine to save the frame data directly onto a large size data storage network system. In our systems, a CIFS mount initiates a network drive on K2 computer so that we can directly save to that. However, in the case that the sotrage system is busy doing some other tasks such as transferring data to customers, being used by local image processing programs etc., directly saving to network drive could take extra time than saving onto local SSD drive on K2 computer. 
 
