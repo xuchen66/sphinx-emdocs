@@ -36,7 +36,7 @@ Since SerialEM is installed and working, this is very simple.
 
 .. _on-remote:
 
-On A Remote Computer 
+On a remote computer 
 --------------------
 
 1. install SerialEM onto a remote computer, as described in `Installation and Calibration <http://sphinx-emdocs.readthedocs.io/en/latest/serialEM-note-install-and-calib.html>`_. 
