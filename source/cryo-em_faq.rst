@@ -93,6 +93,37 @@ and you should see a few more lines in `dmesg` output like this:
 
 1. From *Frames.mdoc* file. This is a metadata file to record all the conditions for each frame stack file collected. It contains 
    the most complete information inclduing total dose, stage positions, frame dose, frame numbers and navigator label for this exposure. 
+
+A typical section of *Frames.mdoc* file is as following:
+
+.. code-block:: ruby
+
+   [FrameSet = 0]
+   TiltAngle = 0.00249969
+   StagePosition = 24.2868 -41.113
+   StageZ = -29.8365
+   Magnification = 105000
+   Intensity = 0.114429
+   ExposureDose = 34.9645
+   PixelSpacing = 0.694291
+   SpotSize = 8
+   Defocus = -3.33245
+   ImageShift = -2.22045e-016 -7.77156e-016
+   RotationAngle = -94.0936
+   ExposureTime = 7
+   Binning = 0.5
+   CameraIndex = 1
+   DividedBy2 = 0
+   MagIndex = 31
+   CountsPerElectron = 35.3
+   TargetDefocus = -2.2
+   SubFramePath = X:\Anna_20171223\1015B_g1_0000_Dec23_13.20.21.tif
+   NumSubFrames = 35
+   FrameDosesAndNumber = 0.99898 35
+   DateTime = 23-Dec-17  13:20:32
+   NavigatorLabel = 84-1
+   
+You might be interested only in total dose, pixelsize, frame dose and frame numbers etc., but it contrains fairly complete information. 
    
 2. From *Setup.png* - an image file. This is snapshot for Camera Setup Dialog window and with frame data setup window. This image shows 
    total dose, dose rate on camera, frame numbers, frame time etc.. 
