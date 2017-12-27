@@ -32,7 +32,7 @@ Since SerialEM is installed and working, this is very simple.
    :width: 384 px
    :scale: 50 %
    :alt: DUMMY instance property
-   :align: center
+   :align: left
 
 .. _on-remote:
 
