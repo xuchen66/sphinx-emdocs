@@ -30,7 +30,7 @@ Since SerialEM is installed and working, this is very simple.
 .. image:: ../images/serialem-dummy-property.png
 ..   :height: 544 px
 ..   :width: 384 px
-   :scale: 50%
+   :scale: 200 %
    :alt: DUMMY instance property
    :align: left
 
