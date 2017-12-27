@@ -130,6 +130,7 @@ Since SerialEM doesn't talk to CM120 computer, we have to use fake mag and scree
 **Figure 5. Camera Setup Window where one can change mag and screen position to match scope**
 
 .. image:: ../images/fake-mag-screen-setup.png
+  :scale: 50 %
 
 To use it, you click on the three macro buttons ``Mag++``, ``Mag--`` and ``SCR`` to match current microscope state. That's it.
 
