@@ -159,7 +159,7 @@ where the total dose on sample is 39.8 electrons/A\ :sup:`2`, accelerating volta
 .. note::
 
    Very often, people get confused by the terms "dose" and "dose rate", partially because there seems to have no *official* definition here. 
-   As per my understanding, "dose" means electron dose on specimen and usually has unit electron/A^2, while "dose rate" means beam intensity level for detector and usually has unit electron/unbinned pixel/second. Dose rate is a reference value for the performance of a detector. In the case of K2 Summit counting or super-resolution mode, this value is usually choosen between 5 - 10. Much higher than 10, the performance of K2 camera is likely to be worse. Once this value is fixed under current microscope conditions, we select exposure time and frame time etc. to satisfy the total dose on the sample and frame dose (also on sample) within the frame time for movie alignment purpose. 
+   As per my understanding, "dose" means electron dose on specimen and usually has unit electron/A\ :sup:`2`, while "dose rate" means beam intensity level for detector and usually has unit electron/unbinned pixel/second. Dose rate is a reference value for the performance of a detector. In the case of K2 Summit counting or super-resolution mode, this value is usually choosen between 5 - 10. Much higher than 10, the performance of K2 camera is likely to be worse. Once this value is fixed under current microscope conditions, we select exposure time and frame time etc. to satisfy the total dose on the sample and frame dose (also on sample) within the frame time for movie alignment purpose. 
 
 .. _using_GPU:
 
