@@ -31,6 +31,12 @@ Instructions, Manuals and Protocols
    post-process-k2-frames
    align-movie-frames-imod
    pixelsize-and-distortion-info
+   
+SerialEM Note
+-------------
+.. toctree::
+   :maxdepth: 2
+   
    serialEM-note-install-and-calib
    serialEM-note-setup-dummy
    serialEM-note-more-about-z-height
