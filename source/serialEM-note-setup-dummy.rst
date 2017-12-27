@@ -30,10 +30,9 @@ Since SerialEM is installed and working, this is very simple.
 .. image:: ../images/serialem-dummy-property.png
    :height: 544 px
    :width: 384 px
-   :align: center
    :scale: 75 %
    :alt: DUMMY instance property
-   :align: left
+   :align: center
 
 .. _Calibration:
 
