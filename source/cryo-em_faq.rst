@@ -134,5 +134,16 @@ You might be interested only in total dose, pixelsize, frame dose and frame numb
 
    $ header image-stack.mrc 
 
+What is ...
+------------
+
+.. _Cs:
+
+... the Cs value I should use for CTF calculation for Talos and Krios?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2.7mm for both Talos Arctica and Titan Krios. 
+
+
 
 
