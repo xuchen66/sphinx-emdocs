@@ -34,7 +34,6 @@ Since SerialEM is installed and working, this is very simple.
    :alt: DUMMY instance property
    :align: left
 
-
 .. _on-remote:
 
 On a remote computer 
