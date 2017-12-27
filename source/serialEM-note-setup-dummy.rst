@@ -28,9 +28,9 @@ Since SerialEM is installed and working, this is very simple.
 **Fig.1 Property Widows for Dummy Instance**
 
 .. image:: ../images/serialem-dummy-property.png
-..   :height: 544 px
-..   :width: 384 px
-   :scale: 200 %
+..   :height: 544px
+..   :width: 384px
+   :scale: 75 %
    :alt: DUMMY instance property
    :align: left
 
