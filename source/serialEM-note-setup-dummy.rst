@@ -40,7 +40,7 @@ On a remote computer
 --------------------
 
 1. install SerialEM onto a remote computer, as described in `Installation and Calibration <http://sphinx-emdocs.readthedocs.io/en/latest/serialEM-note-install-and-calib.html>`_. 
-#. get property and calibration files from a working scope and put them in the default location C:\\ProgramData\SerialEM. 
+#. get property and calibration files from a working scope and put them in the default location C:\\ProgramData\\SerialEM. 
 #. make a shortcut from the executable and edit the property of the shortcut to add "/DUMMY" to the end of Target line, as above. 
 #. repeat the last two steps for a different scope. 
 
