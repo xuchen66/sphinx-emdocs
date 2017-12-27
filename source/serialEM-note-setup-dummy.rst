@@ -1,8 +1,8 @@
 
 .. _SerialEM_Setup_Dummy:
 
-SerialEM Note: Setup Dummy Instance of SerialEM
-===============================================
+SerialEM Note: Setup Dummy Instance
+===================================
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
