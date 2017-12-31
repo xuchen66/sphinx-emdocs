@@ -179,7 +179,7 @@ is to install a decent GPU card. I replaced the ATI video card that comes with t
 memory on the card. One advantage for this card is that it is single slot high, not like most Nvidia cards which occupies 
 two PCI slot space. This makes the replacement simple and easy. 
 
-Now, after installing IMOD with Cygwin, and I align all the movie frames right off the K2 computer box. 
+Now, after installing IMOD with Cygwin, I align all the movie frames right off the K2 computer box. 
 
 .. _with_SerialEM:
 
