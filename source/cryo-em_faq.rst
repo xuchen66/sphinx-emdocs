@@ -144,6 +144,19 @@ What is ...
 
 2.7mm for both Talos Arctica and Titan Krios. 
 
+.. _obtain_data:
+
+... is the method I can get my data collected at your facility?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+UMass Med School has firewall and VPN in place. There is no way to "pull" data from our storage without establishing VPN first. However, ourboud trafic - "push" is possible. There are three ways we can send data to you. 
+
+- At Harvard Medical School, some labs ask SBGrids folks to setup a DropBox like account for their lab. With specific command, we can push data directly from our storage to HMS special DropBox location. It is then easy to transfer internally. 
+
+- If you setup an user account on a Linux box for us, we can transfer data via sftp or via rsync over sftp protocol. 
+
+- The data can be also send to you after copying onto a portable HDD drive with USB3 interface. Default NTFS filesystem coming with most of the HDD is usually working fine. 
+
 
 
 
