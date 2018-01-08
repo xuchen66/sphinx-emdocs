@@ -146,8 +146,8 @@ What is ...
 
 .. _obtain_data:
 
-... is the method I can get my data collected at your facility?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... the method I can get my data after collected at your facility?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 UMass Med School has firewall and VPN in place. There is no way to "pull" data from our storage without establishing VPN first. However, ourboud trafic - "push" is possible. There are three ways we can send data to you. 
 
