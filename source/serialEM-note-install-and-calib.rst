@@ -7,6 +7,7 @@ SerialEM Note: Installation and Calibration
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date: 2017-11-12
+:Last-Updated: 2018-01-09 
 
 .. glossary::
 
@@ -126,6 +127,8 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 #. repeat Beam Intensity Calibration for all other spot sizes likely to be used - 3,4,5,6,8,9.
 
 #. At one mag like 5000X, using spot size 9, do Beam Shift Calibration (only need to do at single mag).
+
+#. Usually, people use lowest M mag for Low Dose View beam and with large defocus offset such as -200 mirons. You need to the calibrate High-Defocus Mag. This will make stage shift still good for such large defocus, as they are interpolated with defocus offset. 
 
 
 .. Note::
