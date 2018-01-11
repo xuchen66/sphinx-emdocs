@@ -6,8 +6,8 @@ SerialEM Note: Installation and Calibration
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2017-11-12
-:Last-Updated: 2018-01-09 
+:Date_Created: 2017-11-12
+:Last_Updated: 2018-01-09 
 
 .. glossary::
 
