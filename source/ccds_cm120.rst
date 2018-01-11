@@ -5,7 +5,8 @@ CCD Cameras on CM120
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2016-7-30
+:Date_Created: 2016-07-30
+:Last_Updated: 2018-01-10
 
 .. _glossary:
 
@@ -62,7 +63,7 @@ Shutter control usually means TEM shutter control by hardware or software of dig
 
 The shutter discussed here is not any kind of mechanical shutter. Instead, it is electronic. If an alignment coil in TEM column is put to a "bad" value, then the beam disappears due to misalignment. We call it shutter closed. And we call it open when the good alignment coil current is restored. Therefore, this kind of electronic shutter can open and close very quickly.
 
-An exposure on film requires no beam before film is pushed in to final location and stabilized; and it opens shutter to let beam shine on film to expose and then shutter is closed again when exposure finishes. On FEI microscope with Low functionality, one can even define pre-expose time. In this case, two shutters are required to work together - first shutter above specimen opens to have beam pre-expose on sample for certain period of time, then second shutter below specimen opens to start exposure on film. Usually, the two alignment coils to be controlled as upper and lower shutters are Gun Upper coil and a Film Shutter Coil next to projector lens. All this is done within FEI software control for when and which shutter is open or close. We usually call this internal shutter control.
+An exposure on film requires no beam before film is pushed in to final location and stabilized; and it opens shutter to let beam shine on film to expose and then shutter is closed again when exposure finishes. On FEI microscope with Low Dose functionality, one can even define pre-expose time. In this case, two shutters are required to work together - first shutter above specimen opens to have beam pre-expose on sample for certain period of time, then second shutter below specimen opens to start exposure on film. Usually, the two alignment coils to be controlled as upper and lower shutters are Gun Upper coil and a Film Shutter coil next to projector lens. All this is done within FEI software control for when and which shutter is open or close. We usually call this internal shutter control.
 
 To image with a digital camera, especially for a beam sensitive specimen, shutter control is therefore also needed. If configured correctly, when camera is inserted and large screen of TEM is lifted, the beam should be blanked. This shutter control is achieved by changing the same alignment coils using shutter cable(s) from camera controller. The shutter cable directly connects to TEM hardware so that when large screen is lifted, an extra voltage is sent to TEM coil to "screw up" a good alignment. Thus, beam is blanked. If we need to pre-expose our sample for whatever reason, then two cables will be needed - one for pre-specimen and one for post-specimen. This control is done by using external hardware. We normally call this "external" shutter control as it is not via TEM software.
 
