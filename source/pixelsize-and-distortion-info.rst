@@ -28,7 +28,7 @@ Below are pixelsizes on K2 for a few magnifications.
 **Table.1 Pixelsize (A) of K2 camera on Talos** 
 
 +--------------------------+-------------------+----------------------+
-|  Magnifications (X)      | Counted (A)       | Super resolution (A) |
+|  Magnifications (X)      | Counted (&#8491;)       | Super resolution (A) |
 +==========================+===================+======================+
 |  17,500                  |   2.425           |   1.213              |
 +--------------------------+-------------------+----------------------+
