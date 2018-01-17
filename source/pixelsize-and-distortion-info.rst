@@ -73,7 +73,7 @@ system. The measurement and correction programs are used and available from http
 On Titan Krios
 --------------
 
-**Table.3 Pixelsize (Å) of GIF K2 camera on Titan Krios - PRIOR TO Sept. 27, 2017**
+**Table.3 Pixelsize (Å) of GIF K2 camera on Titan Krios - BEFORE Sept. 27, 2017**
 
 +--------------------------+-------------------+----------------------+
 |  Magnifications (X)      | Counted (Å)       | Super resolution (Å) |
