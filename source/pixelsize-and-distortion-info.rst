@@ -25,7 +25,7 @@ Arctica is 2.7mm.
 
 Below are pixelsizes on K2 for a few magnifications.
 
-**Table.1 Pixelsize (A) of K2 camera on Talos**
+**Table.1 Pixelsize (A) of K2 camera on Talos** 
 
 +--------------------------+-------------------+----------------------+
 |  Magnifications (X)      | Counted (A)       | Super resolution (A) |
@@ -73,7 +73,7 @@ system. The measurement and correction programs are used and available from http
 On Titan Krios
 --------------
 
-**Table.3 Pixelsize (A) of GIF K2 camera on Titan Krios**
+**Table.3 Pixelsize (A) of GIF K2 camera on Titan Krios - PRIOR TO Sept. 27, 2017**
 
 +--------------------------+-------------------+----------------------+
 |  Magnifications (X)      | Counted (A)       | Super resolution (A) |
@@ -98,6 +98,29 @@ On Titan Krios
 +--------------------------+-------------------+----------------------+
 |  215,000                 |   0.569           |   0.279              |
 +--------------------------+-------------------+----------------------+
+
+On September, Gatan service GIF/K2 system and removed a housing block between column and GIF, so the pixelsize changed. The new set of values is below in Table. 4.
+
+**Table.4 Pixelsize (A) of GIF K2 camera on Titan Krios - AFTER Sept. 27, 2017**
+
++--------------------------+-------------------+----------------------+
+|  Magnifications (X)      | Counted (A)       | Super resolution (A) |
++==========================+===================+======================+
+|  64,000                  |   2.147           |   1.087              |
++--------------------------+-------------------+----------------------+
+|  81,000                  |   1.714           |   0.857              |
++--------------------------+-------------------+----------------------+
+|  105,000                 |   1.353           |   0.677              |
++--------------------------+-------------------+----------------------+
+|  130,000                 |   1.059           |   0.529              |
++--------------------------+-------------------+----------------------+
+|  165,000                 |   0.832           |   0.416              |
++--------------------------+-------------------+----------------------+
+|  215,000                 |   0.654           |   0.327              |
++--------------------------+-------------------+----------------------+
+|  275,000                 |   0.516           |   0.258              |
++--------------------------+-------------------+----------------------+
+
 
 
 
