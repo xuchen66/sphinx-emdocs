@@ -25,10 +25,10 @@ Arctica is 2.7mm.
 
 Below are pixelsizes on K2 for a few magnifications.
 
-**Table.1 Pixelsize (A) of K2 camera on Talos** 
+**Table.1 Pixelsize (Å) of K2 camera on Talos** 
 
 +--------------------------+-------------------+----------------------+
-|  Magnifications (X)      | Counted (&#8491;)       | Super resolution (A) |
+|  Magnifications (X)      | Counted (Å)       | Super resolution (Å) |
 +==========================+===================+======================+
 |  17,500                  |   2.425           |   1.213              |
 +--------------------------+-------------------+----------------------+
@@ -73,10 +73,10 @@ system. The measurement and correction programs are used and available from http
 On Titan Krios
 --------------
 
-**Table.3 Pixelsize (A) of GIF K2 camera on Titan Krios - PRIOR TO Sept. 27, 2017**
+**Table.3 Pixelsize (Å) of GIF K2 camera on Titan Krios - PRIOR TO Sept. 27, 2017**
 
 +--------------------------+-------------------+----------------------+
-|  Magnifications (X)      | Counted (A)       | Super resolution (A) |
+|  Magnifications (X)      | Counted (Å)       | Super resolution (Å) |
 +==========================+===================+======================+
 |  26,000                  |   4.505           |   2.253              |
 +--------------------------+-------------------+----------------------+
@@ -101,10 +101,10 @@ On Titan Krios
 
 On September, Gatan service GIF/K2 system and removed a housing block between column and GIF, so the pixelsize changed. The new set of values is below in Table. 4.
 
-**Table.4 Pixelsize (A) of GIF K2 camera on Titan Krios - AFTER Sept. 27, 2017**
+**Table.4 Pixelsize (Å) of GIF K2 camera on Titan Krios - AFTER Sept. 27, 2017**
 
 +--------------------------+-------------------+----------------------+
-|  Magnifications (X)      | Counted (A)       | Super resolution (A) |
+|  Magnifications (X)      | Counted (Å)       | Super resolution (Å) |
 +==========================+===================+======================+
 |  64,000                  |   2.147           |   1.087              |
 +--------------------------+-------------------+----------------------+
