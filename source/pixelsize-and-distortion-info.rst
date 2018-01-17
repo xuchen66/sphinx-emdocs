@@ -6,7 +6,7 @@ Pixelsize and Distortion Info on K2 Cameras
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2017-2-23
-:Last_Updated: 2018-1-16
+:Last_Updated: 2018-1-17
 .. _glossary:
 
   Abstract
@@ -99,7 +99,7 @@ On Titan Krios
 |  215,000                 |   0.569           |   0.279              |
 +--------------------------+-------------------+----------------------+
 
-On September, Gatan service GIF/K2 system and removed a housing block between column and GIF, so the pixelsize changed. The new set of values is below in Table. 4.
+On September 2017, Gatan serviced GIF/K2 system on Krios and they removed a housing block between column and GIF, so the pixelsize changed. The new set of values is below in Table. 4.
 
 **Table.4 Pixelsize (Å) of GIF K2 camera on Titan Krios - AFTER Sept. 27, 2017**
 
