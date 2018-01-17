@@ -5,8 +5,8 @@ Pixelsize and Distortion Info on K2 Cameras
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2017-2-23
-
+:Date_Created: 2017-2-23
+:Last_Updated: 2018-1-16
 .. _glossary:
 
   Abstract
