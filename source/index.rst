@@ -24,9 +24,10 @@ Instructions, Manuals and Protocols
 -----------------------------------
 .. toctree::
    :maxdepth: 4
-
+ 
    cm120_instruction
    ccds_cm120
+   graphene-oxide-grid
    singleparticle_serialem
    post-process-k2-frames
    align-movie-frames-imod
