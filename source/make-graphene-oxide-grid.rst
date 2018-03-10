@@ -20,7 +20,7 @@ Materials and Equipment Used:
 -----------------------------
 
 1. GO Solution (Sigma:763705, 2 mg/ml)
-#. ddH20
+#. ddH\ :sub:`2`\ O
 #. Tweezers
 #. Pipette (1 µl, 3 µl and 20 µl)
 #. Tabletop centrifuge
