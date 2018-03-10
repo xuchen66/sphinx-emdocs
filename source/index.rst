@@ -27,7 +27,7 @@ Instructions, Manuals and Protocols
  
    cm120_instruction
    ccds_cm120
-   graphene-oxide-grid
+   make-graphene-oxide-grid
    singleparticle_serialem
    post-process-k2-frames
    align-movie-frames-imod
