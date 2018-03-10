@@ -20,12 +20,12 @@ Materials and Equipment Used:
 -----------------------------
 
 1. GO Solution (Sigma:763705, 2 mg/ml)
-*. ddH20
-*. Tweezers
-*. Pipette (1 µl, 3 µl and 20 µl)
-*. Tabletop centrifuge
-*. Parafilm
-*. Whatman filter paper No1
+#. ddH20
+#. Tweezers
+#. Pipette (1 µl, 3 µl and 20 µl)
+#. Tabletop centrifuge
+#. Parafilm
+#. Whatman filter paper No1
 
 .. _procedure:
 
