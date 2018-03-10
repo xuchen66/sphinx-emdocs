@@ -1,4 +1,4 @@
-.. _graphene-oxide-grid:
+.. _make-graphene-oxide-grid:
 
 Making Graphene Oxide Grid
 ===========================
