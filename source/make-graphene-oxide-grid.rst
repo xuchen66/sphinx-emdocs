@@ -29,6 +29,9 @@ Materials and Equipment Used:
 
 .. _procedure:
 
+Procedure:
+----------
+
 1. Dilute GO solution 10x to 0.2 mg/mL with ddH20
 2. Spin for 30 seconds at 300 rcf to remove aggregates
 3. Prepare a flat and clean working area (e.g. with parafilm)
@@ -40,6 +43,6 @@ Materials and Equipment Used:
 
 .. Note::
 
-1. This method is good for high coverage of GO, but maybe get multiple layers of GO on the grid. 
-2. Discharging conditions are varied between grids and discharge system.
+   1. This method is good for high coverage of GO, but maybe get multiple layers of GO on the grid. 
+   2. Discharging conditions are varied between grids and discharge system.
 
