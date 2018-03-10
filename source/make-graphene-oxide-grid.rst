@@ -39,6 +39,7 @@ Materials and Equipment Used:
 8. Wait for the grid to dry out
 
 .. Note::
+
 1. This method is good for high coverage of GO, but maybe get multiple layers of GO on the grid. 
 2. Discharging conditions are varied between grids and discharge system.
 
