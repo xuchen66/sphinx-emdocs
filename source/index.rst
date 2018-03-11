@@ -42,6 +42,7 @@ SerialEM Note
    serialEM-note-setup-dummy
    serialEM-note-more-about-z-height
    serialEM-note-speed-speed-speed
+   serialEM-note-tackle-coma
    
 Index
 *****
