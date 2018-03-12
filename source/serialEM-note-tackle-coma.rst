@@ -43,7 +43,7 @@ Linearity relationship between Image Shift and Induced Beam Tilt
 
 With the built-in tools to correct and measure coma, it is possible to study the behavior of beam tilt induced by image shift. On a well aligned scope, image shift still introduces extra beam tilt, because the beam is no longer on axis anymore. This is known, but the relationship between the them was not clear. 
 
-With the lastest version, we can run following SerialEM script (this is modified from the script from David Mastronade oringal one) to learn the behaviors. 
+With the lastest version, we can run following SerialEM script (this is modified from the David Mastronade's oringal one) to learn the behaviors. 
 
 .. code-block:: ruby
 
