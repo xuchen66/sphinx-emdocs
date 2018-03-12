@@ -76,6 +76,6 @@ The results obtained indicate linearity relationship between extra beam tilt (co
 
 .. note::
 
-   On FEI microscope, image shift and beam shift is linked. The "action" of image shift results in image shifting below 
-   Obj lenses AND beam shift above obj lenses. 
+   On FEI microscope, image shift and beam shift are linked. The "action" of image shift results in image shifting below 
+   Obj lens AND beam shift above obj lens. 
 
