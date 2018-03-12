@@ -72,7 +72,7 @@ With the lastest version, we can run following SerialEM script (this is modified
       echo extent = $extent[$ind]  matrix = $xpx  $ypx  $xpy  $ypy
    EndLoop
    
-The results obtained indicats linearity relationship between extra beam tilt (coma needed to be corrected) and image shift amount. And we also found that for fixed condition, especially beam size, the bi-linear matrix remained remarkably consistant. This provides a base for automatic correction of coma induced by image shift. 
+The results obtained indicate linearity relationship between extra beam tilt (coma needed to be corrected) and image shift amount. And we also found that for fixed condition, especially beam size, the bi-linear matrix remained remarkably consistant. This provides a base for automatic correction of coma induced by image shift. 
 
 .. note::
 
