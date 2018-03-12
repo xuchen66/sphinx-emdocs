@@ -47,7 +47,7 @@ With the lastest version, we can run following SerialEM script (this is modified
 
 .. code-block:: ruby
 
-   Script BTvsIS
+   ScriptName BTvsIS
    extent = { 0.5 1.0 1.5 2.0 2.5 3.0 }
    FixComaByCTF
    Loop $#extent ind
