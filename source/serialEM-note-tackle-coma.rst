@@ -31,4 +31,3 @@ Background
 The coma we discuss here is axial coma. It is how much the incedent electron beam is off from perfect optical axis. This small angle makes electron beam hitting on specimen not perpendicularly. The effect might not be easily seen visully and directly from a typical single particle electron image, but it is very real. If you look at inorganic material lattice image in electron micsocope, a tiny alpha angle change will make the lattice image no longer even and symmetic. For single particle image, this introduces a phase error becasue we assume
 all the images are taken with perpandicular incedent beam. It is hard or almost impossible to correct this error from all the images taken with coma, at least for single particle images. Therefore, if we can elimnate this error experimentally, that would be a good thing to do.
 
-
