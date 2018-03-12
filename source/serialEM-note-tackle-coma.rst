@@ -35,4 +35,47 @@ Align scope to minimize coma
 
 There are tools from microscope operating software interface. For example, in FEI Tecnai/Talos/Titan interface, there are Rotation Center and Coma-Free alignment you can use to minimize this instrument parameter. You might call this manual alignment. 
 
-There are also seperate tools (prgorams) to align the scope for coma-free purpose in more automated fashion. FEI has Auto-CTF, Legion uses Zemlin plateau method to correct coma; SerialEM also has its own built-in functions to do coma-free alignment. In SerialEM, the two functions are called `BTID Coma-free Alignment <http://bio3d.colorado.edu/SerialEM/hlp/html/menu_focus.htm#hid_focus_coma>`_ and `Coma-free alignment by CTF <http://bio3d.colorado.edu/SerialEM/hlp/html/menu_focus.htm#hid_focus_coma_by_ctf>`_.
+There are also seperate tools (prgorams) to align the scope for coma-free purpose in more automated fashion. FEI has Auto-CTF, Legion uses Zemlin plateau method to correct coma; SerialEM also has its own built-in functions to do coma-free alignment. In SerialEM, the two functions are called `BTID Coma-free Alignment <http://bio3d.colorado.edu/SerialEM/hlp/html/menu_focus.htm#hid_focus_coma>`_ and `Coma-free alignment by CTF <http://bio3d.colorado.edu/SerialEM/hlp/html/menu_focus.htm#hid_focus_coma_by_ctf>`_. One uses beam tilt induced displacement (BTID) and other uses fitted CTF information. CTF is quick and accurate, but it does require clear Thon rings to fit. It gives options to use full 9-piece 
+panel (Zemlin plateau) or 5-piece method. They work fairly well to my eyes. 
+
+Linearity relationship between Image Shift and Induced Beam Tilt
+----------------------------------------------------------------
+
+With the built-in tools to collect coma, it is possible to study the behavior of beam tilt induced by image shift. On a well aligned scope, image shift still introduces extra beam tilt, because the beam is no longer on axis anymore. This is known, but the relationship between the them were not clear. 
+
+With the lastest version, we can run following SerialEM script to learn the behaviors. 
+
+.. code-block:: ruby
+
+   Script BTvsIS
+   extent = { 0.5 1.0 1.5 2.0 2.5 3.0 }
+   FixComaByCTF
+   Loop $#extent ind
+   ReportImageShift xbase ybase
+   SetImageShift $xbase + $extent[$ind]  $ybase
+   FixComaByCTF 1 1
+   ReportComaTiltNeeded xpxplus ypxplus
+   SetImageShift $xbase - $extent[$ind]  $ybase
+   FixComaByCTF 1 1
+   ReportComaTiltNeeded xpxminus ypxminus
+   SetImageShift $xbase  $ybase + $extent[$ind]
+   FixComaByCTF 1 1
+   ReportComaTiltNeeded xpyplus ypyplus
+   SetImageShift $xbase  $ybase - $extent[$ind]
+   FixComaByCTF 1 1
+   ReportComaTiltNeeded xpyminus ypyminus
+   SetImageShift $xbase  $ybase
+   xpx = ($xpxplus - $xpxminus) / (2 * $extent[$ind])
+   ypx = ($ypxplus - $ypxminus) / (2 * $extent[$ind])
+   xpy = ($xpyplus - $xpyminus) / (2 * $extent[$ind])
+   ypy = ($ypyplus - $ypyminus) / (2 * $extent[$ind])
+   echo extent[$ind] = $extent  matrix = $xpx  $ypx  $xpy  $ypy
+   EndLoop
+   
+The results quickly indicated the linearity relationship between extra beam tilt (coma needed to be corrected) and image shift amount. 
+
+.. note::
+
+   On FEI microscope, image shift and beam shift is linked. The "action" of image shift results in image shifting below 
+   Obj lenses AND beam shift above obj lenses. 
+
