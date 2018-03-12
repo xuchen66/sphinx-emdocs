@@ -41,7 +41,7 @@ panel (Zemlin plateau) or 5-piece method. They work fairly well to my eyes.
 Linearity relationship between Image Shift and Induced Beam Tilt
 ----------------------------------------------------------------
 
-With the built-in tools to collect coma, it is possible to study the behavior of beam tilt induced by image shift. On a well aligned scope, image shift still introduces extra beam tilt, because the beam is no longer on axis anymore. This is known, but the relationship between the them was not clear. 
+With the built-in tools to correct and measure coma, it is possible to study the behavior of beam tilt induced by image shift. On a well aligned scope, image shift still introduces extra beam tilt, because the beam is no longer on axis anymore. This is known, but the relationship between the them was not clear. 
 
 With the lastest version, we can run following SerialEM script (this is modified from the script from David Mastronade oringal one) to learn the behaviors. 
 
