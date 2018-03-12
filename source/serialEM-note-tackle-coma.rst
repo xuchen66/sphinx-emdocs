@@ -41,9 +41,9 @@ panel (Zemlin plateau) or 5-piece method. They work fairly well to my eyes.
 Linearity relationship between Image Shift and Induced Beam Tilt
 ----------------------------------------------------------------
 
-With the built-in tools to collect coma, it is possible to study the behavior of beam tilt induced by image shift. On a well aligned scope, image shift still introduces extra beam tilt, because the beam is no longer on axis anymore. This is known, but the relationship between the them were not clear. 
+With the built-in tools to collect coma, it is possible to study the behavior of beam tilt induced by image shift. On a well aligned scope, image shift still introduces extra beam tilt, because the beam is no longer on axis anymore. This is known, but the relationship between the them was not clear. 
 
-With the lastest version, we can run following SerialEM script to learn the behaviors. 
+With the lastest version, we can run following SerialEM script (this is modified from the script from David Mastronade oringal one) to learn the behaviors. 
 
 .. code-block:: ruby
 
@@ -51,28 +51,28 @@ With the lastest version, we can run following SerialEM script to learn the beha
    extent = { 0.5 1.0 1.5 2.0 2.5 3.0 }
    FixComaByCTF
    Loop $#extent ind
-   ReportImageShift xbase ybase
-   SetImageShift $xbase + $extent[$ind]  $ybase
-   FixComaByCTF 1 1
-   ReportComaTiltNeeded xpxplus ypxplus
-   SetImageShift $xbase - $extent[$ind]  $ybase
-   FixComaByCTF 1 1
-   ReportComaTiltNeeded xpxminus ypxminus
-   SetImageShift $xbase  $ybase + $extent[$ind]
-   FixComaByCTF 1 1
-   ReportComaTiltNeeded xpyplus ypyplus
-   SetImageShift $xbase  $ybase - $extent[$ind]
-   FixComaByCTF 1 1
-   ReportComaTiltNeeded xpyminus ypyminus
-   SetImageShift $xbase  $ybase
-   xpx = ($xpxplus - $xpxminus) / (2 * $extent[$ind])
-   ypx = ($ypxplus - $ypxminus) / (2 * $extent[$ind])
-   xpy = ($xpyplus - $xpyminus) / (2 * $extent[$ind])
-   ypy = ($ypyplus - $ypyminus) / (2 * $extent[$ind])
-   echo extent[$ind] = $extent  matrix = $xpx  $ypx  $xpy  $ypy
+      ReportImageShift xbase ybase
+      SetImageShift $xbase + $extent[$ind]  $ybase
+      FixComaByCTF 1 1
+      ReportComaTiltNeeded xpxplus ypxplus
+      SetImageShift $xbase - $extent[$ind]  $ybase
+      FixComaByCTF 1 1
+      ReportComaTiltNeeded xpxminus ypxminus
+      SetImageShift $xbase  $ybase + $extent[$ind]
+      FixComaByCTF 1 1
+      ReportComaTiltNeeded xpyplus ypyplus
+      SetImageShift $xbase  $ybase - $extent[$ind]
+      FixComaByCTF 1 1
+      ReportComaTiltNeeded xpyminus ypyminus
+      SetImageShift $xbase  $ybase
+      xpx = ($xpxplus - $xpxminus) / (2 * $extent[$ind])
+      ypx = ($ypxplus - $ypxminus) / (2 * $extent[$ind])
+      xpy = ($xpyplus - $xpyminus) / (2 * $extent[$ind])
+      ypy = ($ypyplus - $ypyminus) / (2 * $extent[$ind])
+      echo extent[$ind] = $extent  matrix = $xpx  $ypx  $xpy  $ypy
    EndLoop
    
-The results quickly indicated the linearity relationship between extra beam tilt (coma needed to be corrected) and image shift amount. 
+The results obtained indicats linearity relationship between extra beam tilt (coma needed to be corrected) and image shift amount. And we also found that for fixed condition, especially beam size, the bi-linear matrix remained remarkably consistant. This provides a base for automatic correction of coma induced by image shift. 
 
 .. note::
 
