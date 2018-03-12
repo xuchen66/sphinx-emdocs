@@ -17,7 +17,7 @@ SerialEM Note: Tackle the Coma
       The question is how much worse the data becomes with certainly mount of image shift in the shots. A more i
       mportant question is if we can have a way to correct coma that is induced by image-beam shift. 
       
-      In this note, I try to explain how to access coma induced by the shift, more or less quantitatively and how to 
+      In this note, I try to explain how to assess coma induced by the shift, more or less quantitatively and how to 
       correct the coma using currently available functions in SerialEM. 
       
       This is very fresh, work in progress, both in SerialEM and this document. 
