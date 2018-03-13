@@ -91,5 +91,5 @@ Procedue to correct the shift induced coma in SerialEM
    
    **Fig.1 Setup Multi-shot and Beam Tilt Compensation**
 
-.. image:: ../images/serialem-dummy-property.png
+.. image:: ../images/multi-shot.png
    :scale: 75 %
