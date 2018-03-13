@@ -75,6 +75,16 @@ The results obtained indicate linearity relationship between extra beam tilt (co
 
 .. note::
 
+   The linear matrix depends on scope alignment, specially Beam-Shift pivot points. We also fount that it is sensitive to beam size.
+
    On FEI microscope, image shift and beam shift are linked. The "action" of image shift results in image shifting below 
    Obj lens AND beam shift above obj lens. 
 
+Procedue to correct the shift induced coma in SerialEM
+------------------------------------------------------
+
+1. decide LD image conditions specially beam size (C2% or IA).
+#. perform coma-free correction routine, SerialEM - Focus/Tune - Coma-free alignment by CTF
+#. calibrate the linear matrix for current image condition, SerialEM - Calibration - Coma vs. Image Shift 
+#. Setup multi-shot condition from SerialEM - Navigator - Montaging & Grids - Set Multi-shot Parameters..., and make sure the 
+   check box "adjust beam tilt to compensate ..." is checked, as shown below. 
