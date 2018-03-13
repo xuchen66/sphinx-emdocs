@@ -6,7 +6,7 @@ SerialEM Note: Tackle the Coma
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: 2018-3-11
-:Last-updated: 2018-3-12
+:Last-updated: 2018-3-13
 
 .. glossary::
 
@@ -93,3 +93,9 @@ Procedue to correct the shift induced coma in SerialEM
 
 .. image:: ../images/multi-shot.png
    :scale: 75 %
+
+.. note::
+
+   It is very safe to change beam tilt this way, as beam will always get restored to its original value after being corrected for 
+   this specific image shift. The exception is crash during the multi-shot routine finishes. If that happens, which is very rare, then 
+   one only need to perform SerialEM - Focus/Tune - Coma-free alignment by CTF after restarting SerialEM. 
