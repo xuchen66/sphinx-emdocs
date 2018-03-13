@@ -88,3 +88,8 @@ Procedue to correct the shift induced coma in SerialEM
 #. calibrate the linear matrix for current image condition, SerialEM - Calibration - Coma vs. Image Shift 
 #. Setup multi-shot condition from SerialEM - Navigator - Montaging & Grids - Set Multi-shot Parameters..., and make sure the 
    check box "adjust beam tilt to compensate ..." is checked, as shown below. 
+   
+   **Fig.1 Setup Multi-shot and Beam Tilt Compensation**
+
+.. image:: ../images/serialem-dummy-property.png
+   :scale: 75 %
