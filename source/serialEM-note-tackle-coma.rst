@@ -44,7 +44,7 @@ With the built-in tools to correct and measure coma, it is possible to study the
 
 With the lastest version, we can run following SerialEM script (this is modified from the David Mastronade's oringal one) to learn the behaviors. 
 
-.. code-block:: ruby
+.. code-block:: python
 
    ScriptName BTvsIS
    extent = { 0.5 1.0 1.5 2.0 2.5 3.0 }
