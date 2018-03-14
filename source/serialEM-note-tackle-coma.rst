@@ -13,7 +13,7 @@ SerialEM Note: Tackle the Coma
    Abstract
       For high resolution data, coma is always a concern or something we don't want to miss or ignore.  With 
       image-beam shift, even on a carefully aligned, coma-free scope, there might always be some coma induced by the shift. 
-      On the other hand, if we can collect CryoEM data with some image shift, that would increase the effcieny a lot. 
+      On the other hand, if we can collect CryoEM data with some image shift, that would increase the effciency a lot. 
       The question is how much worse the data becomes with certainly mount of image shift in the shots. A more 
       important question is if we can have a way to correct coma that is induced by the image-beam shift. 
       
