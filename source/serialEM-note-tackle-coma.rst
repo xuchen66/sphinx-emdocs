@@ -80,8 +80,8 @@ The results obtained indicate linearity relationship between extra beam tilt (co
    On FEI microscope, image shift and beam shift are linked. The "action" of image shift results in image shifting below 
    Obj lens AND beam shift above obj lens. 
 
-Procedue to correct the shift induced coma in SerialEM
-------------------------------------------------------
+Procedue to correct the coma induced by image-beam shift in SerialEM
+--------------------------------------------------------------------
 
 1. decide LD image conditions specially beam size (C2% or IA).
 #. perform coma-free correction routine, SerialEM - Focus/Tune - Coma-free alignment by CTF
