@@ -44,7 +44,7 @@ With the built-in tools to correct and measure coma, it is possible to study the
 
 With the lastest version, we can run following SerialEM script (this is modified from the David Mastronade's oringal one) to learn the behaviors. 
 
-.. code-block:: python
+.. code-block:: bash
 
    ScriptName BTvsIS
    extent = { 0.5 1.0 1.5 2.0 2.5 3.0 }
@@ -86,7 +86,7 @@ Procedue to correct the coma induced by image-beam shift in SerialEM
 1. decide LD image conditions specially beam size (C2% or IA).
 #. perform coma-free correction routine, SerialEM - Focus/Tune - Coma-free alignment by CTF
 #. calibrate the linear matrix for current image condition, SerialEM - Calibration - Coma vs. Image Shift. 
-#. save the setting file
+#. save the setting file.
 #. Setup multi-shot condition from SerialEM - Navigator - Montaging & Grids - Set Multi-shot Parameters..., and make sure the 
    check box "adjust beam tilt to compensate ..." is checked, as shown below. 
    
@@ -98,6 +98,6 @@ Procedue to correct the coma induced by image-beam shift in SerialEM
 .. note::
 
    It is very safe to change beam tilt this way, as beam tilt will always get restored to its original value after being corrected for 
-   this specific image shift. The exception is crash during the multi-shot routine finishes. If that happens, which is very rare, then 
-   one only needs to perform SerialEM - Focus/Tune - Coma-free alignment by CTF after restarting SerialEM. The matrix saved in 
-   the setting file should be still good as long as your beam size remains the same. 
+   this specific image shift. The exception is SerialEM program crash during the multi-shot routine finishes. If that happens, which 
+   is very rare, then one only needs to perform SerialEM - Focus/Tune - Coma-free alignment by CTF after restarting SerialEM. The 
+   matrix saved in the setting file should be still good as long as your beam size remains the same. 
