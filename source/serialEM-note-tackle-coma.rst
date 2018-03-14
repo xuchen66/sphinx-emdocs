@@ -86,7 +86,7 @@ Procedue to correct the coma induced by image-beam shift in SerialEM
 1. decide LD image conditions specially beam size (C2% or IA).
 #. perform coma-free correction routine, SerialEM - Focus/Tune - Coma-free alignment by CTF
 #. calibrate the linear matrix for current image condition, SerialEM - Calibration - Coma vs. Image Shift. 
-#. save the setting file.
+#. save the SerialEM setting file. (yes, this calibreted matrix is saved in setting file.)
 #. Setup multi-shot condition from SerialEM - Navigator - Montaging & Grids - Set Multi-shot Parameters..., and make sure the 
    check box "adjust beam tilt to compensate ..." is checked, as shown below. 
    
