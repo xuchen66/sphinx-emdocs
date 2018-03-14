@@ -12,7 +12,7 @@ SerialEM Note: Tackle the Coma
 
    Abstract
       For high resolution data, coma is always a concern or something we don't want to miss or ignore.  With 
-      image-beam shift, even on a carefully aligned, coma-free scope, there is always some coma induced by the shift. 
+      image-beam shift, even on a carefully aligned, coma-free scope, there might always be some coma induced by the shift. 
       On the other hand, if we can collect CryoEM data with some image shift, that would increase the effcieny a lot. 
       The question is how much worse the data becomes with certainly mount of image shift in the shots. A more 
       important question is if we can have a way to correct coma that is induced by the image-beam shift. 
@@ -40,7 +40,7 @@ There are also seperate tools (programs) to align the scope for coma-free purpos
 Linearity relationship between Image Shift and Induced Beam Tilt
 ----------------------------------------------------------------
 
-With the built-in tools to correct and measure coma, it is possible to study the behavior of beam tilt induced by image shift. On a well aligned scope, image shift still introduces extra beam tilt, because the beam is no longer on axis anymore. This is known, but the relationship between the them was not clear. 
+With the built-in tools to correct and measure coma, it is possible to study the behavior of beam tilt induced by image shift. On a well aligned scope, image shift still introduces extra beam tilt, because the beam is no longer on axis anymore, and alignment for beam shift pivot points perhaps is never accurate enough. This is known, but the relationship between the them was not clear. 
 
 With the lastest version, we can run following SerialEM script (this is modified from the David Mastronade's oringal one) to learn the behaviors. 
 
@@ -85,7 +85,8 @@ Procedue to correct the shift induced coma in SerialEM
 
 1. decide LD image conditions specially beam size (C2% or IA).
 #. perform coma-free correction routine, SerialEM - Focus/Tune - Coma-free alignment by CTF
-#. calibrate the linear matrix for current image condition, SerialEM - Calibration - Coma vs. Image Shift 
+#. calibrate the linear matrix for current image condition, SerialEM - Calibration - Coma vs. Image Shift. 
+#. save the setting file
 #. Setup multi-shot condition from SerialEM - Navigator - Montaging & Grids - Set Multi-shot Parameters..., and make sure the 
    check box "adjust beam tilt to compensate ..." is checked, as shown below. 
    
@@ -96,6 +97,7 @@ Procedue to correct the shift induced coma in SerialEM
 
 .. note::
 
-   It is very safe to change beam tilt this way, as beam will always get restored to its original value after being corrected for 
+   It is very safe to change beam tilt this way, as beam tilt will always get restored to its original value after being corrected for 
    this specific image shift. The exception is crash during the multi-shot routine finishes. If that happens, which is very rare, then 
-   one only need to perform SerialEM - Focus/Tune - Coma-free alignment by CTF after restarting SerialEM. 
+   one only needs to perform SerialEM - Focus/Tune - Coma-free alignment by CTF after restarting SerialEM. The matrix saved in 
+   the setting file should be still good as long as your beam size remains the same. 
