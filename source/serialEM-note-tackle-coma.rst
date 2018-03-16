@@ -97,6 +97,12 @@ Procedue to correct the coma induced by image-beam shift in SerialEM
 
 .. note::
 
+   There is a script command to retrieve the calibrated Coma vs ImageShift Matrix
+
+   .. code-block:: ruby
+   
+      ReportComaVsISmatrix  xpx xpy ypx ypy
+
    It is very safe to change beam tilt this way, as beam tilt will always get restored to its original value after being corrected for 
    this specific image shift. The exception is SerialEM program crash during the multi-shot routine finishes. If that happens, which 
    is very rare, then one only needs to perform SerialEM - Focus/Tune - Coma-free alignment by CTF after restarting SerialEM. The 
