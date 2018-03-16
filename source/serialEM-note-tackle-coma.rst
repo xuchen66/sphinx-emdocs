@@ -6,7 +6,7 @@ SerialEM Note: Tackle the Coma
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: 2018-3-11
-:Last-updated: 2018-3-13
+:Last-updated: 2018-3-16
 
 .. glossary::
 
