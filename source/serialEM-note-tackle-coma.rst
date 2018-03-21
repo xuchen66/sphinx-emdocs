@@ -107,3 +107,6 @@ Procedue to correct the coma induced by image-beam shift in SerialEM
    this specific image shift. The exception is SerialEM program crash during the multi-shot routine finishes. If that happens, which 
    is very rare, then one only needs to perform SerialEM - Focus/Tune - Coma-free alignment by CTF after restarting SerialEM. The 
    matrix saved in the setting file should be still good as long as your beam size remains the same. 
+
+As always, for details please read the helpfile related sections. Two of them are: 
+`**Coma vs. Image Shift command (Calibration - Focus & Tuning sub-menu)** <http://bio3d.colorado.edu/SerialEM/hlp/html/menu_calibration.htm#hid_focustuning_comavs>`_ and `**Multiple Record Setup Dialog** <http://bio3d.colorado.edu/SerialEM/hlp/html/hidd_multi_shot_setup.htm>`_. 
