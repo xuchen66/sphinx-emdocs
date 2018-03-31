@@ -30,8 +30,8 @@ Procedure Setting Up LD with mP and nP
 In my case, I use mP for View area with -300 microns focus offset. All other areas - F, T and R are with nP. I usually use the same 
 spot size for everything. 
 
-0. Before LD is turned on, make sure beam is centered for both mP and nP beam. I usually use Direct Alignments to do this with mP and nP beam. 
-That is, turn mP on, Directly Alignments - Beam Shift (multi-function to center) - done. Repeat with nP mode. 
+0. Before LD is turned on, make sure beam is centered for both mP and nP beam. I usually use Direct Alignments to do this with 
+   mP and nP beam. That is, turn mP on, Directly Alignments - Beam Shift (multi-function to center) - done. Repeat with nP mode. 
 1. Turn on SerialEM LD.
 #. Lower Down large screen or insert screen.
 #. From Task - Specialized Options, make sure the "Adjust Focus on Probe Mode Change" is NOT checked. 
