@@ -15,12 +15,12 @@ SerialEM Note: Setup LD with Mix of mP and nP Modes
       because the beam doesn't spread wide enough to cover entire camera area. This forces us to use mP for View and nP for 
       rest of LD areas, namely F, T and R etc.. 
       
-      However, most people find it hard to setup LD conditions with the mix of nP and mP modes. I had frustrated time doing so either. 
-      This is mainly because nP and mP don't share the same origins for beam shift and defocus - they have their one origins. 
+      However, most people find it hard to setup LD conditions with the mix of nP and mP modes. I had frustrated time doing so too. 
+      This is, I think, mainly because nP and mP don't share the same origins for beam shift and defocus - they have their one origins. 
       In SerialEM, all the LD conditions are linked together. Therefore, the seprate origins of focus and beam shift for mP and nP 
       modes give extra hard time setting up LD in this mix use of nP and mP. 
       
-      SerialEM already has way to deal with this problem. I hope this doc makes it clearer to easier to follow practically. 
+      SerialEM already has a way to deal with this problem. I hope this doc makes it clearer to easier to follow practically. 
       
 .. _procedure_setting_up_LD:
 
