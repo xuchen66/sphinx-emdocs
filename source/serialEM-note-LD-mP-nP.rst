@@ -11,7 +11,7 @@ SerialEM Note: Setup LD with Mix of mP and nP Modes
 .. glossary::
 
    Abstract
-      There are cases and situations that people want to use nano probe mode (nP), but nP is not comfortable for low mag range 
+      There are cases and situations that people want to use nanoprobe(nP) mode , but nP is not comfortable for low mag range 
       because the beam doesn't spread wide enough to cover entire camera area. This forces us to use mP for View and nP for 
       rest of LD areas, namely F, T and R etc.. 
       
