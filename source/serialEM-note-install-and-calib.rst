@@ -7,7 +7,7 @@ SerialEM Note: Installation and Calibration
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2017-11-12
-:Last_Updated: 2018-03-30 
+:Last_Updated: 2018-03-31 
 
 .. glossary::
 
@@ -53,7 +53,7 @@ Here are steps to follow.
 
 11. On K2 computer which SerialEM is to be installed, define a system environment variable SERIALEMCCD_PORT with the value 48890 or other selected port number, as described in the section in helpfile. 
 
-If everything goes north, you should be able to start SerialEM and it should connect to "see" both scope and DM. 
+If everything goes north, you should be able to start SerialEM and it should connect to "see" both scope and DM. Congratulations!
 
 .. _Calibration:
 
