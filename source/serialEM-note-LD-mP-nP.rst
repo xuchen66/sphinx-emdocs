@@ -11,9 +11,9 @@ SerialEM Note: Setup LD with Mix of mP and nP Modes
 .. glossary::
 
    Abstract
-      There are cases and situations that people want to use nanoprobe(nP) mode , but nP is not comfortable for low mag range 
-      because the beam doesn't spread wide enough to cover entire camera area. This forces us to use mP for View and nP for 
-      rest of LD areas, namely F, T and R etc.. 
+      There are cases and situations that people want to use nanoprobe(nP) mode , but nP is not comfortable for lower mag range 
+      such as first a few magnifications just above LM, because the beam doesn't spread wide enough to cover entire camera area. 
+      This forces us to use mP for View and nP for rest of LD areas, namely F, T and R etc.. 
       
       However, most people find it hard to setup LD conditions with the mix of nP and mP modes. I had frustrated time doing so too. 
       This is, I think, mainly because nP and mP don't share the same origins for beam shift and defocus - they have their one origins. 
