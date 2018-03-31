@@ -40,6 +40,7 @@ SerialEM Note
    
    serialEM-note-install-and-calib
    serialEM-note-setup-dummy
+   serialEM-note-LD-mP-nP
    serialEM-note-more-about-z-height
    serialEM-note-speed-speed-speed
    serialEM-note-tackle-coma
