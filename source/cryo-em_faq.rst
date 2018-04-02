@@ -29,8 +29,10 @@ All the three kinds of data can be easily viewed using IMOD. For Windows, a pack
    - Since September 2017, most of screening images are also saved into JPG format at the same time when MRC files are 
    saved. This gives you a quick feedback for your sample conditions. The small file size makes it easy for up to 
    upload to DropBox to share with users. 
+   
    - After March 2018, all JPG files are true JPG instead of JPG compressed TIFF as before. They can be opened by almost any
    standard image software inclduing ImageJ and Photoshop.
+   
 .. _mount_ntfs:
 
 ... mount the data hard drive I received from you?
