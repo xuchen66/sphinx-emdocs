@@ -39,7 +39,7 @@ All the three kinds of data can be easily viewed using IMOD. For Windows, a pack
 
 2. IMOD - Edit - Scale Bar ... 
 
-.. image:: ../images/scale-bar-setup.png
+.. image:: ../images/scale-bar-setup.jpg
    :scale: 75 %
    
 3. With proper scale bar displayed, press SHIFT+S. It will save a jpeg file with scale bar inserted. 
