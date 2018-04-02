@@ -30,6 +30,21 @@ All the three kinds of data can be easily viewed using IMOD. For Windows, a pack
    
    - After March 2018, all JPG files are true JPG instead of JPG compressed TIFF as before. They can be opened by almost any standard image software inclduing ImageJ and Photoshop.
    
+.. _scale_bar:
+
+... insert a scale bar into the screened image? 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Open a MRC image with IMOD.
+
+2. IMOD - Edit - Scale Bar ... 
+
+.. image:: ../images/scale-bar-setup.png
+   :scale: 75 %
+   
+3. With proper scale bar displayed, press SHIFT+S. It will save a jpeg file with scale bar inserted. 
+
+
 .. _mount_ntfs:
 
 ... mount the data hard drive I received from you?
