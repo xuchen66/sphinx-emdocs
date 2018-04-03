@@ -35,7 +35,7 @@ Here are steps to follow.
 #. Edit script **Cars** to reflect cartridge and sample information, like below:
 
 .. code-block:: python
-
+..
     ScriptName Cars
 
     ## parameter of 1)  folder 2) Car and 3) sample name
