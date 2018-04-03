@@ -18,8 +18,8 @@ SerialEM Note: More About Z Height
       
       Quickly and accurately moving specimen to eucentric height is a frequently needed task. Everything is going to be easier 
       if speciment is at eucentric height and objective lens at eucentric focus. I wrote a litte document before how to use tilted-beam
-      method to do this using SerialEM `"SerialEM HowTo: Positioning Z" <http://www.bio.brandeis.edu/KeckWeb/emdoc/en_US.ISO8859-1/articles/SerialEM-howto:positioningZ/>`_. In this note, I give you an improved version and hopefully it is easier to use and 
-      more robust too. 
+      method to do this using SerialEM `"SerialEM HowTo: Positioning Z" <http://www.bio.brandeis.edu/KeckWeb/emdoc/en_US.ISO8859-1/articles/SerialEM-howto:positioningZ/>`_. In this note, I give you an improved version and hopefully it 
+      is easier to use and more robust too. 
       
 .. _background_info:
 
