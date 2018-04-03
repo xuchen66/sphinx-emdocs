@@ -50,11 +50,12 @@ Here are steps to follow.
     
 Here you define folder location, cartridge #, and sample names. 
 
-#. Now run the Script **LMMCars** as below:
+7. Now run the Script **LMMCars** as below:
 
 .. code-block:: ruby
 
     ScriptName LMMCars
+    
     # LMM for multiple cartriges, assumes the montage file opened.
 
     ##########################
@@ -83,18 +84,6 @@ Here you define folder location, cartridge #, and sample names.
     OpenNewMontage 0 0 LMM-Car$cat[$index]-$name[$index].st
     Montage 
     NewMap
-
-    # output to jpg too
-    #ReportCurrentFilename 1
-    #root = $RepVal1 
-    #ext = $RepVal2
-    #ReportFileZsize
-    #z = $RepVal1
-    ## somehow montage overview always shows up in B buffer
-    #ReduceImage B 2
-    #echo SaveToOtherFile A TIFF JPG $root.jpg
-    #SaveToOtherFile A TIFF JPG $root.jpg
-
     CloseFile
     EndLoop 
 
