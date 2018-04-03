@@ -39,6 +39,7 @@ SerialEM Note
    :maxdepth: 2
    
    serialEM-note-install-and-calib
+   serialEM-note-make-all-LMM-maps
    serialEM-note-setup-dummy
    serialEM-note-LD-mP-nP
    serialEM-note-more-about-z-height
