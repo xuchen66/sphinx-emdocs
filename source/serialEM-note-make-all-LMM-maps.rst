@@ -34,8 +34,8 @@ Here are steps to follow.
    Define a file like LMM.map. 
 #. Edit script **Cars** to reflect cartridge and sample information, like below:
 
-.. code-block:: python
-..
+.. code-block:: ruby
+
     ScriptName Cars
 
     ## parameter of 1)  folder 2) Car and 3) sample name
@@ -45,14 +45,14 @@ Here are steps to follow.
     SetDirectory X:\Munan_20180402
 
     ## define cartirges and sample names
-    cat = { 2 3 4 5 6 7  }
-    name = {  56-g1 56-g2 56-g3 56-g4 54-g2 54-g4 }
+    cat = { 2 3 4 5 6 7 }
+    name = { 56-g1 56-g2 56-g3 56-g4 54-g2 54-g4 }
     
 Here you define folder location, cartridge #, and sample names. 
 
 7. Now run the Script **LMMCars** as below:
 
-.. code-block:: python
+.. code-block:: ruby
 
     ScriptName LMMCars
     # LMM for multiple cartriges, assumes the montage file opened.
@@ -60,18 +60,14 @@ Here you define folder location, cartridge #, and sample names.
     ##########################
     # navigator must be open
     ##########################
-
     Call Cars
-
+    
     ##### No editing Below ############
-
     CallFunction LMMCars
-
     ## in the end,  rise mag to settle temp & Close the valves
     #GoToLowDoseArea  V
     SetColumnOrGunValve 0
-
-
+    
     ###############################################################
     Function LMMCars 0 0 
 
