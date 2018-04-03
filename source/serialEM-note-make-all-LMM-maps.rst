@@ -34,7 +34,7 @@ Here are steps to follow.
    Define a file like LMM.map. 
 #. Edit script **Cars** to reflect cartridge and sample information, like below:
 
-.. code-block:: ruby
+.. code-block:: python
 
     ScriptName Cars
 
