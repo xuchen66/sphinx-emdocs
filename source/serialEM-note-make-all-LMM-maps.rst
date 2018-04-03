@@ -52,7 +52,7 @@ Here you define folder location, cartridge #, and sample names.
 
 7. Now run the Script **LMMCars** as below:
 
-.. code-block:: ruby
+.. code-block:: python
 
     ScriptName LMMCars
     # LMM for multiple cartriges, assumes the montage file opened.
