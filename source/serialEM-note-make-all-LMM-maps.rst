@@ -55,7 +55,6 @@ Here you define folder location, cartridge #, and sample names.
 .. code-block:: ruby
 
     ScriptName LMMCars
-    
     # LMM for multiple cartriges, assumes the montage file opened.
 
     ##########################
