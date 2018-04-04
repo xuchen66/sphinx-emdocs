@@ -84,3 +84,24 @@ Here you define folder location, cartridge #, and sample names. The map filename
     EndLoop 
 
     EndFunction 
+
+8. Convert LMM maps into JPEG format. 
+
+   - Set Bin Overview to 1 on Montage control panel (default is usually higher than 1 with montage from command)
+   - Load the map file, the overview will be displayed in a specific buffer such as Q
+   - Run a small script 
+   
+.. code-block:: ruby
+
+   ScriptName LMM->JPEG
+   # convert to JPEG format for easy display
+   
+   SetDirectory X:\Munan_20180402
+   ReduceImage Q 2     # reduced image would make density range more confortable for JPEG display, redeuced one will be in A
+   SaveToOtherFile A JPEG JPEG LMM-Car2-56-g1.jpeg
+   
+.. note::
+
+   The JPEG image generated from above script true JEPG file, but JPG compressed TIFF file as before. Compressed JPG cannot be displayed properly by Photoshop and ImageJ, although preview, paint and webbroser can show them nicely. 
+   
+   
