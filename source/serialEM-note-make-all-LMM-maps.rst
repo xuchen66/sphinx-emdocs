@@ -48,7 +48,8 @@ Here are steps to follow.
     cat = { 2 3 4 5 6 7 }
     name = { 56-g1 56-g2 56-g3 56-g4 54-g2 54-g4 }
     
-Here you define folder location, cartridge #, and sample names. 
+Here you define folder location, cartridge #, and sample names. The map filename will have the info in it, such as 
+`LMM-Car2-56-g1.st`. 
 
 7. Now run the Script **LMMCars** as below:
 
