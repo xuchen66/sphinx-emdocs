@@ -109,6 +109,6 @@ For easy display and small file size, we usually convert all the maps in MRC for
    
 .. note::
 
-   The JPEG image generated from above script true JEPG file, but JPG compressed TIFF file as before. Compressed JPG cannot be displayed properly by Photoshop and ImageJ, although preview, paint and webbroser can show them nicely. 
-   
+   - The JPEG image generated from above script is *true* JEPG file, not a JPG compressed TIFF file as before. Compressed JPG cannot be displayed properly by Photoshop and ImageJ, although preview, paint and webbroser can show them nicely. 
+   - You can also convert MMM maps and single shot MRC image the same way. 
    
