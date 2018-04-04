@@ -85,7 +85,12 @@ Here you define folder location, cartridge #, and sample names. The map filename
 
     EndFunction 
 
-8. Convert LMM maps into JPEG format. 
+.. _convert_to_jpeg:
+
+Convert LMM maps into JPEG format 
+----------------------------------
+
+For easy display and small file size, we usually convert all the maps in MRC format to JPEG. 
 
    - Set Bin Overview to 1 on Montage control panel (default is usually higher than 1 with montage from command)
    - Load the map file, the overview will be displayed in a specific buffer such as Q
@@ -97,7 +102,9 @@ Here you define folder location, cartridge #, and sample names. The map filename
    # convert to JPEG format for easy display
    
    SetDirectory X:\Munan_20180402
-   ReduceImage Q 2     # reduced image would make density range more confortable for JPEG display, redeuced one will be in A
+   
+   # reduced image for good JPEG density range, redeuced one will be in A
+   ReduceImage Q 2     
    SaveToOtherFile A JPEG JPEG LMM-Car2-56-g1.jpeg
    
 .. note::
