@@ -52,7 +52,7 @@ master_doc = 'index'
 # project = u'Cryo-EM related docs'
 project = u'Umass Cryo-EM Docs'
 copyright = u'2016, 2017 Umass Cryo-EM Facility'
-author = u'Chen Xu'
+author = u'UMass CryoEM Core Facilty'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
