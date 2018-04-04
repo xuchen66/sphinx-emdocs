@@ -7,7 +7,7 @@ SerialEM Note: Make All LMM Maps Automatically
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2018-04-03
-:Last_Updated: 2018-04-03 
+:Last_Updated: 2018-04-04
 
 .. glossary::
 
