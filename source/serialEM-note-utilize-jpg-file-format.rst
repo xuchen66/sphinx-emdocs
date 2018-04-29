@@ -11,11 +11,11 @@ SerialEM Note: Utilize JPG File format
 .. glossary::
 
    Abstract
-      SerialEM supprots MRC and TIF file formats. They can be singel file or stack file for both formats. Although SerialEM doesn't 
+      SerialEM supprots MRC and TIF file formats. They can be single or stack file for both formats. Although SerialEM doesn't 
       directly save JPG file from graphic interface as default, it does support JPG file format. 
       
-      JPG file can be very covenient for sharing and viewing due to its small file size. When we send screening results to users on 
-      DropBox, we also upload all the JPG files for LMM maps, MMM maps and single record shots. These JPG files take very little 
+      JPG file format can be very covenient for sharing and viewing due to its small file size. When we send screening results to 
+      users on DropBox, we also upload all the JPG files for LMM, MMM maps and single record shots. These JPG files take very little 
       disc space and can be directly viewed on the web browers. People love this feature.
       
       I intruduce two scripts or functions here to save maps and single shots to JPG format. It is nice to be able to do it with SerialEM 
