@@ -45,7 +45,7 @@ SerialEM Note
    serialEM-note-more-about-z-height
    serialEM-note-speed-speed-speed
    serialEM-note-tackle-coma
-   serialEM-note-tilize-jpg-file-format
+   serialEM-note-utilize-jpg-file-format
    
 Index
 *****
