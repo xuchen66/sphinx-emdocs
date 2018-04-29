@@ -106,3 +106,9 @@ MRC file and section numbers.
    ReduceImage A 2
    SaveToOtherFile A JPG JPG $root-$z.jpg
 
+It can be used after save MRC image for each exposure, like below:
+
+.. code-block:: ruby
+
+   Save
+   CallFunction MyFuncs::AToJPG
