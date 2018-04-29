@@ -18,7 +18,7 @@ SerialEM Note: Utilize JPG File format
       we also upload all the JPG files for LMM maps, MMM maps and single record shots. These JPG files take very little disc space and 
       can be directly viewed on the web browers. 
       
-      I intruduce two scripts or functions here to save maps and single shots to JPG format. The purpose is to do it with SerialEM 
+      I intruduce two scripts or functions here to save maps and single shots to JPG format. It is nice to be able to do it with SerialEM 
       imaging, without having to convert afterwards. 
       
 .. _map_to_jpg:
@@ -106,9 +106,10 @@ MRC file and section numbers.
    ReduceImage A 2
    SaveToOtherFile A JPG JPG $root-$z.jpg
 
-It can be used after save MRC image for each exposure, like below:
+It can be used after saving MRC image for each exposure, like below:
 
 .. code-block:: ruby
 
+   Record
    Save
    CallFunction MyFuncs::AToJPG
