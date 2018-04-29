@@ -68,4 +68,41 @@ This function can be used by inserting a line right below line `NewMap` in your 
   NewMap
   CallFunction MyFuncs::MapToJPG
   
+It can also be used standalone as a script for multiple maps using "Acquire at points...".  
+
+.. code-block:: ruby
+  
+  ScriptName MapToJPG
+  CallFunction MyFuncs::MapToJPG
+
+.. _shot_to_jpg:
+
+Save Single Shots to JPG 
+------------------------
+
+We can also save everyone single shot to JPG format. The MRC file is required to be opened. The JPG filename contains root name of the
+MRC file and section numbers. 
+
+.. code-block:: ruby
+
+   Function AToJPG 0 0
+   # 
+   # SerialEM Script to convert save image in buffer A to a jpg image. 
+   # it reduces image in A by 2 for comfortable JPG density range. It 
+   # takes current filename and Z into jpg filename. Therefore, MRC file
+   # is required to be opened.
+   # 
+   #################################
+   # Chen Xu <chen.xu@umassmed.edu>
+   # Created: 2018-04-29
+   # Updated: 2018-04-29
+   #################################
+   ReportCurrentFilename 1
+   root = $RepVal1 
+   ext = $RepVal2
+   ReportFileZsize
+   z = $RepVal1
+
+   ReduceImage A 2
+   SaveToOtherFile A JPG JPG $root-$z.jpg
 
