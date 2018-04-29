@@ -31,14 +31,13 @@ The function to save maps to JPG is below.
 .. code-block:: ruby
 
     Function MapToJPG 0 0
-    # 
+     
     # SerialEM Script to convert map overview to a jpg image. 
     # it works on currently selected map item and should work for "Acquire at points...".
     # 
     # Chen Xu <chen.xu@umassmed.edu>
     # Created: 2018-04-27
     # Updated: 2018-04-27
-    #
 
     # skip non-map item
     ReportNavItem
@@ -85,7 +84,7 @@ MRC file and section numbers.
 .. code-block:: ruby
 
    Function AToJPG 0 0
-   # 
+   
    # SerialEM Script to save image in buffer A to a jpg image. 
    # Tt reduces image in A by 2 for comfortable JPG density range. It 
    # takes current filename and Z into jpg filename. Therefore, MRC file
@@ -94,7 +93,7 @@ MRC file and section numbers.
    # Chen Xu <chen.xu@umassmed.edu>
    # Created: 2018-04-29
    # Updated: 2018-04-29
-   #
+   
    ReportCurrentFilename 1
    root = $RepVal1 
    ext = $RepVal2
