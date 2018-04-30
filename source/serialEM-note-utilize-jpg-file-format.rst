@@ -80,8 +80,8 @@ It can also be used standalone as a script for multiple maps using "Acquire at p
 Save Single Shots to JPG 
 ------------------------
 
-We can also save everyone single shot to JPG format. The MRC file is required to be opened. The JPG filename contains root name of the
-MRC file and section numbers. 
+We can also save every single shot to JPG format along with MRC images. The MRC file is required to be opened. The JPG filename 
+contains root name of the MRC file and section numbers. 
 
 .. code-block:: ruby
 
