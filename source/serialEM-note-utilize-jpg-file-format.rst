@@ -18,8 +18,8 @@ SerialEM Note: Utilize JPG File format
       users on DropBox, we also upload all the JPG files for LMM, MMM maps and single record shots. These JPG files take very little 
       disc space and can be directly viewed on the web browers. People love this feature.
       
-      I intruduce two scripts or functions here to save maps and single shots to JPG format. It is nice to be able to do it with SerialEM 
-      imaging, without having to convert afterwards. 
+      In this doc, two scripts or functions were introduced to conveniently save maps and single shots to JPG format. It is nice 
+      to be able to do it in-the-fly with SerialEM imaging.
       
 .. _map_to_jpg:
 
@@ -42,7 +42,7 @@ The function to save maps to JPG is below.
     # skip non-map item
     ReportNavItem
     If $RepVal5 != 2        # if not a map item
-      Echo -> Not a map item
+      Echo -> Not a map item, exit!
       Exit
     EndIf
 
@@ -52,14 +52,16 @@ The function to save maps to JPG is below.
     LoadNavMap
 
     # make a jpeg image
-    ReduceImage Q 2         # assuming loading buffer is Q, and reduce 2 to make JPG image density range more pleasant
+    ReduceImage Q 2         # loading buffer is Q, and reduce 2 to make JPG image density range more pleasant
     SaveToOtherFile A JPG JPG $navNote.jpg
     EndFunction
     
-One trick here is to load map into a buffer unbinned before saving to JPG. When we make montage maps using script to open montage 
-files, the default binning for ovewview display is usually not 1. To take advantage of full resolution of the map, we load it unbinned.
+One of tricks here is to load map into a buffer unbinned before saving to JPG. When we make montage maps using script to open montage 
+files, the default binning for ovewview display is usually not 1. To take advantage of full resolution of the map, we load it unbinned. 
+The other trick is to define a temporary loading (Read-in) buffer so the read-in buffer setup in **Buffer Control** panel becomes 
+irrelevant.   
 
-This function can be used by inserting a line right below line `NewMap` in your script like here:
+This function can be used by inserting a line right below line ``NewMap`` in your script like here:
 
 .. code-block:: ruby
   
