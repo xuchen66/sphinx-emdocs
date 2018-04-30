@@ -56,7 +56,7 @@ The function to save maps to JPG is below.
     SaveToOtherFile A JPG JPG $navNote.jpg
     EndFunction
     
-One of tricks here is to load map into a buffer unbinned before saving to JPG. When we make montage maps using script to open montage 
+One of tricks here is to load map into a buffer **unbinned** before saving to JPG. When we make montage maps using script to open montage 
 files, the default binning for ovewview display is usually not 1. To take advantage of full resolution of the map, we load it unbinned. 
 The other trick is to define a temporary loading (Read-in) buffer so the read-in buffer setup in **Buffer Control** panel becomes 
 irrelevant.   
