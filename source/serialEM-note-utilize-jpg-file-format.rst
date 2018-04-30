@@ -98,7 +98,7 @@ contains root name of the MRC file and section numbers.
    
    ReportCurrentFilename 1
    root = $RepVal1 
-   ext = $RepVal2
+   # ext = $RepVal2
    ReportFileZsize
    z = $RepVal1
 
