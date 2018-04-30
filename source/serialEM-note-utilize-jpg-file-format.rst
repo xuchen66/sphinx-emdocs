@@ -74,6 +74,8 @@ It can also be used standalone as a script for multiple maps using "Acquire at p
   
   ScriptName MapToJPG
   CallFunction MyFuncs::MapToJPG
+  
+This script can also be used in-the-fly as ``Run script after`` when ``Primary Action`` is to **Acquire map image**.  
 
 .. _shot_to_jpg:
 
