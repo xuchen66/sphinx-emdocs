@@ -6,7 +6,7 @@ SerialEM Note: Utilize JPG File format
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Created: 2018-04-29 
-:Updated: 2018-04-29
+:Updated: 2018-04-30
 
 .. glossary::
 
@@ -73,9 +73,7 @@ It can also be used standalone as a script for multiple maps using "Acquire at p
 .. code-block:: ruby
   
   ScriptName MapToJPG
-  CallFunction MyFuncs::MapToJPG
-  
-This script can also be used in-the-fly as ``Run script after`` when ``Primary Action`` is to **Acquire map image**.  
+  CallFunction MyFuncs::MapToJPG 
 
 .. _shot_to_jpg:
 
