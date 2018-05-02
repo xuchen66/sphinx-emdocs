@@ -15,10 +15,10 @@ How do I ...
 
 The data for screening is usually at three kinds. 
 
-1. Low Mag Montage (LMM) map, usually taken at mag from ~50X to ~150X. The data itself is in MRC 16-bit sign integer format. 
+1. Low Mag Montage (LMM) map (grid atlas), usually taken at mag from ~50X to ~150X. The data itself is in MRC 16-bit sign integer format. 
    It is a MRC stack file containing about ~62 pieces if at 46X. 
    
-2. Medium Mag Montage (LMM) maps. This is usually taken at lower range of M on Talos, such as 1750X. It is also MRC stack file. 
+2. Medium Mag Montage (LMM) maps (square atlas). This is usually taken at lower range of M on Talos, such as 1750X. It is also MRC stack file. 
 
 3. High mag shots, usually taken at 22,000X or 28,000X. It is MRC stack file, each section is from an exposure. If K2 camera frame mode is used, the secion is usually a single image from aligned movie stacks in-fly. 
 
@@ -26,9 +26,9 @@ All the three kinds of data can be easily viewed using IMOD. For Windows, a pack
 
 .. Note::
    
-   - Since September 2017, most of screening images are also saved into JPG format at the same time when MRC files are saved. This gives you a quick feedback for your sample conditions. The small file size makes it easy for up to upload to DropBox to share with users.
+   - Since September 2017, most of screening images are also saved into JPG format at the same time when MRC files are saved. This gives you a quick feedback for your sample conditions. The small file size makes it easy for us to upload to DropBox to share with users.
    
-   - After March 2018, all JPG files are true JPG instead of JPG compressed TIFF as before. They can be opened by almost any standard image software inclduing ImageJ and Photoshop.
+   - After March 2018, all JPG files are true JPG instead of JPG compressed TIFF as before. They can be opened by almost any standard image software including ImageJ and Photoshop.
    
 .. _scale_bar:
 
