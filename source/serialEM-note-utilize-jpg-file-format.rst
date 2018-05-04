@@ -6,7 +6,7 @@ SerialEM Note: Utilize JPG File format
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Created: 2018-04-29 
-:Updated: 2018-04-30
+:Updated: 2018-05-03
 
 .. glossary::
 
@@ -74,6 +74,42 @@ It can also be used standalone as a script for multiple maps using "Acquire at p
   
   ScriptName MapToJPG
   CallFunction MyFuncs::MapToJPG 
+
+This function and its script work on **current** item of map. However, if you run on a point item and create a map from this, the above function or script won't work on this in-the-fly situation because **current** item is the very point item instead of newly created map. 
+For this, one needs to use a slight different one as below.
+
+.. code-block:: ruby
+
+   Function NewMapToJPG 0 0
+   # 
+   # SerialEM Script to convert last item - map overview to a jpg image. 
+   # It uses Note string as part of jpg filename.
+   # it works on an item which creates a map and should work for "Acquire at points..."
+   # as "Run Script after". 
+   # 
+   # Chen Xu <chen.xu@umassmed.edu>
+   # Created: 2018-04-27
+   # Updated: 2018-04-30
+   #
+
+   # skip non-map item
+   ReportOtherItem -1      # last item - supposedly the newly created map.
+   If $RepVal5 != 2        # if not a map item
+     Echo -> Not a map item, exit ...
+     Exit
+   EndIf
+
+   # load map overview into Q unbinned
+   SetUserSetting BufferToReadInto 16	# Q is 16th in alphabet, if A is 0.
+   SetUserSetting LoadMapsUnbinned 1   
+   LoadOtherMap -1				# last item on the nav list
+
+   # make a jpeg image
+   ReduceImage Q 2         # assuming loading buffer is Q, and reduce 2 to make JPG image density range more pleasant
+   SaveToOtherFile A JPG JPG $navNote.jpg
+   EndFunction
+
+The trick here is to Report and Load the last item in the nav list which is the newly created map.
 
 .. _shot_to_jpg:
 
