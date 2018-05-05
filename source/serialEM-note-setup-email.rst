@@ -44,13 +44,13 @@ There are a few steps we have to do on SerialEM side.
    SMTPServer		127.0.0.1
    SendMailFrom	admin@talos-k2.cryoem.umassmed.edu
    
- 2. define email address to receive the notification. This from Tilt Series Menu - Set Email Address.
- 3. insert a command line in main collection script for single partile data collection. Location of this line doesn't matter. 
+2. define email address to receive the notification. This from Tilt Series Menu - Set Email Address.
+3. insert a command line in main collection script for single partile data collection. Location of this line doesn't matter. 
  
 .. code:: Ruby
 
    ErrorBoxSendEmail Script Stopped!
   
- 4. check "Send email at end" in Acquire at points ... dialog window. 
+4. check "Send email at end" in Acquire at points ... dialog window. 
  
  
