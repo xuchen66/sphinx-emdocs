@@ -46,6 +46,7 @@ SerialEM Note
    serialEM-note-speed-speed-speed
    serialEM-note-tackle-coma
    serialEM-note-utilize-jpg-file-format
+   serialEM-note-setup-email
    
 Index
 *****
