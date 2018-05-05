@@ -15,8 +15,7 @@ SerialEM Note: Setup Email on K2 Computer
       attention to it. Now, we run scope 24/7 and like to get notification when something is wrong so we won't lose too much time. 
       
       Although setting up a standalone email server might not be the easist thing, setting up a SMTP server and relay service on 
-      K2 computer is not that hard. This is partially because K2 computer is running a server operating system, it is Windows 2008 
-      R2 server.
+      K2 computer is not that hard. This is partially because K2 computer is running a server operating system - Windows 2008 R2.
       
       In this doc, I list what I have done to setup email notification on our SerialEM system. 
       
