@@ -29,3 +29,28 @@ I followed instructions in an on-line article `Setup and Configure SMTP Server o
 <http://www.vsysad.com/2012/04/setup-and-configure-smtp-server-on-windows-server-2008-r2/>`_. It has images for each step and very easy to 
 follow. 
 
+.. _on_serialem_part:
+
+On SerialEM Part
+----------------
+
+There are a few steps we have to do on SerialEM side.
+
+1. add two property lines in property file:
+
+.. code:: Ruby 
+
+   # SMTPserver
+   SMTPServer		127.0.0.1
+   SendMailFrom	admin@talos-k2.cryoem.umassmed.edu
+   
+ 2. define email address to receive the notification. This from Tilt Series Menu - Set Email Address.
+ 3. insert a command line in main collection script for single partile data collection. Location of this line doesn't matter. 
+ 
+.. code:: Ruby
+
+   ErrorBoxSendEmail Script Stopped!
+  
+ 4. check "Send email at end" in Acquire at points ... dialog window. 
+ 
+ 
