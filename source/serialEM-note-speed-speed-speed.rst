@@ -6,7 +6,8 @@ SerialEM Note: Speed, Speed and Speed
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2017-12-26
+:Created: 2017-12-26
+:Updated: 2018-05-16
 
 .. glossary::
 
@@ -141,6 +142,26 @@ Moving stage with backlash imposed takes extra time itself. Therefore, we don't 
    EndLoop 
   
 Here, I asked stage to relax only at final round of iteration. If you use this function, you should update it to include this nice feature. 
+
+Alternatively, we can also directly move stage backwards after ResetImageShift. This can be more accurate for final target postion.
+
+.. code-block:: ruby
+
+   AlignTo $buffer
+   ResetImageShift
+
+   ## relax
+   # report shift in buffer A from last round of Align
+   # move stage 0.025um in opposite directions
+   ReportAlignShift
+   shiftX = $repVal5
+   shiftY = $repVal6
+   signX = $shiftX / ABS ( $shiftX )
+   signX = $shiftY / ABS ( $shiftY )
+   moveX = -1 * $signX * 0.025
+   moveY = -1 * $signY * 0.025
+   echo Relaxing ...
+   MoveStave $moveX $moveY
 
 .. _using_compression:
 
