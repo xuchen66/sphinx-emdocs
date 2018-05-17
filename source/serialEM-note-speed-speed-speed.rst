@@ -161,7 +161,7 @@ Alternatively, we can also directly move stage backwards after ResetImageShift. 
    moveX = -1 * $signX * 0.025
    moveY = -1 * $signY * 0.025
    echo Relaxing ...
-   MoveStave $moveX $moveY
+   MoveStage $moveX $moveY
 
 .. _using_compression:
 
