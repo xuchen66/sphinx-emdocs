@@ -143,7 +143,7 @@ Moving stage with backlash imposed takes extra time itself. Therefore, we don't 
   
 Here, I asked stage to relax only at final round of iteration. If you use this function, you should update it to include this nice feature. 
 
-Alternatively, we can also directly move stage backwards after ResetImageShift. This can be more accurate for final target postion.
+Alternatively, we can also directly move stage backwards after ResetImageShift. This can be more accurate for final target position.
 
 .. code-block:: ruby
 
