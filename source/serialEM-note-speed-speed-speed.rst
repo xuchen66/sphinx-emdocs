@@ -7,7 +7,7 @@ SerialEM Note: Speed, Speed and Speed
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Created: 2017-12-26
-:Updated: 2018-05-17
+:Updated: 2018-05-18
 
 .. glossary::
 
@@ -157,8 +157,16 @@ Alternatively, we can also directly move stage backwards after ResetImageShift. 
    
    shiftX = $repVal5
    shiftY = $repVal6
-   signX = $shiftX / ABS ( $shiftX )
-   signX = $shiftY / ABS ( $shiftY )
+   
+   # just in case it got a blank image so no shift found
+   If $shiftX == 0 OR $shiftY == 0
+      signX = 0
+      signY = 0
+   Else
+      signX = $shiftX / ABS ( $shiftX )
+      signX = $shiftY / ABS ( $shiftY )
+   Endif
+   
    moveX = -1 * $signX * 0.025
    moveY = -1 * $signY * 0.025
    echo Relaxing ...
@@ -183,3 +191,10 @@ Using Local HDD or SSD
 It is usually fine to save the frame data directly onto a large size data storage network system. In our systems, a CIFS mount initiates a network drive on K2 computer so that we can directly save to that. However, in the case that the sotrage system is busy doing some other tasks such as transferring data to customers, being used by local image processing programs etc., directly saving to network drive could take extra time than saving onto local SSD drive on K2 computer. 
 
 In our experience, it is best to save raw data on local SSD or HDD first, and then align frames using framewatcher (IMOD program) on-the-fly and let the *framewatcher* move the processed raw frames and aligned output average to network drive. This way, not only the loal SSD drive will never be filled, but also the network activities on the LAN are spreat out more evenly. Data collection won't slow down at all due to network performance. 
+
+.. _multishot:
+
+Using Multishot
+---------------
+
+Multi-shot method is perhaps the most efficient way for single particle data collection. It can speed up quite a bit. Please refer a separate note - **Tackle the Coma**. 
