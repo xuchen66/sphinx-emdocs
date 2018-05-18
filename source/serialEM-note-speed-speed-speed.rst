@@ -164,7 +164,7 @@ Alternatively, we can also directly move stage backwards after ResetImageShift. 
       signY = 0
    Else
       signX = $shiftX / ABS ( $shiftX )
-      signX = $shiftY / ABS ( $shiftY )
+      signY = $shiftY / ABS ( $shiftY )
    Endif
    
    moveX = -1 * $signX * 0.025
