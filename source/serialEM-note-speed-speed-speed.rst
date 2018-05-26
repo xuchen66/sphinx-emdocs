@@ -7,7 +7,7 @@ SerialEM Note: Speed, Speed and Speed
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Created: 2017-12-26
-:Updated: 2018-05-18
+:Updated: 2018-05-26
 
 .. glossary::
 
@@ -147,14 +147,13 @@ Alternatively, we can also directly move stage backwards after ResetImageShift. 
 
 .. code-block:: ruby
 
-   AlignTo $buffer
-   ReportAlignShift
+   AlignTo $buffer      # comment out this line if last action is RealignToNavItem
    ResetImageShift
 
    ## relax
    # report shift in buffer A from last round of Align
    # move stage 0.025um in opposite directions
-   
+   ReportAlignShift
    shiftX = $repVal5
    shiftY = $repVal6
    
