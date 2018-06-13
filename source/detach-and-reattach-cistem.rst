@@ -66,18 +66,17 @@ Usage Examples
    
    xpra start :100 --start-child=cisTEM
          
-Hit enter one more time, and now the session has been created.
+Hit enter one more time, and now the session has been created in the background. You will have to attach to it. 
 
-3. Detach from the session. From the command line, hit Ctrl-C and the window will disappear. You can kill the local cisTEM X-window too. 
-
-
-4. Attach to the session. From the cisTEM computer,
+3. Attach to the session. From the cisTEM computer,
          
 .. code-block:: ruby
          
    xpra attach :100
     
 and the cisTEM window should open. If there is only one session, you don't need the :100
+
+4. Detach from the session. From the command line, hit Ctrl-C and the window will disappear. 
 
 .. Note::
 
