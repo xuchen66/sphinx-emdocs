@@ -78,5 +78,3 @@ Hit enter one more time, and now the session has been created.
    xpra attach :100
     
 and the cisTEM window should open. If there is only one session, you don't need the :100
-
-4. Detach from the session. From the command line, hit Ctrl-C and the window will disappear.
