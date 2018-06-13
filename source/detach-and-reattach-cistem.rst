@@ -79,13 +79,13 @@ Hit enter one more time, and now the session has been created.
     
 and the cisTEM window should open. If there is only one session, you don't need the :100
 
-.. _note:
+.. _note::
 
-when re-attaching: Usually remote connections from outside the local network are laggy. Fortunately, Xpra has compressions to lessen the amount of bandwidth. To enable compression when reattaching, do
+   when re-attaching: Usually remote connections from outside the local network are laggy. Fortunately, Xpra has compressions to lessen the amount of bandwidth. To enable compression when reattaching, do
 
 .. code-block:: ruby
 
-    xpra attach --encoding=rgb --compress=1
-    
-This is the recommended way from Xpra.org.
+       xpra attach --encoding=rgb --compress=1
+
+   This is the recommended way from Xpra.org.
 
