@@ -22,25 +22,23 @@ cisTEM detaching and re-attaching sessions
 
 .. _install_Xpra:
 
-
 Installing Xpra on Linux
 ------------------------
 
-   1. Download the Xpra repository information into your system's package manager folder.
+1. Download the Xpra repository information into your system's package manager folder.
          For our Centos 7 system,
          
-        .. code-block:: ruby
+.. code-block:: ruby
         
-            sudo bash -c "curl https://xpra.org/repos/CentOS/xpra.repo > /etc/yum.repos.d"
+   sudo bash -c "curl https://xpra.org/repos/CentOS/xpra.repo > /etc/yum.repos.d"
         
         Xpra also supports Fedora, Debian, and Ubuntu. For Debian and Ubuntu, the package manager folder is /etc/apt/sources.list.d
 
-   2. Install
-   
-   
+2. Install
+      
          Centos and Fedora,
    
-   .. code-block:: ruby
+.. code-block:: ruby
    
    sudo yum install xpra
    
@@ -55,26 +53,26 @@ Installing Xpra on Linux
 Usage Examples
 --------------
 
-   1. Log into the cisTEM computer from your remote computer. You will need less strict X forwarding with the -Y option.
+1. Log into the cisTEM computer from your remote computer. You will need less strict X forwarding with the -Y option.
         
- .. code-block:: ruby
+.. code-block:: ruby
         
-        ssh -Y username@ipaddress
+   ssh -Y username@ipaddress
 
-   2. Start a cisTEM process using xpra. You will need to choose a sessionID number. I arbitrarily chose 100.
+2. Start a cisTEM process using xpra. You will need to choose a sessionID number. I arbitrarily chose 100.
    
- .. code-block:: ruby
+.. code-block:: ruby
    
-         xpra start :100 --start-child=cisTEM
+   xpra start :100 --start-child=cisTEM
          
-      Hit enter one more time, and now the session has been created.
+Hit enter one more time, and now the session has been created.
 
-   3. Attach to the session. From the cisTEM computer,
+3. Attach to the session. From the cisTEM computer,
          
-  .. code-block:: ruby
+.. code-block:: ruby
          
-         xpra attach :100
+   xpra attach :100
     
-    and the cisTEM window should open. If there is only one session, you don't need the :100
+and the cisTEM window should open. If there is only one session, you don't need the :100
 
-   4. Detach from the session. From the command line, hit Ctrl-C and the window will disappear.
+4. Detach from the session. From the command line, hit Ctrl-C and the window will disappear.
