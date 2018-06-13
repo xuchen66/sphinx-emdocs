@@ -70,6 +70,7 @@ Hit enter one more time, and now the session has been created.
 
 3. Detach from the session. From the command line, hit Ctrl-C and the window will disappear. You can kill the local cisTEM X-window too. 
 
+
 4. Attach to the session. From the cisTEM computer,
          
 .. code-block:: ruby
