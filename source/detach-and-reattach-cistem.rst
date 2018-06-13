@@ -26,23 +26,24 @@ Installing Xpra on Linux
 ------------------------
 
 1. Download the Xpra repository information into your system's package manager folder.
-         For our Centos 7 system,
+         
+   For our Centos 7 system,
          
 .. code-block:: ruby
         
    sudo bash -c "curl https://xpra.org/repos/CentOS/xpra.repo > /etc/yum.repos.d"
         
-        Xpra also supports Fedora, Debian, and Ubuntu. For Debian and Ubuntu, the package manager folder is /etc/apt/sources.list.d
+Xpra also supports Fedora, Debian, and Ubuntu. For Debian and Ubuntu, the package manager folder is /etc/apt/sources.list.d
 
 2. Install
       
-         Centos and Fedora,
+For Centos and Fedora,
    
 .. code-block:: ruby
    
    sudo yum install xpra
    
-         Debian and Ubuntu,
+For Debian and Ubuntu,
    
 .. code-block:: ruby
    
@@ -58,7 +59,7 @@ Usage Examples
 .. code-block:: ruby
         
    ssh -Y username@ipaddress
-
+   
 2. Start a cisTEM process using xpra. You will need to choose a sessionID number. I arbitrarily chose 100.
    
 .. code-block:: ruby
