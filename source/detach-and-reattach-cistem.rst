@@ -79,7 +79,7 @@ Hit enter one more time, and now the session has been created.
     
 and the cisTEM window should open. If there is only one session, you don't need the :100
 
-.. _note::
+.. Note::
 
    when re-attaching: Usually remote connections from outside the local network are laggy. Fortunately, Xpra has compressions to lessen the amount of bandwidth. To enable compression when reattaching, do
 
