@@ -32,6 +32,7 @@ Instructions, Manuals and Protocols
    post-process-k2-frames
    align-movie-frames-imod
    pixelsize-and-distortion-info
+   detach-and-reattach-cistem
    
 SerialEM Note
 -------------
