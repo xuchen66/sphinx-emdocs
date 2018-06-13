@@ -85,7 +85,7 @@ and the cisTEM window should open. If there is only one session, you don't need 
 
 .. code-block:: ruby
 
-       xpra attach --encoding=rgb --compress=1
+   xpra attach --encoding=rgb --compress=1
 
-   This is the recommended way from Xpra.org.
+This is the recommended way from Xpra.org.
 
