@@ -7,7 +7,7 @@ SerialEM Note: Installation and Calibration
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2017-11-12
-:Last_Updated: 2018-05-21 
+:Last_Updated: 2018-07-04 
 
 .. glossary::
 
@@ -99,7 +99,7 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 
 #. Calibration - Save Calibration. 
 
-#. Take the tilting axis value (e.g. 86.1) from step 7 - stage shift calibration, edit it into the 2nd "999" in *SerialEMproperties.txt* like below.
+#. Take the tilting axis value (e.g. 86.1) from step 8 - stage shift calibration, edit it into the 2nd "999" in *SerialEMproperties.txt* like below.
 
 .. code-block:: ruby
 
