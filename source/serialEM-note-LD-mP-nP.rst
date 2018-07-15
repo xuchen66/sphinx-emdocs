@@ -6,7 +6,7 @@ SerialEM Note: Setup LD with Mix of mP and nP Modes
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-created: 2018-03-31
-:Last-updated: 2018-03-31
+:Last-updated: 2018-07-15
 
 .. glossary::
 
@@ -40,9 +40,10 @@ spot size for everything.
 #. On microscope right panel, press "Eucentric Focus".
 #. Reset Defocus (L2 button on our current setup for soft buttons, yours could different), this makes defocus display 0. 
 #. Select V area (radio button) on LD control panel.
+#. wait 6-7 seconds to allow scope to switch to this mag and mP mode.
 #. On microscope right panel, press "Eucentric Focus".
 #. Reset Defocus (L2 button on our current setup for soft buttons, yours could different), this makes defocus display 0. 
-#. From Task - Specialized Options, make sure the "Adjust Focus on Probe Mode Change" is **NOW** checked. 
 #. Set View Defocus Offset to target value (-300 in my case) using dial Up-Down button on SerialEM LD Control Panel.
+#. From Task - Specialized Options, make sure the "Adjust Focus on Probe Mode Change" is **NOW** checked. 
 
 That's it. 
