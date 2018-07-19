@@ -194,7 +194,7 @@ UMass Med School has firewall and VPN in place. There is no way to "pull" data f
 
 - At Harvard Medical School, some labs ask SBGrids folks to setup a DropBox like account for their lab. With specific command, we can push data directly from our storage to HMS special DropBox location. It is then easy to transfer internally then. 
 
-- If you setup an user account on a Linux box for us, we can transfer data via sftp or via rsync over sftp protocol. We can also use your personal account without knowing your password using SSH keys. We provide our public key to you and you put it in ./ssh/known_hosts, and we can establich connection using private key. You can remove that line to diable the possibility of connection from our side. 
+- If you setup an user account on a Linux box for us, we can transfer data via sftp or via rsync over sftp protocol. We can also use your personal account without knowing your password but using SSH keys. We provide our public key to you and you put it in ./ssh/known_hosts, and we can establich connection using our private key at our end. You can remove that line to disable the possibility of connection. 
 
 - The data can be also send to you after copying onto a portable HDD drive with USB3 interface. Default NTFS filesystem coming with most of the HDD is usually working fine. 
 
