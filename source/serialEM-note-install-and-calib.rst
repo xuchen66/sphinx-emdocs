@@ -7,7 +7,7 @@ SerialEM Note: Installation and Calibration
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2017-11-12
-:Last_Updated: 2018-07-04 
+:Last_Updated: 2018-07-18 
 
 .. glossary::
 
@@ -39,7 +39,7 @@ Here are steps to follow.
 
 #. Double click on a file called *install.bat* in the package folder C:\\Program Files\\SerialEM\\SerialEM_3-6-13_64. This will copy some files into upper folder which is C:\\Program Files\\SerialEM, register DM plugin file and copy it to the Gatan plugin folder at C:\\ProgramData\\Gatan\\Plugin. 
 
-#. Manually copy a file called *FEI-SEMServer.exe* from C:\\Program Files\\SerialEM on K2 computer to C:\\Program Files\\SerialEM on scope computer. This is a bridging program to control scope by passing the scope function calls between SerialEM main program on remote K2 computer and the scope scripting interface. Run the program by double clicking on it(it needs to run or SerialEM cannot control scope). 
+#. Manually copy a file called *FEI-SEMServer.exe* from C:\\Program Files\\SerialEM on K2 computer to C:\\Program Files\\SerialEM on scope computer. This is a bridging program to control scope by passing the scope function calls between SerialEM main program on remote K2 computer and the scope scripting interface. Run the program by double clicking on it(it needs to run or SerialEM cannot control scope). This is 32-bit application, runs on both 32 and 64-bit Windows platforms. So there is only one such executable to run on Windows 7, XP or 2000 Windows OS. 
 
 #. On K2 computer, Edit *SerialEMproperties.txt* file in folder C:\\ProgramData\\SerialEM to have proper lines in general property area to define network properties. 
 
