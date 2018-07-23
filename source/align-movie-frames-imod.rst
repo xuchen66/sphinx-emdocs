@@ -148,6 +148,13 @@ You can even simply move all the raw files without aligning them.
    
 Interestingly, *framewatcher* will also copy (not move) Gatan gain reference file and Defect file to Z drive too. 
 
+If you also want pcm file to move together with raw file, you can use "-after" option:
+
+.. code-block:: none 
+
+   $framewatcher -w X:\MyData -noc -pr Z:\Storage\MyData -after 'mv %{rootName}.pcm %{processedDir}'
+
+
 From November 23, *alignframes* and *framewatcher* also have options to do dose weighting. This is still in alpha version, but perhaps will be IMOD main production soon. Here I demo a couple of options to use with *framewatcher*:
 
 .. code-block:: none 
