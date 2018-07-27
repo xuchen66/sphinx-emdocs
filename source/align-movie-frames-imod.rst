@@ -154,6 +154,11 @@ If you also want pcm file to move together with raw file, you can use "-after" o
 
    $framewatcher -w X:\MyData -noc -pr Z:\Storage\MyData -after 'mv %{rootName}.pcm %{processedDir}'
 
+You can even do ctffind and plot the curve using the "-after" option, if you installed Albert's *ctffindPlot* program. The command is like this:
+
+.. code-block:: none 
+   
+   framewatcher -gpu 0 -bin 2 -po 1024 -dtotal 46.6 -after 'ctffindPlot %{outputFile}'
 
 From November 23, *alignframes* and *framewatcher* also have options to do dose weighting. This is still in alpha version, but perhaps will be IMOD main production soon. Here I demo a couple of options to use with *framewatcher*:
 
