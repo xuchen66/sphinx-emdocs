@@ -47,7 +47,7 @@ This will move all the raw files onto storage location, so local SSD never fills
    [xuchen@gpu ~]$ su - guest
    [guest@gpu ~]$ cd /mnt/Titan/ChenXu_20180802
    [guest@gpu ChenXu_20180802]$ mkdir rawTIFF alignedMRC alignedJPG
-   [guest@gpu ChenXu_20180802] $ framewatcher -gpu 0 -bin 2 -o 1024 -dtotal 46.5 -pr rawTIFF -after 'mv %{rootName}_powpair.jpg alignedJPG'
+   [guest@gpu ChenXu_20180802]$ framewatcher -gpu 0 -bin 2 -o 1024 -dtotal 46.5 -pr rawTIFF -after 'mv %{rootName}_powpair.jpg alignedJPG'
    
 This will move raw data files (TIFF, dm4, defect, pcm) into *rawTIFF*, and powerpair JPG files into *alignedJPG*.
 
@@ -89,7 +89,7 @@ edit to fit your situation. The file looks like this:
 
 .. code-block:: ruby
 
-   [guest@gpu ChenXu_20180802]ctffindPlot -p alignedMRC 
+   [guest@gpu ChenXu_20180802]$ ctffindPlot -p alignedMRC 
    
 This will generate a plot and continously update a file called *plot.png* which can be loaded into a web browser and let it refresh periodically. All the aligned MRC files will be moved into *alignedMRC* by the plot porgram after done. 
 
