@@ -11,7 +11,7 @@ Monitor Data Collection In The Fly
 .. glossary::
 
    Abstract
-      We already routinely align movie frames using data collection so we can check images from time to time. We did most 
+      We already routinely align movie frames during data collection so we can check images from time to time. We did most 
       directly using K2 camera computers. This works very nicely. However, there are still a couple things we feel missing. 
       1) we need to see the defocus range and phase shift values computated and plotted out. 2) we need to do this with no 
       delay and without slowing down the data collection itself. 
@@ -22,11 +22,80 @@ Monitor Data Collection In The Fly
       This document is mainly for oursleves as a check list. Hopefully, it can also be useful for your setup.  
       
 
-.. _alignframes:
+.. _setup:
 
-Alignframes 
------------
+Setup for Shipping, alignframes and CTFfindPlot 
+-----------------------------------------------
 
-This program takes many options as command line arguments. For details, please read the man page with example usages http://bio3d.colorado.edu/imod/betaDoc/man/alignframes.html. 
+1. Ship raw data from K2 local SSD to storage tank. Assuming storge tank is CIFS mounted onto K2 computer, as W:, and we have a new folder call ChenXu_20180802. We create a folder on local ssd drive X: usually using the same folder name. We collect everying off camera onto this local SSD folder X:\ChenXu_20180802 first including all LMM, MMM maps etc. and raw TIFF data as well. We use IMOD porgram ``framewatcher`` to ship the raw data, pcm parameter files, defect file and gain reference file to storage.
+   
+#. Create three folders on W:\ChenXu_20180802 as *rawTIFF*, *alignedMRC* and *alignedJPG*. 
 
-As usual, the long command line can be run with a command file. Here is an example of python command file YURI_B1_G1-SuperRes_2967_Feb04_01.14.57.pcm. 
+#. From cygwin shell terminal, go into local folder X:\ChenXu_20180802 and do this:
+   
+.. code-block:: ruby
+
+   $ framewatcher -nocom -pr W:\ChenXu_2018
+   
+This will move all the raw files onto storage location, so local SSD never fills.
+
+#. ssh login GPU computer as you and su to "guest", and align movies
+
+
+.. code-block:: ruby
+
+   $ ssh xuchen
+   [xuchen@gpu ~]$ su - guest
+   [guest@gpu ~]$ cd /mnt/Titan/ChenXu_20180802
+   [guest@gpu ChenXu_20180802] $ framewatcher -gpu 0 -bin 2 -o 1024 -dtotal 46.5 -pr *rawTIFF* -after 'mv %{rootName}_powpair.jpg *alignedJPG*'
+   
+This will move raw data files (TIFF, dm4, defect, pcm) into *rawTIFF*, and powerpair JPG files into *alignedJPG*.
+
+#. Copy and edit ctffind parameter file (as "guest", in the same folder; we usually create a new terminal from tmux by "Ctrl_B C").
+
+.. code-block:: ruby
+
+   [guest@gpu ChenXu_20180802]$ cp /usr/local/ctffindplot/test/ctffindoptions.txt .
+   [guest@gpu ChenXu_20180802]$ vim ctffindoptions.txt
+   
+edit to fit your situation. The file looks like this:
+
+.. code-block:: ruby
+
+   ctffind << EOF
+   (filename)
+   (basename)_ali_output.mrc
+   1.059
+   300.0
+   2.70
+   0.07
+   512
+   30.0
+   5.0
+   5000.0
+   50000.0
+   100.0
+   no
+   no
+   no
+   yes
+   0.0
+   3.15
+   0.5
+   no
+   EOF
+
+#. plot
+
+.. code-block:: ruby
+
+   [guest@gpu ChenXu_20180802]ctffindPlot
+   
+This will generate a plot and continously update a file called *plot.png* which can be loaded into a web browser and let it refresh periodically. 
+
+
+   
+
+   
+   
+   
