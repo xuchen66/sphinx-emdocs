@@ -27,11 +27,11 @@ Monitor Data Collection In The Fly
 Setup for Shipping, alignframes and CTFfindPlot 
 -----------------------------------------------
 
-1. Ship raw data from K2 local SSD to storage tank. Assuming storge tank is CIFS mounted onto K2 computer, as W:, and we have a new folder call ChenXu_20180802. We create a folder on local ssd drive X: usually using the same folder name. We collect everying off camera onto this local SSD folder X:\ChenXu_20180802 first including all LMM, MMM maps etc. and raw TIFF data as well. We use IMOD porgram ``framewatcher`` to ship the raw data, pcm parameter files, defect file and gain reference file to storage.
+1. Ship raw data from K2 local SSD to storage tank. Assuming storge tank is CIFS mounted onto K2 computer, as W:, and we have a new folder call ChenXu_20180802. We create a folder on local ssd drive X: usually using the same folder name. We collect everying off camera onto this local SSD folder X:\\ChenXu_20180802 first including all LMM, MMM maps etc. and raw TIFF data as well. We use IMOD porgram ``framewatcher`` to ship the raw data, pcm parameter files, defect file and gain reference file to storage.
    
-2. Create three folders on W:\ChenXu_20180802 as *rawTIFF*, *alignedMRC* and *alignedJPG*. 
+2. Create three folders on W:\\ChenXu_20180802 as *rawTIFF*, *alignedMRC* and *alignedJPG*. 
 
-3. From cygwin shell terminal, go into local folder X:\ChenXu_20180802 and do this:
+3. From cygwin shell terminal, go into local folder X:\\ChenXu_20180802 and do this:
    
 .. code-block:: ruby
 
