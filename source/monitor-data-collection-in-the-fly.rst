@@ -28,8 +28,6 @@ Setup for Shipping, alignframes and CTFfindPlot
 -----------------------------------------------
 
 1. Ship raw data from K2 local SSD to storage tank. Assuming storge tank is CIFS mounted onto K2 computer, as W:, and we have a new folder call ChenXu_20180802. We create a folder on local ssd drive X: usually using the same folder name. We collect everying off camera onto this local SSD folder X:\\ChenXu_20180802 first including all LMM, MMM maps etc. and raw TIFF data as well. We use IMOD porgram ``framewatcher`` to ship the raw data, pcm parameter files, defect file and gain reference file to storage.
-   
-2. Create three folders on W:\\ChenXu_20180802 as *rawTIFF*, *alignedMRC* and *alignedJPG*. 
 
 3. From cygwin shell terminal, go into local folder X:\\ChenXu_20180802 and do this:
    
@@ -39,7 +37,7 @@ Setup for Shipping, alignframes and CTFfindPlot
    
 This will move all the raw files onto storage location, so local SSD never fills.
 
-4. ssh login GPU computer as you and su to "guest", and align movies
+4. ssh login GPU computer as you and su to "guest", make new folders and align movies
 
 
 .. code-block:: ruby
@@ -47,6 +45,7 @@ This will move all the raw files onto storage location, so local SSD never fills
    $ ssh xuchen
    [xuchen@gpu ~]$ su - guest
    [guest@gpu ~]$ cd /mnt/Titan/ChenXu_20180802
+   [guest@gpu ChenXu_20180802]$ mkdir rawTIFF alignedMRC alignedJPG
    [guest@gpu ChenXu_20180802] $ framewatcher -gpu 0 -bin 2 -o 1024 -dtotal 46.5 -pr rawTIFF -after 'mv %{rootName}_powpair.jpg alignedJPG'
    
 This will move raw data files (TIFF, dm4, defect, pcm) into *rawTIFF*, and powerpair JPG files into *alignedJPG*.
