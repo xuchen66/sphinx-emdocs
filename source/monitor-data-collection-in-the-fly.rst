@@ -35,7 +35,7 @@ From cygwin shell terminal on K2 computer, go into local folder X:\\ChenXu_20180
    
 .. code-block:: ruby
 
-   $ framewatcher -nocom -pr W:\ChenXu_2018
+   $ framewatcher -nocom -pr W:\ChenXu_20180802
    
 This will move all the raw files onto storage location, so local SSD never fills.
 
