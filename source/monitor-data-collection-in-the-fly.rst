@@ -47,7 +47,7 @@ This will move all the raw files onto storage location, so local SSD never fills
    [xuchen@gpu ~]$ su - guest
    [guest@gpu ~]$ cd /mnt/Titan/ChenXu_20180802
    [guest@gpu ChenXu_20180802]$ mkdir rawTIFF alignedMRC alignedJPG
-   [guest@gpu ChenXu_20180802]$ framewatcher -gpu 0 -bin 2 -o 1024 -dtotal 46.5 -pr rawTIFF -after 'mv %{rootName}_powpair.jpg alignedJPG'
+   [guest@gpu ChenXu_20180802]$ framewatcher -gpu 0 -bin 2 -po 1024 -dtotal 46.5 -pr rawTIFF -after 'mv %{rootName}_powpair.jpg alignedJPG'
    
 This will move raw data files (TIFF, dm4, defect, pcm) into *rawTIFF*, and powerpair JPG files into *alignedJPG*.
 
