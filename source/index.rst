@@ -31,6 +31,7 @@ Instructions, Manuals and Protocols
    singleparticle_serialem
    post-process-k2-frames
    align-movie-frames-imod
+   monitor-data-collection-in-the-fly
    pixelsize-and-distortion-info
    detach-and-reattach-cistem
    
