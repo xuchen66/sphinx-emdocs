@@ -29,7 +29,7 @@ Setup for Shipping, alignframes and CTFfindPlot
 
 1. Ship raw data from K2 local SSD to storage tank. Assuming storge tank is CIFS mounted onto K2 computer, as W:, and we have a new folder call ChenXu_20180802. We create a folder on local ssd drive X: usually using the same folder name. We collect everying off camera onto this local SSD folder X:\\ChenXu_20180802 first including all LMM, MMM maps etc. and raw TIFF data as well. We use IMOD porgram ``framewatcher`` to ship the raw data, pcm parameter files, defect file and gain reference file to storage.
 
-3. From cygwin shell terminal, go into local folder X:\\ChenXu_20180802 and do this:
+2. From cygwin shell terminal on K2 computer, go into local folder X:\\ChenXu_20180802 and do this:
    
 .. code-block:: ruby
 
@@ -37,12 +37,12 @@ Setup for Shipping, alignframes and CTFfindPlot
    
 This will move all the raw files onto storage location, so local SSD never fills.
 
-4. ssh login GPU computer as you and su to "guest", make new folders and align movies
+3. ssh login GPU computer as you and su to "guest", make new folders and align movies
 
 
 .. code-block:: ruby
 
-   $ ssh xuchen
+   $ ssh xuchen@gpu  
    [xuchen@gpu ~]$ su - guest
    [guest@gpu ~]$ cd /mnt/Titan/ChenXu_20180802
    [guest@gpu ChenXu_20180802]$ mkdir rawTIFF alignedMRC alignedJPG
@@ -50,7 +50,7 @@ This will move all the raw files onto storage location, so local SSD never fills
    
 This will move raw data files (TIFF, dm4, defect, pcm) into *rawTIFF*, and powerpair JPG files into *alignedJPG*.
 
-5. Copy and edit ctffind parameter file (as "guest", in the same folder; we usually create a new terminal from tmux by "Ctrl_B C").
+4. Copy and edit ctffind parameter file (as "guest", in the same folder; we usually create a new terminal from tmux by "Ctrl_B C").
 
 .. code-block:: ruby
 
@@ -84,7 +84,7 @@ edit to fit your situation. The file looks like this:
    no
    EOF
 
-6. plot
+5. plot
 
 .. code-block:: ruby
 
