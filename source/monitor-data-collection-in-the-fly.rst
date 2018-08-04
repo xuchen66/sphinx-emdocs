@@ -89,6 +89,6 @@ edit to fit your situation. The file looks like this:
 
 .. code-block:: ruby
 
-   [guest@gpu ChenXu_20180802]$ ctffindPlot -p alignedMRC 
+   [guest@gpu ChenXu_20180802]$ ctffindPlot
    
-This will generate a plot and continously update a file called *plot.png* which can be loaded into a web browser and let it refresh periodically. All the aligned MRC files will be moved into *alignedMRC* by the plot porgram after done. 
+This will generate a plot and continously update a file called *ctf_plot.png* which can be loaded into a web browser and let it refresh periodically. All the aligned MRC files will be moved into *alignedMRC* by the plot porgram after done. 
