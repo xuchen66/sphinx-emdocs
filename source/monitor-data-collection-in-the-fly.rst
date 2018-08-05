@@ -6,7 +6,7 @@ Monitor Data Collection In The Fly
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2018-08-02 
-:last-Updated: 2018-08-02
+:Last-Updated: 2018-08-04
 
 .. glossary::
 
@@ -47,7 +47,7 @@ This will move all the raw files onto storage location, so local SSD never fills
    [xuchen@gpu ~]$ su - guest
    [guest@gpu ~]$ cd /mnt/Titan/ChenXu_20180802
    [guest@gpu ChenXu_20180802]$ mkdir rawTIFF alignedMRC alignedJPG
-   [guest@gpu ChenXu_20180802]$ framewatcher -gpu 0 -bin 2 -po 1024 -pr rawTIFF -dtotal 46.5
+   [guest@gpu ChenXu_20180802]$ framewatcher -gpu 0 -bin 2 -po 1024 -pr rawTIFF -after 'mv %{rootName}_powpair.jpg alignedJPG' -dtotal 46.5
    
 This will move raw data files (TIFF, dm4, defect, pcm) into *rawTIFF*.
 
