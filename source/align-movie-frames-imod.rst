@@ -168,6 +168,8 @@ From November 23, *alignframes* and *framewatcher* also have options to do dose 
 
 where the total dose on sample is 39.8 electrons/A\ :sup:`2`, accelerating voltage is 200kV. 
 
+If on the storage tank, we have a few subfolders to make things more organized, and we use K2 computer to align, we cando someting like this:
+
 .. note::
 
    Very often, people get confused by the terms "dose" and "dose rate", partially because there seems to have no *official* definition here. 
