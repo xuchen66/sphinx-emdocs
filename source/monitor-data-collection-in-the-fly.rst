@@ -6,7 +6,7 @@ Monitor Data Collection In The Fly
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2018-08-02 
-:Last-Updated: 2018-08-04
+:Last-Updated: 2018-08-15
 
 .. glossary::
 
@@ -21,6 +21,7 @@ Monitor Data Collection In The Fly
       
       This document is mainly for oursleves as a check list. Hopefully, it can also be useful for your setup.  
       
+      For Albert's *ctffindPlot* project, please see https://github.com/alberttxu/ctffindPlot .
 
 .. _setup:
 
