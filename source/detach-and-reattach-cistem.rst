@@ -31,7 +31,7 @@ Installing Xpra on Linux
          
 .. code-block:: ruby
         
-   sudo bash -c "curl https://xpra.org/repos/CentOS/xpra.repo > /etc/yum.repos.d"
+   sudo bash -c "curl https://xpra.org/repos/CentOS/xpra.repo > /etc/yum.repos.d/xpra.repo"
         
 Xpra also supports Fedora, Debian, and Ubuntu. For Debian and Ubuntu, the package manager folder is /etc/apt/sources.list.d
 
