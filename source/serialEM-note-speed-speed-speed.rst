@@ -171,7 +171,7 @@ Alternatively, we can also directly move stage backwards after ResetImageShift. 
    echo Relaxing ...
    MoveStage $moveX $moveY
 
-This can relaxing portion can be put into a function so the script can be neater. 
+This relaxing portion can be put into a function so the script can be neater. 
 
 .. code-block:: ruby
 
