@@ -143,7 +143,7 @@ Moving stage with backlash imposed takes extra time itself. Therefore, we don't 
   
 Here, I asked stage to relax only at final round of iteration. If you use this function, you should update it to include this nice feature. 
 
-Alternatively, we can also directly move stage backwards after ResetImageShift. This can be more accurate for final target position.
+Alternatively, we can also directly move stage backwards after ResetImageShift. The idea is if we know the align shift in last image that is to be cleared out by ResetImageShift command, we know the directions of stage movement and we just stage backwards a little. This again demonstrates the powerfulness of flexibility of SerialEM scripting! 
 
 .. code-block:: ruby
 
