@@ -7,7 +7,7 @@ SerialEM Note: Speed, Speed and Speed
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Created: 2017-12-26
-:Updated: 2018-05-26
+:Updated: 2018-08-23
 
 .. glossary::
 
@@ -171,6 +171,46 @@ Alternatively, we can also directly move stage backwards after ResetImageShift. 
    echo Relaxing ...
    MoveStage $moveX $moveY
 
+This can relaxing portion can be put into a function so the script can be neater. 
+
+.. code-block:: ruby
+
+   AlignTo $buffer      # comment out this line if last action is RealignToNavItem
+   ResetImageShift
+   CallFunction Relax
+
+   Function Relax 0 0
+   ## relax
+   # report shift in buffer A from last round of Align
+   # move stage 0.025um in opposite directions
+   ReportAlignShift
+   shiftX = $repVal5
+   shiftY = $repVal6
+   
+   # just in case it got a blank image so no shift found
+   If $shiftX == 0 OR $shiftY == 0
+      signX = 0
+      signY = 0
+   Else
+      signX = $shiftX / ABS ( $shiftX )
+      signY = $shiftY / ABS ( $shiftY )
+   Endif
+   
+   moveX = -1 * $signX * 0.025
+   moveY = -1 * $signY * 0.025
+   echo Relaxing ...
+   MoveStage $moveX $moveY
+   EndFunction
+  
+And if you allow final position with a little Image Shift (very OK with coma compensation in place), then this part positioning can be accurate and simple:
+
+.. code-block:: ruby
+
+   AlignTo $buffer      # comment out this line if last action is RealignToNavItem
+   ResetImageShift
+   CallFunction Relax
+   AlignTo $buffer      # final round of align to buffer, so position is accurate
+   
 .. _using_compression:
 
 Using Compression on K2 Data
