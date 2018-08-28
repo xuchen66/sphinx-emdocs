@@ -24,11 +24,8 @@ Installation
 Here are steps to follow. 
 
 1. Ask David for the initial system file. Normally, you would fill out a "questionnaire" available at the ftp server - http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to David. David will then create a framework file on the same ftp server for you to download. This framework file is a zip file, you can download it to local like Desktop and unzip it by double clicking on the file. Beside a sub-folder "Admin" created under C:\\ProgramData\\SerialEM, the most important file in the framework is one initial system file called "SerailEMproperties.txt". You must have this file to get started. 
-
-From SerialEM webpage, the updated info is here: 
-"Program and configuration files are available on the download site. Follow the instructions in the README file to get started. As a first step, it is highly recommended that you fill out the questionnaire, in Word doc form (preferably) or in plain text form, and send it to serialemsupport@colorado.edu; we will prepare an initial configuration file. Installations on new JEOL microscopes are usually done with the assistance of Jaap Brink from JEOL, so he should be contacted in those cases (jbrink at jeol dot com).
-
-Guenter Resch from Nexperion offers SerialEM installation and training for both Thermo Fisher and JEOL microscopes. This service is available worldwide, but visa arrangements for the the United States may need extra attention. Chen Xu at the University of Massachusetts Medical School and Gabriel Frank at Ben Gurion University in Israel may also be willing to help with installation; email 
+From SerialEM webpage, the **updated** info is here: 
+"Program and configuration files are available on the download site. Follow the instructions in the README file to get started. As a first step, it is highly recommended that you fill out the questionnaire, in Word doc form (preferably) or in plain text form, and send it to serialemsupport@colorado.edu; we will prepare an initial configuration file. Installations on new JEOL microscopes are usually done with the assistance of Jaap Brink from JEOL, so he should be contacted in those cases (jbrink at jeol dot com). Guenter Resch from Nexperion offers SerialEM installation and training for both Thermo Fisher and JEOL microscopes. This service is available worldwide, but visa arrangements for the the United States may need extra attention. Chen Xu at the University of Massachusetts Medical School and Gabriel Frank at Ben Gurion University in Israel may also be willing to help with installation; email 
 http://bio3d.colorado.edu/imod/mastaddr.png
 for contact information. “
 
