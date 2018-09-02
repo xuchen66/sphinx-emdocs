@@ -25,8 +25,8 @@ Instructions, Manuals and Protocols
 .. toctree::
    :maxdepth: 4
  
-   cm120_instruction
-   ccds_cm120
+   .. cm120_instruction
+   .. ccds_cm120
    make-graphene-oxide-grid
    singleparticle_serialem
    post-process-k2-frames
