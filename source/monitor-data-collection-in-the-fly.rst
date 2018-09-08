@@ -48,9 +48,9 @@ This will move all the raw files onto storage location, so local SSD never fills
    [xuchen@gpu ~]$ su - guest
    [guest@gpu ~]$ cd /mnt/Titan/ChenXu_20180802
    [guest@gpu ChenXu_20180802]$ mkdir rawTIFF alignedMRC alignedJPG
-   [guest@gpu ChenXu_20180802]$ framewatcher -gpu 0 -bin 2 -po 1024 -pr rawTIFF -after 'mv %{rootName}_powpair.jpg alignedJPG' -dtotal 46.5
+   [guest@gpu ChenXu_20180802]$ framewatcher -gpu 0 -bin 2 -po 1024 -pr rawTIFF -thumb alignedJPG -dtotal 46.5
    
-This will move raw data files (TIFF, dm4, defect, pcm) into *rawTIFF*.
+This will move raw data files (TIFF, dm4, defect, pcm) into *rawTIFF* and _powpair.jpg into *alignedJPG*. You can also add an option "-o alignedMRC" to move all the aligned MRC files into that folder *alignedMRC*.
 
 3. Copy and edit ctffind parameter file (as "guest", in the same folder; we usually create a new terminal from tmux by "Ctrl_B C").
 
