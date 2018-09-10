@@ -58,7 +58,7 @@ This will move all the raw files onto storage location, so local SSD never fills
    
 This will move raw data files (TIFF, dm4, defect, pcm) into *rawTIFF* and _powpair.jpg into *alignedJPG*. You can also add an option "-o alignedMRC" to move all the aligned MRC files into that folder *alignedMRC*.
 
-As mentioned above, one can also run a few jobs of framewatcher from multiple directories separately, so speed thing up, with or without a GPU card. You can manually run the command from tmp1, tmp2, tmp3 and tmp4. You can also ask a simple shell script to do that. The only disadvanges might you have to "kill" when you need to because you cannot do Ctrl_C in this case. 
+As mentioned above, one can also run a few jobs of framewatcher from multiple directories separately, so speed thing up, with or without a GPU card. You can manually run the command from tmp1, tmp2, tmp3 and tmp4. You can also ask a simple shell script to do that. The only disadvange might that you have to "kill" when you need to stop *framewatcher* because you cannot do Ctrl_C from shell interactively in this case. 
 
 .. code-block:: ruby
 
@@ -67,7 +67,7 @@ As mentioned above, one can also run a few jobs of framewatcher from multiple di
    for dir in tmp[1-4] ;
    do 
       cd $dir 
-      framewatcher -bin 2 -po 1024 -pr ../rawTIFF -thumb ../alignedJPG -thr 4 -dto tal 46.5 & 
+      framewatcher -bin 2 -po 1024 -pr ../rawTIFF -thumb ../alignedJPG -thr 4 -dtotal 46.5 & 
       cd ..
    done
 
