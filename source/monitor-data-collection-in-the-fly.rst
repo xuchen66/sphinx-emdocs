@@ -6,7 +6,7 @@ Monitor Data Collection In The Fly
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2018-08-02 
-:Last-Updated: 2018-09-09
+:Last-Updated: 2018-09-10
 
 .. glossary::
 
@@ -67,7 +67,7 @@ As mentioned above, one can also run a few jobs of framewatcher from multiple di
    for dir in tmp1 tmp2 tmp3 tmp4 ;
    do 
       cd $dir 
-      framewatcher -bin 2 -po 1024 -pr ../rawTIFF -thumb ../alignedJPG -thr 4 -dtotal 46.5 & 
+      framewatcher -bin 2 -po 1024 -o ../ -pr ../rawTIFF -thumb ../alignedJPG -thr 4 -dtotal 46.5 & 
       cd ..
    done
 
