@@ -64,7 +64,7 @@ As mentioned above, one can also run a few jobs of framewatcher from multiple di
 
    #!/bin/bash
 
-   for dir in tmp1 tmp2 tmp3 tmp4 ;
+   for dir in tmp{1..4} ;
    do 
       cd $dir 
       framewatcher -bin 2 -po 1024 -o ../ -pr ../rawTIFF -thumb ../alignedJPG -thr 4 -dtotal 46.5 & 
