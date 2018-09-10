@@ -64,7 +64,7 @@ As mentioned above, one can also run a few jobs of framewatcher from multiple di
 
    #!/bin/bash
 
-   for dir in tmp[1-4] ;
+   for dir in tmp1 tmp2 tmp3 tmp4 ;
    do 
       cd $dir 
       framewatcher -bin 2 -po 1024 -pr ../rawTIFF -thumb ../alignedJPG -thr 4 -dtotal 46.5 & 
@@ -112,3 +112,9 @@ edit to fit your situation. The file looks like this:
    [guest@gpu ChenXu_20180802]$ ctffindPlot
    
 This will generate a plot and continously update a file called *ctf_plot.png* which can be loaded into a web browser and let it refresh periodically. All the aligned MRC files will be moved into *alignedMRC* by the plot porgram after done. 
+
+For convenience, there are a few parameter files for common conditions which you can directly use with option "-t". 
+
+.. code-block:: ruby
+
+   [guest@gpu ChenXu_20180802]$ ctffindPlot -t /usr/local/ctffindPlot/ctffind_params/Titan_130k_NoVPP.txt
