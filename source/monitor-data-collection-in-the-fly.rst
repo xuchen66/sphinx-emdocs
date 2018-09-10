@@ -6,7 +6,7 @@ Monitor Data Collection In The Fly
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2018-08-02 
-:Last-Updated: 2018-08-15
+:Last-Updated: 2018-09-09
 
 .. glossary::
 
@@ -38,6 +38,12 @@ From cygwin shell terminal on K2 computer, go into local folder X:\\ChenXu_20180
 
    $ framewatcher -nocom -pr W:\ChenXu_20180802
    
+From today - Sept 09, 2018 the latest package (currently in nightly builds) supports multiple processed folders so the collected files can be shipped into several folders. This is very useful to align them parallelly by running alignframes from inside of each folder seprately. A example is below:
+
+.. code-block:: ruby
+
+   $ framewatcher -nocom -pr W:\ChenXu_20180802\tmp1 -pr W:\ChenXu_20180802\tmp2 -pr W:\ChenXu_20180802\tmp3 -pr W:\ChenXu_20180802\tmp4
+   
 This will move all the raw files onto storage location, so local SSD never fills.
 
 2. ssh login GPU computer as you and su to "guest", make new folders and align movies
@@ -51,6 +57,19 @@ This will move all the raw files onto storage location, so local SSD never fills
    [guest@gpu ChenXu_20180802]$ framewatcher -gpu 0 -bin 2 -po 1024 -pr rawTIFF -thumb alignedJPG -dtotal 46.5
    
 This will move raw data files (TIFF, dm4, defect, pcm) into *rawTIFF* and _powpair.jpg into *alignedJPG*. You can also add an option "-o alignedMRC" to move all the aligned MRC files into that folder *alignedMRC*.
+
+As mentioned above, one can also run a few jobs of framewatcher from multiple directories separately, so speed thing up, with or without a GPU card. You can manually run the command from tmp1, tmp2, tmp3 and tmp4. You can also ask a simple shell script to do that. The only disadvanges might you have to "kill" when you need to because you cannot do Ctrl_C in this case. 
+
+.. code-block:: ruby
+
+   #!/bin/bash
+
+   for dir in tmp[1-4] ;
+   do 
+      cd $dir 
+      framewatcher -bin 2 -po 1024 -pr ../rawTIFF -thumb ../alignedJPG -thr 4 -dto tal 46.5 & 
+      cd ..
+   done
 
 3. Copy and edit ctffind parameter file (as "guest", in the same folder; we usually create a new terminal from tmux by "Ctrl_B C").
 
