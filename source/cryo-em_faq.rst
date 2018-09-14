@@ -198,7 +198,7 @@ UMass Med School has firewall and VPN in place. There is no way to "pull" data f
 
 - The data can be also send to you after copying onto a portable HDD drive with USB3 interface. Default NTFS filesystem coming with most of the HDD is usually working fine. 
 
-- AWS. Cloud is becoming reasobanle way to store and compute data. If you setup AWS S3 bucket, and you link that with our ID and secret key, we can upload onto AWS S3 bucket easily. The overall speed is not very fast, but it seems to be not bad either. For institutions who already have this, we recommend to use this way. 
+- AWS. Cloud is becoming reasonable and attractive way to store and compute data. If you setup AWS S3 bucket, and you link that with our ID and secret key, we can upload onto AWS S3 bucket easily. The overall speed is not very fast, but it seems to be not bad either. For institutions who already have this, we recommend to use this way. 
 
 
 
