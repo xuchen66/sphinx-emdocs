@@ -190,7 +190,7 @@ What is ...
 ... the method I can get my data after collected at your facility?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-UMass Med School has firewall and VPN in place. There is no way to "pull" data from our storage without establishing VPN first. However, outbound trafic - "push" is possible. There are three ways we can send data to you. 
+UMass Med School has firewall and VPN in place. There is no way to "pull" data from our storage without establishing VPN first. However, outbound traffic - "push" is possible. There are three ways we can send data to you. 
 
 - At Harvard Medical School, some labs ask SBGrids folks to setup a DropBox like account for their lab. With specific command, we can push data directly from our storage to HMS special DropBox location. It is then easy to transfer internally then. 
 
