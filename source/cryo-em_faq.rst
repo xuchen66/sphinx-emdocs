@@ -15,7 +15,7 @@ How do I ...
 
 Please follow this site for main direction. https://www.umassmed.edu/bmp/about/directions/
 
-We are located at Medical School Building - A floor SA-106. After exit at elevator as A floor, turn left. Half way down the hall way, you will see signed for "CryoEM Core Facility". Call facility office # 774 455 4049 if you are lost. 
+We are located at Medical School Building - A floor SA-106. After exiting elevator at A floor, turn left. Half way down the hallway, you will see signed for "CryoEM Core Facility". Call facility office # 774 455 4049 if you are lost. 
 
 .. _display:
 
