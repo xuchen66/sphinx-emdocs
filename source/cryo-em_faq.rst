@@ -8,6 +8,15 @@ This is list of Frequently Asked Questions about Umass Cryo-EM. Some questions a
 How do I ...
 ------------
 
+.. _direction:
+
+... get to your facility location?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Please follow this site for main direction. https://www.umassmed.edu/bmp/about/directions/
+
+We are located at Medical School Building - A floor SA-106. After exit at elevator as A floor, turn left. Half way down the hall way, you will see signed for "CryoEM Core Facility". Call facility office # 774 455 4049 if you are lost. 
+
 .. _display:
 
 ... display the screened data on my own computer locally?
