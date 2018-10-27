@@ -185,10 +185,10 @@ I listed a few things here that I paid attention to.
    to FEI computer for COM port communication for remoteTEM running on FEI scope for scope function calls. This one is easy to miss. I 
    end up using remote KVM system for USB signal too, even the KVM was bought for AV signal originally. 
 
-#. Only starting computer we hear huge jet engine kind of laud sounds. After it is running, it is not too bad. I heard some lab 
-   are testing to use soundproof rack to host the computer. If this is no concern for vibration, then it would be better to locate
-   the K3 computer and soundproof rack in the scope room. I would like that a lot. Not sure how much more heat load this one compared 
-   to K2 computer plus its processors though. 
+#. Only at starting computer, we hear huge jet engine kind of laud sounds. After it is running, it is not too bad. I heard some lab 
+   were testing to use soundproof rack to host the computer. If this is no concern for vibration, then it would be better to locate
+   the K3 computer and soundproof rack in the scope room. I would like that a lot. Not sure how much more heat load this one gives
+   compared to previously K2 computer plus its processors though. 
    
 #. There is Nvidia cark K2200 for monitor display. That one doesn't have HDMI port, only two DisplayPort ports. If you need to buy
    KVM for remote purpose, make sure to buy the unit taht supports DisplayPort directly. DP to HDMI converter might not give 
