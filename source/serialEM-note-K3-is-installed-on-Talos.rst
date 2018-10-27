@@ -44,9 +44,9 @@ SerialEM calibration.
 
 #. Image Shift calibration for all the mags to be used.
 
-#. Pixelsizes at mag index 4, 16 and 17. They are 46X(LM), 2300X(LM) and 1250X (M). Note: *this is only to get SerialEM going, 
-   precise measurement of pixelsize at final image mags will need to be done carefully using different methods, for high resolution 
-   image processing.* 
+#. Pixelsizes at mag index 4, 16 and 17. They are 46X(LM), 2300X(LM) and 1250X (M). *Note: This is only to get SerialEM going, 
+   more precise measurement of pixelsize at final image mags will need to be done carefully using different methods, for high 
+   resolution image processing.* 
    
 #. Stage Shift calibration for mag index 4, 16 and 17. They are 46X(LM), 2300X(LM) and 1250X (M). Double check tilting axis 
    angles from this step too. 
