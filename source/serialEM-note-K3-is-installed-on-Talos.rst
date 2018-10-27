@@ -135,8 +135,24 @@ In our case, when all above conditions are met, the green LED "shutter" indicato
 orange color LED indicator on Channel C will be lit when idle. It blinks when a shot is taken from DM or SerialEM. If you take an 
 exposure for 3 seconds, the LED will disappear for 3 seconds. The two images below show Gatan Power Supply unit and FEI CSU unit:
 
+**Fig.1 Gatan K3 Camera Power Supply Unit**
 
+.. image:: ../images/K3-PS.png
+   :scale: 75 %
+..   :height: 544 px
+   :width: 384 px
+   :alt: DUMMY instance property
+   :align: center
 
+**Fig.2 FEI Shutter Router Unit (CSU)**
+
+.. image:: ../images/CSU.png
+   :scale: 75 %
+..   :height: 544 px
+   :width: 384 px
+   :alt: DUMMY instance property
+   :align: center
+   
 Please note: at least in our case, there is nothing change to monitor shutter status from CCD/TV camera interface or FEI's Jave program 
 "Shutter Blanker Monitor". This is probably due to Gatan camera is "external" camera.
 
