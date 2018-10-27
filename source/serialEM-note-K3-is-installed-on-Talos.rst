@@ -94,7 +94,8 @@ The K3 camera section of properties is below:
     PixelSizeInMicrons	     5.0  
     #CountsPerElectron	     #37.55	not needed for K3 # measured at 3.15 e/p/s
     ExtraRotation	             0.
-    # MagIndex  DeltaRotation (999 not measured)  SolvedRotation (999 not measured)   Pixel size (nm, 0 not measured)
+    # MagIndex  DeltaRotation (999 not measured)  SolvedRotation (999 not measured)   
+    # Pixel size (nm, 0 not measured)
     ##RotationAndPixel 33 0.04 999 0.0749
     #RotationAndPixel 1 999 -3.9 0
     #RotationAndPixel 4 999 -102.4 0
