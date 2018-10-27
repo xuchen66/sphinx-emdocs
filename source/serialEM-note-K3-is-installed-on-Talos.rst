@@ -1,4 +1,4 @@
-
+y
 .. _SerialEM_K3_installed_on_Talos:
 
 SerialEM Note: K3 is installed on Talos
@@ -40,21 +40,24 @@ SerialEM Control
 It was pretty easy to get good control of K3 camera based on previous K2 camera setup. There are only a few things we needed to redo for 
 SerialEM calibration. 
 
-1. Image Shift calibration for all the mags to be used
+1. Camera Timing and Shutter Dead Time.
 
-2. Pixelsizes at mag index 4, 16 and 17. They are 46X(LM), 2300X(LM) and 1250X (M). Note: *this is only to get SerialEM going, precise 
-measurement of pixelsize at final image mags will need to be done carefull using different methods.* 
+#. Image Shift calibration for all the mags to be used.
 
-3. Stage Shift calibration for mag index 4, 16 and 17. They are 46X(LM), 2300X(LM) and 1250X (M). Double check tilting axis angles from 
-this step too. 
+#. Pixelsizes at mag index 4, 16 and 17. They are 46X(LM), 2300X(LM) and 1250X (M). Note: *this is only to get SerialEM going, 
+   precise measurement of pixelsize at final image mags will need to be done carefully using different methods, for high resolution 
+   image processing.* 
+   
+#. Stage Shift calibration for mag index 4, 16 and 17. They are 46X(LM), 2300X(LM) and 1250X (M). Double check tilting axis 
+   angles from this step too. 
 
 The K3 camera section of properties is below:
 
 .. code-block:: ruby
 
-    CameraProperties	     1
+    CameraProperties	         1
     Name	                     K3
-    K2Type	                     3
+    K2Type	                  3
     DMGainReferenceName	     K3-18140113 Gain Ref. x1.m0.dm4
     # THESE 5 WILL NEED CHANGING IF CAMERA ORIENTATION CHANGES
     CameraSizeX	             5760
@@ -69,31 +72,31 @@ The K3 camera section of properties is below:
     YMustBeMultipleOf	     2
     FourPortReadout	             0
     Binnings	             1 2 3 4 5 6 8
-    BasicCorrections	     49
+    BasicCorrections	         49
     HotPixelsAreImodCoords	     1
     #DarkXRayAbsoluteCriterion   20
     #DarkXRaySDCriterion	     15
     #DarkXRayRequireBothCriteria 1
-    MaximumXRayDiameter	     6
-    BeamBlankShutter	     0
-    OnlyOneShutter	             1
+    MaximumXRayDiameter	         6
+    BeamBlankShutter	            0
+    OnlyOneShutter	            1
     StartupDelay                 1.195
     ExtraBeamTime                0.10
     BuiltInSettling              0.0 
     ShutterDeadTime	             0.00		
     MinimumDriftSettling	     0.05
     MinimumBlankedExposure       0.35
-    ExtraUnblankTime	     0.012
+    ExtraUnblankTime	            0.012
     ExtraOpenShutterTime	     0.12
-    Retractable	             1
+    Retractable	               1
     InsertionDelay	             5.0
     RetractionDelay	             3.0
-    GIF	                     0
+    GIF	                        0
     Order                        2
     FilmToCameraMagnification    1.31	# orig=1.342
-    PixelSizeInMicrons	     5.0  
-    #CountsPerElectron	     #37.55	not needed for K3 # measured at 3.15 e/p/s
-    ExtraRotation	             0.
+    PixelSizeInMicrons	         5.0  
+    #CountsPerElectron	         #37.55	not needed for K3 # measured at 3.15 e/p/s
+    ExtraRotation	               0.
     # MagIndex  DeltaRotation (999 not measured)  SolvedRotation (999 not measured)   
     # Pixel size (nm, 0 not measured)
     ##RotationAndPixel 33 0.04 999 0.0749
@@ -121,13 +124,17 @@ you might or might not notice it promptly. You might still get image, but your s
 With properly working shutter, the beam will get blanked if following conditions are all met:
 
 1. Hardware components are communicating with each other normally. 
+
 #. DM is running and K3 camera is in inserted position.
+
 #. Software configuration in DM interface - Camera Configuration has set properly as idle state for shutter one "Pre-specimen" 
    to be closed. There is normally only single shutter cable from Gatan MIB box - shutter 1 connecting to FEI shutter router 
    "CSU" box at one of the channels. This is an BNC connctor. In our case, it connects to Channel C - *Blanker*. Make sure 
    it is the blanker, as the other one on CSU channel "shutter" means below specimen. 
+
 #. large screen of scope is in raised position (large screen is a switch to trigger sending or retracting 5V signal through 
    the shutter cable.).
+
 #. In FEI scope "CCD/TV Camera" interface, make sure the fake camera name assgined for K2/K3 (Falcon in our case) is selected 
    from the list and "insert" button is in yellow color. Click on it if this is not. This is to tell FEI CSU shutter router to 
    let Channel C take control.
@@ -165,114 +172,28 @@ take an image of ice sample or plastic sample in lower mag, and you check if you
 Other things to Watch
 ---------------------
 
-#. Make sure your camera computer and microscope computer are on the same network. For example, K2 computer can be configured to have a network interface with IP address 192.168.1.2, and FEI scope with 192.168.1.1. And they should be able to *ping* each other. You might be confused by Gatan's DM aleady being able to communicate with scope, as it can detect magnification change of scope. However, this DM connection to scope is usually via serial port by a direct serial cable. SerialEM uses standard TCP/IP to communicate to a remote computer and therefore requires a standard network setup in place. 
+I listed a few things here that I paid attention to.
 
-#. Decide which computer to install SerialEM. In theory, you can install SerialEM on either computer - camera or microscope. For K2 camera, SerialEM should be normally installed on the K2 computer, as K2 image returning to SerialEM is usually faster than via network. 
+1. Camera mounting orientation. This is not critical but can give you a easier life later. Our camera is mounted in the way that camera 
+   insertion is toward autoloader. Then there is no need to configure camera rotation and flip in DM configuration. 
 
-#. Decide which type of executable to use. SerialEM builds for both 32 and 64-bit platforms. Unless you have to run it on a Windows XP, you should choose 64-bit. 
-
-#. Download SerialEM software. You should start with the latest release version from ftp server at http://bio3d.colorado.edu/ftp/SerialEM/  and save it somewhere local like Desktop.  
-
-#. Unzip the installation package file downloaded. You can double click on this file, it will unzip the program into C:\\Program Files\\SerialEM. The folder "SerialEM" will be created automatically if there isn't one already. The new package content will be unzipped into a new sub-folder, e.g. SerialEM_3-6-13_64. 
+#. There is no exsiting availble fiber NIC for us to use. However, there is a cat6 NIC on the motherboard you can use. I prefer to have 
+   fiber NIC for faster data transfer so I added one PCI-E 8X 10GbE netword card into the main computer. It sits in the very first 
+   PCI-E slot on the top. I literually get ~1Gbps real data transfer speed, from SSD Raid X drive to my storage via CIFS. 
    
-#. Quit Gatan DM if it is running. 
+#. I pre-odered extended data cable bundle, that includes 5 fiber bundles and one cat6 cable. It also need a long USB cable to connect 
+   to FEI computer for COM port communication for remoteTEM running on FEI scope for scope function calls. This one is easy to miss. I 
+   end up using remote KVM system for USB signal too, even the KVM was bought for AV signal originally. 
 
-#. Double click on a file called *install.bat* in the package folder C:\\Program Files\\SerialEM\\SerialEM_3-6-13_64. This will copy some files into upper folder which is C:\\Program Files\\SerialEM, register DM plugin file and copy it to the Gatan plugin folder at C:\\ProgramData\\Gatan\\Plugin. 
-
-#. Manually copy a file called *FEI-SEMServer.exe* from C:\\Program Files\\SerialEM on K2 computer to C:\\Program Files\\SerialEM on scope computer. This is a bridging program to control scope by passing the scope function calls between SerialEM main program on remote K2 computer and the scope scripting interface. Run the program by double clicking on it(it needs to run or SerialEM cannot control scope). This is 32-bit application, runs on both 32 and 64-bit Windows platforms. So there is only one such executable to run on Windows 7, XP or 2000 Windows OS. 
-
-#. On K2 computer, Edit *SerialEMproperties.txt* file in folder C:\\ProgramData\\SerialEM to have proper lines in general property area to define network properties. 
-
-.. code-block:: ruby
-
-   #GatanServerIP 192.168.1.2
-   GatanServerIP 127.0.0.1
-   GatanServerPort 48890 
-   SocketServerIP 1 192.168.1.1
-   SocketServerPort 1 48892
-
-11. On K2 computer which SerialEM is to be installed, define a system environment variable SERIALEMCCD_PORT with the value 48890 or other selected port number, as described in the section in helpfile. 
-
-If everything goes north, you should be able to start SerialEM and it should connect to "see" both scope and DM. Congratulations!
-
-.. _Calibration:
-
-Calibration 
------------
-
-Although most of calibration results will be written into another system file *SerialEMcalibraions.txt* when you save the calibrtion from Calibretion menu, there are a few places you need to manully edit the *SerialEMproperties.txt* to take in the calibration results. These include pixelsize and tilting axis angle - they are more like instrument parameters. 
-
-0. Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam. If it doesn't, try to adjust the camera orientation of Gatan K2 camera from Camera - Configuration. You can use beamstop to help.  You should add a property entry to reflect the DM configuration so SerialEM takes care of it even someone might have changed DM configuration. 
-
-.. code-block:: ruby
-
-   DMRotationAndFlip 7
-
-#. Edit property file to define the camera configuration information about orientation determined by step 0. SerialEM will return to main display with proper orientation. This is initial starting point for all the calibrations.
-
-.. code-block:: ruby
-
-   RotationAndFlip 7
-
-2. SerialEM - Calibration - List Mag. Scope will go through all the mags and list them on log window, from lowest to highest. Check it with what are in *SerialEMproperties.txt*, update that if needed.  
-
-#. Load standard waffle grating grid (TedPella Prod.# 607, http://www.tedpella.com/calibration_html/TEM_STEM_Test_Specimens.htm#_607).
-
-#. Start with lowest magnification above LM range. On Talos, it is 1250X. At close to Eucentricity, and clost to eucentric focus. 
-
-#. Take a T shot with 2x binning on a K2 camera, make sure the counts are neither too low nor too high. 
-
-#. Take a T shot, then Calibration - Pixel Size - Find Pixel Size. The log window shows both mag index and pixel size. Edit *SerialEMproperties.txt* to add a line like below in K2 camera property section. 
-
-.. code-block:: ruby
-
-   # MagIndex  DeltaRotation (999 not measured)  SolvedRotation (999 not measured)   Pixel size (nm, 0 not measured)
-   RotationAndPixel 17 999 999 3.396
+#. Only starting computer we hear huge jet engine kind of laud sounds. After it is running, it is not too bad. I heard some lab 
+   are testing to use soundproof rack to host the computer. If this is no concern for vibration, then it would be better to locate
+   the K3 computer and soundproof rack in the scope room. I would like that a lot. Not sure how much more heat load this one compared 
+   to K2 computer plus its processors though. 
    
-Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
+#. There is Nvidia cark K2200 for monitor display. That one doesn't have HDMI port, only two DisplayPort ports. If you need to buy
+   KVM for remote purpose, make sure to buy the unit taht supports DisplayPort directly. DP to HDMI converter might not give 
+   4K resolution that 32 inch Dell 4K monitor offers. 
+   
+#. You should check water flow and pressure gauge often for a fresh installed K3, as they might change a bit in the beginning. 
 
-7. Calibration - Image & Stage Shift - IS from Scratch.
-
-#. Calibration - Image & Stage Shift - Stage Shift.
-
-#. Calibration - Administrator, turn it on.
-
-#. Calibration - Save Calibration. 
-
-#. Take the tilting axis value (e.g. 86.1) from step 8 - stage shift calibration, edit it into the 2nd "999" in *SerialEMproperties.txt* like below.
-
-.. code-block:: ruby
-
-   RotationAndPixel 17 999 86.1 3.396
-
-.. Note:: 
-   The pixel size and tilting axis can just be done for a couple of switching mags such as the lowest M and the highest LM. 
-   SerialEM uses these a couple of calibrations and all the Image Shift calibration to inpterpolate to obtain the pixelsize and tilting 
-   axis angle for all other magnifications. This is very cute. 
-
-12. Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
-
-#. Repeat above step to cover all the magnification till the highest to be used such as 100kX. 
-
-#. Now bring scope to highest LM mag (2300X on Talos), remove Obj aperture; do pixel size, image shift calibration, stage shift calibration; edit property file to take in pixel size and tilting axis angle and save the calibrations. 
-
-#. Decrease Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
-
-#. Repeat above step to cover all magnication till the lowest to use like 46X. 
-
-#. At about 20kX, do Autofocus calibration (only need to do at single mag).
-
-#. Beam Crossover claibration
-
-#. Start with most used spotsize like 7, do Beam Intensity calibration 
-
-#. repeat Beam Intensity Calibration for all other spot sizes likely to be used - 3,4,5,6,8,9.
-
-#. At one mag like 5000X, using spot size 9, do Beam Shift Calibration (only need to do at single mag).
-
-#. Usually, people use the lowest M mag for Low Dose View beam and with large defocus offset such as -200 or -300 mirons. You need to the calibrate High-Defocus Mag for this View mag. This will make stage shifts still good for such large defocus, as they are interpolated with defocus offset. 
-
-.. Note::
-
-   - Waffle grating grid is good and handy for pixel size calibration, but it is not ideal for Image Shift and Stage Shift calibrations, as the waffle pattern might screw up the correlation in the calibration procedures. I found the normal Quantifoil grid with some 10nm Au particles absorbed onto can be very good for normal calibration purpose. I glow discharge a Quantifoil grid and add 1 *ul* deca-gold solution on the grid and let it dry. 
-   - Most of SerialEM actions are cross-correlation based including calibration. Therefore, a clean and recent preparation of camera gain reference file is desired, because it will help to have less screw-up due to fixed noise pattern dominating the cross-correlation. 
+#. K3 outputs more data than K2, one has to deal with storage capacity seriously if you run a scope in effcient way. 
