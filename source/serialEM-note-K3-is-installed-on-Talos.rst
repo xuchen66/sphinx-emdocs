@@ -135,13 +135,15 @@ With properly working shutter, the beam will get blanked if following conditions
 
 #. In FEI scope "CCD/TV Camera" interface, make sure the fake camera name assgined for K2/K3 (Falcon in our case) is selected 
    from the list and "insert" button is in yellow color. Click on it if this is not. This is to tell FEI CSU shutter router to 
-   let Channel C take control.
+   let Channel C take control electronically, not to mechanically insert K3 camera, as K3 is not fully integrated into FEI TIA system. 
+   This is a standalone camera in that sense. Newer version of FEI software no longer requires to add a fake camera onto camera list.
+   Instead, there is a large button "Standalone Camera" to be clicked to do the same. 
 
 In our case, when all above conditions are met, the green LED "shutter" indicator on K3 power supply unit should be on. The "Blanker" 
 orange color LED indicator on Channel C will be lit when idle. It blinks when a shot is taken from DM or SerialEM. If you take an 
 exposure for 3 seconds, the LED will disappear for 3 seconds. The two images below show Gatan Power Supply unit and FEI CSU unit:
 
-**Fig.1 Gatan K3 Camera Power Supply Unit**
+**Fig.1 Gatan K3 Camera Power Supply Unit** (click for full size image)
 
 .. image:: ../images/K3-PS.png
    :scale: 15 %
@@ -151,7 +153,7 @@ exposure for 3 seconds, the LED will disappear for 3 seconds. The two images bel
    :align: center
 
 
-**Fig.2 FEI Shutter Router Unit (CSU)**
+**Fig.2 FEI Shutter Router Unit (CSU)** (click for full size image)
 
 .. image:: ../images/CSU.png
    :scale: 15 %
@@ -163,8 +165,7 @@ exposure for 3 seconds, the LED will disappear for 3 seconds. The two images bel
 Please note: at least in our case, there is nothing change to monitor shutter status from CCD/TV camera interface or FEI's Jave program 
 "Shutter Blanker Monitor". This is probably due to Gatan camera is "external" camera.
 
-To make absolute sure the shutter is working properly, check it with burn marker method. You lift large screen and wait for sometime and 
-take an image of ice sample or plastic sample in lower mag, and you check if you see any sign of burn marker.   
+To make absolutely sure the shutter is working properly, check it with burn marker method. You lift large screen and wait for sometime and take an image of ice sample or plastic sample in a lower mag, and you check if you see any sign of burn marker.   
 
 .. _watch:
 
@@ -178,7 +179,7 @@ I listed a few things here that I paid attention to.
 
 #. There is no exsiting availble fiber NIC for us to use. However, there is a cat6 NIC on the motherboard you can use. I prefer to have 
    fiber NIC for faster data transfer so I added one PCI-E 8X 10GbE netword card into the main computer. It sits in the very first 
-   PCI-E slot on the top. I literually get ~1Gbps real data transfer speed, from SSD Raid X drive to my storage via CIFS. 
+   PCI-E slot from the top. I literually get ~1Gbps real data transfer speed, from SSD Raid X drive to my storage via CIFS. 
    
 #. I pre-odered extended data cable bundle, that includes 5 fiber bundles and one cat6 cable. It also need a long USB cable to connect 
    to FEI computer for COM port communication for remoteTEM running on FEI scope for scope function calls. This one is easy to miss. I 
@@ -199,5 +200,5 @@ I listed a few things here that I paid attention to.
 
 #. Our K3 system package came with a GP100 Nvidia card. Also there is MotionCor2 utility via DM interface. However, there is no 
    way to access to MotionCor2 outside of DM. Fortunitely, we can still utilize the powerful GPU card. If we run *framewatcher* 
-   to align ~30-40 Super-res frames, it can do as fast as ~ 10 seconds for one stack. This is at least sufficient for our 
+   to align ~30-40 Super-res frames, it can do as fast as ~ 10 seconds for one stack. This is  sufficient at least for our 
    monitoring purpose. Very nice indeed! 
