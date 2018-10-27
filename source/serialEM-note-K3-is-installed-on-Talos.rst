@@ -136,8 +136,8 @@ With properly working shutter, the beam will get blanked if following conditions
 #. In FEI scope "CCD/TV Camera" interface, make sure the fake camera name assgined for K2/K3 (Falcon in our case) is selected 
    from the list and "insert" button is in yellow color. Click on it if this is not. This is to tell FEI CSU shutter router to 
    let Channel C take control electronically, not to mechanically insert K3 camera, as K3 is not fully integrated into FEI TIA system. 
-   This is a standalone camera in that sense. Newer version of FEI software no longer requires to add a fake camera onto camera list.
-   Instead, there is a large button "Standalone Camera" to be clicked to do the same. 
+   This is a standalone camera in that sense. In fact, newer version of FEI software no longer requires to add a fake camera onto 
+   camera list. Instead, there is a large button "Standalone Camera" to be clicked to do the same. 
 
 In our case, when all above conditions are met, the green LED "shutter" indicator on K3 power supply unit should be on. The "Blanker" 
 orange color LED indicator on Channel C will be lit when idle. It blinks when a shot is taken from DM or SerialEM. If you take an 
