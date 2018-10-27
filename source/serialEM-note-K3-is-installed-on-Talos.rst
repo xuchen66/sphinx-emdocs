@@ -138,8 +138,8 @@ exposure for 3 seconds, the LED will disappear for 3 seconds. The two images bel
 **Fig.1 Gatan K3 Camera Power Supply Unit**
 
 .. image:: ../images/K3-PS.png
-   :scale: 75 %
-..   :height: 544 px
+   :scale: 15 %
+..   :height: 544 px 2016 × 1512
    :width: 384 px
    :alt: DUMMY instance property
    :align: center
@@ -147,7 +147,7 @@ exposure for 3 seconds, the LED will disappear for 3 seconds. The two images bel
 **Fig.2 FEI Shutter Router Unit (CSU)**
 
 .. image:: ../images/CSU.png
-   :scale: 75 %
+   :scale: 15 %
 ..   :height: 544 px
    :width: 384 px
    :alt: DUMMY instance property
