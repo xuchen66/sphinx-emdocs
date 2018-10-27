@@ -49,6 +49,7 @@ SerialEM Note
    serialEM-note-tackle-coma
    serialEM-note-utilize-jpg-file-format
    serialEM-note-setup-email
+   serialEM-note-K3-is-installed-on-Talos
    
 Index
 *****
