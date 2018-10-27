@@ -122,14 +122,14 @@ With properly working shutter, the beam will get blanked if following conditions
 1. Hardware components are communicating with each other normally. 
 #. DM is running and K3 camera is in inserted position.
 #. Software configuration in DM interface - Camera Configuration has set properly as idle state for shutter one "Pre-specimen" 
-to be closed. There is normally only single shutter cable from Gatan MIB box - shutter 1 connecting to FEI shutter router "CSU" box at one 
-of the channels. This is an BNC connctor. In our case, it connects to Channel C - *Blanker*. Make sure it is the blanker, as the other one 
-on CSU channel "shutter" means below specimen. 
-#. large screen of scope is in raised position (large screen is a switch to trigger sending or retracting 5V signal through the 
-shutter cable.).
-#. In FEI scope "CCD/TV Camera" interface, make sure the fake camera name assgined for K2/K3 (Falcon in our case) is selected from the 
-list and "insert" button is in yellow color. Click on it if this is not. This is to tell FEI CSU shutter router to let Channel C take 
-control.
+   to be closed. There is normally only single shutter cable from Gatan MIB box - shutter 1 connecting to FEI shutter router 
+   "CSU" box at one of the channels. This is an BNC connctor. In our case, it connects to Channel C - *Blanker*. Make sure 
+   it is the blanker, as the other one on CSU channel "shutter" means below specimen. 
+#. large screen of scope is in raised position (large screen is a switch to trigger sending or retracting 5V signal through 
+   the shutter cable.).
+#. In FEI scope "CCD/TV Camera" interface, make sure the fake camera name assgined for K2/K3 (Falcon in our case) is selected 
+   from the list and "insert" button is in yellow color. Click on it if this is not. This is to tell FEI CSU shutter router to 
+   let Channel C take control.
 
 In our case, when all above conditions are met, the green LED "shutter" indicator on K3 power supply unit should be on. The "Blanker" 
 orange color LED indicator on Channel C will be lit when idle. It blinks when a shot is taken from DM or SerialEM. If you take an 
