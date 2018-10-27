@@ -1,4 +1,3 @@
-y
 .. _SerialEM_K3_installed_on_Talos:
 
 SerialEM Note: K3 is installed on Talos
@@ -7,7 +6,7 @@ SerialEM Note: K3 is installed on Talos
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2018-10-25
-:Last_Updated: 2018-10-25 
+:Last_Updated: 2018-10-27 
 
 .. glossary::
 
@@ -118,8 +117,7 @@ There are a number of things one should pay attention to, in my opinion. The shu
 
 **Shutter control**. This is perhaps the most important thing you do not want to miss. If shutter control is not working properly, 
 you might have sample burned without notice. Normally, if shutter control is not working, you will have hard time preparing gain 
-reference. So you might notice it. However, since we are not required to prepare gain reference often in daily bases, if it stops working, 
-you might or might not notice it promptly. You might still get image, but your sample might not be protected as it should be. 
+reference. So you might notice it. However, since we are not required to prepare gain reference often in daily bases, if it stops working, you might or might not notice it promptly. You might still get image, but your sample might not be protected as it should be. 
 
 With properly working shutter, the beam will get blanked if following conditions are all met:
 
@@ -151,6 +149,7 @@ exposure for 3 seconds, the LED will disappear for 3 seconds. The two images bel
    :width: 384 px
    :alt: DUMMY instance property
    :align: center
+
 
 **Fig.2 FEI Shutter Router Unit (CSU)**
 
@@ -191,9 +190,14 @@ I listed a few things here that I paid attention to.
    compared to previously K2 computer plus its processors though. 
    
 #. There is Nvidia cark K2200 for monitor display. That one doesn't have HDMI port, only two DisplayPort ports. If you need to buy
-   KVM for remote purpose, make sure to buy the unit taht supports DisplayPort directly. DP to HDMI converter might not give 
+   KVM for remote AV/USB purpose, make sure to buy the unit that supports DisplayPort directly. DP to HDMI converter might not give 
    4K resolution that 32 inch Dell 4K monitor offers. 
    
 #. You should check water flow and pressure gauge often for a fresh installed K3, as they might change a bit in the beginning. 
 
 #. K3 outputs more data than K2, one has to deal with storage capacity seriously if you run a scope in effcient way. 
+
+#. Our K3 system package came with a GP100 Nvidia card. Also there is MotionCor2 utility via DM interface. However, there is no 
+   way to access to MotionCor2 outside of DM. Fortunitely, we can still utilize the powerful GPU card. If we run *framewatcher* 
+   to align ~30-40 Super-res frames, it can do as fast as ~ 10 seconds for one stack. This is at least sufficient for our 
+   monitoring purpose. Very nice indeed! 
