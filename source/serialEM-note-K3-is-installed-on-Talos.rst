@@ -6,7 +6,7 @@ SerialEM Note: K3 is installed on Talos
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2018-10-25
-:Last_Updated: 2018-10-27 
+:Last_Updated: 2018-10-28 
 
 .. glossary::
 
@@ -55,7 +55,7 @@ The K3 camera section of properties is below:
 .. code-block:: ruby
 
     CameraProperties	         1
-    Name	                     K3
+    Name                      K3
     K2Type	                  3
     DMGainReferenceName	     K3-18140113 Gain Ref. x1.m0.dm4
     # THESE 5 WILL NEED CHANGING IF CAMERA ORIENTATION CHANGES
@@ -65,16 +65,16 @@ The K3 camera section of properties is below:
     RotationAndFlip              0		# accedently 1 before
     DMRotationAndFlip            0
     #UsableArea                  0 0 3712 3840 	# top left bottom right!
-    UseSocket	             0
+    UseSocket	              0
     MakesUnsignedImages	     1
     XMustBeMultipleOf	     4
     YMustBeMultipleOf	     2
-    FourPortReadout	             0
+    FourPortReadout	        0
     Binnings	             1 2 3 4 5 6 8
-    BasicCorrections	         49
-    HotPixelsAreImodCoords	     1
+    BasicCorrections	            49
+    HotPixelsAreImodCoords	      1
     #DarkXRayAbsoluteCriterion   20
-    #DarkXRaySDCriterion	     15
+    #DarkXRaySDCriterion	      15
     #DarkXRayRequireBothCriteria 1
     MaximumXRayDiameter	         6
     BeamBlankShutter	            0
@@ -82,14 +82,14 @@ The K3 camera section of properties is below:
     StartupDelay                 1.195
     ExtraBeamTime                0.10
     BuiltInSettling              0.0 
-    ShutterDeadTime	             0.00		
-    MinimumDriftSettling	     0.05
+    ShutterDeadTime	            0.00		
+    MinimumDriftSettling	      0.05
     MinimumBlankedExposure       0.35
     ExtraUnblankTime	            0.012
-    ExtraOpenShutterTime	     0.12
+    ExtraOpenShutterTime	      0.12
     Retractable	               1
-    InsertionDelay	             5.0
-    RetractionDelay	             3.0
+    InsertionDelay	            5.0
+    RetractionDelay	            3.0
     GIF	                        0
     Order                        2
     FilmToCameraMagnification    1.31	# orig=1.342
@@ -162,43 +162,50 @@ exposure for 3 seconds, the LED will disappear for 3 seconds. The two images bel
    :alt: DUMMY instance property
    :align: center
    
-Please note: at least in our case, there is nothing change to monitor shutter status from CCD/TV camera interface or FEI's Jave program 
-"Shutter Blanker Monitor". This is probably due to Gatan camera is "external" camera.
+Please note: at least in our case, there is nothing change to reflect shutter status from either CCD/TV camera interface or FEI's 
+   Jave program "Shutter Blanker Monitor". This is probably due to Gatan camera being an "external" camera.
 
-To make absolutely sure the shutter is working properly, check it with burn marker method. You lift large screen and wait for sometime and take an image of ice sample or plastic sample in a lower mag, and you check if you see any sign of burn marker.   
+To make absolutely sure the shutter is working properly, it is better to check it with burn marker method. You lift large screen and 
+wait for sometime and take an image of ice sample or plastic sample in a lower mag, and you check if you see any sign of burn marker. If 
+no burn marker seen, that would indicate the beam is blanked without a shot is taken. 
 
 .. _watch:
 
 Other things to Watch
 ---------------------
 
-I listed a few things here that I paid attention to.
+I listed a few more other things here that I also paid attention to.
 
-1. Camera mounting orientation. This is not critical but can give you a easier life later. Our camera is mounted in the way that camera 
+1. Camera mounting orientation. This is not critical but can give you an easier life later. Our camera is mounted in the way that camera 
    insertion is toward autoloader. Then there is no need to configure camera rotation and flip in DM configuration. 
 
-#. There is no exsiting availble fiber NIC for us to use. However, there is a cat6 NIC on the motherboard you can use. I prefer to have 
-   fiber NIC for faster data transfer so I added one PCI-E 8X 10GbE netword card into the main computer. It sits in the very first 
-   PCI-E slot from the top. I literually get ~1Gbps real data transfer speed, from SSD Raid X drive to my storage via CIFS. 
+#. There is no exsiting fiber NIC available (like the Spare port on K2 computer) for us to use. However, there is a Ethernet NIC on 
+   the motherboard you can use. I prefer to have fiber NIC for faster data transfer so I added one PCI-E 8X 10GbE netword card 
+   into the main computer. It sits in the very first PCI-E slot from the top. I literually get ~1Gbps real data transfer speed, 
+   from SSD Raid X drive to my storage via CIFS. 
    
-#. I pre-odered extended data cable bundle, that includes 5 fiber bundles and one cat6 cable. It also need a long USB cable to connect 
-   to FEI computer for COM port communication for remoteTEM running on FEI scope for scope function calls. This one is easy to miss. I 
-   end up using remote KVM system for USB signal too, even the KVM was bought for AV signal originally. 
+#. I pre-odered extended 40 meter long data cable bundle, that includes 5 fiber bundles and one Cat6 cable. It also needs a long 
+   USB cable to connect to FEI computer for COM port communication for remoteTEM running on FEI scope for scope function calls. 
+   This one is easy to miss. I am using remote KVM system for the USB signal. 
 
-#. Only at starting computer, we hear huge jet engine kind of laud sounds. After it is running, it is not too bad. I heard some lab 
-   were testing to use soundproof rack to host the computer. If this is no concern for vibration, then it would be better to locate
-   the K3 computer and soundproof rack in the scope room. I would like that a lot. Not sure how much more heat load this one gives
-   compared to previously K2 computer plus its processors though. 
+#. Only at starting computer, we hear huge jet engine kind of laud sounds. After it is running, it is still noisy not too bad. 
+   I heard some lab were testing to use soundproof rack to host the computer. If this is no concern for vibration, then it would 
+   be better to locate the K3 computer and soundproof rack in the scope room. I would like that a lot. Not sure how much more heat 
+   load this one gives compared to previously K2 computer plus its processors though. 
    
 #. There is Nvidia cark K2200 for monitor display. That one doesn't have HDMI port, only two DisplayPort ports. If you need to buy
    KVM for remote AV/USB purpose, make sure to buy the unit that supports DisplayPort directly. DP to HDMI converter might not give 
    4K resolution that 32 inch Dell 4K monitor offers. 
    
-#. You should check water flow and pressure gauge often for a fresh installed K3, as they might change a bit in the beginning. 
+#. You should check water flow and air pressure gauge often for a fresh installed K3, as they might change a bit in the beginning. We had
+   a startup hiccup when the water is a little too low (~19 GPM). It became fine after it was raised to 24 GPM. 
+   
+#. If there is any memory test error on any of the processors, one should shutdown and restart computer rather than a reboot. Power cycle
+   is lkely needed to clear out memory errors. 
 
-#. K3 outputs more data than K2, one has to deal with storage capacity seriously if you run a scope in effcient way. 
+#. K3 outputs more data than K2, one has to deal with storage capacity seriously if you run a scope ineffcient way. 
 
 #. Our K3 system package came with a GP100 Nvidia card. Also there is MotionCor2 utility via DM interface. However, there is no 
    way to access to MotionCor2 outside of DM. Fortunitely, we can still utilize the powerful GPU card. If we run *framewatcher* 
-   to align ~30-40 Super-res frames, it can do as fast as ~ 10 seconds for one stack. This is  sufficient at least for our 
+   to align ~30-40 Super-res frames, it can do as fast as ~10 seconds for one stack. This is sufficient at least for our session
    monitoring purpose. Very nice indeed! 
