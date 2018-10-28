@@ -199,8 +199,8 @@ I listed a few more other things here that I also paid attention to.
 #. You should check water flow and air pressure gauge often for a fresh installed K3, as they might change a bit in the beginning. We had
    a startup hiccup when the water is a little too low (~19 GPM). It became fine after it was raised to 24 GPM. 
    
-#. If there is any memory test error on any of the processors, one should shutdown and restart computer rather than a reboot. Power cycle
-   is lkely needed to clear out memory errors. 
+#. If there is any memory test error on any of the processors, one should shutdown and restart computer rather than a software reboot.
+   Power cycle is likely needed to clear out memory errors. 
 
 #. K3 outputs more data than K2, one has to deal with storage capacity seriously if you run a scope ineffcient way. 
 
