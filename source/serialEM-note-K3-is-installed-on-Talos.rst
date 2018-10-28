@@ -202,7 +202,9 @@ I listed a few more other things here that I also paid attention to.
 #. If there is any memory test error on any of the processors, one should shutdown and restart computer rather than a software reboot.
    Power cycle is likely needed to clear out memory errors. 
 
-#. K3 outputs more data than K2, one has to deal with storage capacity seriously if you run a scope ineffcient way. 
+#. K3 outputs more data than K2, one has to deal with storage capacity seriously if you run a scope effciently. Otherwise, one might
+   find that you quickly run out of data storage space. **Saving frame data with compression and without gain applied has clear 
+   advantages here**! 
 
 #. Our K3 system package came with a GP100 Nvidia card. Also there is MotionCor2 utility via DM interface. However, there is no 
    way to access to MotionCor2 outside of DM. Fortunitely, we can still utilize the powerful GPU card. If we run *framewatcher* 
