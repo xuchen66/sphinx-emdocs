@@ -162,8 +162,7 @@ exposure for 3 seconds, the LED will disappear for 3 seconds. The two images bel
    :alt: DUMMY instance property
    :align: center
    
-Please note: at least in our case, there is nothing change to reflect shutter status from either CCD/TV camera interface or FEI's 
-   Jave program "Shutter Blanker Monitor". This is probably due to Gatan camera being an "external" camera.
+Please note: at least in our case, during an exposure, there is nothing change to reflect shutter status from either CCD/TV camera interface or FEI's Jave program "Shutter Blanker Monitor". This is probably due to Gatan camera being an "external" camera.
 
 To make absolutely sure the shutter is working properly, it is better to check it with burn marker method. You lift large screen and 
 wait for sometime and take an image of ice sample or plastic sample in a lower mag, and you check if you see any sign of burn marker. If 
