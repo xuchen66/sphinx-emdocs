@@ -6,7 +6,7 @@ SerialEM Note: K3 is installed on Talos
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2018-10-25
-:Last_Updated: 2018-10-28 
+:Last_Updated: 2018-10-29
 
 .. glossary::
 
@@ -190,7 +190,8 @@ I listed a few more other things here that I also paid attention to.
 #. Only at starting computer, we hear huge jet engine kind of laud sounds. After it is running, it is still noisy not too bad. 
    I heard some lab were testing to use soundproof rack to host the computer. If this is no concern for vibration, then it would 
    be better to locate the K3 computer and soundproof rack in the scope room. I would like that a lot. Not sure how much more heat 
-   load this one gives compared to previously K2 computer plus its processors though. 
+   load this one gives compared to previously K2 computer plus its processors though. I have a feeling that this soundproof
+   server rack should work - https://www.rackmountsolutions.net/12u-ucoustic-soundproof-server-rack/, but haven't tested anything myself yet. Hope to hear from people about their experience. 
    
 #. There is Nvidia cark K2200 for monitor display. That one doesn't have HDMI port, only two DisplayPort ports. If you need to buy
    KVM for remote AV/USB purpose, make sure to buy the unit that supports DisplayPort directly. DP to HDMI converter might not give 
