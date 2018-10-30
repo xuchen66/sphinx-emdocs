@@ -185,7 +185,7 @@ I listed a few more other things here that I also paid attention to.
    
 #. I pre-odered extended 40 meter long data cable bundle, that includes 5 fiber bundles and one Cat6 cable. It also needs a long 
    USB cable to connect to FEI computer for COM port communication for remoteTEM running on FEI scope for scope function calls. 
-   This one is easy to miss. I am using remote KVM system for the USB signal. The one we buy is `this one <https://www.amazon.com/gp/product/B06Y632T6Y/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1>`_, it does support 4k resolution, but refreshing frequency drops to 30Hz. 
+   This one is easy to miss. I am using remote KVM system for the USB signal. The one we bought is `this one <https://www.amazon.com/gp/product/B06Y632T6Y/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1>`_, it does support 4k resolution, but refreshing frequency drops to 30Hz. 
 
 #. Only at starting computer, we hear huge jet engine kind of laud sounds. After it is running, it is still noisy not too bad. 
    I heard some lab were testing to use soundproof rack to host the computer. If this is no concern for vibration, then it would 
