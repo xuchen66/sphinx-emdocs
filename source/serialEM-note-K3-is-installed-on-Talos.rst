@@ -6,7 +6,7 @@ SerialEM Note: K3 is installed on Talos
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2018-10-25
-:Last_Updated: 2018-10-29
+:Last_Updated: 2018-10-30
 
 .. glossary::
 
@@ -211,3 +211,5 @@ I listed a few more other things here that I also paid attention to.
    way to access to MotionCor2 outside of DM. Fortunitely, we can still utilize the powerful GPU card. If we run *framewatcher* 
    to align ~30-40 Super-res frames, it can do as fast as ~10 seconds for one stack. This is sufficient at least for our session
    monitoring purpose. Very nice indeed! 
+
+#. Always remember to extract K3 camera first BEFORE you try to insert Ceta camera.  
