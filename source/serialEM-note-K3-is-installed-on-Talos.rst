@@ -26,7 +26,7 @@ The installation was fairly smooth. The engineers had installed K3 at other site
 already. Total installation only took three full days. We had two K3 systems in crates - one for Talos and one for Krios. 
 Therefore, one unique advantage we had was an extra set of identical hardware components to swap test when needed. 
 
-There were two failed hardware in the original package for Talos, one was processing board and the other was MIB box and 
+There were two failed hardware compenents in the original package for Talos, one was processing board and the other was MIB box and 
 cable. Once these two faulty hardware components were replaced with ones in Krios K3 crates, the system came up nicely. 
 
 One can imagine, without spare hardware parts to trial and test, the installation could have taken a lot longer. We were lucky.
