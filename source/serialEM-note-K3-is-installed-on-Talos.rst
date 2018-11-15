@@ -6,7 +6,7 @@ SerialEM Note: K3 is installed on Talos
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2018-10-25
-:Last_Updated: 2018-10-30
+:Last_Updated: 2018-11-14
 
 .. glossary::
 
@@ -193,11 +193,11 @@ I listed a few more other things here that I also paid attention to.
    load this one gives compared to previously K2 computer plus its processors though. I have a feeling that this soundproof
    server rack should work - https://www.rackmountsolutions.net/12u-ucoustic-soundproof-server-rack/, but haven't tested anything myself yet. Hope to hear from people about their experience. 
    
-#. There is Nvidia cark K2200 for monitor display. That one doesn't have HDMI port, only two DisplayPort ports. If you need to buy
+#. There is Nvidia card K2200 for monitor display. That one doesn't have HDMI port, only two DisplayPort ports. If you need to buy
    KVM for remote AV/USB purpose, make sure to buy the unit that supports DisplayPort directly. DP to HDMI converter might not give 
    4K resolution that 32 inch Dell 4K monitor offers. 
    
-#. You should check water flow and air pressure gauge often for a fresh installed K3, as they might change a bit in the beginning. We had
+#. You should check water flow and air pressure gauge often for a fresh installation of K3, as they might change a bit in the beginning. We had
    a startup hiccup when the water is a little too low (~19 GPM). It became fine after it was raised to 24 GPM. 
    
 #. If there is any memory test error on any of the processors, one should shutdown and restart computer rather than a software reboot.
