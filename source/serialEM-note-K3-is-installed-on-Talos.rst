@@ -127,7 +127,7 @@ With properly working shutter, the beam will get blanked if following conditions
 
 #. Software configuration in DM interface - Camera Configuration has set properly as idle state for shutter one "Pre-specimen" 
    to be closed. There is normally only single shutter cable from Gatan MIB box - shutter 1 connecting to FEI shutter router 
-   "CSU" box at one of the channels. This is an BNC connctor. In our case, it connects to Channel C - *Blanker*. Make sure 
+   "CSU" box at one of the channels. This is a BNC connctor. In our case, it connects to Channel C - *Blanker*. Make sure 
    it is the blanker, as the other one on CSU channel "shutter" means below specimen. 
 
 #. large screen of scope is in raised position (large screen is a switch to trigger sending or retracting 5V signal through 
