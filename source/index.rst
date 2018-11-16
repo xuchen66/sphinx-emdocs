@@ -35,8 +35,8 @@ Instructions, Manuals and Protocols
    pixelsize-and-distortion-info
    detach-and-reattach-cistem
    
-SerialEM Note
--------------
+SerialEM Notes
+--------------
 .. toctree::
    :maxdepth: 2
    
