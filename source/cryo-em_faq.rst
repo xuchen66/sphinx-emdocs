@@ -3,6 +3,12 @@
 FAQ
 ===
 
+:Author: UMass CryoEM Core
+:Contact: <cryoem.umms@gmail.com>
+:Date-created: 2017-2-13
+:Last-updated: 2018-12-03
+
+
 This is list of Frequently Asked Questions about Umass Cryo-EM. Some questions are technical, while others are more general. 
 
 How do I ...
