@@ -187,6 +187,19 @@ where the fileWithFrames is used only to set the size of the output and can be a
 What is ...
 ------------
 
+.. _screen:
+
+... service and charging details about your screening service?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Screening result usually includes 1) Low Mag Montage (LMM) maps at about 34X mag for entire grid atlas, 2) Medium Mag Montage (MMM) maps at about 2000X for a few promising meshes, 3) final mag shots for 10-20 holes. We also provide JPEG format too for convenient cloud reviewing. 
+
+For academic, the screening mostly happens on Talos. We split Talos 24 hours into two session - daytime and evening. If you have more than 8 grids, we will simply regard as daytime session. Less than 6, will be charged by per grid, which is less expensive that being as whole daytime session. So you may only screen 2-3 grids, for example, and we won't charge by session in that case. We are very flexible at this and take the cost of customer into consideration. 
+
+The most common style to screen is to load 8-9 grids and start to screen, by 5 or 6PM of that day, one of the good conditions is located and we extend into whole day session by collecting on the good grids into next morning 9 AM. We could get as many as 1000+ movie stacks. 
+
+Please ask us if you have further questions. 
+
 .. _Cs:
 
 ... the Cs value I should use for CTF calculation for Talos and Krios?
