@@ -6,7 +6,7 @@ SerialEM Note: K3 is installed on Talos
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2018-10-25
-:Last_Updated: 2018-11-14
+:Last_Updated: 2018-12-05
 
 .. glossary::
 
@@ -180,8 +180,8 @@ I listed a few more other things here that I also paid attention to.
 
 #. There is no exsiting fiber NIC available (like the Spare port on K2 computer) for us to use. However, there is a Ethernet NIC on 
    the motherboard you can use. I prefer to have fiber NIC for faster data transfer so I added one PCI-E 8X 10GbE netword card 
-   into the main computer. It sits in the very first PCI-E slot from the top. I literually get ~1Gbps real data transfer speed, 
-   from SSD Raid X drive to my storage via CIFS. 
+   into the main computer. It sits in the very first PCI-E slot from the top. I literually get ~1GB/s real data transfer speed, 
+   from SSD Raid X drive to my storage via CIFS. Reverse direction - from storage to local SSD is about 600+ MB/s. 
    
 #. I pre-odered extended 40 meter long data cable bundle, that includes 5 fiber bundles and one Cat6 cable. It also needs a long 
    USB cable to connect to FEI computer for COM port communication for remoteTEM running on FEI scope for scope function calls. 
