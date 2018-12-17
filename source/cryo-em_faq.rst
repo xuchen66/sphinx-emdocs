@@ -237,7 +237,7 @@ They are two different things, but related by the magnification of microscope.
 
 Normally, dose means the total electrons hitting the specimen in an unit area. It usually has unit like  **e\ :sup:`-`/Å\ :sup:`2`**. 
 
-Dose rate means how strong the beam is, it is how many electrons hitting in one physical pixel area on the detector sensor for a unit time period. It usually has a unit like primary **electrons/unbinned pixel/second**. A proper dose rate is required for optimal performance of a camera. 
+Dose rate means how strong the beam is, it is how many electrons hitting in one physical pixel area on the detector sensor for a unit time period. It usually has a unit like **primary electrons/unbinned pixel/second**. A proper dose rate is required for optimal performance of a camera. 
 
 Under a giving beam condition, your dose rate is fixed, you can change exposure time to obtain target total dose on specimen. Therefore, we should always determine the proper dose rate first. 
 
