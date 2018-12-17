@@ -228,5 +228,11 @@ UMass Med School has firewall and VPN in place. There is no way to "pull" data f
 
 - AWS. Cloud is becoming reasonable and attractive way to store and compute data. If you setup AWS S3 bucket, and you link that with our ID and secret key, we can upload onto AWS S3 bucket easily. The overall speed is not very fast, but it seems to be not bad either. For institutions who already have this, we recommend to use this way. 
 
+.. _dose_and_dose_rate:
+
+... What is difference between dose and dose rate? What condition should I use? 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Normally, dose means the total electrons hitting the specimen in an unit area. It usually have unit like `e`:super: -/`Å`:super: 2. 
 
 
