@@ -6,7 +6,7 @@ SerialEM Note: K3 is installed on Talos
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2018-10-25
-:Last_Updated: 2018-12-05
+:Last_Updated: 2018-12-22
 
 .. glossary::
 
@@ -213,3 +213,5 @@ I listed a few more other things here that I also paid attention to.
    monitoring purpose. Very nice indeed! 
 
 #. Always remember to extract K3 camera first BEFORE you try to insert Ceta camera.  
+
+#. Usually on our system, when restarting DM, the communication between DM and microscope is interrupted. A Keyspan USB Serial Adapter is used in our case to establish the communication in our case. Unplugging and replugging the USB connection can fix, followed by restarting DM, usually fixes the problem. However, it it almost impossible to do it remotely. We have found a workaround to re-activate the Keyspan USB Serial Adapter. From Device Manager, find "Kayspan USB Serial Adapter", in "Driver" tab, disable and enable it. This will reset the adapter. Restarting DM after that, communication will be OK. 
