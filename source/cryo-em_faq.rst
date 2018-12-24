@@ -6,7 +6,7 @@ FAQ
 :Author: UMass CryoEM Core
 :Contact: <cryoem.umms@gmail.com>
 :Date-created: 2017-2-13
-:Last-updated: 2018-12-17
+:Last-updated: 2018-12-24
 
 
 This is list of Frequently Asked Questions about Umass Cryo-EM. Some questions are technical, while others are more general. 
@@ -235,8 +235,7 @@ UMass Med School has firewall and VPN in place. There is no way to "pull" data f
 
 They are two different things, but related by the magnification of microscope. 
 
-Normally, dose means the total electrons hitting the specimen in an unit area. 
-It usually has unit like e\ :sup:`-`/Å\ :sup:`2`. 
+Normally, dose means the total electrons hitting the specimen in a unit area. It usually has unit like e\ :sup:`-`/Å\ :sup:`2`. 
 
 Dose rate means how strong the beam is, it is how many electrons hitting in one physical pixel area on the detector sensor for a unit time period. It usually has a unit like **primary electrons/unbinned pixel/second**. A proper dose rate is required for optimal performance of a camera. 
 
