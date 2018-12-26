@@ -54,9 +54,9 @@ The K3 camera section of properties is below:
 
 .. code-block:: ruby
 
-    CameraProperties	         1
+    CameraProperties          1
     Name                      K3
-    K2Type	                  3
+    K2Type                    3
     DMGainReferenceName	     K3-18140113 Gain Ref. x1.m0.dm4
     # THESE 5 WILL NEED CHANGING IF CAMERA ORIENTATION CHANGES
     CameraSizeX	             5760
