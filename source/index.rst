@@ -33,6 +33,7 @@ Instructions, Manuals and Protocols
    align-movie-frames-imod
    monitor-data-collection-in-the-fly
    pixelsize-and-distortion-info
+   relion-and-cistem-services
    detach-and-reattach-cistem
    
 SerialEM Notes
