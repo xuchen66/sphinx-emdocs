@@ -1,7 +1,7 @@
 .. _Relion-and-cisTEM-services:
 
-Relion and cisTEM Services
-==========================
+Relion and cisTEM Docker Services
+=================================
 
 :Author: Albert Xu
 :Contact: <albert.t.xu@gmail.com>
