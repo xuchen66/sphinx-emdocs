@@ -6,7 +6,7 @@ SerialEM Note: K3 is installed on Talos
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2018-10-25
-:Last_Updated: 2018-12-26
+:Last_Updated: 2019-01-14
 
 .. glossary::
 
@@ -219,4 +219,4 @@ I listed a few more other things here that I also paid attention to.
 Additional Info
 ---------------
 
-There is some additional information regarding the K3 camera from UTSW facility that you might find useful. Please find `the pdf file<https://www.utsouthwestern.edu/labs/cemf/assets/k3-experiences-faqs-UTSW-v2.pdf>`_. 
+There is some additional information regarding the K3 camera from UTSW facility that you might find useful. Please find `the pdf file <https://www.utsouthwestern.edu/labs/cemf/assets/k3-experiences-faqs-UTSW-v2.pdf>`_. 
