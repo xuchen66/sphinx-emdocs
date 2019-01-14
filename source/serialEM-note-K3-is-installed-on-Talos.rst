@@ -215,3 +215,8 @@ I listed a few more other things here that I also paid attention to.
 #. Always remember to extract K3 camera first BEFORE you try to insert Ceta camera.  
 
 #. Sometimes on our system, when restarting DM, the communication between DM and microscope gets interrupted. A Keyspan USB Serial Adapter is used to establish the communication in our case. Unplugging and replugging the USB connection usually fixes the problem. However, it it almost impossible to do it remotely. We have found a workaround to re-activate the Keyspan USB Serial Adapter. 1) Exit DM first, 2) From Device Manager, find "Kayspan USB Serial Adapter", in its "Driver" tab, disable and enable it. This will reset the adapter. 3) Restarting DM. After that, communication will be OK. 
+
+Additional Info
+---------------
+
+There is some additional information regarding the K3 camera from UTSW facility that you might find useful. Please find `the pdf file<https://www.utsouthwestern.edu/labs/cemf/assets/k3-experiences-faqs-UTSW-v2.pdf>`_. 
