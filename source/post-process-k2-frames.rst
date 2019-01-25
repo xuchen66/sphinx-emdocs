@@ -69,10 +69,31 @@ The last parameter in title line shows the orientation of imaging. Here is 0 - n
 
    $dm2mrc GatanGainRef.dm4 GatanGainRef.mrc
    
-3. Use "clip" to apply gain reference and deal with defects all in a single command line (later IMOD can take tiff file format as input directly). 
+3. Use "clip" to apply gain reference and deal with defects all in a single command line (later IMOD can take tiff file format as input directly). I quote a section from SerialEM helpfile here:
 
+.. 
 .. code-block:: none
 
    $clip mult -n 16 -m 2 -D defects.txt fileWithFrames.tif GatanGainRef.mrc normalizedFrames.mrc
-   
+
+::
+    Once you have the reference in the right orientation, you can use the program 'clip' in IMOD to apply gain normalization (and defect correction with version 4.8.6 or higher).  In the following, 'scalingFactor' is the regular scaling factor applied to summed images, 'fileWithFrames' is the data file to normalize, 'gainReference.mrc' is the reoriented gain reference, and 'normalizedFrames.mrc' is the desired output file. The alternatives for GMS 2.3.0 or lower are:
+
+    Counting mode, not packed:  The data need to be scaled to preserve precision after normalization.  The command is
+         clip mult -n scalingFactor  fileWithFrames.mrc  gainReference.mrc  normalizedFrames.mrc
+    Super-resolution mode, not packed:  The data need to be scaled to preserve precision after normalization.  To have the same scaling by 16 that the plugin would apply, the command is
+         clip mult -n 16  fileWithFrames  gainReference.mrc  normalizedFrames.mrc
+    but if you want to apply the regular scaling factor, the output will need to be integers and the command is
+         clip mult -n scalingFactor  -m 1  fileWithFrames  gainReference.mrc  normalizedFrames.mrc
+    Counting mode, packed as bytes:  The data need to be scaled to preserve precision and output as integers to preserve the range.  The command is
+         clip mult -n scalingFactor  -m 1  fileWithFrames  gainReference.mrc  normalizedFrames.mrc
+    Super-resolution mode, packed as 4-bit numbers: By default, the data will be scaled by 16 when unpacking with normalization, so the command to get this scaling is just
+         clip unpack  fileWithFrames  gainReference.mrc  normalizedFrames.mrc
+    but if you want to apply the regular scaling factor, the output will need to be integers and the command is
+         clip unpack -n scalingFactor  -m 1  fileWithFrames  gainReference.mrc  normalizedFrames.mrc
+    It is also possible to remove extreme values from the data at the same time with the '-h' and '-l' options.  For example, adding '-h 6 -l 1' after the 'unpack' will replace all values above 6 with 1.
+
+To apply defect correction to files from GMS 2.3.1 or higher, add '-D defects...txt' before 'fileWithFrames' in the appropriate command, where 'defects...txt' is the file saved by the plugin.
+
+
    
