@@ -71,6 +71,7 @@ The last parameter in title line shows the orientation of imaging. Here is 0 - n
    
 3. Use "clip" to apply gain reference and deal with defects all in a single command line (later IMOD can take tiff file format as input directly). I quote a section from SerialEM helpfile here:
 
+::
 
        Once you have the reference in the right orientation, you can use the program 'clip' in IMOD to apply gain normalization (and defect correction with version 4.8.6 or higher).  In the following, 'scalingFactor' is the regular scaling factor applied to summed images, 'fileWithFrames' is the data file to normalize, 'gainReference.mrc' is the reoriented gain reference, and 'normalizedFrames.mrc' is the desired output file. The alternatives for GMS 2.3.0 or lower are:
 
@@ -88,7 +89,7 @@ The last parameter in title line shows the orientation of imaging. Here is 0 - n
             clip unpack -n scalingFactor  -m 1  fileWithFrames  gainReference.mrc  normalizedFrames.mrc
        It is also possible to remove extreme values from the data at the same time with the '-h' and '-l' options.  For example, adding '-h 6 -l 1' after the 'unpack' will replace all values above 6 with 1.
 
-   To apply defect correction to files from GMS 2.3.1 or higher, add '-D defects...txt' before 'fileWithFrames' in the appropriate command, where 'defects...txt' is the file saved by the plugin.
+       To apply defect correction to files from GMS 2.3.1 or higher, add '-D defects...txt' before 'fileWithFrames' in the appropriate command, where 'defects...txt' is the file saved by the plugin.
 
 
    
