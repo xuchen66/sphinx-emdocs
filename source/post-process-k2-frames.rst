@@ -5,7 +5,8 @@ Post Processing K2 Frames from SerialEM Data Collection
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2017-02-13
+:Date_Created: 2017-02-13
+:Last_Updated: 2019-01-25
 
 .. glossary::
 
@@ -107,7 +108,7 @@ The last parameter in title line shows the orientation of imaging. Here is 0 - n
        
        but if you want to apply the regular scaling factor, the output will need to be integers and the command is
        
-        .. code-block:: none
+       .. code-block:: none
        
             clip unpack -n scalingFactor  -m 1  fileWithFrames  gainReference.mrc  normalizedFrames.mrc
        
