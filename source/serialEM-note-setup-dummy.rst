@@ -6,7 +6,8 @@ SerialEM Note: Setup Dummy Instance
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2017-12-16
+:Date_Created: 2017-12-16
+:Last_Updated: 2019-01-28
 
 .. glossary::
 
@@ -44,3 +45,10 @@ On a remote computer
 #. make a shortcut from the executable and edit the property of the shortcut to add "/DUMMY" to the end of Target line, as above. 
 #. repeat the last two steps for a different scope. 
 
+.. _on-mac:
+
+On a Mac computer
+-----------------
+
+Thanks to Pranav Shah <dhbpranav@gmail.com> who shared with me how he setup SerialEM on a Mac computer using Wine. It turns out
+fairly strightforward, as long as you know which wine to install. The nice tutorial `_Installing Wine on Mac <https://www.davidbaumgold.com/tutorials/wine-mac/>_` written by David Baumgold is easy enough to follow.  
