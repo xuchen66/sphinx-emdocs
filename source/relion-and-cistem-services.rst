@@ -6,7 +6,7 @@ Relion and cisTEM Docker Services
 :Author: Albert Xu
 :Contact: <albert.t.xu@gmail.com>
 :Date-created: 2019-01-08
-:Last-updated: 2019-01-09
+:Last-updated: 2019-02-14
 
 .. glossary::
 
@@ -14,6 +14,7 @@ Relion and cisTEM Docker Services
       This is a quick information how to use Relion3 and cisTEM dockers on two Linux workstations in CryoEM Core Facility. 
       One of the potential advantages to use docker is to avoid CUDA version conflict.  
 
+      Some of the dockerfile information can be found in https://hub.docker.com/u/albertxu .
 
 .. _relion3:
 
