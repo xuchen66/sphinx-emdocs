@@ -6,7 +6,7 @@ SerialEM Note: K3 is installed on Talos
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2018-10-25
-:Last_Updated: 2019-01-14
+:Last_Updated: 2019-02-27
 
 .. glossary::
 
@@ -97,12 +97,8 @@ The K3 camera section of properties is below:
     #CountsPerElectron	         #37.55	not needed for K3 # measured at 3.15 e/p/s
     ExtraRotation	               0.
     # MagIndex  DeltaRotation (999 not measured)  SolvedRotation (999 not measured)   
-    # Pixel size (nm, 0 not measured)
-    ##RotationAndPixel 33 0.04 999 0.0749
-    #RotationAndPixel 1 999 -3.9 0
-    #RotationAndPixel 4 999 -102.4 0
+    # Pixel size (nm, 0 not measured
     RotationAndPixel 3 999 -94.4 0
-    #RotationAndPixel 16 999 -4.9 1.797
     RotationAndPixel 16 999 -94.4 1.74	#k2=1.797
     RotationAndPixel 17 999 90.9 3.291	#k2=3.396
 
@@ -212,7 +208,7 @@ I listed a few more other things here that I also paid attention to.
    to align ~30-40 Super-res frames, it can do as fast as ~10 seconds for one stack. This is sufficient at least for our session
    monitoring purpose. Very nice indeed! 
 
-#. Always remember to extract K3 camera first BEFORE you try to insert Ceta camera.  
+#. Always remember to retract K3 camera first BEFORE you try to insert Ceta camera.  
 
 #. Sometimes on our system, when restarting DM, the communication between DM and microscope gets interrupted. A Keyspan USB Serial Adapter is used to establish the communication in our case. Unplugging and replugging the USB connection usually fixes the problem. However, it it almost impossible to do it remotely. We have found a workaround to re-activate the Keyspan USB Serial Adapter. 1) Exit DM first, 2) From Device Manager, find "Kayspan USB Serial Adapter", in its "Driver" tab, disable and enable it. This will reset the adapter. 3) Restarting DM. After that, communication will be OK. 
 
