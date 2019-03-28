@@ -1,12 +1,12 @@
 .. _pixelsize_distortion:
 
-Pixelsize and Distortion Info on K2 Cameras
-===========================================
+Pixelsize and Distortion Info on K2/3 Cameras
+=============================================
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2017-2-23
-:Last_Updated: 2018-1-17
+:Last_Updated: 2019-3-28
 .. _glossary:
 
   Abstract
@@ -119,6 +119,20 @@ On September 2017, Gatan serviced GIF/K2 system on Krios and they removed a hous
 |  215,000                 |   0.654           |   0.327              |
 +--------------------------+-------------------+----------------------+
 |  275,000                 |   0.516           |   0.258              |
++--------------------------+-------------------+----------------------+
+
+From March 10, 2019, K3 was upgraded on Krios to replace the K2. GIF alignment has changes too. The pixelsizes changed a lot.
+
+**Table.5 Pixelsize (Å) of GIF K3 camera on Titan Krios - AFTER March 10, 2019**
+
++--------------------------+-------------------+----------------------+
+|  Magnifications (X)      | Counted (Å)       | Super resolution (Å) |
++==========================+===================+======================+
+|  81,000                  |   1.060           |   0.530              |
++--------------------------+-------------------+----------------------+
+|  105,000                 |   0.830           |   0.415              |
++--------------------------+-------------------+----------------------+
+|  130,000                 |   0.650           |   0.325              |
 +--------------------------+-------------------+----------------------+
 
 
