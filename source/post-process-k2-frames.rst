@@ -6,7 +6,7 @@ Post Processing K2 Frames from SerialEM Data Collection
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2017-02-13
-:Last_Updated: 2019-01-25
+:Last_Updated: 2019-05-07
 
 .. glossary::
 
