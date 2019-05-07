@@ -29,7 +29,7 @@ Instructions, Manuals and Protocols
    .. ccds_cm120
    make-graphene-oxide-grid
    singleparticle_serialem
-   post-process-k2-frames
+   post-process-k2_k3-frames
    align-movie-frames-imod
    monitor-data-collection-in-the-fly
    pixelsize-and-distortion-info
