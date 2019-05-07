@@ -115,6 +115,16 @@ The last parameter in title line shows the orientation of imaging. Here is 0 - n
        It is also possible to remove extreme values from the data at the same time with the '-h' and '-l' options.  For example, adding '-h 6 -l 1' after the 'unpack' will replace all values above 6 with 1.
 
        To apply defect correction to files from GMS 2.3.1 or higher, add '-D defects...txt' before 'fileWithFrames' in the appropriate command, where 'defects...txt' is the file saved by the plugin.
+       
+        In IMOD version 4.8.41 or higher, all programs can read 4-bit files directly.  The 'clip unpack' command has thus been changed so that it can be used for normalizing any kind of data, and it can also be invoked as either 'clip unpack' or 'clip norm'.  A command that works for all of the above cases is
+
+      .. code-block:: none
+
+            clip norm -n scalingFactor  -m 1  fileWithFrames  gainReference.mrc normalizedFrames.mrc
+
+where the default scaling factor is 16, extreme values can be removed with '-l' and '-h' options, and '-D defects...txt' would be added for files from GMS 2.3.1 or higher.  With IMOD 4.9.2/4.10.1 or higher, you can add add '-R -1' and use the DM reference directly instead of a rotated reference.
+
+For K3 frames, you should specify a scaling factor of 32.
 
 </helpfile>
    
