@@ -1,6 +1,6 @@
 .. _post-process-k2-frames:
 
-Post Processing K2 Frames from SerialEM Data Collection
+Post Processing K2/K3 Frames from SerialEM Data Collection
 =======================================================
 
 :Author: Chen Xu
