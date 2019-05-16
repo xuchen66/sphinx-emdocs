@@ -21,7 +21,7 @@ How do I ...
 
 We are core facilty and open to everyone who wants to access including industry customers. 
 
-What is the logistics? Normally, you can start inqury via email or phone call. If our facility is suitable for your projects, we will ask you to submit electronic forms for sample submission and request of instruments. The sample submission is required for any sample coming to Umass Med Sch campus. After we receive your submitted forms and things seem to be in order, our administration will send you a quote for you to obtain a PO for the work or/and instrument time. And we usually can schedule time for you shortly. Our waiting time is usually long, so it is good to plan early. 
+What is the logistics? Normally, you can start inqury via email or phone call. If our facility is suitable for your projects, we will ask you to submit electronic forms for sample submission and request of instruments. The sample submission form is required by bio-safety office, for any sample coming to Umass Med Sch campus. After we receive your submitted forms and things seem to be in order, our administration will send you a quote for you to obtain a PO for the work or/and instrument time. And we usually can schedule time for you shortly. Our waiting time is usually long, so it is good to plan early. 
 
 We have price rate policy for each year. It is not published on the web page, but is available upon request. 
 
