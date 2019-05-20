@@ -30,7 +30,7 @@ We have price rate policy for each year. It is not published on the web page, bu
 ... get to your facility location?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please follow this site for main direction. https://www.umassmed.edu/bmp/about/directions/
+Please follow this site for main direction and the campus map - https://www.umassmed.edu/bmp/about/directions/
 
 We are located at Medical School Building - A floor SA-106. You enter the "SCHOOLS" building from "medical school lobby" indicated on the campus map. After exiting elevator at A floor, turn left. Half way down the hallway, you will see a sign for "CryoEM Core Facility". Call facility office # 774 455 4049 if you are lost. 
 
