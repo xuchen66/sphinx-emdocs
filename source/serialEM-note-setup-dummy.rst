@@ -7,7 +7,7 @@ SerialEM Note: Setup Dummy Instance
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2017-12-16
-:Last_Updated: 2019-01-28
+:Last_Updated: 2019-05-23
 
 .. glossary::
 
