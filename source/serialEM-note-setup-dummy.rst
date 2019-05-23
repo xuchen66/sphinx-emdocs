@@ -65,7 +65,7 @@ If we want to make multiple dummies on the same computer, say, one for Talos and
 
 **Fig.2 Property Widows for Talos Dummy Instance**
 
-.. image:: ../images/talos.png
+.. image:: ../images/Talos.png
    :scale: 75 %
 ..   :height: 544 px
    :width: 384 px
