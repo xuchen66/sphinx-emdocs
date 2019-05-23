@@ -45,6 +45,34 @@ On a remote computer
 #. make a shortcut from the executable and edit the property of the shortcut to add "/DUMMY" to the end of Target line, as above. 
 #. repeat the last two steps for a different scope. 
 
+.. _multiple-dummies:
+
+Make Multiple Dummies For Different Scopes
+------------------------------------------
+
+If we want to make multiple dummies on the same computer, say, one for Talos and one for Krios, we modify above procedure slightly different. 
+
+1. put two sets of systems files (property and calibration files) to two folders, such as C:\\ProgramData\\SerialEM\\Krios and C:\\ProgramData\\SerialEM\\Talos. 
+
+2. Edit both property files to insert two lines into each one.
+
+.. code-block:: ruby
+
+   NoScope     1
+   NoCameras   1
+   
+3. Intead of /DUMMY, the /Krios or /Talos is used in the Target line. 
+
+**Fig.2 Property Widows for Talos Dummy Instance**
+
+.. image:: ../images/talos.png
+   :scale: 75 %
+..   :height: 544 px
+   :width: 384 px
+   :alt: DUMMY instance property
+   :align: center
+
+
 .. _on-mac:
 
 On a Mac computer
