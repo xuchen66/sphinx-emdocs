@@ -2,7 +2,7 @@
 
 .. toctree::
    :maxdepth: 2
-   
+
    About
 
 FAQ
@@ -19,12 +19,12 @@ Training Contents and Materials
 
    cryo-em_training
    serialem_training
-  
+
 Instructions, Manuals and Protocols
 -----------------------------------
 .. toctree::
    :maxdepth: 4
- 
+
    .. cm120_instruction
    .. ccds_cm120
    make-graphene-oxide-grid
@@ -35,12 +35,12 @@ Instructions, Manuals and Protocols
    pixelsize-and-distortion-info
    relion-and-cistem-services
    detach-and-reattach-cistem
-   
+
 SerialEM Notes
 --------------
 .. toctree::
    :maxdepth: 2
-   
+
    serialEM-note-install-and-calib
    serialEM-note-make-all-LMM-maps
    serialEM-note-setup-dummy
@@ -51,7 +51,8 @@ SerialEM Notes
    serialEM-note-utilize-jpg-file-format
    serialEM-note-setup-email
    serialEM-note-K3-is-installed-on-Talos
-   
+   serialEM-note-template-matching
+
 Index
 *****
 
