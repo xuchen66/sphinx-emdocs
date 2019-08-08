@@ -6,8 +6,8 @@ Single Particle Data Collection Using SerialEM
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2016-10-18
-
+:Date-created: 2016-10-18
+:Last-updated: 2019-08-08
 .. glossary::
 
    Abstract
@@ -129,10 +129,16 @@ Lets load the script "LD-Group" to script editor and try to run it.
    # macro to skip points except the very first in the group.
    # assume LD is setup.
 
+
+
    # X,Y position 
-   RealignToNavItem 1
-   Copy A P                            # copy last image from Realign to buffer P
-   CallFunction MyFuncs::AlignToBuffer 2 P      # this clears out any ImageShift
+   buffer = T
+   RealignToNavItem 0
+   Copy A $buffer                           # copy last image from Realign to buffer P
+   ResetImageShift
+   CallFunction MyFuncs::Relax
+   CallFunction MyFuncs::BufferShot $buffer   
+   AlignTo $buffer
 
    # preparation for first item in group
    ReportGroupStatus 
@@ -150,10 +156,13 @@ Lets load the script "LD-Group" to script editor and try to run it.
    EarlyReturnNextShot 0               # K2 frame, return to SEM
    R
 
-   echo .
+   # or comment out above two line and use below
+   MultipleRecords
 
+   # RefineZLP
+   RefineZLP 30
 
-This script calls two functions - ``AlignToBuffer`` and ``CycleTargetDefocus``. The script that contains all the functions "MyFuncs" must be also loaded in one of the script buffers/editors. You can download the latest "MyFuncs.txt" `here on github.com <https://github.com/xuchen66/SerialEM-scripts/blob/master/MyFuncs.txt/>`_.
+This script calls three functions - ``Relax``, ``BufferShot`` and ``CycleTargetDefocus``. The script that contains all the functions "MyFuncs" must be also loaded in one of the script buffers/editors. You can download the latest "MyFuncs.txt" `here on github.com <https://github.com/xuchen66/SerialEM-scripts/blob/master/MyFuncs.txt/>`_.
 
 This is a good time to test run this script on one of the point items in navigator windows, to make sure it runs fine. 
 
