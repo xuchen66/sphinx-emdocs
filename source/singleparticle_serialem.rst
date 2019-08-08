@@ -162,7 +162,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
    # RefineZLP
    RefineZLP 30
 
-This script calls three functions - ``Relax``, ``BufferShot`` and ``CycleTargetDefocus``. The script that contains all the functions "MyFuncs" must be also loaded in one of the script buffers/editors. You can download the latest "MyFuncs.txt" `here on github.com <https://github.com/xuchen66/SerialEM-scripts/blob/master/MyFuncs.txt/>`_.
+This script calls three functions - ``Relax``, ``BufferShot`` and ``CycleTargetDefocus``. The script that contains all the functions "MyFuncs" must be also loaded in one of the script buffers/editors. You can download the latest "MyFuncs.txt" `here on github.com <https://github.com/xuchen66/SerialEM-scripts/blob/new-features/MyFuncs.txt/>`_.
 
 This is a good time to test run this script on one of the point items in navigator windows, to make sure it runs fine. 
 
