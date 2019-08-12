@@ -1,8 +1,8 @@
 
 .. _SerialEM_Setup_Dummy:
 
-SerialEM Note: Template Matching
-===================================
+SerialEM Note: Adding Point Items by Template Matching
+======================================================
 
 :Author: Albert Xu
 :Contact: <albert.t.xu@gmail.com>
