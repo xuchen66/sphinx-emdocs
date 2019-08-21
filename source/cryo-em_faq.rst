@@ -6,7 +6,7 @@ FAQ
 :Author: UMass CryoEM Core
 :Contact: <cryoem.umms@gmail.com>
 :Date-created: 2017-2-13
-:Last-updated: 2019-5-15
+:Last-updated: 2019-8-21
 
 
 This is list of Frequently Asked Questions about Umass Cryo-EM. Some questions are technical, while others are more general. 
@@ -232,23 +232,19 @@ Please ask us if you have further questions.
 
 You received mainly three or four folders as below:
 
-rawTIFF folder
--------------------
+**rawTIFF folder**:
 TIFF - compressed image stack containing multiple image frames, not gain normalized
 pcm - IMID python command file for frame alignment using IMOD program
 mdoc - adoc file that contains all the imaging condition information
 log - it is log file of aligning result (after run pcm file to align frames)
 
-alignedMRC foler
---------------------
+**alignedMRC foler**:
 *_ali.mrc files - those are aligned of multiple movie frames, they are single images not movie frames
 
-alignedJPG folder
---------------------
+**alignedJPG folder**:
 JPG snapshot of the aligned MRCs together with power spectrum. These are for visually check image quality and sample condition.
 
-SerialEM-Maps folder
-------------------------
+**SerialEM-Maps folder**:
 all the control files for SerialEM software running for the session, it contains useful information each shot is from which grid, which region etc.. It is part of the session data, but less useful for end user to process the data.
 
 
