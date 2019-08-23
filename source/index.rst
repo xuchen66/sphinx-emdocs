@@ -52,6 +52,7 @@ SerialEM Notes
    serialEM-note-setup-email
    serialEM-note-K3-is-installed-on-Talos
    serialEM-note-template-matching
+   serialEM-note-refineZLP-on-Aufoil-grid
 
 Index
 *****
