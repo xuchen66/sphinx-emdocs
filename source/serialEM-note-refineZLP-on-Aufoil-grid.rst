@@ -6,7 +6,7 @@ SerialEM Note: Refine ZLP on Au Foil Grids
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2019-08-23 
-:Last-Updated: 2019-08-23
+:Last-Updated: 2019-08-25
 
 .. glossary::
 
@@ -30,7 +30,7 @@ It will refine ZLP position if longer than 30 minutes since last refinement. It 
 based holey grid. Unfortunitely, it doesn't run well on a gold foil based grid which it is very "black" between holes. This is 
 mainly due to large pieces of gold crystals that form the film diffract electron beams away in relatively large angle so they
 don't hit the camera. SerialEM's ``refineZLP`` routine works by comparing camera counts at different energy shifts. If there is clear 
-count drop, the slit edge is hitted. When with a Au foil grid, if the area but not a hole is used for such refinement, the 
+count drop, the slit edge is detected. When with a Au foil grid, if the area but not a hole is used for such refinement, the 
 black nature of the film causes this procedure likely to fail. When we take multi-hole exposure for 4 holes, for example, the 
 stage position is on such "black" area.
 
