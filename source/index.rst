@@ -53,6 +53,7 @@ SerialEM Notes
    serialEM-note-K3-is-installed-on-Talos
    serialEM-note-template-matching
    serialEM-note-refineZLP-on-Aufoil-grid
+   serialEM-note-flexible-timer
 
 Index
 *****
