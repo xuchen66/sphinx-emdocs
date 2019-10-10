@@ -23,31 +23,61 @@ and with timer defined. Here is one of the example:
 
 .. code-block:: ruby
 
-  LongOperation Da 3 
+   LongOperation Da 3 
   
-This will perform dark reference for K2/K3 camera every 3 hours. This is very handy indeed. However, if we want to set a timer 
-and to do a multiple actions when time is up, a more flexible timer is needed. In the case shown in picture below, this is 
-Au-foil grid. We use multiple hole mechanism to collected images in these 4 holes using beam-image shift while the stage is 
-centered at the middle of the 4 hole pattern. When the procedure is finished, the shift is set to 0 and Record beam would be 
+This will perform dark reference for K2/K3 camera every 3 hours. This is very handy indeed. Another example is ``RefineZLP``.
+
+.. code-block:: ruby
+   
+   RefineZLP 30
+   
+This will perform refining ZLP every 30 minutes. 
+   
+However, if we want to set a timer and to do a multiple actions when time is up, a more flexible timer is needed. In the case shown in picture below, which is 
+Au-foil grid, we use multiple hole mechanism to collected images in these 4 holes using beam-image shift while the stage is 
+centered at the middle of the 4 hole pattern. When the procedure is finished, the shift is reset and Record beam would be 
 hitting on the black Au crystals. 
 
+**Fig.1 4-hole black Au crystals**
+
+.. image:: ../images/Au-4-holes.png
+   :scale: 100 %
+..   :height: 544 px
+   :width: 384 px
+   :alt: DUMMY instance property
+   :align: center
+
+It is known that this kind of black crystal film is bad for ``refineZLP`` routine to work properly. It needs to use a hole are
+make it work. As you can see, a simple timer built in for a specific function is not sufficient here. Two actions are needed: 1) move to one of the four holes and 2) perform RefineZLP. It requires a more flexible timer to do this. 
+
+.. _flexible_timer:
+
+Flexible Timer 
+--------------
+
+A typical timer which could handle multiple actions would be like this:
+
+.. code-block:: ruby
+
+   IF time is up
+      do task1 
+      do task2
+      ...
+   EndIf
+   
+One of the script commands related to timer is ``SetCustomTime``. Below is example code to perform two actions mentioned above.
+
+.. code-block:: ruby
+
+   ### move to a hole and refineZLP every 30 minutes
+   ReportCustomTime ZLP
+   if $elapsed >= 30
+       StageToLastMultiHole
+       #ImageShiftToLastMultiHole
+       RefineZLP
+       # reset it
+       SetCustomTime ZLP
+   Endif
+   ###
 
 
-
-0. Before LD is turned on, make sure beam is centered for both *mP* and *nP* beam. I usually use Direct Alignments to do this with 
-   *mP* and *nP* beam. That is, turn *mP* on, Directly Alignments - Beam Shift (multi-function to center) - done. Repeat with *nP* mode. 
-1. Turn on SerialEM LD.
-#. Lower Down large screen or insert screen.
-#. From Task - Specialized Options, make sure the "Adjust Focus on Probe Mode Change" is NOT checked. 
-#. Set View Defocus Offset to 0 using dial Up-Down button on SerialEM LD Control Panel.
-#. Select R area (radio button) on LD control panel. 
-#. On microscope right panel, press "Eucentric Focus".
-#. Reset Defocus (L2 button on our current setup for soft buttons, yours could different), this makes defocus display 0. 
-#. Select V area (radio button) on LD control panel.
-#. wait 6-7 seconds to allow scope to switch to this mag and *mP* mode.
-#. On microscope right panel, press "Eucentric Focus".
-#. Reset Defocus (L2 button on our current setup for soft buttons, yours could different), this makes defocus display 0. 
-#. Set View Defocus Offset to target value (-300 in my case) using dial Up-Down button on SerialEM LD Control Panel.
-#. From Task - Specialized Options, make sure the "Adjust Focus on Probe Mode Change" is **NOW** checked. 
-
-That's it. 
