@@ -11,7 +11,7 @@ SerialEM Note: Flexible Timer
 .. glossary::
 
    Abstract
-      Note about the flexible timer availble for scripting. And example how to use it.  
+      Note about the flexible timer available for scripting and an example how to use it.  
       
 .. _background_information:
 
@@ -47,7 +47,7 @@ hitting on the black Au crystals.
    :alt: DUMMY instance property
    :align: center
 
-It is known that this kind of black crystal film is bad for ``refineZLP`` routine to work properly. It needs to use a hole are
+It is known that this kind of black crystal film is bad for ``refineZLP`` routine to work properly. It needs to use a hole area to 
 make it work. As you can see, a simple timer built in for a specific function is not sufficient here. Two actions are needed: 1) move to one of the four holes and 2) perform RefineZLP. It requires a more flexible timer to do this. 
 
 .. _flexible_timer:
@@ -59,7 +59,7 @@ A typical timer which could handle multiple actions would be like this:
 
 .. code-block:: ruby
 
-   IF time is up
+   If time is up
       do task1 
       do task2
       ...
@@ -74,9 +74,8 @@ One of the script commands related to timer is ``SetCustomTime``. Below is examp
    if $elapsed >= 30
        StageToLastMultiHole
        #ImageShiftToLastMultiHole
-       RefineZLP
-       # reset it
-       SetCustomTime ZLP
+       RefineZLP              # refine now
+       SetCustomTime ZLP      # reset it
    Endif
    ###
 
