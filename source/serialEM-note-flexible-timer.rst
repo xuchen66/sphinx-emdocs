@@ -18,8 +18,7 @@ SerialEM Note: Flexible Timer
 Background information 
 ----------------------
 
-In SerialEM scripting, there are a few command with timer built in. For example, command ``LongOperation`` can take a few actions
-and with timer defined. Here is one of the example:
+In SerialEM scripting, there are a few commands with timer built in. For example, command ``LongOperation`` can take a few specific actions with timer defined.  Here is one of the example:
 
 .. code-block:: ruby
 
@@ -33,7 +32,7 @@ This will perform dark reference for K2/K3 camera every 3 hours. This is very ha
    
 This will perform refining ZLP every 30 minutes. 
    
-However, if we want to set a timer and to do a multiple actions when time is up, a more flexible timer is needed. In the case shown in picture below, which is 
+However, if we want to set a timer and to do a multiple and general actions when time is up, a more flexible timer is needed. In the case shown in picture below, which is 
 Au-foil grid, we use multiple hole mechanism to collected images in these 4 holes using beam-image shift while the stage is 
 centered at the middle of the 4 hole pattern. When the procedure is finished, the shift is reset and Record beam would be 
 hitting on the black Au crystals. 
