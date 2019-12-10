@@ -54,7 +54,7 @@ SerialEM Notes
    serialEM-note-template-matching
    serialEM-note-refineZLP-on-Aufoil-grid
    serialEM-note-flexible-timer
-   serialem-note-more-about-XY-positioning
+   serialem-note-more-about-XY-position
 
 Index
 *****
