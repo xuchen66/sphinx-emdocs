@@ -98,8 +98,7 @@ functions.
    AlignTo $buffer 0 1
    
 Simply align the image in buffer A to reference buffer. This would make the target right on again with image shift. The very 
-last argument ``1`` means no trimming to any of the source image and reference image. This is needed for UltraAu film grid
-which had vary "dark" region of the film. 
+last argument ``1`` means no trimming to any of the source image and reference image. This is needed for UltrAuFoil® Holey Gold Films grid which have vary "dark" region of the film. 
 
 .. thoughs:
 
