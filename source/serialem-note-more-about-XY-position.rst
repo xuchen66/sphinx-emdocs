@@ -13,7 +13,7 @@ SerialEM Note: More About X,Y Positioning
 
    Abstract
       Robust positioning to the target position is critical for high level operation of CryoEM data collection. In this note, 
-      I like to share my own version of the latest script to perform X,Y positioning task. And I try to explain everyone line 
+      I like to share my own version of the latest script to perform X,Y positioning task. And I try to explain every line 
       of the code and ideas behind them as well. 
       
       I have spent a lot of time thinking and testing about this. If you have better and different ideas, I love to hear. 
@@ -45,7 +45,7 @@ Explanations
     buffer = T
     
 This is to define which buffer will be used to store reference image, a whole image or a cropped area of am image. 
-Buffer after N are all beyond rolling range, thus won't be pushed out by too many images taken. 
+Buffer after N are all beyond rolling range, thus won't be pushed out by taking too many images. 
 
 .. code-block:: ruby
 
@@ -60,7 +60,7 @@ bring scope back to R, after it is done.
 This command line will bring the specimen to the picked item position, with some image shift in the last image of the routine takes, in 
 buffer A. 
 
-It is useful to point out that this is perhaps one of the most fundamental difference between SerialEM and other data collection
+I should point out that this is perhaps one of the most fundamental difference between SerialEM and other data collection
 software - it doesn't rely on the template at all. As long as an item in a valid map is defined (picked), **SerialEM** will drive 
 the stage there!
 
