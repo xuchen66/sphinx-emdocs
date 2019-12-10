@@ -88,9 +88,9 @@ line commented out.
 
     AcquireToMatchBuffer $buffer    
 
-This is a new command, available in 3.8 beta Dec 10th, 2019 built and later. It doesn't two things: 1) take a shot using the 
-exact condition of what in the reference buffer for mag, beam condition, binning, exposure time etc.; 2) make the shot the same 
-size of what in the reference buffer, by cropping if necessary. I used to have to do this in a lenthy script using two 
+This is a new command, available in 3.8 beta Dec 10th, 2019 built and later. It does two things: 1) take a shot using the 
+exact condition of what in the reference buffer for mag, beam condition, binning, exposure time etc.; 2) make the final image the same 
+size as what in the reference buffer, by cropping if necessary. I used to have to do this in a lenthy script using two 
 functions. 
 
 .. code-block:: ruby
