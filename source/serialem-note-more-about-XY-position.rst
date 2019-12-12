@@ -93,8 +93,8 @@ last argument ``1`` means no trimming to any of the source image and reference i
 
 .. thoughs:
 
-Other thougts
--------------
+Other thoughts
+--------------
 
 1. It is helpful to use large defocus offset for map and realigning, as the contrast is significantly better. On our Krios, we use -300um for View offset (in LD). 
 
