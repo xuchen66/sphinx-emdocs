@@ -91,12 +91,13 @@ exact condition of what in the reference buffer for mag, beam condition, binning
 Simply align the image in buffer A to reference buffer. This would make the target right on again with image shift. The very 
 last argument ``1`` means no trimming to any of the source image and reference image. This is needed for UltrAuFoil® Holey Gold Films grid which have vary "dark" region of the film. 
 
-.. thoughs:
+.. thoughts:
 
 Other thoughts
 --------------
 
 1. It is helpful to use large defocus offset for map and realigning, as the contrast is significantly better. On our Krios, we use -300um for View offset (in LD). 
+
 2. If offset is more than 200um, it most likely needs High-def calibration. With this, system dynamically interpolates the stage shift matrix which is calibrated using near-focus condition. This makes stage movement much more accurate and whole script more robust.
-3. If possible, use whole image as template instead of sub-area. Using sub-area is a quick workaround for a grid which has 
-periodic feature and 5-point way of picking points might be not very accurate due to local geometry variation.  
+
+3. If possible, use whole image as template instead of sub-area. Using sub-area is a quick workaround for a grid which has periodic feature and 5-point way of picking points might be not very accurate due to local geometry variation.  
