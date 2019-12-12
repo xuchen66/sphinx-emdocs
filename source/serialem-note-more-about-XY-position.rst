@@ -98,7 +98,7 @@ Other thougts
 
 1. It is helpful to use large defocus offset for map and realigning, as the contrast is significantly better. On our Krios, we use -300um for View offset (in LD). 
 
-2. If offset is more than 200um, it most likely needs High-def calibration. With this, system dynamically interpolates the stage shift matrix which is calibrated using near-focus condition. This makes stage movement much more accurate and whole script more robust. 
+#. If offset is more than 200um, it most likely needs High-def calibration. With this, system dynamically interpolates the stage shift matrix which is calibrated using near-focus condition. This makes stage movement much more accurate and whole script more robust. 
 
-3. If possible, use whole image as template instead of sub-area. Using sub-area is a quick workaround for a grid which has 
-periodic feature and 5-point way of picking points are not very accurate due to local geometry variation.  
+#. If possible, use whole image as template instead of sub-area. Using sub-area is a quick workaround for a grid which has 
+periodic feature and 5-point way of picking points might be not very accurate due to local geometry variation.  
