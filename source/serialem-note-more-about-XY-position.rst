@@ -7,7 +7,7 @@ SerialEM Note: More About X,Y Positioning
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2019-12-12 
-:Last-Updated: 2019-12-12
+:Last-Updated: 2019-12-13
 
 .. glossary::
 
@@ -44,7 +44,7 @@ Explanations
 
     buffer = T
     
-This is to define which buffer will be used to store reference image, a whole image or a cropped area of am image. 
+This is to define which buffer will be used to store reference image, a whole image or a cropped area of an image. 
 Buffer after N are all beyond rolling range, thus won't be pushed out by taking too many images. 
 
 .. code-block:: ruby
@@ -53,28 +53,22 @@ Buffer after N are all beyond rolling range, thus won't be pushed out by taking 
 
 ``RealignToNavItem`` is one of the most important routine in **SerialEM**, in my opinion. It will bring the specimen stage to 
 a valid map item. It typically uses combination of stage shift and image shift to get the job done. ``0`` here means to stays 
-in the conditions from which the map was created. For example, the map was generated using LD View, and the scope currently is at LD **R**,
-the scope will switch to the View mag, beam intensity etc.. After *realign* is done, it stays in View mag. Argument ``1`` will 
-bring scope back to **R**, after routine finishes. 
+in the conditions from which the map was created. For example, the map was generated using LD View, and the scope currently is at LD **R**,the scope will switch to the View mag, beam intensity etc.. After *realign* is done, it stays in View mag. Argument ``1`` will bring scope back to **R**, after routine finishes. 
 
-This command line will bring the specimen to the picked item position, with some image shift in the last image of the routine takes, in 
-buffer A. 
+This command line will bring the specimen to the picked item position, with some image shift in the last image of the routine takes, in buffer A. 
 
 I should point out that this is perhaps one of the most fundamental difference between SerialEM and other data collection
-software - it doesn't rely on the template at all. As long as an item in a valid map is defined (picked), **SerialEM** will drive 
-the stage there!
+software - it doesn't rely on the template at all. As long as an item in a valid map is defined (picked), **SerialEM** will drive the stage there!
 
 .. code-block:: ruby
 
     ResetImageShift 2
 
-``ResetImageShift`` is to clear out any image shift existing in the system and using stage shift to compensate. Then, there is 
-no image shift, which means beam is straight down on the axis. However, the intrinsic inaccuracy of stage movement makes 
+``ResetImageShift`` is to clear out any image shift existing in the system and using stage shift to compensate. Then, there is no image shift, which means beam is straight down on the axis. However, the intrinsic inaccuracy of stage movement makes 
 target being slightly off, more or less.  
 
 The argument ``2`` here means stage will clear the backlash by moving to opposite direction for 0.025um as default. This can 
-be very useful to slow down the stage drifting after moving to a new location. Low drift is a very good thing since there is no
-way to correct drifts accumulated within a frame. This is particularly true if one has to use long frame time on some camera system. 
+be very useful to slow down the stage drifting after moving to a new location. Low drift is a very good thing since there is no way to correct drifts accumulated within a frame. This is particularly true if one has to use long frame time on some camera system. 
 
 .. code-block:: ruby
 
@@ -89,9 +83,7 @@ line commented out.
     AcquireToMatchBuffer $buffer    
 
 This is a new command, available in 3.8 beta Dec 10th, 2019 built and later. It does two things: 1) take a shot using the 
-exact condition of what in the reference buffer for mag, beam condition, binning, exposure time etc.; 2) make the final image the same 
-size as what in the reference buffer, by cropping if necessary. I used to have to do this in a lenthy script using two 
-functions. 
+exact condition of what in the reference buffer for mag, beam condition, binning, exposure time etc.; 2) make the final image the same size as what in the reference buffer, by cropping if necessary. I used to have to do this in a lenthy script using two functions. 
 
 .. code-block:: ruby
 
@@ -105,11 +97,9 @@ last argument ``1`` means no trimming to any of the source image and reference i
 Other thougts
 -------------
 
-1. It is helpful to use large defocus offset for map and realigning, as the contrast is significantly better. On our Krios, we 
-use -300um for View offset (in LD). 
+1. It is helpful to use large defocus offset for map and realigning, as the contrast is significantly better. On our Krios, we use -300um for View offset (in LD). 
 
-2. If offset is more than 200um, it most likely needs High-def calibration. With this, system dynamically interpolates the stage
-shift matrix which is calibrated using near-focus condition. This makes stage movement much accurate and whole script robust. 
+2. If offset is more than 200um, it most likely needs High-def calibration. With this, system dynamically interpolates the stage shift matrix which is calibrated using near-focus condition. This makes stage movement much accurate and whole script robust. 
 
 3. If possible, use whole image as template instead of sub-area. Using sub-area is a quick workaround for a grid which has 
-periodic feature and 5-point way of picking points are not very accurate. 
+periodic feature and 5-point way of picking points are not very accurate due to local geometry variation.  
