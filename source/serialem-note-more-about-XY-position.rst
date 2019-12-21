@@ -100,4 +100,4 @@ Other thoughts
 
 2. If offset is more than 200um, it most likely needs High-def Mag calibration. With this, system dynamically interpolates the stage shift matrix which is calibrated using near-focus condition. This makes stage movement much more accurate and robust.
 
-3. If possible, use whole image as template instead of sub-area. Using sub-area is a quick workaround for a grid which has periodic feature and 5-point way of picking points might be not very accurate due to local geometry variation.  
+3. If possible, use whole image as template instead of sub-area. Using sub-area sush as a single hole is a quick workaround for a grid which has periodic feature and 5-point way of picking points might be not very accurate due to local geometry variation. 
