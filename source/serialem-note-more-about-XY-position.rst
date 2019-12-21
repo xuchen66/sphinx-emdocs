@@ -7,7 +7,7 @@ SerialEM Note: More About X,Y Positioning
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2019-12-12 
-:Last-Updated: 2019-12-13
+:Last-Updated: 2019-12-21
 
 .. glossary::
 
@@ -51,20 +51,20 @@ Buffer after N are all beyond rolling range, thus won't be pushed out by taking 
 
     RealignToNavItem 0
 
-``RealignToNavItem`` is one of the most important routine in **SerialEM**, in my opinion. It will bring the specimen stage to 
+``RealignToNavItem`` is one of the most important functions in **SerialEM**, in my opinion. It will bring the specimen stage to 
 a valid map item. It typically uses combination of stage shift and image shift to get the job done. ``0`` here means to stays 
 in the conditions from which the map was created. For example, the map was generated using LD **View**, and the scope currently is at LD **R**,the scope will switch to the View mag, beam intensity etc.. After *realign* is done, it stays in View mag. Argument ``1`` will bring scope back to **R**, after routine finishes. 
 
 This command line will bring the specimen to the picked item position, with some image shift in the last image of the routine takes, in buffer A. 
 
-I should point out that this is perhaps one of the most fundamental difference between SerialEM and other data collection
+I should point out that this perhaps reflects one of the most fundamental differences between SerialEM and other data collection
 software - it doesn't rely on the template at all. As long as an item in a valid map is defined (picked), **SerialEM** will drive the stage there!
 
 .. code-block:: ruby
 
     ResetImageShift 2
 
-``ResetImageShift`` is to clear out any image shift existing in the system and using stage shift to compensate. Then, there is no image shift, which means beam is straight down on the axis. However, the intrinsic inaccuracy of stage movement makes 
+``ResetImageShift`` is to clear out any image shift existing in the system and use stage shift to compensate. Then, there is no image shift, which means beam is straight down on the axis. However, the intrinsic inaccuracy of stage movement makes 
 target being slightly off, more or less.  
 
 The argument ``2`` here means stage will clear the backlash by moving to opposite direction for 0.025 microns as default. This can be very useful to slow down the stage drifting after moving to a new location. Low drift is a very good thing since there is no way to correct drifts accumulated within a frame. This is particularly true if one has to use long frame time on some camera system. 
