@@ -35,6 +35,7 @@ Instructions, Manuals and Protocols
    pixelsize-and-distortion-info
    relion-and-cistem-services
    detach-and-reattach-cistem
+   adding-scale-bar
 
 SerialEM Notes
 --------------
