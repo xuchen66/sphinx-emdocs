@@ -6,14 +6,13 @@ Adding a Scalebar to Images
 :Author: Christna Ouch
 :Contact: <Christna.Ouch@umassmed.edu>
 :Date_Created: 2020-01-02
-:Last_Updated: 2020-01-02
-
+:Last_Updated: 2020-01-06
 .. _glossary:
 
 Overview
 --------
     
-Stack file images from taken with SerialEM can be processed and labeled using Imod and ImageMagick. 
+Stack file images taken with SerialEM can be processed and labeled using Imod and ImageMagick. 
 
 I have written a simple shell script that will add a scale bar to the lower right-hand side of an image. This script first converts your stack file into a series of tifs using mrc2tif (Imod), scales the image by 50%, normalizes, adds a scale bar and converts to jpg using ImageMagick. 
 
@@ -33,8 +32,9 @@ After installation, both Imod and ImageMagick should be installed. Check that ea
 Script Download
 ---------------
 
-Download the script from: https://github.com/ouchc/sphinx-emdocs/blob/ouchc/labeling_script_new_v4.sh
+Download the script from: https://github.com/ouchc/sphinx-emdocs/blob/ouchc/scripts/labeling_script_new_v4.zip
 
+Extract the sh-script to the directory with your stack files.
 
 Editing the Script
 ------------------
@@ -60,7 +60,7 @@ The script has a few fields that needs to be updated for your particular microsc
 
 This script captures the pixel size from the header and generates a scale bar based on that pixel size.
 
-The other parameters to edit is scale_length, scale_label and scale_label_offset. The length is in nanometers and the offset is used to center the scalebar label. Adjust this value to center the label. Additionally, scale_x2 defines the right-most position of the scale-bar. The current value of 2750 works well for K3 micrographs binned 2x. For K2 data or other cameras, you may need to reduce this value so that it is within the bounds of the bin2 image. Adjust y_anchor and y_text to position the scalebar and label respectively. The options for the header are shown below.
+The other parameters to edit is scale_length, scale_label and scale_label_offset. The length is in nanometers and the offset is used to center the scalebar label. Adjust this value to center the label. Alternatively, set the scalebar_label_offset to 0 to left-justify the label. The scale_x2 parameter defines the right-most position of the scale-bar. The current value of 2750 works well for K3 micrographs binned 2x. For K2 data or other cameras, you may need to reduce this value so that it is within the bounds of the bin2 image. Adjust y_anchor and y_text to position the scalebar and label respectively. The options for the header are shown below.
 
 ::
 
@@ -96,7 +96,20 @@ The other parameters to edit is scale_length, scale_label and scale_label_offset
 
 Running the Script
 ------------------
-Place the script in the same directory with all of your stack files that need to be labeled. These stack files need to have a .st extension to be recognized by the script. Open a linux terminal or Cygiwn and cd to that directory. Run the edited script. This script will create subdirectories using the mag variables defined in the header.
+Place the script in the same directory with all of your stack files that need to be labeled. These stack files need to have a .st extension to be recognized by the script. Open a linux terminal or Cygwin and cd to that directory. Run the edited script. This script will create subdirectories using the mag variables defined in the header. 
+
+Note: When editing the script in windows, hidden newline characters may be added to the the file. These newline characters prevent the script from running. Please run this command in cygwin to remove these hidden characters. Replace input with your original script and output for the fixed script
+
+::
+
+ Command syntax:
+ tr -d '\r' <input >output
+
+ Example:
+ tr -d '\r' <labeling_script_new_v4.sh >labeling_script_new_v4-fixed.sh
+
+
+Use a coding editor or notepad (do not use wordpad or office) to make future changes to the file.
 
 
 
