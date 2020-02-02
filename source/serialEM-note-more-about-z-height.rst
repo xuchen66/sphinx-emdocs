@@ -6,7 +6,8 @@ SerialEM Note: More About Z Height
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2017-12-09 Last Updated
+:Date: 2017-12-09 
+:Last Updated: 2020-02-02
 
 .. glossary::
 
@@ -66,7 +67,8 @@ The function code is below.
    Loop 2
    Autofocus -1 2
    ReportAutofocus 
-   Z = -1 * $reportedValue1
+   #Z = -1 * $reportedValue1
+   Z = -0.75 * $reportedValue1               # 0.75 is a good damper for -200um V vs R offet
    MoveStage 0 0 $Z
    Z = ROUND $Z 2
    echo Z has moved --> $Z micron 
@@ -117,32 +119,75 @@ If we found the good "offset" value, it will be good for some time, at least thi
    # assume speciment is ON the eucentricity 
 
    ## Eucentric Z
+   ##
    #Eucentricity 3
    ReportStageXYZ 
    Z0 = $repVal3
+   #Z0 = 187.81
+
+   SetCameraArea V H
+   ReportUserSetting AutofocusBeamTilt BT
+   echo BT = $BT
+   SetUserSetting AutofocusBeamTilt 1.6
 
    ## now find the offset
    # for initial offset, get a close value from current setting
    ReportUserSetting LowDoseViewDefocus
-   offset = $repVal1 - ( $repVal1 / 10 )
-   # 
+
+
+   #offset = -157.85
+   offset = -153
+
+
    Loop 10
-   CallFunction MyFuncs::Z_byV2 $offset
-   ReportStageXYZ 
-   Z = $repVal3
-   diffZ = $Z - $Z0
-   echo $diffZ
-      If ABS $diffZ < 0.5 
-         offset = ROUND $offset 2 
+      CallFunction MyFuncs::Z_byV2 1 $offset
+      ReportStageXYZ 
+      Z = $repVal3
+      diffZ = $Z - $Z0
+      echo $diffZ
+      If  ABS $diffZ < 1
+         offset = ROUND $offset 1
          echo >>> Found "offset" is $offset
-         echo >>> run script with line "CallFunction Z_byZ2 $offset" 
-         exit
+         echo >>> run "Z_byZ2 $offset" 
+         Break
       Else 
          offset = $offset + $diffZ
       Endif 
+   EndLoop
+
+
+   X = { 0 0 0 0 0 0 0 0 0 0 0 }
+   Y = { 0 0 0 0 0 0 0 0 0 0 0 }
+
+   temp_offset = $offset - 10
+
+   Loop $#X i
+      Echo $i
+      Echo $X
+      Echo $Y
+      CallFunction MyFuncs::Z_byV2 1 $temp_offset
+      ReportStageXYZ 
+      Z = $repVal3
+      diffZ = $Z - $Z0
+      Y[$i] = $diffZ
+      X[$i] = $temp_offset
+      temp_offset = $temp_offset + 2
    EndLoop 
 
-It uses function Z_byV2 to see which offset value to recover the Z height determined early by other method. If this script runs and gives offset value as -290.5, then you should use the function with this value:
+   Echo X $X
+   Echo Y $Y
+
+   LinearFitToVars X Y
+   echo $repVal1 $repVal2 $repVal3 $repVal4
+
+   real_offset = - $repVal3 / $repVal2
+   echo =====> $real_offset
+
+   SetUserSetting AutofocusBeamTilt  $BT
+   RestoreCameraSet
+
+
+It uses function Z_byV2 to see which offset value to recover the Z height determined early by other method. It first find an *offset* value within 1um(you can use 0.5), then it uses a fitting method to refine this value to make it more accurate. If this script runs and gives offset value as -290.5, then you should use the function with this value.
 
 .. note::
 
