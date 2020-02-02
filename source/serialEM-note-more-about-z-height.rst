@@ -133,9 +133,8 @@ If we found the good "offset" value, it will be good for some time, at least thi
    ## now find the offset
    # for initial offset, get a close value from current setting
    ReportUserSetting LowDoseViewDefocus
-
-   #offset = -157.85
-   offset = -153           # starting value from previous run
+   offset = 0.75 * $repVal1   # or
+   # offset = -153            # some starting value from previous run
 
    Loop 10
       CallFunction MyFuncs::Z_byV2 1 $offset
@@ -152,7 +151,6 @@ If we found the good "offset" value, it will be good for some time, at least thi
          offset = $offset + $diffZ
       Endif 
    EndLoop
-
 
    X = { 0 0 0 0 0 0 0 0 0 0 0 }
    Y = { 0 0 0 0 0 0 0 0 0 0 0 }
@@ -172,9 +170,6 @@ If we found the good "offset" value, it will be good for some time, at least thi
       temp_offset = $temp_offset + 2
    EndLoop 
 
-   Echo X $X
-   Echo Y $Y
-
    LinearFitToVars X Y
    echo $repVal1 $repVal2 $repVal3 $repVal4
 
@@ -184,7 +179,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
    SetUserSetting AutofocusBeamTilt  $BT
    RestoreCameraSet
 
-It uses function Z_byV2 to see which offset value to recover the Z height determined early by other method. It first find an *offset* value within 1um(you can use 0.5), then it uses a fitting method to refine this value to make it more accurate. If this script runs and gives offset value as -290.5, then you should use the function with this value.
+It uses function Z_byV2 to see which offset value to recover the Z height determined early by other method. It first find an *offset* value that recovers Z height within 1um(you can define 0.5), then it uses a fitting method to refine this value to make it more accurate. If this script runs and gives offset value as -153.51, then you should use the function with this value.
 
 .. note::
 
@@ -195,7 +190,7 @@ It uses function Z_byV2 to see which offset value to recover the Z height determ
 
 .. code-block:: ruby
 
-   CallFunction MyFuncs::Z_byV2 -290.5
+   CallFunction MyFuncs::Z_byV2 3 -153.51
    
 It will move stage position to Eucentric Z height, almost magically! 
 
