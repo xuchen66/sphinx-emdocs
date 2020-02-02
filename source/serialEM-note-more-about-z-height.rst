@@ -134,10 +134,8 @@ If we found the good "offset" value, it will be good for some time, at least thi
    # for initial offset, get a close value from current setting
    ReportUserSetting LowDoseViewDefocus
 
-
    #offset = -157.85
-   offset = -153
-
+   offset = -153           # starting value from previous run
 
    Loop 10
       CallFunction MyFuncs::Z_byV2 1 $offset
@@ -146,7 +144,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
       diffZ = $Z - $Z0
       echo $diffZ
       If  ABS $diffZ < 1
-         offset = ROUND $offset 1
+         offset = ROUND $offset 2
          echo >>> Found "offset" is $offset
          echo >>> run "Z_byZ2 $offset" 
          Break
@@ -185,7 +183,6 @@ If we found the good "offset" value, it will be good for some time, at least thi
 
    SetUserSetting AutofocusBeamTilt  $BT
    RestoreCameraSet
-
 
 It uses function Z_byV2 to see which offset value to recover the Z height determined early by other method. It first find an *offset* value within 1um(you can use 0.5), then it uses a fitting method to refine this value to make it more accurate. If this script runs and gives offset value as -290.5, then you should use the function with this value.
 
