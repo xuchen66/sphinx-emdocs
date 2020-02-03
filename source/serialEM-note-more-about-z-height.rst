@@ -7,7 +7,7 @@ SerialEM Note: More About Z Height
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date: 2017-12-09 
-:Last Updated: 2020-02-02
+:Last Updated: 2020-02-03
 
 .. glossary::
 
@@ -47,7 +47,7 @@ The function code is below.
 
 .. code-block:: ruby
 
-   Function Z_byV2 1 0 offset
+   Function Z_byV2 2 0 iter offset
    Echo ===> Running Z_byV2 ...
    #====================================
    # for defocus offset of V in Low Dose, save it
@@ -58,13 +58,14 @@ The function code is below.
    #==================
    # set object lens 
    #==================
-   SetEucentricFocus
-   ChangeFocus $offset                         # for -300um offset 
-
+   #SetEucentricFocus
+   SetStandardFocus 0
+   ChangeFocus $offset                         
+   
    #===========
    # Adjust Z
    #===========
-   Loop 2
+   Loop $iter
    Autofocus -1 2
    ReportAutofocus 
    #Z = -1 * $reportedValue1
