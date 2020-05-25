@@ -62,7 +62,7 @@ The SerialEM script - FastTomo and its usage can be found from the `github.com p
 A Few Points to Discuss
 -----------------------
 
-1. In roder to get a reliable correlation using R images, the dose is probably small. Therefore, a proper binning for R 
+1. For a reliable correlation using R images, the dose is probably too low and signal is too weak without any binning. Therefore, a proper binning for R 
 image is expected. This is not a problem for K2/K3 camera, as returned image can be binned while the raw frames are saved
 on the side without any binning. For a non-K2/K3 camera, one can modify the script easily to `ReduceImage` for R shot after
 saving and store that in the reference buffer. 
