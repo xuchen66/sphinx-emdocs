@@ -56,7 +56,8 @@ For X,Y, we do not perform any precalibration. Instead, we use the returned Reco
 Namely, we align the feature from Record image at one tilt to its previous one and we use Image Shift to compensate. We completely 
 eliminate Tracking T shots in the procedure except in dose-symmetric scheme which T is used only in switching angles. 
 
-The SerialEM script - FastTomo and its usage can be found from the `github.com project page<https://github.com/alberttxu/FastTomo/>`_.
+The SerialEM script - FastTomo and its usage can be found from the `github.com project page
+<https://github.com/alberttxu/FastTomo/>`_.
 
 .. _discussion:
 
