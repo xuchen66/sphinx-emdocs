@@ -37,8 +37,8 @@ close to eucentric position it is no longer linear at high tilt range such as ab
 
 Most of time consuming actions are the multiple tracking shots and auto-focusing precedures. 
 
-This makes us to think we might be able to save time if we can have a way to eliminate most of, if not completely, the Focus and 
-Tracking Shots, we can save time for tilting series data collection. 
+This makes us to think if we could have a way to eliminate most of, if not completely, the Focus and 
+Tracking Shots, we might save time for tilting series data collection. 
 
 .. _fasttomo:
 
