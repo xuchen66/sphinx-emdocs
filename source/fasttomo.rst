@@ -25,7 +25,7 @@ FastTomo: A Hybrid Approach to Speedup Tomography Data Collection
       
       We present a SerialEM script using this Hybrid method for all three tilting schemes: uni-directional, bi-directional and
       dose-symmetirc. We slightly modify the oringal Hagen scheme to dose-symmetric with options to 1) switch to bi-directional
-      beyond to certain angle and 2) change exposure time at high angle ranges after switching to bi-directional. 
+      beyond certain defined angle and 2) change exposure time at high angle ranges after switching to bi-directional. 
       
 .. _background:
 
