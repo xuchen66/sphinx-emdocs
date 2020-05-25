@@ -48,9 +48,7 @@ FastTomo Script
 ---------------
 
 For Z, we found that a **Sine** function can describle the Z change fairly well. We only need a few tilt points to pre-calibrate such
-a **Sine** curve for each target postion. Such pre-calibration does cause some time, but the prediction based on the calibrated
- **Since** curve seems to be very robust and we then completely eliminate Focus shots in the collection step. The Objective 
- lens is used to compensate. 
+a **Sine** curve for each target postion. Such pre-calibration does cause some time, but the prediction based on the calibrated **Sine** curve seems to be very robust and we then completely eliminate Focus shots in the collection step. The Objective  lens is used to compensate. 
  
 For X,Y, we do not perform any precalibration. Instead, we use the returned Record images to perform the porportional control.
 Namely, we align the feature from Record image at one tilt to its previous one and we use Image Shift to compensate. We completely 
