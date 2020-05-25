@@ -14,8 +14,8 @@ FastTomo: A Hybrid Approach to Speedup Tomography Data Collection
 .. glossary::
 
    Abstract
-      Due to the imperfection of stage movement, a tomography target positon (X, Y, Z) usually keeps changing with the tilting angle. 
-      In orfer to obtain useful data, some kind of engineering control has to be in place to ensure the target postions are in 
+      Due to the imperfection of stage movement, a tomography target positon (X, Y, Z) usually keeps changing with tilting angle. 
+      In order to obtain useful data, some kind of engineering control has to be in place to ensure the target postions are within 
       the acceptable range through the entire tilting series. This engineering control might involve complete prediction or/and 
       frequent tracking for X, Y and Z postions. Unfortunitely, these extra control actions cost time for each tilting series collection. 
       Here, we propose a hybrid method to make the data collection as fast as possible without sacrificing too much data quality. 
