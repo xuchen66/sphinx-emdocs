@@ -73,7 +73,8 @@ ZLP is the name of this timer. You can set up multiple timers with different nam
 
 .. code-block:: ruby
 
-  ReportCustomIntervel ZLP
+  SetCustomTime ZLP
+  ReportCustomInterval ZLP
   If $repVal1 >= 30 
     MoveToLastMultiHole         # move to a hole (bright area)
     RefineZLP                   # refine ZLP now!
