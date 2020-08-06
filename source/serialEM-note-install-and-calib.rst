@@ -106,9 +106,10 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
    RotationAndPixel 17 999 86.1 3.396
 
 .. Note:: 
+
    The pixel size and tilting axis can just be done for a couple of switching mags such as the lowest M and the highest LM. 
-   SerialEM uses these a couple of calibrations and all the Image Shift calibration to inpterpolate to obtain the pixelsize and tilting 
-   axis angle for all other magnifications. This is very cute. 
+   SerialEM uses these a couple of calibrations and all the Image Shift calibration to interpolate to obtain the pixelsizes and tilting 
+   axis angles for all other magnifications. This is very cute. 
 
 12. Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
 
