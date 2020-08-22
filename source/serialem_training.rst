@@ -103,13 +103,13 @@ SerialEM - Single Particle (5 sessions)
 
 - demo simple script ``LD``, and explain actions
 - refine hole centering using template
-- draw grid point - normal and grouping
+- draw grid point - manual picking and using hole finder
 - introduce script ``LD-group`` and explain the ideas 
 
 .. rubric:: Session 3
 
-- K2 specific - image format(MRC, TIFF), Compression, 4-bit special for Super-res frames
-- Asynchronize mode for K2 imaging, separate gain reference from raw image frame stack
+- K2/3 specific - image format(MRC, TIFF), Compression, 4-bit special for Super-res frames
+- Asynchronize mode for K2/3 imaging, separate gain reference from raw image frame stack
 - Consideration for dose - total dose, dose per frame, frame time 
 - In-fly frame aligning option
 
@@ -144,6 +144,6 @@ SerialEM - Advanced Topics (3 sessions)
 .. rubric:: Session 3
 
 - Explain SerialEM scripting interface and major functions
-- Explain example script to control LN2 refilling and obtain K2/3 hardware dark background
+- Explain example script to control LN\ :sub:`2`\ refilling and obtain K2/3 hardware dark background
 - Setup email alert system
 - in-fly aligning frames using standalone GPU server computer
