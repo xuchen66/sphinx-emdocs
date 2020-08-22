@@ -30,8 +30,8 @@ SerialEM - Basics (3 sessions)
 .. rubric:: Session 1
 
 - Introduction to SerialEM, launch and exit the program. Explain system files and user setting file.
-- Explain how SerialEM controls microscope and camera, and its relationship with microscope and camera control software interface. 
-- explain interface and layout - control panels and menus
+- Explain how SerialEM controls microscope and camera, and its relationship with microscope and camera control software interfaces. 
+- Explain SerialEM interface and layout - control panels and menus
 - Camera setup, how to acquire an image from SerialEM interface
 - Demo basic function such as Eucentricity (and shift beam to tilting axis)
 
@@ -72,7 +72,7 @@ SerialEM - Tomography (5 sessions)
 .. rubric:: Session 3
 
 - demo and explain dual axis tomography data collection
-- demo how to rotate grid 90 degree and find the same location (registration tramsformation)
+- demo how to rotate grid 90 degree and find the same location (registration transformation)
 
 .. rubric:: Session 4
 
@@ -116,7 +116,7 @@ SerialEM - Single Particle (5 sessions)
 .. rubric:: Session 4
 
 - go through whole single particle procedure
-- LMM, LD setup, MMM with "Z_byV", draw grid point, prepare hole template
+- LMM, LD setup, MMM with "Z_byV2", draw grid point, prepare hole template
 - run ``LD-group``
 
 .. rubric:: Session 5
@@ -143,7 +143,7 @@ SerialEM - Advanced Topics (3 sessions)
 
 .. rubric:: Session 3
 
-- explain script to take multiple shots around a centered hole
-- script to control LN2 refilling and obtain K2 hardware dark background
+- Explain SerialEM scripting interface and major functions
+- Explain example script to control LN2 refilling and obtain K2/3 hardware dark background
 - Setup email alert system
 - in-fly aligning frames using standalone GPU server computer
