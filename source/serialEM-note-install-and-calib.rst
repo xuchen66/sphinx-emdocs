@@ -25,15 +25,16 @@ Here are steps to follow.
 
 .. rubric:: Step 1
 
-- Ask David for the initial system file. Normally, you would fill out a "questionnaire" available at the ftp server - http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to David. David will then create a framework file on the same ftp server for you to download. This framework file is a zip file, you can download it to local like Desktop and unzip it by double clicking on the file. Beside a sub-folder "Admin" created under ``C:\\ProgramData\\SerialEM``, the most important file in the framework is one initial system file called ``SerailEMproperties.txt``. You must have this file to get started. Please refer to the SerialEM webpage for the latest information regarding this. 
+- Ask David for the initial system file. Normally, you would fill out a "questionnaire" available at the ftp server - http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to David. David will then create a framework file on the same ftp server for you to download. This framework file is a zip file, you can download it to local like Desktop and unzip it by double clicking on the file. Beside a sub-folder "Admin" created under "C:\\ProgramData\\SerialEM", the most important file in the framework is one initial system file called "SerialEMproperties.txt". You must have this file to get started. Please refer to the SerialEM webpage for the latest information regarding this. 
 
 .. rubric:: Step 2
 
-- Make sure your camera computer and microscope computer are on the same network. For example, K2 computer can be configured to have a network interface with IP address 192.168.1.2, and FEI scope with 192.168.1.1. And they should be able to *ping* each other. You might be confused by Gatan's DM aleady being able to communicate with scope, as it can detect magnification change of scope. However, this DM connection to scope is usually via serial port by a direct serial cable. SerialEM uses standard TCP/IP to communicate to a remote computer and therefore requires a standard network setup in place. 
+- Make sure your camera computer and microscope computer are on the same local network. For example, K2/3 computer can be configured to have a network interface with IP address 192.168.1.2, and FEI scope with 192.168.1.1. And they should be able to *ping* each other. 
+- You might be confused by Gatan's DM aleady being able to communicate with scope, as it can detect magnification change of scope. However, this DM connection to scope is usually via serial port by a direct serial cable. SerialEM uses standard TCP/IP to communicate to a remote computer and therefore requires a standard network setup in place. 
 
 .. rubric:: Step 3
 
-- Decide which computer to install SerialEM. In theory, you can install SerialEM on either computer - camera or microscope. For K2 camera, SerialEM should be normally installed on the K2 computer, as K2 image returning to SerialEM is usually faster than via network. 
+- Decide which computer to install SerialEM. In theory, you can install SerialEM on either computer - camera or microscope. For K2/3 camera, SerialEM should be normally installed on the K2/3 computer, as K2/3 image returning to SerialEM locally is usually faster than via network. 
 
 .. rubric:: Step 4
 
@@ -57,7 +58,7 @@ Here are steps to follow.
 
 .. rubric:: Step 9
 
-- Manually copy a file called *FEI-SEMServer.exe* from C:\\Program Files\\SerialEM on K2 computer to C:\\Program Files\\SerialEM on scope computer. This is a bridging program to control scope by passing the scope function calls between SerialEM main program on remote K2 computer and the scope scripting interface. Run the program by double clicking on it(it needs to run or SerialEM cannot control scope). This is 32-bit application, runs on both 32 and 64-bit Windows platforms. So there is only one such executable to run on Windows 7, XP or 2000 Windows OS. 
+- Manually copy a file called *FEI-SEMServer.exe* from C:\\Program Files\\SerialEM on K2 computer to C:\\Program Files\\SerialEM on scope computer. This is a bridging program to control scope by passing the scope function calls between SerialEM main program on remote K2/3 computer and the scope scripting interface. Run the program by double clicking on it(it needs to run or SerialEM cannot control scope). This is 32-bit application, runs on both 32 and 64-bit Windows platforms. So there is only one such executable to run on Windows 7, XP or 2000 Windows OS. 
 
 .. rubric:: Step 10
 
@@ -73,9 +74,9 @@ Here are steps to follow.
 
 .. rubric:: Step 11
 
-- On K2 computer which SerialEM is to be installed, define a system environment variable SERIALEMCCD_PORT with the value 48890 or other selected port number, as described in the section in helpfile. 
+- On K2/3 computer where SerialEM is to be installed, define a system environment variable SERIALEMCCD_PORT with the value 48890 or other selected port number, as described in the section in helpfile. 
 
-- If everything goes north, you should be able to start SerialEM and it should connect to "see" both scope and DM. Congratulations!
+- If everything goes well, you should be able to start SerialEM and it should connect to "see" both scope and DM. Congratulations!
 
 .. _Calibration:
 
@@ -118,7 +119,7 @@ Although most of calibration results will be written into another system file *S
 
 .. rubric:: Step 6
 
-- Take a T shot, then Calibration - Pixel Size - Find Pixel Size. The log window shows both mag index and pixel size. Edit *SerialEMproperties.txt* to add a line like below in K2 camera property section. 
+- Take a T shot, then Calibration - Pixel Size - Find Pixel Size. The log window shows both mag index and pixel size. Edit *SerialEMproperties.txt* to add a line like below in K2/3 camera property section. 
 
 .. code-block:: ruby
 
@@ -195,10 +196,17 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 
 .. rubric:: Step 21 
 
-- Usually, people use the lowest M mag for Low Dose View beam and with large defocus offset such as -200 or -300 mirons. You need to the calibrate High-Defocus Mag for this View mag. This will make stage shifts still good for such large defocus, as they are interpolated with defocus offset. 
+- Usually, people use the lowest M mag for Low Dose View beam and with large defocus offset such as -200 or -300 microns. You need to the calibrate High-Defocus Mag for this View mag. This will make stage shifts still good for such large defocus, as they are interpolated for the defocus offset. 
 
 .. Note::
 
+   - Calibrations needed to do for *both* mP and nP mode include:
+
+   * beam crossover
+   * beam intensity
+   * beam shift
+   * autofocus
+   
    - Waffle grating grid is good and handy for pixel size calibration, but it is not ideal for Image Shift and Stage Shift calibrations, as the waffle pattern might screw up the correlation in the calibration procedures. I found the normal Quantifoil grid with some 10nm Au particles absorbed onto can be very good for normal calibration purpose. I glow discharge a Quantifoil grid and add 1 *ul* deca-gold solution on the grid and let it dry. 
    
    - I found that standard **PtIr** grid for TFS to perfom Thon Ring test also works very well for calibration purpose. 
