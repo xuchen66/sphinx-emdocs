@@ -58,11 +58,11 @@ Here are steps to follow.
 
 .. rubric:: Step 9
 
-- Manually copy a file called *FEI-SEMServer.exe* from C:\\Program Files\\SerialEM on K2 computer to C:\\Program Files\\SerialEM on scope computer. This is a bridging program to control scope by passing the scope function calls between SerialEM main program on remote K2/3 computer and the scope scripting interface. Run the program by double clicking on it(it needs to run or SerialEM cannot control scope). This is 32-bit application, runs on both 32 and 64-bit Windows platforms. So there is only one such executable to run on Windows 7, XP or 2000 Windows OS. 
+- Manually copy a file called *FEI-SEMServer.exe* from C:\\Program Files\\SerialEM on K2/3 computer to C:\\Program Files\\SerialEM on scope computer. This is a bridging program to control scope by passing the scope function calls between SerialEM main program on remote K2/3 computer and the scope scripting interface. Run the program by double clicking on it(it needs to run or SerialEM cannot control scope). This is 32-bit application, runs on both 32 and 64-bit Windows platforms. So there is only one such executable to run on Windows 7, XP or 2000 Windows OS. 
 
 .. rubric:: Step 10
 
-- On K2 computer, Edit *SerialEMproperties.txt* file in folder C:\\ProgramData\\SerialEM to have proper lines in general property area to define network properties. 
+- On K2/3 computer, Edit *SerialEMproperties.txt* file in folder C:\\ProgramData\\SerialEM to have proper lines in general property area to define network properties. 
 
 .. code-block:: ruby
 
@@ -87,7 +87,7 @@ Although most of calibration results will be written into another system file *S
 
 .. rubric:: Step 0. 
 
-- Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam. If it doesn't, try to adjust the camera orientation of Gatan K2 camera from Camera - Configuration. You can use beamstop to help.  You should add a property entry to reflect the DM configuration so SerialEM takes care of it even someone might have changed DM configuration. 
+- Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam. If it doesn't, try to adjust the camera orientation of Gatan K2/3 camera from Camera - Configuration. You can use beamstop to help.  You should add a property entry to reflect the DM configuration so SerialEM takes care of it even someone might have changed DM configuration. 
 
 .. code-block:: ruby
 
@@ -115,7 +115,7 @@ Although most of calibration results will be written into another system file *S
 
 .. rubric:: Step 5
 
-- Take a T shot with 2x binning on a K2 camera, make sure the counts are neither too low nor too high. 
+- Take a T shot with 2x binning on a K2/3 camera, make sure the counts are neither too low nor too high. 
 
 .. rubric:: Step 6
 
@@ -188,7 +188,7 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 
 .. rubric:: Step 19
 
-- repeat Beam Intensity Calibration for all other spot sizes likely to be used - 3,4,5,6,8,9.
+- repeat Beam Intensity Calibration for all other spot sizes likely to be used: 3, 4, 5, 6, 8, 9.
 
 .. rubric:: Step 20
 
