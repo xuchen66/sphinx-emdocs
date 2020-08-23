@@ -202,10 +202,10 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 
    - Calibrations needed to do for *both* mP and nP mode include:
 
-   * beam crossover
-   * beam intensity
-   * beam shift
-   * autofocus
+         # beam crossover
+         # beam intensity
+         # beam shift
+         # autofocus
    
    - Waffle grating grid is good and handy for pixel size calibration, but it is not ideal for Image Shift and Stage Shift calibrations, as the waffle pattern might screw up the correlation in the calibration procedures. I found the normal Quantifoil grid with some 10nm Au particles absorbed onto can be very good for normal calibration purpose. I glow discharge a Quantifoil grid and add 1 *ul* deca-gold solution on the grid and let it dry. 
    
