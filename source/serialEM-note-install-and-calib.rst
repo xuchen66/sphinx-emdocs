@@ -25,7 +25,7 @@ Here are steps to follow.
 
 .. rubric:: Step 1
 
-- Ask David for the initial system file. Normally, you would fill out a "questionnaire" available at the ftp server - http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to David. David will then create a framework file on the same ftp server for you to download. This framework file is a zip file, you can download it to local like Desktop and unzip it by double clicking on the file. Beside a sub-folder "Admin" created under "C:\\ProgramData\\SerialEM", the most important file in the framework is one initial system file called "SerialEMproperties.txt". You must have this file to get started. Please refer to the SerialEM webpage for the latest information regarding this. 
+- Ask David for the initial system file. Normally, you would fill out a "questionnaire" available at the ftp server - http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to David. David or Guenter Resch will then create a framework file on the same ftp server for you to download. This framework file is a zip file, you can download it to local like Desktop and unzip it by double clicking on the file. Beside a sub-folder "Admin" created under "C:\\ProgramData\\SerialEM", the most important file in the framework is one initial system file called "SerialEMproperties.txt". You must have this file to get started. Please refer to the SerialEM webpage for the latest information regarding this. 
 
 .. rubric:: Step 2
 
