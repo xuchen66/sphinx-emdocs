@@ -131,6 +131,8 @@ Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just calibrated.
 
 .. rubric:: Step 7 
 
+- You might want to change to a grid without repeating features, please see "note" at the end of this document. 
+
 - Calibration - Image & Stage Shift - IS from Scratch.
 
 .. rubric:: Step 8
