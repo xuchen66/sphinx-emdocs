@@ -29,8 +29,9 @@ Here are steps to follow.
 
 .. rubric:: Step 2
 
-- Make sure your camera computer and microscope computer are on the same local network. For example, K2/3 computer can be configured to have a network interface with IP address 192.168.1.2, and FEI scope with 192.168.1.1. And they should be able to *ping* each other. 
+- Make sure your camera computer and microscope computers are on the same local network. For example, K2/3 computer can be configured to have a network interface with IP address 192.168.1.2, and FEI scope with 192.168.1.1. And they should be able to *ping* each other. 
 - You might be confused by Gatan's DM aleady being able to communicate with scope, as it can detect magnification change of scope. However, this DM connection to scope is usually via serial port by a direct serial cable. SerialEM uses standard TCP/IP to communicate to a remote computer and therefore requires a standard network setup in place. 
+- If you configured the local network, you should have DM communicate to scope (via Gatan's RemoteTEM) using TCP/IP too. It is a lot more robust. But this is not a concern for SerialEM operation here.  
 
 .. rubric:: Step 3
 
