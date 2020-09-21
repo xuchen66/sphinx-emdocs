@@ -6,7 +6,7 @@ FAQ
 :Author: UMass CryoEM Core
 :Contact: <cryoem.umms@gmail.com>
 :Date-created: 2017-2-13
-:Last-updated: 2019-8-21
+:Last-updated: 2020-9-21
 
 
 This is list of Frequently Asked Questions about Umass Cryo-EM. Some questions are technical, while others are more general. 
@@ -264,7 +264,7 @@ all the control files for SerialEM software running for the session, it contains
 ... the method I can get my data after collected at your facility?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-UMass Med School has firewall and VPN in place. There is no way to "pull" data from our storage without establishing VPN first. However, outbound traffic - "push" is possible. There are three ways we can send data to you. 
+UMass Med School has firewall and VPN in place. There is no way to "pull" data from our storage without establishing VPN first. However, outbound traffic - "push" is possible. There are a few ways we can send data to you. 
 
 - At Harvard Medical School, some labs ask SBGrids folks to setup a DropBox like account for their lab. With specific command, we can push data directly from our storage to HMS special DropBox location. 
 
@@ -272,7 +272,7 @@ UMass Med School has firewall and VPN in place. There is no way to "pull" data f
 
 - The data can be also send to you after copying onto a portable HDD drive with USB3 interface. Default NTFS filesystem coming with most of the HDD is usually working fine. 
 
-- AWS. Cloud is becoming reasonable and attractive way to store and compute data. If you setup AWS S3 bucket, and you link that with our ID and secret key, we can upload onto AWS S3 bucket easily. The overall speed is not very fast, but it seems to be not bad either. For institutions who already have this, we recommend to use this way. 
+- AWS. Cloud is becoming reasonable and attractive way to store and compute data. If you setup AWS S3 bucket, and share with us the keyID and secret key, we can upload onto AWS S3 bucket easily. The overall speed is not super fast, but fairly decent and faster than most of SFTP transfer to reginal institutions. For large filesize like a typical raw TIFF stack file about 300-400 MB, it can reach about ~68 MB/s. For external institutions who already have AWS, we recommend to use this way. 
 
 .. _dose_and_dose_rate:
 
