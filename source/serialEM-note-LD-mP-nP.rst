@@ -6,7 +6,7 @@ SerialEM Note: Setup LD with Mix of mP and nP Modes
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-created: 2018-03-31
-:Last-updated: 2018-07-15
+:Last-updated: 2020-09-21
 
 .. glossary::
 
@@ -16,11 +16,11 @@ SerialEM Note: Setup LD with Mix of mP and nP Modes
       This forces us to use *mP* for View and nP for rest of LD areas, namely F, T and R etc.. 
       
       However, most people find it hard to setup LD conditions with the mix of *nP* and *mP* modes. I had frustrated time doing so too. 
-      This is, I think, mainly because *nP* and *mP* don't share the same origins for beam shift and defocus - they have their one origins. 
+      This is, I think, mainly because *nP* and *mP* don't share the same origins for beam shift and defocus (and beam tilt too) - they have their one origins. 
       In SerialEM, all the LD conditions are linked together. Therefore, the seprate origins of focus and beam shift for *mP* and *nP* 
       modes give extra hard time setting up LD in this mix use of *nP* and *mP*. 
       
-      SerialEM already has a way to deal with this problem. I hope this doc makes it clearer to easier to follow practically. 
+      SerialEM already has a way to deal with this problem. I hope this doc makes it clearer and easier to follow practically. 
       
 .. _procedure_setting_up_LD:
 
