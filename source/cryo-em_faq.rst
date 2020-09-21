@@ -270,7 +270,7 @@ UMass Med School has firewall and VPN in place. There is no way to "pull" data f
 
 - If you setup a user account on a Linux box for us, we can transfer data via sftp or via rsync over SFTP protocol. We can also use your personal account without knowing your password but using SSH keys. We provide our public key to you and you put it in ./ssh/known_hosts, and we can establich connection using our private key at our end. You can remove that line to disable the possibility of connection. 
 
-- The data can be also send to you after copying onto a portable HDD drive with USB3 interface. Default NTFS filesystem coming with most of the HDD is usually working fine. 
+- The data can be also sent to you after copying onto a portable HDD drive with USB3 interface. Default NTFS filesystem coming with most of the HDD is usually working fine. 
 
 - AWS. Cloud is becoming reasonable and attractive way to store and compute data. If you setup AWS S3 bucket, and share with us the keyID and secret key, we can upload onto AWS S3 bucket easily. The overall speed is not super fast, but fairly decent and faster than most of SFTP transfer to reginal institutions. For large filesize like a typical raw TIFF stack file about 300-400 MB, it can reach about ~68 MB/s. For external institutions who already have AWS, we recommend to use this way. 
 
