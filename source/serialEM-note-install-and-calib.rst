@@ -86,9 +86,9 @@ Calibration
 
 Although most of calibration results will be written into another system file *SerialEMcalibraions.txt* when you save the calibrtion from Calibretion menu, there are a few places you need to manully edit the *SerialEMproperties.txt* to take in the calibration results. These include pixelsize and tilting axis angle - they are more like instrument parameters. 
 
-For pixelsize calibration, it is best to use standard 2160 line waffle grid. For all other calibration like Image Shift and Stage Shift, it would makes things a lot easier to use a non-periodic sample. Please see the *NOTE* at the end of this document. 
+For pixelsize calibration, it is best to use standard 2160 line waffle grid. For all other calibration like Image Shift and Stage Shift, it would make things a lot easier to use a non-periodic sample. Please see the *NOTE* at the end of this document. 
 
-.. rubric:: Step 0. 
+.. rubric:: Step 0 
 
 - Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam. If it doesn't, try to adjust the camera orientation of Gatan K2/3 camera from Camera - Configuration. You can use beamstop to help.  You should add a property entry to reflect the DM configuration so SerialEM takes care of it even someone might have changed DM configuration. 
 
