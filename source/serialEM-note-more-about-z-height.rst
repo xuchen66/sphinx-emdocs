@@ -117,6 +117,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
 - Adjust specimen to Eucentriciy, using FEI interface tool or SerialEM task function
 - run script as below:
 
+
 .. code-block:: ruby
 
    ScriptName FindOffset
@@ -183,6 +184,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
 
    SetUserSetting AutofocusBeamTilt  $BT
    RestoreCameraSet
+   
 
 It uses function Z_byV2 to see which offset value to recover the Z height determined early by other method. It first find an *offset* value that recovers Z height within 1um(you can define 0.5), then it uses a fitting method to refine this value to make it more accurate. If this script runs and gives offset value as -153.51, then you should use the function with this value.
 
