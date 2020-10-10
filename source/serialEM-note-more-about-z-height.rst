@@ -229,8 +229,6 @@ If we found the good "offset" value, it will be good for some time, at least thi
    X = { 0 0 0 0 0 0 0 0 0 0 0 }
    Y = { 0 0 0 0 0 0 0 0 0 0 0 }
 
-TTTT
-
    temp_offset = $offset - 10
 
    Loop $#X i
@@ -245,6 +243,8 @@ TTTT
       X[$i] = $temp_offset
       temp_offset = $temp_offset + 2
    EndLoop 
+
+TTTT
 
    LinearFitToVars X Y
    echo $repVal1 $repVal2 $repVal3 $repVal4
