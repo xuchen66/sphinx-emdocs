@@ -199,7 +199,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
    Z0 = $repVal3
    #Z0 = 187.81
 
-   SetCameraArea V H
+SetCameraArea V H
    ReportUserSetting AutofocusBeamTilt BT
    echo BT = $BT
    SetUserSetting AutofocusBeamTilt 1.6
