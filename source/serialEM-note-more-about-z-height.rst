@@ -210,7 +210,6 @@ If we found the good "offset" value, it will be good for some time, at least thi
    offset = 0.72 * $repVal1   # or
    # offset = -153            # some starting value from previous run
 
-tttt
    Loop 10
       CallFunction MyFuncs::Z_byV2 1 $offset
       ReportStageXYZ 
@@ -229,6 +228,8 @@ tttt
 
    X = { 0 0 0 0 0 0 0 0 0 0 0 }
    Y = { 0 0 0 0 0 0 0 0 0 0 0 }
+
+TTTT
 
    temp_offset = $offset - 10
 
