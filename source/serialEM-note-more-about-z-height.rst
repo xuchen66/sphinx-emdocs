@@ -231,20 +231,20 @@ If we found the good "offset" value, it will be good for some time, at least thi
 
    temp_offset = $offset - 10
 
-   Loop $#X i
-      Echo $i
-      Echo $X
-      Echo $Y
-      CallFunction MyFuncs::Z_byV2 1 $temp_offset
-      ReportStageXYZ 
-      Z = $repVal3
-      diffZ = $Z - $Z0
-      Y[$i] = $diffZ
-      X[$i] = $temp_offset
-      temp_offset = $temp_offset + 2
-   EndLoop 
+   #Loop $#X i
+   #   Echo $i
+   #   Echo $X
+   #   Echo $Y
+   #   CallFunction MyFuncs::Z_byV2 1 $temp_offset
+   #   ReportStageXYZ 
+   #   Z = $repVal3
+   #   diffZ = $Z - $Z0
+   #   Y[$i] = $diffZ
+   #   X[$i] = $temp_offset
+   #   temp_offset = $temp_offset + 2
+   #EndLoop 
 
-TTTT
+tttt
 
    LinearFitToVars X Y
    echo $repVal1 $repVal2 $repVal3 $repVal4
