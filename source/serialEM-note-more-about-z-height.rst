@@ -7,7 +7,7 @@ SerialEM Note: More About Z Height
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date: 2017-12-09 
-:Last Updated: 2020-02-03
+:Last Updated: 2020-10-10
 
 .. glossary::
 
@@ -68,8 +68,12 @@ The function code is below.
    Loop $iter
    Autofocus -1 2
    ReportAutofocus 
-   #Z = -1 * $reportedValue1
-   Z = -0.75 * $reportedValue1               # 0.75 is a good damper for -200um V vs R offet
+   #Z = -1 * $repVal1
+   If ABS $repVal1 < 0.3
+      Echo Close enough, break...
+      Break
+   Endif 
+   Z = -1 * 0.72 * $repVal1               # ~0.72 is a good damper for -200um V vs R offet
    MoveStage 0 0 $Z
    Z = ROUND $Z 2
    echo Z has moved --> $Z micron 
@@ -134,7 +138,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
    ## now find the offset
    # for initial offset, get a close value from current setting
    ReportUserSetting LowDoseViewDefocus
-   offset = 0.75 * $repVal1   # or
+   offset = 0.72 * $repVal1   # or
    # offset = -153            # some starting value from previous run
 
    Loop 10
@@ -194,4 +198,21 @@ It uses function Z_byV2 to see which offset value to recover the Z height determ
    CallFunction MyFuncs::Z_byV2 3 -153.51
    
 It will move stage position to Eucentric Z height, almost magically! 
+
+.. _damping_factor:
+
+Note about Damping Factor
+-------------------------
+
+You might have noticed I used 0.72 in the value of Z movement:
+
+.. code-block:: ruby 
+
+   Z = -1 * 0.72 * $repVal1 
+   
+This is to compensate the non-liearn behavior of autofocus measurement, with the condition of large defocus offset used. For example, when the stage Z position is -100 microns off from the eicentrici height, the autofocus measrement gives something like 136 microns. Thereful, using a proper damping factor (100 / 136 ~ 0.73 here) can make the Z movement more accurately to the target. However, since this is a non-linear behavior, when Z is off very little, say 5 micron, the factor can be larger like 0.85. One would naturally try to find the curve so to use a more damping factor value in a interpolating fashion dynamically. However, if you think about backlash of stage for any overshoot, then using smaller value could help to keep stage movement with backlash corrected when iterating a few times. 0.72 is found to be a good number in our situation. 
+
+What exactly the damping factor value you should use? I suggest you move your stage 200 micro away, and you calculate the the ration of 200 to autofocus measurement value $repVal1 after ``ReportAutofocus``.
+
+If setting correctly, even your stage is more than 150 microns away, three rounds of iternation can bring the stage to euventric height within 0.5 microns. 
 
