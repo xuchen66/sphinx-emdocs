@@ -244,8 +244,6 @@ If we found the good "offset" value, it will be good for some time, at least thi
    #   temp_offset = $temp_offset + 2
    #EndLoop 
 
-tttt
-
    LinearFitToVars X Y
    echo $repVal1 $repVal2 $repVal3 $repVal4
 
@@ -254,6 +252,8 @@ tttt
 
    SetUserSetting AutofocusBeamTilt  $BT
    RestoreCameraSet
+
+TTTT
 
 It uses function Z_byV2 to see which offset value to recover the Z height determined early by other method. It first find an *offset* value that recovers Z height within 1um(you can define 0.5), then it uses a fitting method to refine this value to make it more accurate. If this script runs and gives offset value as -153.51, then you should use the function with this value.
 
