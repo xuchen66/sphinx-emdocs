@@ -186,10 +186,9 @@ If we found the good "offset" value, it will be good for some time, at least thi
    
 .. code-block:: ruby
 
-   ScriptName Offset
+   ScriptName OffsetFinding
    
-
-# script to find proper offset value to run Z_byV2
+   # script to find proper offset value to run Z_byV2
    # assume speciment is ON the eucentricity 
 
    ## Eucentric Z
