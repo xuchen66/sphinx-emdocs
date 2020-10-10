@@ -199,7 +199,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
    Z0 = $repVal3
    #Z0 = 187.81
 
-SetCameraArea V H
+   SetCameraArea V H
    ReportUserSetting AutofocusBeamTilt BT
    echo BT = $BT
    SetUserSetting AutofocusBeamTilt 1.6
@@ -210,6 +210,7 @@ SetCameraArea V H
    offset = 0.72 * $repVal1   # or
    # offset = -153            # some starting value from previous run
 
+tttt
    Loop 10
       CallFunction MyFuncs::Z_byV2 1 $offset
       ReportStageXYZ 
