@@ -232,6 +232,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
    temp_offset = $offset - 10
 
    #Loop $#X i
+   Loop $#X i
      Echo $i
      Echo $X
      Echo $Y
