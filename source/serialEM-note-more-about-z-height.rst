@@ -192,8 +192,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
    #script to find proper offset value to run Z_byV2
    #assume speciment is ON the eucentricity 
 
-
-## Eucentric Z
+   ## Eucentric Z
    ##
    #Eucentricity 3
    ReportStageXYZ 
