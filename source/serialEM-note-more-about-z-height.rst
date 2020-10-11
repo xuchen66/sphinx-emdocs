@@ -206,7 +206,7 @@ You might have noticed I used 0.72 in the value of Z movement:
    
 This is to compensate the non-linear behavior of autofocus measurement, with the condition of large defocus offset used. For example, when the stage Z position is -100 microns off from the eucentric height, the autofocus measurement gives something like -136 microns. Therefore, using a proper damping factor (100 / 136 ~ 0.73 here) can make the Z movement more accurately to the target. Since this is a non-linear behavior, this damping factor changes with Z. For example, when Z is off very little, say 5 micron, the factor can be larger like 0.85. One would naturally try to find the curve so to use a more accurate damping factor value in interpolating fashion dynamically. However, if you think about backlash of stage movement, it is the best to avoid any overshoot. Using a single, slgihtly smaller value could help to keep stage move with backlash corrected when iterating a few times. 0.72 is found to be a good number in our situation. 
 
-What exactly the damping factor value should you use? I suggest you move your stage 200 micro away, and you calculate the the ration of 200 to autofocus measurement value $repVal1 after ``ReportAutofocus`` and use that value.
+What exactly the damping factor value should you use? I suggest you move your stage 200 microns away, and you calculate the the ratio of 200 to autofocus measurement value $repVal1 after ``ReportAutofocus`` ( damping factor = 200 / $repVal1 ) and use the result.
 
 If setting correctly, even your stage is more than 150 microns away, calling the function with three rounds of iternation can bring the stage to eucentric height within 0.5 microns in a few seconds. Amazing to me. 
 
