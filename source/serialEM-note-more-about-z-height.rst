@@ -103,7 +103,7 @@ This function should be called in script like this way:
 
 .. code-block:: ruby
 
-   CallFunction MyFuncs::Z_byV2 -288.32 3
+   CallFunction MyFuncs::Z_byV2 3 -288.32
 
 Obviously, the -288.32 is to pass to variable $offset in the function, and 3 to iteration variable $iter.  
 
