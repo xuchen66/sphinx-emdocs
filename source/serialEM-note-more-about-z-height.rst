@@ -63,15 +63,14 @@ The function code is below.
    Loop $iter
    Autofocus -1 2
    ReportAutofocus 
-   #Z = -1 * $repVal1
    If ABS $repVal1 < 0.3
       Echo Close enough, break...
       Break
    Endif 
-   Z = -1 * 0.72 * $repVal1               # ~0.72 is a good damper for -200um V vs R offet
-   MoveStage 0 0 $Z
+   Z = -1 * 0.72 * $repVal1               
    Z = ROUND $Z 2
-   echo Z has moved --> $Z micron 
+   MoveStage 0 0 $Z
+   echo Z has moved --> $Z microns 
    EndLoop
 
    ## restore the defocus set in V originally
