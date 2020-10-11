@@ -27,11 +27,12 @@ SerialEM Note: More About Z Height
 Background Information 
 ----------------------
 
-SerialEM has built-in task function to do eucentricity using stage-tilt method. It is robust, but slower than beam-tilt method. Beam-tilt method is opposite to autofoccus funtion:
+SerialEM has built-in task function to do eucentricity using stage-tilt method. It is robust, but slower than beam-tilt method. Beam-tilt method is opposite to autofoccus funtion. When specimen is at eucentrici height, and when objective at eucentric focus, the beam tilted beams produce precise overlapped image pair. This is how autofocus works. This principle can also be used to adjust specimen height, because if we preset obective at eucentric focus, cross-correlaton between two tilted beam images also provides information how much specimen is away from eucentricity. Specifically, beam-tilt method does a few things:
 
 - it sets scope objective lens to eucentric focus value 
 - and measures the defocus value for current specimen height using tilted-beam image pair,
 - it then changes stage position to that reported value but in oppsite direction, 
+- moves stage to determined diredction and distnce,
 - and it iterates until the reported defocus value is close enough to zero.  
 
 The beam-tilt method works very nicely most of time and it is pretty quick. However, there are couples of things making it less perfect. First, the signal becomes very weak when stage is already close eucentricity. We all know the contrast is the lowest when focus matches z height. We can use focus offset to increase the contrast, but non-linearty property casues some inaccuracy. The calibrated standard focus value could also change a litte with time and scope condition. All these together makes it less robust. 
