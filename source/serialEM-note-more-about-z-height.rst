@@ -7,7 +7,7 @@ SerialEM Note: More About Z Height
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date: 2017-12-09 
-:Last Updated: 2020-10-10
+:Last Updated: 2020-10-11
 
 .. glossary::
 
@@ -50,22 +50,16 @@ The function code is below.
 
    Function Z_byV2 2 0 iter offset
    Echo ===> Running Z_byV2 ...
-   #====================================
+   
    # for defocus offset of V in Low Dose, save it
-   # ===================================
    GoToLowDoseArea V
    SaveFocus
 
-   #==================
-   # set object lens 
-   #==================
-   #SetEucentricFocus
+   ## set objective lens
    SetStandardFocus 0
    ChangeFocus $offset                         
    
-   #===========
-   # Adjust Z
-   #===========
+   ## Adjust Z
    Loop $iter
    Autofocus -1 2
    ReportAutofocus 
@@ -80,9 +74,7 @@ The function code is below.
    echo Z has moved --> $Z micron 
    EndLoop
 
-   #=========================================
-   # restore the defocus set in V originally
-   # ========================================
+   ## restore the defocus set in V originally
    RestoreFocus
    EndFunction
 
