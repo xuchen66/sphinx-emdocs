@@ -27,7 +27,7 @@ SerialEM Note: More About Z Height
 Background Information 
 ----------------------
 
-SerialEM has built-in task function to do eucentricity using stage-tilt method. It is robust, but slower than beam-tilt method. Beam-tilt method is opposite to autofoccus funtion. When specimen is at eucentrici height, and when objective at eucentric focus, the beam tilted beams produce precise overlapped image pair. This is how autofocus works. This principle can also be used to adjust specimen height, because if we preset obective at eucentric focus, cross-correlaton between two tilted beam images also provides information how much specimen is away from eucentricity. Specifically, beam-tilt method does a few things:
+SerialEM has built-in task function to do eucentricity using stage-tilt method. It is robust, but slower than beam-tilt method. Beam-tilt method is opposite to autofoccus funtion. When specimen is at eucentric height and objective lens at eucentric focus, the tilted beams produce precise overlapped image pair. This is how autofocus works. This principle can also be used to adjust specimen height, because if we preset obective at eucentric focus, cross-correlaton between two tilted beam images also provides information how much specimen is away from eucentricity. Specifically, beam-tilt method used here does a few things:
 
 - it sets scope objective lens to eucentric focus value 
 - and measures the defocus value for current specimen height using tilted-beam image pair,
@@ -90,21 +90,22 @@ The real difference between this and previous version *Z_byV* is an additional l
 
 .. code-block:: ruby
 
+   SetStandardFocus 0
    ChangeFocus $offset
    
-This is to use large defocus offset for good contrast. This function should be called in script like this way:
+These two lines will set objective lens to a specific strength; the large defocus offset also offers good contrast. A special thing here is to measure defocus value using a LD_View beam. The advantage of this command is to use high contrast image.
 
 .. code-block:: ruby
 
-   CallFunction Z_byV2 -288.32
-   
-Or if it is in a script "MyFuncs":
+   Autofocus -1 2
+
+This function should be called in script like this way:
 
 .. code-block:: ruby
 
-   CallFunction MyFuncs::Z_byV2 -288.32
+   CallFunction MyFuncs::Z_byV2 -288.32 3
 
-Obviously, the -288.32 is to pass to variable $offset in the function. 
+Obviously, the -288.32 is to pass to variable $offset in the function, and 3 to iteration variable $iter.  
 
 Now question is how to determine this offset value for accurate Z height for and under current scope condition. 
 
