@@ -22,7 +22,7 @@ FastTomo: A Hybrid Approach to Speedup Tomography Data Collection
       X, Y potions. We try to eliminate tracking and auto-focusing shots as much as possible. 
       
       We present a SerialEM script using this Hybrid method for all three tilting schemes: uni-directional, bi-directional and
-      dose-symmetirc. We slightly modify the oringal Hagen scheme to dose-symmetric with options to 1) switch to bi-directional
+      dose-symmetirc. We slightly modify the original Hagen scheme of dose-symmetric with added options to 1) switch to bi-directional
       beyond certain defined angle and 2) change exposure time at high angle ranges after switching to bi-directional. 
       
 .. _background:
@@ -45,8 +45,8 @@ Tracking Shots, we might save time for tilting series data collection.
 FastTomo Script
 ---------------
 
-For Z, we found that a **Sine** function can describle the Z change fairly well. We only need a few tilt points to pre-calibrate such
-a **Sine** curve for each target postion. Such pre-calibration does cause some time, but the prediction based on the calibrated **Sine** curve seems to be very robust and we then completely eliminate Focus shots in the collection step. The Objective  lens is used to compensate. 
+For Z, we found that a **SINE** function can describle the Z change fairly well. We only need a few tilt points to pre-calibrate such
+a **SINE** curve for each target postion. Such pre-calibration does cause some time, but the prediction based on the calibrated **SINE** curve seems to be very robust and we then completely eliminate Focus shots in the collection step. The Objective  lens is used to compensate. 
  
 For X,Y, we do not perform any precalibration. Instead, we use the returned Record images to perform the porportional control.
 Namely, we align the feature from Record image at each tilt to its previous one and we use Image Shift to compensate. We completely 
