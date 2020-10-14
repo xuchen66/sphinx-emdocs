@@ -46,11 +46,12 @@ FastTomo Script
 ---------------
 
 For Z, we found that a **SINE** function can describle the Z change fairly well. We only need a few tilt points to pre-calibrate such
-a **SINE** curve for each target postion. Such pre-calibration does cause some time, but the prediction based on the calibrated **SINE** curve seems to be very robust and we then completely eliminate Focus shots in the collection step. The Objective  lens is used to compensate. 
+a **SINE** curve for each target postion. Such pre-calibration does cause some time, but the prediction based on the calibrated **SINE** 
+curve seems to be very robust and we then completely eliminate Focus shots in the collection step. The Objective  lens is used to compensate. 
  
 For X,Y, we do not perform any precalibration. Instead, we just use the returned Record images to perform the preportional control.
 Namely, we align the feature from Record image at each tilt to its previous one and we use Image Shift to compensate. We completely 
-eliminate Tracking T shots in the procedure except in dose-symmetric scheme which T is used only in switching angles. 
+eliminate Tracking T shots in the procedure except in dose-symmetric scheme which tracking shot is used only at switching angles. 
 
 The SerialEM script - FastTomo and its usage can be found from the `github.com project page
 <https://github.com/alberttxu/FastTomo/>`_.
@@ -60,9 +61,9 @@ The SerialEM script - FastTomo and its usage can be found from the `github.com p
 A Few Points to Discuss
 -----------------------
 
-1. For a reliable correlation using R images, the dose is probably too low and signal is too weak without any binning. Therefore, a proper binning for R 
-image is expected. This is not a problem for K2/K3 camera, as returned image can be binned while the raw frames are saved
-on the side without any binning. For a non-K2/K3 camera, one can modify the script easily to `ReduceImage` for R shot after
+1. For a reliable correlation using R images, the dose is probably too low and signal is too weak without any binning. Therefore, 
+a proper binning for R image is expected. This is not a problem for K2/K3 camera, as returned image can be binned while the raw 
+frames are savedon the side without any binning. For a non-K2/K3 camera, one can modify the script easily to `ReduceImage` for R shot after
 saving and store that in the reference buffer. 
 
 2. The same idea and method should be also applied to a FISE collection, provided the frames from each tilt can be grabbed and available 
