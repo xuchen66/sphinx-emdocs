@@ -7,7 +7,7 @@ FastTomo: A Hybrid Approach to Speedup Tomography Data Collection
 :Author: Albert Xu <albert.t.xu@gmail.com>
 :Author: Chen Xu <chen.xu@umassmed.edu>
 :Date-Created: 2020-05-24 
-:Last-Updated: 2020-05-24
+:Last-Updated: 2020-10-13
 
 .. glossary::
 
@@ -48,7 +48,7 @@ FastTomo Script
 For Z, we found that a **SINE** function can describle the Z change fairly well. We only need a few tilt points to pre-calibrate such
 a **SINE** curve for each target postion. Such pre-calibration does cause some time, but the prediction based on the calibrated **SINE** curve seems to be very robust and we then completely eliminate Focus shots in the collection step. The Objective  lens is used to compensate. 
  
-For X,Y, we do not perform any precalibration. Instead, we use the returned Record images to perform the porportional control.
+For X,Y, we do not perform any precalibration. Instead, we just use the returned Record images to perform the preportional control.
 Namely, we align the feature from Record image at each tilt to its previous one and we use Image Shift to compensate. We completely 
 eliminate Tracking T shots in the procedure except in dose-symmetric scheme which T is used only in switching angles. 
 
@@ -65,7 +65,7 @@ image is expected. This is not a problem for K2/K3 camera, as returned image can
 on the side without any binning. For a non-K2/K3 camera, one can modify the script easily to `ReduceImage` for R shot after
 saving and store that in the reference buffer. 
 
-2. The same idea and method can be also applied to a FISE collection, provided the frames from each tilt can be grabbed and available 
+2. The same idea and method should be also applied to a FISE collection, provided the frames from each tilt can be grabbed and available 
 for scripting. 
 
 3. A single, long exposure with shutter opening and closing during tilting series saves time for startup delay and returning time, 
