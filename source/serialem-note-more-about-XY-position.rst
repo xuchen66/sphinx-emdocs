@@ -7,7 +7,7 @@ SerialEM Note: More About X,Y Positioning
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2019-12-12 
-:Last-Updated: 2019-12-21
+:Last-Updated: 2020-11-02
 
 .. glossary::
 
@@ -82,14 +82,14 @@ line commented out.
     AcquireToMatchBuffer $buffer    
 
 This is a new command, available in 3.8 beta Dec 10th, 2019 built and later. It does two things: 1) take a shot using the 
-exact condition of what in the reference buffer for mag, beam condition, binning, exposure time etc.; 2) make the final image the same size as what in the reference buffer, by cropping if necessary. I used to have to do this in a lenthy script using two functions. 
+exact condition of what in the reference buffer for mag, beam condition, binning, exposure time etc.; 2) make the final image the same size as what in the reference buffer, by cropping if necessary. I used to have to do this in a lengthy script using two functions. 
 
 .. code-block:: ruby
 
    AlignTo $buffer 0 1
    
 Simply align the image in buffer A to reference buffer. This would make the target right on again with image shift. The very 
-last argument ``1`` means no trimming to any of the source image and reference image. This is needed for UltrAuFoil® Holey Gold Films grid which have vary "dark" region of the film. 
+last argument ``1`` means no trimming to any of the source image and reference image. This is needed for UltrAuFoil® Holey Gold Films grids which have vary "dark" region of the film. 
 
 .. thoughts:
 
