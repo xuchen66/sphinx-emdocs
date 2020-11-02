@@ -16,7 +16,7 @@ SerialEM Note: More About X,Y Positioning
       I like to share my own version of the latest script to perform X,Y positioning task. And I try to explain every line 
       of the code and ideas behind them as well. 
       
-      I have spent a lot of time thinking and testing about this. If you have better and different ideas, I love to hear. 
+      I have spent a lot of time thinking and testing about this. If you have better and different ideas, I'd love to hear from you. 
       
       
 .. _script:
