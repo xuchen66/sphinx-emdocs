@@ -14,7 +14,7 @@ SerialEM Note: Installation and Calibration
    Abstract
       When I helped a few sites to install and calibrate SerialEM, I had impression that most new users felt this process was very hard. I felt the same way when I initially learned to install and calibate SerialEM by myself. I even got frustrated and had to call David for a few times. When I think back about all the troubles I had to install and calibrate SerialEM, I believe I would have an easier time if I had a brief guideline document for what steps to follow in order, and what to do in each step. The helpfile from SerialEM is very complete to provide almost all information needed, but it is perhasp a lot to read and not clear where to start for a beginner. 
       
-      I wanted to list some steps here to guide you through this initial installation and calibration phase. It is like a crush list. For more detailed information, you should always find it from helpfile. 
+      I wanted to list some steps here to guide you through this initial installation and calibration phase. It is like a crash list. For more detailed information, you should always find it from helpfile. 
       
 .. _installation:
 
