@@ -13,9 +13,9 @@ SerialEM Note: Hidden Goodies
    Abstract
       One of the amazing things about SerialEM, to me, is that I almost always
       find some cool functions and features which I did not use before. It
-      could be also true some other users, even you might regard yourself
-      as not a novice user. If you see someone uses it, you immediately get
-      it. But you might not realize that the cool function exists. 
+      could be also true for some other users, even you might not regard yourself
+      as a novice user. If you see someone using it, you immediately get
+      it. Otherwise, you might not realize that the cool function exists. 
 
       In this note, I want to give a few examples to show some of the hidden
       beauties I like a lot. And I hope you can learn them from reading this
@@ -92,7 +92,11 @@ How to do that? Not so easy anymore? If you don't already know, here is how:
    "New file at item". 
 #. repeat for all the mesh items. 
 
-Here even each mesh map will have its own filename, the setup used
-**heritage** function which is also quite hidden. 
+After you do Navigator - Acquire at Point, you will get multiple files such as 
+Grid3-Mesh3.map, Grid3-Mesh4.map, Grid3-Mesh15.map etc.. Very nice, isn't it?
+
+Here each mesh map will have its own filename. During collection, the filenames 
+are opened and closed for each item, the setup used **heritage** function which 
+is also quite hidden. 
 
 
