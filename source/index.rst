@@ -57,6 +57,7 @@ SerialEM Notes
    serialEM-note-flexible-timer
    serialem-note-more-about-XY-position
    fasttomo
+   serialem-note-hidden-goodies
 
 Index
 *****
