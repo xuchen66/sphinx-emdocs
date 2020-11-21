@@ -52,15 +52,47 @@ Your reaction might be that you already well know how to do this. Indeed,
 this can be done with steps below:
 
 1. Open a polygon montage map file via menu *Navigator - Montaging &
-Grids - Setup Polygon Montage*.
-
+   Grids - Setup Polygon Montage*.
 2. Add point items to all and each of the montage positions to be acquired,
-and give them flag "**A**". 
-
+   and give them flag "**A**". 
 3. Navigator - Acquire at points - Acquire Map Image or Montage.
 
 One of the key things here is that once the montage map is open and current,
 the program knows how to make montage for each of the positions. The montage
-setup dialog is only set once; and because all the items share the same
+setup dialog is only set once. Because all the items share the same
 file, there is no need to draw multiple montage at different locations. 
+
+We also do this very often. We collect all the good meshes to make them into
+montage maps so we can pick and realign to each positions later. There are a
+couple of things we don't like with this way: 1.) The super-stack file for all the
+montages can be very large. It is not handy to look at a particular mesh
+off-line. 2) The section # of the file is from 0,1... to the last one, they
+are directly linked with mesh label/numbers. 
+
+It would be nice to make all the meshes to have their own separate files and
+with the mesh ID in the filename, something like Grid3-Mesh8.map. This way,
+we can check each mesh map easily when off-line. On a windows computer
+with 3dmod installed, this is as simple as clicking on the filename. 
+
+How to do that? Not so easy anymore? If you don't already know, here is how:
+
+1. add a polygon item as you normally do. 
+#. make sure this polygon item is above of all and any mesh point items
+   you already add. You do this by left mouse dragging the polygin item UP.
+#. check menu Navigator - Options - Use Item Labels in Filenames".
+#. With polygon item highlighted, check "Acquire (A)" and "New file at
+   item". 
+#. In the pop-up "Property of File to Open" dialog window, select "Montaged
+   Images". And check both check boxes "Fit montage to polygon" and "Skip
+   montage setup dialog when fitting in future". 
+#. Input in the pop-up montage setup dialog window.
+#. Input your string, e.g. "Grid3-Mesh" in the filename dialog, click
+   ``Save``.
+#. Now highlight the mesh item you want to make map, check "Acquire (A)" and
+   "New file at item". 
+#. repeat for all the mesh items. 
+
+Here even each mesh map will have its own filename, the setup used
+**heritage** function which is also quite hidden. 
+
 
