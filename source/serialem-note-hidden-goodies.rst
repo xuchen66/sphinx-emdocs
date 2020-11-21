@@ -55,7 +55,7 @@ this can be done with steps below:
    Grids - Setup Polygon Montage*.
 2. Add point items to all and each of the montage positions to be acquired,
    and give them flag "**A**". 
-3. Navigator - Acquire at points - Acquire Map Image or Montage.
+3. *Navigator - Acquire at points - Acquire Map Image or Montage*.
 
 One of the key things here is that once the montage map is open and current,
 the program knows how to make montage for each of the positions. The montage
@@ -79,11 +79,11 @@ How to do that? Not so easy anymore? If you don't already know, here is how:
 1. add a polygon item as you normally do. 
 #. make sure this polygon item is above of all and any mesh point items
    you already add. You do this by left mouse dragging the polygin item UP.
-#. check menu Navigator - Options - Use Item Labels in Filenames".
-#. With polygon item highlighted, check "Acquire (A)" and "New file at
+#. *Navigator - Options - Use Item Labels in Filenames*.
+#. With polygon item highlighted, check the boxes before "Acquire (A)" and "New file at
    item". 
 #. In the pop-up "Property of File to Open" dialog window, select "Montaged
-   Images". And check both check boxes "Fit montage to polygon" and "Skip
+   Images". And check both boxes before "Fit montage to polygon" and "Skip
    montage setup dialog when fitting in future". 
 #. Input in the pop-up montage setup dialog window.
 #. Input your string, e.g. "Grid3-Mesh" in the filename dialog, click
@@ -93,10 +93,10 @@ How to do that? Not so easy anymore? If you don't already know, here is how:
 #. repeat for all the mesh items. 
 
 After you do Navigator - Acquire at Point, you will get multiple files such as 
-Grid3-Mesh3.map, Grid3-Mesh4.map, Grid3-Mesh15.map etc.. Very nice, isn't it?
+*Grid3-Mesh3.map, Grid3-Mesh4.map, Grid3-Mesh15.map* etc.. Very nice, isn't it?
 
 Here each mesh map will have its own filename. During collection, the filenames 
-are opened and closed for each item, the setup used **heritage** function which 
+are opened and closed for each item. The setup step uses **heritage** function which 
 is also quite hidden. 
 
 
