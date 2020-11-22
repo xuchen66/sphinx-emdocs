@@ -108,11 +108,15 @@ We already know SerialEM script has a command to make a snapshot of an image
 in a buffer and save it in JPG format. But that doesn't contains any nav
 items drawn or with a scalebar. A snapshot function with possibility of
 including navigator items drawn and a scalebar can be very useful sometimes.
+
 For example, in a screening session, we make a mesh montage map and pick a
-new point items on the map from different area. Before or after we take all
+new point items on the map from different areas. Before or after we take all
 the images from these point items, it would be really cool to have a
-snapshot map image with all the points drawn on it. Something like an image
-below:
+snapshot map image with all the points drawn on it. It can be very useful 
+for us to track the image quality with ice conditions etc., because we know 
+which image is from which area in the map. 
+
+Something like an image below:
 
 **Fig.1 An example snapshot** (click for full size image)
 
