@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: 2020-11-21
-:Last-updated: 2020-11-21
+:Last-updated: 2020-11-22
 
 .. glossary::
 
