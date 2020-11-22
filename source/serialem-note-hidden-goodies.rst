@@ -118,7 +118,6 @@ below:
 
 .. image:: ../images/snap.jpg
    :scale: 15 %
-   :width: 384 px
    :alt: snapshot with nav feature
    :align: center
 
