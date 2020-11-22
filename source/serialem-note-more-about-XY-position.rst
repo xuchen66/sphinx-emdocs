@@ -7,7 +7,7 @@ SerialEM Note: More About X,Y Positioning
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2019-12-12 
-:Last-Updated: 2020-11-02
+:Last-Updated: 2020-11-22
 
 .. glossary::
 
@@ -89,7 +89,7 @@ exact condition of what in the reference buffer for mag, beam condition, binning
    AlignTo $buffer 0 1
    
 Simply align the image in buffer A to reference buffer. This would make the target right on again with image shift. The very 
-last argument ``1`` means no trimming to any of the source image and reference image. This is needed for UltrAuFoil® Holey Gold Films grids which have vary "dark" region of the film. 
+last argument ``1`` means no trimming to any of the source image and reference image. This is needed for UltrAuFoil® Holey Gold Films grids which have very "dark" region of the film. 
 
 .. thoughts:
 
