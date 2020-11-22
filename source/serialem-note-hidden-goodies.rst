@@ -129,7 +129,7 @@ The snapshot tool window is like below:
 **Fig.2 Snapshot Tool Window** (click for full size image)
 
 .. image:: ../images/snapshot-window.jpg
-   :scale: 100 %
+   :scale: 30 %
    :alt: snapshot with nav feature
    :align: center
 
