@@ -104,17 +104,17 @@ is also quite hidden.
 
    To obtain filename with MapID and ItemID in the filename string, here is a tip:
    
-.. code-block:: ruby
+   .. code-block:: ruby
 
-   ReportNavItem 
-   NavIndex = $repVal1
-   pt_label = $NavLabel
+      ReportNavItem 
+      NavIndex = $repVal1
+      pt_label = $NavLabel
 
-   NavIndexItemDrawnOn $NavIndex
-   ReportOtherItem $repVal1
-   map_label = $NavLabel
-   
-   filename = $map_label-$pt_label
+      NavIndexItemDrawnOn $NavIndex
+      ReportOtherItem $repVal1
+      map_label = $NavLabel
+
+      filename = $map_label-$pt_label
 
 .. _example_3:
 
