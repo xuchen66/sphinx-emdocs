@@ -114,12 +114,34 @@ the images from these point items, it would be really cool to have a
 snapshot map image with all the points drawn on it. Something like an image
 below:
 
-**Fig.1 Gatan K3 Camera Power Supply Unit** (click for full size image)
+**Fig.1 An example snapshot** (click for full size image)
 
 .. image:: ../images/snap.jpg
    :scale: 15 %
    :alt: snapshot with nav feature
    :align: center
+
+This function has been implemented fairly recently. It has a small GUI tool window 
+and a script command for this task.
+
+The snapshot tool window is like below:
+
+**Fig.2 Snapshot Tool Window** (click for full size image)
+The .. image:: ../images/snapshot-window.jpg
+   :scale: 100 %
+   :alt: snapshot with nav feature
+   :align: center
+
+There is also a command which can be used like this:
+
+.. code-block:: ruby
+
+   SnapshotToFile 1 -1 0 JPG JPG snap.jpg
+
+
+
+
+
 
 
 
