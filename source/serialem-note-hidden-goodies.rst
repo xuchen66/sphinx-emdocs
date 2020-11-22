@@ -105,8 +105,8 @@ Example 3 - make snapshot with nav features
 -------------------------------------------
 
 We already know SerialEM script has a command to make a snapshot of an image
-in a buffer and save it in JPG format. But that doesn't contains any nav
-items drawn or with a scalebar. A snapshot function with possibility of
+in a buffer and save it in JPG format. But that doesn't include any nav
+items drawn or a scalebar. A snapshot function with possibility of
 including navigator items drawn and a scalebar can be very useful sometimes.
 
 For example, in a screening session, we make a mesh montage map and pick a
@@ -133,7 +133,7 @@ The snapshot tool window is like below:
 **Fig.2 Snapshot Tool Window** (click for full size image)
 
 .. image:: ../images/snapshot-window.jpg
-   :scale: 60 %
+   :scale: 50 %
    :alt: snapshot with nav feature
    :align: center
 
