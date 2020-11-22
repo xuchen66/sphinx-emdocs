@@ -99,4 +99,28 @@ Here each mesh map will have its own filename. During collection, the filenames
 are opened and closed for each item. The setup step uses **heritage** function which 
 is also quite hidden. 
 
+.. _example_3:
+
+Example 3 - make snapshot with nav features
+-------------------------------------------
+
+We already know SerialEM script has a command to make a snapshot of an image
+in a buffer and save it in JPG format. But that doesn't contains any nav
+items drawn or with a scalebar. A snapshot function with possibility of
+including navigator items drawn and a scalebar can be very useful sometimes.
+For example, in a screening session, we make a mesh montage map and pick a
+new point items on the map from different area. Before or after we take all
+the images from these point items, it would be really cool to have a
+snapshot map image with all the points drawn on it. Something like an image
+below:
+
+**Fig.1 Gatan K3 Camera Power Supply Unit** (click for full size image)
+
+.. image:: ../images/snap.jpg
+   :scale: 15 %
+   :width: 384 px
+   :alt: snapshot with nav feature
+   :align: center
+
+
 
