@@ -100,6 +100,22 @@ Here each mesh map will have its own filename. During collection, the filenames
 are opened and closed for each item. The setup step uses **heritage** function which 
 is also quite hidden. 
 
+.. tip::
+
+   To obtain filename with MapID and ItemID in the filename string, here is a tip:
+   
+.. code-black:: ruby
+
+   ReportNavItem 
+   NavIndex = $repVal1
+   pt_label = $NavLabel
+
+   NavIndexItemDrawnOn $NavIndex
+   ReportOtherItem $repVal1
+   map_label = $NavLabel
+   
+   filename = $map_label-$pt_label
+
 .. _example_3:
 
 Example 3 - make snapshot with nav features
