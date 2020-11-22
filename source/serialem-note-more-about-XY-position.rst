@@ -53,12 +53,17 @@ Buffer after N are all beyond rolling range, thus won't be pushed out by taking 
 
 ``RealignToNavItem`` is one of the most important functions in **SerialEM**, in my opinion. It will bring the specimen stage to 
 a valid map item. It typically uses combination of stage shift and image shift to get the job done. ``0`` here means to stays 
-in the conditions from which the map was created. For example, the map was generated using LD **View**, and the scope currently is at LD **R**,the scope will switch to the View mag, beam intensity etc.. After *realign* is done, it stays in View mag. Argument ``1`` will bring scope back to **R**, after routine finishes. 
+in the conditions from which the map was created. For example, the map was generated using LD **View**, and the scope currently 
+is at LD **R**,the scope will switch to the View mag, beam intensity etc.. After *realign* is done, it stays in View mag. Argument 
+``1`` will bring scope back to **R**, after routine finishes. 
 
-This command line will bring the specimen to the picked item position, with some image shift in the last image of the routine takes, in buffer A. 
+This command line will bring the specimen to the picked item position, with some image shift in the last image of the routine takes, 
+in buffer A. 
 
 I should point out that this perhaps reflects one of the most fundamental differences between SerialEM and other data collection
-software - it doesn't rely on the template at all. As long as an item in a valid map is defined (picked), **SerialEM** will drive the stage there!
+software - it doesn't rely on the template at all. As long as an item in a valid map is defined (picked), **SerialEM** will drive 
+the stage there! For example, for a lacey grid with no regular size holes, SerialEM can go to the target positions precisely wherever 
+they are defined as point items. 
 
 .. code-block:: ruby
 
