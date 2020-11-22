@@ -61,7 +61,7 @@ This command line will bring the specimen to the picked item position, with some
 in buffer A. 
 
 I should point out that this perhaps reflects one of the most fundamental differences between SerialEM and other data collection
-software - it doesn't rely on the template at all. As long as an item in a valid map is defined (picked), **SerialEM** will drive 
+software - it doesn't rely on fixed template at all. As long as an item in a valid map is defined (picked), **SerialEM** will drive 
 the stage there! For example, for a lacey grid with no regular size holes, SerialEM can go to the target positions precisely wherever 
 they are defined as point items. 
 
