@@ -66,10 +66,8 @@ We also do this very often. We collect all the good meshes to make them into
 montage maps so we can pick and realign to each positions later. However, there are a
 couple of things we don't like with this way: 
 
-- The super-stack file for all the montages can be very large. It is 
-   not handy to look at a particular mesh off-line. 
-- The section # of the file is from 0,1... to the last one, they
-   are directly linked with mesh label/numbers. 
+- The super-stack file for all the montages can be very large. It is not handy to look at a particular mesh off-line. 
+- The section # of the file is from 0,1... to the last one, they are directly linked with mesh label/numbers. 
 
 It would be really nice to make all the meshes to have their own separate files and
 with the mesh ID in the filenames, something like *Grid3-Mesh8.map*. This way,
