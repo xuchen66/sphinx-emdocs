@@ -30,13 +30,14 @@ Example 1 - delete multiple nav items at once
 This might not sound anything special, as you can use the ``Delete`` button
 on Navigator window easily, and you just click on the button when the item
 is highlighted, and you do this multiple time to delete a bunch of items.
-However, if you want to delete a series (points) items that do not belong to
-a single group, this might become a little troublesome. 
+However, if you want to delete a series (a lot of points) items that do not 
+belong to a single group or are only part of a group, this might become a 
+little troublesome. 
 
-Here is a trick to use SHIFT-D for this: you first click on the first item
+Here is a trick - to use SHIFT-D for this: you first click on the first item
 to be removed and press SHIFT-D, then you click on the last item and press
 SHIFT-D again; this will remove all the items in the range regardless their
-group. 
+group properties. 
 
 You might find there are many hot keys available which you did not pay
 attention before.
