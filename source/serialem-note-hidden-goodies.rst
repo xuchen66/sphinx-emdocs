@@ -104,7 +104,7 @@ is also quite hidden.
 
    To obtain filename with MapID and ItemID in the filename string, here is a tip:
    
-.. code-black:: ruby
+.. code-block:: ruby
 
    ReportNavItem 
    NavIndex = $repVal1
