@@ -126,9 +126,7 @@ Something like an image below:
    :align: center
 
 This function has been implemented fairly recently. It has a small GUI tool window 
-and a script command for this task. You can open this tool window from *Window - Take Image Snaoshot...*.
-
-The snapshot tool window is like below:
+and a script command for this task. You can open this tool window from *Window - Take Image Snapshot...*.
 
 **Fig.2 Snapshot Tool Window** (click for full size image)
 
@@ -142,6 +140,13 @@ There is also a command which can be used like this:
 .. code-block:: ruby
 
    SnapshotToFile 1 -1 0 JPG JPG snap.jpg
+
+For more complete information about this little function, please check helpfile section:
+
+https://bio3d.colorado.edu/SerialEM/betaHlp/html/hidd_screenshot.htm
+
+and command usage description. 
+
 
 
 
