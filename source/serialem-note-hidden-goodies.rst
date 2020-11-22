@@ -127,7 +127,8 @@ and a script command for this task.
 The snapshot tool window is like below:
 
 **Fig.2 Snapshot Tool Window** (click for full size image)
-The .. image:: ../images/snapshot-window.jpg
+
+.. image:: ../images/snapshot-window.jpg
    :scale: 100 %
    :alt: snapshot with nav feature
    :align: center
