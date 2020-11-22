@@ -52,8 +52,8 @@ Buffer after N are all beyond rolling range, thus won't be pushed out by taking 
     RealignToNavItem 0
 
 ``RealignToNavItem`` is one of the most important functions in **SerialEM**, in my opinion. It will bring the specimen stage to 
-a valid map item. It typically uses combination of stage shift and image shift to get the job done. ``0`` here means to stays 
-in the conditions from which the map was created. For example, the map was generated using LD **View**, and the scope currently 
+a valid map item. It typically uses combination of stage shift and image shift to get the job done. ``0`` here means to stay 
+in the condition from which the map was created. For example, the map was generated using LD **View**, and the scope currently 
 is at LD **R**,the scope will switch to the View mag, beam intensity etc.. After *realign* is done, it stays in View mag. Argument 
 ``1`` will bring scope back to **R**, after routine finishes. 
 
