@@ -19,7 +19,7 @@ SerialEM Note: Hidden Goodies
 
       In this note, I want to give a few examples to show some of the hidden
       beauties I like a lot. And I hope you can learn them from reading this
-      note if you don't know yet. Hopefully, the example list can go longer
+      note if you don't know yet. Hopefully, the example list can grow longer
       with time and more exploration. 
       
 .. _example_1:
