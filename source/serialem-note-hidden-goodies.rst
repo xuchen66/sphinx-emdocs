@@ -122,7 +122,7 @@ below:
    :align: center
 
 This function has been implemented fairly recently. It has a small GUI tool window 
-and a script command for this task.
+and a script command for this task. You can open this tool window from *Window - Take Image Snaoshot...*.
 
 The snapshot tool window is like below:
 
