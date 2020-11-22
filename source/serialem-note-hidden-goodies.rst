@@ -57,22 +57,24 @@ this can be done with steps below:
    and give them flag "**A**". 
 3. *Navigator - Acquire at points - Acquire Map Image or Montage*.
 
-One of the key things here is that once the montage map is open and current,
+One of the nice key things here is that once the montage map is open and current,
 the program knows how to make montage for each of the positions. The montage
 setup dialog is only set once. Because all the items share the same
-file, there is no need to draw multiple montage at different locations. 
+file, there is no need to draw multiple polygons at different locations. 
 
 We also do this very often. We collect all the good meshes to make them into
-montage maps so we can pick and realign to each positions later. There are a
-couple of things we don't like with this way: 1.) The super-stack file for all the
-montages can be very large. It is not handy to look at a particular mesh
-off-line. 2) The section # of the file is from 0,1... to the last one, they
-are directly linked with mesh label/numbers. 
+montage maps so we can pick and realign to each positions later. However, there are a
+couple of things we don't like with this way: 
 
-It would be nice to make all the meshes to have their own separate files and
-with the mesh ID in the filename, something like Grid3-Mesh8.map. This way,
+* The super-stack file for all the montages can be very large. It is 
+   not handy to look at a particular mesh off-line. 
+* The section # of the file is from 0,1... to the last one, they
+   are directly linked with mesh label/numbers. 
+
+It would be really nice to make all the meshes to have their own separate files and
+with the mesh ID in the filenames, something like *Grid3-Mesh8.map*. This way,
 we can check each mesh map easily when off-line. On a windows computer
-with 3dmod installed, this is as simple as clicking on the filename. 
+with 3dmod installed, this is as simple as double clicking on the filename. 
 
 How to do that? Not so easy anymore? If you don't already know, here is how:
 
