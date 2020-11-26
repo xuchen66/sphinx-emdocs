@@ -7,7 +7,7 @@ SerialEM Note: Installation and Calibration
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2017-11-12
-:Last_Updated: 2020-10-01
+:Last_Updated: 2020-11-26
 
 .. glossary::
 
@@ -87,6 +87,20 @@ Calibration
 Although most of calibration results will be written into another system file *SerialEMcalibraions.txt* when you save the calibrtion from Calibretion menu, there are a few places you need to manully edit the *SerialEMproperties.txt* to take in the calibration results. These include pixelsize and tilting axis angle - they are more like instrument parameters. 
 
 For pixelsize calibration, it is best to use standard 2160 line waffle grid. For all other calibration like Image Shift and Stage Shift, it would make things a lot easier to use a non-periodic sample. Please see the *NOTE* at the end of this document. 
+
+.. tip:: 
+
+   Since mP and nP modes give very different beams, it is required to perform calibration for **both** modes for some basic items:
+  
+   - Beam Crossover
+   - Beam Intensity
+   - Spot Intensity
+   - Beam Shift
+   - Autofocus
+   - Electron Dose
+   - Standard Focus
+   
+   See https://bio3d.colorado.edu/SerialEM/betaHlp/html/setting_up_serialem.htm#nanoprobe
 
 .. rubric:: Step 0 
 
