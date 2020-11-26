@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: 2020-11-21
-:Last-updated: 2020-11-22
+:Last-updated: 2020-11-25
 
 .. glossary::
 
@@ -200,7 +200,7 @@ Here is my little script to run at end.
        Echo Already closed!
     Endif 
 
-You will get this pop-up window so you will never forget about this. 
+The window below will pop up when exiting SerialEM so you will never forget about this. 
 
 **Fig.3 YesNo Window** (click for full size image)
 
