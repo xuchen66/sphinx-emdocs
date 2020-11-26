@@ -169,15 +169,14 @@ and command usage description.
 Example 4 - Run script at SerialEM program start or exit
 --------------------------------------------------------
 
-This is a new feature in 3.9 beta. This can be very handy if you have some
-tasks to do when you startup and exit. For example, you might to get into
-Low Dose mode and clear some persistent variable. Or you have some other
-tasks to do when you quit SerialEM program. 
+This is a new feature in 3.9 beta. It can be very handy if you have some
+tasks to do when you startup and exit. For example, you might want to get into
+Low Dose mode and clear some persistent variable from last run. Or you have 
+some other tasks to do when you quit SerialEM program. 
 
-You can setup up from menu *Script - Run at Program Start ...* or *- Run at
-Program End...*, and define a script accordingly. I like to give an example
-to make sure you take care of column and gun valves when you close a SeriaEM
-session so that the gun and column valves are not forgotten to close!
+You can setup it from menu *Script - Run at Program Start ...* or *- Run at
+Program End...*, and define a script accordingly. Here I give an example
+to make sure column and gun valves be taken care of.
 
 Here is my little script to run at end.
 
