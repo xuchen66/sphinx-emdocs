@@ -212,6 +212,3 @@ The window below will pop up when exiting SerialEM so you will never forget abou
 
 
 
-
-
-
