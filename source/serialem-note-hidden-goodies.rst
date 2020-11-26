@@ -164,7 +164,51 @@ https://bio3d.colorado.edu/SerialEM/betaHlp/html/hidd_screenshot.htm
 
 and command usage description. 
 
+.. _example_4:
 
+Example 4 - Run script at SerialEM program start or exit
+--------------------------------------------------------
+
+This is a new feature in 3.9 beta. This can be very handy if you have some
+tasks to do when you startup and exit. For example, you might to get into
+Low Dose mode and clear some persistent variable. Or you have some other
+tasks to do when you quit SerialEM program. 
+
+You can setup up from menu *Script - Run at Program Start ...* or * - Run at
+Program End...*, and define a script accordingly. I like to give an example
+to make sure you take care of column and gun valves when you close a SeriaEM
+session so that the gun and column valves are not forgotten to close!
+
+Here is my little script to run at end.
+
+.. code-block:: ruby
+
+    ScriptName EndingScript
+
+    # script to run when exiting SerialEM program
+
+    ## Close Column/Gun Valves if they are OPEN
+    ReportColumnOrGunValve
+    If $repVal1 == 1    # open
+       YesNoBox Column/Gun Valves are OPEN, do you want to Close Them?
+       If $repVal1 == 1 # answer Yes
+          SetColumnOrGunValve 0
+          Echo ------ Now Valves are CLOSED! ------
+       Else
+          Echo Valves are still OPEN!
+       Endif
+    Else
+       Echo Already closed!
+    Endif 
+
+You will get this pop-up window so you will never forget about this. 
+
+**Fig.3 YesNo Window** (click for full size image)
+
+.. image:: ../images/YesNo-valves.JPG
+   :scale: 100 %
+   :alt: Yes No window to remind valve
+   :align: center
 
 
 
