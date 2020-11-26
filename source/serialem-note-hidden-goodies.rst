@@ -206,7 +206,7 @@ You will get this pop-up window so you will never forget about this.
 **Fig.3 YesNo Window** (click for full size image)
 
 .. image:: ../images/YesNo-valves.JPG
-   :scale: 100 %
+   :scale: 50 %
    :alt: Yes No window to remind valve
    :align: center
 
