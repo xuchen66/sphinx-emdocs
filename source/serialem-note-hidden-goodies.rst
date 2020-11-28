@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: 2020-11-21
-:Last-updated: 2020-11-25
+:Last-updated: 2020-11-28
 
 .. glossary::
 
@@ -175,8 +175,25 @@ Low Dose mode and clear some persistent variable from last run. Or you have
 some other tasks to do when you quit SerialEM program. 
 
 You can setup it from menu *Script - Run at Program Start ...* or *- Run at
-Program End...*, and define a script accordingly. Here I give an example
-to make sure column and gun valves be taken care of.
+Program End...*, and define a script accordingly. Here I give two examples
+- one to define current working directory in the startup and one to make sure 
+column and gun valves be taken care of.
+
+Below script running at program start will pop up a file chooser to ask you 
+define the current working directory. 
+
+.. code-block:: ruby
+
+   ScriptName StartUp
+   # script to run when starting SerialEM program
+
+   #SetLowDoseMode 1
+   #GoToLowDoseArea V
+
+   UserSetDirectory 
+   Echo -----------
+   ReportDirectory 
+   Echo -----------
 
 Here is my little script to run at end.
 
