@@ -190,10 +190,12 @@ define the current working directory.
    #SetLowDoseMode 1
    #GoToLowDoseArea V
 
+   SetDiectory X:\
    UserSetDirectory 
    Echo -----------
    ReportDirectory 
    Echo -----------
+   OpenChooserInCurrentDir
 
 Here is my little script to run at end.
 
