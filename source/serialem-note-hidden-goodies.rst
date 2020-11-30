@@ -228,5 +228,5 @@ The window below will pop up when exiting SerialEM so you will never forget abou
    :alt: Yes No window to remind valve
    :align: center
 
-Clicking on Yes will close the valves and No will keep them open. 
+Clicking on ``Yes`` will close the valves and ``No`` will keep them open. 
 
