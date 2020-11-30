@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: 2020-11-21
-:Last-updated: 2020-11-28
+:Last-updated: 2020-11-30
 
 .. glossary::
 
@@ -228,6 +228,5 @@ The window below will pop up when exiting SerialEM so you will never forget abou
    :alt: Yes No window to remind valve
    :align: center
 
-
-
+Clicking on Yes will close the valves and No will keep them open. 
 
