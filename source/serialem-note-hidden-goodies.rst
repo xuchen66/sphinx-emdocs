@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: 2020-11-21
-:Last-updated: 2020-12-02
+:Last-updated: 2020-12-03
 
 .. glossary::
 
@@ -204,20 +204,23 @@ Here is my little script to run at end.
     ScriptName EndingScript
 
     # script to run when exiting SerialEM program
-
-    ## Close Column/Gun Valves if they are OPEN
-    ReportColumnOrGunValve
-    If $repVal1 == 1    # open
-       YesNoBox Column/Gun Valves are OPEN, do you want to Close Them?
-       If $repVal1 == 1 # answer Yes
-          SetColumnOrGunValve 0
-          Echo ------ Now Valves are CLOSED! ------
-       Else
-          Echo Valves are still OPEN!
-       Endif
-    Else
-       Echo Already closed!
-    Endif 
+    
+    ReportProperty NoScope noscope           # determine on Dummy or not
+    If $noscope == 0
+      ## Close Column/Gun Valves if they are OPEN
+      ReportColumnOrGunValve
+      If $repVal1 == 1    # open
+         YesNoBox Column/Gun Valves are OPEN, do you want to Close Them?
+         If $repVal1 == 1 # answer Yes
+           SetColumnOrGunValve 0
+           Echo ------ Now Valves are CLOSED! ------
+         Else
+           Echo Valves are still OPEN!
+         Endif
+      Else
+         Echo Already closed!
+      Endif 
+    Endif
 
 The window below will pop up when exiting SerialEM so you will never forget about this. 
 
