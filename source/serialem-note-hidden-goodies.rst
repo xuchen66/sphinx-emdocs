@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: 2020-11-21
-:Last-updated: 2020-11-30
+:Last-updated: 2020-12-02
 
 .. glossary::
 
@@ -156,7 +156,7 @@ There is also a command which can be used like this:
 
 .. code-block:: ruby
 
-   SnapshotToFile 1 -1 0 JPG JPG snap.jpg
+   SnapshotToFile 1 1 1 JPG JPG snap.jpg
 
 For more complete information about this little function, please check helpfile section:
 
