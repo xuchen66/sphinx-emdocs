@@ -63,7 +63,7 @@ A Few Points to Discuss
 
 0. This is no replacement for SerialEM controller to collect tilting series. It can save some time, by skipping most of Focus and Trial shots, if the condition is proper. For example, the eucentricity is working very well, beam center shifted to tilting axis nicely so there is no much lateral displacement, the stage is working well mechanically and the pixelsize is not too small. When all these conditions are met, this script might work well and fast. 
 
-1. For a reliable correlation using R images, the dose is probably too low and signal is too weak without any binning. Therefore, a proper binning for R image is expected. This is not a problem for K2/K3 camera, as returned image can be binned while the raw frames are savedon the side without any binning. For a non-K2/K3 camera, one can modify the script easily to `ReduceImage` for R shot aftersaving and store that in the reference buffer.
+1. For a reliable correlation using R images, the dose is probably too low and signal is too weak without any binning. Therefore, a proper binning for R image is expected. This is not a problem for K2/K3 camera, as returned image can be binned while the raw frames are saved on the side without any binning. For a non-K2/K3 camera, one can modify the script easily to `ReduceImage` for R shot aftersaving and store that in the reference buffer.
 
 2. The same idea and method should be also applied to a FISE collection, provided the frames from each tilt can be grabbed and available for scripting. 
 
