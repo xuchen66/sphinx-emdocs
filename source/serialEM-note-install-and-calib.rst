@@ -90,7 +90,7 @@ For pixelsize calibration, it is best to use standard 2160 line waffle grid. For
 
 .. tip:: 
 
-   Since &micro;P and nP modes give very different beams, it is required to perform calibration for **both** modes for some basic items:
+   Since &micro;P and &nano;P modes give very different beams, it is required to perform calibration for **both** modes for some basic items:
   
    - Beam Crossover
    - Beam Intensity
