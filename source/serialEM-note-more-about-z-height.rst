@@ -18,7 +18,7 @@ SerialEM Note: More About Z Height
       SerialEM user, especially a new comer to understand better how SerialEM works. 
       
       Quickly and accurately moving specimen to eucentric height is a frequently needed task. Everything is going to be easier 
-      if speciment is at eucentric height and objective lens at eucentric focus. I wrote a litte document before how to use tilted-beam
+      if specimen is at eucentric height and objective lens at eucentric focus. I wrote a little document before how to use tilted-beam
       method to do this using SerialEM `"SerialEM HowTo: Positioning Z" <http://www.bio.brandeis.edu/KeckWeb/emdoc/en_US.ISO8859-1/articles/SerialEM-howto:positioningZ/>`_. In this note, I give you an improved version and hopefully it 
       is easier to use and more robust too. 
       
@@ -27,7 +27,7 @@ SerialEM Note: More About Z Height
 Background Information 
 ----------------------
 
-SerialEM has built-in task function to do eucentricity using stage-tilt method. It is robust, but slower than beam-tilt method. Beam-tilt method is opposite to autofoccus funtion. When specimen is at eucentric height and objective lens at eucentric focus, the tilted beams produce precise overlapped image pair. This is how autofocus works. This principle can also be used to adjust specimen height, because if we preset obective at eucentric focus, cross-correlaton between two tilted beam images also provides information how much specimen is away from eucentricity. Specifically, beam-tilt method used here does a few things:
+SerialEM has built-in task function to do eucentricity using stage-tilt method. It is robust, but slower than beam-tilt method. Beam-tilt method is opposite to autofoccus function. When specimen is at eucentric height and objective lens at eucentric focus, the tilted beams produce precise overlapped image pair. This is how autofocus works. This principle can also be used to adjust specimen height, because if we preset obective at eucentric focus, cross-correlaton between two tilted beam images also provides information how much specimen is away from eucentricity. Specifically, beam-tilt method used here does a few things:
 
 - it sets scope objective lens to eucentric focus value 
 - it measures the defocus value for current specimen height using tilted-beam image pair,
@@ -39,7 +39,7 @@ The beam-tilt method works very nicely most of time and it is pretty quick. Howe
 
 When we use SerialEM Low-Dose mode, we often give large focus offset such as -200 microns to View area (I call it View beam) to make the View image good contrast. If we can use this large defocused View beam to obtain tilt-beam pairs for measuring defocus value accurately, that would be ideal. 
 
-.. _Z_byV2_funtion:
+.. _Z_byV2_function:
 
 Z_byV2 Function
 ---------------
@@ -208,5 +208,5 @@ This is to compensate the non-linear behavior of autofocus measurement, with the
 
 What exactly the damping factor value should you use? I suggest you move your stage 200 microns away, and you calculate the the ratio of 200 to autofocus measurement value $repVal1 after ``ReportAutofocus`` ( damping factor = 200 / $repVal1 ) and use the result.
 
-If setting correctly, even your stage is more than 150 microns away, calling the function with three rounds of iternation can bring the stage to eucentric height within 0.5 microns in a few seconds. Amazing to me. 
+If setting correctly, even your stage is more than 150 microns away, calling the function with three rounds of iteration can bring the stage to eucentric height close to within 0.5 microns in a few seconds. Amazing to me. 
 
