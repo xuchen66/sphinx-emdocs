@@ -13,7 +13,7 @@ SerialEM Note: More About Z Height
 
    Abstract
       This is the first of a series of SerialEM notes I have wanted to write for a while. An application of using SerialEM, 
-      even a simple one, could be very useful and "handy" for a SerialEM user. I try to give more explanantion for what 
+      even a simple one, could be very useful and "handy" for a SerialEM user. I try to give more explanation for what 
       I did, rather than to just present plain lines of codes (yes, SerialEM scripting code) so that it can be helpful for a 
       SerialEM user, especially a new comer to understand better how SerialEM works. 
       
