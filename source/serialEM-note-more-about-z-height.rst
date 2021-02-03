@@ -208,5 +208,5 @@ This is to compensate the non-linear behavior of autofocus measurement, with the
 
 What exactly the damping factor value should you use? I suggest you move your stage 200 microns away, and you calculate the the ratio of 200 to autofocus measurement value $repVal1 after ``ReportAutofocus`` ( damping factor = 200 / $repVal1 ) and use the result.
 
-If setting correctly, even your stage is more than 150 microns away, calling the function with three rounds of iteration can bring the stage to eucentric height close to within 0.5 microns in a few seconds. Amazing to me. 
+If setting correctly, even your stage is more than 150 microns away, calling the function with three rounds of iteration can bring the stage to eucentric height close to within 0.5 microns in a few seconds. Amazing to me.  
 
