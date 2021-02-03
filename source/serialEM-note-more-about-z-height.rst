@@ -31,7 +31,7 @@ SerialEM has built-in task function to do eucentricity using stage-tilt method. 
 
 - it sets scope objective lens to eucentric focus value 
 - it measures the defocus value for current specimen height using tilted-beam image pair,
-- it then changes stage position to that reported value but in oppsite direction, 
+- it then changes stage position to that reported value but in opposite direction, 
 - it moves stage to determined direction and distance,
 - and it iterates until the reported defocus value is close enough to zero.  
 
