@@ -73,14 +73,14 @@ Here you define folder location, cartridge #, and sample names. The map filename
     Function LMMCars 0 0 
 
     Loop $#cat index
-    LoadCartridge $cat[$index]
-    #SetNavRegistration $cat[$index]
-    SetColumnOrGunValve 1
-    MoveStageTo 0 0 
-    OpenNewMontage 0 0 LMM-Car$cat[$index]-$name[$index].st
-    Montage 
-    NewMap
-    CloseFile
+       LoadCartridge $cat[$index]
+       #SetNavRegistration $cat[$index]
+       SetColumnOrGunValve 1
+       MoveStageTo 0 0 
+       OpenNewMontage 0 0 LMM-Car$cat[$index]-$name[$index].st
+       Montage 
+       NewMap
+       CloseFile
     EndLoop 
 
     EndFunction 
