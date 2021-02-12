@@ -7,7 +7,7 @@ SerialEM Note: More About Z Height
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date: 2017-12-09 
-:Last Updated: 2020-10-11
+:Last Updated: 2021-02-12
 
 .. glossary::
 
@@ -180,9 +180,9 @@ If we found the good "offset" value, it will be good for some time, at least thi
       Endif 
    EndLoop
 
-   X = { 0 0 0 0 0 0 0 0 0 0 0 }
-   Y = { 0 0 0 0 0 0 0 0 0 0 0 }
-
+   NewArray X 1 11
+   NewArray Y 1 11
+   
    temp_offset = $offset - 10
 
    Loop $#X i
