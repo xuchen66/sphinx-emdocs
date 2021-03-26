@@ -253,7 +253,7 @@ of the same CycleTargetFocus function in Python code.
       serialem.ReportTargetDefocus()
       tarDef = serialem.GetVariable('repVal1')
 
-      if float(tarDef[0]) > -1.0 or float(tarDef[0]) <= -3.0:
+      if float(tarDef[0]) > low or float(tarDef[0]) <= high:
             serialem.SetTargetDefocus(low)
       else:
             serialem.IncTargetDefocus(delta)
