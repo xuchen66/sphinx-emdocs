@@ -235,8 +235,8 @@ Clicking on ``Yes`` will close the valves and ``No`` will keep them open.
 
 .. _example_5:
 
-Example 5 - Script With Python
-------------------------------
+Example 5 - Scripting With Python
+---------------------------------
 
 Around March 23, 2021, scripting also supports python. SerialEM native collection of commands act like a module. Here is an example 
 of the same CycleTargetFocus function in Python code. 
@@ -246,7 +246,8 @@ of the same CycleTargetFocus function in Python code.
    #!Python
    #ScriptName CycleTargetDefocus
    import serialem
-
+   
+   ## function
    def CycleTargetDefocus(low, high, step):
       serialem.Echo('=>running CycleTargetDefocus ...' + 'range are (' + str(low) +', ' + str(high) + '), step is ' + str(step))
       delta = -1 * step
