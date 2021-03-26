@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: 2020-11-21
-:Last-updated: 2020-12-03
+:Last-updated: 2021-03-25
 
 .. glossary::
 
@@ -233,3 +233,33 @@ The window below will pop up when exiting SerialEM so you will never forget abou
 
 Clicking on ``Yes`` will close the valves and ``No`` will keep them open. 
 
+.. _example_5:
+
+Example 5 - Script With Python
+------------------------------
+
+Around March 23, 2021, scripting also supports python. SerialEM native collection of commands act like a module. Here is an example 
+of the same CycleTargetFocus function in Python code. 
+
+.. code-block:: python
+
+   #!Python
+   #ScriptName CycleTargetDefocus
+   import serialem
+
+   def CycleTargetDefocus(low, high, step):
+      serialem.Echo('=>running CycleTargetDefocus ...' + 'range are (' + str(low) +', ' + str(high) + '), step is ' + str(step))
+      delta = -1 * step
+      serialem.ReportTargetDefocus()
+      tarDef = serialem.GetVariable('repVal1')
+
+      if float(tarDef[0]) > -1.0 or float(tarDef[0]) <= -3.0:
+            serialem.SetTargetDefocus(low)
+      else:
+            serialem.IncTargetDefocus(delta)
+            serialem.ChangeFocus(delta)
+
+   ## run it 
+   CycleTargetDefocus(-1.0, -3.0, 0.1)
+
+    
