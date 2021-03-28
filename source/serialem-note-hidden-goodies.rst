@@ -255,7 +255,7 @@ of the same CycleTargetFocus function in Python code.
     
       tarDef = serialem.ReportTargetDefocus()
       
-      if tarDef > low or tarDef < high + step
+      if tarDef > low or tarDef < high + step:
          serialem.SetTargetDefocus(low)
       else:
          serialem.IncTargetDefocus(delta)
