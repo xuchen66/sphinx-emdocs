@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: 2020-11-21
-:Last-updated: 2021-03-28
+:Last-updated: 2021-03-30
 
 .. glossary::
 
@@ -250,16 +250,13 @@ of the same CycleTargetFocus function in Python code.
    ## function
    def CycleTargetDefocus(low, high, step):
       print('==> running CycleTargetDefocus ...')
-      print('    ---> low, high, step is ' +  str(low) +', ' + str(high) +', ' + str(step))
-      delta = -1 * step
-    
+      print('    ---> low, high, step is ' low, high, step)
       tarDef = serialem.ReportTargetDefocus()
-      
       if tarDef > low or tarDef < high + step:
          serialem.SetTargetDefocus(low)
       else:
-         serialem.IncTargetDefocus(delta)
-         serialem.ChangeFocus(delta)
+         serialem.IncTargetDefocus(-step)
+         serialem.ChangeFocus(-step)
 
    ## run it 
    CycleTargetDefocus(-1.0, -3.0, 0.1)
