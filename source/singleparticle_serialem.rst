@@ -248,6 +248,112 @@ Lets load the script "LD-Group" to script editor and try to run it.
 
 This script calls two functions - ``CycleTargetDefocus`` and ``Drift``. This is a standalone script. Some other functions can found `here on github.com <https://github.com/xuchen66/SerialEM-scripts/blob/new-features/MyFuncs.txt/>`_.
 
+If running with python support, the code looks something like this:
+
+.. _code-block:: python
+
+   #!Python
+   #ScriptName LD-Group-Python
+   import serialam
+   from math import *
+
+   ### Functions
+   def CycleTargetDefocus(defLow, defHigh, step):
+       print(' -> running CycleTargetDefocus...')
+       print(' --- defLow, defHigh, step = ', defLow, defHigh, step)
+       serialam.SuppressReports()
+       tarFocus = serialam.ReportTargetDefocus()   # float
+       if tarFocus > defLow or tarFocus < defHigh:
+           serialam.SetTargetDefocus()
+       else:
+           serialam.IncTargetDefocus(-step)
+           serialam.ChangeFocus(-step)
+
+       serialam.ReportTargetDefocus()
+
+   def Drift(crit):
+       print('===> Running Drift ', crit, 'A...')
+
+       shot = serialam.focus()
+       interval = 4
+       times = 10
+       period = interval + 1
+       shot
+       serialam.Delay(interval)
+       for index in range(1, time+1):
+           shot
+           serialam.AlignTo('B', 0, 1)
+           aliShift = serialam.ReportAlignShift()
+           dx, dy = aliShift[2], aliShift[3]
+           rate = sqrt(dx*dx + dy*dy)/period*10
+           print(' Rate = ', rate, 'A/sec')
+           if rate < crit:
+               print('Drift is low enough after shot ', index)
+               break
+           elif index < times:
+               serialam.Delay('interal')
+           else:
+               print('Drift never got below ', crit, 'skipping...')
+
+   ### main
+   # when to do focus and center beam, set range
+   groupOption = 1         # 1 = only group head, 0 = every item
+   defLow = -1.0
+   defHigh = -2.5
+   step = 1.0
+
+   # drift control, limit 
+   driftControl = 1        # 1 = yes, 0 = no 
+   limit = 3.0
+
+   # for X,Y position
+   templateOption = 1      # 1 = use fixed ref, 0 = dynamic one (whole image)
+   refBuffer = 'P'
+
+   #### no editing below ####
+   serialam.RealignToNavItem(0)
+   serialam.ResetImageShift(2)
+   if templateOption = 1:
+       print(' --- assuming you have a template image in buffer $refBuffer ---')
+   elif:
+       serialam.Copy('A', refBuffer)
+   serialam.View()
+   serialam.AlignTo(refBuffer,0,1)
+
+   # turn on Autofocus drift protection so it reports drift rate
+   DP = serialam.ReportUserSetting('DriftProtection')
+   if DP = '0':
+       serialam.SetUserSetting('DriftProtection','1')
+
+   # center beam and defosuc
+   gs = serialam.ReportGroupStatus()
+   if groupOption = 0:
+       serialam.AutoCenterBeam()
+       CycleTargetDefocus(defLow, defHigh, step)
+       serialam.Autofocus()
+   else:
+       if gs = 1 or gs = 0:
+           serialam.AutoCenterBeam()
+           CycleTargetDefocus(defLow, defHigh, step)
+           serialam.AutoCenterBeam()
+       else:
+           print('   group member, skip focusing ...')
+
+   # drift 
+   if driftControl = 1:
+       FD = serialam.ReportFocusDrift()
+       if FD > 0.09:
+           Drift(limit)
+
+   # shot
+   serialam.AdjustBeamTiltforIS()              # keep this line 
+   serialam.MultipleRecords()
+   #serialam.Record()
+
+   # post-expose
+   serialam.RefineZLP(30)
+
+
 This is a good time to test running this script on one of the point items in navigator window, to make sure it runs fine. 
 
 .. _final_check:
