@@ -193,7 +193,6 @@ Lets load the script "LD-Group" to script editor and try to run it.
    SuppressReports
    ReportTargetDefocus tarFocus
    If $tarFocus > $defLow OR $tarFocus < $defHigh
-
       SetTargetDefocus $defLow
    Else 
       IncTargetDefocus $delta
