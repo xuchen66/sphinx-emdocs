@@ -123,7 +123,7 @@ Test Main Script to Run
 
 Lets load the script "LD-Group" to script editor and try to run it. 
 
-.. code-block:: python
+.. code-block:: ruby
 
    ScriptName LD-group
 
@@ -137,7 +137,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
 
    ## turn ON drift protection if it's off 
    ReportUserSetting DriftProtection DP 
-   if $DP != 1
+   if $DP == 0
        SetUserSetting DriftProtection 1
    endif     
 
