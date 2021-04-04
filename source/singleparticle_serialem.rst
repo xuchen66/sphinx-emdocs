@@ -222,25 +222,26 @@ Lets load the script "LD-Group" to script editor and try to run it.
    $shot
    Delay $interval
    Loop $times index
-   $shot
-   AlignTo B
-   ReportAlignShift
-   ClearAlignment
-   dx = $repVal3
-   dy = $repVal4
-   dist = sqrt $dx * $dx + $dy * $dy
-   rate = $dist / $period * 10	
-   Echo   --- Rate = $rate A/sec ---
-   Echo       ----------------
-   If $rate < $crit
-       echo Drift is low enough after shot $index      
-       break
-   Elseif  $index < $times
-       Delay $interval
-   Else
-       echo Drift never got below $crit: Skipping ...
-       exit   
-   Endif
+      $shot
+      AlignTo B
+      ReportAlignShift
+      ClearAlignment
+      dx = $repVal3
+      dy = $repVal4
+      dist = sqrt $dx * $dx + $dy * $dy
+      rate = $dist / $period * 10	
+      echo Rate = $rate A/sec
+      echo ----------------
+
+      If $rate < $crit
+         echo Drift is low enough after shot $index      
+         break
+      Elseif  $index < $times
+         Delay $interval
+      Else
+        echo Drift never got below $crit: Skipping ...
+        exit   
+      Endif
    EndLoop
    EndFunction
 
