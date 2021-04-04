@@ -7,7 +7,7 @@ Single Particle Data Collection Using SerialEM
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-created: 2016-10-18
-:Last-updated: 2019-08-08
+:Last-updated: 2021-04-04
 .. glossary::
 
    Abstract
@@ -123,44 +123,46 @@ Test Main Script to Run
 
 Lets load the script "LD-Group" to script editor and try to run it. 
 
-.. code-block:: ruby
+.. code-block:: python
 
-   ScriptName LD-Group
-   # macro to skip points except the very first in the group.
-   # assume LD is setup.
+   ScriptName LD-group
 
-
-
-   # X,Y position 
-   buffer = T
+   ## X,Y positioning
+   buffer = P 
    RealignToNavItem 0
-   Copy A $buffer                           # copy last image from Realign to buffer P
-   ResetImageShift
-   CallFunction MyFuncs::Relax
-   CallFunction MyFuncs::BufferShot $buffer   
-   AlignTo $buffer
+   ResetImageShift 2
+   #Copy A $buffer
+   View
+   AlignTo $buffer 0 1
 
-   # preparation for first item in group
-   ReportGroupStatus 
-   If $repVal1 == 1 OR $repVal1 == 0   # 1 for group head and 0 for non-group item
-      #Call Z_byV
-      #UpdateGroup Z
-      AutoCenterBeam                   # autocenter policy must be setup 
-      CallFunction MyFuncs::CycleTargetDefocus -1.2 -2.0 0.2
-      G
-   Else 
-      echo Directly shot!
+   ## turn ON drift protection if it's off 
+   ReportUserSetting DriftProtection DP 
+   if $DP != 1
+       SetUserSetting DriftProtection 1
+   endif     
+
+   ## center beam & focus
+   ReportGroupStatus gs            # 1 = group head, 0 = inividual, 2 = group member 
+   If $gs == 1 OR $gs == 0         # use this for group, use next line for every point
+   #If $gs == 1 OR $gs == 0 OR $gs == 2
+       #AutoCenterBeam             # use this if beam is not stable enough
+       CallFunction Myfuncs::CycleTargetDefocus -1.0 -2.0 0.1
+       AutoFocus
    Endif
 
-   # For K2, uncomment next line
-   EarlyReturnNextShot 0               # K2 frame, return to SEM
-   R
+   ## drift                        # if reported drift is high, call drift control
+   ReportFocusDrift FD 
+   if $FD > 0.09
+       CallFunction Myfuncs::Drift 2.0
+   Endif 
 
-   # or comment out above two line and use below
+   ## shot
+   AdjustBeamTiltforIS             # this is needed for single shot, so keep it here
    MultipleRecords
+   # Record
 
-   # RefineZLP
-   RefineZLP 30
+   ## post-exposure
+   RefineZLP 30                    # refine ZLP every 30 minutes
 
 This script calls three functions - ``Relax``, ``BufferShot`` and ``CycleTargetDefocus``. The script that contains all the functions "MyFuncs" must be also loaded in one of the script buffers/editors. You can download the latest "MyFuncs.txt" `here on github.com <https://github.com/xuchen66/SerialEM-scripts/blob/new-features/MyFuncs.txt/>`_.
 
