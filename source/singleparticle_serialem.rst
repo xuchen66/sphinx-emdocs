@@ -127,14 +127,17 @@ Lets load the script "LD-Group" to script editor and try to run it.
 
    ScriptName LD-group
 
+   ## when to perform CenterBeam and AutoFocus
+   groupOption = 1                 # 1 = at group head, 0 = at every item 
+
    ## X,Y positioning
-   templateOption = 1              # 1 = to use a fixed ref, 0 = use dynamic one
+   templateOption = 1              # 1 = to use a fixed ref, 0 = not to use
    refBuffer = P 
 
    RealignToNavItem 0
    ResetImageShift 2
    If $templateOption == 1
-       Echo  --- assuming you have a fixed template image in buffer $refBuffer ---
+       Echo  --- assuming you have a template image in buffer $refBuffer ---
    Else
        Copy A $refBuffer           # use dynamic reference (whole image itself)
    Endif 
@@ -148,17 +151,24 @@ Lets load the script "LD-Group" to script editor and try to run it.
    endif     
 
    ## center beam & focus
-   ReportGroupStatus gs            # 1 = group head, 0 = inividual, 2 = group member 
-   If $gs == 1 OR $gs == 0         # use this for group, use next line for every point
-   #If $gs == 1 OR $gs == 0 OR $gs == 2
+   ReportGroupStatus gs            # 1 = group head, 0 = inividual, 2 = group member
+   If $groupOption == 0
        #AutoCenterBeam             # use this if beam is not stable enough
        CallFunction Myfuncs::CycleTargetDefocus -1.0 -2.0 0.1
        AutoFocus
+   Else
+       If $gs == 1 OR $gs == 0     # use this for group, use next line for every poina
+           #AutoCenterBeam         # use this if beam is not stable enough
+           CallFunction Myfuncs::CycleTargetDefocus -1.0 -2.0 0.1
+           AutoFocus
+       Else
+           Echo    group member, skip focusing...
+       Endif 
    Endif
 
    ## drift                        # if reported drift is high, call drift control
    ReportFocusDrift FD 
-   if $FD > 0.09
+   if $FD > 0.09                   
        CallFunction Myfuncs::Drift 2.0
    Endif 
 
