@@ -320,10 +320,8 @@ If running with python support, the code looks something like this:
    serialam.View()
    serialam.AlignTo(refBuffer,0,1)
 
-   # turn on Autofocus drift protection so it reports drift rate
-   DP = serialam.ReportUserSetting('DriftProtection')
-   if DP = '0':
-       serialam.SetUserSetting('DriftProtection','1')
+   # turn on Autofocus drift protection, so it reports drift rate
+   serialam.SetUserSetting('DriftProtection', 1.)
 
    # center beam and defosuc
    gs = serialam.ReportGroupStatus()
