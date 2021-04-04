@@ -154,7 +154,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
 
    ## turn ON drift protection if it's off so Autofocus can report drift
    ReportUserSetting DriftProtection DP 
-   If $DP != 1
+   If $DP == 0
        SetUserSetting DriftProtection 1
    Endif     
 
@@ -176,14 +176,10 @@ Lets load the script "LD-Group" to script editor and try to run it.
 
    ## drift                        # if reported drift is high, call drift control
    If driftControl == 1
-   ReportFocusDrift FD 
+      ReportFocusDrift FD 
       If $FD > 0.09                # 0.09 reported here is close to real 2.0A/s.   
         CallFunction Drift $limit
-      Else
-        Continue
       Endif 
-   Else
-      Continue
    Endif
 
    ## shot
