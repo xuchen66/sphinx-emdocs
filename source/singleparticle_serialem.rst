@@ -207,7 +207,6 @@ Lets load the script "LD-Group" to script editor and try to run it.
    Function Drift 1 0 crit 
    # A function to measure drift rate, if good, skip to the end of loop. 
    # Otherwise, exit execution -- i.e. skip the point. 
-
    Echo ===> Running Drift $crit (A)...
 
    shot = F
@@ -228,7 +227,6 @@ Lets load the script "LD-Group" to script editor and try to run it.
    rate = $dist / $period * 10	
    Echo   --- Rate = $rate A/sec ---
    Echo       ----------------
-
    If $rate < $crit
        echo Drift is low enough after shot $index      
        break
@@ -242,9 +240,9 @@ Lets load the script "LD-Group" to script editor and try to run it.
    EndFunction
 
 
-This script calls three functions - ``Relax``, ``BufferShot`` and ``CycleTargetDefocus``. The script that contains all the functions "MyFuncs" must be also loaded in one of the script buffers/editors. You can download the latest "MyFuncs.txt" `here on github.com <https://github.com/xuchen66/SerialEM-scripts/blob/new-features/MyFuncs.txt/>`_.
+This script calls two functions - ``CycleTargetDefocus`` and ``Drift``. This is a standalone script. Some other functions can found `here on github.com <https://github.com/xuchen66/SerialEM-scripts/blob/new-features/MyFuncs.txt/>`_.
 
-This is a good time to test run this script on one of the point items in navigator windows, to make sure it runs fine. 
+This is a good time to test running this script on one of the point items in navigator window, to make sure it runs fine. 
 
 .. _final_check:
    
