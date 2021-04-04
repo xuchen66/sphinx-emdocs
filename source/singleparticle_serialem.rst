@@ -158,12 +158,12 @@ Lets load the script "LD-Group" to script editor and try to run it.
    ReportGroupStatus gs            # 1 = group head, 0 = inividual, 2 = group member
    If $groupOption == 0
        #AutoCenterBeam             
-       CallFunction Myfuncs::CycleTargetDefocus $defLow $defHigh $step
+       CallFunction CycleTargetDefocus $defLow $defHigh $step
        AutoFocus
    Else
        If $gs == 1 OR $gs == 0     
            #AutoCenterBeam         
-           CallFunction Myfuncs::CycleTargetDefocus $defLow $defHigh $step
+           CallFunction CycleTargetDefocus $defLow $defHigh $step
            AutoFocus
        Else
            Echo    group member, skip focusing...
@@ -173,7 +173,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
    ## drift                        # if reported drift is high, call drift control
    ReportFocusDrift FD 
    If $FD > 0.09                   
-       CallFunction Myfuncs::Drift 2.0
+       CallFunction Drift 2.0
    Endif 
 
    ## shot
@@ -183,6 +183,64 @@ Lets load the script "LD-Group" to script editor and try to run it.
 
    ## post-exposure
    RefineZLP 30                    # refine ZLP every 30 minutes
+
+   ####### Functions
+   Function CycleTargetDefocus 3 0 defLow defHigh step
+   Echo ===> Running CycleTargetDefocus ...
+   Echo   --- Range and Step (um)  => [ $defLow, $defHigh ], [ $step ] ---
+
+   delta = -1 * $step
+   SuppressReports
+   ReportTargetDefocus tarFocus
+   If $tarFocus > $defLow OR $tarFocus < $defHigh
+
+      SetTargetDefocus $defLow
+   Else 
+      IncTargetDefocus $delta
+      ChangeFocus $delta
+   Endif
+
+   ReportTargetDefocus 
+   EndFunction
+
+   ######
+   Function Drift 1 0 crit 
+   # A function to measure drift rate, if good, skip to the end of loop. 
+   # Otherwise, exit execution -- i.e. skip the point. 
+
+   Echo ===> Running Drift $crit (A)...
+
+   shot = F
+   interval = 4
+   times = 10
+
+   period = $interval + 1
+   $shot
+   Delay $interval
+   Loop $times index
+   $shot
+   AlignTo B
+   ReportAlignShift
+   ClearAlignment
+   dx = $repVal3
+   dy = $repVal4
+   dist = sqrt $dx * $dx + $dy * $dy
+   rate = $dist / $period * 10	
+   Echo   --- Rate = $rate A/sec ---
+   Echo       ----------------
+
+   If $rate < $crit
+       echo Drift is low enough after shot $index      
+       break
+   Elseif  $index < $times
+       Delay $interval
+   Else
+       echo Drift never got below $crit: Skipping ...
+       exit   
+   Endif
+   EndLoop
+   EndFunction
+
 
 This script calls three functions - ``Relax``, ``BufferShot`` and ``CycleTargetDefocus``. The script that contains all the functions "MyFuncs" must be also loaded in one of the script buffers/editors. You can download the latest "MyFuncs.txt" `here on github.com <https://github.com/xuchen66/SerialEM-scripts/blob/new-features/MyFuncs.txt/>`_.
 
