@@ -128,16 +128,22 @@ Lets load the script "LD-Group" to script editor and try to run it.
    ScriptName LD-group
 
    ## X,Y positioning
-   buffer = P 
+   templateOption = 1              # 1 = to use a fixed ref, 0 = use dynamic one
+   refBuffer = P 
+
    RealignToNavItem 0
    ResetImageShift 2
-   #Copy A $buffer
+   If $templateOption == 1
+       Echo  --- assuming you have a fixed template image in buffer $refBuffer ---
+   Else
+       Copy A $refBuffer           # use dynamic reference (whole image itself)
+   Endif 
    View
-   AlignTo $buffer 0 1
+   AlignTo $refBuffer 0 1
 
    ## turn ON drift protection if it's off 
    ReportUserSetting DriftProtection DP 
-   if $DP == 0
+   if $DP != 1
        SetUserSetting DriftProtection 1
    endif     
 
