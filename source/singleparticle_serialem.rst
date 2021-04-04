@@ -134,7 +134,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
    step = 0.1  
    
    ## Drift control
-   driftContol = 1                 # 1 = yes, 0 = no
+   driftControl = 1                # 1 = yes, 0 = no
    limit = 3.0                     # Angstroms
    
    ## X,Y positioning
