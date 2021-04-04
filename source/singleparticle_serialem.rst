@@ -125,14 +125,18 @@ Lets load the script "LD-Group" to script editor and try to run it.
 
 .. code-block:: ruby
 
-   ScriptName LD-group
+   ScriptName LD-Group
 
    ## when to perform CenterBeam and AutoFocus, and defocus range
    groupOption = 1                 # 1 = at group head, 0 = at every item 
    defLow = -1.0 
    defHigh = -2.5
    step = 0.1  
-
+   
+   ## Drift control
+   driftContol = 1                 # 1 = yes, 0 = no
+   limit = 3.0                     # Angstroms
+   
    ## X,Y positioning
    templateOption = 1              # 1 = to use a fixed ref, 0 = use dynamic one
    refBuffer = P                   # reference buffer for template image
@@ -148,7 +152,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
    View
    AlignTo $refBuffer 0 1
 
-   ## turn ON drift protection if it's off 
+   ## turn ON drift protection if it's off so Autofocus can report drift
    ReportUserSetting DriftProtection DP 
    If $DP != 1
        SetUserSetting DriftProtection 1
@@ -171,10 +175,16 @@ Lets load the script "LD-Group" to script editor and try to run it.
    Endif
 
    ## drift                        # if reported drift is high, call drift control
+   If driftControl == 1
    ReportFocusDrift FD 
-   If $FD > 0.09                   
-       CallFunction Drift 2.0
-   Endif 
+      If $FD > 0.09                # 0.09 reported here is close to real 2.0A/s.   
+        CallFunction Drift $limit
+      Else
+        Continue
+      Endif 
+   Else
+      Continue
+   Endif
 
    ## shot
    AdjustBeamTiltforIS             # needed for single shot, so leave it here regardless
