@@ -250,7 +250,7 @@ This script calls two functions - ``CycleTargetDefocus`` and ``Drift``. This is 
 
 If running with python support, the code looks something like this:
 
-.. _code-block:: python
+.. code-block:: python
 
    #!Python
    #ScriptName LD-Group-Python
@@ -352,7 +352,6 @@ If running with python support, the code looks something like this:
 
    # post-expose
    serialam.RefineZLP(30)
-
 
 This is a good time to test running this script on one of the point items in navigator window, to make sure it runs fine. 
 
