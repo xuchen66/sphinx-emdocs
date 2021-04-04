@@ -135,7 +135,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
 
    ## X,Y positioning
    templateOption = 1              # 1 = to use a fixed ref, 0 = use dynamic one
-   refBuffer = P 
+   refBuffer = P                   # reference buffer for template image
    
    ########## no edit below ##########
    RealignToNavItem 0
@@ -157,12 +157,12 @@ Lets load the script "LD-Group" to script editor and try to run it.
    ## center beam & focus
    ReportGroupStatus gs            # 1 = group head, 0 = inividual, 2 = group member
    If $groupOption == 0
-       #AutoCenterBeam             # use this if beam is not stable enough
+       #AutoCenterBeam             
        CallFunction Myfuncs::CycleTargetDefocus $defLow $defHigh $step
        AutoFocus
    Else
-       If $gs == 1 OR $gs == 0     # use this for group, use next line for every poina
-           #AutoCenterBeam         # use this if beam is not stable enough
+       If $gs == 1 OR $gs == 0     
+           #AutoCenterBeam         
            CallFunction Myfuncs::CycleTargetDefocus $defLow $defHigh $step
            AutoFocus
        Else
@@ -177,7 +177,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
    Endif 
 
    ## shot
-   AdjustBeamTiltforIS             # this is needed for single shot, so keep it here
+   AdjustBeamTiltforIS             # needed for single shot, so leave it here regardless
    MultipleRecords
    # Record
 
