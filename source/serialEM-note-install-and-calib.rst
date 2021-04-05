@@ -242,23 +242,12 @@ used: 3, 4, 5, 6, 8, 9.
 
 .. Note::
 
-   - Calibrations needed to be done for *both* µP and nP mode include: *beam
-   crossover*, *beam intensity*, *beam shift* and *autofocus*.
+   - Calibrations needed to be done for *both* µP and nP mode include: *beam crossover*, *beam intensity*, *beam shift* and *autofocus*.
    
-   - Waffle grating grid is good and handy for pixel size calibration, but
-   it is not ideal for Image Shift and Stage Shift calibrations, as the
-   waffle pattern might screw up the correlation in the calibration
-   procedures. I found the normal Quantifoil grid with some 10nm Au
-   particles absorbed onto can be very good for normal calibration purpose.
-   I glow discharge a Quantifoil grid and add 1 *µl* deca-gold solution on
-   the grid and let it dry. 
+   - Waffle grating grid is good and handy for pixel size calibration, butit is not ideal for Image Shift and Stage Shift calibrations, as the waffle pattern might screw up the correlation in the calibration procedures. I found the normal Quantifoil grid with some 10nm Au particles absorbed onto can be very good for normal calibration purpose. I glow discharge a Quantifoil grid and add 1 *µl* deca-gold solution on the grid and let it dry. 
    
-   - I found that standard **PtIr** grid for TFS to perform Thon Ring test
-   also works very well for calibration purpose. 
+   - I found that standard **PtIr** grid for TFS to perform Thon Ring test also works very well for calibration purpose. 
    
-   - Most of SerialEM actions are cross-correlation based, including
-   calibrating. Therefore, a clean and recent preparation of camera gain
-   reference file is desired, because it will help to have less screw-up due
-   to fixed noise pattern dominating the cross-correlation. 
+   - Most of SerialEM actions are cross-correlation based, including calibrating. Therefore, a clean and recent preparation of camera gain reference file is desired, because it will help to have less screw-up due to fixed noise pattern dominating the cross-correlation. 
 
 
