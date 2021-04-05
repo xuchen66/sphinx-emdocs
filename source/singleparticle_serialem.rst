@@ -7,7 +7,7 @@ Single Particle Data Collection Using SerialEM
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-created: 2016-10-18
-:Last-updated: 2021-04-04
+:Last-updated: 2021-04-05
 .. glossary::
 
    Abstract
@@ -149,7 +149,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
    Else
        Copy A $refBuffer           # use dynamic ref (whole image itself)
    Endif 
-   View
+   AcquireToMatchBuffer $refBuffer
    AlignTo $refBuffer 0 1
 
    ## turn ON drift protection if it's off so Autofocus can report drift
@@ -316,7 +316,7 @@ If running with python support, the code looks something like this:
        print(' --- assuming a template image in buffer', refBuffer, '---')
    elif:
        serialem.Copy('A', refBuffer)
-   serialem.View()
+   serialem.AcquireToMatchBuffer(refBuffer)
    serialem.AlignTo(refBuffer, 0, 1)
 
    # turn on Autofocus drift protection so it reports drift rate
