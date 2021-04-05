@@ -289,7 +289,7 @@ If running with python support, the code looks something like this:
                print('Drift is low enough after shot ', index)
                break
            elif index < times:
-               serialem.Delay('interal')
+               serialem.Delay(interval)
            else:
                print('Drift never got below ', crit, 'skipping...')
                serialem.Exit()
