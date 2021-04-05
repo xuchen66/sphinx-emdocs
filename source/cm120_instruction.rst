@@ -29,9 +29,9 @@ Check log book to see if there have been any problems
 
 It is always a good idea to check the LOG book. You can find useful information listed there, such as:
 
-- If there have been any recent problems with the scope.
-- The conditions that were used last, especially the filament saturation.
-- Any special note that last user wants you to know.
++ If there have been any recent problems with the scope.
++ The conditions that were used last, especially the filament saturation.
++ Any special note that last user wants you to know.
 
  .. _check-vacuum-status:
 
