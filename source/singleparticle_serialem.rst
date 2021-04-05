@@ -175,7 +175,7 @@ Lets load the script "LD-Group" to script editor and try to run it.
    Endif
 
    ## drift                        # if reported drift is high, call drift control
-   If driftControl == 1
+   If $driftControl == 1
       ReportFocusDrift FD 
       If $FD > 0.09                # 0.09 reported here is close to real 2.0A/s.   
         CallFunction Drift $limit
