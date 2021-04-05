@@ -313,7 +313,7 @@ If running with python support, the code looks something like this:
    serialem.RealignToNavItem(0)
    serialem.ResetImageShift(2)
    if templateOption == 1:
-       print(' --- assuming you have a template image in buffer $refBuffer ---')
+       print(' --- assuming a template image in buffer', refBuffer, '---')
    elif:
        serialem.Copy('A', refBuffer)
    serialem.View()
