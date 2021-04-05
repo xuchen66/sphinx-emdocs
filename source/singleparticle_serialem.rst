@@ -259,8 +259,8 @@ If running with python support, the code looks something like this:
 
    ### Functions
    def CycleTargetDefocus(defLow, defHigh, step):
-       print(' -> running CycleTargetDefocus...')
-       print(' --- defLow, defHigh, step = ', defLow, defHigh, step)
+       print(' ---> running CycleTargetDefocus ...')
+       print(' --- defLow, defHigh, step = ', defLow, defHigh, step, '---')
        serialem.SuppressReports()
        tarFocus = serialem.ReportTargetDefocus()   # float
        if tarFocus > defLow or tarFocus < defHigh:
@@ -268,15 +268,14 @@ If running with python support, the code looks something like this:
        else:
            serialem.IncTargetDefocus(-step)
            serialem.ChangeFocus(-step)
-
        serialem.ReportTargetDefocus()
 
    def Drift(crit):
-       print('===> Running Drift ', crit, 'A...')
-
+       print(' ---> Running Drift ', crit, 'A ...')
        interval = 4
        times = 10
        period = interval + 1
+       #
        serialem.Focus()
        serialem.Delay(interval)
        for index in range(1, times+1):
@@ -321,8 +320,8 @@ If running with python support, the code looks something like this:
 
    # turn on Autofocus drift protection so it reports drift rate
    DP = serialem.ReportUserSetting('DriftProtection')
-   if DP = '0':
-       serialem.SetUserSetting('DriftProtection','1')
+   if DP = 0.:
+       serialem.SetUserSetting('DriftProtection', 1)
 
    # center beam and defosuc
    gs = serialem.ReportGroupStatus()
