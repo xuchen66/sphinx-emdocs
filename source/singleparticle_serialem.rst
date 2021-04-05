@@ -351,7 +351,7 @@ If running with python support, the code looks something like this:
    #serialem.Record()
 
    # post-expose
-   serialem.RefineZLP(30)              # if GIF exists
+   serialem.RefineZLP(30)              # if GIF exists 
 
 This is a good time to test running this script on one of the point items in navigator window, to make sure it runs fine. 
 
