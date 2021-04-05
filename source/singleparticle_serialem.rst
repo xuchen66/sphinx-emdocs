@@ -254,44 +254,43 @@ If running with python support, the code looks something like this:
 
    #!Python
    #ScriptName LD-Group-Python
-   import serialam
-   from math import *
+   import serialem
+   from math import sqrt
 
    ### Functions
    def CycleTargetDefocus(defLow, defHigh, step):
        print(' -> running CycleTargetDefocus...')
        print(' --- defLow, defHigh, step = ', defLow, defHigh, step)
-       serialam.SuppressReports()
-       tarFocus = serialam.ReportTargetDefocus()   # float
+       serialem.SuppressReports()
+       tarFocus = serialem.ReportTargetDefocus()   # float
        if tarFocus > defLow or tarFocus < defHigh:
-           serialam.SetTargetDefocus()
+           serialem.SetTargetDefocus()
        else:
-           serialam.IncTargetDefocus(-step)
-           serialam.ChangeFocus(-step)
+           serialem.IncTargetDefocus(-step)
+           serialem.ChangeFocus(-step)
 
-       serialam.ReportTargetDefocus()
+       serialem.ReportTargetDefocus()
 
    def Drift(crit):
        print('===> Running Drift ', crit, 'A...')
 
-       shot = serialam.focus()
        interval = 4
        times = 10
        period = interval + 1
-       shot
-       serialam.Delay(interval)
-       for index in range(1, time+1):
-           shot
-           serialam.AlignTo('B', 0, 1)
-           aliShift = serialam.ReportAlignShift()
+       serialem.Focus()
+       serialem.Delay(interval)
+       for index in range(1, times+1):
+           serialem.Focus()
+           serialem.AlignTo('B', 0, 1)
+           aliShift = serialem.ReportAlignShift()
            dx, dy = aliShift[2], aliShift[3]
            rate = sqrt(dx*dx + dy*dy)/period*10
-           print(' Rate = ', rate, 'A/sec')
+           print(' Rate =', rate, 'A/sec')
            if rate < crit:
                print('Drift is low enough after shot ', index)
                break
            elif index < times:
-               serialam.Delay('interal')
+               serialem.Delay('interal')
            else:
                print('Drift never got below ', crit, 'skipping...')
 
@@ -311,45 +310,48 @@ If running with python support, the code looks something like this:
    refBuffer = 'P'
 
    #### no editing below ####
-   serialam.RealignToNavItem(0)
-   serialam.ResetImageShift(2)
+   serialem.RealignToNavItem(0)
+   serialem.ResetImageShift(2)
    if templateOption = 1:
        print(' --- assuming you have a template image in buffer $refBuffer ---')
    elif:
-       serialam.Copy('A', refBuffer)
-   serialam.View()
-   serialam.AlignTo(refBuffer,0,1)
+       serialem.Copy('A', refBuffer)
+   serialem.View()
+   serialem.AlignTo(refBuffer, 0, 1)
 
-   # turn on Autofocus drift protection, so it reports drift rate
-   serialam.SetUserSetting('DriftProtection', 1.)
+   # turn on Autofocus drift protection so it reports drift rate
+   DP = serialem.ReportUserSetting('DriftProtection')
+   if DP = '0':
+       serialem.SetUserSetting('DriftProtection','1')
 
    # center beam and defosuc
-   gs = serialam.ReportGroupStatus()
+   gs = serialem.ReportGroupStatus()
    if groupOption = 0:
-       serialam.AutoCenterBeam()
+       serialem.AutoCenterBeam()
        CycleTargetDefocus(defLow, defHigh, step)
-       serialam.Autofocus()
+       serialem.Autofocus()
    else:
        if gs = 1 or gs = 0:
-           serialam.AutoCenterBeam()
+           serialem.AutoCenterBeam()
            CycleTargetDefocus(defLow, defHigh, step)
-           serialam.AutoCenterBeam()
+           serialem.AutoCenterBeam()
        else:
            print('   group member, skip focusing ...')
 
    # drift 
    if driftControl = 1:
-       FD = serialam.ReportFocusDrift()
+       FD = serialem.ReportFocusDrift()
        if FD > 0.09:
            Drift(limit)
 
    # shot
-   serialam.AdjustBeamTiltforIS()              # keep this line 
-   serialam.MultipleRecords()
-   #serialam.Record()
+   serialem.AdjustBeamTiltforIS()      # keep this line 
+   serialem.MultipleRecords()
+   #serialem.Record()
 
    # post-expose
-   serialam.RefineZLP(30)
+   serialem.RefineZLP(30)              # if GIF exists
+
 
 This is a good time to test running this script on one of the point items in navigator window, to make sure it runs fine. 
 
