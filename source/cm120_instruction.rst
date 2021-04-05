@@ -41,9 +41,11 @@ Check vacuum status
 The status must be Ready before you can operate the scope. If not, you should ask for help and 
 report it to the manager. Usually, if the vacuum is not ready, it is due to one of the following reasons:
 
-- The scope is malfunctioning.
+* The scope is malfunctioning.
+
 * The air pressure is not within a good range(the building compressed air may be down?).
-+ The cooling water is off.
+
+* The cooling water is off.
 
 Vacuum being Ready means:
 
