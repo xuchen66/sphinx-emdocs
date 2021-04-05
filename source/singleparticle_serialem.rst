@@ -325,13 +325,14 @@ If running with python support, the code looks something like this:
        serialem.SetUserSetting('DriftProtection', 1)
 
    # center beam and defosuc
-   gs = serialem.ReportGroupStatus()
+   gs = serialem.ReportGroupStatus()      # tuple
+   gs = gs[0]                             # now a float
    if groupOption = 0:
        serialem.AutoCenterBeam()
        CycleTargetDefocus(defLow, defHigh, step)
        serialem.Autofocus()
    else:
-       if gs = 1 or gs = 0:
+       if gs = 1. or gs = 0.:
            serialem.AutoCenterBeam()
            CycleTargetDefocus(defLow, defHigh, step)
            serialem.AutoCenterBeam()
