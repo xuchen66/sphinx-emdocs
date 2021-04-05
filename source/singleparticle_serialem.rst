@@ -312,7 +312,7 @@ If running with python support, the code looks something like this:
    #### no editing below ####
    serialem.RealignToNavItem(0)
    serialem.ResetImageShift(2)
-   if templateOption = 1:
+   if templateOption == 1:
        print(' --- assuming you have a template image in buffer $refBuffer ---')
    elif:
        serialem.Copy('A', refBuffer)
@@ -320,19 +320,19 @@ If running with python support, the code looks something like this:
    serialem.AlignTo(refBuffer, 0, 1)
 
    # turn on Autofocus drift protection so it reports drift rate
-   DP = serialem.ReportUserSetting('DriftProtection')
-   if DP = 0.:
+   DP = serialem.ReportUserSetting('DriftProtection')    # float
+   if DP == 0.:
        serialem.SetUserSetting('DriftProtection', 1)
 
    # center beam and defosuc
    gs = serialem.ReportGroupStatus()      # tuple
    gs = gs[0]                             # now a float
-   if groupOption = 0:
+   if groupOption == 0:
        serialem.AutoCenterBeam()
        CycleTargetDefocus(defLow, defHigh, step)
        serialem.Autofocus()
    else:
-       if gs = 1. or gs = 0.:
+       if gs == 1. or gs == 0.:
            serialem.AutoCenterBeam()
            CycleTargetDefocus(defLow, defHigh, step)
            serialem.AutoCenterBeam()
@@ -340,7 +340,7 @@ If running with python support, the code looks something like this:
            print('   group member, skip focusing ...')
 
    # drift 
-   if driftControl = 1:
+   if driftControl == 1:
        FD = serialem.ReportFocusDrift()
        if FD > 0.09:
            Drift(limit)
