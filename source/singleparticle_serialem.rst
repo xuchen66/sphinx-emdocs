@@ -292,6 +292,7 @@ If running with python support, the code looks something like this:
                serialem.Delay('interal')
            else:
                print('Drift never got below ', crit, 'skipping...')
+               serialem.Exit()
 
    ### main
    # when to do focus and center beam, set range
