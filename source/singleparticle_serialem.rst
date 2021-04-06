@@ -314,8 +314,11 @@ If running with python support, the code looks something like this:
    serialem.ResetImageShift(2)
    if templateOption == 1:
        print(' --- assuming a template image in buffer', refBuffer, '---')
-   elif:
+   elif templateOption == 0:
        serialem.Copy('A', refBuffer)
+   else:
+       print('templateOption needs to be 0 or 1, please fix it and continue')
+       serialem.exit()
    serialem.AcquireToMatchBuffer(refBuffer)
    serialem.AlignTo(refBuffer, 0, 1)
 
