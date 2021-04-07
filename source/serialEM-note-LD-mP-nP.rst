@@ -38,12 +38,12 @@ spot size for everything.
 #. Set View Defocus Offset to 0 using dial Up-Down button on SerialEM LD Control Panel.
 #. Select R area (radio button) on LD control panel. 
 #. On microscope right panel, press "Eucentric Focus".
-#. Reset Defocus (L2 button on our current setup for soft buttons, yours could different), this makes defocus display 0. 
+#. Reset Defocus (L2 button on our current setup for soft buttons, yours could be different), this makes defocus display 0. 
 #. Select V area (radio button) on LD control panel.
 #. wait 6-7 seconds to allow scope to switch to this mag and µP mode.
 #. On microscope right panel, press "Eucentric Focus".
-#. Reset Defocus (L2 button on our current setup for soft buttons, yours could different), this makes defocus display 0. 
-#. Set View Defocus Offset to target value (-300 in my case) using dial Up-Down button on SerialEM LD Control Panel.
+#. Reset Defocus (L2 button on our current setup for soft buttons, yours could be different), this makes defocus display 0. 
+#. Set View Defocus Offset to target value (e.g., -300) using dial Up-Down button on SerialEM LD Control Panel.
 #. From Task - Specialized Options, make sure the "Adjust Focus on Probe Mode Change" is **NOW** checked. 
 
 That's it. 
