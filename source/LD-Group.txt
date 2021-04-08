@@ -1,121 +1,120 @@
-.. code-block:: python
-   
-   ScriptName LD-Group
+ScriptName LD-Group
 
-   ## when to perform CenterBeam and AutoFocus, and defocus range
-   groupOption = 1                 # 1 = at group head, 0 = at every item 
-   defLow = -1.0 
-   defHigh = -2.5
-   step = 0.1  
-   
-   ## Drift control
-   driftControl = 1                # 1 = yes, 0 = no
-   limit = 3.0                     # Angstroms
-   
-   ## X,Y positioning
-   templateOption = 1              # 1 = to use a fixed ref, 0 = use dynamic one
-   refBuffer = P                   # reference buffer for template image
-   
-   ########## no edit below ##########
-   RealignToNavItem 0
-   ResetImageShift 2
-   If $templateOption == 1
-       Echo  --- assuming you have a template image in buffer $refBuffer ---
-   Else
-       Copy A $refBuffer           # use dynamic ref (whole image itself)
+## when to perform CenterBeam and AutoFocus, and defocus range
+groupOption = 1                 # 1 = at group head, 0 = at every item 
+defLow = -1.0 
+defHigh = -2.5
+step = 0.1  
+
+## Drift control
+driftControl = 1                # 1 = yes, 0 = no
+limit = 3.0                     # Angstroms
+
+## X,Y positioning
+templateOption = 1              # 1 = to use a fixed ref, 0 = use dynamic one
+refBuffer = P                   # reference buffer for template image
+
+########## no edit below ##########
+RealignToNavItem 0
+ResetImageShift 2
+If $templateOption == 1
+    Echo  --- assuming you have a template image in buffer $refBuffer ---
+Else
+    Copy A $refBuffer           # use dynamic ref (whole image itself)
+Endif 
+AcquireToMatchBuffer $refBuffer
+AlignTo $refBuffer 0 1
+
+## turn ON drift protection if it's off so Autofocus can report drift
+ReportUserSetting DriftProtection DP 
+If $DP == 0
+    SetUserSetting DriftProtection 1
+Endif     
+
+## center beam & focus
+ReportGroupStatus gs            # 1 = group head, 0 = inividual, 2 = group member
+If $groupOption == 0
+    #AutoCenterBeam             
+    CallFunction CycleTargetDefocus $defLow $defHigh $step
+    AutoFocus
+Else
+    If $gs == 1 OR $gs == 0     
+        #AutoCenterBeam         
+        CallFunction CycleTargetDefocus $defLow $defHigh $step
+        AutoFocus
+    Else
+        Echo    group member, skip focusing...
+    Endif 
+Endif
+
+## drift                        # if reported drift is high, call drift control
+If $driftControl == 1
+   ReportFocusDrift FD 
+   If $FD > 0.09                # 0.09 reported here is close to real 2.0A/s.   
+     CallFunction Drift $limit
    Endif 
-   AcquireToMatchBuffer $refBuffer
-   AlignTo $refBuffer 0 1
+Endif
 
-   ## turn ON drift protection if it's off so Autofocus can report drift
-   ReportUserSetting DriftProtection DP 
-   If $DP == 0
-       SetUserSetting DriftProtection 1
-   Endif     
+## shot
+AdjustBeamTiltforIS             # needed for single shot, so leave it here regardless
+MultipleRecords
+# Record
 
-   ## center beam & focus
-   ReportGroupStatus gs            # 1 = group head, 0 = inividual, 2 = group member
-   If $groupOption == 0
-       #AutoCenterBeam             
-       CallFunction CycleTargetDefocus $defLow $defHigh $step
-       AutoFocus
-   Else
-       If $gs == 1 OR $gs == 0     
-           #AutoCenterBeam         
-           CallFunction CycleTargetDefocus $defLow $defHigh $step
-           AutoFocus
-       Else
-           Echo    group member, skip focusing...
-       Endif 
-   Endif
+## post-exposure
+RefineZLP 30                    # refine ZLP every 30 minutes
 
-   ## drift                        # if reported drift is high, call drift control
-   If $driftControl == 1
-      ReportFocusDrift FD 
-      If $FD > 0.09                # 0.09 reported here is close to real 2.0A/s.   
-        CallFunction Drift $limit
-      Endif 
-   Endif
+####### Functions
+Function CycleTargetDefocus 3 0 defLow defHigh step
+Echo ===> Running CycleTargetDefocus ...
+Echo   --- Range and Step (um)  => [ $defLow, $defHigh ], [ $step ] ---
 
-   ## shot
-   AdjustBeamTiltforIS             # needed for single shot, so leave it here regardless
-   MultipleRecords
-   # Record
+delta = -1 * $step
+SuppressReports
+ReportTargetDefocus tarFocus
+If $tarFocus > $defLow OR $tarFocus < $defHigh
+   SetTargetDefocus $defLow
+Else 
+   IncTargetDefocus $delta
+   ChangeFocus $delta
+Endif
 
-   ## post-exposure
-   RefineZLP 30                    # refine ZLP every 30 minutes
+ReportTargetDefocus 
+EndFunction
 
-   ####### Functions
-   Function CycleTargetDefocus 3 0 defLow defHigh step
-   Echo ===> Running CycleTargetDefocus ...
-   Echo   --- Range and Step (um)  => [ $defLow, $defHigh ], [ $step ] ---
+######
+Function Drift 1 0 crit 
+# A function to measure drift rate, if good, skip to the end of loop. 
+# Otherwise, exit execution -- i.e. skip the point. 
+Echo ===> Running Drift $crit (A)...
 
-   delta = -1 * $step
-   SuppressReports
-   ReportTargetDefocus tarFocus
-   If $tarFocus > $defLow OR $tarFocus < $defHigh
-      SetTargetDefocus $defLow
-   Else 
-      IncTargetDefocus $delta
-      ChangeFocus $delta
-   Endif
+shot = F
+interval = 4
+times = 10
 
-   ReportTargetDefocus 
-   EndFunction
-
-   ######
-   Function Drift 1 0 crit 
-   # A function to measure drift rate, if good, skip to the end of loop. 
-   # Otherwise, exit execution -- i.e. skip the point. 
-   Echo ===> Running Drift $crit (A)...
-
-   shot = F
-   interval = 4
-   times = 10
-
-   period = $interval + 1
+period = $interval + 1
+$shot
+Delay $interval
+Loop $times index
    $shot
-   Delay $interval
-   Loop $times index
-      $shot
-      AlignTo B
-      ReportAlignShift
-      ClearAlignment
-      dx = $repVal3
-      dy = $repVal4
-      dist = sqrt $dx * $dx + $dy * $dy
-      rate = $dist / $period * 10	
-      echo Rate = $rate A/sec
-      echo ----------------
+   AlignTo B
+   ReportAlignShift
+   ClearAlignment
+   dx = $repVal3
+   dy = $repVal4
+   dist = sqrt $dx * $dx + $dy * $dy
+   rate = $dist / $period * 10	
+   echo Rate = $rate A/sec
+   echo ----------------
 
-      If $rate < $crit
-         echo Drift is low enough after shot $index      
-         break
-      Elseif  $index < $times
-         Delay $interval
-      Else
-        echo Drift never got below $crit: Skipping ...
-        exit   
-      Endif
-   EndLoop
-   EndFunction
+   If $rate < $crit
+      echo Drift is low enough after shot $index      
+      break
+   Elseif  $index < $times
+      Delay $interval
+   Else
+     echo Drift never got below $crit: Skipping ...
+     exit   
+   Endif
+EndLoop
+EndFunction
+
