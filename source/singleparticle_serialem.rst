@@ -123,9 +123,9 @@ Test Main Script to Run
 
 Lets load the script to script editor and try to run it. 
 
-.. literalinclude:: LD-Group.py
+.. literalinclude:: LD-Group.txt
    :language: ruby
-   :caption: LD-Group.txt
+   :caption: 
    :name:
    :linenos:
 
