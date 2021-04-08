@@ -7,7 +7,7 @@ Single Particle Data Collection Using SerialEM
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-created: 2016-10-18
-:Last-updated: 2021-04-05
+:Last-updated: |date|
 .. glossary::
 
    Abstract
@@ -123,7 +123,7 @@ Test Main Script to Run
 
 Lets load the script :download:`LD-Group.txt <source/LD-Group.txt>` to script editor and try to run it. 
 
-.. literalinclude:: LD-Group.txt 
+.. include:: LD-Group.txt 
    :language: python
    :linenos:
 
