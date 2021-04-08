@@ -123,7 +123,7 @@ Test Main Script to Run
 
 Lets load the script :download:`LD-Group.txt <source/LD-Group.txt>` to script editor and try to run it. 
 
-.. include:: LD-Group.txt 
+.. include:: <source/LD-Group.txt> 
    :language: python
    :linenos:
 
