@@ -124,8 +124,8 @@ Test Main Script to Run
 Lets load the script to script editor and try to run it. 
 
 .. literalinclude:: LD-Group.txt
-   :language: python
    :caption:
+   :name:
    :linenos:
 
 This script calls two functions - ``CycleTargetDefocus`` and ``Drift``. This is a standalone script. Some other functions can found `here on github.com <https://github.com/xuchen66/SerialEM-scripts/blob/new-features/MyFuncs.txt/>`_.
