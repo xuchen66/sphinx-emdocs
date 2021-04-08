@@ -6,8 +6,8 @@ SerialEM Note: More About X,Y Positioning
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date-Created: 2019-12-12 
-:Last-Updated: 2020-11-22
+:Date-Created: Dec 12, 2019
+:Last-Updated: Nov 22, 2020
 
 .. glossary::
 
