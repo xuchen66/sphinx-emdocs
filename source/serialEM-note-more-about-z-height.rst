@@ -6,8 +6,8 @@ SerialEM Note: More About Z Height
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2017-12-09 
-:Last Updated: 2021-04-08
+:Date Created: 2017-12-09 
+:Last Updated: |today|
 
 .. glossary::
 
@@ -139,7 +139,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
 - Adjust specimen to Eucentriciy, using FEI interface tool or SerialEM task function
 - run script as below.
 
-.. code-block:: python
+.. code-block:: c
 
    ScriptName FindOffset
    
