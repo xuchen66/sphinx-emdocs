@@ -1,3 +1,5 @@
+.. code-block:: python
+   
    ScriptName LD-Group
 
    ## when to perform CenterBeam and AutoFocus, and defocus range
