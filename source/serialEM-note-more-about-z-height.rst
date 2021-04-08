@@ -6,7 +6,7 @@ SerialEM Note: More About Z Height
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date Created: 2017-12-09 
+:Date Created: Dec 12, 2017
 :Last Updated: |today|
 
 .. glossary::
