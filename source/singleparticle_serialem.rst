@@ -125,6 +125,7 @@ Lets load the script to script editor and try to run it.
 
 .. literalinclude:: LD-Group.txt
    :language: python
+   :caption:
    :linenos:
 
 This script calls two functions - ``CycleTargetDefocus`` and ``Drift``. This is a standalone script. Some other functions can found `here on github.com <https://github.com/xuchen66/SerialEM-scripts/blob/new-features/MyFuncs.txt/>`_.
@@ -133,6 +134,7 @@ If running with python support, the code looks something like this:
 
 .. literalinclude:: LD-Group-Python.txt
    :language: python
+   :caption:
    :linenos:
 
 This is a good time to test running this script on one of the point items in navigator window, to make sure it runs fine. 
