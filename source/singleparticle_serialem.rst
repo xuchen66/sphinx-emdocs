@@ -6,8 +6,8 @@ Single Particle Data Collection Using SerialEM
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date-created: Oct 18, 2016
-:Last-updated: Apr 08, 2021
+:Date created: Oct 18, 2016
+:Last updated: Apr 08, 2021
 .. glossary::
 
    Abstract
