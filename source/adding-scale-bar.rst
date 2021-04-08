@@ -5,8 +5,8 @@ Adding a Scalebar to Images
 
 :Author: Christna Ouch
 :Contact: <Christna.Ouch@umassmed.edu>
-:Date_Created: 2020-01-02
-:Last_Updated: 2020-01-06
+:Date_Created: Jan 02, 2020
+:Last_Updated: |today|
 .. _glossary:
 
 Overview
