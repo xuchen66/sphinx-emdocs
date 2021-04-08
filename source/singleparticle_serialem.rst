@@ -121,7 +121,7 @@ For each of the MMM map, do the following steps to add group points.
 Test Main Script to Run
 -----------------------
 
-Lets load the script :download: `LD-Group <./LD-Group.txt>` to script editor and try to run it. 
+Lets load the script :download:`LD-Group.txt <source/LD-Group.txt>` to script editor and try to run it. 
 
 .. literalinclude:: LD-Group.txt
    :language: PYTHON
