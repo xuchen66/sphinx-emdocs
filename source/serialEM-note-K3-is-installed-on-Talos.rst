@@ -5,8 +5,8 @@ SerialEM Note: K3 is installed on Talos
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date_Created: 2018-10-25
-:Last_Updated: 2019-02-27
+:Date_Created: Oct 25, 2018
+:Last_Updated: Feb 27, 2019
 
 .. glossary::
 
@@ -53,56 +53,58 @@ SerialEM calibration.
 The K3 camera section of properties is below:
 
 .. code-block:: ruby
-
-    CameraProperties          1
-    Name                      K3
-    K2Type                    3
-    DMGainReferenceName	     K3-18140113 Gain Ref. x1.m0.dm4
-    # THESE 5 WILL NEED CHANGING IF CAMERA ORIENTATION CHANGES
-    CameraSizeX	             5760
-    CameraSizeY	             4092
-    SizeCheckSwapped             1
-    RotationAndFlip              0		# accedently 1 before
-    DMRotationAndFlip            0
-    #UsableArea                  0 0 3712 3840 	# top left bottom right!
-    UseSocket	              0
-    MakesUnsignedImages	     1
-    XMustBeMultipleOf	     4
-    YMustBeMultipleOf	     2
-    FourPortReadout	        0
-    Binnings	             1 2 3 4 5 6 8
-    BasicCorrections	            49
-    HotPixelsAreImodCoords	      1
-    #DarkXRayAbsoluteCriterion   20
-    #DarkXRaySDCriterion	      15
-    #DarkXRayRequireBothCriteria 1
-    MaximumXRayDiameter	         6
-    BeamBlankShutter	            0
-    OnlyOneShutter	            1
-    StartupDelay                 1.195
-    ExtraBeamTime                0.10
-    BuiltInSettling              0.0 
-    ShutterDeadTime	            0.00		
-    MinimumDriftSettling	      0.05
-    MinimumBlankedExposure       0.35
-    ExtraUnblankTime	            0.012
-    ExtraOpenShutterTime	      0.12
-    Retractable	               1
-    InsertionDelay	            5.0
-    RetractionDelay	            3.0
-    GIF	                        0
-    Order                        2
-    FilmToCameraMagnification    1.31	# orig=1.342
-    PixelSizeInMicrons	         5.0  
-    #CountsPerElectron	         #37.55	not needed for K3 # measured at 3.15 e/p/s
-    ExtraRotation	               0.
-    # MagIndex  DeltaRotation (999 not measured)  SolvedRotation (999 not measured)   
-    # Pixel size (nm, 0 not measured
-    RotationAndPixel 3 999 -94.4 0
-    RotationAndPixel 16 999 -94.4 1.74	#k2=1.797
-    RotationAndPixel 17 999 90.9 3.291	#k2=3.396
-
-    EndCameraProperties
+   :caption: K3 Properties
+   :linenos:
+   
+   CameraProperties              1
+   Name                          K3
+   K2Type                        3
+   DMGainReferenceName	         K3-18140113 Gain Ref. x1.m0.dm4
+   # THESE 5 WILL NEED CHANGING IF CAMERA ORIENTATION CHANGES
+   CameraSizeX	                  5760
+   CameraSizeY	                  4092
+   SizeCheckSwapped              1
+   RotationAndFlip               0		
+   DMRotationAndFlip             0
+   #UsableArea                   0 0 3712 3840 	# top left bottom right!
+   UseSocket	                  0
+   MakesUnsignedImages	         1
+   XMustBeMultipleOf	            4
+   YMustBeMultipleOf	            2
+   FourPortReadout	            0
+   Binnings	                     1 2 3 4 5 6 8
+   BasicCorrections	            49
+   HotPixelsAreImodCoords	      1
+   #DarkXRayAbsoluteCriterion    20
+   #DarkXRaySDCriterion	         15
+   #DarkXRayRequireBothCriteria  1
+   MaximumXRayDiameter	         6
+   BeamBlankShutter	            0
+   OnlyOneShutter	               1
+   StartupDelay                  1.195
+   ExtraBeamTime                 0.10
+   BuiltInSettling               0.0 
+   ShutterDeadTime	            0.00		
+   MinimumDriftSettling	         0.05
+   MinimumBlankedExposure        0.35
+   ExtraUnblankTime	            0.012
+   ExtraOpenShutterTime	         0.12
+   Retractable	                  1
+   InsertionDelay	               5.0
+   RetractionDelay	            3.0
+   GIF	                        0
+   Order                         2
+   FilmToCameraMagnification     1.31	# orig=1.342
+   PixelSizeInMicrons	         5.0  
+   #CountsPerElectron	         #37.55	not needed for K3 # measured at 3.15 e/p/s
+   ExtraRotation	               0.
+   # MagIndex  DeltaRotation (999 not measured)  SolvedRotation (999 not measured)   
+   # Pixel size (nm, 0 not measured
+   RotationAndPixel 3 999 -94.4 0
+   RotationAndPixel 16 999 -94.4 1.74	#k2=1.797
+   RotationAndPixel 17 999 90.9 3.291	#k2=3.396
+   #
+   EndCameraProperties
 
 .. _shutter:
 
