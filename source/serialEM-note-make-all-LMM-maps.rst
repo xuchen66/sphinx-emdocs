@@ -34,12 +34,14 @@ Here are steps to follow.
    Define a file like LMM.map. 
 #. Edit script **Cars** to reflect cartridge and sample information, like below:
 
-.. code-block:: ruby
+.. code-block:: 
+   :linenos:
+   :caption: Cars.txt
 
     ScriptName Cars
 
     ## parameter of 1)  folder 2) Car and 3) sample name
-    ## to be called by LMMCars and other
+    ## to be called by LMMCars and other scripts
 
     # define where to save 
     SetDirectory X:\Munan_20180402
@@ -54,6 +56,8 @@ Here you define folder location, cartridge #, and sample names. The map filename
 7. Now run the Script **LMMCars** as below:
 
 .. code-block:: ruby
+   :linenos:
+   :caption: LMMCars.txt
 
     ScriptName LMMCars
     # LMM for multiple cartriges, assumes the montage file opened.
@@ -97,6 +101,8 @@ For easy display and small file size, we usually convert all the maps in MRC for
    - Run a small script 
    
 .. code-block:: ruby
+   :linenos:
+   :caption: LMM->JPEG.txt
 
    ScriptName LMM->JPEG
    # convert to JPEG format for easy display
