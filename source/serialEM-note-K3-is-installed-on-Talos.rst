@@ -52,7 +52,7 @@ SerialEM calibration.
 
 The K3 camera section of properties is below:
 
-.. code-block:: ruby
+.. code-block:: python
    :caption: K3 Properties
    :linenos:
    
