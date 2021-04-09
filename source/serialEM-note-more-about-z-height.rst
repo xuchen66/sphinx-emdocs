@@ -71,6 +71,8 @@ Z_byV2 Function
 The function code is below. 
 
 .. code-block:: ruby
+   :linenos:
+   :captoin: Function Z_byV2
 
    Function Z_byV2 2 0 iter offset
    Echo ===> Running Z_byV2 ...
@@ -85,16 +87,16 @@ The function code is below.
    
    ## Adjust Z
    Loop $iter
-   Autofocus -1 2
-   ReportAutofocus 
-   If ABS $repVal1 < 0.3
-      Echo Close enough, break...
-      Break
-   Endif 
-   Z = -1 * 0.72 * $repVal1               
-   Z = ROUND $Z 2
-   MoveStage 0 0 $Z
-   echo Z has moved --> $Z microns 
+      Autofocus -1 2
+      ReportAutofocus 
+      If ABS $repVal1 < 0.3
+         Echo Close enough, break...
+         Break
+      Endif 
+      Z = -1 * 0.72 * $repVal1               
+      Z = ROUND $Z 2
+      MoveStage 0 0 $Z
+      echo Z has moved --> $Z microns 
    EndLoop
 
    ## restore the defocus set in V originally
@@ -139,7 +141,7 @@ If we found the good "offset" value, it will be good for some time, at least thi
 - Adjust specimen to Eucentriciy, using FEI interface tool or SerialEM task function
 - run script as below.
 
-.. code-block:: 
+.. code-block:: ruby
 
    ScriptName FindOffset
    
