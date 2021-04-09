@@ -27,6 +27,8 @@ The script lines
 The script is fairly short, as shown below. It can be inserted in beginning of a single particle data collection script. 
 
 .. code-block:: ruby
+   :linenos:
+   :caption: X,Y positioning
 
     buffer = T
     RealignToNavItem 0
