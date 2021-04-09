@@ -72,7 +72,7 @@ The function code is below.
 
 .. code-block:: ruby
    :linenos:
-   :captoin: Function Z_byV2
+   :caption: Function Z_byV2
 
    Function Z_byV2 2 0 iter offset
    Echo ===> Running Z_byV2 ...
