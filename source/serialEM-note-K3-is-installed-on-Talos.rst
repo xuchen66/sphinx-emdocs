@@ -71,7 +71,7 @@ The K3 camera section of properties is below:
    MakesUnsignedImages           1
    XMustBeMultipleOf             4
    YMustBeMultipleOf             2
-   FourPortReadout	            0
+   FourPortReadout               0
    Binnings                      1 2 3 4 5 6 8
    BasicCorrections              49
    HotPixelsAreImodCoords        1
