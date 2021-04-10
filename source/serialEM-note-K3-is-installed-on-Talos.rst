@@ -6,7 +6,7 @@ SerialEM Note: K3 is installed on Talos
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: Oct 25, 2018
-:Last_Updated: Feb 27, 2019
+:Last_Updated: Apr 09, 2021
 
 .. glossary::
 
@@ -210,9 +210,10 @@ I listed a few more other things here that I also paid attention to.
    to align ~30-40 Super-res frames, it can do as fast as ~10 seconds for one stack. This is sufficient at least for our session
    monitoring purpose. Very nice indeed! 
 
-#. Always remember to retract K3 camera first BEFORE you try to insert Ceta camera.  
+#. Always remember to retract K3 camera first BEFORE you try to insert Ceta camera. 
+#. Sometimes on our system, when restarting DM, the communication between DM and microscope gets interrupted. A Keyspan USB Serial Adapter is used to establish the communication in our case. Unplugging and replugging the USB connection usually fixes the problem. However, it it almost impossible to do it remotely. We have found a workaround to re-activate the Keyspan USB Serial Adapter, **remotely**. 1) Exit DM first, 2) From Device Manager, find "Kayspan USB Serial Adapter", in its "Driver" tab, disable and enable it. This will reset the adapter. 3) Restarting DM. After that, communication will be OK. 
 
-#. Sometimes on our system, when restarting DM, the communication between DM and microscope gets interrupted. A Keyspan USB Serial Adapter is used to establish the communication in our case. Unplugging and replugging the USB connection usually fixes the problem. However, it it almost impossible to do it remotely. We have found a workaround to re-activate the Keyspan USB Serial Adapter. 1) Exit DM first, 2) From Device Manager, find "Kayspan USB Serial Adapter", in its "Driver" tab, disable and enable it. This will reset the adapter. 3) Restarting DM. After that, communication will be OK. 
+#. After configuring communication between ``DM`` and ``Remote TEMserver`` using TCP/IP protocol, it has never got interrupted like before. So we abandoned the Keyspan USB apatper completely. 
 
 Additional Info
 ---------------
