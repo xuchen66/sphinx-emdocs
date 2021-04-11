@@ -137,7 +137,6 @@ If running with python support, the code looks something like this:
    :language: python
    :caption:
    :linenos:
-   :dedent: -4
 
 This is a good time to test running this script on one of the point items in navigator window, to make sure it runs fine. 
 
