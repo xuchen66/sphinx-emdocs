@@ -42,7 +42,7 @@ This program takes many options as command line arguments. For details, please r
 
 As usual, the long command line can be run with a command file. Here is an example of python command file YURI_B1_G1-SuperRes_2967_Feb04_01.14.57.pcm. 
 
-.. code-block:: 
+.. code-block:: ruby
    :linenos:
    :caption: An example pcm file
 
@@ -95,8 +95,9 @@ This will start to align all the frame files in the same direcotry, until you do
 If there is no *.pcm existed for each file, and you just want to align them using the same parameters, then you can do that
 using a master pcm file to take care all the files you wanted to align. Here is an example of master.pcm:
 
-.. code-block:: 
+.. code-block:: ruby
    :linenos:
+   :emphasize-lines: 17-18
    :caption: A master pcm file
 
    $alignframes -StandardInput
