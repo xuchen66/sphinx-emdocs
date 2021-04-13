@@ -18,14 +18,15 @@ def CycleTargetDefocus(defLow, defHigh, step):
 
 def Drift(crit):
     print(' ---> Running Drift ', crit, 'A ...')
+    shot = serialem.Focus                       # without () -> alias to function reference itself
     interval = 4
     times = 10
     period = interval + 1
     #
-    serialem.Focus()
+    shot()
     serialem.Delay(interval)
     for index in range(1, times+1):
-        serialem.Focus()
+        shot()
         serialem.AlignTo('B', 0, 1)
         aliShift = serialem.ReportAlignShift()
         dx, dy = aliShift[2], aliShift[3]
