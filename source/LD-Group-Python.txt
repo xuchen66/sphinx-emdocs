@@ -44,9 +44,7 @@ def Drift(crit):
 ### main
 # when to do focus and center beam, set range
 groupOption = 1         # 1 = only group head, 0 = every item
-defLow = -1.0
-defHigh = -2.5
-step = 1.0
+defLow, defHigh, step = -1.0, -2.5, 0.1
 
 # drift control, limit 
 driftControl = 1        # 1 = yes, 0 = no 
