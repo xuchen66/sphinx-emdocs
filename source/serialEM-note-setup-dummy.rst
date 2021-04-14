@@ -29,7 +29,7 @@ Since SerialEM is installed and working, this is very simple.
 **Fig.1 Property Widows for Dummy Instance**
 
 .. image:: ../images/serialem-dummy-property-new.png
-   :scale: 75 %
+   :scale: 40 %
 ..   :height: 544 px
    :width: 384 px
    :alt: DUMMY instance property
