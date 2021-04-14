@@ -6,14 +6,14 @@ SerialEM Note: Setup Dummy Instance
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date_Created: 2017-12-16
-:Last_Updated: 2019-05-23
+:Date_Created: Dec 16, 2017
+:Last_Updated: May 23, 2019
 
 .. glossary::
 
    Abstract
       Dummy instance of SerialEM can be very useful in two cases: 1) to be used on the same computer while main instance of SerialEM is busy
-      collecting data; 2) can be used on a remote computer, e.g., a home computer to pick particles. Here I list what is needed to setup 
+      collecting data; 2) can be used on a remote computer, e.g., a home computer to pick particles or test scripting etc.. Here I list what is needed to setup 
       dummy instance in these two cases. 
       
 .. _on-the-same-omputer:
