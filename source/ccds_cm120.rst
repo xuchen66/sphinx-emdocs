@@ -6,7 +6,7 @@ CCD Cameras on CM120
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: July 30, 2016
-:Last_Updated: Apr 14, 2021
+:Last_Updated: Apr 15, 2021
 
 .. _glossary:
 
@@ -125,7 +125,7 @@ For image data that will be processed later, the scale bar is not that important
 
 SerialEM is a program for TEM data collection for both single particle and tomography applications. It communicates to TEM and digital camera. Currently, it doesn't support CM120 without any hacking due to TEM software, but it controls both cameras we have just fine. One of the advantages with SerialEM is to be able to directly save data as stack file and MRC as image format.
 
-SerialEM controls Gatan camera by a plugin dll file put in Gatan's plugin folder. In this case, DM has to started. When controlling Tietz camera, it directly talks to the Tietz's registered dll modules. In this case, no Tietz software needs to be started. Therefore, one starts DM first and then start SerialEM and you are ready to go!
+SerialEM controls Gatan camera by a plugin dll file put in Gatan's plugin folder. In this case, DM has to be running. When controlling Tietz camera, it directly talks to the Tietz's registered dll modules. In this case, no Tietz software needs to be started. Therefore, you start DM first and then SerialEM and you are ready to go!
 
 Since SerialEM doesn't talk to CM120 computer, we have to use fake mag and screen position to match the real situation on scope. This way, the image file saved on SerialEM will have valid and correctly pixelsize information in MRC header.
 
