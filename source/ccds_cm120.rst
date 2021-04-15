@@ -5,8 +5,8 @@ CCD Cameras on CM120
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date_Created: 2016-07-30
-:Last_Updated: 2018-01-10
+:Date_Created: July 30, 2016
+:Last_Updated: Apr 14, 2021
 
 .. _glossary:
 
@@ -67,7 +67,8 @@ An exposure on film requires no beam before film is pushed in to final location 
 
 To image with a digital camera, especially for a beam sensitive specimen, shutter control is therefore also needed. If configured correctly, when camera is inserted and large screen of TEM is lifted, the beam should be blanked. This shutter control is achieved by changing the same alignment coils using shutter cable(s) from camera controller. The shutter cable directly connects to TEM hardware so that when large screen is lifted, an extra voltage is sent to TEM coil to "screw up" a good alignment. Thus, beam is blanked. If we need to pre-expose our sample for whatever reason, then two cables will be needed - one for pre-specimen and one for post-specimen. This control is done by using external hardware. We normally call this "external" shutter control as it is not via TEM software.
 
-For convenience, we usually call the shutter of Gun Upper Coil "the beam blanker"; and Film Shutter Coil "the film shutter".
+For convenience, we usually call the shutter of Gun Upper Coil "the beam blanker"; and Film Shutter Coil "the film shutter". On modern models of FEI/TFS TEMs, 
+there might be dedicated beam blanker coil for this purpose.  
 
 .. _shutter-control-setup
 
