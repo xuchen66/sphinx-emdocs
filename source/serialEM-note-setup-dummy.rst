@@ -80,3 +80,8 @@ On a Mac computer
 
 Thanks to Pranav Shah <p.shah.lab@gmail.com> who shared with me how he setup SerialEM on a Mac computer using Wine. It turns out
 fairly strightforward, as long as you know which wine to install. The nice tutorial `Installing Wine on Mac <https://www.davidbaumgold.com/tutorials/wine-mac/>`_ written by David Baumgold is easy enough to follow.  
+
+.. _note:
+
+Wine support is not quite as good as on a real Windows system. I have found the best solution to run SerialEM on a Mac computer is via a virturl machine. I have 
+briefly tried a couple of them, and Parallels seems to the best VM program. It even supports Mac with M1 chip, to run a Windows on ARM. SerialEM runs well on it. 
