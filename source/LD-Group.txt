@@ -28,7 +28,7 @@ AlignTo $refBuffer 0 1
 ## turn ON drift protection if it's off so Autofocus can report drift
 ReportUserSetting DriftProtection DP 
 If $DP == 0
-    SetUserSetting DriftProtection 1
+    SetUserSetting DriftProtection 1 1
 Endif     
 
 ## center beam & focus
