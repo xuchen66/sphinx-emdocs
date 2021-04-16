@@ -16,6 +16,9 @@ limit = 3.0
 templateOption = 1      # 1 = use fixed ref, 0 = dynamic one (whole image)
 refBuffer = 'P'
 
+# multi or single shot
+multiShot = 1           # 1 = multi, 0 = single
+
 #### no editing below ####
 
 ### Functions
@@ -98,8 +101,10 @@ if driftControl == 1:
 
 # shot
 serialem.AdjustBeamTiltforIS()      # keep this line 
-serialem.MultipleRecords()
-#serialem.Record()
+if multiShot == 1:
+    serialem.MultipleRecords()
+elif multiShot == 0:
+    serialem.Record()
 
 # post-expose
 serialem.RefineZLP(30)              # if GIF exists 
