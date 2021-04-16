@@ -14,6 +14,9 @@ limit = 3.0                     # Angstroms
 templateOption = 1              # 1 = to use a fixed ref, 0 = use dynamic one
 refBuffer = P                   # reference buffer for template image
 
+## Multi or single shot
+multiShot = 1                   # 1 = multishit, 0 = single shot
+
 ########## no edit below ##########
 RealignToNavItem 0
 ResetImageShift 2
@@ -57,8 +60,11 @@ Endif
 
 ## shot
 AdjustBeamTiltforIS             # needed for single shot, so leave it here regardless
-MultipleRecords
-# Record
+If multiShot == 1
+    MultipleRecords
+Elseif multiShot == 0
+    Record
+Endif 
 
 ## post-exposure
 RefineZLP 30                    # refine ZLP every 30 minutes
