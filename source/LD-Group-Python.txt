@@ -70,9 +70,9 @@ serialem.AlignTo(refBuffer, 0, 1)
 # turn on Autofocus drift protection so it reports drift rate
 DP = serialem.ReportUserSetting('DriftProtection')    # float
 if DP == 0.:
-    serialem.SetUserSetting('DriftProtection', 1)
+    serialem.SetUserSetting('DriftProtection', 1, 1)
 
-# center beam and defosuc
+# center beam and defocus
 gs = serialem.ReportGroupStatus()      # tuple
 gs = gs[0]                             # now a float
 if groupOption == 0:
