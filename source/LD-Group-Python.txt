@@ -3,6 +3,21 @@
 import serialem
 from math import sqrt
 
+### user defined parameters
+# when to do focus and center beam, set range
+groupOption = 1         # 1 = only group head, 0 = every item
+defLow, defHigh, step = -1.0, -2.5, 0.1
+
+# drift control, limit 
+driftControl = 1        # 1 = yes, 0 = no 
+limit = 3.0
+
+# for X,Y position
+templateOption = 1      # 1 = use fixed ref, 0 = dynamic one (whole image)
+refBuffer = 'P'
+
+#### no editing below ####
+
 ### Functions
 def CycleTargetDefocus(defLow, defHigh, step):
     print(' ---> running CycleTargetDefocus ...')
@@ -42,19 +57,7 @@ def Drift(crit):
             serialem.Exit()
 
 ### main
-# when to do focus and center beam, set range
-groupOption = 1         # 1 = only group head, 0 = every item
-defLow, defHigh, step = -1.0, -2.5, 0.1
 
-# drift control, limit 
-driftControl = 1        # 1 = yes, 0 = no 
-limit = 3.0
-
-# for X,Y position
-templateOption = 1      # 1 = use fixed ref, 0 = dynamic one (whole image)
-refBuffer = 'P'
-
-#### no editing below ####
 serialem.RealignToNavItem(0)
 serialem.ResetImageShift(2)
 if templateOption == 1:
