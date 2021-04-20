@@ -5,8 +5,8 @@ SerialEM Note: Hidden Goodies
 
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
-:Date-created: 2020-11-21
-:Last-updated: 2021-03-30
+:Date-created: Nov 21, 2020
+:Last-updated: Apr 20, 2021
 
 .. glossary::
 
@@ -105,6 +105,8 @@ is also quite hidden.
    To obtain filename with MapID and ItemID in the filename string, here is a tip:
    
    .. code-block:: ruby
+      :linenos:
+      :caption: Get Map-index as part of filename
 
       ReportNavItem 
       NavIndex = $repVal1
@@ -183,6 +185,8 @@ Below script running at program start will pop up a file chooser to ask you
 define the current working directory. 
 
 .. code-block:: ruby
+   :linenos:
+   :caption: StartUp Script
 
    ScriptName StartUp
    # script to run when starting SerialEM program
@@ -200,6 +204,8 @@ define the current working directory.
 Here is my little script to run at end.
 
 .. code-block:: ruby
+   :linenos:
+   :caption: Ending Script
 
     ScriptName EndingScript
 
@@ -242,6 +248,8 @@ Around March 23, 2021, scripting also supports python. SerialEM native collectio
 of the same CycleTargetFocus function in Python code. 
 
 .. code-block:: python
+   :linenos:
+   :caption: Python Example Code
 
    #!Python
    #ScriptName CycleTargetDefocus
