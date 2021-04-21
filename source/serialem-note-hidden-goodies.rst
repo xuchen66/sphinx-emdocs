@@ -258,7 +258,7 @@ of the same CycleTargetFocus function in Python code.
    ## function
    def CycleTargetDefocus(low, high, step):
       print('==> running CycleTargetDefocus ...')
-      print('    ---> low, high, step is ' low, high, step)
+      print('    ---> low, high, step is ', low, high, step)
       tarDef = serialem.ReportTargetDefocus()
       if tarDef > low or tarDef < high + step:
          serialem.SetTargetDefocus(low)
