@@ -5,8 +5,8 @@ SerialEM Note: Utilize JPG File format
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Created: 2018-04-29 
-:Updated: 2018-05-03
+:Created: Apr 29, 2018 
+:Updated: Apr 20, 2021
 
 .. glossary::
 
@@ -29,16 +29,15 @@ Save Map Overview to JPG
 The function to save maps to JPG is below. 
 
 .. code-block:: ruby
+   :linenos:
+   :caption: MapToJPG
 
     Function MapToJPG 0 0
      
     # SerialEM Script to convert map overview to a jpg image. 
-    # it works on currently selected map item and should work for "Acquire at points...".
-    # 
-    # Chen Xu <chen.xu@umassmed.edu>
-    # Created: 2018-04-27
-    # Updated: 2018-04-27
-
+    # it works on currently selected map item and should work for "Acquire at points..."
+    # for multiple map items.
+    
     # skip non-map item
     ReportNavItem
     If $RepVal5 != 2        # if not a map item
@@ -52,7 +51,7 @@ The function to save maps to JPG is below.
     LoadNavMap
 
     # make a jpeg image
-    ReduceImage Q 2         # loading buffer is Q, and reduce 2 to make JPG image density range more pleasant
+    ReduceImage Q 2         # loading buffer Q,  factor 2 to make JPG image density range more pleasant
     SaveToOtherFile A JPG JPG $navNote.jpg
     EndFunction
     
@@ -79,18 +78,15 @@ This function and its script work on **current** item of map. However, if you ru
 For this, one needs to use a slight different one as below.
 
 .. code-block:: ruby
+   :linenos:
+   :caption: NewMapToJPG
 
    Function NewMapToJPG 0 0
    # 
-   # SerialEM Script to convert last item - map overview to a jpg image. 
+   # SerialEM Script to convert last map item to a jpg image. 
    # It uses Note string as part of jpg filename.
    # it works on an item which creates a map and should work for "Acquire at points..."
-   # as "Run Script after". 
-   # 
-   # Chen Xu <chen.xu@umassmed.edu>
-   # Created: 2018-04-27
-   # Updated: 2018-04-30
-   #
+   # as post-action. 
 
    # skip non-map item
    ReportOtherItem -1      # last item - supposedly the newly created map.
@@ -120,17 +116,15 @@ We can also save every single shot to JPG format along with MRC images. The MRC 
 contains root name of the MRC file and section numbers. 
 
 .. code-block:: ruby
+   :linenos:
+   :caption: AToJPG
 
    Function AToJPG 0 0
    
    # SerialEM Script to save image in buffer A to a jpg image. 
-   # Tt reduces image in A by 2 for comfortable JPG density range. It 
+   # It reduces image in A by 2 for comfortable JPG density range. It 
    # takes current filename and Z into jpg filename. Therefore, MRC file
    # is required to be opened.
-   # 
-   # Chen Xu <chen.xu@umassmed.edu>
-   # Created: 2018-04-29
-   # Updated: 2018-04-29
    
    ReportCurrentFilename 1
    root = $RepVal1 
