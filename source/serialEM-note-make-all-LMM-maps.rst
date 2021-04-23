@@ -6,8 +6,8 @@ SerialEM Note: Make All LMM Maps Automatically
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date_Created: 2018-04-03
-:Last_Updated: 2018-04-04
+:Date_Created: Apr 3, 2018
+:Last_Updated: Apr 23, 2021
 
 .. glossary::
 
@@ -40,15 +40,22 @@ Here are steps to follow.
 
     ScriptName Cars
 
-    ## parameter of 1)  folder 2) Car and 3) sample name
-    ## to be called by LMMCars and other scripts
+    # script of cartridges information 
 
-    # define where to save 
-    SetDirectory X:\Munan_20180402
-
-    ## define cartirges and sample names
+    rootDir = X:\Munan_20180402
     cat = { 2 3 4 5 6 7 }
     name = { 56-g1 56-g2 56-g3 56-g4 54-g2 54-g4 }
+
+    SetDirectory $rootDir 
+    ReportDirectory 
+
+    If $#cat != $#name
+        Echo     >>> Arrays "cat" and "name" have different length, exit ...
+        Exit
+    else
+        echo     cat = { $cat }
+        echo name = { $name }
+    Endif
     
 Here you define folder location, cartridge #, and sample names. The map filename will have the info in it, such as 
 ``LMM-Car2-56-g1.st``. 
