@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: Nov 21, 2020
-:Last-updated: Apr 20, 2021
+:Last-updated: Apr 29, 2021
 
 .. glossary::
 
@@ -268,3 +268,65 @@ of the same CycleTargetFocus function in Python code.
 
    ## run it 
    CycleTargetDefocus(-1.0, -3.0, 0.1)
+
+Around Apr 29, 2021, SerialEM not only got more matured at supporting Python, but also provides functionality to call regular script from a Python script and Vice Versa. The variable's value can also pass to each other. Below are two example scripts, one in Python and one in regular. 
+
+.. code-block:: python
+   :linenos:
+   :caption: Python Script
+   
+   #!Python
+   #ScriptName Python
+   import serialem as sem
+
+   print('>>> running Python script ...')
+   #sem.CallFunction('Hello::ChangeMag', '', 4)
+   #sem.CallFunction('Hello::SetMagIndex', '', 17)
+
+   ret = sem.GetVariable('a')
+   ret = SEMarrayToInts(ret)
+   print(ret)
+   
+ .. code-block:: Ruby
+   :linenos:
+   :caption: Regular Script
+   
+   ScriptName Regular
+   a = { 1 2 3 4 }
+   Call Python
+   
+Running regular SerialEM script "Regular" by clciking *Run* button from the editor, the log window prints:
+
+.. code-block:: python
+
+   >>> running Python script...
+   [1, 2, 3, 4]
+   
+As you can see, it calls Python script "Python". The array *a* defined in the regular script is received and convert to python list in the python script. 
+One can also do reverse - calling regular script from a Python one and passing values of list variable to from Python to regular script. Look at two scripts below:
+
+.. code-block:: python
+   :linenos:
+   :caption: Python Script
+   
+   #!Python
+   #ScriptName Python
+   import serialem as sem
+
+   a = [ 1, 2, 3, 4, 5, 6, 7 ]
+   sem.SetVariable('a',listToSEMarray(a))
+   sem.Call('Regular')
+   
+.. code-block:: ruby
+   :linenos:
+   :caption: Regular Script
+   
+   Echo --- running Regular Script
+   Echo $a
+   
+Running the "Python" script gives this in log window:
+
+.. code-block:: ruby
+
+   --- running Regular Script
+   1  2  3  4  5  6  7
