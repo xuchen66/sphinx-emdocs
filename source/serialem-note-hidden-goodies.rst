@@ -290,7 +290,7 @@ Around Apr 29, 2021, SerialEM not only got more matured at supporting Python, bu
    #ScriptName Python
    import serialem as sem
 
-   print('>>> running Python script ...')
+   #print('>>> running Python script ...')
    #sem.CallFunction('Hello::ChangeMag', '', 4)
    #sem.CallFunction('Hello::SetMagIndex', '', 17)
 
