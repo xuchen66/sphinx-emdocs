@@ -283,11 +283,20 @@ Around Apr 29, 2021, SerialEM not only got more matured at supporting Python, bu
    #sem.CallFunction('Hello::ChangeMag', '', 4)
    #sem.CallFunction('Hello::SetMagIndex', '', 17)
 
+   ## get a
    ret = sem.GetVariable('a')
    ret = SEMarrayToInts(ret)
-   print(ret)
+   #print(ret)
+
+   ## make reversed a into b
+   b = ret[::-1]
+   #print(b)
+
+   ## get b ready for regular
+   sem.SetVariable('b',listToSEMarray(b))
    
- .. code-block:: Ruby
+  
+.. code-block:: Ruby
    :linenos:
    :caption: Regular Script
    
@@ -299,10 +308,11 @@ Running regular SerialEM script "Regular" by clciking *Run* button from the edit
 
 .. code-block:: python
 
-   >>> running Python script...
-   [1, 2, 3, 4]
+   a = 1  2  3
+   b = 3  2  1
    
-As you can see, it calls Python script "Python". The array *a* defined in the regular script is received and convert to python list in the python script. 
+As you can see, it calls Python script "Python". The array *a* defined in the regular script is received and convert to python list in the python script. After doing something in Python script (reverse array a in this case), it can get new array ready to be fetched by regular script. 
+
 One can also do reverse - calling regular script from a Python one and passing values of list variable to from Python to regular script. Look at two scripts below:
 
 .. code-block:: python
