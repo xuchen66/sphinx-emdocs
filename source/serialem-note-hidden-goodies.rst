@@ -271,6 +271,17 @@ of the same CycleTargetFocus function in Python code.
 
 Around Apr 29, 2021, SerialEM not only got more matured at supporting Python, but also provides functionality to call regular script from a Python script and Vice Versa. The variable's value can also pass to each other. Below are two example scripts, one in Python and one in regular. 
 
+.. code-block:: Ruby
+   :linenos:
+   :caption: Regular Script
+   
+   ScriptName Regular
+   a = { 1 2 3 }
+
+   echo a = $a
+   Call Python
+   Echo b = $b
+
 .. code-block:: python
    :linenos:
    :caption: Python Script
@@ -294,15 +305,6 @@ Around Apr 29, 2021, SerialEM not only got more matured at supporting Python, bu
 
    ## get b ready for regular
    sem.SetVariable('b',listToSEMarray(b))
-   
-  
-.. code-block:: Ruby
-   :linenos:
-   :caption: Regular Script
-   
-   ScriptName Regular
-   a = { 1 2 3 4 }
-   Call Python
    
 Running regular SerialEM script "Regular" by clciking *Run* button from the editor, the log window prints:
 
