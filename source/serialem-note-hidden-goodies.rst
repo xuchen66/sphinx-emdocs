@@ -295,8 +295,7 @@ Around Apr 29, 2021, SerialEM not only got more matured at supporting Python, bu
    #sem.CallFunction('Hello::SetMagIndex', '', 17)
 
    ## get a
-   ret = sem.GetVariable('a')
-   ret = SEMarrayToInts(ret)
+   ret = SEMarrayToInts(sem.GetVariable('a'))
    #print(ret)
 
    ## make reversed a into b
