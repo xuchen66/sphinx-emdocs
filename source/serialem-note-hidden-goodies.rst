@@ -244,6 +244,9 @@ Clicking on ``Yes`` will close the valves and ``No`` will keep them open.
 Example 5 - Scripting With Python
 ---------------------------------
 
+SerialEM Python Code Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Around March 23, 2021, scripting also supports python. SerialEM native collection of commands act like a module. Here is an example 
 of the same CycleTargetFocus function in Python code. 
 
@@ -268,6 +271,10 @@ of the same CycleTargetFocus function in Python code.
 
    ## run it 
    CycleTargetDefocus(-1.0, -3.0, 0.1)
+
+
+Calling Python Script From Regular Script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Around Apr 29, 2021, SerialEM not only got more matured at supporting Python, but also provides functionality to call regular script from a Python script and Vice Versa. The variable's value can also pass to each other. Below are two example scripts, one in Python and one in regular. 
 
@@ -314,6 +321,9 @@ Running regular SerialEM script "Regular" by clciking *Run* button from the edit
    
 As you can see, it calls Python script "Python". The array *a* defined in the regular script is received and convert to python list in the python script. After doing something in Python script (reverse array a in this case), it can get new array ready to be fetched by regular script. 
 
+Calling Regular Script and Function From Python Script 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 One can also do reverse - calling regular script from a Python one and passing values of list variable to from Python to regular script. Look at two scripts below:
 
 .. code-block:: python
@@ -341,6 +351,9 @@ Running the "Python" script gives this in log window:
 
    --- running Regular Script
    1  2  3  4  5  6  7
+
+Python External Control
+~~~~~~~~~~~~~~~~~~~~~~~
 
 You can also use Python Console to control SerialEM processs. SerialEM acts as a complete embedded system in this case, and Python is completely external. 
 
