@@ -344,7 +344,7 @@ Running the "Python" script gives this in log window:
 
 You can also use Python Console to control SerialEM processs. SerialEM acts as a complete embedded system in this case, and Python is completely external. 
 
-.. code-block:: python
+.. code-block:: ruby
    :caption: Python External Control - Console
    
    PS C:\Users\xuchen> python
