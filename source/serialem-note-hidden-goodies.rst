@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: Nov 21, 2020
-:Last-updated: Apr 29, 2021
+:Last-updated: May 1, 2021
 
 .. glossary::
 
@@ -341,3 +341,35 @@ Running the "Python" script gives this in log window:
 
    --- running Regular Script
    1  2  3  4  5  6  7
+
+You can also use Python Console to control SerialEM processs. SerialEM acts as a complete embedded system in this case, and Python is completely external. 
+
+.. code-block:: python
+   :caption: Python External Control - Console
+   
+   PS C:\Users\xuchen> python
+   Python 3.9.2 (tags/v3.9.2:1a79785, Feb 19 2021, 13:44:55) [MSC v.1928 64 bit (AMD64)] on win32
+   Type "help", "copyright", "credits" or "license" for more information.
+   >>> import sys
+   >>> sys.path.insert(0,'C:\Program Files\SerialEM\PythonModules')
+   >>> import serialem as sem
+   >>> sem.ReportTargetDefocus()
+   -1.600000023841858
+   >>> sem.ReportMag()
+   (59000.0, 0.0)
+   >>> x = sem.ReportMag()
+   >>> type(x)
+   <class 'tuple'>
+   >>> print(x[0])
+   59000.0
+   >>> sem.GoToLowDoseArea('R')
+   Traceback (most recent call last):
+     File "<stdin>", line 1, in <module>
+   serialem.SEMerror
+   >>> sem.SetLowDoseMode(1)
+   0.0
+   >>> sem.GoToLowDoseArea('R')
+   >>> sem.ReportLowDose()
+   (1.0, 3.0)
+   >>>
+   
