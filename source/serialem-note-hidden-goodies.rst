@@ -406,3 +406,27 @@ Below is Python external control from a Mac.
    >>> sem.ReportLowDose()
    (1.0, 0.0)
    >>> 
+
+Here is another example to run a python script on Mac to control a SerialEM runnning on Windows:
+
+.. code-block:: 
+   :linenos:
+   :caption: Another Python Script Example - to cycle LD areas, twice. 
+   
+   import sys
+   sys.path.insert(0,'/Users/xuchen/tem/SerialEM/build/lib.macosx-10.9-x86_64-3.8')
+   import serialem as sem
+   sem.ConnectToSEM(48888,'192.168.1.16')
+   sem.ReportMag()
+   sem.SetLowDoseMode(1)
+
+   ## function to cycle LD, twice
+   def cycleLD():
+       for i in [ 'V', 'F', 'T', 'R' ] * 2 :
+           sem.GoToLowDoseArea(i)
+
+   cycleLD()
+
+   sem.ReportLowDose()
+   sem.Exit()
+   exit()
