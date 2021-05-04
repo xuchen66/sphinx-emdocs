@@ -422,10 +422,10 @@ Here is another example to run a python script on Mac to control a SerialEM runn
    if ld == 0:
       sem.SetLowDoseMode(1)
 
-   ## function to cycle LD, twice
+   ## function to cycle LD areas, twice
    def cycleLD():
-       for i in [ 'V', 'F', 'T', 'R' ] * 2 :
-           sem.GoToLowDoseArea(i)
+       for area in [ 'V', 'F', 'T', 'R' ] * 2 :
+           sem.GoToLowDoseArea(area)
            sem.ReportMag()
            sem.ReportLowDose()
 
