@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: Nov 21, 2020
-:Last-updated: May 1, 2021
+:Last-updated: May 3, 2021
 
 .. glossary::
 
@@ -386,3 +386,23 @@ You can also use Python Console to control SerialEM processs. SerialEM acts as a
    (1.0, 3.0)
    >>>
    
+Below is Python external control from a Mac. 
+
+.. code-block:: ruby
+   :caption: Python Console on Mac (to connect to SerialEM on Windows (192.168.1.16))
+   
+   (base) UMWMLF8LVCJ% python                     ~/tem/SerialEM/build/lib.macosx-10.9-x86_64-3.8
+   Python 3.8.5 (default, Sep  4 2020, 02:22:02) 
+   [Clang 10.0.0 ] :: Anaconda, Inc. on darwin
+   Type "help", "copyright", "credits" or "license" for more information.
+   >>> import sys
+   KeyboardInterrupt
+   >>> sys.path.insert(0,'/Users/xuchen/tem/SerialEM/build/lib.macosx-10.9-x86_64-3.8')
+   >>> import serialem as sem
+   >>> sem.ConnectToSEM(48888,'192.168.1.16')
+   >>> sem.ReportMag()
+   (59000.0, 0.0)
+   >>> sem.GoToLowDoseArea('V')
+   >>> sem.ReportLowDose()
+   (1.0, 0.0)
+   >>> 
