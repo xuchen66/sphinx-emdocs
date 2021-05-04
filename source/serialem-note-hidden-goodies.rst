@@ -418,15 +418,19 @@ Here is another example to run a python script on Mac to control a SerialEM runn
    import serialem as sem
    sem.ConnectToSEM(48888,'192.168.1.16')
    sem.ReportMag()
-   sem.SetLowDoseMode(1)
+   ld = sem.ReportLowDose()
+   if ld == 0:
+      sem.SetLowDoseMode(1)
 
    ## function to cycle LD, twice
    def cycleLD():
        for i in [ 'V', 'F', 'T', 'R' ] * 2 :
            sem.GoToLowDoseArea(i)
+           sem.ReportMag()
+           sem.ReportLowDose()
 
    cycleLD()
 
    sem.ReportLowDose()
-   sem.Exit()
+   sem.Exit(1)
    exit()
