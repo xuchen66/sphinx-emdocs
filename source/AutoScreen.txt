@@ -1,4 +1,4 @@
-ScriptName 2nd-AutoScreen
+ScriptName AutoScreen
 
 ScriptName AutoScreen
 #### co-Author: Chen Xu chen.xu@umassmed.edu
