@@ -20,10 +20,15 @@ ScriptName AutoScreen
 xShift = 
 yShift =
 
+# define how many meshes and holes to find
+meshes = 4
+holes = 10
+
+ReadOnlyUnlessAdmin
+
 # dir, cartridge and grids info
 Call Cars
 
-ReadOnlyUnlessAdmin
 LocalLoopIndexes
 
 #### main loop ####
@@ -60,7 +65,7 @@ Loop $#cat ind
     LMMIndex = $repVal1
     LMMNote = $navNote
 
-    CallFunction findMeshes                 # find some mesh item and added to nav 
+    CallFunction findMeshes $meshes         # find some mesh item and added to nav 
 
     ReportOtherItem -1                      # last item after adding new meshes     
     lastIndex = $repVal1
@@ -123,7 +128,7 @@ Loop $numMesh ind
     MMMIndex = $repVal1
     MMMNote = $navNote
 
-    Call houghCircles
+    Call houghCircles $holes
 
     ReportOtherItem -1                      # last item after adding new meshes 
     lastIndex = $repVal1
