@@ -1,0 +1,349 @@
+ScriptName 2nd-AutoScreen
+
+ScriptName AutoScreen
+#### co-Author: Chen Xu chen.xu@umassmed.edu
+#### co-Author: Albert Xu alberttxu@gmail.com
+#### Date: Apr 22, 2021
+# script to find mesh and holes and take shot for all.
+# it works for multiple cartridges.
+
+#### prerequisite ####
+# 1. LD setup Search for LMM & R to cover single hole like 17.5kX
+# 2a. C2 and OBJ apertures are centered
+# 2b. AutoIT-Talos script running on Talos computer 
+# 3. Script "Cars" is setup 
+# 4. shift offset is set below
+# 5. offset value in Script Z has been setup right
+# 6. InputDirct is diabled 
+
+# define shifts between LMM and V mag (from shift to Marker)
+xShift = 
+yShift =
+
+# dir, cartridge and grids info
+Call Cars
+
+ReadOnlyUnlessAdmin
+LocalLoopIndexes
+
+#### main loop ####
+
+# open navigator if not open 
+ReportIfNavOpen
+If $repVal1 == 0
+    OpenNavigator nav.nav 
+Endif 
+
+ResetClock
+
+Loop $#cat ind   
+    SetColumnOrGunValve 0
+    LoadCartridge $cat[$ind]
+    SetNavRegistration $cat[$ind]
+    
+    ## LMM montaging 
+    MoveStageTo 0 0
+
+    # make and set new dir for each grid
+    #SetDirectory $rootDir
+    #MakeDirectory Car$cat[$ind]-$name[$ind]
+    #SetDirectory Car$cat[$ind]-$name[$ind] 
+    
+    AllowFileOverwrite 1
+    OpenNewMontage 0 0 LMM-Car$cat[$ind]-$name[$ind].st
+    SetColumnOrGunValve 1
+    Montage
+    NewMap
+    CloseFile
+    ## find mesh from this LMM map and go through each mesh found 
+    ReportOtherItem -1                      # last LMM map item 
+    LMMIndex = $repVal1
+    LMMNote = $navNote
+
+    CallFunction findMeshes                 # find some mesh item and added to nav 
+
+    ReportOtherItem -1                      # last item after adding new meshes     
+    lastIndex = $repVal1
+    numMesh = $lastIndex - $LMMIndex
+    SnapshotToFile 1 1 1 JPG JPG $LMMNote.jpg
+    CallFunction AutoMesh
+    ReportClock 
+EndLoop
+# back to rootDir
+# SetDirectory $rootDir
+
+# save Nav file 
+SaveNavigator nav.nav 
+
+###################################################################################
+Function AutoMesh 0 0 
+# Go through each mesh found and do following:
+#   a. fix Z, update it 
+#   b. make MMM montage map 
+
+Loop $numMesh ind 
+    # goto the found mesh 
+    SetProperty RealignItemMaxLMfield 700   # enable LMM Realign
+    CallFunction Aperture 150 0      # obj = 0 -> out 
+
+    meshIndex = $LMMIndex + $ind 
+    RealignToOtherItem $meshIndex 0         # realign to the mesh 
+    ResetImageShift 2
+    Copy A P 
+    AcquireToMatchBuffer P 
+    AlignTo P 0 1
+    
+    # allow lenses to settle
+    GoToLowDoseArea V
+    # Delay 5 min 
+
+    # MMM - View mag, fix Z  
+    #SetProperty RealignItemMaxLMfield 3.5
+    CallFunction Aperture 50 70 
+    MoveStage $xShift $yShift 
+    Call Z                                  # Z is a script to adjust Z using beam tilt 
+    UpdateItemZ
+
+    # MMM map 
+    SetUserSetting MontageUseViewInLD 1 1
+    SetUserSetting MontageAlignPieces 1 1
+    SetUserSetting MontageVerySloppy 0 1
+    AllowFileOverwrite 1
+    OpenNewMontage 4 6  MMM_$LMMNote_mesh$mesh.map
+    SetMontageParams 1 576 410 5760 4092 1 1        
+    Echo   --> Acquire MMM map ...
+    Montage 
+    NewMap 
+    CloseFile
+    
+    # find holes and shoot 
+    ReportOtherItem -1  
+
+    # last map item 
+    MMMIndex = $repVal1
+    MMMNote = $navNote
+
+    Call houghCircles
+
+    ReportOtherItem -1                      # last item after adding new meshes 
+    lastIndex = $repVal1
+    numHole = $lastIndex - $mapIndex
+    AllowFileOverwrite 1
+    SnapshotToFile 1 1 1 JPG JPG $MMMNote.jpg 
+    CallFunction HoleShot
+EndLoop 
+EndFunction 
+
+####################################################################################
+Function HoleShot 0 0 
+    OpenNewFile R_$mapNote.mrc
+    Loop $numHole ind
+        holeIndex = $mapIndex + $ind
+        Echo >>> take hole $holeIndex
+        R
+        S
+
+        echo ... ReduceImage A 2
+        echo ... SaveToOtherFile A JPG JPG R_$mapNote_hole$holeIndex.jpg
+        
+    EndLoop 
+EndFunction 
+
+####################################################################################
+Function Aperture 2 0 
+# requires AutoIT-Talos.txt running on Talos
+# C2 = 150, 70, 50, 30
+# Obj = 70, 100, 0           ; 0 = out 
+SetupScopeMessage 0 0 C2_$c2-OBJ_$obj
+ShowMessageOnScope SEM
+EndFunction
+
+####################################################################################
+Function findMeshes 1 0 numMesh
+
+Debug = 0
+
+### semmatch arguments
+maxPts = $numMesh      # return subset of all found points
+minSize = 30           # (microns) - find squares at least this size
+minBorder = 400        # (microns) - find squares at least this far away from the edge of the map
+
+# maps will be dynamically binned down to the following pixel size
+
+acquire = 0            # "A" or not ( True = 1 ; False = 0 )
+
+# names of temporary files used by semmatch
+outputNav = semmatch_nav.nav
+image = LMM.jpg
+
+ReportIfNavOpen
+If $reportedValue1 != 2
+   Exit
+Endif
+ReportNavFile 1
+navfile = $reportedValue1$reportedValue2
+navdir = $reportedValue3
+SetDirectory $navdir
+SaveNavigator
+
+If $acquire != 1 AND $acquire != 0
+   Echo acquire should be either 1 or 0
+   Exit
+Endif
+
+If $Debug == 1
+   debugStr = /k
+ElseIf $Debug == 0
+   debugStr = /c
+Else
+   Echo Debug should be either 1 or 0
+   Exit
+Endif
+
+## load and bin MMM map
+ReportNavItem
+If $RepVal5 != 2        # if not a map item
+   Echo Not a map item. Select a Map item from the navigator.
+   Exit
+Endif
+MAP = $navLabel
+Echo Map Label: $MAP
+# load map into Q buffer
+SetUserSetting BufferToReadInto 16
+SetUserSetting LoadMapsUnbinned 1
+# uncheck Montage Controls "Align pieces in overview"
+ReportUserSetting MontageAlignPieces alignChecked
+If $alignChecked == 1
+   SetUserSetting MontageAlignPieces 0
+Endif
+LoadNavMap
+
+ImageProperties Q width height
+pixelsize = $repVal5
+
+Copy Q A
+Show Q
+
+## make a jpeg image
+SaveToOtherFile A JPG JPG $image
+Echo saved $image
+
+ReportOtherItem -1
+newLabel = $navIntLabel + 1
+
+RunInShell cmd $debugStr "conda activate semmatch && \
+semmatch \
+--navfile $navfile \
+--mapLabel $MAP \
+--newLabel $newLabel \
+--output $outputNav \
+--acquire $acquire \
+--image $image \
+--pixelsize $pixelsize \
+findMeshes --maxPts $maxPts --minSize $minSize "
+
+MergeNavFile $outputNav
+If $alignChecked == 1
+   SetUserSetting MontageAlignPieces 1
+Endif
+Show Q
+EndFunction 
+
+############################################################################
+ScriptName houghCircles numHoles
+
+# If something goes wrong, set Debug = 1
+Debug = 0               # True = 1 ; False = 0
+
+### semmatch arguments
+param2 = 35             # hough threshold
+maxPts = $numHoles      # return subset of all found points
+
+acquire = 0             # add "A" (True = 1 ; False = 0)
+
+# names of temporary files used by semmatch
+outputNav = semmatch_nav.nav
+image = MMM.jpg
+
+ReportIfNavOpen
+If $reportedValue1 != 2
+   Exit
+Endif
+ReportNavFile 1
+navfile = $reportedValue1$reportedValue2
+navdir = $reportedValue3
+SetDirectory $navdir
+SaveNavigator
+
+If $acquire != 1 AND $acquire != 0
+   Echo acquire should be either 1 or 0
+   Exit
+Endif
+
+If $Debug == 1
+   debugStr = /k
+ElseIf $Debug == 0
+   debugStr = /c
+Else
+   Echo Debug should be either 1 or 0
+   Exit
+Endif
+
+## load and bin MMM map
+ReportNavItem
+If $RepVal5 != 2        # if not a map item
+   Echo Not a map item. Select a Map item from the navigator.
+   Exit
+Endif
+MAP = $navLabel
+Echo Map Label: $MAP
+SetUserSetting BufferToReadInto 16
+SetUserSetting LoadMapsUnbinned 1
+# uncheck Montage Controls "Align pieces in overview"
+ReportUserSetting MontageAlignPieces alignChecked
+If $alignChecked == 1
+   SetUserSetting MontageAlignPieces 0
+Endif
+LoadNavMap
+
+# reduce image if original pixelsize < 40 nm
+normalizedPixelsize = 40
+ImageProperties Q
+origPixelsize = $repVal5
+
+If $origPixelsize < $normalizedPixelsize
+   reduction = $normalizedPixelsize / $origPixelsize
+   ReduceImage Q $reduction
+Else
+   Copy Q A
+   reduction = 1
+Endif
+Show Q
+
+ImageProperties A
+pixelsize = $repVal5
+
+## make a jpeg image
+SaveToOtherFile A JPG JPG $image
+Echo saved $image
+
+ReportOtherItem -1
+newLabel = $navIntLabel + 1
+
+RunInShell cmd $debugStr "conda activate semmatch && \
+semmatch \
+--navfile $navfile \
+--mapLabel $MAP \
+--newLabel $newLabel \
+--output $outputNav \
+--acquire $acquire \
+--image $image \
+--pixelsize $pixelsize \
+houghCircles --reduction $reduction --maxPts $maxPts --param2 $param2 "
+
+MergeNavFile $outputNav
+If $alignChecked == 1
+   SetUserSetting MontageAlignPieces 1
+Endif
+Show Q
+EndFunction 
