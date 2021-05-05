@@ -102,11 +102,12 @@ Loop $numMesh ind
     GoToLowDoseArea V
     # Delay 5 min 
 
-    # make sure the area is OK
+    # make sure the area is OK, otherwise skip 
+    # based on normalized SD. 
     V
     ReportMeanCounts A 2
     normSD = $repVal2 / $repVal1
-    If $SD < 0.5
+    If $normSD < 0.5
         echo No enough contrast, skipping this mesh ...
         Continue 
     Endif 
