@@ -1,0 +1,17 @@
+ScriptName Cars
+# script of cartridges information 
+
+rootDir = C:\Users\xuchen\junk
+cat = { 2 3 4 5 6 7 }
+name = { 56-g1 56-g2 56-g3 56-g4 54-g2 54-g4 }
+
+SetDirectory $rootDir 
+ReportDirectory 
+
+If $#cat != $#name
+    Echo     >>> Arrays "cat" and "name" have different length, exit ...
+    Exit
+else
+    echo     cat = { $cat }
+    echo name = { $name }
+Endif
