@@ -155,7 +155,7 @@ Function HoleShot 0 0
 EndFunction 
 
 ####################################################################################
-Function Aperture 2 0 
+Function Aperture 2 0 c2 obj
 # requires AutoIT-Talos.txt running on Talos
 # C2 = 150, 70, 50, 30
 # Obj = 70, 100, 0           ; 0 = out 
