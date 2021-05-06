@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: Nov 21, 2020
-:Last-updated: May 3, 2021
+:Last-updated: May 5, 2021
 
 .. glossary::
 
@@ -434,3 +434,38 @@ Here is another example to run a python script on Mac to control a SerialEM runn
    sem.ReportLowDose()
    sem.Exit(1)
    exit()
+
+Embedding a Python Script in Regular Script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We know, both type of scripts can call each other. As things getting even fancier, now we can also embed a Python Script block directly in the Regular Script. Below is an example of that. Assuming there is a Python Script called "PyFuncs", inside that there is a Python function call "CycleTargetDefocus()", as mentioned earlier. The example below is to call that Python function directly from Regular script without a dedicated script editor for the python part. The single "hybrid" script gets the job done.
+
+.. code-block::
+   :linenos:
+   :caption: Embedded Python Script Example
+   
+   ScriptName Regular
+   #!Python 
+   #import serialem as sem
+
+   low = -1.
+   high = -2.5
+   step = 0.1
+
+   PythonScript $low $high $step
+   #!Python
+   #inlcude PyFuncs
+
+   a = SEMargStrings      # string array [-1., -2.5, 0.1] now available 
+
+   for i in range(0, len(a)):
+       a[i] = float(a[i])
+
+   CycleTargetDefocus(a[1],a[2],a[3])
+   EndPythonScript
+
+
+The embedded clode for the Pythin is bewteen "PythonScript" and "EndPythonScript". More usefully, we can even pass some of the regular script variables into
+the Python, by placing arguments after "PythonScript" and a special Python variable "SEMargStrings". In this case, SEMargStrings is a string list [ "-1.0", "-2.5", "0.1"]. We convert it into real floats so they can be given to the function. 
+
+
