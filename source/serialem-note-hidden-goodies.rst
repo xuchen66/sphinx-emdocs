@@ -440,7 +440,7 @@ Embedding a Python Script in Regular Script
 
 We know that both type of scripts can call each other. As things getting even fancier, now we can also embed a Python Script block directly in the Regular Script. Below is an example of that. Assuming there is a Python Script called "PyFuncs", inside that there is a Python function call "CycleTargetDefocus()", as mentioned earlier. The example below is to call that Python function directly from Regular script without a dedicated script editor for the python part. The single "hybrid" script gets the job done.
 
-.. code-block::
+.. code-block:: ruby
    :linenos:
    :caption: Embedded Python Script Example
    
@@ -454,12 +454,13 @@ We know that both type of scripts can call each other. As things getting even fa
    #!Python
    #inlcude PyFuncs
 
-   a = SEMargStrings      # string array [-1., -2.5, 0.1] now available 
-
+   a = SEMargStrings      # string array ["-1.", "-2.5", "0.1"] now available 
+   
+   # convert to float
    for i in range(0, len(a)):
        a[i] = float(a[i])
 
-   CycleTargetDefocus(a[1],a[2],a[3])
+   CycleTargetDefocus(a[0],a[1],a[2])
    EndPythonScript
 
 
