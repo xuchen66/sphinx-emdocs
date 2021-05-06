@@ -454,7 +454,7 @@ We know that both type of scripts can call each other. As things getting even fa
    #!Python
    #inlcude PyFuncs
 
-   a = SEMargStrings      # string array ["-1.", "-2.5", "0.1"] now available 
+   a = SEMargStrings      # string list ["-1.", "-2.5", "0.1"] now available 
    
    # convert to float
    for i in range(0, len(a)):
@@ -465,6 +465,6 @@ We know that both type of scripts can call each other. As things getting even fa
 
 
 The embedded clode for the Pythin is bewteen "PythonScript" and "EndPythonScript". More usefully, we can even pass some of the regular script variables into
-the Python, by placing arguments after "PythonScript" and a special Python variable "SEMargStrings". In this case, SEMargStrings is a string list [ "-1.0", "-2.5", "0.1"]. We convert it into real floats so they can be given to the function. 
+the Python, by placing arguments after "PythonScript" and a special Python variable "SEMargStrings". In this case, SEMargStrings is a string list [ "-1.", "-2.5", "0.1"]. We convert it into real floats so they can be given to the function. 
 
 
