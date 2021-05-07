@@ -7,7 +7,7 @@ SerialEM Note: Installation and Calibration
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2017-11-12
-:Last_Updated: 2021-01-27
+:Last_Updated: 2021-05-06
 
 .. glossary::
 
@@ -37,6 +37,11 @@ Here are steps to follow.
 .. rubric:: Step 1
 
 - Ask David for the initial system file. Normally, you would fill out a "questionnaire" available at the ftp server - http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to David. David or Guenter Resch will then create a framework file on the same ftp server for you to download. This framework file is a zip file, you can download it to local like Desktop and unzip it by double clicking on the file. Beside a sub-folder "Admin" created under "C:\\ProgramData\\SerialEM", the most important file in the framework is one initial system file called "SerialEMproperties.txt". You must have this file to get started. Please refer to the SerialEM webpage for the latest information regarding this.
+
+.. Note:: 
+
+   If on Windows the Folder Option -> View -> "Hide extensions for known types" is enabled, the property filename shown will be "Serialproperties". If you change
+   it to "SerialEMproperties.txt", it actually is "SerialEMproperties.txt.txt" which won't be read in as a valid property file. 
 
 .. rubric:: Step 2
 
