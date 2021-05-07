@@ -40,7 +40,7 @@ Here are steps to follow.
 
 .. Note:: 
 
-   If on Windows the Folder Option -> View -> "Hide extensions for known types" is enabled, the property filename shown will be "Serialproperties". If you change
+   If on Windows the Folder Option -> View -> "Hide extensions for known types" is enabled, the property filename shown will be "SerialEMproperties". If you change
    it to "SerialEMproperties.txt", it actually is "SerialEMproperties.txt.txt" which won't be read in as a valid property file. 
 
 .. rubric:: Step 2
