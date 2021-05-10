@@ -22,14 +22,18 @@ yShift = 0
 meshes = 2
 holes = 3
 
+# targetDefocus 
+tarDef = -2.0
+
 ReadOnlyUnlessAdmin
 
 # dir, cartridge and grids info
 Call Cars
 
+LocalLoopIndexes
+
 #### main loop ####
 AllowFileOverwrite 1
-LocalLoopIndexes
 
 ResetClock
 
@@ -165,13 +169,13 @@ Loop $numMesh ind
    # snapshot for the map and nav drawn info 
    SnapshotToFile 1 1 1 JPG JPG MMM_car$cat_$name_mesh$meshLable.jpg 
 
-   CallFunction HoleShot
+   CallFunction HoleShot $tarDef
 EndLoop 
 
 EndFunction 
 
 ####################################################################################
-Function HoleShot 0 0 
+Function HoleShot 1 0 tarDef 
    Echo ---> Running holeShot function ...
    OpenNewFile R_$name_mesh$meshLabel.mrc
 
@@ -181,12 +185,21 @@ Loop $numHole ind
    holeLabel = $navLabel 
    RealignToOtherItem $holeInxex
    Echo --> take hole $holeLabel <--
-   ## smart centerbeam needed here 
+   
+   # Smart beam centering, in case beam off too much  
+   GoToLowDoseArea T
+   UpdateLowDoseParams T 1
+   ChangeMag -3
+   T 
+   CenterBeamFromImage
+   RestoreLowDoseParams T
    AutoCenterBeam 
+   # focus 
+   SetTargetDefocus $tarDef
    G
+   # shot & save 
    R
    S
-
    # make JPG too 
    ReduceImage A 2
    SaveToOtherFile A JPG JPG R_car$cat_$name_mesh$meshLable_hole$holeLabel.jpg
