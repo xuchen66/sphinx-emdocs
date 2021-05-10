@@ -1,6 +1,4 @@
 ScriptName AutoScreen
-
-ScriptName AutoScreen
 #### co-Author: Chen Xu chen.xu@umassmed.edu
 #### co-Author: Albert Xu alberttxu@gmail.com
 #### Date: Apr 22, 2021
@@ -14,71 +12,78 @@ ScriptName AutoScreen
 # 3. Script "Cars" is setup 
 # 4. shift offset is set below
 # 5. offset value in Script Z has been setup right
-# 6. InputDirct is diabled 
+# 6. InputDirect is disabled 
 
 # define shifts between LMM and V mag (from shift to Marker)
-xShift = 
-yShift =
+xShift = 0 
+yShift = 0
 
 # define how many meshes and holes to find
-meshes = 4
-holes = 10
+meshes = 2
+holes = 3
 
 ReadOnlyUnlessAdmin
 
 # dir, cartridge and grids info
 Call Cars
 
-LocalLoopIndexes
-
 #### main loop ####
-
-# open navigator if not open 
-ReportIfNavOpen
-If $repVal1 == 0
-    OpenNavigator nav.nav 
-Endif 
+AllowFileOverwrite 1
+LocalLoopIndexes
 
 ResetClock
 
-Loop $#cat ind   
-    SetColumnOrGunValve 0
-    LoadCartridge $cat[$ind]
-    SetNavRegistration $cat[$ind]
-    
-    ## LMM montaging 
-    MoveStageTo 0 0
+Loop $#cat catInd   
 
-    # make and set new dir for each grid
-    #SetDirectory $rootDir
-    #MakeDirectory Car$cat[$ind]-$name[$ind]
-    #SetDirectory Car$cat[$ind]-$name[$ind] 
-    
-    AllowFileOverwrite 1
-    OpenNewMontage 0 0 LMM-Car$cat[$ind]-$name[$ind].st
-    SetColumnOrGunValve 1
-    Montage
-    NewMap
-    CloseFile
-    ## find mesh from this LMM map and go through each mesh found 
-    ReportOtherItem -1                      # last LMM map item 
-    LMMIndex = $repVal1
-    LMMNote = $navNote
+   # cartridges and sample name varivable to be used globally 
+   cat = $cat[$catInd]
+   name = $name[$catInd]
+   Echo ===> Runnning on car $cat and grid $name ...
 
-    CallFunction findMeshes $meshes         # find some mesh item and added to nav 
+   # close valves, load cartridge and load aperture 
+   SetColumnOrGunValve 0
+   LoadCartridge $cat
+   Echo    >>> LoadCartridge $cat <<<
+   SetNavRegistration $cat
+   Echo    >>> Change Aperture 150 0 <<<
+   CallFunction Aperture 150 0   
+   
+   ## LMM montaging 
+   MoveStageTo 0 0
+   OpenNewMontage 0 0 LMM-Car$cat-$name.st
+   SetColumnOrGunValve 1
+   Montage
+   NewMap
+   CloseFile
+   SaveNavigator nav.today
 
-    ReportOtherItem -1                      # last item after adding new meshes     
-    lastIndex = $repVal1
-    numMesh = $lastIndex - $LMMIndex
-    SnapshotToFile 1 1 1 JPG JPG $LMMNote.jpg
-    CallFunction AutoMesh
-    ReportClock 
+   ## find mesh from this LMM map and go through each mesh found 
+   ReportOtherItem -1                      
+   LMMIndex = $navIndex
+   # add mesh point items by external Python
+   CallFunction findMeshes $meshes         
+   # find last added point to how many meshes added 
+   ReportOtherItem -1                           
+   lastIndex = $navIndex
+   numMesh = $lastIndex - $LMMIndex
+
+   # skip to next grid if nothing is found 
+   If $numMesh == 0 
+      Echo !!! did not find any mesh, skip ... !!!
+      Continue 
+   Endif
+
+   # snapshot the LMM and with nav mesh points on 
+   SnapshotToFile 1 1 1 JPG JPG LMM-Car$cat-$name.jpg
+
+   ## run each of the meshes found 
+   CallFunction AutoMesh
+
+   ReportClock 
 EndLoop
-# back to rootDir
-# SetDirectory $rootDir
 
 # save Nav file 
-SaveNavigator nav.nav 
+#SaveNavigator nav.nav 
 
 ###################################################################################
 Function AutoMesh 0 0 
@@ -86,82 +91,108 @@ Function AutoMesh 0 0
 #   a. fix Z, update it 
 #   b. make MMM montage map 
 
+Echo   ---> Running Automesh ...
+Echo $name
+
 Loop $numMesh ind 
-    # goto the found mesh 
-    SetProperty RealignItemMaxLMfield 700   # enable LMM Realign
-    CallFunction Aperture 150 0      # obj = 0 -> out 
+   meshIndex = $LMMIndex + $ind 
 
-    meshIndex = $LMMIndex + $ind 
-    RealignToOtherItem $meshIndex 0         # realign to the mesh 
-    ResetImageShift 2
-    Copy A P 
-    AcquireToMatchBuffer P 
-    AlignTo P 0 1
-    
-    # allow lenses to settle
-    GoToLowDoseArea V
-    # Delay 5 min 
+   # get ready to realign to the mesh 
+   Echo >>> Enabling LMM realign <<< 
+   SetProperty RealignItemMaxLMfield 700   # enable LMM Realign
+   Echo >>> Change Aperture 150 0 <<<
+   CallFunction Aperture 150 0      # obj = 0 -> out 
 
-    # make sure the area is OK, otherwise skip 
-    # based on normalized SD. 
-    V
-    ReportMeanCounts A 2
-    normSD = $repVal2 / $repVal1
-    If $normSD < 0.5
-        echo No enough contrast, skipping this mesh ...
-        Continue 
-    Endif 
+   # get mesh label and realign to it.
+   ReportOtherItem $meshIndex
+   meshLabel = $navLabel
+   RealignToOtherItem $meshIndex 0         # realign to the mesh 
+   ResetImageShift 2
+   Copy A P 
+   AcquireToMatchBuffer P 
+   AlignTo P 0 1
+   
+   # allow lenses to settle
+   GoToLowDoseArea V
+   # Delay 5 min 
 
-    # MMM - View mag, fix Z  
-    #SetProperty RealignItemMaxLMfield 3.5
-    CallFunction Aperture 50 70 
-    MoveStage $xShift $yShift 
-    Call Z                                  # Z is a script to adjust Z using beam tilt 
-    UpdateItemZ
+   # make sure the area is OK, otherwise skip 
+   # based on normalized SD. 
+   #V
+   #ReportMeanCounts A 2
+   #normSD = $repVal2 / $repVal1
+   #If $normSD < 0.5
+   #   echo No enough contrast, skipping this mesh ...
+   #  Continue 
+   #Endif 
 
-    # MMM map 
-    SetUserSetting MontageUseViewInLD 1 1
-    SetUserSetting MontageAlignPieces 1 1
-    SetUserSetting MontageVerySloppy 0 1
-    AllowFileOverwrite 1
-    OpenNewMontage 4 6  MMM_$LMMNote_mesh$mesh.map
-    SetMontageParams 1 576 410 5760 4092 1 1        
-    Echo   --> Acquire MMM map ...
-    Montage 
-    NewMap 
-    CloseFile
-    
-    # find holes and shoot 
-    ReportOtherItem -1  
+   # MMM - View mag, fix Z  
+   Echo >>> Disabling LMM realign <<< 
+   SetProperty RealignItemMaxLMfield 3.5
+   Echo >>> Change Aperture 50 70 <<<
+   CallFunction Aperture 50 70 
+   MoveStage $xShift $yShift 
+   Call Z                                  
+   UpdateItemZ
 
-    # last map item 
-    MMMIndex = $repVal1
-    MMMNote = $navNote
+   # MMM map 
+   SetUserSetting MontageUseViewInLD 1 1
+   SetUserSetting MontageAlignPieces 1 1
+   SetUserSetting MontageVerySloppy 0 1
+   AllowFileOverwrite 1
+   #OpenNewMontage 4 6 MMM_car$cat_$name_mesh$meshLable.map
+   OpenNewMontage 1 2 MMM_car$cat_$name_mesh$meshLable.map
+   SetMontageParams 1 576 410 5760 4092 1 1        
+   Echo   --> Acquire MMM map ...
+   Montage 
+   NewMap 
+   CloseFile
 
-    Call houghCircles $holes
+   # find holes and how many 
+   ReportOtherItem -1  
+   MMMIndex = $navIndex
+   CallFunction findHoles $holes
+   # last found point 
+   ReportOtherItem -1                      # last item after adding new meshes 
+   lastIndex = $navIndex 
+   numHole = $lastIndex - $MMMIndex
 
-    ReportOtherItem -1                      # last item after adding new meshes 
-    lastIndex = $repVal1
-    numHole = $lastIndex - $mapIndex
-    AllowFileOverwrite 1
-    SnapshotToFile 1 1 1 JPG JPG $MMMNote.jpg 
-    CallFunction HoleShot
+   # skip to next mesh if no hole is found from this one 
+   If $numHole == 0 
+      Echo !!! No holes are found, skip to next mesh ... !!!   
+   Endif
+
+   # snapshot for the map and nav drawn info 
+   SnapshotToFile 1 1 1 JPG JPG MMM_car$cat_$name_mesh$meshLable.jpg 
+
+   CallFunction HoleShot
 EndLoop 
+
 EndFunction 
 
 ####################################################################################
 Function HoleShot 0 0 
-    OpenNewFile R_$mapNote.mrc
-    Loop $numHole ind
-        holeIndex = $mapIndex + $ind
-        Echo >>> take hole $holeIndex
-        R
-        S
+   Echo ---> Running holeShot function ...
+   OpenNewFile R_$name_mesh$meshLabel.mrc
 
-        echo ... ReduceImage A 2
-        echo ... SaveToOtherFile A JPG JPG R_$mapNote_hole$holeIndex.jpg
-        
-    EndLoop 
+Loop $numHole ind
+   holeIndex = $MMMIndex + $ind
+   ReportOtherItem $holeIndex 
+   holeLabel = $navLabel 
+   RealignToOtherItem $holeInxex
+   Echo --> take hole $holeLabel <--
+   ## smart centerbeam needed here 
+   AutoCenterBeam 
+   G
+   R
+   S
+
+   # make JPG too 
+   ReduceImage A 2
+   SaveToOtherFile A JPG JPG R_car$cat_$name_mesh$meshLable_hole$holeLabel.jpg
+   
+EndLoop 
+CloseFile
 EndFunction 
 
 ####################################################################################
@@ -175,12 +206,13 @@ EndFunction
 
 ####################################################################################
 Function findMeshes 1 0 numMesh
+call Cars 
 
 Debug = 0
 
 ### semmatch arguments
 maxPts = $numMesh      # return subset of all found points
-minSize = 30           # (microns) - find squares at least this size
+minSize = 35           # (microns) - find squares at least this size
 minBorder = 400        # (microns) - find squares at least this far away from the edge of the map
 
 # maps will be dynamically binned down to the following pixel size
@@ -198,6 +230,8 @@ Endif
 ReportNavFile 1
 navfile = $reportedValue1$reportedValue2
 navdir = $reportedValue3
+navdir = $rootDir
+echo $navdir
 SetDirectory $navdir
 SaveNavigator
 
@@ -265,8 +299,8 @@ Show Q
 EndFunction 
 
 ############################################################################
-ScriptName houghCircles numHoles
-
+Function findHoles 1 0 numHoles
+call Cars
 # If something goes wrong, set Debug = 1
 Debug = 0               # True = 1 ; False = 0
 
@@ -287,6 +321,7 @@ Endif
 ReportNavFile 1
 navfile = $reportedValue1$reportedValue2
 navdir = $reportedValue3
+navdir = $rootDir 
 SetDirectory $navdir
 SaveNavigator
 
