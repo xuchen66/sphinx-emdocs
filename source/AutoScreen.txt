@@ -13,19 +13,18 @@ ScriptName AutoScreen
 # 4. shift offset is set below
 # 5. offset value in Script Z has been setup right
 # 6. InputDirect is disabled 
+# 7. before start, Eucentric focus for R is set right
 
 # define shifts between LMM and V mag (from shift to Marker)
-xShift = 0 
-yShift = 0
+xShift = 8.37
+yShift = 3.4
 
 # define how many meshes and holes to find
-meshes = 2
+meshes = 4
 holes = 3
 
 # targetDefocus 
-tarDef = -2.0
-
-ReadOnlyUnlessAdmin
+tarDef = -2.ReadOnlyUnlessAdmin
 
 # dir, cartridge and grids info
 Call Cars
@@ -59,7 +58,7 @@ Loop $#cat catInd
    Montage
    NewMap
    CloseFile
-   SaveNavigator nav.today
+   SaveNavigator nav-today.nav
 
    ## find mesh from this LMM map and go through each mesh found 
    ReportOtherItem -1                      
@@ -122,19 +121,21 @@ Loop $numMesh ind
 
    # make sure the area is OK, otherwise skip 
    # based on normalized SD. 
-   #V
-   #ReportMeanCounts A 2
-   #normSD = $repVal2 / $repVal1
-   #If $normSD < 0.5
-   #   echo No enough contrast, skipping this mesh ...
-   #  Continue 
-   #Endif 
+   Echo >>> Change Aperture 50 70 <<<
+   CallFunction Aperture 50 70 
+   V
+   ReportMeanCounts A 2
+   normSD = $repVal2 / $repVal1
+   If $normSD < 0.17
+      echo >>> normSD < 0.17, No enough contrast, skipping this mesh ...<<<
+     Continue 
+   else
+      echo normSD = $normSD  
+   Endif 
 
    # MMM - View mag, fix Z  
    Echo >>> Disabling LMM realign <<< 
    SetProperty RealignItemMaxLMfield 3.5
-   Echo >>> Change Aperture 50 70 <<<
-   CallFunction Aperture 50 70 
    MoveStage $xShift $yShift 
    Call Z                                  
    UpdateItemZ
@@ -144,8 +145,8 @@ Loop $numMesh ind
    SetUserSetting MontageAlignPieces 1 1
    SetUserSetting MontageVerySloppy 0 1
    AllowFileOverwrite 1
-   #OpenNewMontage 4 6 MMM_car$cat_$name_mesh$meshLable.map
-   OpenNewMontage 1 2 MMM_car$cat_$name_mesh$meshLable.map
+   #OpenNewMontage 4 6 MMM_car$cat_$name_mesh$meshLabel.map
+   OpenNewMontage 1 2 MMM_car$cat_$name_mesh$meshLabel.map
    SetMontageParams 1 576 410 5760 4092 1 1        
    Echo   --> Acquire MMM map ...
    Montage 
@@ -167,7 +168,7 @@ Loop $numMesh ind
    Endif
 
    # snapshot for the map and nav drawn info 
-   SnapshotToFile 1 1 1 JPG JPG MMM_car$cat_$name_mesh$meshLable.jpg 
+   SnapshotToFile 1 1 1 JPG JPG MMM_car$cat_$name_mesh$meshLabel.jpg 
 
    CallFunction HoleShot $tarDef
 EndLoop 
@@ -183,16 +184,19 @@ Loop $numHole ind
    holeIndex = $MMMIndex + $ind
    ReportOtherItem $holeIndex 
    holeLabel = $navLabel 
-   RealignToOtherItem $holeInxex
+   RealignToOtherItem $holeIndex 0
    Echo --> take hole $holeLabel <--
    
    # Smart beam centering, in case beam off too much  
+   Echo >>> Smart Beam Centering <<<
+   SetUserSetting LowDoseTieFocusTrial 0  
    GoToLowDoseArea T
-   UpdateLowDoseParams T 1
+   UpdateLowDoseParams T 
    ChangeMag -3
    T 
    CenterBeamFromImage
    RestoreLowDoseParams T
+   RestoreLowDoseParams F
    AutoCenterBeam 
    # focus 
    SetTargetDefocus $tarDef
@@ -202,7 +206,7 @@ Loop $numHole ind
    S
    # make JPG too 
    ReduceImage A 2
-   SaveToOtherFile A JPG JPG R_car$cat_$name_mesh$meshLable_hole$holeLabel.jpg
+   SaveToOtherFile A JPG JPG R_car$cat_$name_mesh$meshLabel_hole$holeLabel.jpg
    
 EndLoop 
 CloseFile
@@ -225,8 +229,8 @@ Debug = 0
 
 ### semmatch arguments
 maxPts = $numMesh      # return subset of all found points
-minSize = 35           # (microns) - find squares at least this size
-minBorder = 400        # (microns) - find squares at least this far away from the edge of the map
+minSize = 40          # (microns) - find squares at least this size
+minBorder = 100        # (microns) - find squares at least this far away from the edge of the map
 
 # maps will be dynamically binned down to the following pixel size
 
@@ -302,7 +306,7 @@ semmatch \
 --acquire $acquire \
 --image $image \
 --pixelsize $pixelsize \
-findMeshes --maxPts $maxPts --minSize $minSize "
+findMeshes --maxPts $maxPts --minSize $minSize --minBorder $minBorder"
 
 MergeNavFile $outputNav
 If $alignChecked == 1
