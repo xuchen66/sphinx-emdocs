@@ -418,7 +418,8 @@ Here is another example to run a python script on Mac to control a SerialEM runn
    import serialem as sem
    sem.ConnectToSEM(48888,'192.168.1.16')
    sem.ReportMag()
-   ld = sem.ReportLowDose()
+   ld = sem.ReportLowDose()        # tuple
+   ld = float(ld[0])               # float
    if ld == 0:
       sem.SetLowDoseMode(1)
 
