@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: Nov 21, 2020
-:Last-updated: May 5, 2021
+:Last-updated: May 19, 2021
 
 .. glossary::
 
@@ -435,6 +435,12 @@ Here is another example to run a python script on Mac to control a SerialEM runn
    sem.ReportLowDose()
    sem.Exit(1)
    exit()
+
+Afer saving to a file (CycleLD.py), we can then run it from a typical python environment normally. 
+
+.. code-block::
+
+   $ python CycleLD.py
 
 Embedding a Python Script in Regular Script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
