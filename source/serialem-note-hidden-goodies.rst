@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: Nov 21, 2020
-:Last-updated: May 19, 2021
+:Last-updated: May 20, 2021
 
 .. glossary::
 
@@ -355,7 +355,15 @@ Running the "Python" script gives this in log window:
 Python External Control
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-You can also use Python Console to control SerialEM processs. SerialEM acts as a complete embedded system in this case, and Python is completely external. 
+You can also use Python Console to control SerialEM processs. SerialEM acts as a complete embedded system in this case, and Python is completely external. If you run Python on a different computer from the Windows computer on which SerialEM is installed, you have to build a SerialEM Python Module on your system. Here is an example to build the SerialEM Python Module on a Mac. 
+
+.. code-block::
+
+   $ hg clone http://bio3d.colorado.edu/PythonModule
+   $ cd PythonModule
+   $ python setup.py build
+
+Below is screen output when running the python control on the same Windows computer that SerialEM is running on. 
 
 .. code-block:: ruby
    :caption: Python External Control - Console
@@ -386,17 +394,16 @@ You can also use Python Console to control SerialEM processs. SerialEM acts as a
    (1.0, 3.0)
    >>>
    
-Below is Python external control from a Mac. 
+Below is an example of an interactive Python external control from a Mac. 
 
 .. code-block:: ruby
    :caption: Python Console on Mac (to connect to SerialEM on Windows (192.168.1.16))
    
-   (base) UMWMLF8LVCJ% python                     ~/tem/SerialEM/build/lib.macosx-10.9-x86_64-3.8
+   (base) UMWMLF8LVCJ% python                     
    Python 3.8.5 (default, Sep  4 2020, 02:22:02) 
    [Clang 10.0.0 ] :: Anaconda, Inc. on darwin
    Type "help", "copyright", "credits" or "license" for more information.
    >>> import sys
-   KeyboardInterrupt
    >>> sys.path.insert(0,'/Users/xuchen/tem/SerialEM/build/lib.macosx-10.9-x86_64-3.8')
    >>> import serialem as sem
    >>> sem.ConnectToSEM(48888,'192.168.1.16')
@@ -406,7 +413,7 @@ Below is Python external control from a Mac.
    >>> sem.ReportLowDose()
    (1.0, 0.0)
    >>> 
-
+   
 Here is another example to run a python script on Mac to control a SerialEM runnning on Windows:
 
 .. code-block:: 
@@ -445,7 +452,7 @@ Afer saving to a file (CycleLD.py), we can then run it from a typical python env
 Embedding a Python Script in Regular Script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We know that both type of scripts can call each other. As things getting even fancier, now we can also embed a Python Script block directly in the Regular Script. Below is an example of that. Assuming there is a Python Script called "PyFuncs", inside that there is a Python function call "CycleTargetDefocus()", as mentioned earlier. The example below is to call that Python function directly from Regular script without a dedicated script editor for the python part. The single "hybrid" script gets the job done.
+We know that both type of scripts can call each other. As things getting even fancier, now we can also embed a Python Script block directly in the Regular Script. Below is an example of that. Assuming there is a Python Script called "PyFuncs", inside that there is a Python function called "CycleTargetDefocus()", as mentioned earlier. The example below is to call that Python function directly from Regular script without a dedicated script editor for the python part. The single "hybrid" script gets the job done.
 
 .. code-block:: ruby
    :linenos:
