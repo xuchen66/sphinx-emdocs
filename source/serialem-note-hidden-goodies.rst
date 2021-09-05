@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: Nov 21, 2020
-:Last-updated: May 20, 2021
+:Last-updated: Sept 4, 2021
 
 .. glossary::
 
@@ -359,7 +359,7 @@ You can also use Python Console to control SerialEM processs. SerialEM acts as a
 
 .. code-block::
 
-   $ hg clone http://bio3d.colorado.edu/PythonModule
+   $ hg clone http://bio3d.colorado.edu/SerialEM/PythonModule
    $ cd PythonModule
    $ python setup.py build
 
