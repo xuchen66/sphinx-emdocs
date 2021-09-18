@@ -39,6 +39,7 @@ The New "Acquire at Items" Dialog Window
 Below is the new dialog window.
 
 **Fig.1 Snapshot Tool Window** (click for full size image)
+
 .. image:: ../images/acquire-full.JPG
    :scale: 30 %
    :alt: full dialog window
@@ -49,7 +50,7 @@ Yes, it looks quite different from previous versions. Here are a few:
 - Left side of the windows is for Primary actions and bunch of options. Right side is for helping tasks to be selected and setup to use. 
 - Multiple Shot is new on primary action list compared to before. 
 - For each tasks on the right side, there are 1) checkbox to enable/disable 2) task push button to configure order and when 3) "setup" button to engage actual conditions. 
-- non-selected options (on left) and tasks (on right) can be hidden respectively.
+- non-selected options (on left) and tasks (on right) can be hidden respectively, to make it more focused. 
 
 
 
