@@ -58,6 +58,7 @@ SerialEM Notes
    serialem-note-more-about-XY-position
    fasttomo
    serialem-note-hidden-goodies
+   serialem-note-control-without-scripting
 
 Index
 *****
