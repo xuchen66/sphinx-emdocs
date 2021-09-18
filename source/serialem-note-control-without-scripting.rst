@@ -1,8 +1,8 @@
 
-.. _SerialEM_Setup_Dummy:
+.. _scriptless_control:
 
-SerialEM Note: Adding Point Items by Template Matching
-======================================================
+SerialEM Note: Scriptless Control
+=================================
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
@@ -15,10 +15,7 @@ SerialEM Note: Adding Point Items by Template Matching
       Since 4.0, sophisticated control without scripting has become possible. In this note, I give an example with some explanation how to do
       this for a typical single particle data collection. 
       
-
-.. image:: ../images/template_match1.png
-   :scale: 50 %
-
+      
 .. _background:
 
 Background Information
@@ -42,7 +39,7 @@ The New "Acquire at Items" Dialog Window
 Below is the new dialog window.
 
 .. image:: ../images/acquire-full.JPG
-   :scale: 50 %
+   :scale: 25 %
 
 1. First, select a map item from the navigator. You can double click to load the image, or single click to simply highlight.
 
