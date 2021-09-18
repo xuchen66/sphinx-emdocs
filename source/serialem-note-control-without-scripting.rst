@@ -38,30 +38,20 @@ The New "Acquire at Items" Dialog Window
 
 Below is the new dialog window.
 
+**Fig.1 Snapshot Tool Window** (click for full size image)
 .. image:: ../images/acquire-full.JPG
-   :scale: 25 %
+   :scale: 30 %
+   :alt: full dialog window
+   :align: center
 
-1. First, select a map item from the navigator. You can double click to load the image, or single click to simply highlight.
+Yes, it looks quite different from previous versions. Here are a few:
 
-- Before running the script, you can optionally crop out a template in SerialEM. See TemplateMatch_GUI for details.
+- Left side of the windows is for Primary actions and bunch of options. Right side is for helping tasks to be selected and setup to use. 
+- Multiple Shot is new on primary action list compared to before. 
+- For each tasks on the right side, there are 1) checkbox to enable/disable 2) task push button to configure order and when 3) "setup" button to engage actual conditions. 
+- non-selected options (on left) and tasks (on right) can be hidden respectively.
 
-2. Run TemplateMatch_GUI
 
-|template_match2| |template_match3|
-
-.. |template_match2| image:: ../images/template_match2.png
-   :width: 45%
-
-.. |template_match3| image:: ../images/template_match3.png
-   :width: 45%
-
-- +/- to zoom in and out.
-
-- To crop, just click and drag.
-
-- Change the threshold and click search until you are satisfied with the result.
-
-- Click Save and Quit to merge the generated points into SerialEM. To quit without saving, close the window from the top.
 
 
 .. code-block:: ruby
