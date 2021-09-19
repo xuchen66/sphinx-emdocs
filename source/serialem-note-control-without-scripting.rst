@@ -49,8 +49,15 @@ Yes, it looks quite different from previous versions. Here are a few:
 
 - Left side of the windows is for Primary actions and bunch of options. Right side is for helping tasks to be selected and setup to use. 
 - Multiple Shot is new on primary action list compared to before. 
-- For each tasks on the right side, there are 1) checkbox to enable/disable 2) task push button to configure order and when 3) "setup" button to engage actual conditions. 
-- non-selected options (on left) and tasks (on right) can be hidden respectively, to make it more focused. 
+- For each task on the right side, there are three things to set. 
+
+1. checkbox to enable/disable the task.
+
+2. task push button to configure order and how often the task is run.  
+
+3. "setup" button to engage actual conditions. 
+
+4. non-selected options (on left) and tasks (on right) can be hidden respectively, to make the window neater and more focused. 
 
 .. _dialog_brief:
 
@@ -63,7 +70,7 @@ If I hide the non-selected, I get a short, more focused dialog windows like belo
 
 .. image:: ../images/final-data.JPG
    :scale: 30 %
-   :alt: full dialog window
+   :alt: config dialog window
    :align: center
    
 This setup can completely replace scripting for our single particle data collection pipeline. 
