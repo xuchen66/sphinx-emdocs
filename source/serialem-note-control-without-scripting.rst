@@ -51,13 +51,11 @@ Yes, it looks quite different from previous versions. Here are a few:
 - Multiple Shot is new on primary action list compared to before. 
 - For each task on the right side, there are three things to set. 
 
-1. checkbox to enable/disable the task.
+   1. checkbox to enable/disable the task.
+   2. task push button to configure order and how often the task is run.  
+   3. "setup" button to engage actual conditions. 
 
-2. task push button to configure order and how often the task is run.  
-
-3. "setup" button to engage actual conditions. 
-
-4. non-selected options (on left) and tasks (on right) can be hidden respectively, to make the window neater and more focused. 
+- non-selected options (on left) and tasks (on right) can be hidden respectively, to make the window neater and more focused. 
 
 .. _dialog_brief:
 
