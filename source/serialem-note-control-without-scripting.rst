@@ -78,5 +78,9 @@ This setup can completely replace scripting for our single particle data collect
 A Couple of Extra Notes
 -----------------------
 
-To be continued...
+1. if the "Cycle defocus..." under "Primary Action-related Options" is checked, the target defocus will change for every "Acquire at Items" cycle run. There is no longer needed to have a script for the cycling target defocus. 
+
+2. If "Realign To Item" and "Align to template" both are checked, normally, it will perform full routine of "realign to item" first, then followed by a template aligning using pre-defined template from its "setup". If the option "Hybrid..." is also checked, the 2nd round of realign will be skipped and replaced by the template aligning. This saves a few seconds. However, when the stage is not very reliable or when the template area is fairly small, it works better without "Hybrid..." being used. 
+
+
    
