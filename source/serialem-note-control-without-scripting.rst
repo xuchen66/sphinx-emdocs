@@ -41,11 +41,11 @@ Below is the new full dialog window.
 **Fig.1 Full Dialog Window - Acquire at Items** (click for full size image)
 
 .. image:: ../images/acquire-full.JPG
-   :scale: 30 %
+   :scale: 50 %
    :alt: full dialog window
    :align: center
 
-Yes, it looks quite different from previous versions. Here are a few:
+Indeed, it looks quite different from previous versions. Here are a few things to mention:
 
 - Left side of the windows is for Primary actions and bunch of options. Right side is for helping tasks to be selected and setup to use. 
 - Multiple Shot is new on primary action list compared to before. 
@@ -67,7 +67,7 @@ If I hide the non-selected, I get a short, more focused dialog windows like belo
 **Fig.2 Configured Dialog Windows - an exmaple** (click for full size image)
 
 .. image:: ../images/final-data.JPG
-   :scale: 30 %
+   :scale: 50 %
    :alt: config dialog window
    :align: center
    
