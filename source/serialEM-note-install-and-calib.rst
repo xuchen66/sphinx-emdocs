@@ -232,8 +232,7 @@ calibrated.
 
 .. rubric:: Step 19
 
-- repeat Beam Intensity Calibration for all other spot sizes likely to be
-used: 3, 4, 5, 6, 8, 9.
+- repeat Beam Intensity Calibration for all other spot sizes likely to be used: 3, 4, 5, 6, 8, 9.
 
 .. rubric:: Step 20
 
