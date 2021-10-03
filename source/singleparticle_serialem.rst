@@ -31,10 +31,10 @@ Check Scope Condition and Perform Tuning
 
 Before you commit large dataset time, it is always a good idea to check scope condition to make sure everything is good. Calm down and be patient! Here are a few things I usually check. 
 
--  Check Gun Lens, Extracting Voltage, High Tension are set at correct values.
--  Stare for a few seconds at the focused beam at the highest SA mag, to see if the beam has good shape and there is no shaking or jumping.  
--  From Direct Alignment, do gun tilt, beam tilt PP, Coma-Free alignment if needed. 
--  Check Thon Ring at roughly the same condition (mag, dose) as your image condition. Make sure there is no obvious frequency cutoff, and Thon Ring reaches the resolution as in good condition. 
+* Check Gun Lens, Extracting Voltage, High Tension are set at correct values.
+* Stare for a few seconds at the focused beam at the highest SA mag, to see if the beam has good shape and there is no shaking or jumping.  
+* From Direct Alignment, do gun tilt, beam tilt PP, Coma-Free alignment if needed. 
+* Check Thon Ring at roughly the same condition (mag, dose) as your image condition. Make sure there is no obvious frequency cutoff, and Thon Ring reaches the resolution as in good condition. 
 
  .. _prepare_camera:
 
