@@ -5,7 +5,8 @@ CM120 Operation Instruction
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
-:Date: 2016-8-8
+:Date-created: Aug 8, 2016
+:Date-Updated: Oct 3, 2021
 
 .. glossary::
 
@@ -268,9 +269,7 @@ Here are some typical magnificaton setup for Low-Dose condition.
      - 60,000
    * - Record
      - 60,000
-     - 16
-   
-
+     
 One might use diffraction mode to ``Search``, which uasally gives better contrast but the "image" might be distorted. The final magnification depends on target pixelsize on image. If possible, use the same magnificagion for both ``Focus`` and ``Record`` to eliminate the dofocus offset between the two magnifications. The off-axis distanse is usually about 1.5 - 2.0 microns. 
 
 Align an identified area under ``Exposure`` and ``Search``
