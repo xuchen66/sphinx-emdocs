@@ -188,9 +188,7 @@ calibrated.
 
 .. rubric:: Step 11
 
-- Take the tilting axis value (e.g. 86.1) from step 8 - stage shift
-calibration, edit it into the 2nd "999" in *SerialEMproperties.txt* like
-below.
+- Take the tilting axis value (e.g. 86.1) from step 8 - stage shift calibration, edit it into the 2nd "999" in *SerialEMproperties.txt* like below.
 
 .. code-block:: ruby
 
