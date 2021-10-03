@@ -256,15 +256,20 @@ Magnification setup for three modes
 
 Here are some typical magnificaton setup for Low-Dose condition.
 
-+--------+----------+
-| Mode   | Mag. (X) |
-+========+==========+
-| Search |   3000   |
-+--------+----------+
-| Focus  |  60,000  |
-+--------+----------+
-| Record |  60,000  |
-+--------+----------+
+.. list-table:: **A Typical Low-Dose Setup**
+   :widths: 25 25
+   :header-rows: 1
+
+   * - Mode
+     - Mag.(X)
+   * - Search
+     - 3000
+   * - Focus
+     - 60,000
+   * - Record
+     - 60,000
+     - 16
+   
 
 One might use diffraction mode to ``Search``, which uasally gives better contrast but the "image" might be distorted. The final magnification depends on target pixelsize on image. If possible, use the same magnificagion for both ``Focus`` and ``Record`` to eliminate the dofocus offset between the two magnifications. The off-axis distanse is usually about 1.5 - 2.0 microns. 
 
