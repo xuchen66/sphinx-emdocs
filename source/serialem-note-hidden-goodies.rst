@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: Nov 21, 2020
-:Last-updated: Sept 4, 2021
+:Last-updated: Oct 2, 2021
 
 .. glossary::
 
@@ -247,8 +247,18 @@ Example 5 - Scripting With Python
 SerialEM Python Code Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Around March 23, 2021, scripting also supports python. SerialEM native collection of commands act like a module. Here is an example 
-of the same CycleTargetFocus function in Python code. 
+Around March 23, 2021, scripting also supports python. SerialEM native collection of commands act like a module. To enable python support, I have these lines in the property file.
+
+.. code-block:: python
+   :linenos:
+   :caption: Properties for Python Support
+   
+   PathToPython 3.9 C:/Users/xuchen/AppData/Local/Programs/Python/Python39
+   PythonModulePath C:\Program Files\SerialEM\PythonModules
+   EnableExternalPython	1
+   ScriptMonospaceFont	Consolas
+
+Here is an example of the same CycleTargetFocus function in Python code. 
 
 .. code-block:: python
    :linenos:
