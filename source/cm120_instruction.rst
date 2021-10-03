@@ -258,7 +258,7 @@ Magnification setup for three modes
 Here are some typical magnificaton setup for Low-Dose condition.
 
 .. list-table:: **A Typical Low-Dose Setup**
-   :widths: 25 25
+   :widths: 30 30
    :header-rows: 1
 
    * - Mode
