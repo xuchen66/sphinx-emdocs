@@ -253,10 +253,10 @@ Around March 23, 2021, scripting also supports python. SerialEM native collectio
    :linenos:
    :caption: Properties for Python Support
    
-   PathToPython 3.9 C:/Users/xuchen/AppData/Local/Programs/Python/Python39
+   PathToPython 3.9 C:\Users\xuchen\AppData\Local\Programs\Python\Python39
    PythonModulePath C:\Program Files\SerialEM\PythonModules
-   EnableExternalPython	1
    ScriptMonospaceFont	Consolas
+   EnableExternalPython	1
 
 Here is an example of the same CycleTargetFocus function in Python code. 
 
