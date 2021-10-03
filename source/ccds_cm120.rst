@@ -40,6 +40,14 @@ The table below lists some basic properties of these two cameras.
 
 **Table.1 Some basic properties**
 
+.. list-table:: **Table.1 Some basic properties**
+   :widths: 50 25 25
+   :header-rows: 1
+
+   * - Property 
+     - Gatan Orius 832
+     - Tietz TemCam 224-HD
+
 ..  +--------------------------+-------------------+----------------------+
     |  Property                | Gatan Orius 832   | Tietz TemCam 224-HD  |
     +==========================+===================+======================+
