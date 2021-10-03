@@ -41,7 +41,7 @@ The table below lists some basic properties of these two cameras.
 **Table.1 Some basic properties**
 
 .. list-table:: **Table.1 Some basic properties**
-   :widths: 50 25 25
+   :widths: 30 25 25
    :header-rows: 1
 
    * - Property 
@@ -50,6 +50,18 @@ The table below lists some basic properties of these two cameras.
    * - Format
      - 3768 x 2672
      - 2048 x 2048
+   * - Physical PixelSize (μm)
+     - 9.0
+     - 24.0 
+   * - Digitization (bit)
+     - 14 
+     - 16
+   * - Light Coupling Mechanism
+     - Fiber Optic
+     - Fiber Optic
+   * - Mounting Position
+     - sided-mount
+     - bottom-mount
 
 ..  +--------------------------+-------------------+----------------------+
     |  Property                | Gatan Orius 832   | Tietz TemCam 224-HD  |
@@ -166,6 +178,134 @@ Pixlesize Calibration for Both Cameras
 The table below list pixelsize at specimen level for different scope magnifications. Please note that with large screen position as Up and Down, the CM120 TEM interface displays different mag values. There is no difference in term of lens current in this case - this is due to the recording media being at different "collecting" level along the projection. ScreenDown mag means at screen level and ScreenUp means at film level. We run Orius with screen Down and Tietz with Screen Up.
 
 The magnifications display in TEM interface are nominal. For actual magnification or pixelsize at specimen for a CCD camera, careful calibration is needed. Below is the calibration table for both cameras.
+
+.. list-table:: **Table.2 Pixelsizes**
+   :widths: 25 25 25
+   :header-rows: 1
+
+   * - Mag_Screen UP/DOWN (X)
+     - Pixelsize_Orius(nm) bin=1
+     - Pixelsize_Tietz(nm) bin=1
+   * - 35 / 31                
+     - 1134                      
+     - 464
+   * - 45 / 40                 
+     - 882                        
+     - 361
+   * - 60 / 54                 
+     - 661                        
+     - 270                       
+   * - 80 / 71                 
+     - 496                        
+     - 203                       
+   * - 110 / 97                
+     - 361                       
+     - 148                       
+   * - 150 / 135              
+     - 265                        
+     - 108                       
+   * - 190 / 170               
+     - 209                        
+     - 85.4                      
+   * - 260 / 230              
+     - 153                        
+     - 62.4                      
+   * - 340 / 300               
+     - 117                        
+     - 47.7                      
+   * - 450 / 400               
+     - 87.3                       
+     - 36.1                      
+   * - 600 / 530               
+     - 66.1                       
+     - 27.0                      
+   * - 800 / 710               
+     - 49.6                       
+     - 20.3                      
+   * - 1000 / 880              
+     - 39.7                       
+     - 16.2                      
+   * - 1400 / 1259            
+     - 28.4                       
+     - 11.6                      
+   * - 1800 / 1040             
+     - 22.3                       
+     - 9.11                      
+   * - 2300 / 2050            
+     - 17.7                       
+     - 7.22                      
+   * - 3000 / 2650             
+     - 13.1                       
+     - 5.22                      
+   * - 3800 / 3400            
+     - 10.3                       
+     - 4.18                      
+   * - 5000 / 4400             
+     - 8.03                       
+     - 3.27                      
+   * - 6300 / 5600            
+     - 6.09                       
+     - 2.47                      
+   * - 8000 / 7100            
+     - 4.84                       
+     - 1.96                      
+   * - 10000 / 8800           
+     - 3.94                       
+     - 1.59                      
+   * - 13000 / 11500          
+     - 3.01                      
+     - 1.23                      
+   * - 17000 / 15000         
+     - 2.34                       
+     - 0.948                     
+   * - 22000 / 19500           
+     - 1.94                      
+     - 0.836                     
+   * - 28000 / 25000         
+     - 1.50                      
+     - 0.648                     
+   * - 35000 / 31000         
+     - 1.18                      
+     - 0.508                     
+   * - 45000 / 40000         
+     - 0.909                     
+     - 0.392                     
+   * - 60000 / 53000          
+     - 0.647                     
+     - 0.279                     
+   * - 75000 / 66000          
+     - 0.523                      
+     - 0.225                     
+   * - 100000 / 88000         
+     - 0.404                     
+     - 0.164                     
+   * - 125000 / 110000        
+     - 0.323                     
+     - 0.131                     
+   * - 160000 / 140000        
+     - 0.253                      
+     - 0.102                     
+   * - 200000 / 175000        
+     - 0.202                      
+     - 0.082                     
+   * - 260000 / 230000        
+     - 0.155                     
+     - 0.063                     
+   * - 340000 / 300000        
+     - 0.119                      
+     - 0.048                     
+   * - 430000 / 380000        
+     - 0.094                     
+     - 0.038                     
+   * - 580000 / 510000        
+     - 0.070                      
+     - 0.028                     
+   * - 750000 / 660000        
+     - 0.054                     
+     - 0.022                     
+   
+
+
 
 +-----------------------+---------------------------+---------------------------+
 |Mag_Screen UP/DOWN (X) | Pixelsize_Orius(nm) bin=1 | Pixelsize_Tietz(nm) bin=1 |
