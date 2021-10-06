@@ -6,7 +6,7 @@ Align Movie Frames with SerialEM and IMOD Programs
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date Created: Dec 17, 2017
-:Last Updated: Dec 17, 2017
+:Last Updated: Oct 6, 2021
 
 .. glossary::
 
@@ -174,7 +174,17 @@ From November 23, *alignframes* and *framewatcher* also have options to do dose 
 
 where the total dose on sample is 39.8 electrons/A\ :sup:`2`, accelerating voltage is 200kV. 
 
-If on the storage tank, we have a few subfolders to make things more organized, and we use K2 computer to align, we cando someting like this:
+Here is another example of using option "-after" - to copy the jpg files into a DropBox folder which can be shared with remote user conveniently. 
+
+.. code-block:: none
+   
+   framewatcher -gpu 0 -bin 2 \
+      -o /cygdrive/y/Test/alignedMRC \
+      -pr /cygdrive/y/Test/rawTIFF \
+      -po 1024 \
+      -thumb /cygdrive/y/Test/alignedJPG  \
+      -volt 300 -dtotal 48.5 -thread 8 \
+      -after 'cp %{reducedDir}/%{rootName}_powpair.jpg "/cygdrive/e/Dropbox (UMass Medical School)/Test"'
 
 .. note::
 
