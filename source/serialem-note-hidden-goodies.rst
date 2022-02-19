@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: Nov 21, 2020
-:Last-updated: Oct 2, 2021
+:Last-updated: Feb 19, 2022
 
 .. glossary::
 
@@ -67,8 +67,10 @@ We also do this very often. We collect all the good meshes to make them into
 montage maps so we can pick and realign to each positions later. However, there are a
 couple of things we don't like with this way: 
 
-- The super-stack file for all the montages can be very large. It is not handy to look at a particular mesh off-line. 
-- The section # of the file is from 0,1... to the last one, they are directly linked with mesh label/numbers. 
+- The super-stack file for all the montages can be very large. It is not
+  handy to look at a particular mesh off-line. 
+- The section # of the file is from 0,1... to the last one, they are
+  directly linked with mesh label/numbers. 
 
 It would be really nice to make all the meshes to have their own separate files and
 with the mesh ID in the filenames, something like *Grid3-Mesh8.map*. This way,
@@ -144,8 +146,9 @@ Something like an image below:
    :alt: snapshot with nav feature
    :align: center
 
-This function has been implemented fairly recently. It has a small GUI tool window 
-and a script command for this task. You can open this tool window from *Window - Take Image Snapshot...*.
+This function has been implemented fairly recently. It has a small GUI tool
+window and a script command for this task. You can open this tool window
+from *Window - Take Image Snapshot...*.
 
 **Fig.2 Snapshot Tool Window** (click for full size image)
 
@@ -160,7 +163,8 @@ There is also a command which can be used like this:
 
    SnapshotToFile 1 1 1 JPG JPG snap.jpg
 
-For more complete information about this little function, please check helpfile section:
+For more complete information about this little function, please check
+helpfile section:
 
 https://bio3d.colorado.edu/SerialEM/betaHlp/html/hidd_screenshot.htm
 
@@ -247,7 +251,9 @@ Example 5 - Scripting With Python
 SerialEM Python Code Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Around March 23, 2021, scripting also supports python. SerialEM native collection of commands act like a module. To enable python support, I have these lines in the property file.
+Around March 23, 2021, scripting also supports python. SerialEM native
+collection of commands act like a module. To enable python support, I have
+these lines in the property file.
 
 .. code-block:: python
    :linenos:
@@ -286,7 +292,10 @@ Here is an example of the same CycleTargetFocus function in Python code.
 Calling Python Script From Regular Script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Around Apr 29, 2021, SerialEM not only got more matured at supporting Python, but also provides functionality to call regular script from a Python script and Vice Versa. The variable's value can also pass to each other. Below are two example scripts, one in Python and one in regular. 
+Around Apr 29, 2021, SerialEM not only got more matured at supporting
+Python, but also provides functionality to call regular script from a Python
+script and Vice Versa. The variable's value can also pass to each other.
+Below are two example scripts, one in Python and one in regular. 
 
 .. code-block:: Ruby
    :linenos:
@@ -328,13 +337,18 @@ Running regular SerialEM script "Regular" by clciking *Run* button from the edit
 
    a = 1  2  3
    b = 3  2  1
-   
-As you can see, it calls Python script "Python". The array *a* defined in the regular script is received and convert to python list in the python script. After doing something in Python script (reverse array a in this case), it can get new array ready to be fetched by regular script. 
+
+As you can see, it calls Python script "Python". The array *a* defined in
+the regular script is received and convert to python list in the python
+script. After doing something in Python script (reverse array a in this
+case), it can get new array ready to be fetched by regular script. 
 
 Calling Regular Script and Function From Python Script 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-One can also do reverse - calling regular script from a Python one and passing values of list variable to from Python to regular script. Look at two scripts below:
+One can also do reverse - calling regular script from a Python one and
+passing values of list variable to from Python to regular script. Look at
+two scripts below:
 
 .. code-block:: python
    :linenos:
@@ -365,7 +379,12 @@ Running the "Python" script gives this in log window:
 Python External Control
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-You can also use Python Console to control SerialEM processs. SerialEM acts as a complete embedded system in this case, and Python is completely external. If you run Python on a different computer from the Windows computer on which SerialEM is installed, you have to build a SerialEM Python Module on your system. Here is an example to build the SerialEM Python Module on a Mac. 
+You can also use Python Console to control SerialEM process. SerialEM acts
+as a complete embedded system in this case, and Python is completely
+external. If you run Python on a different computer from the Windows
+computer on which SerialEM is installed, you have to build a SerialEM Python
+Module on your system. Here is an example to build the SerialEM Python
+Module on a Mac. 
 
 .. code-block::
 
@@ -373,7 +392,8 @@ You can also use Python Console to control SerialEM processs. SerialEM acts as a
    $ cd PythonModule
    $ python setup.py build
 
-Below is screen output when running the python control on the same Windows computer that SerialEM is running on. 
+Below is screen output when running the python control on the same Windows
+computer that SerialEM is running on. 
 
 .. code-block:: ruby
    :caption: Python External Control - Console
@@ -424,7 +444,8 @@ Below is an example of an interactive Python external control from a Mac.
    (1.0, 0.0)
    >>> 
    
-Here is another example to run a python script on Mac to control a SerialEM runnning on Windows:
+Here is another example to run a python script on Mac to control a SerialEM
+running on Windows:
 
 .. code-block:: 
    :linenos:
@@ -453,7 +474,7 @@ Here is another example to run a python script on Mac to control a SerialEM runn
    sem.Exit(1)
    exit()
 
-Afer saving to a file (CycleLD.py), we can then run it from a typical python environment normally. 
+After saving to a file (CycleLD.py), we can then run it from a typical python environment normally. 
 
 .. code-block::
 
@@ -462,7 +483,13 @@ Afer saving to a file (CycleLD.py), we can then run it from a typical python env
 Embedding a Python Script in Regular Script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We know that both type of scripts can call each other. As things getting even fancier, now we can also embed a Python Script block directly in the Regular Script. Below is an example of that. Assuming there is a Python Script called "PyFuncs", inside that there is a Python function called "CycleTargetDefocus()", as mentioned earlier. The example below is to call that Python function directly from Regular script without a dedicated script editor for the python part. The single "hybrid" script gets the job done.
+We know that both type of scripts can call each other. As things getting
+even fancier, now we can also embed a Python Script block directly in the
+Regular Script. Below is an example of that. Assuming there is a Python
+Script called "PyFuncs", inside that there is a Python function called
+"CycleTargetDefocus()", as mentioned earlier. The example below is to call
+that Python function directly from Regular script without a dedicated script
+editor for the python part. The single "hybrid" script gets the job done.
 
 .. code-block:: ruby
    :linenos:
@@ -488,7 +515,11 @@ We know that both type of scripts can call each other. As things getting even fa
    EndPythonScript
 
 
-The embedded Python clode is bewteen "PythonScript" and "EndPythonScript". More usefully, we can even pass some of the regular script variables into
-the Python, by placing arguments after "PythonScript" and a special Python variable "SEMargStrings". In this case, SEMargStrings has value of a string list [ "-1.", "-2.5", "0.1"]. We convert it into real floats so they can be given to the function. 
+The embedded Python code is bewteen "PythonScript" and "EndPythonScript".
+More usefully, we can even pass some of the regular script variables into
+the Python, by placing arguments after "PythonScript" and a special Python
+variable "SEMargStrings". In this case, SEMargStrings has value of a string
+list [ "-1.", "-2.5", "0.1"]. We convert it into real floats so they can be
+given to the function. 
 
 
