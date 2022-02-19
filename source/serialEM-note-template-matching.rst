@@ -1,4 +1,3 @@
-
 .. _SerialEM_Setup_Dummy:
 
 SerialEM Note: Adding Point Items by Template Matching
@@ -12,7 +11,17 @@ SerialEM Note: Adding Point Items by Template Matching
 .. glossary::
 
    Abstract
-      This article describes a method of automatically picking points in SerialEM maps. Currently SerialEM does not have built-in functionality of adding points by correlation. However, SerialEM is now capable of running external Windows programs via the RunInShell script command, as well as merging in externally defined navigator items. This means that is it possible to use any external program to search for desirable points and add them to the navigator. As an example, I present a graphical tool called **semmatch** that uses cross-correlation based template matching. Hopefully in the future others will be inspired to implement their own methods and programs to improve the SerialEM user experience.
+      This article describes a method of automatically picking points in
+      SerialEM maps. Currently SerialEM does not have built-in functionality
+      of adding points by correlation. However, SerialEM is now capable of
+      running external Windows programs via the RunInShell script command,
+      as well as merging in externally defined navigator items. This means
+      that is it possible to use any external program to search for
+      desirable points and add them to the navigator. As an example, I
+      present a graphical tool called **semmatch** that uses
+      cross-correlation based template matching. Hopefully in the future
+      others will be inspired to implement their own methods and programs to
+      improve the SerialEM user experience.
 
 .. image:: ../images/template_match1.png
    :scale: 50 %
@@ -22,16 +31,21 @@ SerialEM Note: Adding Point Items by Template Matching
 Install
 --------------------
 
-A SerialEM script called **TemplateMatch_GUI** at the end of this article is used to launch semmatch. All that is required is to install semmatch in order to use the script. Installation instructions are on the github page, https://github.com/alberttxu/semmatch
+A SerialEM script called **TemplateMatch_GUI** at the end of this article is
+used to launch ``semmatch``. All that is required is to install ``semmatch`` in
+order to use the script. Installation instructions are on the *github* page,
+https://github.com/alberttxu/semmatch
 
 .. _usage:
 
 Usage
 ------------------------------------------
 
-1. First, select a map item from the navigator. You can double click to load the image, or single click to simply highlight.
+1. First, select a map item from the navigator. You can double click to load
+the image, or single click to simply highlight.
 
-- Before running the script, you can optionally crop out a template in SerialEM. See TemplateMatch_GUI for details.
+- Before running the script, you can optionally crop out a template in
+SerialEM. See TemplateMatch_GUI for details.
 
 2. Run TemplateMatch_GUI
 
@@ -44,12 +58,11 @@ Usage
    :width: 45%
 
 - +/- to zoom in and out.
-
 - To crop, just click and drag.
-
-- Change the threshold and click search until you are satisfied with the result.
-
-- Click Save and Quit to merge the generated points into SerialEM. To quit without saving, close the window from the top.
+- Change the threshold and click search until you are satisfied with the
+  result.
+- Click Save and Quit to merge the generated points into SerialEM. To quit
+  without saving, close the window from the top.
 
 
 .. code-block:: ruby
