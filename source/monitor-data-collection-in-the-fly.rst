@@ -6,22 +6,29 @@ Monitor Data Collection In The Fly
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2018-08-02 
-:Last-Updated: 2018-09-10
+:Last-Updated: 2022-02-18
 
 .. glossary::
 
    Abstract
-      We already routinely align movie frames during data collection so we can check images from time to time. We did most 
-      directly using K2 camera computers. This works very nicely. However, there are still a couple things we feel missing. 
-      1) we need to see the defocus range and phase shift values computated and plotted out. 2) we need to do this with no 
-      delay and without slowing down the data collection itself. 
+      We already routinely align movie frames during data collection so we
+      can check images from time to time. We did most directly using K2
+      camera computers. This works very nicely. However, there are still a
+      couple things we feel missing.  1) we need to see the defocus range
+      and phase shift values computated and plotted out. 2) we need to do
+      this with no delay and without slowing down the data collection
+      itself. 
       
-      We decided to align movies and perform CTF determiantion using a dedicated workstation with dual GPU. Our Summer Student,
-      Albert Xu, made this completely automatic. During data collection, a plot is showing on web browser and refreshing itself.
+      We decided to align movies and perform CTF determiantion using a
+      dedicated workstation with dual GPU. Our Summer Student, Albert Xu,
+      made this completely automatic. During data collection, a plot is
+      showing on web browser and refreshing itself.
       
-      This document is mainly for oursleves as a check list. Hopefully, it can also be useful for your setup.  
+      This document is mainly for oursleves as a check list. Hopefully, it
+      can also be useful for your setup.  
       
-      For Albert's *ctffindPlot* project, please see https://github.com/alberttxu/ctffindPlot .
+      For Albert's *ctffindPlot* project, please see
+      https://github.com/alberttxu/ctffindPlot .
 
 .. _setup:
 
@@ -30,23 +37,36 @@ Setup for Shipping, alignframes and CTFfindPlot
 
 1. Ship raw data from K2 local SSD to storage tank. 
 
-Assuming storge tank is CIFS mounted onto K2 computer, as W:, and we have a new folder call ChenXu_20180802. We create a folder on local ssd drive X: usually using the same folder name. We collect everying off camera onto this local SSD folder X:\\ChenXu_20180802 first including all LMM, MMM maps etc. and raw TIFF data as well. We use IMOD porgram ``framewatcher`` to ship the raw data, pcm parameter files, defect file and gain reference file to storage.
+Assuming storge tank is CIFS mounted onto K2 computer, as W:, and we have a
+new folder call ChenXu_20180802. We create a folder on local ssd drive X:
+usually using the same folder name. We collect everying off camera onto this
+local SSD folder X:\\ChenXu_20180802 first including all LMM, MMM maps etc.
+and raw TIFF data as well. We use IMOD porgram ``framewatcher`` to ship the
+raw data, pcm parameter files, defect file and gain reference file to
+storage.
 
-From cygwin shell terminal on K2 computer, go into local folder X:\\ChenXu_20180802 and do this:
+From cygwin shell terminal on K2 computer, go into local folder
+X:\\ChenXu_20180802 and do this:
    
 .. code-block:: ruby
 
    $ framewatcher -nocom -pr W:\ChenXu_20180802
    
-From today - Sept 09, 2018 the latest package (currently in nightly builds) supports multiple processed folders so the collected files can be shipped into several folders. This is very useful to align them parallelly by running alignframes from inside of each folder seprately. A example is below:
+From today - Sept 09, 2018 the latest package (currently in nightly builds)
+supports multiple processed folders so the collected files can be shipped
+into several folders. This is very useful to align them parallelly by
+running alignframes from inside of each folder seprately. A example is
+below:
 
 .. code-block:: ruby
 
    $ framewatcher -nocom -pr W:\ChenXu_20180802\tmp1 -pr W:\ChenXu_20180802\tmp2 -pr W:\ChenXu_20180802\tmp3 -pr W:\ChenXu_20180802\tmp4
    
-This will move all the raw files onto storage location, so local SSD never fills.
+This will move all the raw files onto storage location, so local SSD never
+fills.
 
-2. ssh login GPU computer as you and su to "guest", make new folders and align movies
+2. ssh login GPU computer as you and su to "guest", make new folders and
+align movies
 
 .. code-block:: ruby
 
@@ -56,9 +76,16 @@ This will move all the raw files onto storage location, so local SSD never fills
    [guest@gpu ChenXu_20180802]$ mkdir rawTIFF alignedMRC alignedJPG
    [guest@gpu ChenXu_20180802]$ framewatcher -gpu 0 -bin 2 -po 1024 -pr rawTIFF -thumb alignedJPG -dtotal 46.5
    
-This will move raw data files (TIFF, dm4, defect, pcm) into *rawTIFF* and _powpair.jpg into *alignedJPG*. You can also add an option "-o alignedMRC" to move all the aligned MRC files into that folder *alignedMRC*.
+This will move raw data files (TIFF, dm4, defect, pcm) into *rawTIFF* and
+_powpair.jpg into *alignedJPG*. You can also add an option "-o alignedMRC"
+to move all the aligned MRC files into that folder *alignedMRC*.
 
-As mentioned above, one can also run a few jobs of framewatcher from multiple directories separately, so speed thing up, with or without a GPU card. You can manually run the command from tmp1, tmp2, tmp3 and tmp4. You can also ask a simple shell script to do that. The only disadvange might that you have to "kill" when you need to stop *framewatcher* because you cannot do Ctrl_C from shell interactively in this case. 
+As mentioned above, one can also run a few jobs of framewatcher from
+multiple directories separately, so speed thing up, with or without a GPU
+card. You can manually run the command from tmp1, tmp2, tmp3 and tmp4. You
+can also ask a simple shell script to do that. The only disadvantage might
+that you have to "kill" when you need to stop *framewatcher* because you
+cannot do Ctrl_C from shell interactively in this case. 
 
 .. code-block:: ruby
 
@@ -71,7 +98,8 @@ As mentioned above, one can also run a few jobs of framewatcher from multiple di
       cd ..
    done
 
-3. Copy and edit ctffind parameter file (as "guest", in the same folder; we usually create a new terminal from tmux by "Ctrl_B C").
+3. Copy and edit ctffind parameter file (as "guest", in the same folder; we
+usually create a new terminal from tmux by "Ctrl_B C").
 
 .. code-block:: ruby
 
@@ -111,9 +139,13 @@ edit to fit your situation. The file looks like this:
 
    [guest@gpu ChenXu_20180802]$ ctffindPlot
    
-This will generate a plot and continously update a file called *ctf_plot.png* which can be loaded into a web browser and let it refresh periodically. All the aligned MRC files will be moved into *alignedMRC* by the plot porgram after done. 
+This will generate a plot and continuously update a file called
+*ctf_plot.png* which can be loaded into a web browser and let it refresh
+periodically. All the aligned MRC files will be moved into *alignedMRC* by
+the plot program after done. 
 
-For convenience, there are a few parameter files for common conditions which you can directly use with option "-t". 
+For convenience, there are a few parameter files for common conditions which
+you can directly use with option "-t". 
 
 .. code-block:: ruby
 
