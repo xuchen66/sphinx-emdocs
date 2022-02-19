@@ -1,4 +1,3 @@
-
 .. _FastTomo_a_hybreid_approach:
 
 FastTomo: A Hybrid Approach to Speedup Tomography Data Collection
