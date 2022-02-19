@@ -25,13 +25,14 @@ There are basically two new features available in version 4.0.
 
 1. Adjust Eucentric Height using tilted beam.
 2. Flexibly arrange helping tasks and primary actions from "Acquire at
-Items" dialog window, without a script. 
+   Items" dialog window, without a script. 
 
 In the past, a sophisticated script is need to control pipeline of actions
 for single particle data collection. Typically, the actions may include
 eucentric height positioning, X-Y positioning, beam centering,
-aufofocusing within a range, drift control and final image taking. It is
-now possible to arrange these actions without scripting in the new version.
+autofocusing within a range, drift control and final image taking. It is
+now possible to arrange these actions without scripting in the new
+version.
 
 .. _dialog:
 
@@ -50,7 +51,8 @@ Below is the new full dialog window.
 Indeed, it looks quite different from previous versions. Here are a few
 things to mention:
 
-- Left side of the windows is for Primary actions and bunch of options. Right side is for helping tasks to be selected and setup to use. 
+- Left side of the windows is for Primary actions and bunch of options.
+  Right side is for helping tasks to be selected and setup to use. 
 - Multiple Shot is new on primary action list compared to before. 
 - For each task on the right side, there are three things to set. 
 
@@ -66,7 +68,8 @@ respectively, to make the window neater and more focused.
 An Example Configuration for Single Particle
 --------------------------------------------
 
-If I hide the non-selected, I get a short, more focused dialog windows like below.
+If I hide the non-selected, I get a short, more focused dialog windows like
+below.
 
 **Fig.2 Configured Dialog Windows - an exmaple** (click for full size image)
 
@@ -83,7 +86,7 @@ collection pipeline.
 A Couple of Extra Notes
 -----------------------
 
-1. if the "Cycle defocus..." under "Primary Action-related Options" is
+1. If the "Cycle defocus..." under "Primary Action-related Options" is
 checked, the target defocus will change for every "Acquire at Items" cycle
 run. There is no longer needed to have a script for the cycling target
 defocus. 
