@@ -306,20 +306,21 @@ You received mainly three or four folders as below:
 
 **rawTIFF folder**:
 
-- .tiff - compressed raw image stack containing multiple image frames, not gain
+- *.tiff - compressed raw image stack containing multiple image frames, not gain
   normalized
-- .pcm - IMID python command file for frame alignment using IMOD program
-- .mdoc - adoc file that contains all the imaging condition information
-- .log - it is log file of aligning result (after run pcm file to align frames)
+- *.pcm - IMID python command file for frame alignment using IMOD program
+- *.mdoc - adoc file that contains all the imaging condition information
+- *.log - it is log file of aligning result (after run pcm file to align frames)
 
 **alignedMRC foler**:
+
 - *_ali.mrc files - those are aligned of multiple movie frames, they are
   single images not movie frames
 
 **alignedJPG folder**:
 
-- JPG snapshot of the aligned MRCs together with power spectrum. These are for
-  visually check image quality and sample condition.
+- JPG images of the aligned MRCs together with power spectrum. These are for
+  visually checking image quality and sample condition.
 
 **SerialEM-Maps folder**:
 
