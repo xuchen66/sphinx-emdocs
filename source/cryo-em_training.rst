@@ -1,4 +1,4 @@
- 
+
 .. index:: Cryo-EM Training - Basic (level I & II)
 .. cryo-em_training:
 
@@ -13,10 +13,25 @@ Cryo-EM Training - Basic (level I & II)
 .. glossary:: 
 
  Goal 
-    The goal of the training we offer is to help a new user coming to EM field to learn some basic knowledge and skill of Cryo-EM. Hopefully, at the end of these two levels of training sessions, you will be able to screen your negative stained specimen and cryo grids on a TEM scope without too much difficult.
+    The goal of the training we offer is to help a new user coming to EM
+    field to learn some basic knowledge and skill of Cryo-EM. Hopefully, at
+    the end of these two levels of training sessions, you will be able to
+    screen your negative stained specimen and cryo grids on a TEM scope
+    without too much difficult.
 
  Requirement 
-    You are not required to have experience with TEM operation. Certainly, we could progress faster if you have some basic knowledge about a TEM. The only requirement to you, the fresh trainee,  is to have a spirit of commitment. You need to be determined to learn this new technique. If you think to have your data collected while in your training session and have your project done half way, you should not attend the training session that we offer. You will be wasting your own time, let alone ours. Usually, if an user doesn't take good note during training session and doesn't come back to practise on microscope, that is a good hint that the user is *not* serious at it. Operating a transmission electron microscope is very much like  driving a car - you need to be serious and to practise if you really want to learn it!
+    You are not required to have experience with TEM operation. Certainly,
+    we could progress faster if you have some basic knowledge about a TEM.
+    The only requirement to you, the fresh trainee,  is to have a spirit of
+    commitment. You need to be determined to learn this new technique. If
+    you think to have your data collected while in your training session and
+    have your project done half way, you should not attend the training
+    session that we offer. You will be wasting your own time, let alone
+    ours. Usually, if an user doesn't take good note during training session
+    and doesn't come back to practise on microscope, that is a good hint
+    that the user is *not* serious at it. Operating a transmission electron
+    microscope is very much like  driving a car - you need to be serious and
+    to practise if you really want to learn it!
 
 This document lists the training contents that these two-level, 8 sessions will cover. 
 
@@ -37,8 +52,10 @@ Level I - Basic TEM Operation (4 sessions)
 .. rubric:: Session I - 2
 
 - Specimen rod insertion and retraction
-- Tuning microscope (Eucentricity, gun alignment, filament saturation, beam-tilt pivot points, rotation center)
-- C2 aperture centering, C2 lens stigmation; Obj. aperture centering, Obj lens stigmation
+- Tuning microscope (Eucentricity, gun alignment, filament saturation,
+  beam-tilt pivot points, rotation center)
+- C2 aperture centering, C2 lens stigmation; Obj. aperture centering, Obj
+  lens stigmation
 - Correct side of beam spreading
 - Demo and instroduce CTF concept
 
@@ -46,7 +63,8 @@ Level I - Basic TEM Operation (4 sessions)
 
 - Negative Stain sample preparation
 - Refreshing microscope tuning procedure
-- Introduce digital cameras - hardware component, background preparation, pixelsize at levels of detector and specimen
+- Introduce digital cameras - hardware component, background preparation,
+  pixelsize at levels of detector and specimen
 - Introduce DQE, and latest status of direct electron detectors
 - Negative stain specimen imaging using CCD
 
@@ -63,7 +81,8 @@ Level II - Cryo TEM Operation (4 sessions)
 
 .. rubric:: Session II - 1
 
-- Prepare side-entry cryo holder, explain dry pumping station - warm-up & zeolite cycle
+- Prepare side-entry cryo holder, explain dry pumping station - warm-up &
+  zeolite cycle
 - Demo and explain FEI Virobot operation
 - Explain holey grid pre-treament - bake, wash & electron beam irradiation
 - Demo full procedure for Cryo freezing EM grids
