@@ -24,7 +24,6 @@ Background Information
 There are basically two new features available in version 4.0. 
 
 1. Adjust Eucentric Height using tilted beam.
-
 2. Flexibly arrange helping tasks and primary actions from "Acquire at
 Items" dialog window, without a script. 
 
@@ -51,8 +50,7 @@ Below is the new full dialog window.
 Indeed, it looks quite different from previous versions. Here are a few
 things to mention:
 
-- Left side of the windows is for Primary actions and bunch of options. 
-Right side is for helping tasks to be selected and setup to use. 
+- Left side of the windows is for Primary actions and bunch of options. Right side is for helping tasks to be selected and setup to use. 
 - Multiple Shot is new on primary action list compared to before. 
 - For each task on the right side, there are three things to set. 
 
