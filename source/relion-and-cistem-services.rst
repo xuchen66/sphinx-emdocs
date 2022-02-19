@@ -11,10 +11,12 @@ Relion and cisTEM Docker Services
 .. glossary::
 
    Abstract
-      This is a quick information how to use Relion3 and cisTEM dockers on two Linux workstations in CryoEM Core Facility. 
-      One of the potential advantages to use docker is to avoid CUDA version conflict.  
+      This is a quick information how to use Relion3 and cisTEM dockers on
+      two Linux workstations in CryoEM Core Facility.  One of the potential
+      advantages to use docker is to avoid CUDA version conflict.  
 
-      Some of the dockerfile information can be found at https://github.com/alberttxu/cryoem_dockerfiles .
+      Some of the dockerfile information can be found at
+      https://github.com/alberttxu/cryoem_dockerfiles .
 
 .. _relion3:
 
@@ -58,6 +60,6 @@ cisTEM
 
 .. Note::
 
-  Let other people know if your are using either eagle or falcon. For each machine there is only one account 
-  for Relion3 and one for cisTEM.
+  Let other people know if your are using either eagle or falcon. For each
+  machine there is only one account for Relion3 and one for cisTEM.
 
