@@ -306,29 +306,28 @@ You received mainly three or four folders as below:
 
 **rawTIFF folder**:
 
-1. .tiff - compressed raw image stack containing multiple image frames, not gain
-   normalized
-2. .pcm - IMID python command file for frame alignment using IMOD program
-3. .mdoc - adoc file that contains all the imaging condition information
-4. .log - it is log file of aligning result (after run pcm file to align frames)
+- .tiff - compressed raw image stack containing multiple image frames, not gain
+  normalized
+- .pcm - IMID python command file for frame alignment using IMOD program
+- .mdoc - adoc file that contains all the imaging condition information
+- .log - it is log file of aligning result (after run pcm file to align frames)
 
 **alignedMRC foler**:
-
 - *_ali.mrc files - those are aligned of multiple movie frames, they are
-single images not movie frames
+  single images not movie frames
 
 **alignedJPG folder**:
 
 - JPG snapshot of the aligned MRCs together with power spectrum. These are for
-visually check image quality and sample condition.
+  visually check image quality and sample condition.
 
 **SerialEM-Maps folder**:
 
 - all the control files for SerialEM software running for the session, it
-contains useful information including map montages and navigator files etc.. 
-It is part of the session data, very useful to track where images are 
-acquired, ice conditions etc., but less useful for end user to process the
-data.
+  contains useful information including map montages and navigator files etc.. 
+  It is part of the session data, very useful to track where images are 
+  acquired, ice conditions etc., but less useful for end user to process the
+  data.
 
 .. _Cs:
 
