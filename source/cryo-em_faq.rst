@@ -40,7 +40,7 @@ page, but is available upon request.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please follow this site for main direction and the campus map -
-https://www.umassmed.edu/bmp/about/directions/
+https://www.umassmed.edu/about/directions/
 
 We are located at Medical School Building - A floor SA-106. You enter the
 "SCHOOLS" building from "medical school lobby" indicated on the campus map.
