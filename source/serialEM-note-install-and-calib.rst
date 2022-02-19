@@ -1,4 +1,3 @@
-
 .. _SerialEM_install_and_Calib:
 
 SerialEM Note: Installation and Calibration
@@ -36,20 +35,46 @@ Here are steps to follow.
 
 .. rubric:: Step 1
 
-- Ask David for the initial system file. Normally, you would fill out a "questionnaire" available at the ftp server - http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to David. David or Guenter Resch will then create a framework file on the same ftp server for you to download. This framework file is a zip file, you can download it to local like Desktop and unzip it by double clicking on the file. Beside a sub-folder "Admin" created under "C:\\ProgramData\\SerialEM", the most important file in the framework is one initial system file called "SerialEMproperties.txt". You must have this file to get started. Please refer to the SerialEM webpage for the latest information regarding this.
+- Ask David for the initial system file. Normally, you would fill out a
+"questionnaire" available at the ftp server -
+http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to
+David. David or Guenter Resch will then create a framework file on the same
+ftp server for you to download. This framework file is a zip file, you can
+download it to local like Desktop and unzip it by double clicking on the
+file. Beside a sub-folder "Admin" created under "C:\\ProgramData\\SerialEM",
+the most important file in the framework is one initial system file called
+"SerialEMproperties.txt". You must have this file to get started. Please
+refer to the SerialEM webpage for the latest information regarding this.
 
 .. Note:: 
 
-   If on Windows the Folder Option -> View -> "Hide extensions for known types" is enabled, the property filename shown will be "SerialEMproperties". If you change
-   it to "SerialEMproperties.txt", it actually is "SerialEMproperties.txt.txt" which won't be read in as a valid property file. 
+   If on Windows the Folder Option -> View -> "Hide extensions for known
+   types" is enabled, the property filename shown will be
+   "SerialEMproperties". If you change it to "SerialEMproperties.txt", it
+   actually is "SerialEMproperties.txt.txt" which won't be read in as a
+   valid property file. 
 
 .. rubric:: Step 2
 
-- Make sure your camera computer and microscope computers are on the same local network. For example, K2/3 computer can be configured to have a network interface with IP address 192.168.1.2, and FEI scope with 192.168.1.1. And they should be able to *ping* each other.  - You might be confused by Gatan's DM already being able to communicate with scope, as it can detect magnification change of scope. However, this DM connection to scope is usually via serial port by a direct serial cable. SerialEM uses standard TCP/IP to communicate to a remote computer and therefore requires a standard network setup in place.  - If you configured the local network, you should have DM communicate to scope (via Gatan's RemoteTEM) using TCP/IP too. It is a lot more robust. But this is not a concern for SerialEM operation here.  
+- Make sure your camera computer and microscope computers are on the same
+  local network. For example, K2/3 computer can be configured to have a
+  network interface with IP address 192.168.1.2, and FEI scope with
+  192.168.1.1. And they should be able to *ping* each other.  - You might be
+  confused by Gatan's DM already being able to communicate with scope, as it
+  can detect magnification change of scope. However, this DM connection to
+  scope is usually via serial port by a direct serial cable. SerialEM uses
+  standard TCP/IP to communicate to a remote computer and therefore requires a
+  standard network setup in place.  - If you configured the local network, you
+  should have DM communicate to scope (via Gatan's RemoteTEM) using TCP/IP
+  too. It is a lot more robust. But this is not a concern for SerialEM
+  operation here.  
 
 .. rubric:: Step 3
 
-- Decide which computer to install SerialEM. In theory, you can install SerialEM on either computer - camera or microscope. For K2/3 camera, SerialEM should be normally installed on the K2/3 computer, as K2/3 image returning to SerialEM locally is usually faster than via network.  
+- Decide which computer to install SerialEM. In theory, you can install
+  SerialEM on either computer - camera or microscope. For K2/3 camera,
+  SerialEM should be normally installed on the K2/3 computer, as K2/3 image
+  returning to SerialEM locally is usually faster than via network.  
 
 .. rubric:: Step 4
 
