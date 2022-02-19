@@ -268,5 +268,5 @@ height close to within 0.5 microns in a few seconds. Amazing to me.
 
 .. note::
    Since 4.0 Testing, eucentricity task using titled beam has been built in
-   SerialEM task. Please see SerialEM helpfile `**Eucentricity by Focus Setup
-   Dialog** <https://bio3d.colorado.edu/SerialEM/betaHlp/html/hidd_z_by_g_setup.htm>`_.
+   SerialEM task. Please see SerialEM helpfile `Eucentricity by Focus Setup
+   Dialog <https://bio3d.colorado.edu/SerialEM/betaHlp/html/hidd_z_by_g_setup.htm>`_.
