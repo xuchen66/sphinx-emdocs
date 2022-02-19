@@ -14,11 +14,11 @@ SerialEM Note: More About Z Height
    Abstract
       This is the first of a series of SerialEM notes I have wanted to write
       for a while. An application of using SerialEM, even a simple one,
-      could be very useful and "handy" for a SerialEM user. I try to
-      give more explanation for what I did, rather than to just present
-      plain lines of codes (yes, SerialEM scripting code) so that it can
-      be helpful for a SerialEM user, especially a new comer to
-      understand better how SerialEM works. 
+      could be very useful and "handy" for a SerialEM user. I try to give
+      more explanation for what I did, rather than to just present plain
+      lines of codes (yes, SerialEM scripting code) so that it can be
+      helpful for a SerialEM user, especially a new comer to understand
+      better how SerialEM works. 
       
       Quickly and accurately moving specimen to eucentric height is a
       frequently needed task. Everything is going to be easier if specimen
@@ -103,7 +103,8 @@ The function code is below.
    RestoreFocus
    EndFunction
 
-The real difference between this and previous version *Z_byV* is an additional line inserted after SetEucentricFocus:
+The real difference between this and previous version *Z_byV* is an
+additional line inserted after ``SetEucentricFocus``:
 
 .. code-block:: ruby
 
@@ -136,7 +137,8 @@ and under current scope condition.
 Find the Offset Value using Script FindOffset
 ---------------------------------------------
 
-If we found the good "offset" value, it will be good for some time, at least this session. So this like a short term calibration. Here is how to find it:
+If we found the good "offset" value, it will be good for some time, at least
+this session. So this like a short term calibration. Here is how to find it:
 
 - Adjust specimen to Eucentriciy, using FEI interface tool or SerialEM task function
 - run script as below.
@@ -264,3 +266,7 @@ If setting correctly, even your stage is more than 150 microns away, calling
 the function with three rounds of iteration can bring the stage to eucentric
 height close to within 0.5 microns in a few seconds. Amazing to me.  
 
+.. note::
+   Since 4.0 Testing, eucentricity task using titled beam has been built in
+   SerialEM task. Please see SerialEM helpfile `**Eucentricity by Focus Setup
+   Dialog** <https://bio3d.colorado.edu/SerialEM/betaHlp/html/hidd_z_by_g_setup.htm>`_.
