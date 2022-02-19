@@ -11,20 +11,24 @@ SerialEM Note: Flexible Timer
 .. glossary::
 
    Abstract
-      Note about the flexible timer available for scripting and an example how to use it.  
+      Note about the flexible timer available for scripting and an example
+      how to use it.  
       
 .. _background_information:
 
 Background information 
 ----------------------
 
-In SerialEM scripting, there are a few commands with timer built in. For example, command ``LongOperation`` can take a few specific actions with timer defined.  Here is one of the example:
+In SerialEM scripting, there are a few commands with timer built in. For
+example, command ``LongOperation`` can take a few specific actions with
+timer defined.  Here is one of the example:
 
 .. code-block:: ruby
 
    LongOperation Da 3 
   
-This will perform dark reference for K2/K3 camera every 3 hours. This is very handy indeed. Another example is ``RefineZLP``.
+This will perform dark reference for K2/K3 camera every 3 hours. This is
+very handy indeed. Another example is ``RefineZLP``.
 
 .. code-block:: ruby
    
@@ -32,10 +36,13 @@ This will perform dark reference for K2/K3 camera every 3 hours. This is very ha
    
 This will perform refining ZLP every 30 minutes. 
    
-However, if we want to set a timer and to do a multiple and general actions when time is up, a more flexible timer is needed. In the case shown in picture below, which is 
-Au-foil grid, we use multiple hole mechanism to collected images in these 4 holes using beam-image shift while the stage is 
-centered at the middle of the 4 hole pattern. When the procedure is finished, the shift is reset and Record beam would be 
-hitting on the black Au crystals. 
+However, if we want to set a timer and to do a multiple and general actions
+when time is up, a more flexible timer is needed. In the case shown in
+picture below, which is Au-foil grid, we use multiple hole mechanism to
+collected images in these 4 holes using beam-image shift while the stage is
+centered at the middle of the 4 hole pattern. When the procedure is
+finished, the shift is reset and Record beam would be hitting on the black
+Au crystals. 
 
 **Fig.1 4-hole black Au crystals**
 
@@ -46,8 +53,11 @@ hitting on the black Au crystals.
    :alt: DUMMY instance property
    :align: center
 
-It is known that this kind of black crystal film is bad for ``refineZLP`` routine to work properly. It needs to use a hole area to 
-make it work. As you can see, a simple timer built in for a specific function is not sufficient here. Two actions are needed: 1) move to one of the four holes and 2) perform RefineZLP. It requires a more flexible timer to do this. 
+It is known that this kind of black crystal film is bad for ``refineZLP``
+routine to work properly. It needs to use a hole area to make it work. As
+you can see, a simple timer built in for a specific function is not
+sufficient here. Two actions are needed: 1) move to one of the four holes
+and 2) perform RefineZLP. It requires a more flexible timer to do this. 
 
 .. _flexible_timer:
 
@@ -64,7 +74,8 @@ A typical timer which could handle multiple actions would be like this:
       ...
    EndIf
    
-One of the script commands related to timer is ``SetCustomTime``. Below is example code to perform two actions mentioned above.
+One of the script commands related to timer is ``SetCustomTime``. Below is
+example code to perform two actions mentioned above.
 
 .. code-block:: ruby
 
