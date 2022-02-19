@@ -36,15 +36,15 @@ Here are steps to follow.
 .. rubric:: Step 1
 
 - Ask David for the initial system file. Normally, you would fill out a
-"questionnaire" available at the ftp server -
-http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to
-David. David or Guenter Resch will then create a framework file on the same
-ftp server for you to download. This framework file is a zip file, you can
-download it to local like Desktop and unzip it by double clicking on the
-file. Beside a sub-folder "Admin" created under "C:\\ProgramData\\SerialEM",
-the most important file in the framework is one initial system file called
-"SerialEMproperties.txt". You must have this file to get started. Please
-refer to the SerialEM webpage for the latest information regarding this.
+  "questionnaire" available at the ftp server -
+  http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to
+  David. David or Guenter Resch will then create a framework file on the same
+  ftp server for you to download. This framework file is a zip file, you can
+  download it to local like Desktop and unzip it by double clicking on the
+  file. Beside a sub-folder "Admin" created under "C:\\ProgramData\\SerialEM",
+  the most important file in the framework is one initial system file called
+  "SerialEMproperties.txt". You must have this file to get started. Please
+  refer to the SerialEM webpage for the latest information regarding this.
 
 .. Note:: 
 
@@ -78,15 +78,23 @@ refer to the SerialEM webpage for the latest information regarding this.
 
 .. rubric:: Step 4
 
-- Decide which type of executable to use. SerialEM builds for both 32 and 64-bit platforms. Unless you have to run it on a Windows XP, you should choose 64-bit. 
+- Decide which type of executable to use. SerialEM builds for both 32 and
+  64-bit platforms. Unless you have to run it on a Windows XP, you should
+  choose 64-bit. 
 
 .. rubric:: Step 5
 
-- Download SerialEM software. You should start with the latest release version from ftp server at http://bio3d.colorado.edu/ftp/SerialEM/  and save it somewhere local like Desktop.  
+- Download SerialEM software. You should start with the latest release
+  version from ftp server at http://bio3d.colorado.edu/ftp/SerialEM/  and save
+  it somewhere local like Desktop.  
 
 .. rubric:: Step 6
 
-- Unzip the installation package file downloaded. You can double click on this file, it will unzip the program into C:\\Program Files\\SerialEM. The folder "SerialEM" will be created automatically if there isn't one already.  The new package content will be unzipped into a new sub-folder, e.g.  SerialEM_3-6-13_64. 
+- Unzip the installation package file downloaded. You can double click on
+  this file, it will unzip the program into C:\\Program Files\\SerialEM. The
+  folder "SerialEM" will be created automatically if there isn't one already.
+  The new package content will be unzipped into a new sub-folder, e.g.
+  SerialEM_3-6-13_64. 
 
 .. rubric:: Step 7
 
@@ -94,15 +102,28 @@ refer to the SerialEM webpage for the latest information regarding this.
 
 .. rubric:: Step 8
 
-- Right click on a file called *install.bat* in the package folder C:\\Program Files\\SerialEM\\SerialEM_3-6-13_64 and select 'Run as Administrator'. This will copy some files into upper folder which is C:\\Program Files\\SerialEM, register DM plugin file and copy it to the Gatan plugin folder at C:\\ProgramData\\Gatan\\Plugin.
+- Right click on a file called *install.bat* in the package folder
+  C:\\Program Files\\SerialEM\\SerialEM_3-6-13_64 and select 'Run as
+  Administrator'. This will copy some files into upper folder which is
+  C:\\Program Files\\SerialEM, register DM plugin file and copy it to the
+  Gatan plugin folder at C:\\ProgramData\\Gatan\\Plugin.
 
 .. rubric:: Step 9
 
-- Manually copy a file called *FEI-SEMServer.exe* from C:\\Program Files\\SerialEM on K2/3 computer to C:\\Program Files\\SerialEM on scope computer. This is a bridging program to control scope by passing the scope function calls between SerialEM main program on remote K2/3 computer and the scope scripting interface. Run the program by double clicking on it(it needs to run or SerialEM cannot control scope). This is 32-bit application, runs on both 32 and 64-bit Windows platforms. So there is only one such executable to run on Windows 7, XP or 2000 Windows OS. 
+- Manually copy a file called *FEI-SEMServer.exe* from C:\\Program
+  Files\\SerialEM on K2/3 computer to C:\\Program Files\\SerialEM on scope
+  computer. This is a bridging program to control scope by passing the scope
+  function calls between SerialEM main program on remote K2/3 computer and the
+  scope scripting interface. Run the program by double clicking on it(it needs
+  to run or SerialEM cannot control scope). This is 32-bit application, runs
+  on both 32 and 64-bit Windows platforms. So there is only one such
+  executable to run on Windows 7, XP or 2000 Windows OS. 
 
 .. rubric:: Step 10
 
-- On K2/3 computer, Edit *SerialEMproperties.txt* file in folder C:\\ProgramData\\SerialEM to have proper lines in general property area to define network properties. 
+- On K2/3 computer, Edit *SerialEMproperties.txt* file in folder
+  C:\\ProgramData\\SerialEM to have proper lines in general property area to
+  define network properties. 
 
 .. code-block:: ruby
 
@@ -114,9 +135,12 @@ refer to the SerialEM webpage for the latest information regarding this.
 
 .. rubric:: Step 11
 
-- On K2/3 computer where SerialEM is to be installed, define a system environment variable SERIALEMCCD_PORT with the value 48890 or other selected port number, as described in the section in helpfile. 
+- On K2/3 computer where SerialEM is to be installed, define a system
+  environment variable SERIALEMCCD_PORT with the value 48890 or other selected
+  port number, as described in the section in helpfile. 
 
-- If everything goes well, you should be able to start SerialEM and it should connect to "see" both scope and DM. Congratulations!
+- If everything goes well, you should be able to start SerialEM and it
+  should connect to "see" both scope and DM. Congratulations!
 
 .. _Calibration:
 
@@ -151,7 +175,12 @@ the end of this document.
 
 .. rubric:: Step 0 
 
-- Determine camera orientation configuration. Make sure the image orientation from camera shot agree with that of on large screen or FluCam.  If it doesn't, try to adjust the camera orientation of Gatan K2/3 camera from Camera - Configuration. You can use beamstop to help.  You should add a property entry to reflect the DM configuration so SerialEM takes care of it even someone might have changed DM configuration. 
+- Determine camera orientation configuration. Make sure the image
+  orientation from camera shot agree with that of on large screen or FluCam.
+  If it doesn't, try to adjust the camera orientation of Gatan K2/3 camera
+  from Camera - Configuration. You can use beamstop to help.  You should add a
+  property entry to reflect the DM configuration so SerialEM takes care of it
+  even someone might have changed DM configuration. 
 
 .. code-block:: ruby
 
@@ -159,7 +188,9 @@ the end of this document.
 
 .. rubric:: Step 1
 
-- Edit property file to define the camera configuration information about orientation determined by step 0. SerialEM will return to main display with proper orientation. This is initial starting point for all the calibrations.
+- Edit property file to define the camera configuration information about
+  orientation determined by step 0. SerialEM will return to main display with
+  proper orientation. This is initial starting point for all the calibrations.
 
 .. code-block:: ruby
 
@@ -167,23 +198,30 @@ the end of this document.
 
 .. rubric:: Step 2
 
-- SerialEM - Calibration - List Mag. Scope will go through all the mags and list them on log window, from lowest to highest. Check it with what are in *SerialEMproperties.txt*, update that if needed.  
+- SerialEM - Calibration - List Mag. Scope will go through all the mags and
+  list them on log window, from lowest to highest. Check it with what are in
+  *SerialEMproperties.txt*, update that if needed.  
 
 .. rubric:: Step 3
 
-- Load standard waffle grating grid (TedPella Prod.# 607, http://www.tedpella.com/calibration_html/TEM_STEM_Test_Specimens.htm#_607).
+- Load standard waffle grating grid (TedPella Prod.# 607,
+  http://www.tedpella.com/calibration_html/TEM_STEM_Test_Specimens.htm#_607).
 
 .. rubric:: Step 4
 
-- Start with lowest magnification above LM range. On Talos, it is 1250X. At close to Eucentricity, and clost to eucentric focus. 
+- Start with lowest magnification above LM range. On Talos, it is 1250X. At
+  close to Eucentricity, and clost to eucentric focus. 
 
 .. rubric:: Step 5
 
-- Take a T shot with 2x binning on a K2/3 camera, make sure the counts are neither too low nor too high. 
+- Take a T shot with 2x binning on a K2/3 camera, make sure the counts are
+  neither too low nor too high. 
 
 .. rubric:: Step 6
 
-- Take a T shot, then Calibration - Pixel Size - Find Pixel Size. The log window shows both mag index and pixel size. Edit *SerialEMproperties.txt* to add a line like below in K2/3 camera property section. 
+- Take a T shot, then Calibration - Pixel Size - Find Pixel Size. The log
+  window shows both mag index and pixel size. Edit *SerialEMproperties.txt* to
+  add a line like below in K2/3 camera property section. 
 
 .. code-block:: ruby
 
@@ -195,7 +233,8 @@ calibrated.
 
 .. rubric:: Step 7 
 
-- You might want to change to a grid without repeating features, please see "note" at the end of this document. 
+- You might want to change to a grid without repeating features, please see
+  "note" at the end of this document. 
 
 - Calibration - Image & Stage Shift - IS from Scratch.
 
@@ -213,7 +252,9 @@ calibrated.
 
 .. rubric:: Step 11
 
-- Take the tilting axis value (e.g. 86.1) from step 8 - stage shift calibration, edit it into the 2nd "999" in *SerialEMproperties.txt* like below.
+- Take the tilting axis value (e.g. 86.1) from step 8 - stage shift
+  calibration, edit it into the 2nd "999" in *SerialEMproperties.txt* like
+  below.
 
 .. code-block:: ruby
 
@@ -233,7 +274,8 @@ calibrated.
 
 .. rubric:: Step 13
 
-- Repeat above step to cover all the magnification till the highest to be used such as 100kX. 
+- Repeat above step to cover all the magnification till the highest to be
+  used such as 100kX. 
 
 .. rubric:: Step 14
 
@@ -257,24 +299,38 @@ calibrated.
 
 .. rubric:: Step 19
 
-- repeat Beam Intensity Calibration for all other spot sizes likely to be used: 3, 4, 5, 6, 8, 9.
+- repeat Beam Intensity Calibration for all other spot sizes likely to be
+  used: 3, 4, 5, 6, 8, 9.
 
 .. rubric:: Step 20
 
-- At one mag like 5000X, using spot size 9, do Beam Shift Calibration (only need to do at single mag).
+- At one mag like 5000X, using spot size 9, do Beam Shift Calibration (only
+  need to do at single mag).
 
 .. rubric:: Step 21 
 
-- Usually, people use the lowest M mag for Low Dose View beam and with large defocus offset such as -200 or -300 microns. You need to the calibrate High-Defocus Mag for this View mag. This will make stage shifts still good for such large defocus, as they are interpolated for the defocus offset. 
+- Usually, people use the lowest M mag for Low Dose View beam and with large
+  defocus offset such as -200 or -300 microns. You need to the calibrate
+  High-Defocus Mag for this View mag. This will make stage shifts still good
+  for such large defocus, as they are interpolated for the defocus offset. 
 
 .. Note::
 
-   - Calibrations needed to be done for *both* µP and nP mode include: *beam crossover*, *beam intensity*, *beam shift* and *autofocus*.
+   - Calibrations needed to be done for *both* µP and nP mode include: *beam
+     crossover*, *beam intensity*, *beam shift* and *autofocus*.
    
-   - Waffle grating grid is good and handy for pixel size calibration, butit is not ideal for Image Shift and Stage Shift calibrations, as the waffle pattern might screw up the correlation in the calibration procedures. I found the normal Quantifoil grid with some 10nm Au particles absorbed onto can be very good for normal calibration purpose. I glow discharge a Quantifoil grid and add 1 *µl* deca-gold solution on the grid and let it dry. 
+   - Waffle grating grid is good and handy for pixel size calibration, butit
+     is not ideal for Image Shift and Stage Shift calibrations, as the waffle
+     pattern might screw up the correlation in the calibration procedures. I
+     found the normal Quantifoil grid with some 10nm Au particles absorbed
+     onto can be very good for normal calibration purpose. I glow discharge a
+     Quantifoil grid and add 1 *µl* deca-gold solution on the grid and let it
+     dry. 
    
-   - I found that standard **PtIr** grid for TFS to perform Thon Ring test also works very well for calibration purpose. 
+   - I found that standard **PtIr** grid for TFS to perform Thon Ring test
+     also works very well for calibration purpose. 
    
-   - Most of SerialEM actions are cross-correlation based, including calibrating. Therefore, a clean and recent preparation of camera gain reference file is desired, because it will help to have less screw-up due to fixed noise pattern dominating the cross-correlation. 
-
-
+   - Most of SerialEM actions are cross-correlation based, including
+     calibrating. Therefore, a clean and recent preparation of camera gain
+     reference file is desired, because it will help to have less screw-up due
+     to fixed noise pattern dominating the cross-correlation. 
