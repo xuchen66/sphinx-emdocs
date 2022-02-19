@@ -11,15 +11,19 @@ SerialEM Note: Utilize JPG File format
 .. glossary::
 
    Abstract
-      SerialEM supprots MRC and TIF file formats. Although SerialEM doesn't directly save JPG file from graphic interface as default, 
-      it does support JPG file format. 
+      SerialEM supprots MRC and TIF file formats. Although SerialEM doesn't
+      directly save JPG file from graphic interface as default, it does
+      support JPG file format. 
       
-      JPG file format can be very convenient for sharing and viewing due to its small file size. When we send screening results to 
-      users via DropBox, we also upload all the JPG files for LMM, MMM maps and single record shots. These JPG files take very little 
-      disc space and can be directly viewed on the web browers. People love this feature.
+      JPG file format can be very convenient for sharing and viewing due to
+      its small file size. When we send screening results to users via
+      DropBox, we also upload all the JPG files for LMM, MMM maps and single
+      record shots. These JPG files take very little disc space and can be
+      directly viewed on the web browers. People love this feature.
       
-      In this doc, two scripts or functions were introduced to conveniently save maps and single shots to JPG format. It is nice 
-      to be able to do it in-the-fly with SerialEM imaging.
+      In this doc, two scripts or functions were introduced to conveniently
+      save maps and single shots to JPG format. It is nice to be able to do
+      it in-the-fly with SerialEM imaging.
       
 .. _map_to_jpg:
 
@@ -55,27 +59,34 @@ The function to save maps to JPG is below.
     SaveToOtherFile A JPG JPG $navNote.jpg
     EndFunction
     
-One of tricks here is to load map into a buffer **unbinned** before saving to JPG. When we make montage maps using script to open montage 
-files, the default binning for ovewview display is usually not 1. To take advantage of full resolution of the map, we load it unbinned. 
-The other trick is to define a temporary loading (Read-in) buffer so the read-in buffer setup in **Buffer Control** panel becomes 
-irrelevant.   
+One of tricks here is to load map into a buffer **unbinned** before saving
+to JPG. When we make montage maps using script to open montage files, the
+default binning for overview display is usually not 1. To take advantage of
+full resolution of the map, we load it unbinned.  The other trick is to
+define a temporary loading (Read-in) buffer so the read-in buffer setup in
+**Buffer Control** panel becomes irrelevant.   
 
-This function can be used by inserting a line right below line ``NewMap`` in your script like here:
+This function can be used by inserting a line right below line ``NewMap`` in
+your script like here:
 
 .. code-block:: ruby
   
   NewMap
   CallFunction MyFuncs::MapToJPG
   
-It can also be used standalone as a script for multiple maps using "Acquire at points...".  
+It can also be used standalone as a script for multiple maps using "Acquire
+at points...".  
 
 .. code-block:: ruby
   
   ScriptName MapToJPG
   CallFunction MyFuncs::MapToJPG 
 
-This function and its script work on **current** item of map. However, if you run on a point item and create a map from this, the above function or script won't work on this in-the-fly situation because **current** item is the very point item instead of newly created map. 
-For this, one needs to use a slight different one as below.
+This function and its script work on **current** item of map. However, if
+you run on a point item and create a map from this, the above function or
+script won't work on this in-the-fly situation because **current** item is
+the very point item instead of newly created map.  For this, one needs to
+use a slight different one as below.
 
 .. code-block:: ruby
    :linenos:
@@ -105,15 +116,17 @@ For this, one needs to use a slight different one as below.
    SaveToOtherFile A JPG JPG $navNote.jpg
    EndFunction
 
-The trick here is to Report and Load the last item in the nav list which is the newly created map.
+The trick here is to Report and Load the last item in the nav list which is
+the newly created map.
 
 .. _shot_to_jpg:
 
 Save Single Shots to JPG 
 ------------------------
 
-We can also save every single shot to JPG format along with MRC images. The MRC file is required to be opened. The JPG filename 
-contains root name of the MRC file and section numbers. 
+We can also save every single shot to JPG format along with MRC images. The
+MRC file is required to be opened. The JPG filename contains root name of
+the MRC file and section numbers. 
 
 .. code-block:: ruby
    :linenos:
