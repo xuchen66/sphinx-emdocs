@@ -1,4 +1,3 @@
-
 .. _SerialEM_make_all_LMM:
 
 SerialEM Note: Make All LMM Maps Automatically
@@ -7,14 +6,15 @@ SerialEM Note: Make All LMM Maps Automatically
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: Apr 3, 2018
-:Last_Updated: Apr 23, 2021
+:Last_Updated: Feb 18, 2022
 
 .. glossary::
 
    Abstract
-     We found that it was extremly useful to be able to make Low Mag Montage (LMM) maps for all the grids in autoloader 
-     cassette automatically. Since it can take a while for multiple grids, you should give yourself a good break while 
-     scope is busy working without feeling guilty.   
+     We found that it was extremly useful to be able to make Low Mag Montage
+     (LMM) maps for all the grids in autoloader cassette automatically.
+     Since it can take a while for multiple grids, you should give yourself
+     a good break while scope is busy working without feeling guilty.   
       
 .. _procedure:
 
@@ -23,16 +23,22 @@ Procedure
 
 Here are steps to follow. 
 
-1. Dock the cassette. After temperature in the autoloader recovers, do *Inventory*.
-#. Setup image condition. I do it inside or SerialEM Low-Dose mode. I use **Search** area for the job. On our Krios with GIF/K2, 
-   I set mag for **Search** as 220X (I cannot go lower as wish, because some hardware piece in lower portion of column will
-   start to cut into image.). 
-#. Setup proper exposure and binning for **Search** parameter from camera control panel. I usually use binning 2, 
-   exposure 1 seconds, and in Linear mode (mP mode, Spotsize 8).
-#. Take a *Search* shot, make sure the count value is proper, no beam/aperture edge in the image. 
-#. Navigator - Montaging & Grids -  Setup Full Montage. Make sure **Search** is checked in the montage setup dialog window.
-   Define a file like LMM.map. 
-#. Edit script **Cars** to reflect cartridge and sample information, like below:
+1. Dock the cassette. After temperature in the autoloader recovers, do
+   *Inventory*.
+#. Setup image condition. I do it inside or SerialEM Low-Dose mode. I use
+   **Search** area for the job. On our Krios with GIF/K2, I set mag for
+   **Search** as 220X (I cannot go lower as wish, because some hardware
+   piece in lower portion of column will start to cut into image.). 
+#. Setup proper exposure and binning for **Search** parameter from camera
+   control panel. I usually use binning 2, exposure 1 seconds, and in Linear
+   mode (mP mode, Spotsize 8).
+#. Take a *Search* shot, make sure the count value is proper, no
+   beam/aperture edge in the image. 
+#. Navigator - Montaging & Grids -  Setup Full Montage. Make sure **Search**
+   is checked in the montage setup dialog window.  Define a file like
+   LMM.map. 
+#. Edit script **Cars** to reflect cartridge and sample information, like
+   below:
 
 .. code-block:: 
    :linenos:
@@ -57,8 +63,8 @@ Here are steps to follow.
         echo name = { $name }
     Endif
     
-Here you define folder location, cartridge #, and sample names. The map filename will have the info in it, such as 
-``LMM-Car2-56-g1.st``. 
+Here you define folder location, cartridge #, and sample names. The map
+filename will have the info in it, such as ``LMM-Car2-56-g1.st``. 
 
 7. Now run the Script **LMMCars** as below:
 
@@ -101,10 +107,13 @@ Here you define folder location, cartridge #, and sample names. The map filename
 Convert LMM maps into JPEG format 
 ----------------------------------
 
-For easy display and small file size, we usually convert all the maps in MRC format to JPEG. 
+For easy display and small file size, we usually convert all the maps in MRC
+format to JPEG. 
 
-   - Set Bin Overview to 1 on Montage control panel (default is usually higher than 1 with montage from command)
-   - Load the map file, the overview will be displayed in a specific buffer such as Q
+   - Set Bin Overview to 1 on Montage control panel (default is usually
+     higher than 1 with montage from command)
+   - Load the map file, the overview will be displayed in a specific buffer
+     such as Q
    - Run a small script 
    
 .. code-block:: ruby
@@ -122,6 +131,9 @@ For easy display and small file size, we usually convert all the maps in MRC for
    
 .. note::
 
-   - The JPEG image generated from above script is *true* JEPG file, not a JPG compressed TIFF file as before. Compressed JPG cannot be displayed properly by Photoshop and ImageJ, although preview, paint and webbroser can show them nicely. 
+   - The JPEG image generated from above script is *true* JEPG file, not a
+     JPG compressed TIFF file as before. Compressed JPG cannot be displayed
+     properly by Photoshop and ImageJ, although preview, paint and webbroser
+     can show them nicely. 
    - You can also convert MMM maps and single shot MRC image the same way. 
    
