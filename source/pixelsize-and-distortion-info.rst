@@ -12,16 +12,18 @@ Pixelsize and Distortion Info on K2/3 Cameras
   Abstract
     We have K2 on Talos Arctica and GIF/K2 on Krios. 
     
-    This doc lists pixelsize information for K2 cameras so you can decide which magnification you 
-    want to use for your final image. I also try to give information about image distortion on these cameras.
+    This doc lists pixelsize information for K2 cameras so you can decide
+    which magnification you want to use for your final image. I also try to
+    give information about image distortion on these cameras.
 
 .. _talos:
 
 On Talos Arctica
 ----------------
 
-According to FEI document http://www.fei.co.jp/_documents/DS0189-10-2014_Talos_Arctica_WEB.pdf, the Cs value for Talos 
-Arctica is 2.7mm.
+According to FEI document
+http://www.fei.co.jp/_documents/DS0189-10-2014_Talos_Arctica_WEB.pdf, the Cs
+value for Talos Arctica is 2.7mm.
 
 Below are pixelsizes on K2 for a few magnifications.
 
@@ -43,15 +45,20 @@ Below are pixelsizes on K2 for a few magnifications.
 |  57,000                  |   0.719           |   0.360              |
 +--------------------------+-------------------+----------------------+
 
-Also the distortion information at these few mags. This mag distortion is believed due to stretch on projection lens
-system. The measurement and correction programs are used and available from http://grigoriefflab.janelia.org/magdistortion . 
+Also the distortion information at these few mags. This mag distortion is
+believed due to stretch on projection lens system. The measurement and
+correction programs are used and available from
+http://grigoriefflab.janelia.org/magdistortion . 
 
 **Table.2 Mag Distortion Parameters for K2 camera**
 
-(Note: this is for images saved by SerialEM directly. So this is after rotation and flip applied. Please do not use this with raw frame saved by plugin without rotation and flip, as it will have different but related values.)
+(Note: this is for images saved by SerialEM directly. So this is after
+rotation and flip applied. Please do not use this with raw frame saved by
+plugin without rotation and flip, as it will have different but related
+values.)
 
 +--------------------------+-------------------+----------------------+-------------------+-----------------------+
-| Magnifications (X)       | Dist.Angle(degree)| Major Scale          | Minor Scale       |  Totat Distortion (%) |
+| Magnifications (X)       | Dist.Angle(degree)| Major Scale          | Minor Scale       |  Total Distortion (%) |
 +==========================+===================+======================+===================+=======================+
 |  11,000                  |                   |                      |                   |                       | 
 +--------------------------+-------------------+----------------------+-------------------+-----------------------+
@@ -99,7 +106,9 @@ On Titan Krios
 |  215,000                 |   0.569           |   0.279              |
 +--------------------------+-------------------+----------------------+
 
-On September 2017, Gatan serviced GIF/K2 system on Krios and they removed a housing block between column and GIF, so the pixelsize changed. The new set of values is below in Table. 4.
+On September 2017, Gatan serviced GIF/K2 system on Krios and they removed a
+housing block between column and GIF, so the pixelsize changed. The new set
+of values is below in Table. 4.
 
 **Table.4 Pixelsize (Å) of GIF K2 camera on Titan Krios - AFTER Sept. 27, 2017**
 
@@ -121,7 +130,8 @@ On September 2017, Gatan serviced GIF/K2 system on Krios and they removed a hous
 |  275,000                 |   0.516           |   0.258              |
 +--------------------------+-------------------+----------------------+
 
-From March 10, 2019, K3 was upgraded on Krios to replace the K2. GIF alignment has changes too. The pixelsizes changed a lot.
+From March 10, 2019, K3 was upgraded on Krios to replace the K2. GIF
+alignment has changes too. The pixelsizes changed a lot.
 
 **Table.5 Pixelsize (Å) of GIF K3 camera on Titan Krios - AFTER March 10, 2019**
 
@@ -134,7 +144,3 @@ From March 10, 2019, K3 was upgraded on Krios to replace the K2. GIF alignment h
 +--------------------------+-------------------+----------------------+
 |  130,000                 |   0.650           |   0.325              |
 +--------------------------+-------------------+----------------------+
-
-
-
-
