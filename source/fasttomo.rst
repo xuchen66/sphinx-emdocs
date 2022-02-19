@@ -88,11 +88,11 @@ displacement, the stage is working well mechanically and the pixelsize is
 not too small. When all these conditions are met, this script might work
 well and fast. 
 
-#. The same idea and method should be also applied to a FISE collection,
+1. The same idea and method should be also applied to a FISE collection,
 provided the frames from each tilt can be grabbed and available for
 scripting. 
 
-#. A single, long exposure with shutter opening and closing during tilting
+2. A single, long exposure with shutter opening and closing during tilting
 series saves time for startup delay and returning time, compared to
 conventional way of multiple exposure one after another. But the significant
 time saving is from minimizing the numbers of F and T shots aleady! Using
