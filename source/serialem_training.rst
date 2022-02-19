@@ -1,4 +1,4 @@
- 
+
 .. index:: SerialEM Trainin
 .. serialem_training:
 
@@ -13,14 +13,22 @@ SerialEM Training - Basic, Tomography, Single Particle, Advanced
 .. glossary:: 
 
  Goal 
-    This is to provide hands-on training on SerialEM. I will teach basic functions of the program. And I will teach how to use the powerful program for electron tomography data collection, and for single particle application as well. 
+    This is to provide hands-on training on SerialEM. I will teach basic
+    functions of the program. And I will teach how to use the powerful
+    program for electron tomography data collection, and for single particle
+    application as well. 
 
  Requirement 
-    You are required to have basic knowledge for TEM operation, preferred for Tecnai/Titan/Talos system. You should be able to operate scope independently to get a properly foused image. You are *not* required, however, to have pre-knowledge of SerialEM itself. 
+    You are required to have basic knowledge for TEM operation, preferred
+    for Tecnai/Titan/Talos system. You should be able to operate scope
+    independently to get a properly foused image. You are *not* required,
+    however, to have pre-knowledge of SerialEM itself. 
 
-This document lists the training contents that are covered in the four catagories - basics, tomography, single particle and advanced topic.
+This document lists the training contents that are covered in the four
+catagories - basics, tomography, single particle and advanced topic.
 
-.. note:: If you have any thought and suggetion to improvement the training, I love to hear them. 
+.. note:: If you have any thought and suggetion to improvement the training,
+          I love to hear them. 
 
 .. _basic:
 
@@ -29,8 +37,10 @@ SerialEM - Basics (3 sessions)
 
 .. rubric:: Session 1
 
-- Introduction to SerialEM, launch and exit the program. Explain system files and user setting file.
-- Explain how SerialEM controls microscope and camera, and its relationship with microscope and camera control software interfaces. 
+- Introduction to SerialEM, launch and exit the program. Explain system
+  files and user setting file.
+- Explain how SerialEM controls microscope and camera, and its relationship
+  with microscope and camera control software interfaces. 
 - Explain SerialEM interface and layout - control panels and menus
 - Camera setup, how to acquire an image from SerialEM interface
 - Demo basic function such as Eucentricity (and shift beam to tilting axis)
@@ -39,7 +49,8 @@ SerialEM - Basics (3 sessions)
 
 - Refresh Tune-scope procedure
 - Prepare gain reference file in SerialEM
-- Explain image buffers and how to save buffer image into file, explain MRC stack and modes 
+- Explain image buffers and how to save buffer image into file, explain MRC
+  stack and modes 
 - Image Shift and Stage Shift
 - Eucentricity, Autofocus and montaging
 - Explain pixelsize and dose/dose rate.
@@ -65,14 +76,16 @@ SerialEM - Tomography (5 sessions)
 
 .. rubric:: Session 2
 
-- Supervise user to acquire MMM maps and collect a tilting series,  answer questions and comment on the condition used.
+- Supervise user to acquire MMM maps and collect a tilting series,  answer
+  questions and comment on the condition used.
 - Setup montage tilting series
 - Setup batch mode for multiple locations
 
 .. rubric:: Session 3
 
 - demo and explain dual axis tomography data collection
-- demo how to rotate grid 90 degree and find the same location (registration transformation)
+- demo how to rotate grid 90 degree and find the same location (registration
+  transformation)
 
 .. rubric:: Session 4
 
@@ -94,7 +107,8 @@ SerialEM - Single Particle (5 sessions)
 
 - positioning X,Y, Image Shift and Stage Shift, backlash
 - dragging to a new position, with Script/Macro
-- positioning for preselected multiple location using ``RealignToItem`` and ``ZeroIS``.
+- positioning for preselected multiple location using ``RealignToItem`` and
+  ``ZeroIS``.
 - positioning Z, using stage and using tilted beam image pair
 - demo and explain scripts ``Z_byG`` and ``Z_byV``
 - demo center beam using keyboard and script
@@ -108,8 +122,10 @@ SerialEM - Single Particle (5 sessions)
 
 .. rubric:: Session 3
 
-- K2/3 specific - image format(MRC, TIFF), Compression, 4-bit special for Super-res frames
-- Asynchronize mode for K2/3 imaging, separate gain reference from raw image frame stack
+- K2/3 specific - image format(MRC, TIFF), Compression, 4-bit special for
+  Super-res frames
+- Asynchronize mode for K2/3 imaging, separate gain reference from raw image
+  frame stack
 - Consideration for dose - total dose, dose per frame, frame time 
 - In-fly frame aligning option
 
@@ -139,11 +155,13 @@ SerialEM - Advanced Topics (3 sessions)
 - Setup multiple accounts
 - Setup multiple system files
 - Setup executables for production and tests
-- Setup Dummy instance to pick target holes while main instance is busy collecting
+- Setup Dummy instance to pick target holes while main instance is busy
+  collecting
 
 .. rubric:: Session 3
 
 - Explain SerialEM scripting interface and major functions
-- Explain example script to control LN\ :sub:`2`\ refilling and obtain K2/3 hardware dark background
+- Explain example script to control LN\ :sub:`2`\ refilling and obtain K2/3
+  hardware dark background
 - Setup email alert system
 - in-fly aligning frames using standalone GPU server computer
