@@ -9,7 +9,8 @@ FAQ
 :Last-updated: 2020-9-21
 
 
-This is list of Frequently Asked Questions about Umass Cryo-EM. Some questions are technical, while others are more general. 
+This is list of Frequently Asked Questions about Umass Cryo-EM. Some
+questions are technical, while others are more general. 
 
 How do I ...
 ------------
@@ -19,24 +20,41 @@ How do I ...
 ... get access to your facility?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We are core facilty and open to everyone who wants to access including industry customers. 
+We are core facilty and open to everyone who wants to access including
+industry customers. 
 
-What is the logistics? Normally, you can start inqury via email or phone call. If our facility is suitable for your projects, we will ask you to submit electronic forms for sample submission and request of instruments. The sample submission form is required by bio-safety office, for any sample coming to Umass Med Sch campus. After we receive your submitted forms and things seem to be in order, our administration will send you a quote for you to obtain a PO for the work or/and instrument time. And we usually can schedule time for you shortly. Our waiting time is usually long, so it is good to plan early. 
+What is the logistics? Normally, you can start inqury via email or phone
+call. If our facility is suitable for your projects, we will ask you to
+submit electronic forms for sample submission and request of instruments.
+The sample submission form is required by bio-safety office, for any sample
+coming to Umass Med Sch campus. After we receive your submitted forms and
+things seem to be in order, our administration will send you a quote for you
+to obtain a PO for the work or/and instrument time. And we usually can
+schedule time for you shortly. Our waiting time is usually long, so it is
+good to plan early. 
 
-We have price rate policy for each year. It is not published on the web page, but is available upon request. 
+We have price rate policy for each year. It is not published on the web
+page, but is available upon request. 
 
 .. _direction:
 
 ... get to your facility location?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please follow this site for main direction and the campus map - https://www.umassmed.edu/bmp/about/directions/
+Please follow this site for main direction and the campus map -
+https://www.umassmed.edu/bmp/about/directions/
 
-We are located at Medical School Building - A floor SA-106. You enter the "SCHOOLS" building from "medical school lobby" indicated on the campus map. After exiting elevator at A floor, turn left. Half way down the hallway, you will see a sign for "CryoEM Core Facility". Call facility office # 774 455 4049 if you are lost. 
+We are located at Medical School Building - A floor SA-106. You enter the
+"SCHOOLS" building from "medical school lobby" indicated on the campus map.
+After exiting elevator at A floor, turn left. Half way down the hallway, you
+will see a sign for "CryoEM Core Facility". Call facility office # 774 455
+4049 if you are lost. 
 
-For parking, you should use "South Road Parking Garage" on South Road, the opposite side of two flags. 
+For parking, you should use "South Road Parking Garage" on South Road, the
+opposite side of two flags. 
 
-For for nearby hotel to stay, there are a couple of possibilities within walking distance.
+For for nearby hotel to stay, there are a couple of possibilities within
+walking distance.
 
 1) https://www.beechwoodhotel.com/
 
@@ -49,24 +67,41 @@ For for nearby hotel to stay, there are a couple of possibilities within walking
 
 The data for screening is usually at three kinds. 
 
-1. Low Mag Montage (LMM) map (grid atlas), usually taken at mag from ~50X to ~150X. The data itself is in MRC 16-bit sign integer format. 
-   It is a MRC stack file containing about ~62 pieces if at 46X. 
+1. Low Mag Montage (LMM) map (grid atlas), usually taken at mag from ~50X to
+   ~150X. The data itself is in MRC 16-bit sign integer format.  It is a MRC
+   stack file containing about ~62 pieces if at 46X. 
    
-2. Medium Mag Montage (LMM) maps (square atlas) or some single shots.  This is usually taken at lower range of M on Talos, such as 1750X. It is also MRC stack file. 
+2. Medium Mag Montage (LMM) maps (square atlas) or some single shots.  This
+   is usually taken at lower range of M on Talos, such as 1750X. It is also MRC
+   stack file. 
 
-3. High mag shots, usually taken at 22,000X or 28,000X. It is MRC stack file, each section is from an exposure. If K2 camera frame mode is used, the secion is usually a single image from aligned movie stacks in-fly. 
+3. High mag shots, usually taken at 22,000X or 28,000X. It is MRC stack
+   file, each section is from an exposure. If K2 camera frame mode is used, the
+   section is usually a single image from aligned movie stacks in-fly. 
 
 .. Note::
 
-   The MRC files we saved here usually have filename extension as **mrc**, **st** (for stack file) and **map**. Regardless the extensions, they are all simply MRC files. 
+   The MRC files we saved here usually have filename extension as **mrc**,
+   **st** (for stack file) and **map**. Regardless the extensions, they are
+   all simply MRC files. 
 
-All the three kinds of data can be easily viewed using IMOD. For Windows, if you don't want to install full IMOD package, a stripped version of display portion called "Windows3dmod" can be insatalled - from http://bio3d.colorado.edu/ftp/Windows3dmod/. For all the other platforms including Windows, a complete IMOD software package is available. IMOD User Guide can be found in http://bio3d.colorado.edu/imod/doc/guide.html. 
+All the three kinds of data can be easily viewed using IMOD. For Windows, if
+you don't want to install full IMOD package, a stripped version of display
+portion called "Windows3dmod" can be insatalled - from
+http://bio3d.colorado.edu/ftp/Windows3dmod/. For all the other platforms
+including Windows, a complete IMOD software package is available. IMOD User
+Guide can be found in http://bio3d.colorado.edu/imod/doc/guide.html. 
 
 .. Note::
    
-   - Since September 2017, most of screening images are also saved into JPG format at the same time when MRC files are saved. This gives you a quick feedback for your sample conditions. The small file size makes it easy for us to upload to DropBox to share with users.
+   - Since September 2017, most of screening images are also saved into JPG
+     format at the same time when MRC files are saved. This gives you a quick
+     feedback for your sample conditions. The small file size makes it easy
+     for us to upload to DropBox to share with users.
    
-   - After March 2018, all JPG files saved are true JPG instead of JPG compressed TIFF as before. They can be opened by almost any standard image software including ImageJ and Photoshop.
+   - After March 2018, all JPG files saved are true JPG instead of JPG
+     compressed TIFF as before. They can be opened by almost any standard
+     image software including ImageJ and Photoshop.
    
 .. _scale_bar:
 
@@ -80,7 +115,8 @@ All the three kinds of data can be easily viewed using IMOD. For Windows, if you
 .. image:: ../images/scale-bar-setup.jpg
    :scale: 50 %
    
-3. With proper scale bar displayed, press SHIFT+S. It will save a jpeg file with scale bar inserted. 
+3. With proper scale bar displayed, press SHIFT+S. It will save a jpeg file
+   with scale bar inserted. 
 
 4. Click "Done" to dismiss the setup window. 
 
@@ -89,13 +125,19 @@ All the three kinds of data can be easily viewed using IMOD. For Windows, if you
 ... mount the data hard drive I received from you?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The hard drive for data should be in its original filesystem which is normally Windows NTFS. The interface on the hard drive should be USB3. It is in my mind that the drive should be most compatable possible. 
+The hard drive for data should be in its original filesystem which is
+normally Windows NTFS. The interface on the hard drive should be USB3. It is
+in my mind that the drive should be most compatible possible. 
 
-If you plug the hard drive onto a Windows or Mac computer, the volume should automatially show up. And you can copy data out from the volume directly. 
+If you plug the hard drive onto a Windows or Mac computer, the volume should
+automatially show up. And you can copy data out from the volume directly. 
 
-If you want to mount the hard drive directly onto a Linux computer, you have to connect and mount it manually. 
+If you want to mount the hard drive directly onto a Linux computer, you have
+to connect and mount it manually. 
 
-After plugging the hard drive to USB port (USB3 preferred) on Linux computer, you should be able to see lines similar to these from `dmesg` command output on linux computer. 
+After plugging the hard drive to USB port (USB3 preferred) on Linux
+computer, you should be able to see lines similar to these from `dmesg`
+command output on linux computer. 
 
 .. code-block:: none
 
@@ -114,13 +156,17 @@ After plugging the hard drive to USB port (USB3 preferred) on Linux computer, yo
 
 From this, you can see the logic volume is assigned to *sdc*. 
 
-On RedHat/RHEL7, CentOS 7 and Scientific Linux 7 and possibly later versions of Linux flavors, the NTFS filesystem is directly supported. For older version of Linux, you might have to install *ntfs-3g* package first. Therefore, you can mount the volume easily with a mounting command as below.
+On RedHat/RHEL7, CentOS 7 and Scientific Linux 7 and possibly later versions
+of Linux flavors, the NTFS filesystem is directly supported. For older
+version of Linux, you might have to install *ntfs-3g* package first.
+Therefore, you can mount the volume easily with a mounting command as below.
 
 .. code-block:: none
 
    $ sudo mount -t ntfs /dev/sdc2 /mnt
 
-This command should not give you errors. After the command, you should be able to see the volume is mounted using `df` output
+This command should not give you errors. After the command, you should be
+able to see the volume is mounted using `df` output
 
 .. code-block:: none
 
@@ -145,8 +191,10 @@ and you should see a few more lines in `dmesg` output like this:
 ... know the image conditions of the data collected on your system?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. From *Frames.mdoc* file. This is a metadata file to record all the conditions for each frame stack file collected. It contains 
-   the most complete information inclduing total dose, stage positions, frame dose, frame numbers and navigator label for this exposure. 
+1. From *Frames.mdoc* file. This is a metadata file to record all the
+   conditions for each frame stack file collected. It contains the most
+   complete information inclduing total dose, stage positions, frame dose,
+   frame numbers and navigator label for this exposure. 
 
 A typical section of *Frames.mdoc* file is as following:
 
@@ -177,12 +225,15 @@ A typical section of *Frames.mdoc* file is as following:
    DateTime = 23-Dec-17  13:20:32
    NavigatorLabel = 84-1
    
-You might be interested only in total dose, pixelsize, frame dose and frame numbers etc., but it contrains fairly complete information. 
+You might be interested only in total dose, pixelsize, frame dose and frame
+numbers etc., but it contrains fairly complete information. 
    
-2. From *Setup.png* - an image file. This is snapshot for Camera Setup Dialog window and with frame data setup window. This image shows 
-   total dose, dose rate on camera, frame numbers, frame time etc.. 
+2. From *Setup.png* - an image file. This is snapshot for Camera Setup
+   Dialog window and with frame data setup window. This image shows total dose,
+   dose rate on camera, frame numbers, frame time etc.. 
    
-3. From image header. You can get header information for MRC and TIFF image stack by an IMOD program *header*:
+3. From image header. You can get header information for MRC and TIFF image
+   stack by an IMOD program *header*:
 
 .. code-block:: none
 
@@ -193,16 +244,22 @@ You might be interested only in total dose, pixelsize, frame dose and frame numb
 ... use the defect file for MotionCor2?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-According to SerialEM helpfile - http://bio3d.colorado.edu/SerialEM/hlp/html/about_camera.htm, here are the step to 
-convert defect map that MotionCor2 needs:
+According to SerialEM helpfile -
+http://bio3d.colorado.edu/SerialEM/hlp/html/about_camera.htm, here are the
+step to convert defect map that MotionCor2 needs.
 
-Finally, if you want to run MotionCor2 directly on the unnormalized data, you should give it a defect map file as well as the gain reference file.  You can make a defect map from the text file with 'clip defect' in IMOD 4.10.7 or higher:
+Finally, if you want to run MotionCor2 directly on the unnormalized data,
+you should give it a defect map file as well as the gain reference file.
+You can make a defect map from the text file with 'clip defect' in IMOD
+4.10.7 or higher:
 
 .. code-block:: none
 
    clip defect -D defects...txt  fileWithFrames  defects...mrc
 
-where the fileWithFrames is used only to set the size of the output and can be any file of the right X and Y size.  To make a compressed TIFF file, which will be much smaller, use:
+where the "fileWithFrames" is used only to set the size of the output and can
+be any file of the right X and Y size.  To make a compressed TIFF file,
+which will be much smaller, use:
 
 .. code-block:: none
 
@@ -217,11 +274,25 @@ What is ...
 ... service and charging details about your screening service?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Screening result usually includes 1) Low Mag Montage (LMM) maps at about 34X mag for entire grid atlas, 2) Medium Mag Montage (MMM) maps at about 2000X for a few promising meshes, 3) final mag shots for 10-20 holes. We also provide JPEG format too for convenient cloud reviewing. 
+Screening result usually includes 1) Low Mag Montage (LMM) maps at about 34X
+mag for entire grid atlas, 2) Medium Mag Montage (MMM) maps at about 2000X
+for a few promising meshes, 3) final mag shots for 10-20 holes. We also
+provide JPEG format too for convenient cloud reviewing. 
 
-For academic, the screening mostly happens on Talos. We split Talos 24 hours into two session - daytime and evening. If you have more than 8 grids, we will simply regard as daytime session. Less than 6, will be charged by per grid, which is less expensive than being regarded as a daytime session. So you may only screen 2-3 grids, for example, and we won't charge by session in that case. We are very flexible at this and take the cost of customer into consideration. 
+For academic, the screening mostly happens on Talos. We split Talos 24 hours
+into two session - daytime and evening. If you have more than 8 grids, we
+will simply regard as daytime session. Less than 6, will be charged by per
+grid, which is less expensive than being regarded as a daytime session. So
+you may only screen 2-3 grids, for example, and we won't charge by session
+in that case. We are very flexible at this and take the cost of customer
+into consideration. 
 
-The most common style to screen is to load 8-9 grids and start to screen, by 5 or 6PM of that day, one of the good conditions is located and we extend into full day (24 hours) session by collecting on the good grid into next morning 9 AM. We could get as many as 1000+ movie stacks. These are high quality shots on Gatan K2/K3 camera. People get about 3A resolution structures on our Talos with similiar setup. 
+The most common style to screen is to load 8-9 grids and start to screen, by
+5 or 6PM of that day, one of the good conditions is located and we extend
+into full day (24 hours) session by collecting on the good grid into next
+morning 9 AM. We could get as many as 1000+ movie stacks. These are high
+quality shots on Gatan K2/K3 camera. People get about 3A resolution
+structures on our Talos with similiar setup. 
 
 Please ask us if you have further questions. 
 
@@ -234,7 +305,8 @@ You received mainly three or four folders as below:
 
 **rawTIFF folder**:
 
-1. TIFF - compressed image stack containing multiple image frames, not gain normalized
+1. TIFF - compressed image stack containing multiple image frames, not gain
+   normalized
 
 2. pcm - IMID python command file for frame alignment using IMOD program
 
@@ -243,13 +315,18 @@ You received mainly three or four folders as below:
 4. log - it is log file of aligning result (after run pcm file to align frames)
 
 **alignedMRC foler**:
-*_ali.mrc files - those are aligned of multiple movie frames, they are single images not movie frames
+*_ali.mrc files - those are aligned of multiple movie frames, they are
+single images not movie frames
 
 **alignedJPG folder**:
-JPG snapshot of the aligned MRCs together with power spectrum. These are for visually check image quality and sample condition.
+JPG snapshot of the aligned MRCs together with power spectrum. These are for
+visually check image quality and sample condition.
 
 **SerialEM-Maps folder**:
-all the control files for SerialEM software running for the session, it contains useful information each shot is from which grid, which region etc.. It is part of the session data, but less useful for end user to process the data.
+all the control files for SerialEM software running for the session, it
+contains useful information each shot is from which grid, which region etc..
+It is part of the session data, but less useful for end user to process the
+data.
 
 
 .. _Cs:
@@ -264,27 +341,49 @@ all the control files for SerialEM software running for the session, it contains
 ... the method I can get my data after collected at your facility?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-UMass Med School has firewall and VPN in place. There is no way to "pull" data from our storage without establishing VPN first. However, outbound traffic - "push" is possible. There are a few ways we can send data to you. 
+UMass Med School has firewall and VPN in place. There is no way to "pull"
+data from our storage without establishing VPN first. However, outbound
+traffic - "push" is possible. There are a few ways we can send data to you. 
 
-- At Harvard Medical School, some labs ask SBGrids folks to setup a DropBox like account for their lab. With specific command, we can push data directly from our storage to HMS special DropBox location. 
+- At Harvard Medical School, some labs ask SBGrids folks to setup a DropBox
+  like account for their lab. With specific command, we can push data directly
+  from our storage to HMS special DropBox location. 
 
-- If you setup a user account on a Linux box for us, we can transfer data via sftp or via rsync over SFTP protocol. We can also use your personal account without knowing your password but using SSH keys. We provide our public key to you and you put it in ./ssh/known_hosts, and we can establich connection using our private key at our end. You can remove that line to disable the possibility of connection. 
+- If you setup a user account on a Linux box for us, we can transfer data
+  via sftp or via rsync over SFTP protocol. We can also use your personal
+  account without knowing your password but using SSH keys. We provide our
+  public key to you and you put it in ./ssh/known_hosts, and we can establish
+  connection using our private key at our end. You can remove that line to
+  disable the possibility of connection. 
 
-- The data can be also sent to you after copying onto a portable HDD drive with USB3 interface. Default NTFS filesystem coming with most of the HDD is usually working fine. 
+- The data can be also sent to you after copying onto a portable HDD drive
+  with USB3 interface. Default NTFS filesystem coming with most of the HDD is
+  usually working fine. 
 
-- AWS. Cloud is becoming reasonable and attractive way to store and compute data. If you setup AWS S3 bucket, and share with us the keyID and secret key, we can upload onto AWS S3 bucket easily. The overall speed is not super fast, but fairly decent and faster than most of SFTP transfer to reginal institutions. For large filesize like a typical raw TIFF stack file about 300-400 MB, it can reach about ~68 MB/s. For external institutions who already have AWS, we recommend to use this way. 
+- AWS. Cloud is becoming reasonable and attractive way to store and compute
+  data. If you setup AWS S3 bucket, and share with us the keyID and secret
+  key, we can upload onto AWS S3 bucket easily. The overall speed is not super
+  fast, but fairly decent and faster than most of SFTP transfer to reaginal
+  institutions. For large filesize like a typical raw TIFF stack file about
+  300-400 MB, it can reach about ~68 MB/s. For external institutions who
+  already have AWS, we recommend to use this way. 
 
 .. _dose_and_dose_rate:
 
 ... What is difference between dose and dose rate? What condition should I use? 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-They are two different things, but related by the magnification of microscope. 
+They are two different things, but related by the magnification of
+microscope. 
 
-Normally, dose means the total electrons hitting the specimen in a unit area. It usually has unit like e\ :sup:`-`/Å\ :sup:`2`. 
+Normally, dose means the total electrons hitting the specimen in a unit
+area. It usually has unit like e\ :sup:`-`/Å\ :sup:`2`. 
 
-Dose rate means how strong the beam is, it is how many electrons hitting in one physical pixel area on the detector sensor for a unit time period. It usually has a unit like **primary electrons/unbinned pixel/second**. A proper dose rate is required for optimal performance of a camera. 
+Dose rate means how strong the beam is, it is how many electrons hitting in
+one physical pixel area on the detector sensor for a unit time period. It
+usually has a unit like **primary electrons/unbinned pixel/second**. A
+proper dose rate is required for optimal performance of a camera. 
 
-Under a giving beam condition, your dose rate is fixed, you can change exposure time to obtain target total dose on specimen. Therefore, we should always determine the proper dose rate first. 
-
-
+Under a giving beam condition, your dose rate is fixed, you can change
+exposure time to obtain target total dose on specimen. Therefore, we should
+always determine the proper dose rate first. 
