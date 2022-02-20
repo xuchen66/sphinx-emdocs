@@ -331,7 +331,8 @@ Below are two example scripts, one in Python and one in regular.
    ## get b ready for regular
    sem.SetVariable('b',listToSEMarray(b))
    
-Running regular SerialEM script "Regular" by clciking *Run* button from the editor, the log window prints:
+Running regular SerialEM script "Regular" by clciking *Run* button from 
+the editor, the log window prints:
 
 .. code-block:: python
 
@@ -497,12 +498,10 @@ editor for the python part. The single "hybrid" script gets the job done.
    
    ScriptName Regular
    
-   low = -1.
-   high = -2.5
-   step = 0.1
-
-   PythonScript $low $high $step
-   #!Python
+   ArrayDef = {-1. -2.5 0.1}
+   
+   PythonScript $ArrayDef[1] $ArrayDef[2] $ArrayDef[3]
+   #!Python               # cannot have indent here 
    #inlcude PyFuncs
 
    a = SEMargStrings      # string list ["-1.", "-2.5", "0.1"] now available 
@@ -511,7 +510,7 @@ editor for the python part. The single "hybrid" script gets the job done.
    for i in range(0, len(a)):
        a[i] = float(a[i])
 
-   CycleTargetDefocus(a[0],a[1],a[2])
+   CycleTargetDefocus(a[0],a[1],a[2])  # defined in script "PyFuncs"
    EndPythonScript
 
 
