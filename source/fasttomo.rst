@@ -6,7 +6,7 @@ FastTomo: A Hybrid Approach to Speedup Tomography Data Collection
 :Co-Author: Albert Xu <albert.t.xu@gmail.com>
 :Co-Author: Chen Xu <chen.xu@umassmed.edu>
 :Date-Created: May 24, 2020
-:Last-Updated: Dec 13, 2020
+:Last-Updated: Feb 21, 2022
 
 .. glossary::
 
