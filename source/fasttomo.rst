@@ -99,3 +99,7 @@ time saving is from minimizing the numbers of F and T shots aleady! Using
 our script **FastTomo**, the total time for bi-directional tilting series
 from -51 to + 51 degree with 3 degee step is about 6 minutes including
 pre-calibration for Z prediction curve.  
+
+.. [reference] FastTomo: A SerialEM Script for Collecting Electron Tomography Data
+Albert Xu, Chen Xu
+bioRxiv 2021.03.16.435675; doi: https://doi.org/10.1101/2021.03.16.435675
