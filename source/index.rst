@@ -36,6 +36,7 @@ Instructions, Manuals and Protocols
    relion-and-cistem-services
    detach-and-reattach-cistem
    adding-scale-bar
+   setup-simple-electronic-logbook
 
 SerialEM Notes
 --------------
