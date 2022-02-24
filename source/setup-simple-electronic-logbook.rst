@@ -7,7 +7,10 @@ Setup Simple Lab Electronic Logbook
 :Contact: <Chen.Xu@umassmed.edu>
 :Date_Created: Feb 24, 2022
 :Last_Updated: Feb 24, 2022
+
 .. _glossary:
+
+   Abstract
       It is desirable to have very simple electronic log books for a
       scientific research laboratory. For an electron microscope lab, it
       would be very nice to be able to record all the imaging conditions,
@@ -43,7 +46,7 @@ Here is one example entry page to enter all the information for a Talos
 session.
 
 .. image:: ../images/entry-page.png
-   :scale: 25 %
+   :scale: 30 %
 
 Below is the config file for this page shown above. 
 
@@ -63,18 +66,7 @@ Below is the config file for this page shown above.
    Comment = Talos Arctica
 
    ; Attributes
-   Attributes = Operator, Customer, Group, Customer Category, Date of
-   Loading, For Scope, Capsule, Cassette, Storage Location, Car 12, Car 11,
-   Car 10, Car 9, Car 8, Car 7, Car 6, Car 5, Car 4, Car 3, Car 2, Car 1,
-   Date on Scope, Time Length, Instrument Hours for Billing, Session
-   Subject, No of  Grids Screened, Specimen, Billable Staff Hours, No of
-   C-Ring/Clip used, Total C-Ring/Clip Charge, Extra Charge, Flat Staff Fee,
-   Vitrobot Usage(hr), Quote#, PO#, Invoice, Invoice No., Exposures
-   Processed,  H.T.(kV),  Gun lens, Extr.Voltage, Emission(uA), C1 aperture
-   , C2 aperture(um) , Obj. aperture(um), Camera Used, Camera Condition,
-   Movies Collected, Frames per Exposure, Exposure Time, Frame Time,
-   Magnification, Spotsize, C2 Lens(%), Dose Rate, Total Dose,
-   Multi-Hole-Shot, Cryo-cycle started?, Cryo-cycle length(hrs.)
+   Attributes = Operator, Customer, Group, Customer Category, Date of Loading, For Scope, Capsule, Cassette, Storage Location, Car 12, Car 11, Car 10, Car 9, Car 8, Car 7, Car 6, Car 5, Car 4, Car 3, Car 2, Car 1, Date on Scope, Time Length, Instrument Hours for Billing, Session Subject, No of  Grids Screened, Specimen, Billable Staff Hours, No of C-Ring/Clip used, Total C-Ring/Clip Charge, Extra Charge, Flat Staff Fee, Vitrobot Usage(hr), Quote#, PO#, Invoice, Invoice No., Exposures Processed,  H.T.(kV),  Gun lens, Extr.Voltage, Emission(uA), C1 aperture , C2 aperture(um) , Obj. aperture(um), Camera Used, Camera Condition, Movies Collected, Frames per Exposure, Exposure Time, Frame Time, Magnification, Spotsize, C2 Lens(%), Dose Rate, Total Dose, Multi-Hole-Shot, Cryo-cycle started?, Cryo-cycle length(hrs.)
 
    ;List display = ID, Date on Scope, Customer, Customer Category, Session
    Subject, Instrument Hours for Billing, No of  Grids Screened, No of
@@ -144,6 +136,52 @@ Below is the config file for this page shown above.
    Quick filter = Date, Customer, Session Subject
 
 
-Continue ...
+.. note:: you can see a single, long line is needed for after "=". 
 
+Install on FreeBSD 
+------------------
 
+There are available install packages for Windows and Linux OS. This makes
+things easier. For other system, you can build it from source code. We have
+it running on a Linux workstation where we use for our processing. I also
+have a backup elog running on **TrueNAS** system in a jail. 
+
+After unpacking from the source code, one can simply compile it with
+*gmake* in main directory.
+
+.. code:: 
+
+   gmake 
+
+If it compiles successfully, And you can then just copy the *elogd* to a
+location like /usr/local/bin. To make it running automatically after
+computer starts, we need a rc script:
+
+.. code:: 
+
+   #!/bin/sh
+
+   # PROVIDE: xuchen
+
+   . /etc/rc.subr
+
+   name="elogd"
+   start_cmd="${name}_start"
+   stop_cmd="${name}_stop"
+
+   elogd_start() {
+      echo "elogd starting"
+      # your commands here
+      /usr/local/bin/sudo -u elog /usr/local/sbin/elogd -D -c /usr/local/elog/elogd.cfg -d /usr/local/elog/logbooks
+   }
+
+   elogd_stop() {
+      echo "qssite stopping"
+      # your commands here
+   }
+
+   run_rc_command "$1"
+
+After jail starting, the **elogd** runs at the background and you can point
+your web browser to jail's IP with port 8080 which is default for elog running
+at. 
