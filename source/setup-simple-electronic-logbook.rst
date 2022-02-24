@@ -68,18 +68,9 @@ Below is the config file for this page shown above.
    ; Attributes
    Attributes = Operator, Customer, Group, Customer Category, Date of Loading, For Scope, Capsule, Cassette, Storage Location, Car 12, Car 11, Car 10, Car 9, Car 8, Car 7, Car 6, Car 5, Car 4, Car 3, Car 2, Car 1, Date on Scope, Time Length, Instrument Hours for Billing, Session Subject, No of  Grids Screened, Specimen, Billable Staff Hours, No of C-Ring/Clip used, Total C-Ring/Clip Charge, Extra Charge, Flat Staff Fee, Vitrobot Usage(hr), Quote#, PO#, Invoice, Invoice No., Exposures Processed,  H.T.(kV),  Gun lens, Extr.Voltage, Emission(uA), C1 aperture , C2 aperture(um) , Obj. aperture(um), Camera Used, Camera Condition, Movies Collected, Frames per Exposure, Exposure Time, Frame Time, Magnification, Spotsize, C2 Lens(%), Dose Rate, Total Dose, Multi-Hole-Shot, Cryo-cycle started?, Cryo-cycle length(hrs.)
 
-   ;List display = ID, Date on Scope, Customer, Customer Category, Session
-   Subject, Instrument Hours for Billing, No of  Grids Screened, No of
-   C-Ring/Clip used, Extra Charge, Flat Staff Fee, Billable Staff Hours,
-   Invoice,  Invoice No.
-
    Options Operator = KangKang, Chen, Kyounghwan, Albert, Christna, Jeng-Yih, ZhongWu, Customer
-
-
-   ;Extendable Options = Customer Options 
-
    Group = group1, group2 
-   
+ 
    Extendable Options = Group
    Options Customer Category = Internal Academic, External Academic, Industry Partner, Industry, not sure
    Options Time Length = 
