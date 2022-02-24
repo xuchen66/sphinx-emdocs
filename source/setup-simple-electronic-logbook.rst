@@ -153,9 +153,9 @@ After unpacking from the source code, one can simply compile it with
 
    gmake 
 
-If it compiles successfully, And you can then just copy the *elogd* to a
-location like /usr/local/bin. To make it running automatically after
-computer starts, we need a rc script:
+If it compiles successfully, you can then just copy the *elogd* to a
+location like /usr/local/sbin. To make it running automatically after
+computer starts, we need a rc script as below.
 
 .. code:: 
 
@@ -181,6 +181,12 @@ computer starts, we need a rc script:
    }
 
    run_rc_command "$1"
+
+And also we need an entry in /etc/rc.conf like this.
+
+.. code:: 
+
+   elogd_enable="YES"
 
 After jail starting, the **elogd** runs at the background and you can point
 your web browser to jail's IP with port 8080 which is default for elog running
