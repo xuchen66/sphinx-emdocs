@@ -61,7 +61,7 @@ in my opinion. It will bring the specimen stage to a valid map item. It
 typically uses combination of stage shift and image shift to get the job
 done. ``0`` here means to stay in the condition from which the map was
 created. For example, the map was generated using LD **View**, and the scope
-currently is at LD **R**,the scope will switch to the View mag, beam
+currently is at LD **R**, the scope will switch to the View mag, beam
 intensity etc.. After *realign* is done, it stays in View mag. Argument
 ``1`` will bring scope back to **R**, after routine finishes. 
 
@@ -119,7 +119,7 @@ Simply align the image in buffer A to reference buffer. This would make the
 target right on again with image shift. The very last argument ``1`` means
 no trimming to any of the source image and reference image. This is needed
 for UltrAuFoil® Holey Gold Films grids which have very "dark" region of the
-   film. 
+film. 
 
 .. thoughts:
 
@@ -135,7 +135,7 @@ calibration. With this, system dynamically interpolates the stage shift
 matrix which is calibrated using near-focus condition. This makes stage
 movement much more accurate and robust.
 
-3. If possible, use whole image as template instead of sub-area. Using
+3. If possible, use whole image as "dynamic" template instead of sub-area. Using
 sub-area such as a single hole is a quick workaround for a grid which has
 periodic feature and 5-point way of picking points might be not very
 accurate due to local geometry variation. 
