@@ -35,7 +35,7 @@ of a single particle data collection script.
     buffer = T
     RealignToNavItem 0
     ResetImageShift 2
-    #Copy A $buffer
+    #Copy A $buffer     #comment out if a fixed template in $buffer is used.  
     AcquireToMatchBuffer $buffer
     AlignTo $buffer 0 1
 
