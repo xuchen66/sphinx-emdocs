@@ -55,7 +55,7 @@ alignment you can use to minimize this instrument parameter. You might call
 this manual alignment. 
 
 There are also seperate tools (programs) to align the scope for coma-free
-purpose in more automated fashion. FEI has Auto-CTF, Legion uses Zemlin
+purpose in more automated fashion. FEI has Auto-CTF, Leginon uses Zemlin
 plateau method to correct coma; SerialEM also has its own built-in functions
 to do coma-free alignment. In SerialEM, the two functions are called `BTID
 Coma-free Alignment
