@@ -378,6 +378,9 @@ to you.
   300-400 MB, it can reach about ~68 MB/s. For external institutions who
   already have AWS, we recommend to use this way. 
 
+- Google Cloud Services. All needed is a kay file to upload files into google
+  bucket. "-m" option can make transfer speed as fast as ~460 MiB/s on our setup.
+
 .. _dose_and_dose_rate:
 
 ... What is difference between dose and dose rate? What condition should I use? 
