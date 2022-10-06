@@ -6,7 +6,7 @@ SerialEM Note: Installation and Calibration
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2017-11-12
-:Last_Updated: 2021-05-06
+:Last_Updated: 2022-10-06
 
 .. glossary::
 
@@ -266,8 +266,36 @@ calibrated.
    switching mags such as the lowest M and the highest LM.  SerialEM uses
    these couple of calibrations and all the Image Shift calibration to
    interpolate to obtain the pixelsizes and tilting axis angles for all
-   other magnifications. This is very cute. 
+   other magnifications. This is very cute. HOWEVER, this is for a scope 
+   to have consistent image shift for all the mags. For some scopes this
+   might not be true. Thus it is not a bad idea at all to just have pixelsize
+   calibrated for all the important mags you will use. 
+   
+   When mag gets high, you can use montage overview images to calibrate 
+   pixelsize. With Image Shift already calibrated well, montaging using
+   Image Shift can be pretty fast. So in the end you also have lines like
+   below.
+   
+.. code-block:: ruby
 
+   RotationAndPixel 17   999    90.9  3.317   # 1250, p=4147
+   RotationAndPixel 18    0.22  999   2.602   # 1600, p=4164
+   RotationAndPixel 19   -0.29  999   2.006   # 2000, p=4012
+   RotationAndPixel 20   -1.29  999   1.571   # 2600, p=4084
+   RotationAndPixel 21   -0.25  999    1.22   # 3400, p=4149
+   RotationAndPixel 22    0.08  999   0.954   # 4300, p=4102
+   RotationAndPixel 24    999   999  0.6203   # 6700, p=4156
+   RotationAndPixel 25    0.02  999  0.4912   # 8500, p=4176
+   RotationAndPixel 26    0.58  999  0.3799   # 11000, p=4179
+   RotationAndPixel 27   -0.05  999  0.2992   # 13500, p=4039
+   RotationAndPixel 28   -0.58  999  0.2383   # 17500, p=4170
+   RotationAndPixel 29    3.37  999  0.1849   # 22000, p=4069
+   RotationAndPixel 30   -0.11  999  0.1456   # 28000, p=4077
+   RotationAndPixel 31   -0.09  999  0.1141   # 36000, p=4108
+   #RotationAndPixel 32   -0.06  999  0.09005   # 45000, p=4052
+   RotationAndPixel 32   -0.06  999 0.087	# from KK's pixel refine
+   RotationAndPixel 33    0.02  999 0.07141   # 57000, p=4071
+  
 .. rubric:: Step 12
 
 - Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
