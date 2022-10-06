@@ -274,11 +274,10 @@ calibrated.
    When mag gets high, you can use montage overview images to calibrate 
    pixelsize. With Image Shift already calibrated well, montaging using
    Image Shift can be pretty fast. So in the end you also have lines like
-   below.
+   below from menu Calibration - Pixel Size - List Relative Rotations
    
 .. code-block:: ruby
 
-   RotationAndPixel 17   999    90.9  3.317   # 1250, p=4147
    RotationAndPixel 18    0.22  999   2.602   # 1600, p=4164
    RotationAndPixel 19   -0.29  999   2.006   # 2000, p=4012
    RotationAndPixel 20   -1.29  999   1.571   # 2600, p=4084
