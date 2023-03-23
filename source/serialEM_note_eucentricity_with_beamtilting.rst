@@ -128,7 +128,7 @@ use LD view.
 
 2. **With the specimen at eucentric height**, click on the button "Current
 Settings" in the dialog window shown above. In our case, we check the box in
-front or "Use View area in Low Dose mode". 
+front of "Use View area in Low Dose mode". 
 
 The calibration procedure will measure how much "defocus" from the beam
 tilts and that value will be used to converge to later. This value is in the
