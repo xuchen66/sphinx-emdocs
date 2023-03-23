@@ -126,13 +126,13 @@ stage method to get to eucentricity. You can always check how well by
 comparing two shots - one at 0 and other one at say 30 degree. We normally
 use LD view. 
 
-2. With the specimen at eucentric height, click on the button "Current
+2. **With the specimen at eucentric height**, click on the button "Current
 Settings" in the dialog window shown above. In our case, we check the box in
 front or "Use View area in Low Dose mode". 
 
 The calibration procedure will measure how much "defocus" from the beam
 tilts and that value will be used to converge to later. This value is in the
-memory and will be saved in your setting file. But we usually redo this the
+memory and will be saved in your setting file. But we usually redo this in the
 next session, just in case small changes in a new session (day). 
 
 Eucentricity by Focus
