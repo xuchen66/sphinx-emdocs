@@ -33,8 +33,8 @@ extra calibrations help.
 
 1. Calibration - Focus & Tuning - Extended Autofocus
 
-This can take the range way over typical range for autofocus calibration of 72
-microns. For example, we do this in a range from -300 to +100 microns. This
+This can take the defocus way over typical range used for autofocus calibration of 72
+microns. For example, we do this for a range from -300 to +100 microns. This
 makes autofocusing measured value more accurate for high defocus condition. 
 
 The calibration result should be saved from menu Calibration - Save
