@@ -34,7 +34,7 @@ extra calibrations help.
 1. Calibration - Focus & Tuning - Extended Autofocus
 
 This can take the range way over typical range for autofocus calibration of 72
-microns. For example, we do this in a range (-300 to +100 microns). This
+microns. For example, we do this in a range (frmo -300 to +100 microns). This
 makes autofocusing measured value more accurate for large defocus condition. 
 
 The calibration result should be saved from menu Calibration - Save
@@ -115,9 +115,7 @@ Calibrate Focus Targets ...". This leads to a dialog window as below.
 **Fig.1 Calibrate Focus Target dialog**
 
 .. image:: ../images/cal-Z-dialog.png
-..   :height: 361 px
-..   :width: 833 px
-   :scale: 20%
+   :scale: 50 %
    :alt: Calibrate Focus Target
    :align: left
 
