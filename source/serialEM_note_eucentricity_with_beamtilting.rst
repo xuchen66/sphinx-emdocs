@@ -117,7 +117,7 @@ Calibrate Focus Targets ...". This leads to a dialog window as below.
 .. image:: ../images/cal-Z-dialog.png
 ..   :height: 361 px
 ..   :width: 833 px
-   :scale: 20 %
+   :scale: 20%
    :alt: Calibrate Focus Target
    :align: left
 
@@ -140,10 +140,18 @@ next session, just in case small changes in a new session (day).
 Eucentricity by Focus
 ---------------------
 
-With the calibrations available, we do it from "Tasks - Eucentricity -
+With the calibrations available, we invoke this form one of the two ways:
+
+1. from "Tasks - Eucentricity -
 Eucentricity by Focus". It will measure the "defocus" at current stage
 position and adjust the Z height by converging to the "calibrated defocus"
 value done as above. It uses the exact conditions for that calibration. 
+
+2. from script command 
+
+.. code-block:: ruby
+
+   Eucentricity -1
 
 That's it! You will find this is fast and very accurate. We use it almost
 exclusively in our daily operations. Hope you enjoy it as we do.
