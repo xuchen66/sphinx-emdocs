@@ -115,9 +115,10 @@ Calibrate Focus Targets ...". This leads to a dialog window as below.
 **Fig.1 Calibrate Focus Target dialog**
 
 .. image:: ../images/cal-Z-dialog.png
-   :scale: 50 %
+   :scale: 30 %
    :alt: Calibrate Focus Target
    :align: left
+
 
 Here are usually how we do it. 
 
