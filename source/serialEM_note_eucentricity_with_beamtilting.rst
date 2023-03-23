@@ -16,10 +16,10 @@ SerialEM Note: Eucentricity With Beam Tilting
       It describes how to use Beam Tilt method to perform eucentric height
       procedure, using a script. Since then, this beam tilting method has
       been built in and can be accessed from menu "Tasks - Eucentricity -
-      Eucentricity by Focus". It is faster and more robust than scripting
-      method, although the ideas behind them are very much the same. 
+      Eucentricity by Focus". It is faster and more robust than using scripting, 
+      although the ideas behind them are very much the same. 
 
-      In this note, I will give more thorough information about how to
+      In this note, I give more thorough information about how to
       prepare to use it and how to use in Low Dose mode.  
       
 .. _system_calibration:
