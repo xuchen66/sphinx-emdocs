@@ -11,8 +11,8 @@ SerialEM Note: Eucentricity With Beam Tilting
 .. glossary::
 
    Abstract
-      A few years ago, I wrote a note `"More About Z
-      Height"<https://sphinx-emdocs.readthedocs.io/en/latest/serialEM-note-more-about-z-height.html>`_.
+      A few years ago, I wrote a note `More About Z
+      Height <https://sphinx-emdocs.readthedocs.io/en/latest/serialEM-note-more-about-z-height.html>`_.
       It describes how to use Beam Tilt method to perform eucentric height
       procedure, using a script. Since then, this beam tilting method has
       been built in and can be accessed from menu "Tasks - Eucentricity -
@@ -99,8 +99,8 @@ system property file.
    ZbyGFocusScalings  0  1.015  -50  0.984  -100  0.974  -150  0.975  -200  0.972  -250  0.982  -300  0.979
 
 For more information about the two above calibrations, please refer the
-helpfile section `"Extended Autofocus and Non-reciprocity Calibration for Using
-Eucentricity by Focus (Priority 2)"<https://bio3d.colorado.edu/SerialEM/betaHlp/html/setting_up_serialem.htm#z_by_g_setup>`_.
+helpfile section `Extended Autofocus and Non-reciprocity Calibration for Using
+Eucentricity by Focus (Priority 2) <https://bio3d.colorado.edu/SerialEM/betaHlp/html/setting_up_serialem.htm#z_by_g_setup>`_.
 
 Session Calibration
 -------------------
@@ -117,7 +117,7 @@ Calibrate Focus Targets ...". This leads to a dialog window as below.
 .. image:: ../images/cal-Z-dialog.png
 ..   :height: 361 px
 ..   :width: 833 px
-   :scale: 50 %
+   :scale: 20 %
    :alt: Calibrate Focus Target
    :align: left
 
