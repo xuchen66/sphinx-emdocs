@@ -60,6 +60,7 @@ SerialEM Notes
    fasttomo
    serialem-note-hidden-goodies
    serialem-note-control-without-scripting
+   serialEM_note_eucentricity_with_beamtilting
 
 Index
 *****
