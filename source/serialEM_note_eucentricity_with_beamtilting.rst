@@ -151,7 +151,7 @@ With the calibrations available, we invoke this form one of the two ways:
 It will measure the "defocus" at current stage
 position and adjust the Z height by converging to the "calibrated defocus"
 value done as above. It uses the exact conditions such as spotsize, intensity 
-etc. for that calibration.
+and OBJ% etc. for what was used in the session calibration.
 
 That's it! You will find this is fast and very accurate. We use it almost
 exclusively in our daily operations. Hope you enjoy it as we do.
