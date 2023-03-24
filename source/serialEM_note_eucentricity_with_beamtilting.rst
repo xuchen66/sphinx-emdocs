@@ -41,7 +41,7 @@ The calibration result should be saved from menu Calibration - Save
 Calibrations. 
 
 2. A script run to get information which helps moving stage more accurately. 
-It is called Non-reciprocity Calibration.
+   It is called Non-reciprocity Calibration.
 
 .. code-block:: ruby
 
@@ -91,7 +91,7 @@ It is called Non-reciprocity Calibration.
            MoveStage 0 0 -$zRange / 2.
 
 
-The script run will spit out a line as below, which you should put in your
+The running of the script will spit out a line like below in the log, which you should put in your
 system property file.
 
 .. code-block:: ruby
