@@ -65,7 +65,7 @@ map below.
 .. image:: ../images/UMass.Medical.School.Map-loading-dock.jpg
    :scale: 20 %
    :alt: campus map for dropping or deliverying package
-   :align: left
+   :align: center
 
 
 For for nearby hotel to stay, there are a couple of possibilities within
