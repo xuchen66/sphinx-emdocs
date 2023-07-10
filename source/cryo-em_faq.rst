@@ -7,7 +7,7 @@ FAQ
 :Author: UMass CryoEM Core
 :Contact: <cryoem.umms@gmail.com>
 :Date-created: 2017-2-13
-:Last-updated: 2022-2-19
+:Last-updated: 2023-7-10
 
 This is list of Frequently Asked Questions about Umass Cryo-EM. Some
 questions are technical, while others are more general. 
@@ -60,7 +60,7 @@ It is the loading dock of Medical School Building Receiving. It is on Fifth Rd,
 right off North Rd. Please see the indication of dropping location (red) in the campus 
 map below.
 
-**Fig.1 Campus Map with Dropping Location indicated in Red **
+** Fig.1 Campus Map with Dropping Location indicated in Red **
 
 .. image:: ../images/UMass.Medical.School.Map-loading-dock.jpg
    :scale: 20 %
