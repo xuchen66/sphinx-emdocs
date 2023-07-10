@@ -67,6 +67,7 @@ map below.
    :alt: campus map for dropping or deliverying package
    :align: left
 
+
 For for nearby hotel to stay, there are a couple of possibilities within
 walking distance.
 
