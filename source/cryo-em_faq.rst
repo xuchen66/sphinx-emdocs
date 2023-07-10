@@ -57,7 +57,12 @@ For packaging delivery by local carrier, the drop-off location should be
 https://www.google.com/maps/@42.2782333,-71.7606857,17.16z
 
 It is the loading dock of Medical School Building Receiving. It is on Fifth Rd,
-right off North Rd. 
+right off North Rd. Please see the indication of dropping location (red) in the campus 
+map below.
+
+
+
+
 
 For for nearby hotel to stay, there are a couple of possibilities within
 walking distance.
