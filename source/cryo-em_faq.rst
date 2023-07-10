@@ -65,7 +65,7 @@ map below.
 .. image:: ../images/UMass.Medical.School.Map-loading-dock.jpg
 ..   :height: 361 px
 ..   :width: 833 px
-   :scale: 50 %
+   :scale: 30 %
    :alt: campus map for dropping or deliverying package
    :align: left
 
