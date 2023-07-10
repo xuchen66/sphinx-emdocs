@@ -60,7 +60,7 @@ It is the loading dock of Medical School Building Receiving. It is on Fifth Rd,
 right off North Rd. Please see the indication of dropping location (red) in the campus 
 map below.
 
-** Fig.1 Campus Map with Dropping Location indicated in Red **
+**Fig.1 Campus Map with Dropping Location indicated in Red**
 
 .. image:: ../images/UMass.Medical.School.Map-loading-dock.jpg
    :scale: 20 %
