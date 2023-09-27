@@ -115,7 +115,7 @@ button.
 
 **Fig.3 Step and Adjust IS Setup**
 
-   .. image:: ../images/Capture-StepTo-Adjust.JPG
+.. image:: ../images/Capture-StepTo-Adjust.JPG
    :scale: 30 %
    :alt: Step and Adjust
    :align: center
@@ -135,7 +135,7 @@ and already applied for the CURRENT one, as shown in below figure 4.
 
 **Fig.4 Adjustment transform already applied**
 
-   .. image:: ../images/Capture-multi-after-adjust.JPG
+.. image:: ../images/Capture-multi-after-adjust.JPG
    :scale: 30 %
    :alt: Step and Adjust
    :align: center
@@ -145,7 +145,7 @@ adjustment transform.
 
 **Fig.5 Image Shift Patters before and after adjustment**
 
-   .. image:: ../images/before-and-after-adjustment.jpg
+.. image:: ../images/before-and-after-adjustment.jpg
    :scale: 30 %
    :alt: Step and Adjust
    :align: center
@@ -181,7 +181,7 @@ tell you the transform is available shows up, as shown in red outline below.
 
 **Fig.6 Adjustment transform available**
 
-   .. image:: ../images/xform-2000-79000.jpg
+.. image:: ../images/xform-2000-79000.jpg
    :scale: 30 %
    :alt: Step and Adjust
    :align: center
