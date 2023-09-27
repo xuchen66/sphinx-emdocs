@@ -176,7 +176,7 @@ So for daily operation, you find hole on the new grid first and you then
 tell you the transform is available shows up, as shown in red outline below. 
 
 **Fig.6 Adjustment transform available**
-   .. image:: ../images/xform-2000-79000.JPG
+   .. image:: ../images/xform-2000-79000.jpg
    :scale: 30 %
    :alt: Step and Adjust
    :align: center
