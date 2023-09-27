@@ -61,6 +61,7 @@ SerialEM Notes
    serialem-note-hidden-goodies
    serialem-note-control-without-scripting
    serialEM_note_eucentricity_with_beamtilting
+   SerialEM_note_define-IS-vectors.rst
 
 Index
 *****
