@@ -95,7 +95,7 @@ Hole Vectors ]**.
    :align: center
 
 Figure 2. shows two places get updated in the dialog after pushing **[ Use Last
-Hole Vectors ]**. Shown in red outline 1, the image shift vectors is updated
+Hole Vectors ]**. Shown in red outline 1, the image shift vectors are updated
 from the new stage hole vector conversion. And also there is an interesting
 line "No adjustment transform available" in red outline 2. What is that
 then? 
@@ -123,12 +123,13 @@ button.
 It can conveniently shift to a corner and take a shot for you to see, you
 can adjust the position and save the image shift value, for this corner, by
 pressing **[ Save Image Shift ]** like before. And you do this for all four
-corner point. 
+corner points. 
 
 We started with a set of image shift vectors converted from stage hole
 vectors initially (at LD View mag), and we ended up with final accurate set
-of image shift vectors (at LD R mag)! This procedure results in an
-adjustment transform matrix between the two. 
+of image shift vectors (at LD R mag)! This procedure not only get refined image 
+shift vectors for R mag, but also **results in an adjustment transform matrix 
+between the two**! 
 
 As soon as the procedure is finished, the adjustment transform is available,
 and already applied for the CURRENT one, as shown in below figure 4. 
