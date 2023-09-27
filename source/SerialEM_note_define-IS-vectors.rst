@@ -146,8 +146,8 @@ adjustment transform.
 **Fig.5 Image Shift Patters before and after adjustment**
 
 .. image:: ../images/before-and-after-adjustment.JPG
-   :scale: 30 %
-   :alt: Step and Adjust
+   :scale: 20 %
+   :alt: patterns before and after adjustment
    :align: center
 
 The left image (A) shows image shift pattern right after converted from
