@@ -89,7 +89,7 @@ Hole Vectors ].
 
 **Fig.2 Use Last Hole Vector**
 
-   .. image:: ../images/Capture-multi-setup-noxform.JPG
+.. image:: ../images/Capture-multi-setup-noxform.JPG
    :scale: 30 %
    :alt: Adjusted manually
    :align: center
@@ -116,7 +116,7 @@ button.
 **Fig.3 Step and Adjust IS Setup**
 
 .. image:: ../images/Capture-StepTo-Adjust.JPG
-   :scale: 30 %
+   :scale: 50 %
    :alt: Step and Adjust
    :align: center
 
