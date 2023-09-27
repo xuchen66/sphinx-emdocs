@@ -89,7 +89,7 @@ Hole Vectors ].
 
 **Fig.2 Use Last Hole Vector**
 
-   .. image:: ../images/Capture-multi-setup-noxform.jpeg
+   .. image:: ../images/Capture-multi-setup-noxform.JPG
    :scale: 30 %
    :alt: Adjusted manually
    :align: center
