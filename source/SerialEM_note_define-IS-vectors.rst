@@ -88,7 +88,7 @@ as starting point. Then we can do simply by pressing the button [ Use Last
 Hole Vectors ]. 
 
 **Fig.2 Use Last Hole Vector**
-   .. image:: ../images/Capture-multi-setup-noxform.JPG
+   .. image:: ../images/Capture-multi-setup-noxform.jpeg
    :scale: 30 %
    :alt: Adjusted manually
    :align: center
