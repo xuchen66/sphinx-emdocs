@@ -32,8 +32,8 @@ a brief summary, the steps are:
 1. Define 3 x 3 (or similar) regular pattern from "Multiple Record Setup"
    dialog window. 
 2. Add four corner points in an image in circular fashion. 
-3. Click on button [ For Corners of Regular Pattern ], and use buttons [ IS
-   to Nav Pt ] and [ Save Image Shift ] to shift to each corner point and save
+3. Click on button **[ For Corners of Regular Pattern ]**, and use buttons **[ IS
+   to Nav Pt ]** and **[ Save Image Shift ]** to shift to each corner point and save
    it. 
 
 You likely will need to take a Record shot ( e.g. LD R ) to touch up the
@@ -84,18 +84,18 @@ holes, the hole vectors become available. These are two basic vectors to
 reflect hole distances in two directions and their relative orientation to
 the camera system. Even there might no good hole be included, the vectors
 themselves are available. They can be used to convert to Image Shift vectors
-as starting point. Then we can do simply by pressing the button [ Use Last
-Hole Vectors ]. 
+as starting point. Then we can do simply by pressing the button **[ Use Last
+Hole Vectors ]**. 
 
 **Fig.2 Use Last Hole Vector**
 
 .. image:: ../images/Capture-multi-setup-noxform.JPG
-   :scale: 30 %
+   :scale: 50 %
    :alt: Adjusted manually
    :align: center
 
-Figure 2. shows two places get updated in the dialog after pushing "Use Last
-Hole Vectors". Shown in red outline 1, the image shift vectors is updated
+Figure 2. shows two places get updated in the dialog after pushing **[ Use Last
+Hole Vectors ]**. Shown in red outline 1, the image shift vectors is updated
 from the new stage hole vector conversion. And also there is an interesting
 line "No adjustment transform available" in red outline 2. What is that
 then? 
@@ -108,9 +108,9 @@ Adjustment Transform
 After the button pushed, we have image shift vectors. And we wanted to
 refine them by stepping to and adjust so they can be accurate. This is
 very much similar to previously manual shift, but we do this via a more
-automatic way from "StepTo and Adjust IS" button. 
+automatic way from **[ StepTo and Adjust IS]** button. 
 
-Below Figure 3. is a setup dialog from pushing "StepTo and Adjust IS"
+Below Figure 3. is a setup dialog from pushing **[ StepTo and Adjust IS ]**
 button.
 
 **Fig.3 Step and Adjust IS Setup**
@@ -122,7 +122,7 @@ button.
 
 It can conveniently shift to a corner and take a shot for you to see, you
 can adjust the position and save the image shift value, for this corner, by
-pressing "Save Image Shift" like before. And you do this for all four
+pressing **[ Save Image Shift ]** like before. And you do this for all four
 corner point. 
 
 We started with a set of image shift vectors converted from stage hole
@@ -136,8 +136,8 @@ and already applied for the CURRENT one, as shown in below figure 4.
 **Fig.4 Adjustment transform already applied**
 
 .. image:: ../images/Capture-multi-after-adjust.JPG
-   :scale: 30 %
-   :alt: Step and Adjust
+   :scale: 50 %
+   :alt: transform already applied
    :align: center
 
 Below is the figure 5 showing 3 x 3 patterns before and after this
@@ -176,19 +176,19 @@ conveniently. When you start with a new grid, your old pattern is no longer
 valid, but this adjustment transform stays good. 
 
 So for daily operation, you find hole on the new grid first and you then
-"Use Last Hole Vectors". As soon as that button is pushed, the message to
+**[ Use Last Hole Vectors ]**. As soon as that button is pushed, the message to
 tell you the transform is available shows up, as shown in red outline below. 
 
 **Fig.6 Adjustment transform available**
 
 .. image:: ../images/xform-2000-79000.jpg
    :scale: 30 %
-   :alt: Step and Adjust
+   :alt: adjustment transform available
    :align: center
 
-You can utilize the transform by pushing the button "Apply Stored
-Adjustment", your new Image Shift vectors for the pattern is updated
-immediately. You might want to do "StepTo and Adjust IS" here also to refine
+You can utilize the transform by pushing the button **[ Apply Stored
+Adjustment ]**, your new Image Shift vectors for the pattern is updated
+immediately. You might want to do **[ StepTo and Adjust IS ]** here also to refine
 the IS vectors for today's condition and make sure the positions are
 perfect. This time, you will find your features easily. 
 
@@ -201,8 +201,8 @@ you save the nav file and open it in text editor, you can see the two lines:
    HoleISXspacing = 2.69895 -0.758684 0
    HoleISYspacing = -0.768892 -2.71193 0 
 
-You can then click on "Use Map Hole Vectors" on a map item and then "Apply
-Stored Adjustment". As you can imagine, this can work for a grid with slight
+You can then click on **[ Use Map Hole Vectors ]** on a map item and then **[ Apply
+Stored Adjustment ]**. As you can imagine, this can work for a grid with slight
 geometry change across the grid meshes. It can also be used conveniently to
 a new grid with completely different geometry. 
 
