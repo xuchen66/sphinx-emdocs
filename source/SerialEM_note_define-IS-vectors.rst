@@ -132,7 +132,7 @@ As soon as the procedure is finished, the adjustment transform is available,
 and already applied for the CURRENT one, as shown in below figure 4. 
 
 **Fig.4 Adjustment transform already applied**
-   .. image:: ../images/Capture-multi-after-adjust-already-applied.JPG
+   .. image:: ../images/Capture-multi-after-adjust.JPG
    :scale: 30 %
    :alt: Step and Adjust
    :align: center
@@ -141,7 +141,7 @@ Below is the figure 5 showing 3 x 3 patterns before and after this
 adjustment transform.
 
 **Fig.5 Image Shift Patters before and after adjustment**
-   .. image:: ../images/Capture-multi-after-adjust.JPG
+   .. image:: ../images/before-and-after-adjustment.jpg
    :scale: 30 %
    :alt: Step and Adjust
    :align: center
