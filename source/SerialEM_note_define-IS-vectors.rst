@@ -141,7 +141,7 @@ Below is the figure 5 showing 3 x 3 patterns before and after this
 adjustment transform.
 
 **Fig.5 Image Shift Patters before and after adjustment**
-   .. image:: ../images/Capture-multi-after-adjust-already-applied.JPG
+   .. image:: ../images/Capture-multi-after-adjust.JPG
    :scale: 30 %
    :alt: Step and Adjust
    :align: center
