@@ -88,6 +88,7 @@ as starting point. Then we can do simply by pressing the button [ Use Last
 Hole Vectors ]. 
 
 **Fig.2 Use Last Hole Vector**
+
    .. image:: ../images/Capture-multi-setup-noxform.jpeg
    :scale: 30 %
    :alt: Adjusted manually
@@ -113,6 +114,7 @@ Below Figure 3. is a setup dialog from pushing "StepTo and Adjust IS"
 button.
 
 **Fig.3 Step and Adjust IS Setup**
+
    .. image:: ../images/Capture-StepTo-Adjust.JPG
    :scale: 30 %
    :alt: Step and Adjust
@@ -132,6 +134,7 @@ As soon as the procedure is finished, the adjustment transform is available,
 and already applied for the CURRENT one, as shown in below figure 4. 
 
 **Fig.4 Adjustment transform already applied**
+
    .. image:: ../images/Capture-multi-after-adjust.JPG
    :scale: 30 %
    :alt: Step and Adjust
@@ -141,6 +144,7 @@ Below is the figure 5 showing 3 x 3 patterns before and after this
 adjustment transform.
 
 **Fig.5 Image Shift Patters before and after adjustment**
+
    .. image:: ../images/before-and-after-adjustment.jpg
    :scale: 30 %
    :alt: Step and Adjust
@@ -176,6 +180,7 @@ So for daily operation, you find hole on the new grid first and you then
 tell you the transform is available shows up, as shown in red outline below. 
 
 **Fig.6 Adjustment transform available**
+
    .. image:: ../images/xform-2000-79000.jpg
    :scale: 30 %
    :alt: Step and Adjust
