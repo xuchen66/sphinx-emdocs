@@ -26,10 +26,10 @@ SerialEM Note: Define Image Shift Vectors for Multiple Exposure
 The Manual Way 
 --------------
 
-I suppose you probably are already familiar with the setup manual way. In
+I suppose you probably are already familiar with the setup in manual way. In
 a brief summary, the steps are:
 
-1. Define 3 x 3 (or similar) regular pattern from "Multiple Record Setup"
+1. Define 3 x 3 (or similar) regular pattern from **Multiple Record Setup**
    dialog window. 
 2. Add four corner points in an image in circular fashion. 
 3. Click on button **[ For Corners of Regular Pattern ]**, and use buttons **[ IS
@@ -48,29 +48,30 @@ saving the image shift value for that corner point.
    :align: center
 
 Sometimes, you cannot see feature (such as a edge of partial hole) because
-the position is too far away for the high mag. In an ideal world, the image
+the position is too far away in the high mag image. In an ideal world, the image
 shift in R mag should land on the exact location of the point you picked.
 But in reality, possibly due to imperfection of system calibrations, this
 rarely happens. You usually have to reduce R mag temporarily or use an IS
-montage at R to catch the feature, and you have to do this four times. 
+montage at R to catch the feature, and you have to do this four times for
+each of the four corner points. 
 
 Admittedly, it is a pain, at least not very fun to me.
 
-Despite the pain, at end of the procedure in above steps, the precise image
-shift vectors are determined. The image shift pattern drawn back to lower
-mag image (e.g. LD View) might seem off a little. This is again due to
+Despite the pain, at end of the procedure from the above steps, the precise image
+shift vectors are obtained. The image shift pattern based on the vectors drawn back 
+to lower mag image (e.g. LD View) might seem off a little. This is again due to
 imperfect calibrations. No worries, in your final collected images, the
 positions will be right! 
 
 As soon as the procedure is finished, there appears a line right under
-"Regular array of holes" in the dialog, something like **Spacing 2.74 and
+"Regular array of holes" in the dialog window, something like **Spacing 2.74 and
 2.75um Maximum shift: 3.9um**. If you have never done this before, this line
 is not shown until you did. If you save setting file, there will be a line
 starting with "MultiShotParams" containing this very information. And in
 your next SerialEM session with a new grid, this information will be existed
-there and likely wrong. You will have to redo this for a new grid. 
+there but likely wrong. You will have to redo this for a new grid. 
 
-Oh, I know, you probably naturally ask: "Can we do this an easier way?" The
+Oh, you probably will naturally ask: "Can we do this an easier way?" The
 answer is YES. 
 
 .. _using_hole_vectors:
@@ -83,9 +84,9 @@ use hole vectors. If we perform hole finding on an image with multiple
 holes, the hole vectors become available. These are two basic vectors to
 reflect hole distances in two directions and their relative orientation to
 the camera system. Even there might no good hole be included, the vectors
-themselves are available. They can be used to convert to Image Shift vectors
-as starting point. Then we can do simply by pressing the button **[ Use Last
-Hole Vectors ]**. 
+themselves are available after hole finding. They can be used to convert to 
+Image Shift vectors as starting point. Then we can do simply by pressing 
+the button **[ Use Last Hole Vectors ]**. 
 
 **Fig.2 Use Last Hole Vector**
 
@@ -122,8 +123,9 @@ button.
 
 It can conveniently shift to a corner and take a shot for you to see, you
 can adjust the position and save the image shift value, for this corner, by
-pressing **[ Save Image Shift ]** like before. And you do this for all four
-corner points. 
+pressing **[ Save Image Shift ]** like before. This routine steps through
+all four points for you. In the end, you have a new set of accurate image shift 
+vectors! 
 
 We started with a set of image shift vectors converted from stage hole
 vectors initially (at LD View mag), and we ended up with final accurate set
@@ -131,7 +133,7 @@ of image shift vectors (at LD R mag)! This procedure not only get refined image
 shift vectors for R mag, but also **results in an adjustment transform matrix 
 between the two**! 
 
-As soon as the procedure is finished, the adjustment transform is available,
+As soon as the procedure is finished, the adjustment transform is available (in memory),
 and already applied for the CURRENT one, as shown in below figure 4. 
 
 **Fig.4 Adjustment transform already applied**
@@ -151,21 +153,21 @@ adjustment transform.
    :alt: patterns before and after adjustment
    :align: center
 
-The left image (A) shows image shift pattern right after converted from
-stage hole vectors. The right one (Q) is the pattern after adjustment is
-done. It is with more accurate vectors. Note, the beam circles in the image
+The left image 5.(A) shows image shift pattern right after converted from
+stage hole vectors. The right one 5.(Q) is the pattern after adjustment is
+done. Note, the beam circles in the image
 (A) is in green, and they become yellow after adjustment. You may also
-notice the pattern after adjustment seems slightly off from hole positions.
-This is due to imperfection in calibrations (high defocus in LD View is
-among the imperfection). In ideal world, the two would be lined up
-perfectly. Here, the off-looking one is actually accurate set. 
+notice the pattern after adjustment seems shown slightly off from hole 
+positions.This is due to imperfection in calibrations. In ideal world, 
+the two would be lined up perfectly. Here, the off-looking one is actually 
+an accurate set. 
 
 .. _more_automated:
 
 A Smarter and More Automated Way
 -------------------------------
 
-The adjustment transform matrix is preserved in setting file.
+The adjustment transform matrix is also preserved in setting file.
 
 .. code-block:: ruby
 
@@ -191,7 +193,8 @@ You can utilize the transform by pushing the button **[ Apply Stored
 Adjustment ]**, your new Image Shift vectors for the pattern is updated
 immediately. You might want to do **[ StepTo and Adjust IS ]** here also to refine
 the IS vectors for today's condition and make sure the positions are
-perfect. This time, you will find your features easily. 
+perfect. This time, not like manaully adjusting from scratch,  you will find 
+your features easily. 
 
 It is worth mentioning that if you perform hole finding on a montage map
 overview image, the map item will contain the hole vectors information. If
