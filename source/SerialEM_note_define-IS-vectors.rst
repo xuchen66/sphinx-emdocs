@@ -6,7 +6,7 @@ SerialEM Note: Define Image Shift Vectors for Multiple Exposure
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date Created: Sept. 27, 2023
-:Last Updated: Sept. 27, 2023
+:Last Updated: Sept. 28, 2023
 
 .. glossary::
 
@@ -59,9 +59,9 @@ Admittedly, it is a pain, at least not very fun to me.
 
 Despite the pain, at end of the procedure from the above steps, the precise image
 shift vectors are obtained. The image shift pattern based on the vectors drawn back 
-to lower mag image (e.g. LD View) might seem off a little. This is again due to
-imperfect calibrations. No worries, in your final collected images, the
-positions will be right! 
+to lower mag image (e.g. LD View) might seem off a little, as shown in Fig 5(Q) below. 
+This is again due to imperfect calibrations so showing not being accurate. No worries, 
+in your final collected images, the positions will be right! 
 
 As soon as the procedure is finished, there appears a line right under
 "Regular array of holes" in the dialog window, something like **Spacing 2.74 and
