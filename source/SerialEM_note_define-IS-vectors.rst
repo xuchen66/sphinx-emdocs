@@ -29,7 +29,9 @@ The Manual Way
 In high-throughput, multiple exposure data collection using image shift on a regular 
 pattern grid, it is essential to have accurate image shift pattern setup so that 
 the beam can go to each and every hole accurately. SerialEM does this by determining
-image shift vectors from 4 corner hole positions. 
+image shift vectors from 4 corner hole positions. Also, once these basic two image shift
+vectors are determined, you can swith the pattern, say from 3 x 3 to 5 x 5 etc without
+needing to redo this steup procedure. 
 
 I suppose you probably are already familiar with the setup in manual way. In
 a brief summary, the steps are:
