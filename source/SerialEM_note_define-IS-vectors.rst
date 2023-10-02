@@ -136,7 +136,7 @@ vectors!
 
 We started with a set of image shift vectors converted from stage hole
 vectors initially (at LD View mag), and we ended up with final accurate set
-of image shift vectors (at LD R mag)! This procedure not only get refined image 
+of image shift vectors (at LD R mag)! This procedure not only determines refined image 
 shift vectors for R mag, but also **results in an adjustment transform matrix 
 between the two**! 
 
