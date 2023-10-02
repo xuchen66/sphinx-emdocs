@@ -90,9 +90,9 @@ Instead of manually adding some corner points as nav items, we can directly
 use hole vectors. If we perform hole finding on an image with multiple
 holes, the hole vectors become available. These are two basic vectors to
 reflect hole distances in two directions and their relative orientation to
-the camera system. Even there might no good hole be included, the vectors
+the camera system. Even there might not be good holes to be included, the vectors
 themselves are available after hole finding. They can be used to convert to 
-Image Shift vectors as starting point. Then we can do simply by pressing 
+Image Shift vectors as starting point. We can do this simply by pressing 
 the button **[ Use Last Hole Vectors ]**. 
 
 **Fig.2 Use Last Hole Vector**
