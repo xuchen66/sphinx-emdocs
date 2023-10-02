@@ -6,7 +6,7 @@ SerialEM Note: Define Image Shift Vectors for Multiple Exposure
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date Created: Sept. 27, 2023
-:Last Updated: Sept. 28, 2023
+:Last Updated: Oct. 2, 2023
 
 .. glossary::
 
@@ -25,6 +25,11 @@ SerialEM Note: Define Image Shift Vectors for Multiple Exposure
 
 The Manual Way 
 --------------
+
+In high-throughput, multiple exposure data collection using image shift on a regular 
+pattern grid, it is essential to have accurate image shift pattern setup so that 
+the beam can go to each and every hole accurately. SerialEM does this by determining
+image shift vectors from 4 corner hole positions. 
 
 I suppose you probably are already familiar with the setup in manual way. In
 a brief summary, the steps are:
