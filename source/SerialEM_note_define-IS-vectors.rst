@@ -73,8 +73,9 @@ in your final collected images, the positions will be right!
 
 As soon as the procedure is finished, there appears a line right under
 "Regular array of holes" in the dialog window, something like **Spacing 2.74 and
-2.75um Maximum shift: 3.9um**. If you have never done this before, this line
-is not shown until you did. If you save setting file, there will be a line
+2.75um Maximum shift: 3.9um**. This actually indicates that the basic IS vectors 
+for multiple exposure is available or updated. If you have never done this before, 
+this line is not shown until you have done it. If you save setting file, there will be a line
 starting with "MultiShotParams" containing this very information. And in
 your next SerialEM session with a new grid, this information will be existed
 there but likely wrong. You will have to redo this for a new grid. 
