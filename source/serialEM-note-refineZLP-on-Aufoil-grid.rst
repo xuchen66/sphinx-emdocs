@@ -6,7 +6,7 @@ SerialEM Note: Refine ZLP on Au Foil Grids
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2019-08-23 
-:Last-Updated: 2020-06-15
+:Last-Updated: 2023-12-04
 
 .. glossary::
 
@@ -81,7 +81,7 @@ names so they won't confuse.
 
 .. code-block:: ruby
 
-  SetCustomTime ZLP
+  #SetCustomTime ZLP
   ReportCustomInterval ZLP
   If $repVal1 >= 30 
     MoveToLastMultiHole         # move to a hole (bright area)
