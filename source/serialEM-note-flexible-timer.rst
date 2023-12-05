@@ -6,7 +6,7 @@ SerialEM Note: Flexible Timer
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-created: 2019-10-09
-:Last-updated: 2018-10-09
+:Last-updated: 2023-12-04
 
 .. glossary::
 
@@ -79,9 +79,15 @@ example code to perform two actions mentioned above.
 
 .. code-block:: ruby
 
+   SetCustomTime ZLP       # start timer 
+
+Then you can use the timer to do things based elaped time.
+
+.. code-block:: ruby
+
    ### move to a hole and refineZLP every 30 minutes
-   ReportCustomTime ZLP
-   if $elapsed >= 30
+   ReportCustomInterval ZLP
+   if $repVal1 >= 30
        StageToLastMultiHole
        #ImageShiftToLastMultiHole
        RefineZLP              # refine now
