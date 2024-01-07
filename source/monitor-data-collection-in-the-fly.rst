@@ -6,7 +6,7 @@ Monitor Data Collection In The Fly
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2018-08-02 
-:Last-Updated: 2022-02-18
+:Last-Updated: 2024-01-07
 
 .. glossary::
 
@@ -150,3 +150,30 @@ you can directly use with option "-t".
 .. code-block:: ruby
 
    [guest@gpu ChenXu_20180802]$ ctffindPlot -t /usr/local/ctffindPlot/ctffind_params/Titan_130k_NoVPP.txt
+
+.. _end_result:
+
+End Results - CTF ploting and JPG of aligned image & power Spectrum  
+-------------------------------------------------------------------
+
+During the collection, the both CTF plotings and aligned image with power stectrum
+can be viewed immediately. No delay. 
+
+**Fig.1 CTF plot**
+
+.. image:: ../images/ctffindplot_plot.png
+..   :height: 361 px
+..   :width: 833 px
+   :scale: 50 %
+   :alt: CTF plot
+   :align: left
+
+
+**Fig.2 Aligned Image and its power spectrum**
+
+.. image:: ../images/DG02-g1_00060_X+0Y+1-1_powpair.jpg
+..   :height: 361 px
+..   :width: 833 px
+   :scale: 50 %
+   :alt: aligned image and its power spectrum
+   :align: left
