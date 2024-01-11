@@ -140,7 +140,7 @@ You run a bash script from cygwin windows (assuming you have IMOD installed):
 
 .. code-block:: ruby
 
-# set parameters here
+   # set parameters here
    volt=200
    sph=2.7
    dmin="5000"
@@ -149,7 +149,6 @@ You run a bash script from cygwin windows (assuming you have IMOD installed):
    minres=30
    maxres=5
    testctffind -v $volt -sph $sph -dstep $dstep -dmi $dmin -dma $dmax -rmi $minres -rma $maxres -pha (filename) > testctffind_output.txt
-
 
 4. plot
 
