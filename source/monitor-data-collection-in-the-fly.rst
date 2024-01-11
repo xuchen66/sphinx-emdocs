@@ -6,7 +6,7 @@ Monitor Data Collection In The Fly
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: 2018-08-02 
-:Last-Updated: 2024-01-07
+:Last-Updated: 2024-01-10
 
 .. glossary::
 
@@ -132,6 +132,24 @@ edit to fit your situation. The file looks like this:
    0.5
    no
    EOF
+
+Laterly, testctfind of IMOD package can also do a very good job. You may
+not get into hassle to compile ctffind on Windows by using IMOD installed.
+
+You run a bash script from cygwin windows (assuming you have IMOD installed):
+
+.. code-block:: ruby
+
+# set parameters here
+   volt=200
+   sph=2.7
+   dmin="5000"
+   dmax="50000"
+   dstep="400"
+   minres=30
+   maxres=5
+   testctffind -v $volt -sph $sph -dstep $dstep -dmi $dmin -dma $dmax -rmi $minres -rma $maxres -pha (filename) > testctffind_output.txt
+
 
 4. plot
 
