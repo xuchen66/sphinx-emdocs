@@ -50,14 +50,16 @@ Case Studies
 
 A few case studies I can think of might take advantages of this function. 
 
-1. Dynamic defocus adjustment in-the-fly. 
+Dynamic defocus adjustment in-the-fly
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If we collect a montage for a large area, the specimen might not be always
 in flat plane, and height changes are expected. In this situation, one can 
 easily run CTF program such as "ctfplotter" to obtain the defocus and adjust 
 objective lens dynamically. 
 
-2. Collect multiple montages at the same time
+Collect multiple montages at the same time
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If we collect a montage tilting series, say 2 x 2 image shift montage, we
 might also want to collect two more montages along the tilting axis so at
