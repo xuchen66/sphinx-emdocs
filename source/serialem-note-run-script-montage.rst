@@ -113,3 +113,30 @@ display them with the piece list info:
 
 It will work! 
 
+Colleting STEM multi-channel montages Simontaniously 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When collecting with multi-channel STEM detector, one exposure
+will have images in the buffers for the multiple channels. For example,
+if there 4 channels, buffer A, B, C and D will have image in each. 
+The goal is to save 4 montages at the same time. 
+
+One would open three normal image files, such as chan1.mrc, chan2.mrc, chan3.mrc
+and last one to be a new montage file say 2 x 2 with image shift, with name chan4-mon.mrc.
+
+The "ToRun" script would be like this:
+
+.. code-block:: ruby
+
+    ScriptName ToRun
+    ReportFileNumber mont
+    Loop 3 ind
+       fil = $mont - $ind   #number here, not filename for easiness.
+       buf = $ind + 1      # also number, 2-4 for single image, 1 for montage
+       Save $buf $fil
+    Endloop 
+
+As above, three single image stack files share the same piece list info
+which can extract from chan4-mon.mrc. 
+
+
