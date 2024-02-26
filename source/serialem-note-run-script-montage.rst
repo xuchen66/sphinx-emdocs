@@ -107,7 +107,7 @@ display them with the piece list info:
 
 .. code-block:: ruby
 
-    $ 3dmod -p mon.st f1.st
+    $ 3dmod -p mon.pl f1.st
 
 It will work! 
 
