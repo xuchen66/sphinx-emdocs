@@ -41,12 +41,12 @@ below.
 
 This new design re-arranges Offset portion. It seems to be more intuitive
 for offsets of Image Shift and Defocus, for both View and Search areas.
-Moreover, it has a ``Auto`` button for Is offsets now. 
+Moreover, it has a ``Auto`` button for Image Shift offset now. 
 
 This is how it works. If you take a Record or Preview image with some clear
 feature in it, you click on ``Auto`` button. The program will transform this 
 image to scale down to match magnification of View and align it to View
-images for the same feature. This results in image shift offset be set
+image for the same feature. This results in image shift offset be set
 accurately. 
 
 **Fig.2 Images for Preview, shrunk Preview and View**
@@ -69,9 +69,9 @@ procedure determines IS offset for View and take it in.
 Realign a Feature in View map to Match Preview/Record
 -----------------------------------------------------
 
-Realign routine now can take advantage of this cross-mag alignment feature.
+Realign routine now can take advantage of this cross-mag alignment functionality.
 With this feature, Realign is able to bring the target to the center of
-camera of higher mag of original map. 
+camera at higher mag (Previw) than original map (View). 
 
 **Fig.3 Option for Realign to Scaled map**
 
@@ -88,7 +88,7 @@ as shown in above figure.
 
 In this case, after a typical two rounds of aligning at View map, it them
 scaled up the portion of the map to match final higher mag (Preview or P in
-this case) and does the 3rd round aligning. 
+this case) and does the 3rd round aligning at Previw mag. 
 
 **Fig.4 Scaled up Realign - ideal for initial target in TS**
 
