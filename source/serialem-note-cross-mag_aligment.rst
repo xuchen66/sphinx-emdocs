@@ -6,7 +6,7 @@ SerialEM Note: Cross-mag Alignment
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date Created: March 7, 2024
-:Last Updated: March 7, 2024
+:Last Updated: March 8, 2024
 
 .. glossary::
 
@@ -61,7 +61,7 @@ accurately.
 In above figure, the first image on the left - "A buffer" is from a Preview.
 The image in the middle is a scaled down one of it based on the View mag. You can
 see the FOV is small compared to a real View image which is on the right. By
-alignment these two images at now the same maginifications / pixelsizes, the
+aligning these two images at the same maginifications / pixelsizes of View, the
 procedure determines IS offset for View and take it in. 
 
 .. _Realign_a_feature_in_view_to_P:
