@@ -39,11 +39,11 @@ below.
    :alt: new LD looking
    :align: center
 
-This new design re-arranged Offset portion. It seems to be more intuitive
+This new design re-arranges Offset portion. It seems to be more intuitive
 for offsets of Image Shift and Defocus, for both View and Search areas.
 Moreover, it has a ``Auto`` button for Is offsets now. 
 
-This is how it work. If you take a Record or Preview image with some clear
+This is how it works. If you take a Record or Preview image with some clear
 feature in it, you click on ``Auto`` button. The program will transform this 
 image to scale down to match magnification of View and align it to View
 images for the same feature. This results in image shift offset be set
@@ -88,7 +88,7 @@ as shown in above figure.
 
 In this case, after a typical two rounds of aligning at View map, it them
 scaled up the portion of the map to match final higher mag (Preview or P in
-this case). 
+this case) and does the 3rd round aligning. 
 
 **Fig.4 Scaled up Realign - ideal for initial target in TS**
 
@@ -101,11 +101,11 @@ this case).
 
 In above figure, the first image on the left has a feature centered after
 normal Realign to Item, it is the scaled up this portion of the map to match
-the higher mag, as shown in the middle. The routine then aligns the real
+the higher target mag, as shown in the middle. The routine then aligns the real
 Preview image (on the right) to this transformed one in the middle. So the
 target is centered at Preview mag. This is ideal for initial targeting for
 tilting series. 
 
 As you can see, even your low dose image shift offset for View might have
-not adjust perfect, this procedure still can bring the final mag target to
+not been adjusted perfectly, this procedure still can bring the final mag target to
 the center. This is indeed very convenient! 
