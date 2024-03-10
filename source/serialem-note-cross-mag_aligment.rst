@@ -52,7 +52,7 @@ accurately.
 **Fig.2 Images for Preview, shrunk Preview and View**
 
 .. image:: ../images/LD-shift-auto.png
-   :scale: 40 %
+   :scale: 30 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: new LD looking
@@ -76,7 +76,7 @@ camera of higher mag of original map.
 **Fig.3 Option for Realign to Scaled map**
 
 .. image:: ../images/realign-to-scale-P-option.png
-   :scale: 30 %
+   :scale: 40 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: new LD looking
@@ -93,7 +93,7 @@ this case) and does the 3rd round aligning.
 **Fig.4 Scaled up Realign - ideal for initial target in TS**
 
 .. image:: ../images/realign-to-P.png
-   :scale: 40 %
+   :scale: 30 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: new LD looking
