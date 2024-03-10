@@ -11,8 +11,8 @@ SerialEM Note: Cross-mag Alignment
 .. glossary::
 
    Abstract
-      Cross-mag alignment functions has been recently implemented since
-      around beginning of 2024. It allows one to align two images at very
+      Cross-mag alignment functions have been recently implemented since
+      around beginning of 2024. They allow one to align two images at very
       different magnifications, and it takes into consideration of scale and
       rotation. 
 
