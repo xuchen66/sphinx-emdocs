@@ -50,6 +50,7 @@ images for the same feature. This results in image shift offset be set
 accurately. 
 
 **Fig.2 Images for shrunk Preview and View**
+
 .. image:: ../images/LD-shift-auto.png
    :scale: 100 %
 ..   :height: 544 px
@@ -73,6 +74,7 @@ With this feature, Realign is able to bring the target to the center of
 camera of higher mag of original map. 
 
 **Fig.3 Option for Realign to Scaled map**
+
 .. image:: ../images/realign-to-scale-P-option.png
    :scale: 100 %
 ..   :height: 544 px
@@ -89,6 +91,7 @@ scaled up the portion of the map to match final higher mag (Preview or P in
 this case). 
 
 **Fig.4 Scaled up Realign - ideal for initial target in TS**
+
 .. image:: ../images/realign-to-P.png
    :scale: 100 %
 ..   :height: 544 px
