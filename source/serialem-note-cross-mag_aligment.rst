@@ -17,9 +17,9 @@ SerialEM Note: Cross-mag Alignment
       rotation. 
 
       There are a few scripting commands available related to this
-      function. This routine should for more general purpose when different
-      magnifications are involved. Here I give two applications examples
-      that was built upon this cross-mag alignment function.  
+      function. The routine should work for more general purpose when different
+      magnifications are involved. Here I give two application examples
+      that were built upon this cross-mag alignment functions.  
 
 
 .. _Set_LD_IS_automatically:
