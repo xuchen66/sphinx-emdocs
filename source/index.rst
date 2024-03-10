@@ -63,6 +63,7 @@ SerialEM Notes
    serialEM_note_eucentricity_with_beamtilting
    SerialEM_note_define-IS-vectors
    serialem-note-run-script-montage
+   serialem-note-cross-mag_aligment
 Index
 *****
 
