@@ -52,7 +52,7 @@ accurately.
 **Fig.2 Images for shrunk Preview and View**
 
 .. image:: ../images/LD-shift-auto.png
-   :scale: 50 %
+   :scale: 25 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: new LD looking
@@ -93,7 +93,7 @@ this case) and does the 3rd round aligning.
 **Fig.4 Scaled up Realign - ideal for initial target in TS**
 
 .. image:: ../images/realign-to-P.png
-   :scale: 50 %
+   :scale: 25 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: new LD looking
