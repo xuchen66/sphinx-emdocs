@@ -35,7 +35,7 @@ below.
 .. image:: ../images/new-LD-with-auto.png
    :scale: 50 %
 ..   :height: 544 px
-   :width: 384 px
+..   :width: 384 px
    :alt: new LD looking
    :align: center
 
@@ -54,7 +54,7 @@ accurately.
 .. image:: ../images/LD-shift-auto.png
    :scale: 50 %
 ..   :height: 544 px
-   :width: 384 px
+..   :width: 384 px
    :alt: new LD looking
    :align: center
 
@@ -76,9 +76,9 @@ camera of higher mag of original map.
 **Fig.3 Option for Realign to Scaled map**
 
 .. image:: ../images/realign-to-scale-P-option.png
-   :scale: 50 %
+   :scale: 30 %
 ..   :height: 544 px
-   :width: 384 px
+..   :width: 384 px
    :alt: new LD looking
    :align: center
 
@@ -95,7 +95,7 @@ this case).
 .. image:: ../images/realign-to-P.png
    :scale: 50 %
 ..   :height: 544 px
-   :width: 384 px
+..   :width: 384 px
    :alt: new LD looking
    :align: center
 
