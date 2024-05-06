@@ -6,7 +6,7 @@ SerialEM Note: Cross-mag Alignment
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date Created: March 7, 2024
-:Last Updated: March 8, 2024
+:Last Updated: May 6, 2024
 
 .. glossary::
 
@@ -48,6 +48,12 @@ feature in it, you click on ``Auto`` button. The program will transform this
 image to scale down to match magnification of View and align it to View
 image for the same feature. This results in image shift offset be set
 accurately. 
+
+Similarly, we can do this easily for setting up IS offset for Search. 
+If the mag of Search is lower than that of View, a View image will be 
+reference instead of Preview. You take a View image first, and it 
+would be good to contain some dirly-like feature. Then you press the 
+``Auto`` button for Search. 
 
 **Fig.2 Images for Preview, shrunk Preview and View**
 
