@@ -54,7 +54,7 @@ master_doc = 'index'
 # General information about the project.
 # project = u'Cryo-EM related docs'
 project = u'Umass Cryo-EM Docs'
-copyright = u'2016 - 2023 Umass Cryo-EM Facility'
+copyright = u'2016 - 2024 Umass Cryo-EM Facility'
 author = u'UMass CryoEM Core Facilty'
 
 # The version info for the project you're documenting, acts as replacement for
