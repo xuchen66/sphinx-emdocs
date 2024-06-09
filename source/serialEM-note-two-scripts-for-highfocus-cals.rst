@@ -12,13 +12,13 @@ SerialEM Note: Two Scripts for High-Focus Calibrations
 
    Abstract
       It is straightforward to do high-focus calibrations for both
-   Mag and Image Shift. However, it becomes annoying when you have to 
-   do this for multiple intensity values. Luckily, there are also two
-   scrips commands to perform these two calibrations. This makes a lot 
-   easier and more automated. 
+      Mag and Image Shift. However, it becomes annoying when you have to 
+      do this for multiple intensity values. Luckily, there are also two
+      scrips commands to perform these two calibrations. This makes a lot 
+      easier and more automated. 
 
       In this note, I show you the two scripts I came up. I found them
-   helpful.
+      helpful.
 
 .. _highfocus-mag:
 
