@@ -1,0 +1,397 @@
+.. _SerialEM_two-scripts-for-highfocus-cals:
+
+SerialEM Note: Two Scripts for High-Focus Calibrations
+======================================================
+
+:Author: Chen Xu
+:Contact: <chen.xu@umassmed.edu>
+:Date_Created: 2024-06-09
+:Last_Updated: 2024-06-09
+
+.. glossary::
+
+   Abstract
+      It is straightforward to do high-focus calibrations for both
+  Mag and Image Shift. However, it becomes annoying when you have to 
+  do this for multiple intensity values. Luckily, there are also two
+  scrips commands to perform these two calibrations. This makes a lot 
+  easier and more automated. 
+
+      In this note, I show you the two scripts I came up. I found them
+  helpful.
+
+.. _highfocus-mag:
+
+For High-Focus Mag 
+------------------
+
+For the very first time, you have to draw lines in align buffer and A buffer
+for 0 and a few defocuses. After doing it manually for strongest beam, one can simply
+use a scritps to add more intensity values. See below.
+
+.. code-block:: ruby
+
+   ScriptName CalibrateHighFocusMag
+
+    # chen.xu@umassmed.edu 
+    # April 28, 2024
+    
+    # after manually calibrate for one intensity (requires drawing lines) 
+    # using this script to continue for all slightly higher intensities
+    # more automated way (without needing drawn lines). 
+    
+    
+    AlignBuf = O
+    defs = { -50 -100 -150 -175 -200 -225 -250 -275 -300 -325 }
+    
+    Loop 50
+       IncPercentC2 5               # increase 5% should be sufficient
+       ReportPercentC2 
+       If $repVal1 > 99.0
+          Exit Intensity exceeds 99.0, quit.
+       Endif 
+    
+       T
+       Copy A $AlignBuf
+       Loop $#defs ind
+          ChangeFocus $defs[$ind]
+          T
+          CalibrateHighFocusMag     1   # skip the [YES] confirmation
+          ChangeFocus -1 * $defs[$ind]
+       EndLoop 
+    EndLoop 
+   
+  
+.. rubric:: Step 1
+
+- Ask David for the initial system file. Normally, you would fill out a
+  "questionnaire" available at the ftp server -
+  http://bio3d.colorado.edu/ftp/SerialEM/questionnaire.txt and send it to
+  David. David or Guenter Resch will then create a framework file on the same
+  ftp server for you to download. This framework file is a zip file, you can
+  download it to local like Desktop and unzip it by double clicking on the
+  file. Beside a sub-folder "Admin" created under "C:\\ProgramData\\SerialEM",
+  the most important file in the framework is one initial system file called
+  "SerialEMproperties.txt". You must have this file to get started. Please
+  refer to the SerialEM webpage for the latest information regarding this.
+
+.. Note:: 
+
+   If on Windows the Folder Option -> View -> "Hide extensions for known
+   types" is enabled, the property filename shown will be
+   "SerialEMproperties". If you change it to "SerialEMproperties.txt", it
+   actually is "SerialEMproperties.txt.txt" which won't be read in as a
+   valid property file. 
+
+.. rubric:: Step 2
+
+- Make sure your camera computer and microscope computers are on the same
+  local network. For example, K2/3 computer can be configured to have a
+  network interface with IP address 192.168.1.2, and FEI scope with
+  192.168.1.1. And they should be able to *ping* each other.  - You might be
+  confused by Gatan's DM already being able to communicate with scope, as it
+  can detect magnification change of scope. However, this DM connection to
+  scope is usually via serial port by a direct serial cable. SerialEM uses
+  standard TCP/IP to communicate to a remote computer and therefore requires a
+  standard network setup in place.  - If you configured the local network, you
+  should have DM communicate to scope (via Gatan's RemoteTEM) using TCP/IP
+  too. It is a lot more robust. But this is not a concern for SerialEM
+  operation here.  
+
+.. rubric:: Step 3
+
+- Decide which computer to install SerialEM. In theory, you can install
+  SerialEM on either computer - camera or microscope. For K2/3 camera,
+  SerialEM should be normally installed on the K2/3 computer, as K2/3 image
+  returning to SerialEM locally is usually faster than via network.  
+
+.. rubric:: Step 4
+
+- Decide which type of executable to use. SerialEM builds for both 32 and
+  64-bit platforms. Unless you have to run it on a Windows XP, you should
+  choose 64-bit. 
+
+.. rubric:: Step 5
+
+- Download SerialEM software. You should start with the latest release
+  version from ftp server at http://bio3d.colorado.edu/ftp/SerialEM/  and save
+  it somewhere local like Desktop.  
+
+.. rubric:: Step 6
+
+- Unzip the installation package file downloaded. You can double click on
+  this file, it will unzip the program into C:\\Program Files\\SerialEM. The
+  folder "SerialEM" will be created automatically if there isn't one already.
+  The new package content will be unzipped into a new sub-folder, e.g.
+  SerialEM_3-6-13_64. 
+
+.. rubric:: Step 7
+
+- Quit Gatan DM if it is running. 
+
+.. rubric:: Step 8
+
+- Right click on a file called *install.bat* in the package folder
+  C:\\Program Files\\SerialEM\\SerialEM_3-6-13_64 and select 'Run as
+  Administrator'. This will copy some files into upper folder which is
+  C:\\Program Files\\SerialEM, register DM plugin file and copy it to the
+  Gatan plugin folder at C:\\ProgramData\\Gatan\\Plugin.
+
+.. rubric:: Step 9
+
+- Manually copy a file called *FEI-SEMServer.exe* from C:\\Program
+  Files\\SerialEM on K2/3 computer to C:\\Program Files\\SerialEM on scope
+  computer. This is a bridging program to control scope by passing the scope
+  function calls between SerialEM main program on remote K2/3 computer and the
+  scope scripting interface. Run the program by double clicking on it(it needs
+  to run or SerialEM cannot control scope). This is 32-bit application, runs
+  on both 32 and 64-bit Windows platforms. So there is only one such
+  executable to run on Windows 7, XP or 2000 Windows OS. 
+
+.. rubric:: Step 10
+
+- On K2/3 computer, Edit *SerialEMproperties.txt* file in folder
+  C:\\ProgramData\\SerialEM to have proper lines in general property area to
+  define network properties. 
+
+.. code-block:: ruby
+
+   #GatanServerIP 192.168.1.2
+   GatanServerIP 127.0.0.1
+   GatanServerPort 48890 
+   SocketServerIP 1 192.168.1.1
+   SocketServerPort 1 48892
+
+.. rubric:: Step 11
+
+- On K2/3 computer where SerialEM is to be installed, define a system
+  environment variable SERIALEMCCD_PORT with the value 48890 or other selected
+  port number, as described in the section in helpfile. 
+
+- If everything goes well, you should be able to start SerialEM and it
+  should connect to "see" both scope and DM. Congratulations!
+
+.. _Calibration:
+
+Calibration 
+-----------
+
+Although most of calibration results will be written into another system
+file *SerialEMcalibraions.txt* when you save the calibrtion from Calibretion
+menu, there are a few places you need to manully edit the
+*SerialEMproperties.txt* to take in the calibration results. These include
+pixelsize and tilting axis angle - they are more like instrument parameters. 
+
+For pixelsize calibration, it is best to use standard 2160 line waffle grid.
+For all other calibration like Image Shift and Stage Shift, it would make
+things a lot easier to use a non-periodic sample. Please see the *NOTE* at
+the end of this document. 
+
+.. tip:: 
+
+   Since µP and nP modes give very different beams, it is required to
+   perform calibration for **both** modes for some basic items:
+  
+   - Beam Crossover
+   - Beam Intensity
+   - Spot Intensity
+   - Beam Shift
+   - Autofocus
+   - Electron Dose
+   - Standard Focus
+   
+   See https://bio3d.colorado.edu/SerialEM/betaHlp/html/setting_up_serialem.htm#nanoprobe
+
+.. rubric:: Step 0 
+
+- Determine camera orientation configuration. Make sure the image
+  orientation from camera shot agree with that of on large screen or FluCam.
+  If it doesn't, try to adjust the camera orientation of Gatan K2/3 camera
+  from Camera - Configuration. You can use beamstop to help.  You should add a
+  property entry to reflect the DM configuration so SerialEM takes care of it
+  even someone might have changed DM configuration. 
+
+.. code-block:: ruby
+
+   DMRotationAndFlip 7
+
+.. rubric:: Step 1
+
+- Edit property file to define the camera configuration information about
+  orientation determined by step 0. SerialEM will return to main display with
+  proper orientation. This is initial starting point for all the calibrations.
+
+.. code-block:: ruby
+
+   RotationAndFlip 7
+
+.. rubric:: Step 2
+
+- SerialEM - Calibration - List Mag. Scope will go through all the mags and
+  list them on log window, from lowest to highest. Check it with what are in
+  *SerialEMproperties.txt*, update that if needed.  
+
+.. rubric:: Step 3
+
+- Load standard waffle grating grid (TedPella Prod.# 607,
+  http://www.tedpella.com/calibration_html/TEM_STEM_Test_Specimens.htm#_607).
+
+.. rubric:: Step 4
+
+- Start with lowest magnification above LM range. On Talos, it is 1250X. At
+  close to Eucentricity, and clost to eucentric focus. 
+
+.. rubric:: Step 5
+
+- Take a T shot with 2x binning on a K2/3 camera, make sure the counts are
+  neither too low nor too high. 
+
+.. rubric:: Step 6
+
+- Take a T shot, then Calibration - Pixel Size - Find Pixel Size. The log
+  window shows both mag index and pixel size. Edit *SerialEMproperties.txt* to
+  add a line like below in K2/3 camera property section. 
+
+.. code-block:: ruby
+
+   # MagIndex  DeltaRotation (999 not measured)  SolvedRotation (999 not measured)   Pixel size (nm, 0 not measured)
+   RotationAndPixel 17 999 999 3.396
+   
+Here, 17 is mag index for 1250X, and 3.396 is pixel size in nm just
+calibrated.
+
+.. rubric:: Step 7 
+
+- You might want to change to a grid without repeating features, please see
+  "note" at the end of this document. 
+
+- Calibration - Image & Stage Shift - IS from Scratch.
+
+.. rubric:: Step 8
+
+- Calibration - Image & Stage Shift - Stage Shift.
+
+.. rubric:: Step 9
+
+- Calibration - Administrator, turn it on.
+
+.. rubric:: Step 10
+
+- Calibration - Save Calibration. 
+
+.. rubric:: Step 11
+
+- Take the tilting axis value (e.g. 86.1) from step 8 - stage shift
+  calibration, edit it into the 2nd "999" in *SerialEMproperties.txt* like
+  below.
+
+.. code-block:: ruby
+
+   RotationAndPixel 17 999 86.1 3.396
+
+.. Note:: 
+
+   The pixel size and tilting axis can just be done for a couple of
+   switching mags such as the lowest M and the highest LM.  SerialEM uses
+   these couple of calibrations and all the Image Shift calibration to
+   interpolate to obtain the pixelsizes and tilting axis angles for all
+   other magnifications. This is very cute. HOWEVER, this is for a scope 
+   to have consistent image shift for all the mags. For some scopes this
+   might not be true. Thus it is not a bad idea at all to just have pixelsize
+   calibrated for all the important mags you will use. 
+   
+   When mag gets high, you can use montage overview images to calibrate 
+   pixelsize. With Image Shift already calibrated well, montaging using
+   Image Shift can be pretty fast. So in the end you also have lines like
+   below from menu Calibration - Pixel Size - List Relative Rotations
+   
+.. code-block:: ruby
+
+   RotationAndPixel 18    0.22  999   2.602   # 1600, p=4164
+   RotationAndPixel 19   -0.29  999   2.006   # 2000, p=4012
+   RotationAndPixel 20   -1.29  999   1.571   # 2600, p=4084
+   RotationAndPixel 21   -0.25  999    1.22   # 3400, p=4149
+   RotationAndPixel 22    0.08  999   0.954   # 4300, p=4102
+   RotationAndPixel 24    999   999  0.6203   # 6700, p=4156
+   RotationAndPixel 25    0.02  999  0.4912   # 8500, p=4176
+   RotationAndPixel 26    0.58  999  0.3799   # 11000, p=4179
+   RotationAndPixel 27   -0.05  999  0.2992   # 13500, p=4039
+   RotationAndPixel 28   -0.58  999  0.2383   # 17500, p=4170
+   RotationAndPixel 29    3.37  999  0.1849   # 22000, p=4069
+   RotationAndPixel 30   -0.11  999  0.1456   # 28000, p=4077
+   RotationAndPixel 31   -0.09  999  0.1141   # 36000, p=4108
+   #RotationAndPixel 32   -0.06  999  0.09005   # 45000, p=4052
+   RotationAndPixel 32   -0.06  999 0.087	# from KK's pixel refine
+   RotationAndPixel 33    0.02  999 0.07141   # 57000, p=4071
+  
+.. rubric:: Step 12
+
+- Increase Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
+
+.. rubric:: Step 13
+
+- Repeat above step to cover all the magnification till the highest to be
+  used such as 100kX. 
+
+.. rubric:: Step 14
+
+- Decrease Mag by 1 click and do Calibration - Image & Stage Shift - Image Shift
+
+.. rubric:: Step 15
+
+- Repeat above step to cover all magnification till the lowest to use like 46X. 
+
+.. rubric:: Step 16
+
+- At about 20kX, do Autofocus calibration (only need to do at single mag).
+
+.. rubric:: Step 17
+
+- Beam Crossover calibration
+
+.. rubric:: Step 18
+
+- Start with most used spotsize like 7, do Beam Intensity calibration 
+
+.. rubric:: Step 19
+
+- repeat Beam Intensity Calibration for all other spot sizes likely to be
+  used: 3, 4, 5, 6, 8, 9.
+
+.. rubric:: Step 20
+
+- At one mag like 5000X, using spot size 9, do Beam Shift Calibration (only
+  need to do at single mag).
+
+.. rubric:: Step 21 
+
+- Usually, people use the lowest M mag for Low Dose View beam and with large
+  defocus offset such as -200 or -300 microns. You need to the calibrate
+  High-Defocus Mag for this View mag. This will make stage shifts still good
+  for such large defocus, as they are interpolated for the defocus offset. There
+  is also command to calibrate High-Defocus Image Shift. This makes image shift 
+  more accurate when with high defocus. There are also two script commands for
+  doing the High-defocus calibrations. In a separate note, I show two scripts
+  to perform these two calibrations, for multiple Intensities, in a more automated
+  way. Please see `Two Scripts For High-Defocus Calibrations <https://sphinx-emdocs.readthedocs.io/en/latest/serialEM-note-two-scripts-for-highfocus-cals.html>`_.
+
+.. Note::
+
+   - Calibrations needed to be done for *both* µP and nP mode include: *beam
+     crossover*, *beam intensity*, *beam shift* and *autofocus*.
+   
+   - Waffle grating grid is good and handy for pixel size calibration, butit
+     is not ideal for Image Shift and Stage Shift calibrations, as the waffle
+     pattern might screw up the correlation in the calibration procedures. I
+     found the normal Quantifoil grid with some 10nm Au particles absorbed
+     onto can be very good for normal calibration purpose. I glow discharge a
+     Quantifoil grid and add 1 *µl* deca-gold solution on the grid and let it
+     dry. 
+   
+   - I found that standard **PtIr** grid for TFS to perform Thon Ring test
+     also works very well for calibration purpose. 
+   
+   - Most of SerialEM actions are cross-correlation based, including
+     calibrating. Therefore, a clean and recent preparation of camera gain
+     reference file is desired, because it will help to have less screw-up due
+     to fixed noise pattern dominating the cross-correlation. 
