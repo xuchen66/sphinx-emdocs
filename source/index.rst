@@ -44,6 +44,7 @@ SerialEM Notes
    :maxdepth: 2
 
    serialEM-note-install-and-calib
+   serialEM-note-two-scripts-for-highfocus-cals
    serialEM-note-make-all-LMM-maps
    serialEM-note-setup-dummy
    serialEM-note-LD-mP-nP
