@@ -6,7 +6,7 @@ SerialEM Note: Installation and Calibration
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2017-11-12
-:Last_Updated: 2022-10-06
+:Last_Updated: 2024-06-09
 
 .. glossary::
 
@@ -339,7 +339,12 @@ calibrated.
 - Usually, people use the lowest M mag for Low Dose View beam and with large
   defocus offset such as -200 or -300 microns. You need to the calibrate
   High-Defocus Mag for this View mag. This will make stage shifts still good
-  for such large defocus, as they are interpolated for the defocus offset. 
+  for such large defocus, as they are interpolated for the defocus offset. There
+  is also command to calibrate High-Defocus Image Shift. This makes image shift 
+  more accurate when with high defocus. There are also two script commands for
+  doing the High-defocus calibrations. In a separate note, I show two scripts
+  to perform these two calibrations, for multiple Intensities, in a more automated
+  way. Please see `Two Scripts For High-Defocus Calibrations <https://sphinx-emdocs.readthedocs.io/en/latest/serialEM-note-two-scripts-for-highfocus-cals.html>`_.
 
 .. Note::
 
