@@ -9,7 +9,9 @@ Cryo-EM Club at UMass Chan
 :Last-updated: 2024-8-20
 
 This page lists contents ot past Cryo-EM club talks and 
-announcement of the upcoming meetings. 
+announcement of the upcoming meetings. The club hosts 
+some casual local events which are likely cryo-EM related. 
+Ximena Zottig and Johannes Elferich are co-organizers. 
 
 Upcoming Meetings
 -----------------
