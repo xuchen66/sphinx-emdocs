@@ -10,7 +10,7 @@ CryoEM Club at UMass Chan
 .. toctree::
    :maxdepth: 2
 
-cryoem-club
+   cryo-em_club
 
 FAQ
 ---
