@@ -25,5 +25,5 @@ Upcoming Meetings
 Past Meetings & Materials
 --------------------------
 
-August: (08/06/2024) KangKang Song "CryoET Workflow and Summary of the
-Michigan CryoET Workshop"
+August: (08/06/2024) KangKang Song "`CryoET Workflow and Summary of the
+Michigan CryoET Workshop<https://sphinx-emdocs.readthedocs.io/en/latest/cryoET_workshop_review_kk.pdf>`_"
