@@ -14,10 +14,16 @@ announcement of the upcoming meetings.
 Upcoming Meetings
 -----------------
 
--September: No Cryo-EM Club - Judy Huang’s defence on 10/09/2024
--October (08/10): Dongje Zhu (Grigorieff lab)
--November(12/11): Josh Pajak (Kelch Lab)
--January (14/01): Roger Craig 
+*September: No Cryo-EM Club - Judy Huang’s defence on 10/09/2024
+
+*October (08/10): Dongje Zhu (Grigorieff lab)
+
+*November(12/11): Josh Pajak (Kelch Lab)
+
+*January (14/01): Roger Craig 
 
 Past Meetings & Materials
 --------------------------
+
+August: (08/06/2024) KangKang Song "CryoET Workflow and Summary of the
+Michigan CryoET Workshop"
