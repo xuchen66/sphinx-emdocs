@@ -11,7 +11,7 @@ Cryo-EM Club at UMass Chan
 This page lists contents of past Cryo-EM club talks and 
 announcement of the upcoming meetings. The club hosts 
 some casual local events which are likely cryo-EM related. 
-Currently, the events are sponshored by `*NanoSoft* <https://www.nanosoftmaterials.com/>`_.
+Currently, the events are generously sponshored by `NanoSoft <https://www.nanosoftmaterials.com/>`_.
 
 To be added to the email list, please email cryoEMclub@umassmed.edu.
 
