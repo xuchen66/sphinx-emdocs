@@ -6,7 +6,7 @@ Setup Simple Lab Electronic Logbook
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date_Created: Feb 24, 2022
-:Last_Updated: Feb 24, 2022
+:Last_Updated: Sept 6, 2024
 
 .. _glossary:
 
@@ -27,7 +27,7 @@ Elog
 
 The program can be found in `https://elog.psi.ch/elog/
 <https://elog.psi.ch/elog/>`_. It is open source and can be installed on
-Linux, Windows, MacOS and FreeBSD. It doesn't reply on any existing web
+Linux, Windows, MacOS and FreeBSD. It doesn't rely on any existing web
 server. Instead, it comes with its own web server **elogd** running as a
 daemon style. It has a built-in very simple database. Here is a snapshot of
 the program main interface for our intranet access. 
