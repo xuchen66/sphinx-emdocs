@@ -21,7 +21,7 @@ Upcoming Meetings
 -----------------
 
 - **October (Tuesday, October 8th, at noon in room AS5-2072): Dongje Zhu (Grigorieff lab) “Computational Approaches to Correct Preferred-Orientation Induced Map Distortion."**
-
+-
 - November (Nov. 12, 2024): Josh Pajak (Kelch Lab)
 - January (Jan. 14, 2025): Roger Craig 
 
