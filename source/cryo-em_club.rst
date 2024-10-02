@@ -6,7 +6,7 @@ Cryo-EM Club at UMass Chan
 :Author: UMass CryoEM Core
 :Contact: <cryoem.umms@gmail.com>
 :Date-created: 2024-8-19
-:Last-updated: 2024-9-12
+:Last-updated: 2024-10-2
 
 This page lists contents of past Cryo-EM club talks and 
 announcement of the upcoming meetings. The club hosts 
@@ -20,7 +20,8 @@ Ximena Zottig and Johannes Elferich are co-organizers.
 Upcoming Meetings
 -----------------
 
-- October (Oct. 08, 2024): Dongje Zhu (Grigorieff lab)
+- **October (Tuesday, October 8th, at noon in room AS5-2072): Dongje Zhu (Grigorieff lab) “Computational Approaches to Correct Preferred-Orientation Induced Map Distortion."**
+
 - November (Nov. 12, 2024): Josh Pajak (Kelch Lab)
 - January (Jan. 14, 2025): Roger Craig 
 
