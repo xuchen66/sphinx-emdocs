@@ -27,6 +27,6 @@ Upcoming Meetings
 Past Meetings & Materials
 --------------------------
 
-- October (Tuesday, October 8th, at noon in room AS5-2072): Dongje Zhu (Grigorieff lab) “Computational Approaches to Correct Preferred-Orientation Induced Map Distortion."
+- October (Tuesday, October 8th, at noon in room AS5-2072): **Dongje Zhu** (Grigorieff lab) “Computational Approaches to Correct Preferred-Orientation Induced Map Distortion."
 - September: No Cryo-EM Club - Judy Huang’s defence on Sept. 10, 2024
 - August: (Aug. 6, 2024) **KangKang Song** "CryoET Workflow and Summary of the Michigan CryoET Workshop". The PDF of the PPT talk is here :download:`CryoET Workshop Michigan<../doc/cryoET_workshop_review_kk.pdf>`.
