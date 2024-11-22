@@ -21,13 +21,13 @@ Upcoming Meetings
 -----------------
 
 -
-- November (Nov. 19, 2024): Josh Pajak (Kelch Lab)
 - December (Dec. 10, 2024): Zahra Seraj (Andrei Korostelev lab)
 - January (Jan. 14, 2025): Roger Craig 
 
 Past Meetings & Materials
 --------------------------
 
+- November (Nov. 19, 2024, at noon in NERB N1-130): **Josh Pajak** (Kelch Lab)"PCNA is an ATPase Exchange Factor for RFC."
 - October (Tuesday, October 8th, at noon in room AS5-2072): **Dongje Zhu** (Grigorieff lab) “Computational Approaches to Correct Preferred-Orientation Induced Map Distortion."
 - September: No Cryo-EM Club - Judy Huang’s defence on Sept. 10, 2024
 - August: (Aug. 6, 2024) **KangKang Song** "CryoET Workflow and Summary of the Michigan CryoET Workshop". The PDF of the PPT talk is here :download:`CryoET Workshop Michigan<../doc/cryoET_workshop_review_kk.pdf>`.
