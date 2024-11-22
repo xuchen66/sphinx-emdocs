@@ -73,6 +73,7 @@ SerialEM Notes
    serialem-note-run-script-montage
    serialem-note-cross-mag_aligment
    serialem-note-work-with-hex-grid
+   serialem-note-add-mesh-polygon
 Index
 *****
 
