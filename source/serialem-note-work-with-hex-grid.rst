@@ -1,0 +1,177 @@
+.. _SerialEM_note_cross-mag_alignment:
+
+SerialEM Note: Work With A Hex Grid
+===================================
+
+:Author: Chen Xu
+:Contact: <chen.xu@umassmed.edu>
+:Date Created: Nov. 22, 2024
+:Last Updated: Nov. 22, 2024
+
+.. glossary::
+
+   Abstract
+      Quantifoil released their new type of cryo grids - HexAuFoil. Both
+      mesh shape and hole pattern arrangement in the meshes are hexagon. It 
+      has small holes and hole spacing. SerialEM has to develop some new 
+      features to deal with. 
+
+      Here I share some of our experience how to control hex grid using SerialEM.
+
+.. _hole_finder_hex:
+
+Finding Holes for Hex grid
+--------------------------
+
+For hex, finding holes is similar to finding holes for a typical sqaure shaped
+hole pattern. But here you check the box next to "Hex grid", as shown in red outline
+in the image below. 
+
+**Fig.1 Hole Finder for Hex**
+
+.. image:: ../images/hole-finder-hex.png
+   :scale: 50 %
+..   :height: 544 px
+..   :width: 384 px
+   :alt: hole finder for hex
+   :align: center
+
+
+.. _multiple_exposure_hex:
+
+Multiple Exposure Setup for Hex
+-------------------------------
+
+And of course you need to setup multiple exposure accordingly. 
+
+**Fig.2 Multiple Exposure for Hex**
+
+.. image:: ../images/multi-exposure-hex.png
+   :scale: 50 %
+..   :height: 544 px
+..   :width: 384 px
+   :alt: hole finder for hex
+   :align: center
+
+In above image, in multiple exposure setup dialog, you need to check "Hex grid" here too. 
+If you click on button [ Last Hole Vectors ] or [ Map Hole Vectors ], you will obtain Image
+Shift vectors that are the base to defines the multiple exposure pattern. There is 
+under-the-hood conversion from hole Stage geometry vectors to Image Shift vectors. 
+
+After finding holes, even you do not take any holes, the hole vectors are available there. 
+That are the hole vectors. If it is overview image of a map on which you use [ Map Hole Vectors ], 
+this will not only convert them to image shift vectors (so they are available in memory), but 
+also add two entries in nav file for that map item for hole vectors. So the map item will have
+this information in it. This would potentially help automation and for cases like geometry of 
+holes having changes slightly from mesh to mesh and you have to obtain the image shift vector
+dynamically. 
+
+Please note, the final image shift vectors used for data collection at high mag might be slightly 
+different from freshed converted ones at MMM mag due to impefection crossing such large mag distance. 
+You should refine the final image shift vectors before committing massive collection. 
+
+The image shift vectors and how many rings for hexagon together define the actual multiple exposure 
+pattern. Here how much of the maximum shift value for a pattern size should be considered. 
+
+Once the pattern is defined, you can easily combine it to all the holes found and result in a few 
+point items of some holes. They are the centers of the multiple exposure patterns. The only task then 
+is to get to those target centers. 
+
+.. _skip_a_hole_hex:
+
+Skipping a hole
+---------------
+
+The diameter of holes is 0.29 um, and spacing between closest holes is 0.6 um. 
+While this provides some nice advantages for image quality over these small holes, 
+it poses technical challenges for a scope that cannot give small enough beam while
+maintaining parallel beam condistions. On ThermoFisher Krios with 3 condenser lenses, 
+this is normally not a problem. However, for 200keV scope which only has 2 condenser 
+lenses, the beam is usually to large - it will touch the adjecent hole. 
+
+SerialEM provided a way to skip a hole. 
+
+Only thing one needs to do for this case is to check "Use best 1/3 subset of holes", 
+as shown in red outline in image below. 
+
+**Fig.3 Hole Finder for skipping a hole for Hex**
+
+.. image:: ../images/1:3-subset-of-holes-hex.png
+   :scale: 50 %
+..   :height: 544 px
+..   :width: 384 px
+   :alt: hole finder for hex
+   :align: center
+
+This will only include 1/3 of the holes and still make them arranged in hexagon, although different from 
+original all-hole hexagon. This is as if the other 2/3 holes are not there. It is pity to throw away 2/3 
+of good holes, but at least we can not collect on this hex grid with larger beam size. 
+
+It is then the same workflow to obtain multiple exposure patter:
+
+- take the 1/3 holes found and save them into navigator
+- from multiple exposure setup dialog, click [ Last Hole Vectors ] or [ Map Hole Vectors ] to obtain base image shift vectors
+- define how many rings using dial buttons. 
+- combine 
+
+Below is the pattern with 2/3 holes skipped. As you can see, larger beam size won't cause issue anymore. 
+
+**Fig.4 Multi Exposure pattern for skipping a hole for Hex**
+
+.. image:: ../images/1:3-subset-pattern-hex.png
+   :scale: 50 %
+..   :height: 544 px
+..   :width: 384 px
+   :alt: hole finder for hex
+   :align: center
+
+After combining, the display for Aquire areas is show below. You can see 2/3 of holes skipped here. 
+
+**Fig.5 Acquire Area Display for skipping a hole for Hex**
+
+.. image:: ../images/display-skip-hex.png
+   :scale: 50 %
+..   :height: 544 px
+..   :width: 384 px
+   :alt: hole finder for hex
+   :align: center
+
+.. _erase_periodic_peaks:
+
+Erase Periodic Peaks
+--------------------
+
+The compact, regular, sharp (high contrast) and small sized holes in an image of camera view can easily cause error for cross-correlation operation. 
+This is caused by periodic peals dominating the cross-correlation operation. 
+SerialEM has implemented a function to erasing priodic peaks for cross-correlation so real peaks get a chance to standout.
+
+Here is an image showing cross-correlation peaks without erasing the periodic peaks. 
+
+**Fig.6 CC-peaks without erasing periodic peaks for Hex**
+
+.. image:: ../images/cc-peaks-without-erasing.png
+   :scale: 50 %
+..   :height: 544 px
+..   :width: 384 px
+   :alt: hole finder for hex
+   :align: center
+
+After erasing the peaks, the domination is largely eliminated. 
+
+**Fig.7 CC-peaks Hex** with erasing funtion turned on **
+
+.. image:: ../images/cc-peaks-with-erasing.png
+   :scale: 50 %
+..   :height: 544 px
+..   :width: 384 px
+   :alt: hole finder for hex
+   :align: center
+
+To turn this function on, for a task that involving cross-correlation such as eucentric rough and fine, autofocusing etc.. 
+For realign routine in LD mode, turn it on from menu Navigator - Erase Periodic Peaks in LD. 
+
+Note: you should only use Erasing with AuFoil grids. Do not use it with normal carbon grids. 
+
+
+
+
