@@ -60,11 +60,20 @@ under-the-hood conversion from hole Stage geometry vectors to Image Shift vector
 
 After finding holes, even you do not take any holes, the hole vectors become available. 
 Those are the hole stage vectors. If it is an overview image of a map on which you use [ Map Hole Vectors ], 
-it will not only convert them to image shift vectors (so they are available in memory), but 
+it will not only convert them to image shift vectors (they are available in memory immediately), but 
 also add two entries in nav file for that map item for hole vectors. So the map item will have
-this information in it. This would potentially help automation and for cases like geometry of 
+this information in it. After nav file is saved, you can see the two entries for a map item as below. 
+
+.. code-block:: ruby
+
+   ...
+   HoleISXspacing = -0.264893 -0.995153 -0.73026
+   HoleISYspacing = 0.997737 0.284396 -0.713341
+   ...
+
+This would potentially help automation and for cases like geometry of 
 holes having changes slightly from mesh to mesh and you have to obtain the image shift vectors
-dynamically. 
+dynamically.
 
 Please note, the final image shift vectors used for data collection at high mag might be slightly 
 different from freshed converted ones at MMM mag due to impefection by crossing such large mag distance. 
