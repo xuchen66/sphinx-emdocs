@@ -85,7 +85,7 @@ Below is an image shown the result.
 
 **Fig.3 Autocontour Single Click**
 
-.. image:: ../images/polygon-single-click.png
+.. image:: ../images/polyon-single-click.png
    :scale: 30 %
 ..   :height: 544 px
 ..   :width: 384 px
