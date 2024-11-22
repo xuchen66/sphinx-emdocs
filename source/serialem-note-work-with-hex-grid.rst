@@ -30,7 +30,7 @@ in the image below.
 **Fig.1 Hole Finder for Hex**
 
 .. image:: ../images/hole-finder-hex.png
-   :scale: 50 %
+   :scale: 20 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: hole finder for hex
@@ -47,7 +47,7 @@ And of course you need to setup multiple exposure accordingly.
 **Fig.2 Multiple Exposure for Hex**
 
 .. image:: ../images/multi-exposure-hex.png
-   :scale: 50 %
+   :scale: 20 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: hole finder for hex
@@ -97,7 +97,7 @@ as shown in red outline in image below.
 **Fig.3 Hole Finder for skipping a hole for Hex**
 
 .. image:: ../images/1:3-subset-of-holes-hex.png
-   :scale: 50 %
+   :scale: 20 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: hole finder for hex
@@ -119,7 +119,7 @@ Below is the pattern with 2/3 holes skipped. As you can see, larger beam size wo
 **Fig.4 Multi Exposure pattern for skipping a hole for Hex**
 
 .. image:: ../images/1:3-subset-pattern-hex.png
-   :scale: 50 %
+   :scale: 20 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: hole finder for hex
@@ -130,7 +130,7 @@ After combining, the display for Aquire areas is show below. You can see 2/3 of 
 **Fig.5 Acquire Area Display for skipping a hole for Hex**
 
 .. image:: ../images/display-skip-hex.png
-   :scale: 50 %
+   :scale: 20 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: hole finder for hex
@@ -150,7 +150,7 @@ Here is an image showing cross-correlation peaks without erasing the periodic pe
 **Fig.6 CC-peaks without erasing periodic peaks for Hex**
 
 .. image:: ../images/cc-peaks-without-erasing.png
-   :scale: 50 %
+   :scale: 20 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: hole finder for hex
@@ -161,7 +161,7 @@ After erasing the peaks, the domination is largely eliminated.
 **Fig.7 CC-peaks Hex** with erasing funtion turned on **
 
 .. image:: ../images/cc-peaks-with-erasing.png
-   :scale: 50 %
+   :scale: 20 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: hole finder for hex
@@ -171,7 +171,3 @@ To turn this function on, for a task that involving cross-correlation such as eu
 For realign routine in LD mode, turn it on from menu Navigator - Erase Periodic Peaks in LD. 
 
 Note: you should only use Erasing with AuFoil grids. Do not use it with normal carbon grids. 
-
-
-
-
