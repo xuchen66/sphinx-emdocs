@@ -14,7 +14,7 @@ SerialEM Note: Work With A Hex Grid
       Quantifoil released their new type of cryo grids - HexAuFoil. Both
       mesh shape and hole pattern arrangement in the meshes are hexagon. It 
       has small holes and hole spacing. SerialEM has to develop some new 
-      features to deal with. 
+      features to deal with this. 
 
       Here I share some of our experience how to control hex grid using SerialEM.
 
@@ -55,7 +55,7 @@ And of course you need to setup multiple exposure accordingly.
 
 In above image, in multiple exposure setup dialog, you need to check "Hex grid" here too. 
 If you click on button [ Last Hole Vectors ] or [ Map Hole Vectors ], you will obtain Image
-Shift vectors that are the base to define the multiple exposure pattern. There is 
+Shift vectors that are the base to define a multiple exposure pattern. There is 
 under-the-hood conversion from hole Stage geometry vectors to Image Shift vectors. 
 
 After finding holes, even you do not take any holes, the hole vectors become available. 
@@ -76,7 +76,7 @@ holes having changes slightly from mesh to mesh and you have to obtain the image
 dynamically.
 
 Please note, the final image shift vectors used for data collection at high mag might be slightly 
-different from freshed converted ones at MMM mag due to impefection by crossing such large mag distance. 
+different from freshly converted ones from MMM mag due to impefection by crossing such large mag distance. 
 You should refine the final image shift vectors before committing massive collection. 
 
 The image shift vectors and how many rings for hexagon together define the actual multiple exposure 
@@ -96,7 +96,7 @@ While this provides some nice advantages for image quality over these small hole
 it poses technical challenges for a scope that cannot give small enough beam while
 maintaining parallel beam condistions. On ThermoFisher Krios with 3 condenser lenses, 
 this is normally not a problem. However, for 200keV scope which only has 2 condenser 
-lenses, the beam is usually to large - it will touch the adjecent hole. 
+lenses, the beam is usually to larger - it might well touch the adjecent hole. 
 
 SerialEM provided a way to skip a hole. 
 
@@ -114,9 +114,9 @@ as shown in red outline in image below.
 
 This will only include 1/3 of the holes and still make them arranged in hexagon, although different from 
 original all-hole hexagon. This is as if the other 2/3 holes are not there. It is pity to throw away 2/3 
-of good holes, but at least we can not collect on this hex grid with larger beam size. 
+of good holes, but at least we can now collect on this hex grid with larger beam size. 
 
-It is then the same workflow to obtain multiple exposure patter:
+It is then the same workflow to obtain multiple exposure pattern:
 
 - take the 1/3 holes found and save them into navigator
 - from multiple exposure setup dialog, click [ Last Hole Vectors ] or [ Map Hole Vectors ] to obtain base image shift vectors
@@ -151,10 +151,17 @@ Erase Periodic Peaks
 --------------------
 
 The compact, regular, sharp (high contrast) and small sized holes in an image of camera view can easily cause error for cross-correlation operation. 
-This is caused by periodic peals dominating the cross-correlation operation. 
-SerialEM has implemented a function to erasing priodic peaks for cross-correlation so real peaks get a chance to standout.
+This is because of periodic peals dominating the cross-correlation operation. SerialEM has implemented a function to erasing priodic peaks for cross-correlation so real peaks get a chance to standout.
 
-Here is an image showing cross-correlation peaks without erasing the periodic peaks. 
+Here is an image showing cross-correlation peaks without erasing the periodic peaks. You can test this from 
+menu Process - Show Cross-corr. The helpfile (https://bio3d.colorado.edu/SerialEM/betaHlp/html/menu_process.htm#hid_process_showcrosscorr)
+says:
+
+.. code-block:: ruby
+
+   Show Cross-corr command (Process menu)
+
+   Use this command to show the cross-correlation used to autoalign the image in buffer A to the image in the autoalign buffer. The correlation will be      placed into Buffer A and existing images will be rolled to higher buffers, just as when a new image is acquired.
 
 **Fig.6 CC-peaks without erasing periodic peaks for Hex**
 
@@ -179,4 +186,6 @@ After erasing the peaks, the domination is largely eliminated.
 To turn this function on, for a task that involving cross-correlation such as eucentric rough and fine, autofocusing etc.. 
 For realign routine in LD mode, turn it on from menu Navigator - Erase Periodic Peaks in LD. 
 
-Note: you should only use Erasing with AuFoil grids. Do not use it with normal carbon grids. 
+.. Note::
+      
+      you should only use Erasing with AuFoil grids. **Do not use it with normal carbon grids**. 
