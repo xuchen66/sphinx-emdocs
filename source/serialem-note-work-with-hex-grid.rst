@@ -55,19 +55,19 @@ And of course you need to setup multiple exposure accordingly.
 
 In above image, in multiple exposure setup dialog, you need to check "Hex grid" here too. 
 If you click on button [ Last Hole Vectors ] or [ Map Hole Vectors ], you will obtain Image
-Shift vectors that are the base to defines the multiple exposure pattern. There is 
+Shift vectors that are the base to define the multiple exposure pattern. There is 
 under-the-hood conversion from hole Stage geometry vectors to Image Shift vectors. 
 
-After finding holes, even you do not take any holes, the hole vectors are available there. 
-That are the hole vectors. If it is overview image of a map on which you use [ Map Hole Vectors ], 
-this will not only convert them to image shift vectors (so they are available in memory), but 
+After finding holes, even you do not take any holes, the hole vectors become available. 
+Those are the hole stage vectors. If it is an overview image of a map on which you use [ Map Hole Vectors ], 
+it will not only convert them to image shift vectors (so they are available in memory), but 
 also add two entries in nav file for that map item for hole vectors. So the map item will have
 this information in it. This would potentially help automation and for cases like geometry of 
-holes having changes slightly from mesh to mesh and you have to obtain the image shift vector
+holes having changes slightly from mesh to mesh and you have to obtain the image shift vectors
 dynamically. 
 
 Please note, the final image shift vectors used for data collection at high mag might be slightly 
-different from freshed converted ones at MMM mag due to impefection crossing such large mag distance. 
+different from freshed converted ones at MMM mag due to impefection by crossing such large mag distance. 
 You should refine the final image shift vectors before committing massive collection. 
 
 The image shift vectors and how many rings for hexagon together define the actual multiple exposure 
