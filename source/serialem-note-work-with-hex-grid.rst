@@ -6,7 +6,7 @@ SerialEM Note: Work With A Hex Grid
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date Created: Nov. 22, 2024
-:Last Updated: Nov. 22, 2024
+:Last Updated: Nov. 23, 2024
 
 .. glossary::
 
@@ -95,8 +95,8 @@ The diameter of holes is 0.29 um, and spacing between closest holes is 0.6 um.
 While this provides some nice advantages for image quality over these small holes, 
 it poses technical challenges for a scope that cannot give small enough beam while
 maintaining parallel beam condistions. On ThermoFisher Krios with 3 condenser lenses, 
-this is normally not a problem. However, for 200keV scope which only has 2 condenser 
-lenses, the beam is usually to larger - it might well touch the adjecent hole. 
+this is normally not a problem. However, for 200 keV scope with only 2 condenser 
+lenses, the beam is usually too large - it might touch the adjecent hole. 
 
 SerialEM provided a way to skip a hole. 
 
@@ -125,7 +125,7 @@ It is then the same workflow to obtain multiple exposure pattern:
 
 Below is the pattern with 2/3 holes skipped. As you can see, larger beam size won't cause issue anymore. 
 
-**Fig.4 Multi Exposure pattern for skipping a hole for Hex**
+**Fig.4 Multi Exposure pattern for skipping a hole**
 
 .. image:: ../images/1:3-subset-pattern-hex.png
    :scale: 20 %
@@ -136,7 +136,7 @@ Below is the pattern with 2/3 holes skipped. As you can see, larger beam size wo
 
 After combining, the display for Aquire areas is show below. You can see 2/3 of holes skipped here. 
 
-**Fig.5 Acquire Area Display for skipping a hole for Hex**
+**Fig.5 Acquire Area Display for skipping a hole**
 
 .. image:: ../images/display-skip-hex.png
    :scale: 20 %
@@ -151,7 +151,9 @@ Erase Periodic Peaks
 --------------------
 
 The compact, regular, sharp (high contrast) and small sized holes in an image of camera view can easily cause error for cross-correlation operation. 
-This is because of periodic peals dominating the cross-correlation operation. SerialEM has implemented a function to erasing priodic peaks for cross-correlation so real peaks get a chance to standout.
+This is because of periodic peals dominating the cross-correlation operation. Not only hex, the square shape UltrAuFoil grids also suffer from problem. 
+
+SerialEM has implemented a function to erasing priodic peaks for cross-correlation so real peaks get a chance to standout.
 
 Here is an image showing cross-correlation peaks without erasing the periodic peaks. You can test this from 
 menu Process - Show Cross-corr. The helpfile (https://bio3d.colorado.edu/SerialEM/betaHlp/html/menu_process.htm#hid_process_showcrosscorr)
