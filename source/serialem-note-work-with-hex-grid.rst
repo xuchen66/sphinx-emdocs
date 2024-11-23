@@ -174,7 +174,7 @@ says:
 
 After erasing the peaks, the domination is largely eliminated. 
 
-**Fig.7 CC-peaks Hex** with erasing funtion turned on **
+**Fig.7 CC-peaks with erasing funtion turned on**
 
 .. image:: ../images/cc-peaks-with-erasing.png
    :scale: 20 %
