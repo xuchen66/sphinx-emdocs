@@ -188,6 +188,6 @@ After erasing the peaks, the domination is largely eliminated.
 To turn this function on, for a task that involving cross-correlation such as eucentric rough and fine, autofocusing etc.. 
 For realign routine in LD mode, turn it on from menu Navigator - Erase Periodic Peaks in LD. 
 
-.. Note::
+.. Warning::
       
-      you should only use Erasing with AuFoil grids. **Do not use it with normal carbon grids**. 
+      You should only use Erasing with AuFoil grids. **Do not use it with normal carbon grids**. 
