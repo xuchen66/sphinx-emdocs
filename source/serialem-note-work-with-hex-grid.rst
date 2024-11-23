@@ -100,8 +100,8 @@ lenses, the beam is usually to larger - it might well touch the adjecent hole.
 
 SerialEM provided a way to skip a hole. 
 
-Only thing one needs to do for this case is to check "Use best 1/3 subset of holes", 
-as shown in red outline in image below. 
+**After** finding all the holes, good or bad, just like before, now the only thing one 
+needs to do is to check "Use best 1/3 subset of holes", as shown in red outline in image below. 
 
 **Fig.3 Hole Finder for skipping a hole for Hex**
 
