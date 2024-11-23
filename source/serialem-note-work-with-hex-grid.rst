@@ -161,7 +161,9 @@ says:
 
    Show Cross-corr command (Process menu)
 
-   Use this command to show the cross-correlation used to autoalign the image in buffer A to the image in the autoalign buffer. The correlation will be      placed into Buffer A and existing images will be rolled to higher buffers, just as when a new image is acquired.
+   Use this command to show the cross-correlation used to autoalign the image in buffer A 
+   to the image in the autoalign buffer. The correlation will be placed into Buffer A and 
+   existing images will be rolled to higher buffers, just as when a new image is acquired.
 
 **Fig.6 CC-peaks without erasing periodic peaks for Hex**
 
