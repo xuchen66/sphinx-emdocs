@@ -187,7 +187,8 @@ After erasing the peaks, the domination is largely eliminated.
 
 To turn this function on,
 
-- For a task that involving cross-correlation such as eucentric rough and fine, autofocusing etc., check the box "Erasing Periodic Peaks for Align & Focus" in ``Image Alignement & Focus`` control panel. 
+- For a task that involving cross-correlation such as eucentric rough and fine, autofocusing etc., 
+check the box "Erasing Periodic Peaks in Align&Focus" in ``Image Alignement & Focus`` control panel. 
 - For realign routine in LD mode, turn it on from menu Navigator - Erase Periodic Peaks in LD. 
 
 .. Warning::
