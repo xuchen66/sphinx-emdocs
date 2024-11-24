@@ -6,7 +6,7 @@ SerialEM Note: Work With A Hex Grid
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date Created: Nov. 22, 2024
-:Last Updated: Nov. 23, 2024
+:Last Updated: Nov. 24, 2024
 
 .. glossary::
 
@@ -189,7 +189,7 @@ After erasing the peaks, the domination is largely eliminated.
 
 To turn this function on,
 
-- For a task that involving cross-correlation such as eucentric rough and fine, autofocusing etc., check the box "Erasing Periodic Peaks in Align&Focus" in ``Image Alignement & Focus`` control panel. 
+- For a task that involves cross-correlation such as eucentric rough and fine, autofocusing etc., check the box "Erasing Periodic Peaks in Align&Focus" in ``Image Alignement & Focus`` control panel. 
 - For realign routine in LD mode, turn it on from menu Navigator - Erase Periodic Peaks in LD. 
 
 .. Warning::
