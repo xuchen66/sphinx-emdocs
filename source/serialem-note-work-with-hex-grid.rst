@@ -95,13 +95,15 @@ The diameter of holes is 0.29 um, and spacing between closest holes is 0.6 um.
 While this provides some nice advantages for image quality over these small holes, 
 it poses technical challenges for a scope that cannot give small enough beam while
 maintaining parallel beam condistions. On ThermoFisher Krios with 3 condenser lenses, 
-this is normally not a problem. However, for 200 keV scope with only 2 condenser 
-lenses, the beam is usually too large - it might touch the adjecent hole. 
+one can easily have beam size about 0.6 - 0.7 microns, thus this is normally not a 
+problem. However, for 200 keV scope with only 2 condenser lenses, the beam is usually 
+too large - it will touch adjecent holes. 
 
 SerialEM provided a way to skip a hole. 
 
-**After** finding all the holes, good or bad, just like before, now the only thing one 
-needs to do is to check "Use best 1/3 subset of holes", as shown in red outline in image below. 
+**After** finding all the holes, just like before, the only thing one needs to 
+do is to check "Use best 1/3 subset of holes", as shown in red outline in the
+dialog window below. 
 
 **Fig.3 Hole Finder for skipping a hole for Hex**
 
