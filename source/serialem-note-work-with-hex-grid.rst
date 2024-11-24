@@ -159,7 +159,7 @@ Here is an image showing cross-correlation peaks without erasing the periodic pe
 menu Process - Show Cross-corr. The helpfile (https://bio3d.colorado.edu/SerialEM/betaHlp/html/menu_process.htm#hid_process_showcrosscorr)
 says:
 
-.. code-block:: ruby
+.. code-block::
 
    Show Cross-corr command (Process menu)
 
