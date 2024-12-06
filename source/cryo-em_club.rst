@@ -20,7 +20,7 @@ Ximena Zottig and Johannes Elferich are co-organizers.
 Upcoming Meetings
 -----------------
 
-- December (Dec. 10, 2024): Zahra Seraj (Andrei Korostelev lab - titled:  "**Visualizing Hibernating Ribosomes Using 2DTM.**”. And there will be a local CryoEM Facility user meeting after Zahra's talk. 
+- December (Dec. 10, 2024 at noon in NERB N1-1500): Zahra Seraj (Andrei Korostelev lab - titled:  "**Visualizing Hibernating Ribosomes Using 2DTM.**”. And there will be a local CryoEM Facility user meeting after Zahra's talk. 
 - January (Jan. 14, 2025): Roger Craig 
 
 Past Meetings & Materials
