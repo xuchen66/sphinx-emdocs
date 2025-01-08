@@ -6,7 +6,7 @@ Cryo-EM Club at UMass Chan
 :Author: UMass CryoEM Core
 :Contact: <cryoem.umms@gmail.com>
 :Date-created: 2024-8-19
-:Last-updated: 2024-12-22
+:Last-updated: 2025-1-8
 
 This page lists contents of past Cryo-EM club talks and 
 announcement of the upcoming meetings. The club hosts 
@@ -20,7 +20,7 @@ Ximena Zottig and Johannes Elferich are co-organizers.
 Upcoming Meetings
 -----------------
 
-- January (Jan. 14, 2025): Roger Craig 
+- January (Jan. 14, 2025 at noon in NERB N1-1300 ): **Roger Craig** -  titled "Cryo-EM of the Human Cardiac Myosin Filament: Structure and Implications."
 
 Past Meetings & Materials
 --------------------------
