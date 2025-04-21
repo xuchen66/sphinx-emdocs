@@ -34,7 +34,6 @@ SerialEM Note: Understanding Transforms in Multigrid Operation
 
 .. _marker_shift:
 
-
 Understanding **Shift To Marker** in SerialEM
 ---------------------------------------------
 
@@ -54,25 +53,26 @@ in the Navigator window. If another unrelated item is selected, the shift will b
 Multigrid workflows also make use of this transformation. As such, the shift value should be determined in advance and verified for accuracy. Fortunately, 
 SerialEM tracks whether a map has had the Marker Shift applied, helping to avoid confusion and ensuring consistent results across the process.
 
-.. _note::
+.. note::
+   An alternative approach to handling the misalignment between LD_Search (S) and LD_View (V) magnifications is to apply an Image Shift. In SerialEM, it’s      
+   possible to define LD_Search with a specific Image Shift offset, so that every shot taken with LD_Search includes this predefined shift. When properly      
+   configured, this method can make the image features captured at S and V magnifications appear aligned.
 
-    An alternative approach to handling the misalignment between LD_Search (S) and LD_View (V) magnifications is to apply an Image Shift. In SerialEM, it’s      
-    possible to define LD_Search with a specific Image Shift offset, so that every shot taken with LD_Search includes this predefined shift. When properly      
-    configured, this method can make the image features captured at S and V magnifications appear aligned.
+   This technique avoids the need to shift coordinates in the Navigator, since the actual beam/image position is adjusted instead. It provides a more           
+   seamless alignment across magnifications without altering Navigator item positions.
 
-    This technique avoids the need to shift coordinates in the Navigator, since the actual beam/image position is adjusted instead. It provides a more           
-    seamless alignment across magnifications without altering Navigator item positions.
-
-    I believe this is the method used in EPU, where image shift alignment between search and view modes is handled.
+   I believe this is the method used in EPU, where image shift alignment between search and view modes is handled.
 
 .. _Realign_Reloaded_Grid_transform:
 
 Realign Reloaded Grid Transform
 -------------------------------
 
-After a grid is realoded on the stage, **Multigrid** will compute rotation and translational shift bewteen the old and new stage positions. A 
-two-dimensional transformation matrix and offset are obtained and written to LMM map as one of its navigator properties. Below is such entry 
-in nav file for this LMM map.
+After a grid is reloaded onto the stage, Multigrid computes both a rotational and translational shift between the previous 
+and current stage positions. This results in a two-dimensional transformation matrix and offset, which are saved to the 
+corresponding LMM map as one of its Navigator properties.
+
+Below is an example of such an entry from the .nav file:
 
 .. code-block:: python
    :caption: GridMapXform entry for LMM map
@@ -81,29 +81,43 @@ in nav file for this LMM map.
    GridMapXform = 0.997785 0.0665214 -0.0665214 0.997785 -11.1591 -15.8475
    ...
 
-The porgram does this using 5 best locations from LMM map and comparing them one-by-one for before and after the grid reloading. And it applies 
-this tranform to all the nav items previously defined in LMM map. The LMM map overview image and all the items on it look the same, but all the 
-coodinates are updated and they are all GOOD for current grid position on the stage. No new LMM is required. 
+The program determines this transformation by identifying and comparing five of the best-matching locations from the 
+LMM map before and after reloading. Using these points, it calculates the optimal transform and applies it to all 
+Navigator items previously defined in the LMM map.
 
-This procedure is called **Realign to Reloaded Grid**. It happens automatically after reloading (via multigtid operation) is done. If you want 
-to realign it again manually, there is also a button ``Realign to Map`` in **Multiple Grid Opeations** dialog window for you to do so. After 
-each reloading, it will obtain and update the transformation martix of "GridMapXform" compared to the last round. All the coordinate values in 
-the nav file are updated - they have been evolving to cope with new grid stage position, although the initial LMM map overview image still 
-looks the same. 
+Although the LMM map overview image remains visually unchanged, all coordinate values are updated accordingly. This 
+means the previously defined points will still work without needing to acquire a new LMM map. This process ensures 
+continuity and accuracy in navigation despite grid reloads.
 
-As you can see, this transform is essential to multigrid operation. It relys on LMM map. One cannot skip first step - LMM map and directly 
-jump into MMM step. 
+This procedure is known as **Realign to Reloaded Grid**, and it is triggered automatically after a reload during a Multigrid 
+operation. If needed, you can also invoke it manually using the ``Realign to Map`` button found in the Multiple Grid 
+Operations dialog window.
+
+Each time the grid is reloaded, a new GridMapXform matrix is computed and updated. All coordinate values in the Navigator 
+file evolve with each transformation, adapting to the current physical position of the grid on the stage—even though the 
+LMM map image itself appears unchanged.
+
+As this transformation is foundational to the Multigrid workflow, it relies on the presence of an LMM map. Skipping the 
+LMM step and jumping directly to MMM is not possible.
 
 .. _Multishot_in_multigrid:
 
 Multishot in Multigrid 
 ----------------------
 
-One of the key features for multishot procedure is the fact that final the Image Shift vectors can be obtained from the hole vectors and an 
-ajustment transform. As mentioned in other SerialEM note, if hole finder routine is performed on a V image, the hole vectors become availble. 
-One can simply presse the button to Use ``Last Hole Vectors``, a set of "rough" Image Shift vectors are obtained from the transformation of 
-hole vectors. If we perform hole finding routine on a MMM map overview, this "rough" Image Shift vectors are obtained and the information is 
-also recorded as one of the properties for the MMM map nav item. See below:
+One of the key features of the multishot procedure in SerialEM is its ability to derive final Image Shift vectors using 
+a combination of hole vectors and an adjustment transform. This significantly simplifies alignment during automated data 
+acquisition.
+
+As discussed in other SerialEM notes, when the hole finder routine is executed on a View (V) image, a set of hole vectors 
+becomes available. By pressing the Use ``Last Hole Vectors`` button, SerialEM can generate a set of *rough* Image Shift vectors 
+based on the transformation of these hole vectors. 
+
+If the hole finding routine is instead performed on a MMM map overview, the process works similarly: the resulting *rough* 
+Image Shift vectors are computed and stored. Importantly, this information is saved as part of the Navigator item properties 
+for the MMM map.
+
+Below is an example of such an entry in the .nav file:
 
 .. code-block:: python
    :caption: IS vectors for MMM map
@@ -111,52 +125,53 @@ also recorded as one of the properties for the MMM map nav item. See below:
    HoleISXspacing = -1.40096 2.16152 0
    HoleISYspacing = -2.17058 -1.41177 0
 
-Thus, every MMM maps can contain such information in nav file. 
+Thus, every MMM map can include this hole vector-derived Image Shift information, which is stored in the .nav file.
 
-If one performs ``StepTo & Adjust``, not only the final accurate IS vectors for high mag is availbe, but also the adjustment transform! This 
-adjustment transform is kept in user's setting file like below. 
+When a user performs the “StepTo & Adjust” operation, SerialEM not only determines the final, accurate Image Shift vectors 
+for high-magnification data acquisition, but also calculates an adjustment transform. This transform is saved in the user’s 
+settings file, typically in a format like the following:
 
 .. code-block:: python
    :caption: Adjustment Transform IS vectors
 
    HoleAdjustXform -37 0 0 18 35 0.918684 0.015073 0.000718 0.926858
 
-This is for between View and Record beams, it is stable and doesn't change with grid. 
+This transform describes the relationship between the View and Record beams and is generally stable—it does not vary between grids.
 
-Multgrid procedure will get the "rough" Image Shift vectors stored for each MMM map, and combines that with "HoleAdjustXform" to have final 
-Image Shift vectors for data acquisition. This is done dynamically during multigrid operation. 
+During Multigrid operation, SerialEM retrieves the “rough” Image Shift vectors that are stored with each MMM map and dynamically 
+combines them with the HoleAdjustXform. This results in the final Image Shift vectors used for precise and automated data acquisition. 
+The process happens seamlessly during multigrid operation, ensuring accurate targeting without manual intervention.
 
 .. _hole_vectors_transform:
 
-Hole Vectors are Also Tranformed with Reloading
------------------------------------------------
+Hole Vectors Are Also Transformed Upon Reloading
+------------------------------------------------
 
-When we do hole finding on all MMM maps, we got the good holes postions, AND we got hole vectors. However, when we do final data acquisition, 
-the grid will be reloaded it again. We already know the positions will be fine due to "GridMapXform", but what about hole vectors, are they 
-still be good? The answer is YES. The "HoleISXspacing" and "HoleISYspacing" lines in nav file will get updated too. 
+When hole finding is performed on all MMM maps, we obtain both the positions of "good" holes and a set of hole vectors. These 
+vectors define the relative layout of the holes and are critical for generating accurate multishot Image Shift patterns.
 
-If you display the multishot pattern which was obtained based on MMM map image before reloading, NOW the pattern looks off on the old MMM map. 
-And if you take a fresh LD_View shot and display current pattern on that, it fits nicely. This means even the hole vectors was determined over 
-old MMM map, they actually got updated when grid is reloaded. 
+However, during final data acquisition, the grid is reloaded again. While we know that the hole positions remain valid due to 
+the previously applied GridMapXform, the natural question is: Are the hole vectors still valid after reloading?
 
-SerialEM has various measures to ensure the information at each reloading well bookkept. It includes nav entries for "OrigReg" and "Regis" etc..
+The answer is yes.
 
+SerialEM automatically updates the hole vector information to reflect the new grid orientation. Specifically, the following lines 
 
+in the .nav file are updated:
 
+.. code-block:: python
+   :caption: IS vectors for MMM map
 
+   HoleISXspacing = ...
+   HoleISYspacing = ...
 
+These values represent the transformed X and Y spacing between holes, adjusted for any rotation or shift introduced during reloading.
 
+You can observe the effect of this by displaying the multishot pattern that was initially generated from the MMM map before 
+reloading. On the old MMM map image, the pattern will now appear misaligned. However, if you take a fresh LD_View image and 
+display the current multishot pattern on that, it aligns correctly—indicating that the hole vectors were properly transformed 
+to match the new grid positioning.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+SerialEM includes several mechanisms to ensure this information is accurately tracked and maintained across reloads. These 
+include special .nav entries such as "OrigReg" and "Regis", which help maintain the integrity of coordinate systems and 
+transformations at each stage.
