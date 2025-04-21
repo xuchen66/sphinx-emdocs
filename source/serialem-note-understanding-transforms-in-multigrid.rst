@@ -93,7 +93,7 @@ This procedure is known as **Realign to Reloaded Grid**, and it is triggered aut
 operation. If needed, you can also invoke it manually using the ``Realign to Map`` button found in the Multiple Grid 
 Operations dialog window.
 
-Each time the grid is reloaded, a new GridMapXform matrix is computed and updated. All coordinate values in the Navigator 
+Each time the grid is reloaded, a new GridMapXform matrix is computed and updated in the nav file. All coordinate values in the Navigator 
 file evolve with each transformation, adapting to the current physical position of the grid on the stage—even though the 
 LMM map image itself appears unchanged.
 
@@ -150,13 +150,12 @@ Hole Vectors Are Also Transformed Upon Reloading
 When hole finding is performed on all MMM maps, we obtain both the positions of "good" holes and a set of hole vectors. These 
 vectors define the relative layout of the holes and are critical for generating accurate multishot Image Shift patterns.
 
-However, during final data acquisition, the grid is reloaded again. While we know that the hole positions remain valid due to 
-the previously applied **GridMapXform**, the natural question is: Are the hole vectors still valid after reloading?
+However, during final data acquisition, the grid is reloaded again. While we know that the hole positions on MMM map remain valid due to 
+the applied **GridMapXform**, the natural question is: Are the hole vectors also still valid after reloading?
 
 The answer is yes.
 
 SerialEM automatically updates the hole vector information to reflect the new grid orientation. Specifically, the following lines 
-
 in the .nav file are updated:
 
 .. code-block:: python
@@ -165,12 +164,11 @@ in the .nav file are updated:
    HoleISXspacing = ...
    HoleISYspacing = ...
 
-These values represent the transformed X and Y spacing between holes, adjusted for any rotation or shift introduced during reloading.
-
 You can observe the effect of this by displaying the multishot pattern that was initially generated from the MMM map before 
 reloading. On the old MMM map image, the pattern will now appear misaligned. However, if you take a fresh LD_View image and 
 display the current multishot pattern on that, it aligns correctly—indicating that the hole vectors were properly transformed 
-to match the new grid positioning.
+to match the new grid positioning. Even you delete these two lines and regenerate them by running hole finding on "old" MMM
+maps, the new lines will be reflecting current new grid positioning. The new **GridMapXform** is in control!
 
 SerialEM includes several mechanisms to ensure this information is accurately tracked and maintained across reloads. These 
 include special .nav entries such as "OrigReg" and "Regis", which help maintain the integrity of coordinate systems and 
