@@ -29,7 +29,7 @@ SerialEM Note: Understanding Transforms in Multigrid Operation
       Image Shift vectors to be determined automatically for each grid — and sometimes even for each map — without manual intervention.
         
       How is all of this achieved? In this note, I want to share my understanding of the process, so that new users can better grasp what's happening 
-      behind the scenes and avoid treating it as a black box.  
+      behind the scenes and avoid treating it as a black box. I am certain there are things not correct or accurate, but I hope this helps.  
  
 
 .. _marker_shift:
@@ -61,7 +61,7 @@ SerialEM tracks whether a map has had the Marker Shift applied, helping to avoid
    This technique avoids the need to shift coordinates in the Navigator, since the actual beam/image position is adjusted instead. It provides a more           
    seamless alignment across magnifications without altering Navigator item positions.
 
-   I believe this is the method used in EPU, where image shift alignment between search and view modes is handled.
+   I believe this is the method used in EPU, where image shift alignment between search and view modes is handled. 
 
 .. _Realign_Reloaded_Grid_transform:
 
@@ -120,7 +120,7 @@ for the MMM map.
 Below is an example of such an entry in the .nav file:
 
 .. code-block:: python
-   :caption: IS vectors for MMM map
+   :caption: rough IS vectors stored with MMM map
 
    HoleISXspacing = -1.40096 2.16152 0
    HoleISYspacing = -2.17058 -1.41177 0
@@ -132,7 +132,7 @@ for high-magnification data acquisition, but also calculates an adjustment trans
 settings file, typically in a format like the following:
 
 .. code-block:: python
-   :caption: Adjustment Transform IS vectors
+   :caption: Adjustment Transform for final IS vectors
 
    HoleAdjustXform -37 0 0 18 35 0.918684 0.015073 0.000718 0.926858
 
@@ -151,7 +151,7 @@ When hole finding is performed on all MMM maps, we obtain both the positions of 
 vectors define the relative layout of the holes and are critical for generating accurate multishot Image Shift patterns.
 
 However, during final data acquisition, the grid is reloaded again. While we know that the hole positions remain valid due to 
-the previously applied GridMapXform, the natural question is: Are the hole vectors still valid after reloading?
+the previously applied **GridMapXform**, the natural question is: Are the hole vectors still valid after reloading?
 
 The answer is yes.
 
