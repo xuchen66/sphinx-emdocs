@@ -74,6 +74,7 @@ SerialEM Notes
    serialem-note-cross-mag_aligment
    serialem-note-work-with-hex-grid
    serialem-note-add-mesh-polygon
+   serialem-note-understanding-transforms-in-multigrid
 Index
 *****
 
