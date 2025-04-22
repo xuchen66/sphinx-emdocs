@@ -167,8 +167,8 @@ in the .nav file are updated:
 You can observe the effect of this by displaying the multishot pattern that was initially generated from the MMM map before 
 reloading. On the old MMM map image, the pattern will now appear misaligned. However, if you take a fresh LD_View image and 
 display the current multishot pattern on that, it aligns correctly—indicating that the hole vectors were properly transformed 
-to match the new grid positioning. Even you delete these two lines and regenerate them by running hole finding on "old" MMM
-maps, the new lines will be reflecting current new grid positioning. The new **GridMapXform** is in control!
+to match the new grid positioning. In fact, even if you delete these two lines and regenerate them by running hole finding on 
+"old" MMM maps, the new lines will be reflecting current new grid positioning. The new **GridMapXform** is in control!
 
 SerialEM includes several mechanisms to ensure this information is accurately tracked and maintained across reloads. These 
 include special .nav entries such as "OrigReg" and "Regis", which help maintain the integrity of coordinate systems and 
