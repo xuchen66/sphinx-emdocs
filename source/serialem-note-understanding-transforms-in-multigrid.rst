@@ -1,7 +1,7 @@
 .. _Understanding_Transforms_in_Multigrid:
 
-SerialEM Note: Understanding Transforms in Multigrid Operation
-==============================================================
+SerialEM Note: Understanding Transformations in Multigrid Operation
+===================================================================
 
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
