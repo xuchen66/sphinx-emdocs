@@ -6,7 +6,7 @@ SerialEM Note: Understanding Transforms in Multigrid Operation
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: Apr 21, 2025
-:Last_Updated: Apr 21, 2025
+:Last_Updated: Apr 22, 2025
 
 .. glossary::
 
