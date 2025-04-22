@@ -117,7 +117,7 @@ If the hole finding routine is instead performed on a MMM map overview, the proc
 Image Shift vectors are computed and stored. Importantly, this information is saved as part of the Navigator item properties 
 for the MMM map.
 
-Below is an example of such an entry in the .nav file:
+Below is an example of such an entry in the .nav file(use a text editor to open):
 
 .. code-block:: python
    :caption: rough IS vectors stored with MMM map
