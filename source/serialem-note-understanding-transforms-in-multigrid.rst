@@ -34,8 +34,8 @@ SerialEM Note: Understanding Transforms in Multigrid Operation
 
 .. _marker_shift:
 
-Understanding **Shift To Marker** in SerialEM
----------------------------------------------
+Shift To Marker Transform
+-------------------------
 
 The **Shift To Marker** operation is not unique to Multigrid workflows. It becomes relevant whenever there’s a mismatch between different magnifications—such 
 as when LMM is collected using the LD_Search (S) beam at 110X and MMM is collected using the LD_View (V) beam at 2000X. In such cases, the same image feature 
