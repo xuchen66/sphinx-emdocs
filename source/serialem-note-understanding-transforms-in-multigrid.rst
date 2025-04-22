@@ -68,7 +68,7 @@ SerialEM tracks whether a map has had the Marker Shift applied, helping to avoid
 Realign Reloaded Grid Transform
 -------------------------------
 
-After a grid is reloaded onto the stage, Multigrid computes both a rotational and translational shift between the previous 
+After a grid is reloaded onto the stage, Multigrid computes both a rotation angle and translational shift between the previous 
 and current stage positions. This results in a two-dimensional transformation matrix and offset, which are saved to the 
 corresponding LMM map as one of its Navigator properties.
 
