@@ -162,8 +162,9 @@ A very simple script for single particle can look like this:
    AcquireToMatchBuffer $buffer
    AlignTo $buffer 0 1
 
-   AutoCenterBeam
+   #AutoCenterBeam
    CycleTargetDefocus -0.5 -1.5 10
+   Autofocus
 
    # use one of following lines
    #Record
