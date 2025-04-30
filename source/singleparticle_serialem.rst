@@ -6,7 +6,7 @@ Single Particle Data Collection Using SerialEM
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date created: Oct 18, 2016
-:Last updated: Apr 13, 2021
+:Last updated: Apr 29, 2025
 .. glossary::
 
    Abstract
@@ -150,6 +150,24 @@ For each of the MMM map, do the following steps to add group points.
 
 Test Main Script to Run
 -----------------------
+
+A very simple script for single particle can look like this:
+
+.. code-block::
+
+   buffer = T
+   RealignToNavItem 0
+   ResetImageShift 2
+   #Copy A $buffer     #comment out if a fixed template in $buffer is used.
+   AcquireToMatchBuffer $buffer
+   AlignTo $buffer 0 1
+
+   AutoCenterBeam
+   CycleTargetDefocus -0.5 -1.5 10
+
+   # use one of following lines
+   #Record
+   MultipleRecords
 
 Lets load the script to script editor and try to run it. 
 
