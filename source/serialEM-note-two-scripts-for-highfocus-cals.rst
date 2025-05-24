@@ -6,7 +6,7 @@ SerialEM Note: Two Scripts for High-Focus Calibrations
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2024-06-09
-:Last_Updated: 2024-06-09
+:Last_Updated: 2025-05-24
 
 .. glossary::
 
@@ -39,28 +39,33 @@ use a scritps to add more intensity values. See below.
     # after manually calibrate for one intensity (requires drawing lines) 
     # using this script to continue for all slightly higher intensities
     # more automated way (without needing drawn lines). 
+    # Note - only need to calibrate this for one brightest spot size for LD.
     
-    
-    AlignBuf = O
+    AlignBuf = O                  # set this accordingly
     defs = { -50 -100 -150 -175 -200 -225 -250 -275 -300 -325 }
-    
+
+    # get initial C2%
+    ReportPercentC2
+    iniC2 = $repVal1
+
     Loop 50
        IncPercentC2 10             # increase 10%
        ReportPercentC2 
        If $repVal1 > 99.0
+          SetPercentC2 $iniC2
           Exit Intensity exceeds 99.0, quit.
        Endif 
-    
+
        T
        Copy A $AlignBuf
+       
        Loop $#defs ind
           ChangeFocus $defs[$ind]
           T
           CalibrateHighFocusMag     1   # skip the [YES] confirmation
           ChangeFocus -1 * $defs[$ind]
-       EndLoop 
+       EndLoop
     EndLoop 
-   
   
 .. _highfocus-mag:
 
@@ -76,15 +81,20 @@ a lot easier.
    
    # chen.xu@umassmed.edu 
    # April 28, 2024
-   
-   
-   AlignBuf = O
+   # one mag, one spotsize is enough (e.g. 1250X, uP spotsize 7)
+
+   AlignBuf = O            # set this accordingly
    defs = { -50 -100 -150 -175 -200 -225 -250 -275 -300 -325 }
    
+   # get initial C2%
+   ReportPercentC2
+   iniC2 = $repVal1
+
    Loop 50
       IncPercentC2 10               # increase 10% 
       ReportPercentC2 
       If $repVal1 > 99.0
+         SetPercentC2 $iniC2
          Exit Intensity exceeds 99.0, quit.
       Endif 
    
