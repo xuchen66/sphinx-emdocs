@@ -6,7 +6,7 @@ SerialEM Note: Installation and Calibration
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2017-11-12
-:Last_Updated: 2024-06-09
+:Last_Updated: 2025-05-26
 
 .. glossary::
 
@@ -141,6 +141,14 @@ Here are steps to follow.
 
 - If everything goes well, you should be able to start SerialEM and it
   should connect to "see" both scope and DM. Congratulations!
+
+.. rubric:: Step 12
+
+- To help with setup and calobration steps below, it is good to install 
+  the framework from FTP site, as https://bio3d.colorado.edu/ftp/SerialEM/Frameworks/GenericFramework.exe .
+  Double clicking on the exe will unzip a few files in C:\ProgramData\SerialEM. They include 
+  empty system files of property and calibraton. If you obtain the framework from Guenter who perpares 
+  property file for you, you install the framework from him instead. 
 
 .. _Calibration:
 
