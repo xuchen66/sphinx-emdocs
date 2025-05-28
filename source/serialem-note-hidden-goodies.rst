@@ -6,7 +6,7 @@ SerialEM Note: Hidden Goodies
 :Author: Chen Xu
 :Contact: <Chen.Xu@umassmed.edu>
 :Date-created: Nov 21, 2020
-:Last-updated: Feb 19, 2022
+:Last-updated: May 28, 2025
 
 .. glossary::
 
@@ -521,4 +521,26 @@ variable "SEMargStrings". In this case, SEMargStrings has value of a string
 list [ "-1.", "-2.5", "0.1"]. We convert it into real floats so they can be
 given to the function. 
 
+.. _example_4:
 
+Example 4 - Centering Feature by Right Double Click
+---------------------------------------------------
+
+SerialEM has various ways to control stage shift and image shift to get to a piont
+already. However, they usually involve multiple actions from mouse and keyboard. 
+The newly added function to use Right Double Click is definitely a nice added-on. 
+Basically, if you right double click on a target from image in buffer A or 
+montage overview in buffer B, it will bring the target to the center of your display.
+
+This is fairly hidden, as there is script command or menu item from the interface. 
+As a special action, the information about this can only be found from "Mouse and Keyboard
+Controls" section of helpfile (https://bio3d.colorado.edu/SerialEM/betaHlp/html/about_mouse.htm),
+as shown below:
+
+.. code-block:: ruby
+
+   Right mouse button double click: Double clicking the right mouse button at a point in the display for buffer A, or for buffer B with a montage overview, acquires an image centered on that point; namely, it is equivalent to placing the marker point at that point, using the Shift P hot key or the Go To Marker button in the Image Alignment & Focus control panel to center the microscope field of view on that point, then acquiring an image of the same type as the one being clicked in.  As with those shift operations or dragging with the right mouse button, image shift will be changed unless the option Move stage for big mouse shifts is selected in that panel and the shift is above the threshold for moving the stage.  In Low Dose mode, a Preview will be taken if a Record is clicked in; otherwise the image will match the kind that was clicked in.  The point need not be within the image area; it can be anywhere in the window.  When stage movement is used, the new image will be aligned with image shift to bring the clicked point to the center, provided that the point is on actual image (not the gray area for an image that was mouse-shifted).
+
+   Shift - right mouse button double click: Double clicking the right mouse button with Shift held down will force a stage movement to that position and acquire an image there.
+
+This provides a quick and simple way to move around for X Y. 
