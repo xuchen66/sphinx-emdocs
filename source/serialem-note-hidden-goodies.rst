@@ -539,8 +539,21 @@ as shown below:
 
 .. code-block:: ruby
 
-   Right mouse button double click: Double clicking the right mouse button at a point in the display for buffer A, or for buffer B with a montage overview, acquires an image centered on that point; namely, it is equivalent to placing the marker point at that point, using the Shift P hot key or the Go To Marker button in the Image Alignment & Focus control panel to center the microscope field of view on that point, then acquiring an image of the same type as the one being clicked in.  As with those shift operations or dragging with the right mouse button, image shift will be changed unless the option Move stage for big mouse shifts is selected in that panel and the shift is above the threshold for moving the stage.  In Low Dose mode, a Preview will be taken if a Record is clicked in; otherwise the image will match the kind that was clicked in.  The point need not be within the image area; it can be anywhere in the window.  When stage movement is used, the new image will be aligned with image shift to bring the clicked point to the center, provided that the point is on actual image (not the gray area for an image that was mouse-shifted).
+   Right mouse button double click: Double clicking the right mouse button at a point 
+   in the display for buffer A, or for buffer B with a montage overview, acquires an image 
+   centered on that point; namely, it is equivalent to placing the marker point at that point, 
+   using the Shift P hot key or the Go To Marker button in the Image Alignment & Focus control 
+   panel to center the microscope field of view on that point, then acquiring an image of the 
+   same type as the one being clicked in.  As with those shift operations or dragging with the 
+   right mouse button, image shift will be changed unless the option Move stage for big mouse 
+   shifts is selected in that panel and the shift is above the threshold for moving the stage.  
+   In Low Dose mode, a Preview will be taken if a Record is clicked in; otherwise the image will 
+   match the kind that was clicked in.  The point need not be within the image area; it can be 
+   anywhere in the window.  When stage movement is used, the new image will be aligned with 
+   image shift to bring the clicked point to the center, provided that the point is on actual 
+   image (not the gray area for an image that was mouse-shifted).
 
-   Shift - right mouse button double click: Double clicking the right mouse button with Shift held down will force a stage movement to that position and acquire an image there.
+   Shift - right mouse button double click: Double clicking the right mouse button with Shift 
+   held down will force a stage movement to that position and acquire an image there.
 
 This provides a quick and simple way to move around for X Y. 
