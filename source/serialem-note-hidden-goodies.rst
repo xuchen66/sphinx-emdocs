@@ -521,9 +521,9 @@ variable "SEMargStrings". In this case, SEMargStrings has value of a string
 list [ "-1.", "-2.5", "0.1"]. We convert it into real floats so they can be
 given to the function. 
 
-.. _example_4:
+.. _example_6:
 
-Example 4 - Centering Feature by Right Double Click
+Example 6 - Centering Feature by Right Double Click
 ---------------------------------------------------
 
 SerialEM has various ways to control stage shift and image shift to get to a piont
