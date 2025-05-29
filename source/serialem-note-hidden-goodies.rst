@@ -537,7 +537,7 @@ interface. Information about it can only be found in the “Mouse and Keyboard C
 section of the help file (https://bio3d.colorado.edu/SerialEM/betaHlp/html/about_mouse.htm), 
 as shown below:
 
-.. code-block:: ruby
+.. code-block:: 
 
    Right mouse button double click: Double clicking the right mouse button at a point 
    in the display for buffer A, or for buffer B with a montage overview, acquires an image 
