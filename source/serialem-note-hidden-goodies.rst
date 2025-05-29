@@ -526,15 +526,15 @@ given to the function.
 Example 6 - Centering Feature by Right Double Click
 ---------------------------------------------------
 
-SerialEM has various ways to control stage shift and image shift to get to a piont
-already. However, they usually involve multiple actions from mouse and keyboard. 
-The newly added function to use Right Double Click is definitely a nice added-on. 
-Basically, if you right double click on a target from image in buffer A or 
-montage overview in buffer B, it will bring the target to the center of your display.
+SerialEM has various ways to control stage shift and image shift to reach a specific position. 
+However, these usually require multiple actions using the mouse and keyboard. The newly 
+added function that allows the use of a right double-click is a very convenient enhancement. 
+Essentially, if you right-double-click on a target in the image in buffer A or the montage 
+overview in buffer B, it will bring that point to the center of your display.
 
-This is fairly hidden, as there is script command or menu item from the interface. 
-As a special action, the information about this can only be found from "Mouse and Keyboard
-Controls" section of helpfile (https://bio3d.colorado.edu/SerialEM/betaHlp/html/about_mouse.htm),
+This feature is somewhat hidden, as there is no script command or menu item for it in the 
+interface. Information about it can only be found in the “Mouse and Keyboard Controls” 
+section of the help file (https://bio3d.colorado.edu/SerialEM/betaHlp/html/about_mouse.htm), 
 as shown below:
 
 .. code-block:: ruby
