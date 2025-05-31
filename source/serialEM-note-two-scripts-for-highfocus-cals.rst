@@ -33,40 +33,39 @@ use a scritps to add more intensity values. See below.
 
    ScriptName CalibrateHighFocusMag
 
-    # chen.xu@umassmed.edu 
-    # April 28, 2024
-    
-    # after manually calibrate for one intensity (requires drawing lines) 
-    # using this script to continue for all slightly higher intensities
-    # more automated way (without needing drawn lines). 
-    # Note - only need to calibrate this for one brightest spot size for LD.
-    
-    AlignBuf = O                  # set this accordingly
-    defs = { -50 -100 -150 -175 -200 -225 -250 -275 -300 -325 }
-    noDefs = $#defs
-
-    # get initial C2%
-    ReportPercentC2
-    iniC2 = $repVal1
-
-    Loop 50
-       IncPercentC2 10             # increase 10%
-       ReportPercentC2 
-       If $repVal1 > 99.0
-          SetPercentC2 $iniC2
-          Exit Intensity exceeds 99.0, quit.
-       Endif 
-
-       T
-       Copy A $AlignBuf
-       
-       Loop $noDefs ind
-          ChangeFocus $defs[$ind]
-          T
-          CalibrateHighFocusMag     1   # skip the [YES] confirmation
-          ChangeFocus -1 * $defs[$ind]
-       EndLoop
-    EndLoop 
+   # chen.xu@umassmed.edu 
+   # April 28, 2024
+   
+   # after manually calibrate for one intensity (requires drawing lines) 
+   # using this script to continue for all slightly higher intensities
+   # more automated way (without needing drawn lines). 
+   # Note - only need to calibrate this for one brightest spot size for LD.
+   
+   AlignBuf = O                  # set this accordingly
+   defs = { -50 -100 -150 -175 -200 -225 -250 -275 -300 -325 }
+   
+   # get initial C2%
+   ReportPercentC2
+   iniC2 = $repVal1
+   
+   Loop 50
+      IncPercentC2 10             # increase 10%
+      ReportPercentC2 
+      If $repVal1 > 99.0
+      SetPercentC2 $iniC2
+      Exit Intensity exceeds 99.0, quit.
+      Endif 
+      
+      T
+      Copy A $AlignBuf
+      
+      Loop $#defs ind
+         ChangeFocus $defs[$ind]
+         T
+         CalibrateHighFocusMag     1   # skip the [YES] confirmation
+         ChangeFocus -1 * $defs[$ind]
+      EndLoop
+   EndLoop 
   
 .. _highfocus-mag:
 
@@ -86,7 +85,6 @@ a lot easier.
 
    AlignBuf = O            # set this accordingly
    defs = { -50 -100 -150 -175 -200 -225 -250 -275 -300 -325 }
-   noDefs = $#defs
 
    # get initial C2%
    ReportPercentC2
@@ -100,7 +98,7 @@ a lot easier.
          Exit Intensity exceeds 99.0, quit.
       Endif 
    
-      Loop $noDefs ind
+      Loop $#defs ind
          ChangeFocus $defs[$ind]
          CalibrateHighFocusIS $defs[$ind]
          ChangeFocus -1 * $defs[$ind]
