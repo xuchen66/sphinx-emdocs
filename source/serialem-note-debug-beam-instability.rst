@@ -102,6 +102,7 @@ The script we used is fairly simple, as below:
       echo ---------------
   EndLoop 
 
+
 I also used array function to handle the data more conveniently. In the end 
 or each run, I got some data points as below.
 
