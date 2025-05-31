@@ -89,7 +89,7 @@ The script we used is fairly simple, as below:
   
           X[$ind] = $repVal1 
           Y[$ind] = $repVal2
-  	      even = $ind * 2
+          even = $ind * 2
           odd = $even - 1
           XY[$odd] = $repVal1
           XY[$even] = $repVal2
