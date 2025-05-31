@@ -54,48 +54,48 @@ We repeated this process four times and plotted the data to visualize the beam m
 The script we used is fairly simple, as below:
 
 .. code-block:: python
-   :caption: script TestBeamStability
+  :caption: script TestBeamStability
 
-   ScriptName TestBeamStability
+  ScriptName TestBeamStability
 
-   echo V=1250 mP R=36000 nP V-F-R-V Similar P1
-   echo ---------------------------------------- 
+  echo V=1250 mP R=36000 nP V-F-R-V Similar P1   
+  echo ---------------------------------------- 
   
-   Loop 4
+    Loop 4
       
-       cycle = 50
-       len = $cycle * 2
+      cycle = 50
+      len = $cycle * 2
        
-       NewArray X 0 $cycle
-       NewArray Y 0 $cycle
-       NewArray XY 0 $len
+      NewArray X 0 $cycle
+      NewArray Y 0 $cycle
+      NewArray XY 0 $len
    
-       #GoToLowDoseArea V 
-       #Delay 2 s 
+      #GoToLowDoseArea V 
+      #Delay 2 s 
   
-       R
-       CenterBeamFromImage 
+      R
+      CenterBeamFromImage 
       
-       Loop $cycle ind
-           echo ind = $ind 
-         	 ResetClock 
+      Loop $cycle ind
+          echo ind = $ind 
+          ResetClock 
           
-           GoToLowDoseArea V
-           Delay 0 s
-           #GoToLowDoseArea F
-           R
-           Delay 0 s
-           MeasureBeamPosition 
+          GoToLowDoseArea V
+          Delay 0 s
+          #GoToLowDoseArea F
+          R
+          Delay 0 s
+          MeasureBeamPosition 
   
-           X[$ind] = $repVal1 
-           Y[$ind] = $repVal2
-  	       even = $ind * 2
-           odd = $even - 1
-           XY[$odd] = $repVal1
-           XY[$even] = $repVal2
-           ReportClock 
-        EndLoop 
-      
+          X[$ind] = $repVal1 
+          Y[$ind] = $repVal2
+  	      even = $ind * 2
+          odd = $even - 1
+          XY[$odd] = $repVal1
+          XY[$even] = $repVal2
+          ReportClock 
+        EndLoop
+
       Echo X = $X
       Echo Y = $Y
       Echo XY = $XY
