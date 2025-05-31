@@ -75,6 +75,7 @@ SerialEM Notes
    serialem-note-work-with-hex-grid
    serialem-note-add-mesh-polygon
    serialem-note-understanding-transforms-in-multigrid
+   serialem-note-debug-beam-instability
 Index
 *****
 
