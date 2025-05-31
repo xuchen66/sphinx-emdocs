@@ -138,6 +138,9 @@ from Talos and Glacios.
 ..   :width: 833 px
    :scale: 50 %
 
-It seems the beam can settle after some time. However, it the cycle stopped for 
-some time, either staying in LD_V or LD_R, it will drift if cycling again. It seems 
-due to dynamic equilibrium. The root cause should be the thermo change in lenses and coils. 
+It seems that the beam stabilizes after some time. However, if the cycle 
+is paused for a while—whether in LD_V or LD_R—the beam tends to drift 
+when the cycle resumes. This behavior appears to be related to a dynamic 
+equilibrium, likely caused by thermal changes in the lenses and coils. 
+While the Glacios appears to be marginally more stable, its behavior 
+remains largely comparable to that of the Talos.
