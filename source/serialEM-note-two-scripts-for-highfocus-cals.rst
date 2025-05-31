@@ -6,19 +6,19 @@ SerialEM Note: Two Scripts for High-Focus Calibrations
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: 2024-06-09
-:Last_Updated: 2025-05-24
+:Last_Updated: 2025-05-31
 
 .. glossary::
 
    Abstract
-      It is straightforward to do high-focus calibrations for both
-      Mag and Image Shift. However, it becomes annoying when you have to 
-      do this for multiple intensity values. Luckily, there are also two
-      scripting commands to perform these two calibrations. With simple scripting,
-      it makes the calibrating a lot easier and more automated. 
+      It’s straightforward to perform high-focus calibrations for both 
+      Magnification and Image Shift. However, it can become tedious when 
+      you need to repeat the process for multiple intensity values. Fortunately, 
+      there are two scripting commands that automate these calibrations. With 
+      simple scripting, the process becomes much easier and more efficient.
 
-      In this note, I show you the two scripts I came up. I found them
-      helpful.
+      In this note, I’ll share the two scripts I developed, which I’ve found to 
+      be quite helpful.
 
 .. _highfocus-mag:
 
@@ -43,6 +43,7 @@ use a scritps to add more intensity values. See below.
     
     AlignBuf = O                  # set this accordingly
     defs = { -50 -100 -150 -175 -200 -225 -250 -275 -300 -325 }
+    noDefs = $#defs
 
     # get initial C2%
     ReportPercentC2
@@ -59,7 +60,7 @@ use a scritps to add more intensity values. See below.
        T
        Copy A $AlignBuf
        
-       Loop $#defs ind
+       Loop $noDefs ind
           ChangeFocus $defs[$ind]
           T
           CalibrateHighFocusMag     1   # skip the [YES] confirmation
@@ -85,7 +86,8 @@ a lot easier.
 
    AlignBuf = O            # set this accordingly
    defs = { -50 -100 -150 -175 -200 -225 -250 -275 -300 -325 }
-   
+   noDefs = $#defs
+
    # get initial C2%
    ReportPercentC2
    iniC2 = $repVal1
@@ -98,7 +100,7 @@ a lot easier.
          Exit Intensity exceeds 99.0, quit.
       Endif 
    
-      Loop $#defs ind
+      Loop $noDefs ind
          ChangeFocus $defs[$ind]
          CalibrateHighFocusIS $defs[$ind]
          ChangeFocus -1 * $defs[$ind]
