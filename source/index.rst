@@ -76,6 +76,7 @@ SerialEM Notes
    serialem-note-add-mesh-polygon
    serialem-note-understanding-transforms-in-multigrid
    serialem-note-debug-beam-instability
+   serialem-note-alter-way-centerhole
 Index
 *****
 
