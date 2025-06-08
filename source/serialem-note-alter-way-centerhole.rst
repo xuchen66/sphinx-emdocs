@@ -77,7 +77,7 @@ This method can also be applied within the StepTo & Adjust dialog to
 refine Image Shift (IS) vectors for a multiple-exposure pattern. 
 See the image below:
 
-**Fig.2 Centering Hole to refine IS vectors **
+**Fig.2 Centering Hole to refine IS vectors**
 
 .. image:: ../images/stepto-center-hole-method.png
 ..   :height: 361 px
