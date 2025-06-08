@@ -11,16 +11,16 @@ SerialEM Note: An Alternative Way to Center Hole
 .. glossary::
 
    Abstract
-      If current stage position is a little off from a hole center and you
-      want to center to it, one common way is to use a hole template to align
-      to. 
+      If the current stage position is slightly off from the center of a 
+      hole and you want to center it, a common approach is to use a hole 
+      template for alignment.
 
-      However, there is an alternative way for this. SerialEM hole finding 
-      routine is powerful and robust. One can simply detect hole positions
-      and center to the closest one, without using "AutoAlign". This is done
-      conveniently with a script command. 
+      However, there is an alternative method. The hole-finding routine in 
+      SerialEM is both powerful and robust. You can detect hole positions 
+      and center on the closest one without using "AutoAlign." This can be 
+      done easily with a script command.
 
-      In this note, I share how I use the function with two examples. 
+      In this note, I will share how I use this function, along with two examples.
 
 .. _two_examples:
 
@@ -34,8 +34,9 @@ Two Examples
 ..   :width: 833 px
    :scale: 50 %
 
-The image on the left is a typical LD_View image on 2250X, uP mode, on Krios.
-The center of the hole with green marker is where I want, automatically. 
+The image on the left shows a typical LD_View image at 2250× magnification 
+in uP mode on the Krios. The center of the hole marked with a green marker 
+indicates the desired position for automatic centering.
 
 In this case, I can simple run a script command as below:
 
@@ -43,33 +44,38 @@ In this case, I can simple run a script command as below:
 
   FindAndCenterOneHole 0 1.3 0 2
 
-It results in the hole being centered, as shown in right. Marker is for
-indication here, the procedure doesn't use it. The procedure will center the
-closest hole using Image Shift. 
+This results in the hole being centered, as shown on the right. The green 
+marker is for visual indication only—the procedure itself does not rely 
+on it. Instead, it centers the nearest hole using Image Shift.
 
-The command uses Hole Finder function. The prerequisite is that you already
-have run the hole finder from the dialog on this grid, In this command, 1.3 is
-hole diameter; all the other parameters are taken from the dialog windows
-internally. This does work if the area only has a single hole, but doesn't
-need to be. For an area with a lot of holes, it runs slightly slower. For a
-single hole, it only takes roughly 0.1 seconds. 
+The command utilizes the Hole Finder function. A prerequisite is that you 
+have already run the Hole Finder from the dialog window on this grid. In 
+this command, 1.3 specifies the hole diameter; all other parameters are 
+inherited internally from the dialog settings.
 
-As you can see, this method can be used to center a hole as an alternative
-method to hole template matching. In a real data collection or screening,
-you can use two lines to precisely go to each of many holes.
+While this method works even if there is only one hole in the area, it's not 
+limited to such cases. When applied to regions with many holes, it may run 
+slightly slower—but even then, the delay is minimal. For a single hole, the 
+operation typically takes around 0.1 seconds.
+
+As demonstrated, this approach provides an effective alternative to hole 
+template matching. During actual data collection or screening, you can use 
+just two lines of script to accurately center on each hole across the grid.
 
 .. code-block:: ruby
 
   RealignToNavItem 0 
   FindAndCenterOneHole 0 1.3 0 2
 
-The command directly uses the last image from Realign routine; there is
-no need to take another LD_V shot. This seems working magically, if you
-don't check both "include" and "exclude" to hide the found locations of
-holes.
+The command directly uses the last image from the Realign routine, so 
+there is no need to take another LD_View shot. It may seem almost 
+magical—just make sure not to check both the "Include" and "Exclude" 
+options in Hole Finder dialog, as doing so will hide the detected 
+hole positions.
 
-The method can also be applied to "StepTo & Adjust" dialog to refine the
-IS vectors for multiple exposure pattern. See the image below:
+This method can also be applied within the StepTo & Adjust dialog to 
+refine Image Shift (IS) vectors for a multiple-exposure pattern. 
+See the image below:
 
 **Fig.2 Centering Hole to refine IS vectors **
 
@@ -78,12 +84,16 @@ IS vectors for multiple exposure pattern. See the image below:
 ..   :width: 833 px
    :scale: 50 %
 
-As you can see, I used 15kX as middle mag to refine the IS vectors. At this
-mag, a single hole is included in the view. With Automatic adjustment turn
-on, it will go to each of the corner holes, center it and set the Image
-Shift value. My experience is that the determination at this mag is close
-enough for final LD_R mag at like 130kX etc., but you easily refine it with
-edge of hole as landmark feature after you run auto-adjustment as lower mag. 
+As shown, I used 15kX as the intermediate magnification to refine the 
+Image Shift (IS) vectors. At this magnification, a single hole fits 
+within the field of view. With Automatic Adjustment turned on, the system 
+moves to each corner hole, centers it, and sets the corresponding IS value.
 
-As of June 8, 2025, this command **FindAndCenterOneHole** is in 4.2 and 4.3 
-testing with bug fixes. It was added on initially in 2024.   
+In my experience, the IS determination at this magnification is sufficiently 
+accurate for use at high magnifications such as LD_R at 130kX. However, 
+you can further refine it by using the hole edge as a landmark after running 
+the auto-adjustment at the lower magnification (15kX here).
+
+As of June 8, 2025, the **FindAndCenterOneHole** command is available in versions 
+4.2 and 4.3 testing branches, with a few bug fixes. It was initially introduced 
+in 2024.
