@@ -40,8 +40,8 @@ The center of the hole with green marker is where I want, automatically.
 In this case, I can simple run a script command as below:
 
 .. code-block:: ruby
-  FindAndCenterOneHole 0 1.3 0 2
 
+  FindAndCenterOneHole 0 1.3 0 2
 
 It results in the hole being centered, as shown in right. Marker is for
 indication here, the procedure doesn't use it. The procedure will center the
@@ -59,9 +59,9 @@ method to hole template matching. In a real data collection or screening,
 you can use two lines to precisely go to each of many holes.
 
 .. code-block:: ruby
+
   RealignToNavItem 0 
   FindAndCenterOneHole 0 1.3 0 2
-
 
 The command directly uses the last image from Realign routine; there is
 no need to take another LD_V shot. This seems working magically, if you
