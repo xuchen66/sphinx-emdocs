@@ -17,8 +17,8 @@ SerialEM Note: An Alternative Way to Center Hole
 
       However, there is an alternative method. The hole-finding routine in 
       SerialEM is both powerful and robust. You can detect hole positions 
-      and center on the closest one without using "AutoAlign." This can be 
-      done easily with a script command.
+      and center on the closest one without using **AutoAlign** and a reference
+      image. This can be done easily with a script command.
 
       In this note, I will share how I use this function, along with two examples.
 
@@ -73,7 +73,7 @@ magical—just make sure not to check both the "Include" and "Exclude"
 options in Hole Finder dialog, as doing so will hide the detected 
 hole positions.
 
-This method can also be applied within the StepTo & Adjust dialog to 
+This method can also be applied within the **StepTo & Adjust** dialog to 
 refine Image Shift (IS) vectors for a multiple-exposure pattern. 
 See the image below:
 
