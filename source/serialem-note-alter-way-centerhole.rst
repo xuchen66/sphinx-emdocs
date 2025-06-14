@@ -6,7 +6,7 @@ SerialEM Note: An Alternative Way to Center Hole
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: June 8, 2025
-:Last_Updated: June 8, 2025
+:Last_Updated: June 14, 2025
 
 .. glossary::
 
@@ -66,12 +66,14 @@ just two lines of script to accurately center on each hole across the grid.
 
   RealignToNavItem 0 
   FindAndCenterOneHole 0 1.3 0 2
+  ClearHoleFinder
 
 The command directly uses the last image from the Realign routine, so 
 there is no need to take another LD_View shot. It may seem almost 
 magical—just make sure not to check both the "Include" and "Exclude" 
 options in Hole Finder dialog, as doing so will hide the detected 
-hole positions.
+hole positions or you add a line to clear hole finder results, as shown
+in script above.
 
 This method can also be applied within the **StepTo & Adjust** dialog to 
 refine Image Shift (IS) vectors for a multiple-exposure pattern. 
