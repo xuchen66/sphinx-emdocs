@@ -149,7 +149,7 @@ This task can be accomplished by a script like below:
   ReportImageShift ISX1 ISY1
 
   ## shift back, twice distance to hit the opposite hole
-  ImageShiftByMicrons ( -2 * $ISX ) ( -2 * $ISY )
+  ImageShiftByUnits ( -2 * $ISX ) ( -2 * $ISY )
 
   ## center to the opposite corner hole of 4
   V
