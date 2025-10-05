@@ -107,7 +107,7 @@ When multishot pattern with even number like 2 x 2, 4 x 4, etc. are used,
 precsiely centering to the center of 4-hole pattern is challenging, as there is no 
 center hole to use. How to center to this invisible middle hole? 
 
-**Fig.3 Centering Hole to refine IS vectors**
+**Fig.3 Centering to invisible hole of middle of 4**
 
 .. image:: ../images/middle-of-4-holes.png
 ..   :height: 361 px
