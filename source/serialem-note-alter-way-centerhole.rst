@@ -1,12 +1,12 @@
 .. _alternative_center_hole:
 
-SerialEM Note: An Alternative Way to Center Hole
-================================================
+SerialEM Note: An Alternative Way to Center a Hole
+==================================================
   
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: June 8, 2025
-:Last_Updated: July 4, 2025
+:Last_Updated: Oct. 5, 2025
 
 .. glossary::
 
@@ -99,3 +99,76 @@ the auto-adjustment at the lower magnification (15kX here).
 As of June 8, 2025, the **FindAndCenterOneHole** command is available in versions 
 4.2 and 4.3 testing branches, with a few bug fixes. It was initially introduced 
 in 2024.
+
+To Center to the invisible hole in the middle of 4 holes 
+--------------------------------------------------------
+
+When multishot pattern with even number like 2 x 2, 4 x 4, etc. are used,
+precsiely centering to the center of 4-hole pattern is challenging, as there is no 
+center hole to use. How to center to this invisible middle hole? 
+
+**Fig.3 Centering Hole to refine IS vectors**
+
+.. image:: ../images/middle-of-4-holes.png
+..   :height: 361 px
+..   :width: 833 px
+   :scale: 50 %
+
+The task here is to go to center of the "invisible" hole in the middle of 
+4 holes, indicated by the green marker point. 
+
+Recent (23-Sept-2025) implemented command can help with this task. The command is 
+
+.. code-block:: ruby
+
+  ReportSmallestHoleShift 0
+
+Together with the center hole command described above
+
+.. code-block:: ruby
+
+  FindAndCenterOneHole 0 1.3 0 2
+
+This task can be accomplished by a script like below:
+
+.. code-block:: ruby
+
+  ScriptName ToMiddle4Holes
+
+  ## obtain multishot pattern, if not available yet.
+  #FineHoles 0
+  #UseHoleVectorsForMulti 0
+
+  ## Shift to closest corner hole of the multishot pattern 
+  ReportSmallestHoleShift 0
+  ISX = $repVal1
+  ISY = $repVal2
+  ISXr = -1 * $ISX
+  ISYr = -1 * $ISY
+  ImageShiftByMicrons $ISX $ISY
+
+  ## center the corner hole
+  V
+  FindAndCenterOneHole 0 1.4 0 2
+  ClearHoleFinder
+  ReportImageShift ISX1 ISY1
+
+  ## shift back, twice to hit the opposite hole
+  ImageShiftByMicrons $ISXr $ISYr
+  ImageShiftByMicrons $ISXr $ISYr
+
+  ## center to the opposite corner hole
+  V
+  FindAndCenterOneHole 0 1.4 0 2
+  ClearHoleFinder
+  ReportImageShift ISX2 ISY2
+
+  ## obtain middle IS values and shift to there
+  finalISX = ( $ISX1 + $ISX2 ) / 2
+  finalISY = ( $ISY1 + $ISY2 ) / 2
+  SetImageShift $finalISX $finalISY
+  
+The idea is to utilize the multishot pattern available, shift to one of the corners,
+center it and then shift to opposite corner hole and center it again. Thus, the middle
+of the two corner holes can be obtained and it shifts to there. Only image shift (IS)
+is invloved here. 
