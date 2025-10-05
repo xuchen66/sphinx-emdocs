@@ -140,34 +140,30 @@ This task can be accomplished by a script like below:
   #UseHoleVectorsForMulti 0
 
   ## Shift to closest corner hole of the multishot pattern 
-  ReportSmallestHoleShift 0
-  ISX = $repVal1
-  ISY = $repVal2
-  ISXr = -1 * $ISX
-  ISYr = -1 * $ISY
+  ReportSmallestHoleShift 0 ISX ISY
   ImageShiftByMicrons $ISX $ISY
 
-  ## center the corner hole
+  ## center the corner hole of 4
   V
   FindAndCenterOneHole 0 1.4 0 2
-  ClearHoleFinder
   ReportImageShift ISX1 ISY1
 
-  ## shift back, twice to hit the opposite hole
-  ImageShiftByMicrons $ISXr $ISYr
-  ImageShiftByMicrons $ISXr $ISYr
+  ## shift back, twice distance to hit the opposite hole
+  ImageShiftByMicrons ( -2 * $ISX ) ( -2 * $ISY )
 
-  ## center to the opposite corner hole
+  ## center to the opposite corner hole of 4
   V
   FindAndCenterOneHole 0 1.4 0 2
-  ClearHoleFinder
   ReportImageShift ISX2 ISY2
 
   ## obtain middle IS values and shift to there
   finalISX = ( $ISX1 + $ISX2 ) / 2
   finalISY = ( $ISY1 + $ISY2 ) / 2
   SetImageShift $finalISX $finalISY
-  
+
+  ClearHoleFinder
+  V
+
 The idea is to utilize the multishot pattern available, shift to one of the corners,
 center it and then shift to opposite corner hole and center it again. Thus, the middle
 of the two corner holes can be obtained and it shifts to there. Only image shift (IS)
