@@ -141,7 +141,7 @@ This task can be accomplished by a script like below:
 
   ## Shift to closest corner hole of the multishot pattern 
   ReportSmallestHoleShift 0 ISX ISY
-  ImageShiftByMicrons $ISX $ISY
+  ImageShiftByUnits $ISX $ISY
 
   ## center the corner hole of 4
   V
