@@ -6,7 +6,7 @@ SerialEM Note: An Alternative Way to Center a Hole
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: June 8, 2025
-:Last_Updated: Oct. 5, 2025
+:Last_Updated: Oct. 23, 2025
 
 .. glossary::
 
@@ -139,13 +139,16 @@ This task can be accomplished by a script like below:
   #FineHoles 0
   #UseHoleVectorsForMulti 0
 
+  ## hole size - 0: from stored in map or actual size (1.89)
+  holeSize = 0  #1.89
+
   ## Shift to closest corner hole of the multishot pattern 
   ReportSmallestHoleShift 0 ISX ISY
   ImageShiftByUnits $ISX $ISY
 
   ## center the corner hole of 4
   V
-  FindAndCenterOneHole 0 1.4 0 2
+  FindAndCenterOneHole 0 $holeSize 0 2
   ReportImageShift ISX1 ISY1
 
   ## shift back, twice distance to hit the opposite hole
@@ -153,7 +156,7 @@ This task can be accomplished by a script like below:
 
   ## center to the opposite corner hole of 4
   V
-  FindAndCenterOneHole 0 1.4 0 2
+  FindAndCenterOneHole 0 $holeSize 0 2
   ReportImageShift ISX2 ISY2
 
   ## obtain middle IS values and shift to there
