@@ -58,7 +58,7 @@ limited to such cases. When applied to regions with many holes, it may run
 slightly slower—but even then, the delay is minimal. For a single hole, the 
 operation typically takes around 0.1 seconds.
 
-This can be easily extended to a more general usage, as shown below script:
+This can be easily expanded to a more general usage, as shown in below script:
 
 .. code-block:: ruby
 
@@ -79,8 +79,8 @@ This can be easily extended to a more general usage, as shown below script:
     V
 
 That is, when there is marker present in the image in current buffer,
-the script above will center the closest hole in the middle of the image. If there 
-is a marker present, it will center the hole closet to the marker point. This 
+the script above will center the closest hole to the 0,0 of the image. If there 
+is a marker present, it will center the hole closest to the marker point. This 
 can very useful to move around to holes, for example in quick screening purpose.  
 
 As demonstrated, this approach provides an effective alternative to hole 
