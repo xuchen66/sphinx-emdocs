@@ -6,7 +6,7 @@ SerialEM Note: An Alternative Way to Center a Hole
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: June 8, 2025
-:Last_Updated: Oct. 31, 2025
+:Last_Updated: Nov. 1, 2025
 
 .. glossary::
 
@@ -44,9 +44,10 @@ In this case, I can simple run a script command as below:
 
   FindAndCenterOneHole 0 1.3 0 2
 
-This results in the hole being centered, as shown on the right. The green 
-marker is for visual indication only—the procedure itself does not rely 
-on it. Instead, it centers the nearest hole using Image Shift.
+This will center the hole that is closest to the center of camera, as shown 
+on the right. The green marker is for visual indication only—the procedure 
+itself does not rely on it. Instead, it centers the nearest hole using Image 
+Shift.
 
 The command utilizes the Hole Finder function. A prerequisite is that you 
 have already run the Hole Finder from the dialog window on this grid. In 
@@ -67,9 +68,10 @@ This can be easily expanded to a more general usage, as shown in below script:
     holeSize = 2.0
     ImageMarkerPosition 0 X Y
     If $X == -1 AND $Y == -1        # no marker present      
-      echo -> No Marker present, center the closest hole!
+      echo >> No Marker presents, center the closest hole!
       FindAndCenterOneHole 0 $holeSize 0 2
     Else
+      echo >> Marker presents, center to that hole!
       MoveToMarker
       V
       FindAndCenterOneHole 0 $holeSize 0 2
@@ -78,12 +80,13 @@ This can be easily expanded to a more general usage, as shown in below script:
     ClearHoleFinder
     V
 
-That is, when there is marker present in the image in current buffer,
+That is, when there is no marker present in the image in current buffer,
 the script above will center the closest hole to the 0,0 of the image. If there 
-is a marker present, it will center the hole closest to the marker point. This 
-can very useful to move around to holes, for example in quick screening purpose.  
+is a marker present, it will center the hole closest to the marker point. You don't 
+have to put marker exactly in the center of that hole. This can very useful to 
+move around to holes, for example, for a quick screening purpose. 
 
-As demonstrated, this approach provides an effective alternative to hole 
+As you can see, this approach provides an effective alternative to hole 
 template matching method. During actual data collection or screening, you can use 
 just two lines of script to accurately center on each hole across the grid.
 
