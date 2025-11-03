@@ -19,7 +19,7 @@ SerialEM Note: More About X,Y Positioning
       I have spent a lot of time thinking and testing about this. If you
       have better and different ideas, I'd love to hear from you. 
 
-      I added some for maining just using stage shift in Novemebe 2025.
+      I added some mainly for just using Stage Shift in Novemebe 2025.
       
 .. _script:
 
