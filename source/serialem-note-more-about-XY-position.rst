@@ -6,7 +6,7 @@ SerialEM Note: More About X,Y Positioning
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: Dec 12, 2019
-:Last-Updated: Nov 22, 2020
+:Last-Updated: Nov 03, 2025
 
 .. glossary::
 
@@ -18,7 +18,8 @@ SerialEM Note: More About X,Y Positioning
       
       I have spent a lot of time thinking and testing about this. If you
       have better and different ideas, I'd love to hear from you. 
-      
+
+      I added some for maining just using stage shift in Novemebe 2025.
       
 .. _script:
 
@@ -120,6 +121,38 @@ target right on again with image shift. The very last argument ``1`` means
 no trimming to any of the source image and reference image. This is needed
 for UltrAuFoil® Holey Gold Films grids which have very "dark" region of the
 film. 
+
+.. using_stage_shift:
+
+Just Using Stage Shift
+----------------------
+
+If you just like to use Stage Shift for X Y positioning, you can do it
+if your stage error is small, and your hole distance is not too small. 
+
+Here I came up a script to using stage shift and hole centering feature.
+The key for this one is that in case stage drifted a way after long 
+period of time or interrupted by cooling etc., we can first to "correct"
+the coordinates of the holes. Hopefully, it is less likely to move to 
+a wrong hole.
+
+.. code-block:: ruby
+
+   ScriptName StageGoTo
+
+   ReportNavItem
+      If $navAcqIndex == 1
+         RealignToNavItem 0
+         FindAndCenterOneHole 0 -1 0 2
+         ShiftItemsByAlignment
+         ShiftItemsByCurrentDiff 5.0
+      else
+         MoveToNavItem
+         V
+         FindAndCenterOneHole 0 -1 0 2
+         ShiftItemsByAlignment
+   Endif
+   ClearHoleFinder
 
 .. thoughts:
 
