@@ -132,25 +132,25 @@ if your stage error is small, and your hole distance is not too small.
 
 Here I came up a script to using stage shift and hole centering feature.
 The key for this one is that in case stage drifted a way after long 
-period of time or interrupted by cooling etc., we can first to "correct"
-the coordinates of the holes. Hopefully, it is less likely to move to 
-a wrong hole.
+period of time or interrupted by cooling etc., we can first "correct"
+the coordinates of the holes. Hopefully, this makes it less likely to 
+move to a wrong hole.
 
 .. code-block:: ruby
 
    ScriptName StageGoTo
 
    ReportNavItem
-      If $navAcqIndex == 1
-         RealignToNavItem 0
-         FindAndCenterOneHole 0 -1 0 2
-         ShiftItemsByAlignment
-         ShiftItemsByCurrentDiff 5.0
-      else
-         MoveToNavItem
-         V
-         FindAndCenterOneHole 0 -1 0 2
-         ShiftItemsByAlignment
+   If $navAcqIndex == 1
+      RealignToNavItem 0
+      FindAndCenterOneHole 0 -1 0 2
+      ShiftItemsByAlignment
+      ShiftItemsByCurrentDiff 5.0
+   else
+      MoveToNavItem
+      V
+      FindAndCenterOneHole 0 -1 0 2
+      ShiftItemsByAlignment
    Endif
    ClearHoleFinder
 
