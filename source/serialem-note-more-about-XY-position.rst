@@ -130,7 +130,7 @@ Just Using Stage Shift
 If you just like to use Stage Shift for X Y positioning, you can do it
 if your stage error is small, and your hole distance is not too small. 
 
-Here I came up a script to using stage shift and hole centering feature.
+Here I came up a script to use stage shift and hole centering feature.
 The key for this one is that in case stage drifted a way after long 
 period of time or interrupted by cooling etc., we can first "correct"
 the coordinates of the holes. Hopefully, this makes it less likely to 
