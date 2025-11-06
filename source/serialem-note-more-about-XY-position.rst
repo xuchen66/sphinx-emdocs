@@ -140,19 +140,34 @@ move to a wrong hole.
 
    ScriptName StageGoTo
 
+   ## define for cropping function
+   size = 5
+   buf = A 
+
+   ## main
    ReportNavItem
    If $navAcqIndex == 1
       RealignToNavItem 0
+      #Call Function $size $buf            # uncomment to crop 
       FindAndCenterOneHole 0 -1 0 2
       ShiftItemsByAlignment
       ShiftItemsByCurrentDiff 5.0
    else
       MoveToNavItem
       V
+      #Call Function $size $buf            # uncomment to crop
       FindAndCenterOneHole 0 -1 0 2
       ShiftItemsByAlignment
    Endif
    ClearHoleFinder
+
+   ## function to crop to subarea for cut time
+   Function CropCenterMicron 1 1
+      ImageProperties $buf X Y Bin Exp pixelSize
+      size =  $size / $pixelSize * 1000
+      size = ROUND $size 1
+      CropCenterToSize $buf $size $size
+   EndFunction
 
 .. thoughts:
 
