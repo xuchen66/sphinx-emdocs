@@ -51,7 +51,8 @@ Shift.
 
 The command utilizes the Hole Finder function. A prerequisite is that you 
 have already run the Hole Finder from the dialog window on this grid. In 
-this command, 1.3 specifies the hole diameter; all other parameters are 
+this command, 1.3 specifies the hole diameter, or -1 can be used for the value 
+stored in user setting file or 0 for stored in map; all other parameters are 
 inherited internally from the dialog settings.
 
 While this method works even if there is only one hole in the area, it's not 
