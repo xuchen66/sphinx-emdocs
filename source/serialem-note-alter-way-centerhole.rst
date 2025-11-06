@@ -72,6 +72,7 @@ This can be easily expanded to a more general usage, as shown in below script:
   ## marker popint. 
 
   ## define for cropping for speed up if too many holes
+  useCrop = 1   # 0 if not use crop
   buf = A       # A buffer
   size = 5      # 5 um
 
@@ -81,14 +82,17 @@ This can be easily expanded to a more general usage, as shown in below script:
 
   ImageMarkerPosition 0 X Y
   If $X == -1 AND $Y == -1        # no marker present      
-    echo >> No Marker presents, center the closest hole!
-    #CallFunction CropCenterMicron $size $buf    # uncomment to crop
+    If useCrop == 1
+      CallFunction CropCenterMicron $size $buf    # uncomment to crop
+    Endif
     FindAndCenterOneHole 0 $holeSize 0 2
   Else
     echo >> Marker presents, center to that hole!
     MoveToMarker
     V
-    #CallFunction CropCenterMicron $size $buf    # uncomment to crop
+    If useCrop == 1 
+      CallFunction CropCenterMicron $size $buf    # uncomment to crop
+    Endif
     FindAndCenterOneHole 0 $holeSize 0 2
   Endif
 
