@@ -57,43 +57,51 @@ inherited internally from the dialog settings.
 While this method works even if there is only one hole in the area, it's not 
 limited to such cases. When applied to regions with many holes, it may run 
 slightly slower—but even then, the delay is minimal. For a single hole, the 
-operation typically takes around 0.1 seconds.
+operation typically takes around 0.1 seconds. If the field of view contains 
+many holes, you can save time by cropping the center area, as shown in the 
+function in script below.
 
 This can be easily expanded to a more general usage, as shown in below script:
 
 .. code-block:: ruby
 
   ScriptName CenterHole
+  ## a script to quickly move to center of a hole. If no marker point,
+  ## it moves the hole that is closest to the center of the image. If there
+  ## is a marker, it will move to the center of the hole that cloest to 
+  ## marker popint. 
 
-    ## define for cropping for speed up if too many holes
-    buf = A       # A buffer
-    size = 5      # 5 um
+  ## define for cropping for speed up if too many holes
+  buf = A       # A buffer
+  size = 5      # 5 um
 
-    ## do it
-    holeSize = -1 # -1 (taken from setting), 0 (from stored in map), and actual size (e.g. 1.3)
-    ImageMarkerPosition 0 X Y
-    If $X == -1 AND $Y == -1        # no marker present      
-      echo >> No Marker presents, center the closest hole!
-      #CallFunction CropCenterMicron $size $buf    # uncomment to crop
-      FindAndCenterOneHole 0 $holeSize 0 2
-    Else
-      echo >> Marker presents, center to that hole!
-      MoveToMarker
-      V
-      #CallFunction CropCenterMicron $size $buf    # uncomment to crop
-      FindAndCenterOneHole 0 $holeSize 0 2
-    Endif
+  ## do it
+  # -1 (taken from setting), 0 (from stored in map), and actual size (e.g. 1.3)
+  holeSize = -1 
 
-    ClearHoleFinder
+  ImageMarkerPosition 0 X Y
+  If $X == -1 AND $Y == -1        # no marker present      
+    echo >> No Marker presents, center the closest hole!
+    #CallFunction CropCenterMicron $size $buf    # uncomment to crop
+    FindAndCenterOneHole 0 $holeSize 0 2
+  Else
+    echo >> Marker presents, center to that hole!
+    MoveToMarker
     V
+    #CallFunction CropCenterMicron $size $buf    # uncomment to crop
+    FindAndCenterOneHole 0 $holeSize 0 2
+  Endif
 
-    ##
-    Function CropCenterMicron 1 1
-      ImageProperties $buf X Y Bin Exp pixelSize
-      size =  $size / $pixelSize * 1000 
-      size = ROUND $size 1
-      CropCenterToSize $buf $size $size
-    EndFunction
+  ClearHoleFinder
+  V
+
+  ##
+  Function CropCenterMicron 1 1
+    ImageProperties $buf X Y Bin Exp pixelSize
+    size =  $size / $pixelSize * 1000 
+    size = ROUND $size 1
+    CropCenterToSize $buf $size $size
+  EndFunction
 
 That is, when there is no marker present in the image in current buffer,
 the script above will center the closest hole to the 0,0 of the image. If there 
@@ -182,8 +190,8 @@ This task can be accomplished by a script like below:
   #FineHoles 0
   #UseHoleVectorsForMulti 0
 
-  ## hole size - 0: from stored in map or actual size (1.89)
-  holeSize = 0  #1.89
+  ## hole size - 0: from map, -1: fromm setting or actual size (1.89)
+  holeSize = 0  
 
   ## Shift to closest corner hole of the multishot pattern 
   ReportSmallestHoleShift 0 ISX ISY
