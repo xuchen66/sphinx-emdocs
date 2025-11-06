@@ -6,7 +6,7 @@ SerialEM Note: An Alternative Way to Center a Hole
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: June 8, 2025
-:Last_Updated: Nov. 1, 2025
+:Last_Updated: Nov. 6, 2025
 
 .. glossary::
 
