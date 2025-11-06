@@ -6,7 +6,7 @@ SerialEM Note: More About X,Y Positioning
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: Dec 12, 2019
-:Last-Updated: Nov 03, 2025
+:Last-Updated: Nov 06, 2025
 
 .. glossary::
 
@@ -122,6 +122,16 @@ no trimming to any of the source image and reference image. This is needed
 for UltrAuFoil® Holey Gold Films grids which have very "dark" region of the
 film. 
 
+With the center hole functionality, the following script works well. 
+
+.. code-block:: ruby
+   :linenos:
+   :caption: X,Y positioning
+
+    RealignToNavItem 0
+    ResetImageShift 2
+    FindAndCenterOneHole 0 -1 0 2
+
 .. using_stage_shift:
 
 Just Using Stage Shift
@@ -148,14 +158,14 @@ move to a wrong hole.
    ReportNavItem
    If $navAcqIndex == 1
       RealignToNavItem 0
-      #Call Function $size $buf            # uncomment to crop 
+      #CallFunction $size $buf            # uncomment to crop 
       FindAndCenterOneHole 0 -1 0 2
       ShiftItemsByAlignment
       ShiftItemsByCurrentDiff 5.0
    else
       MoveToNavItem
       V
-      #Call Function $size $buf            # uncomment to crop
+      #CallFunction $size $buf            # uncomment to crop
       FindAndCenterOneHole 0 -1 0 2
       ShiftItemsByAlignment
    Endif
