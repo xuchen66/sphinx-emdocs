@@ -72,14 +72,14 @@ This can be easily expanded to a more general usage, as shown in below script:
   ## is a marker, it will move to the center of the hole that cloest to 
   ## marker popint. 
 
-  ## define for cropping for speed up if too many holes
+  ## define for cropping and hole size 
   useCrop = 1   # 0 if not use crop
   buf = A       # A buffer
   size = 5      # 5 um
 
-  ## do it
-  # -1 (taken from setting), 0 (from stored in map), and actual size (e.g. 1.3)
-  holeSize = -1 
+  holeSize = 0 # -1 from setting, 0 from map or actual diameter in microns.
+
+  ### not editing below ######################
 
   ImageMarkerPosition 0 X Y
   If $X == -1 AND $Y == -1        # no marker present      
