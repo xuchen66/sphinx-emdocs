@@ -149,12 +149,17 @@ move to a wrong hole.
 .. code-block:: ruby
 
    ScriptName StageGoTo
+   # script to mainly use Stage Shift to nav items. For the first item 
+   # in a new map, use Realign to correct the coordinates.
 
-   ## define for cropping function
+   ## define for cropping function & hole size
    useCrop = 1            # 0 if not use cropping
    size = 5
    buf = A 
 
+   holeSize = -1          # 0 from map or actual hile diameter
+
+   ### no editing below ################################
    ## main
    ReportNavItem
    If $navAcqIndex == 1
@@ -162,7 +167,7 @@ move to a wrong hole.
       If $useCrop == 1
          CallFunction CropCenterMicron $size $buf            # uncomment to crop 
       Endif
-      FindAndCenterOneHole 0 -1 0 2
+      FindAndCenterOneHole 0 $holeSize 0 2
       ShiftItemsByAlignment
       ShiftItemsByCurrentDiff 5.0
    else
@@ -171,7 +176,7 @@ move to a wrong hole.
       If $useCrop == 1 
          CallFunction CropCenterMicron $size $buf            # uncomment to crop
       Endif
-      FindAndCenterOneHole 0 -1 0 2
+      FindAndCenterOneHole 0 $holeSize 0 2
       ShiftItemsByAlignment
    Endif
    ClearHoleFinder
