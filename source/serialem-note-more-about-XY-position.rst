@@ -159,7 +159,7 @@ move to a wrong hole.
    ReportNavItem
    If $navAcqIndex == 1
       RealignToNavItem 0
-      If useCrop == 1
+      If $useCrop == 1
          CallFunction CropCenterMicron $size $buf            # uncomment to crop 
       Endif
       FindAndCenterOneHole 0 -1 0 2
@@ -168,7 +168,7 @@ move to a wrong hole.
    else
       MoveToNavItem
       V
-      If useCrop == 1 
+      If $useCrop == 1 
          CallFunction CropCenterMicron $size $buf            # uncomment to crop
       Endif
       FindAndCenterOneHole 0 -1 0 2
