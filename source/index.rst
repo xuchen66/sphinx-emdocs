@@ -55,6 +55,7 @@ SerialEM Notes
    serialEM-note-make-all-LMM-maps
    serialEM-note-setup-dummy
    serialEM-note-LD-mP-nP
+   serialem-note-more-about-XY-position
    serialEM-note-more-about-z-height
    serialEM-note-speed-speed-speed
    serialEM-note-tackle-coma
@@ -64,7 +65,6 @@ SerialEM Notes
    serialEM-note-template-matching
    serialEM-note-refineZLP-on-Aufoil-grid
    serialEM-note-flexible-timer
-   serialem-note-more-about-XY-position
    fasttomo
    serialem-note-hidden-goodies
    serialem-note-control-without-scripting
