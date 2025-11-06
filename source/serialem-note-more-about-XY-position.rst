@@ -151,6 +151,7 @@ move to a wrong hole.
    ScriptName StageGoTo
 
    ## define for cropping function
+   useCrop = 1            # 0 if not use cropping
    size = 5
    buf = A 
 
@@ -158,14 +159,18 @@ move to a wrong hole.
    ReportNavItem
    If $navAcqIndex == 1
       RealignToNavItem 0
-      #CallFunction CropCenterMicron $size $buf            # uncomment to crop 
+      If useCrop == 1
+         CallFunction CropCenterMicron $size $buf            # uncomment to crop 
+      Endif
       FindAndCenterOneHole 0 -1 0 2
       ShiftItemsByAlignment
       ShiftItemsByCurrentDiff 5.0
    else
       MoveToNavItem
       V
-      #CallFunction CropCenterMicron $size $buf            # uncomment to crop
+      If useCrop == 1 
+         CallFunction CropCenterMicron $size $buf            # uncomment to crop
+      Endif
       FindAndCenterOneHole 0 -1 0 2
       ShiftItemsByAlignment
    Endif
