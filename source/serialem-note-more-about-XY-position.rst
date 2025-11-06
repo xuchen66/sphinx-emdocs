@@ -126,7 +126,7 @@ With the center hole functionality, the following script works well.
 
 .. code-block:: ruby
    :linenos:
-   :caption: X,Y positioning
+   :caption: X,Y positioning using hole centering
 
     RealignToNavItem 0
     ResetImageShift 2
@@ -158,14 +158,14 @@ move to a wrong hole.
    ReportNavItem
    If $navAcqIndex == 1
       RealignToNavItem 0
-      #CallFunction $size $buf            # uncomment to crop 
+      #CallFunction CropCenterMicron $size $buf            # uncomment to crop 
       FindAndCenterOneHole 0 -1 0 2
       ShiftItemsByAlignment
       ShiftItemsByCurrentDiff 5.0
    else
       MoveToNavItem
       V
-      #CallFunction $size $buf            # uncomment to crop
+      #CallFunction CropCenterMicron $size $buf            # uncomment to crop
       FindAndCenterOneHole 0 -1 0 2
       ShiftItemsByAlignment
    Endif
