@@ -82,19 +82,17 @@ This can be easily expanded to a more general usage, as shown in below script:
 
   ImageMarkerPosition 0 X Y
   If $X == -1 AND $Y == -1        # no marker present      
-    If useCrop == 1
+    If $useCrop == 1
       CallFunction CropCenterMicron $size $buf    # uncomment to crop
     Endif
-    FindAndCenterOneHole 0 $holeSize 0 2
   Else
-    echo >> Marker presents, center to that hole!
     MoveToMarker
     V
-    If useCrop == 1 
+    If $useCrop == 1 
       CallFunction CropCenterMicron $size $buf    # uncomment to crop
     Endif
-    FindAndCenterOneHole 0 $holeSize 0 2
   Endif
+  FindAndCenterOneHole 0 $holeSize 0 2
 
   ClearHoleFinder
   V
