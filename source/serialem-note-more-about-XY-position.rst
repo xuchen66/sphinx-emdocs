@@ -6,7 +6,7 @@ SerialEM Note: More About X,Y Positioning
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date-Created: Dec 12, 2019
-:Last-Updated: Nov 06, 2025
+:Last-Updated: Nov 07, 2025
 
 .. glossary::
 
@@ -165,7 +165,7 @@ move to a wrong hole.
    If $navAcqIndex == 1
       RealignToNavItem 0
       If $useCrop == 1
-         CallFunction CropCenterMicron $size $buf            # uncomment to crop 
+         CallFunction CropCenterMicron $size $buf            
       Endif
       FindAndCenterOneHole 0 $holeSize 0 2
       ShiftItemsByAlignment
@@ -174,7 +174,7 @@ move to a wrong hole.
       MoveToNavItem
       V
       If $useCrop == 1 
-         CallFunction CropCenterMicron $size $buf            # uncomment to crop
+         CallFunction CropCenterMicron $size $buf            
       Endif
       FindAndCenterOneHole 0 $holeSize 0 2
       ShiftItemsByAlignment
