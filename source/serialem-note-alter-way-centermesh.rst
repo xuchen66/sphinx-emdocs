@@ -53,7 +53,7 @@ The script is fiarly simple as shown below:
   CropCenterToSize A 2000 2000      
   
   # get current stage pposition
-  ReportStageXYZ X Y
+  ReportStageXYZ X0 Y0
   
   # Contour
   AutoContourGridSquares A 2 0.5 0.4
