@@ -47,8 +47,10 @@ The script is fiarly simple as shown below:
   ScriptName MoveToMesh
   # script to draw mesh polygon and most to closest one
   
-  # Crop to smaller area 
-  CropCenterToSize A 2000 2000
+  # Assume buffer A has an LM image, crop to smaller area
+  # to save time. 
+  #Search          
+  CropCenterToSize A 2000 2000      
   
   # get current stage pposition
   ReportStageXYZ X Y
@@ -65,10 +67,9 @@ The script is fiarly simple as shown below:
   MakePolygonsAtSquares 2553 3175 39.3 0.91 696.9 
   ReportOtherItem -1
   Index1 = $NavIndex
-  
+
+  # how many meshes found and made into nav items
   len = $Index1 - $Index0
-  
-  #Index = $index0
   
   # define arrays for distance and index
   NewArray DIS -1 $len
@@ -109,7 +110,5 @@ The script is fiarly simple as shown below:
      DeleteNavigatorItem -1
   EndLoop 
 
-  # Take a look
+  # Take a look 
   Search
-
-
