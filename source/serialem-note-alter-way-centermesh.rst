@@ -60,12 +60,12 @@ The Script
 ----------
 
 For centering a hole, there is a script command "FindAndCenterOneHole".  There is no similar command for 
-mesh yet. However, this can be accomplished using scripting. The script, as I call it **FindAndCenrterOneMesh** 
+mesh yet. However, this can be accomplished using scripting. The script, as I call it **FindAndCenterOneMesh** 
 is fairly simple as shown below:
 
 .. code-block:: ruby
 
-  ScriptName FindAndCenrterOneMesh
+  ScriptName FindAndCenterOneMesh
   # script to draw mesh polygon and move to closest one
   
   # Assume buffer A has an LM image, crop to smaller area
