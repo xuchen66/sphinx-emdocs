@@ -54,11 +54,18 @@ The concept is simple:
 #. Go through each navigation item to determine which one is closest to the current stage position.
 #. Move the stage to that item. 
 
-The script is fiarly simple as shown below:
+.. _the_script:
+
+The Script
+----------
+
+For centering a hole, there is a script command "FindAndCenterOneHole".  There is no similar command for 
+mesh yet. However, this can be accomplished using scripting. The script, as I call it **FindAndCenrterOneMesh** 
+is fairly simple as shown below:
 
 .. code-block:: ruby
 
-  ScriptName MoveToMesh
+  ScriptName FindAndCenrterOneMesh
   # script to draw mesh polygon and move to closest one
   
   # Assume buffer A has an LM image, crop to smaller area
