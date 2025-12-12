@@ -11,17 +11,23 @@ SerialEM Note: An Alternative Way to Center a Mesh in LM
 .. glossary::
 
    Abstract
-      When we make MMM maps, sometimes, they are not centered very well.
-      If you have ever wondered if this is due to mesh position in LM mag not being
-      centered well, for example, due to stage error, then you want to make sure you 
-      fix that first. Of course, you could use the most powerful Realign routine to 
-      do that. In order to do that, most likely you will have to change property 
-      "RealignItemMaxLMField" to a larger value than default, at least temporarily.
-      You perhaps also need to change C2 aperture back to larger size which was used for 
-      initial LMM mapping. 
+      When we generate MMM maps, they are sometimes not well centered. 
+      If you have ever wondered whether this is caused by the mesh position 
+      in LM magnification being off-center—for example, due to stage error—then 
+      you should make sure to correct that issue first. Of course, you can use 
+      the powerful Realign routine to address this. To do so, you will most 
+      likely need to temporarily increase the value of the RealignItemMaxLMField 
+      property beyond its default. You may also need to switch the C2 aperture 
+      back to the larger size used for the initial LMM mapping.
 
-      Is there a different way? The answer is YES. In this note, I show how to do that
-      by taking advantage of robust AutoContour functionality. 
+      Is there an alternative approach? The answer is yes. In this note, 
+      I describe how to accomplish this by taking advantage of the robust 
+      AutoContour functionality.
+
+      This method is especially useful when the point you selected is not exactly 
+      centered on the mesh, as it can refine the centering slightly. If your stage 
+      behaves well—meaning it does not drift significantly—and your point-picking 
+      is very accurate, you may not need to use this method.
 
 .. _center_mesh:
 
@@ -35,20 +41,28 @@ Center a Mesh
 ..   :width: 833 px
    :scale: 50 %
 
-The image on the left shows a typical LM image with small C2 aperture. And 
-AutoControur can be easily run on this image. After going through the meshes, 
-the closest one to the stage center is found and moved to. The image on the 
-right is after the script run. This method seems direct and simple. 
+The image on the left shows a typical LM image taken with a small C2 aperture, 
+on which AutoContour can be run easily. After processing the meshes, the one 
+closest to the stage center is identified and the stage is moved to that position. 
+The image on the right shows the result after running the script. This method is 
+direct and straightforward.
+
+The concept is simple:
+
+#. Move the stage to a mesh item, then run AutoContour again using the most inclusive parameters.
+#. Save the detected contours to navigation items.
+#. Go through each navigation item to determine which one is closest to the current stage position.
+#. Move the stage to that item. 
 
 The script is fiarly simple as shown below:
 
 .. code-block:: ruby
 
   ScriptName MoveToMesh
-  # script to draw mesh polygon and most to closest one
+  # script to draw mesh polygon and move to closest one
   
   # Assume buffer A has an LM image, crop to smaller area
-  # to save time. 
+  # to save time, not always neccesary.
   #Search          
   CropCenterToSize A 2000 2000      
   
@@ -58,7 +72,7 @@ The script is fiarly simple as shown below:
   # Contour
   AutoContourGridSquares A 2 0.5 0.4
   
-  # last item before contour
+  # last item before AutoContour
   ReportOtherItem -1
   Index0 = $NavIndex 
   
@@ -87,9 +101,9 @@ The script is fiarly simple as shown below:
   
      # Obtain minimum value
      If $ind == 1
-          W =  $DIS[$ind] 
+        W =  $DIS[$ind] 
      Else 
-          W = MIN $DIS[$ind] $W
+        W = MIN $DIS[$ind] $W
      Endif
   EndLoop 
   
@@ -102,11 +116,10 @@ The script is fiarly simple as shown below:
   
   # now move to it
   ReportOtherItem $index
-  echo MoveStageTo $repVal2 $repVal3
   MoveStageTo $repVal2 $repVal3
   
   # delete the polygons after moving
-  Loop  $len ind
+  Loop $len ind
      DeleteNavigatorItem -1
   EndLoop 
 
