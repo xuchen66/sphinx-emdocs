@@ -6,7 +6,7 @@ SerialEM Note: An Alternative Way to Center a Mesh in LM
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: Dec. 21, 2025
-:Last_Updated: Nov. 21, 2025
+:Last_Updated: Dec. 22, 2025
 
 .. glossary::
 
