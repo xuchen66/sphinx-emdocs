@@ -37,9 +37,9 @@ Center a Mesh
 **Fig.1 Center A Mesh Before and After**
 
 .. image:: ../images/CenterMesh-before-n-after.png
-..   :height: 361 px
-..   :width: 833 px
    :scale: 50 %
+   :alt: find and center a mesh
+   :align: center
 
 The image on the left shows a typical LM image taken with a small C2 aperture, 
 on which AutoContour can be run easily. After processing the meshes, the one 
