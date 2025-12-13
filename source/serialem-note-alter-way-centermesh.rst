@@ -37,7 +37,7 @@ Center a Mesh
 **Fig.1 Center A Mesh Before and After**
 
 .. image:: ../images/CenterMesh-before-n-after.png
-   :scale: 50 %
+   :scale: 20 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: find and center a mesh
