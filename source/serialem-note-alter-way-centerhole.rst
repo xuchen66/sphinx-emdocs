@@ -33,6 +33,8 @@ Two Examples
 ..   :height: 361 px
 ..   :width: 833 px
    :scale: 50 %
+   :alt: find and center one hole
+   :align: center
 
 The image on the left shows a typical LD_View image at 2250× magnification 
 in uP mode on the Krios. The center of the hole marked with a green marker 
