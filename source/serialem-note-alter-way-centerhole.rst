@@ -32,7 +32,7 @@ Two Examples
 .. image:: ../images/centerhole-before-after.png
 ..   :height: 361 px
 ..   :width: 833 px
-   :scale: 50 %
+   :scale: 20 %
    :alt: find and center one hole
    :align: center
 
@@ -140,7 +140,7 @@ See the image below:
 .. image:: ../images/stepto-center-hole-method.png
 ..   :height: 361 px
 ..   :width: 833 px
-   :scale: 50 %
+   :scale: 20 %
 
 As shown, I used 15kX as the intermediate magnification to refine the 
 Image Shift (IS) vectors. At this magnification, a single hole fits 
