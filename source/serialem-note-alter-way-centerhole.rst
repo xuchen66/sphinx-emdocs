@@ -136,7 +136,7 @@ See the image below:
 **Fig.2 Centering Hole to refine IS vectors**
 
 .. image:: ../images/stepto-center-hole-method.png
-   :scale: 40 %
+   :scale: 25 %
 
 As shown, I used 15kX as the intermediate magnification to refine the 
 Image Shift (IS) vectors. At this magnification, a single hole fits 
