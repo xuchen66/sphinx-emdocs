@@ -30,7 +30,7 @@ Two Examples
 **Fig.1 Center Hole Before and After**
 
 .. image:: ../images/centerhole-before-after.png
-   :scale: 20 %
+   :scale: 30 %
    :alt: find and center one hole
    :align: center
 
@@ -136,7 +136,7 @@ See the image below:
 **Fig.2 Centering Hole to refine IS vectors**
 
 .. image:: ../images/stepto-center-hole-method.png
-   :scale: 20 %
+   :scale: 40 %
 
 As shown, I used 15kX as the intermediate magnification to refine the 
 Image Shift (IS) vectors. At this magnification, a single hole fits 
@@ -164,7 +164,7 @@ center hole to use. How to center to this invisible middle hole?
 .. image:: ../images/middle-of-4-holes.png
 ..   :height: 361 px
 ..   :width: 833 px
-   :scale: 30 %
+   :scale: 20 %
 
 The task here is to go to center of the "invisible" hole in the middle of 
 4 holes, indicated by the green marker point. 
