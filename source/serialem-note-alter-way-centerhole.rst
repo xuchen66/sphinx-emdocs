@@ -162,7 +162,7 @@ center hole to use. How to center to this invisible middle hole?
 **Fig.3 Centering to invisible hole of middle of 4**
 
 .. image:: ../images/middle-of-4-holes.png
-   :scale: 10 %
+   :scale: 50 %
 
 The task here is to go to center of the "invisible" hole in the middle of 
 4 holes, indicated by the green marker point. 
