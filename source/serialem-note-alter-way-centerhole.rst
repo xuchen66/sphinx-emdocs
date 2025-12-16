@@ -6,7 +6,7 @@ SerialEM Note: An Alternative Way to Center a Hole
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: June 8, 2025
-:Last_Updated: Dec. 14, 2025
+:Last_Updated: Dec. 15, 2025
 
 .. glossary::
 
@@ -118,7 +118,9 @@ just two lines of script to accurately center on each hole across the grid.
 
 .. code-block:: ruby
 
-  RealignToNavItem 0 
+  # RealignToNavItem 0       # use Realign, ended with a V shot
+  MoveToNavItem              # or just move to the item, 
+  V                          # need a shot 
   FindAndCenterOneHole 0 1.3 0 2
   ClearHoleFinder
 
