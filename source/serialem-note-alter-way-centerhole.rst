@@ -119,9 +119,10 @@ just two lines of script to accurately center on each hole across the grid.
 .. code-block:: ruby
 
   # RealignToNavItem 0       # use Realign, ended with a V shot
-  MoveToNavItem              # or just move to the item, 
+  MoveToNavItem              # or just move to the item
   V                          # need a shot 
-  FindAndCenterOneHole 0 1.3 0 2
+  FindAndCenterOneHole 0 -1 0 2
+  ShiftItemsByAlignment      # continously update the X Y of items, prevent wandering away
   ClearHoleFinder
 
 The command directly uses the last image from the Realign routine, so 
