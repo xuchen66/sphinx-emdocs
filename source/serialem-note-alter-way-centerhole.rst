@@ -6,7 +6,7 @@ SerialEM Note: An Alternative Way to Center a Hole
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: June 8, 2025
-:Last_Updated: Dec. 15, 2025
+:Last_Updated: Dec. 17, 2025
 
 .. glossary::
 
@@ -114,7 +114,7 @@ move around to holes, for example, for a quick screening purpose.
 
 As you can see, this approach provides an effective alternative to hole 
 template matching method. During actual data collection or screening, you can use 
-just two lines of script to accurately center on each hole across the grid.
+just a few lines of script to accurately center on each hole across the grid.
 
 .. code-block:: ruby
 
@@ -122,15 +122,12 @@ just two lines of script to accurately center on each hole across the grid.
   MoveToNavItem              # or just move to the item
   V                          # need a shot 
   FindAndCenterOneHole 0 -1 0 2
-  ShiftItemsByAlignment      # continously update the X Y of items, prevent wandering away
   ClearHoleFinder
-
-The command directly uses the last image from the Realign routine, so 
-there is no need to take another LD_View shot. It may seem almost 
-magical—just make sure not to check both the "Include" and "Exclude" 
-options in Hole Finder dialog, as doing so will hide the detected 
-hole positions or you add a line to clear hole finder results, as shown
-in script above.
+  ShiftItemsByAlignment      # continously update the X Y of items, prevent wandering away
+  
+If Realign routine is used, there will be an image from it, so 
+there is no need to take another LD_View shot. If you use MoveToNavItem 
+instead, you will need to take a shot for hole finder to use. 
 
 This method can also be applied within the **StepTo & Adjust** dialog to 
 refine Image Shift (IS) vectors for a multiple-exposure pattern. 
