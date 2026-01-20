@@ -6,7 +6,7 @@ SerialEM Note: An Alternative Way to Center a Mesh in LM
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: Dec. 21, 2025
-:Last_Updated: Dec. 22, 2025
+:Last_Updated: Jan. 20, 2026
 
 .. glossary::
 
@@ -18,7 +18,15 @@ SerialEM Note: An Alternative Way to Center a Mesh in LM
       the powerful Realign routine to address this. To do so, you will most 
       likely need to temporarily increase the value of the RealignItemMaxLMField 
       property beyond its default. You may also need to switch the C2 aperture 
-      back to the larger size used for the initial LMM mapping.
+      back to the larger size used for the initial LMM mapping. Below is a short 
+      script that can do this:
+
+      .. code-block:: ruby
+
+        SetProperty RealignItemMaxLMField 800
+        SetApertureSize 1 150
+        RealignToNavItem 0
+        SetProperty RealignItemMaxLMField 15
 
       Is there an alternative approach? The answer is yes. In this note, 
       I describe how to accomplish this by taking advantage of the robust 
