@@ -6,7 +6,7 @@ SerialEM Note: An Alternative Way to Center a Mesh in LM
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: Dec. 21, 2025
-:Last_Updated: Jan. 20, 2026
+:Last_Updated: Jan. 21, 2026
 
 .. glossary::
 
@@ -88,15 +88,15 @@ is fairly simple as shown below:
   ReportStageXYZ X0 Y0
   
   # Contour
-  AutoContourGridSquares A 2 0.5 0.4
+  AutoContourGridSquares A 2 0.5 0.4 10 100
   
   # last item before AutoContour
   ReportOtherItem -1
   Index0 = $NavIndex 
   
   # make nav point and get the new last one
-  # [#L] [#U] [#M] [#S] [#I] [#B]
-  MakePolygonsAtSquares 2553 3175 39.3 0.91 696.9 
+  # [#L] [#U] [#M] [#S] [#I] [#B] most inclusive -> 0 10000 10 10000 1.0 0
+  MakePolygonsAtSquares 0 10000 10 10000 1.0 0  #2553 3175 39.3 0.91 696.9 
   ReportOtherItem -1
   Index1 = $NavIndex
 
