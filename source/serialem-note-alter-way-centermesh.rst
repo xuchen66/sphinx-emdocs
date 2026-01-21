@@ -24,7 +24,8 @@ SerialEM Note: An Alternative Way to Center a Mesh in LM
       .. code-block:: ruby
 
         SetProperty RealignItemMaxLMField 800
-        SetApertureSize 1 150
+        SetApertureSize C2 150
+        SetApertureSize Obj 0
         RealignToNavItem 0
         SetProperty RealignItemMaxLMField 15
 
