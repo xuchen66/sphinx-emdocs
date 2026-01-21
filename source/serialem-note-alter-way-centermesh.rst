@@ -33,10 +33,11 @@ SerialEM Note: An Alternative Way to Center a Mesh in LM
       I describe how to accomplish this by taking advantage of the robust 
       AutoContour functionality.
 
-      This method is especially useful when the point you selected is not exactly 
-      centered on the mesh, as it can refine the centering slightly. If your stage 
-      behaves well—meaning it does not drift significantly—and your point-picking 
-      is very accurate, you may not need to use this method.
+      This method is especially useful when there is no aperture control from 
+      software. It is also helpful in the situation which the point you selected 
+      is not exactly centered on the mesh, as it can refine the centering slightly. 
+      If your stage behaves well—meaning it does not drift significantly—and your 
+      point-picking is very accurate, you may not need to use this method.
 
 .. _center_mesh:
 
