@@ -6,7 +6,7 @@ SerialEM Note: An Alternative Way to Center a Hole
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: June 8, 2025
-:Last_Updated: Dec. 17, 2025
+:Last_Updated: Jan. 22, 2026
 
 .. glossary::
 
@@ -69,8 +69,8 @@ This can be easily expanded to a more general usage, as shown in below script:
   ScriptName CenterHole
   ## a script to quickly move to center of a hole. If no marker point,
   ## it moves the hole that is closest to the center of the image. If there
-  ## is a marker, it will move to the center of the hole that cloest to 
-  ## marker popint. 
+  ## is a marker, it will move to the center of the hole that is the closest to 
+  ## marker point. 
 
   ## define for cropping and hole size 
   useCrop = 1   # 0 if not use crop
