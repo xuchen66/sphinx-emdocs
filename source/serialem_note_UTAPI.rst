@@ -132,7 +132,7 @@ this portion to help. I listed them here:
 
 I manually added the sequential numbers here for the index. 
 
-You can also just not use the UTAPI at all, but you don't have to do that. 
+You can also just not use UTAPI at all, but you don't have to do that. 
 
 .. code-block:: ruby
 
