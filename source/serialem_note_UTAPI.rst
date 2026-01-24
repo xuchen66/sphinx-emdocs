@@ -138,11 +138,13 @@ You can also just not using the UTAPI at all, but you don't have to do that.
 
   UseUtapiScripting	    0
 
-For more details, you should refer the helpfile. Currently, there are some
-new features with UTAPI. For example, the Falcon 4(i) camera can also output
-compressed TIFF LZW for raw frames, just like Gatan K2/K3 camera. This can
-reduce the filesize quite a bit. However, this doesn't have any
-super-resolution feature as compared to EER. It is more like option "Bin
-counting by 2" for K3 camera. If you acquire images with some over-sampling
-and you Fourier cropping back at processing step to reduce the aliasing
-noise, that might be good enough in some cases. 
+For more details, please refer to the help file. Currently, some new features are only 
+available through UTAPI, and this will become increasingly true over time. Thermo 
+Fisher is no longer developing older scripting interfaces.
+
+For example, the Falcon 4(i) camera can output compressed TIFF files using LZW compression 
+for raw frames, similar to the Gatan K2/K3 cameras. This can significantly reduce file size. 
+However, this option does not provide super-resolution capabilities like EER. It is more 
+comparable to the “Bin counting by 2” option on the K3 camera. If you acquire images with 
+some degree of oversampling and apply Fourier cropping during processing to reduce aliasing 
+noise, this approach may be sufficient in some cases.
