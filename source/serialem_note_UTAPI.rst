@@ -13,15 +13,16 @@ SerialEM Note: Early Adaption of UTAPI
    Abstract
       Around mid-2025, Thermo Fisher began shipping their TEM platform
       software with the Universal TEM Application Interface (UTAPI). This is
-      a new scripting interface built on top of the earlier Standard
-      Scripting and Advanced Scripting frameworks. On both our Talos Arctica
-      and Glacios systems, the UTAPI server is included with platform server
-      version 7.22. It was said the UTAPI will be the only scripting
-      interface eventually. 
+      a new scripting interface built on its own framework, independent of 
+      the earlier Standard Scripting and Advanced Scripting frameworks. 
 
-      SerialEM immediately supports it. It currently support all three
+      On both our Talos Arctica and Glacios systems, the UTAPI server is 
+      included with platform server version 7.22. It was said the UTAPI will 
+      be the only scripting interface eventually. 
+
+      SerialEM immediately supported it. It currently supports all three
       scripting interfaces - Standard Scripting, Advanced Scripting and
-      UTAPI. 
+      UTAPI. They can all run at the same time.
 
       As one of the early adopters, we have been experimenting with UTAPI
       using the latest version of SerialEM. In this note, I describe what is
@@ -47,26 +48,26 @@ lines
 
 .. code-block:: ruby
 
-  UseUtapiScripting	    1      # 0 -> disable
-  SkipAdvancedScripting	0
-  SkipUtapiServices	    0 2-19 21-32   # except Aperture(1) and camera (20)
+  UseUtapiScripting     1      # 0 -> disable
+  SkipAdvancedScripting 0
+  SkipUtapiServices     0 2-19 21-32   # except Aperture(1) and camera (20)
 
 In Falcon camera section, there are lines in the property:
 
 .. code-block:: ruby
 
-  Name				Falcon 4i
-  DetectorName		0 EF-Falcon
+  Name            Falcon 4i
+  DetectorName    0 EF-Falcon
   ## for UTAPI			
-  UtapiName			Falcon 4i EnergyFilter
-  FEICameraType 	6
+  UtapiName       Falcon 4i EnergyFilter
+  FEICameraType   6
   ## For Advanced Scripting, using \\192......
   FalconLocalFramePath      Z:\        # \\192.168.10.81\OffloadData\TemScripting\EF-Falcon
   FalconRemoteFramePath     Z:\        # \\192.168.10.81\OffloadData\TemScripting\EF-Falcon       
   ## For UTAPI
-  UtapiLocalFramePath		Z:\
-  #FalconGainRefDir 		\\192.168.10.81\OffloadData\ImagesForProcessing\EF-Falcon\200kV
-  FalconGainRefDir 		    Z:\ImagesForProcessing\EF-Falcon\200kV
+  UtapiLocalFramePath       Z:\
+  #FalconGainRefDir         \\192.168.10.81\OffloadData\ImagesForProcessing\EF-Falcon\200kV
+  FalconGainRefDir          Z:\ImagesForProcessing\EF-Falcon\200kV
 
 .. _whatif_problem:
 
@@ -131,7 +132,7 @@ this portion to help. I listed them here:
 
 I manually added the sequential numbers here for the index. 
 
-You can also just not using the UTAPI, but you don't have to do that. 
+You can also just not using the UTAPI at all, but you don't have to do that. 
 
 .. code-block:: ruby
 
