@@ -78,6 +78,7 @@ SerialEM Notes
    serialem-note-debug-beam-instability
    serialem-note-alter-way-centerhole
    serialem-note-alter-way-centermesh
+   serialem_note_UTAPI
 Index
 *****
 
