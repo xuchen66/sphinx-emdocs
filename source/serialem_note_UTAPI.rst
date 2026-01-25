@@ -60,13 +60,11 @@ In Falcon camera section, there are lines in the property:
   DetectorName    0 EF-Falcon
   ## for UTAPI			
   UtapiName       Falcon 4i EnergyFilter
+  UtapiLocalFramePath       Z:\
   FEICameraType   6
   ## For Advanced Scripting, using \\192......
   FalconLocalFramePath      Z:\        # \\192.168.10.81\OffloadData\TemScripting\EF-Falcon
   FalconRemoteFramePath     Z:\        # \\192.168.10.81\OffloadData\TemScripting\EF-Falcon       
-  ## For UTAPI
-  UtapiLocalFramePath       Z:\
-  #FalconGainRefDir         \\192.168.10.81\OffloadData\ImagesForProcessing\EF-Falcon\200kV
   FalconGainRefDir          Z:\ImagesForProcessing\EF-Falcon\200kV
 
 .. _whatif_problem:
