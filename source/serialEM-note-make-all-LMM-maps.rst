@@ -6,7 +6,7 @@ SerialEM Note: Make All LMM Maps Automatically
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: Apr 3, 2018
-:Last_Updated: Feb 18, 2022
+:Last_Updated: Jan. 26, 2026
 
 .. glossary::
 
@@ -28,7 +28,8 @@ Here are steps to follow.
 #. Setup image condition. I do it inside or SerialEM Low-Dose mode. I use
    **Search** area for the job. On our Krios with GIF/K2, I set mag for
    **Search** as 220X (I cannot go lower as wish, because some hardware
-   piece in lower portion of column will start to cut into image.). 
+   piece in lower portion of column will start to cut into image, unless
+   with very large IS offset for LD_Search). 
 #. Setup proper exposure and binning for **Search** parameter from camera
    control panel. I usually use binning 2, exposure 1 seconds, and in Linear
    mode (mP mode, Spotsize 8).
@@ -82,8 +83,8 @@ filename will have the info in it, such as ``LMM-Car2-56-g1.st``.
     
     ##### No editing Below ############
     CallFunction LMMCars
-    ## in the end,  rise mag to settle temp & Close the valves
-    #GoToLowDoseArea  V
+    ## in the end, rise mag to settle temp & Close the valves
+    #GoToLowDoseArea Search
     SetColumnOrGunValve 0
     
     ###############################################################
@@ -93,6 +94,8 @@ filename will have the info in it, such as ``LMM-Car2-56-g1.st``.
        LoadCartridge $cat[$index]
        #SetNavRegistration $cat[$index]
        SetColumnOrGunValve 1
+       SetApertureSize C2 150
+       SetApertureSize Obj 0
        MoveStageTo 0 0 
        OpenNewMontage 0 0 LMM-Car$cat[$index]-$name[$index].st
        Montage 
