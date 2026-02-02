@@ -6,7 +6,7 @@ SerialEM Note: Early Adaption To UTAPI
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: Jan. 24, 2026
-:Last_Updated: Jan. 24, 2026
+:Last_Updated: Feb. 02, 2026
 
 .. glossary::
 
@@ -40,7 +40,14 @@ folder:
 
   C:\Tecnai\Exe\UTAPI
 
-you can start to use by adding some new property lines in your property
+Also, in "Microscope Software Launcher - Messages", there should be a line
+like:
+
+.. code-block:: ruby
+
+  2026-02-02 | Talos | Starting 'UtapiServer' service
+
+You can start to use by adding some new property lines in your property
 file.
 
 In main section (before any camera properties), you can add there a few
