@@ -14,15 +14,15 @@ SerialEM Note: More on MMM Centering
       Now Realign in LM ranges works better due to two recent improvements
       is SerialEM. 1) The property "RealignItemMaxLMField" is taken care of 
       automatically for LM range, and 2) The Aperture sizes for both
-      condenser 2 and objective lens are not property for Map item in
+      condenser 2 and objective lens are now properties for the Map item in
       navigator. Thus, realign routine becomes a more convenient way for
-      going to a mesh accurately.
+      positioning a mesh accurately.
 
       However, there is another source of MMM centering problem I did not
-      realize before - the lateral shift! If your mesh Z height changed a
+      realize much before - the lateral shift! If your mesh Z height changed a
       lot from initial Z of LMM map, your MMM will be off centered due to
       this lateral shift. If the change is 100 micron or more, this is to be
-      taken care. This is normal for meshes having quite different Z heights
+      taken care. It seems common for meshes to have quite different Z heights
       in a grid. 
 
       This issue can be simply addressed by another round of Realign. 
