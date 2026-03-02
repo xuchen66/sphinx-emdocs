@@ -78,7 +78,7 @@ SerialEM Notes
    serialem-note-debug-beam-instability
    serialem-note-alter-way-centerhole
    serialem-note-alter-way-centermesh
-   serialem-note-more-on-MMMcentering.rst
+   serialem-note-more-on-MMMcentering
    serialem_note_UTAPI
 Index
 *****
