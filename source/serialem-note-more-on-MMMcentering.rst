@@ -33,12 +33,15 @@ SerialEM Note: More on MMM Centering
 The Script to Run after Z change
 --------------------------------
 
-One can use Realign just stage shift to go to a mesh initially. Then before
-MMM map is acquired, the Z height has to get right before making MMM maps. 
-We normally use "Eucentricity by Focus" to fix Z height for a mesh. After
-that, we can run Realign again to touch up the XY of the mesh before MMM
-montaging mapping. The key here is to skip Z change so it doesn't go back 
-to initial Z height of LMM grid map. 
+One can use Realign or just use stage shift only to move to a mesh initially. 
+Before acquiring the MMM map, the Z height must be properly adjusted. We 
+normally use “Eucentricity by Focus” to correct the Z height for the selected mesh.
+
+After that, Realign can be run again to fine-tune the XY position of the mesh, 
+correcting the XY offset caused by the Z-height adjustment before starting 
+MMM montaging. The key point is to skip any Z adjustment during this second 
+realignment so that the stage does not revert to the original Z height of 
+the LMM grid map.
 
 .. code-block:: ruby
 
