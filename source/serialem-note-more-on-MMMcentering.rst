@@ -40,6 +40,7 @@ montaging mapping. The key here is to skip Z change so it doesn't go back
 to initial Z height of LMM grid map. 
 
 .. code-block:: ruby
+
   ScriptName MMM_Centering
 
   ReportStageXYZ
