@@ -21,9 +21,10 @@ SerialEM Note: More on MMM Centering
       However, there is another source of MMM centering problem I did not
       realize much before - the lateral shift! If your mesh Z height changed a
       lot from initial Z of LMM map, your MMM will be off centered due to
-      this lateral shift. If the change is 100 micron or more, this is to be
-      taken care. It seems common for meshes to have quite different Z heights
-      in a grid. 
+      this lateral shift. If the Z change is 100 micron or more, the lateral
+      shift becomes fairly noticeable. This needs to be taken care of for accurate
+      centering for MMM mapping. It is not uncommon for meshes to have quite different 
+      Z heights in a grid. 
 
       This issue can be simply addressed by another round of Realign. 
 
