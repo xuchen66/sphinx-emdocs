@@ -11,6 +11,6 @@ sphinxcontrib-images==0.9.2
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-napoleon==0.7
 sphinxcontrib-qthelp==1.0.3
-sphinxcontrib-serializinghtml==1.1.4
+sphinxcontrib-serializinghtml>=1.1.9
 docutils==0.16
 Jinja2<3.1
