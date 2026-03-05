@@ -6,7 +6,7 @@ SerialEM Note: Early Adaption To UTAPI
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: Jan. 24, 2026
-:Last_Updated: Feb. 02, 2026
+:Last_Updated: March 5, 2026
 
 .. glossary::
 
@@ -56,6 +56,7 @@ lines
 .. code-block:: ruby
 
   UseUtapiScripting     1      # 0 -> disable
+  UseImageBeamTilt	    1      # need to have this with Utapi, otherwise BeamTilt is in different definition!!!!
   SkipAdvancedScripting 0
   SkipUtapiServices     0 2-19 21-32   # except Aperture(1) and camera (20)
 
