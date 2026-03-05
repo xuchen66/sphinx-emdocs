@@ -56,7 +56,7 @@ lines
 .. code-block:: ruby
 
   UseUtapiScripting     1      # 0 -> disable
-  UseImageBeamTilt	    1      # need to have this with Utapi, otherwise BeamTilt is in different definition!!!!
+  UseImageBeamTilt      1      # need to have this with Utapi, otherwise BeamTilt is in different definition!!!!
   SkipAdvancedScripting 0
   SkipUtapiServices     0 2-19 21-32   # except Aperture(1) and camera (20)
 
