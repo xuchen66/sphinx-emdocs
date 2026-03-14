@@ -74,11 +74,11 @@ So total items to collect in total at both magnifications are 70.
 We can run another script as "Run Script after Action". The script
 can be something like below:
 
-ScriptName EndAcquire
-
 .. code-block:: ruby
 
-  # Report how many A has be acquired.
+  ScriptName EndAcquire
+  # Report how many A has been acquired.
+
   ReportNavItem 
   if $navAcqIndex == 70
      EndAcquireAtItems 
