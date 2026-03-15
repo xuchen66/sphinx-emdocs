@@ -1,12 +1,12 @@
-.. _early_adaption_utapi:
+.. _take_image_at_two_mags:
 
 SerialEM Note: Take Images At Two Different Mags For A Grid 
-======================================
+===========================================================
   
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: March 14, 2026
-:Last_Updated: March 14, 2026
+:Last_Updated: March 15, 2026
 
 .. glossary::
 
@@ -49,10 +49,10 @@ This is Acquire dialog windows of Multigrid operation.
    :align: center
 
 The first 20 items with current LD setup can be defined in 
-General Option - Do subset. This part is straightforward. 
+General Option - [v] Do subset. This part is straightforward. 
 
 Now after 20 items are done, we need to switch to new image state
-and continue Acquire. This can be done from General Option - [ ] Run 
+and continue Acquire. This can be done from General Option - [v] Run 
 Script at end. And you define a script like this:
 
 .. code-block:: ruby
@@ -71,7 +71,7 @@ The another ending number needs to be controlled. There are maybe
 many items with A flag, but we only collect 50 items at the new mag. 
 So total items to collect in total at both magnifications are 70.
 
-We can run another script as "Run Script after Action". The script
+We can run another script as "[v] Run Script after Action". The script
 can be something like below:
 
 .. code-block:: ruby
