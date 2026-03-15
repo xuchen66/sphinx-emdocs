@@ -42,7 +42,7 @@ Three Places to Make This Happen
 This is Acquire dialog windows of Multigrid operation. 
 
 .. image:: ../images/MGAcquireDialog.png
-   :scale: 20 %
+   :scale: 30 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: MG Acquire 
