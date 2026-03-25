@@ -80,7 +80,7 @@ SerialEM Notes
    serialem-note-alter-way-centermesh
    serialem-note-more-on-MMMcentering
    serialem_note_UTAPI
-   serialEM-note-take-images-at-two-different-mags
+.. serialEM-note-take-images-at-two-different-mags
 Index
 *****
 
