@@ -52,6 +52,7 @@ ice chunk somewhere we can use. Here are the steps to prepare:
 
 1. Take a Preview image contain this black chunk or edge of the chunk. Make
 it into a map. Assume it has index # 3. 
+
 2. Take a anchor map for View mag. This is to help we can realign to the
 Preview map, specially when Preview mag is high. 
 
@@ -61,7 +62,7 @@ And I can create a little script as below"
 
   ScriptName Fix-IS-Offset
 
-  RealignToOtherItem 3 0
+  RealignToOtherItem 3 0           # index = 3
   FindLowDoseShiftOffset 0         # 0 is for View Offset
 
 You can run this little script whenever you like to. And you can also run
