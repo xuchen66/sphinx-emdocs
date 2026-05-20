@@ -53,7 +53,7 @@ ice chunk somewhere we can use. Here are the steps to prepare:
 1. Take a Preview image contain this black chunk or edge of the chunk. Make
 it into a map. Assume it has index # 3. 
 
-2. Take a anchor map for View mag. This is to help we can realign to the
+2. Take an anchor map at View mag. This is to help to realign accurately to the
 Preview map, specially when Preview mag is high. 
 
 And I can create a little script as below"
@@ -73,24 +73,13 @@ this periodically in your collection workflow pipeline.
 To Fix Defocus Doubling Issue
 -----------------------------
 
-When we use latest Testing executable, sometimes when after crashes, we get
-into this "Defocus doubling" issue. Namely, upon SerialEM program restarting
-and turning on Low Dose, the scope defocus is at -400 microns, while LD
-defocus offset for View is set at -200. 
+When using the latest Testing executable, we sometimes encounter a “defocus doubling” issue after a crash. Specifically, after restarting the SerialEM program and turning on Low Dose mode, the microscope defocus may be at -400 µm, even though the Low Dose defocus offset for View mode is set to -200 µm.
 
-The root source of this problem is that View was used with uP probe, while
-F, T and R are usually with nP probe mode. When it crashes in View, the
-scope is left in uP mode and with -200um defocus, but nP is still at 0. 
-One easy way to fix this is to press Eucentric Focus button on right hand 
-panel, BEFORE you even restarting SerialEM. 
+The root cause of this problem is that View mode uses the uP probe mode, while F, T, and R typically use the nP probe mode. If SerialEM crashes while in View mode, the microscope may be left in uP mode with a defocus of -200 µm, while the nP mode defocus remains at 0. One simple way to fix this is to press the Eucentric Focus button on the right-hand panel before restarting SerialEM.
 
-If this is a normal exit crash, the late Testing version of SerialEM can
-detect the crash upon restarting and prompt you option to fix the issue. 
+For a normal-exit crash, the latest Testing version of SerialEM can detect the crash upon restarting and prompt you with an option to fix the issue automatically.
 
-If you fail to notice scope is at -200um, and you start SerialEM and go into
-Low Dose without any fix, then View will take whatever you have on scope uP
-mode which is -200, and add another -200 (the offset value). So your View
-ends up with -400um. 
+However, if you do not notice that the microscope is already at -200 µm defocus and you start SerialEM and enter Low Dose mode without correcting it first, then View mode will inherit the existing -200 µm defocus in uP mode and apply an additional -200 µm offset from the Low Dose settings. As a result, the View defocus becomes -400 µm.
 
 This can be easily fixed by a fairly simple script as below:
 
