@@ -6,7 +6,7 @@ SerialEM Note: Early Adaption To UTAPI
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: Jan. 24, 2026
-:Last_Updated: March 5, 2026
+:Last_Updated: June 26, 2026
 
 .. glossary::
 
@@ -56,9 +56,16 @@ lines
 .. code-block:: ruby
 
   UseUtapiScripting     1      # 0 -> disable
-  UseImageBeamTilt      1      # need to have this with Utapi, otherwise BeamTilt is in different definition!!!!
+  UseImageBeamTilt      0      # 
   SkipAdvancedScripting 0
-  SkipUtapiServices     0 2-19 21-32   # except Aperture(1) and camera (20)
+  SkipUtapiServices     32     # 0 2-19 21-32   # except Aperture(1) and camera (20)
+
+.. note::
+
+   As Utapi 7.28 and older version, the RotationCenter function from Utapi doesn't scale Beam Tilt angle properly. 
+   Thus, places where Beam Tilting angle is needed won't work correctly, such as AutoFocus, Coma-free by CTF etc.. 
+   It is a good idea to skip RotationCenter function in Utapi so the basic script still takes care of RotationCenter
+   and we know that works. It is in server 32 (service: Deflect Alignment). 
 
 In Falcon camera section, there are lines in the property:
 
