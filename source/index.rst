@@ -81,6 +81,7 @@ SerialEM Notes
    serialem-note-more-on-MMMcentering
    serialem_note_UTAPI
    serialEM-note-touchup-LD
+   serialem_note_accurate_eucentric_focus_button
 .. serialEM-note-take-images-at-two-different-mags
 Index
 *****
