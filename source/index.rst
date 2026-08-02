@@ -82,6 +82,7 @@ SerialEM Notes
    serialem_note_UTAPI
    serialEM-note-touchup-LD
    serialem_note_accurate_eucentric_focus_button
+   serialem_note_utlize_locator_window
 .. serialEM-note-take-images-at-two-different-mags
 Index
 *****
