@@ -89,7 +89,9 @@ This can be easily fixed by a fairly simple script as below:
   ToolbarFillColor gold
   
   # fix double defocus offset problem due to crash
-  
+
+  offset = -200
+
   # turn option off
   ReportUserSetting AdjustFocusForProbe
   If $RepVal1 == 1
@@ -108,11 +110,15 @@ This can be easily fixed by a fairly simple script as below:
   # fix it
   GoToLowDoseArea R
   SetStandardFocus 0
+  Delay 2 s
   GoToLowDoseArea V 
   SetLDDefocusOffset V 0
   SetStandardFocus 0
-  SetLDDefocusOffset V -200
+  Delay 2 s
+  SetLDDefocusOffset V $offset
+  Delay 2 s   
   SetUserSetting AdjustFocusForProbe 1 1
   
   # ReportLDDefocus
   ReportLDDefocusOffset V
+  Echo
