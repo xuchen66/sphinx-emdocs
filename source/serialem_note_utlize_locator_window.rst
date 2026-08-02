@@ -35,7 +35,7 @@ This is how I do it.
 **Fig.1 Locator Window**
 
 .. image:: ../images/locator+single_add_polygon.png
-   :scale: 40 %
+   :scale: 25 %
 ..   :height: 544 px
 ..   :width: 384 px
    :alt: find and center a mesh
