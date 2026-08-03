@@ -6,7 +6,7 @@ SerialEM Note: Accurate values for "Eucentric Focus" button
 :Author: Chen Xu
 :Contact: <chen.xu@umassmed.edu>
 :Date_Created: July 30, 2026
-:Last_Updated: July 30, 2026
+:Last_Updated: Aug. 3, 2026
 
 .. glossary::
 
@@ -20,7 +20,6 @@ SerialEM Note: Accurate values for "Eucentric Focus" button
       In this note, I describe how SerialEM's Autofocus function can be used to 
       refine the value associated with the "Eucentric Focus" button, allowing it 
       to set the focus more accurately.
-
 
 .. _background:
 
@@ -103,3 +102,10 @@ significantly improve the accuracy of the stored **Eucentric Focus** values.
 As a result, switching to those magnifications will place the microscope much 
 closer to the correct focus, reducing or eliminating the need for manual focus 
 adjustments during routine operation.
+
+.. _note:
+
+  After this note is written, I learnt this from Wim Hagan that if one uses 
+  DarkField Wobbler on the right handpanel during the alignment the focus could
+  be assigned fairly accurate. I decide not to retract this note, as the idea in 
+  this note is still somewhat valid. 
