@@ -45,7 +45,8 @@ This is how I do it.
 put it side-by-side with the main display window. You can put it on the
 right or left side, whichever you prefer.
 
-2. Draw a rectangular area in the Locator Window using **Ctrl+Shift+left
+2. Resize the default drawn red box as full size of the locator window. 
+Or draw a new rectangular area in the Locator Window using **Ctrl+Shift+left
 moue button**. It is a red box. The area inside the rectangle will be
 automatically zoomed in the main window, so it shows only that area. In my
 case, I usually draw the rectangle to cover a single mesh.
