@@ -103,7 +103,7 @@ As a result, switching to those magnifications will place the microscope much
 closer to the correct focus, reducing or eliminating the need for manual focus 
 adjustments during routine operation.
 
-.. _note:
+.. note::
 
   After this note is written, I learnt this from Wim Hagan that if one uses 
   DarkField Wobbler on the right handpanel during the alignment the focus could
