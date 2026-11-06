@@ -27,7 +27,7 @@ Below is a colored ToolBar.
 .. image:: ../images/color-toolbar.png
 ..   :height: 361 px
 ..   :width: 833 px
-   :scale: 50 %
+   :scale: 10 %
    :alt: colored Toolbar
    :align: center
 
