@@ -84,6 +84,7 @@ SerialEM Notes
    serialem_note_accurate_eucentric_focus_button
    serialem_note_utlize_locator_window
 .. serialEM-note-take-images-at-two-different-mags
+   serialEM-note-colored-script-toolbar
 Index
 *****
 
